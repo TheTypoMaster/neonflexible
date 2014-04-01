@@ -1,0 +1,23 @@
+[01-Apr-2014 22:18:43 Europe/Paris] PHP Notice:  Undefined index: is_multishop in /Library/WebServer/Documents/neonflexible/cache/smarty/compile/bf/a7/00/bfa70012332e336addaafab682d5f1004e4bbde4.file.page_header_toolbar.tpl.php on line 64
+[01-Apr-2014 22:18:43 Europe/Paris] PHP Notice:  Trying to get property of non-object in /Library/WebServer/Documents/neonflexible/cache/smarty/compile/bf/a7/00/bfa70012332e336addaafab682d5f1004e4bbde4.file.page_header_toolbar.tpl.php on line 64
+[01-Apr-2014 22:19:11 Europe/Paris] PHP Notice:  Undefined index: is_multishop in /Library/WebServer/Documents/neonflexible/cache/smarty/compile/bf/a7/00/bfa70012332e336addaafab682d5f1004e4bbde4.file.page_header_toolbar.tpl.php on line 64
+[01-Apr-2014 22:19:11 Europe/Paris] PHP Notice:  Trying to get property of non-object in /Library/WebServer/Documents/neonflexible/cache/smarty/compile/bf/a7/00/bfa70012332e336addaafab682d5f1004e4bbde4.file.page_header_toolbar.tpl.php on line 64
+[01-Apr-2014 22:19:37 Europe/Paris] PHP Warning:  Illegal offset type in /Library/WebServer/Documents/neonflexible/modules/dashgoals/dashgoals.php on line 211
+[01-Apr-2014 22:19:37 Europe/Paris] PHP Notice:  Undefined index: unit_text in /Library/WebServer/Documents/neonflexible/modules/dashgoals/dashgoals.php on line 204
+[01-Apr-2014 22:19:37 Europe/Paris] PHP Notice:  Undefined index: unit_text in /Library/WebServer/Documents/neonflexible/modules/dashgoals/dashgoals.php on line 204
+[01-Apr-2014 22:19:37 Europe/Paris] PHP Notice:  Undefined index: unit_text in /Library/WebServer/Documents/neonflexible/modules/dashgoals/dashgoals.php on line 204
+[01-Apr-2014 22:19:37 Europe/Paris] PHP Warning:  Illegal offset type in /Library/WebServer/Documents/neonflexible/modules/dashgoals/dashgoals.php on line 211
+[01-Apr-2014 22:19:37 Europe/Paris] PHP Notice:  Undefined index: unit_text in /Library/WebServer/Documents/neonflexible/modules/dashgoals/dashgoals.php on line 204
+[01-Apr-2014 22:19:37 Europe/Paris] PHP Notice:  Undefined index: unit_text in /Library/WebServer/Documents/neonflexible/modules/dashgoals/dashgoals.php on line 204
+[01-Apr-2014 22:19:37 Europe/Paris] PHP Notice:  Undefined index: unit_text in /Library/WebServer/Documents/neonflexible/modules/dashgoals/dashgoals.php on line 204
+[01-Apr-2014 22:19:37 Europe/Paris] PHP Warning:  Illegal offset type in /Library/WebServer/Documents/neonflexible/modules/dashgoals/dashgoals.php on line 211
+[01-Apr-2014 22:19:37 Europe/Paris] PHP Notice:  Undefined index: unit_text in /Library/WebServer/Documents/neonflexible/modules/dashgoals/dashgoals.php on line 204
+[01-Apr-2014 22:19:37 Europe/Paris] PHP Notice:  Undefined index: unit_text in /Library/WebServer/Documents/neonflexible/modules/dashgoals/dashgoals.php on line 204
+[01-Apr-2014 22:19:37 Europe/Paris] PHP Notice:  Undefined index: unit_text in /Library/WebServer/Documents/neonflexible/modules/dashgoals/dashgoals.php on line 204
+[01-Apr-2014 22:19:37 Europe/Paris] PHP Warning:  Illegal offset type in /Library/WebServer/Documents/neonflexible/modules/dashgoals/dashgoals.php on line 211
+[01-Apr-2014 22:19:37 Europe/Paris] PHP Notice:  Undefined index: traffic in /Library/WebServer/Documents/neonflexible/modules/dashgoals/dashgoals.php on line 229
+[01-Apr-2014 22:19:37 Europe/Paris] PHP Notice:  Undefined index: conversion in /Library/WebServer/Documents/neonflexible/modules/dashgoals/dashgoals.php on line 230
+[01-Apr-2014 22:19:37 Europe/Paris] PHP Notice:  Undefined index: avg_cart_value in /Library/WebServer/Documents/neonflexible/modules/dashgoals/dashgoals.php on line 231
+[01-Apr-2014 22:19:38 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, boolean given in /Library/WebServer/Documents/neonflexible/modules/gamification/controllers/admin/AdminGamificationController.php on line 175
+[01-Apr-2014 22:19:38 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, boolean given in /Library/WebServer/Documents/neonflexible/modules/gamification/controllers/admin/AdminGamificationController.php on line 175
+[01-Apr-2014 22:19:38 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, boolean given in /Library/WebServer/Documents/neonflexible/modules/gamification/controllers/admin/AdminGamificationController.php on line 175
