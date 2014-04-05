@@ -18,7 +18,7 @@ ACCOUNT OWNER: {bankwire_owner}
 
 ACCOUNT DETAILS: {bankwire_details}
 
-BANK ADDRESS: {bankwire_address} 
+BANK ADDRESS: {bankwire_address} 		 
 
 You can review your order and download your invoice from the
 "Order history" [{history_url}] section of your

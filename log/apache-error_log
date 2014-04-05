@@ -1,0 +1,44 @@
+[Sat Apr 05 18:11:16 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:16 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:17 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:17 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:17 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:17 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:18 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:18 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:18 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:18 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:18 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:18 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:18 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:19 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:20 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:20 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:50 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:50 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:59 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:11:59 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:12:01 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:12:01 2014] [error] [client 127.0.0.1] (2)No such file or directory: Could not open password file: /home/neonflex/www/.htpasswd
+[Sat Apr 05 18:16:13 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/favicon.ico
+[Sat Apr 05 18:16:15 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/favicon.ico
+[Sat Apr 05 18:16:25 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/favicon.ico
+[Sat Apr 05 18:16:26 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/favicon.ico
+[Sat Apr 05 18:17:39 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/fr
+[Sat Apr 05 18:17:39 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/favicon.ico
+[Sat Apr 05 18:18:18 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/img/p, referer: http://www.neon-flexible.com.local/index.php
+[Sat Apr 05 18:18:18 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/img/p, referer: http://www.neon-flexible.com.local/index.php
+[Sat Apr 05 18:18:18 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/img/p, referer: http://www.neon-flexible.com.local/index.php
+[Sat Apr 05 18:18:18 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/img/p, referer: http://www.neon-flexible.com.local/index.php
+[Sat Apr 05 18:18:18 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/img/p, referer: http://www.neon-flexible.com.local/index.php
+[Sat Apr 05 18:18:18 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/img/p, referer: http://www.neon-flexible.com.local/index.php
+[Sat Apr 05 18:18:18 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/img/p, referer: http://www.neon-flexible.com.local/index.php
+[Sat Apr 05 18:18:18 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/img/p, referer: http://www.neon-flexible.com.local/index.php
+[Sat Apr 05 18:23:36 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/img/p, referer: http://www.neon-flexible.com.local/index.php
+[Sat Apr 05 18:23:36 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/img/p, referer: http://www.neon-flexible.com.local/index.php
+[Sat Apr 05 18:23:36 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/img/p, referer: http://www.neon-flexible.com.local/index.php
+[Sat Apr 05 18:23:36 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/img/p, referer: http://www.neon-flexible.com.local/index.php
+[Sat Apr 05 18:23:36 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/img/p, referer: http://www.neon-flexible.com.local/index.php
+[Sat Apr 05 18:23:36 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/img/p, referer: http://www.neon-flexible.com.local/index.php
+[Sat Apr 05 18:23:36 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/img/p, referer: http://www.neon-flexible.com.local/index.php
+[Sat Apr 05 18:23:36 2014] [error] [client 127.0.0.1] File does not exist: /Library/WebServer/Documents/neonflexible/img/p, referer: http://www.neon-flexible.com.local/index.php
