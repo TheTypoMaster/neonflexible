@@ -27,3 +27,10 @@ themes/default/cache/*.css
 # Ignore files on root directory
 robots.txt
 sitemap.xml
+
+# For PHPStorm
+.idea/*
+
+# Rewrite
+.htaccess
+.htpasswd
