@@ -34,3 +34,7 @@ sitemap.xml
 # Rewrite
 .htaccess
 .htpasswd
+
+# DEV version
+
+dev/*
