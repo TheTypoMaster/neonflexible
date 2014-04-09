@@ -11,6 +11,8 @@ config/xml/*.xml
 config/settings.inc.php
 
 log/*.log
+log/*_log
+php_errors.log
 
 img/*
 !img/index.php
