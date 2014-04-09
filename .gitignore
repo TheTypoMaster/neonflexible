@@ -36,5 +36,7 @@ sitemap.xml
 .htpasswd
 
 # DEV version
-
 dev/*
+
+# Admin
+import/
