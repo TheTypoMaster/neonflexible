@@ -10,6 +10,7 @@ cache/tcpdf/*
 config/xml/*.xml
 config/settings.inc.php
 
+admin220371/*.log
 log/*.log
 log/*_log
 php_errors.log
