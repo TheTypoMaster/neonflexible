@@ -49,3 +49,6 @@ admin220371/autoupgrade/latest/*
 admin220371/autoupgrade/tmp/*
 
 .DS_Store
+
+# Modules
+modules/now_import_accessories/uploads/*.csv
