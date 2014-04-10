@@ -2,7 +2,6 @@
 
 global $_MODULE;
 $_MODULE = array();
-
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_9e31b08a00c1ed653bcaa517dee84714'] = 'Bloc newsletter';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_ba457fab18d697d978befb95e827eb91'] = 'Ajoute un bloc newsletter pour vos clients';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_396c88991101b5ca362932952293d291'] = 'Êtes-vous sûr de vouloir supprimer tous vos contacts ?';
@@ -28,9 +27,3 @@ $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_1d612b943b8f4792bff603384
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_ffb7e666a70151215b4c55c6268d7d72'] = 'Lettre d\'informations';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_416f61a2ce16586f8289d41117a2554e'] = 'votre e-mail';
-$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_d8335f4a5d918134bd0bdc47cc487d74'] = 'Saisissez votre adresse e-mail';
-$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_a60852f204ed8028c1c58808b746d115'] = 'ok';
-$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_590b7aefc83952e3483c5168bf93e19f'] = 'Newsletter : %1$s';
-
-
-return $_MODULE;
