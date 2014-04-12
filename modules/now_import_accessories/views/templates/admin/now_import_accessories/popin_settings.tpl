@@ -6,7 +6,7 @@
 *}
 
 <div style="display:none;">
-	<div id="display_popin_settings" style="width:700px;">
+	<div id="display_popin_settings" class="bootstrap">
 		{$content}
 	</div>
 </div>

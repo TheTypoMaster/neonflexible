@@ -8,6 +8,7 @@
 var oTable;
 
 $(document).ready(function() {
+
 	$('a#page-header-desc-configuration-import').fancybox({
 		'titleShow' : false,
 		'transitionIn' : 'elastic',
@@ -18,6 +19,20 @@ $(document).ready(function() {
 		'titleShow' : false,
 		'transitionIn' : 'elastic',
 		'transitionOut' : 'elastic'
+	});
+
+	$('#file-selectbutton').click(function(e){
+		$('#file').trigger('click');
+	});
+
+	$('#file-name').click(function(e){
+		$('#file').trigger('click');
+	});
+
+	$('#file').change(function(e){
+		var val = $(this).val();
+		var file = val.split(/[\\/]/);
+		$('#file-name').val(file[file.length-1]);
 	});
 
 	/* STEP 2 */

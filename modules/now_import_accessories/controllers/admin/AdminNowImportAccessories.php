@@ -85,7 +85,10 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 						'visibility' => Shop::CONTEXT_ALL
 					),
 				),
-				'submit' => array()
+				'submit' => array(
+                    'title' => $this->l('Save'),
+                    'class' => $this->l('Save'),
+                )
 			)
 		);
 
@@ -422,10 +425,9 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 
 			if ($sFilename = Tools::getValue('file_name')) {
 				$this->oCSV->sNewFilename = $sFilename;
-			}
-			if ($sFilename = Tools::getValue('file_name')) {
 				$this->oCSV->sFilename = $this->sUploadDirectory.$sFilename;
 			}
+
 			$bCheckFile     = (bool)$this->oCSV->checkFile();
 			$this->errors   = $this->oCSV->aErrors;
 
@@ -460,8 +462,8 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 	public function setCurrentStep() {
 		$this->iStep = 1;
 
-        if (array_key_exists('import_file', $_FILES))
-		    $this->aFile = $_FILES['import_file'];
+        if (array_key_exists('file', $_FILES))
+		    $this->aFile = $_FILES['file'];
 
 		if ((Tools::isSubmit('submitFileUpload') && isset($this->aFile['name'])) || (Tools::getValue('step') == 2 && Tools::getValue('file_name'))) {
 			$this->iStep = 2;
@@ -547,7 +549,7 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 	public function setMedia() {
 
 		$this->addCSS(array(
-			//$this->module->module_uri.'css/bootstrap.min.css' => 'all',
+			$this->module->module_uri.'css/bootstrap.min.css' => 'all',
 			$this->module->module_uri.'css/DT_bootstrap.css' => 'all',
 			$this->module->module_uri.'css/'.$this->module->name.'.css' => 'all',
 		));

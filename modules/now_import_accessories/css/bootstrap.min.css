@@ -1,4 +1,4 @@
-html,body{margin:0;padding:0;}
+/*html,body{margin:0;padding:0;}
 h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,cite,code,del,dfn,em,img,q,s,samp,small,strike,strong,sub,sup,tt,var,dd,dl,dt,li,ol,ul,fieldset,form,label,legend,button,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;font-weight:normal;font-style:normal;font-size:100%;line-height:1;font-family:inherit;}
 table{border-collapse:collapse;border-spacing:0;}
 ol,ul{list-style:none;}
@@ -182,7 +182,7 @@ input[disabled],select[disabled],textarea[disabled],input[readonly],select[reado
 .form-stacked .clearfix{margin-bottom:9px;}.form-stacked .clearfix div.input{margin-left:0;}
 .form-stacked .inputs-list{margin-bottom:0;}.form-stacked .inputs-list li{padding-top:0;}.form-stacked .inputs-list li label{font-weight:normal;padding-top:0;}
 .form-stacked div.clearfix.error{padding-top:10px;padding-bottom:10px;padding-left:10px;margin-top:0;margin-left:-10px;}
-.form-stacked .actions{margin-left:-20px;padding-left:20px;}
+.form-stacked .actions{margin-left:-20px;padding-left:20px;}*/
 table{width:100%;margin-bottom:18px;padding:0;font-size:13px;border-collapse:collapse;}table th,table td{padding:10px 10px 9px;line-height:18px;text-align:left;}
 table th{padding-top:9px;font-weight:bold;vertical-align:middle;}
 table td{vertical-align:top;border-top:1px solid #ddd;}
@@ -354,3 +354,4 @@ button.btn::-moz-focus-inner,input[type=submit].btn::-moz-focus-inner{padding:0;
 .media-grid li{display:inline;}
 .media-grid a{float:left;padding:4px;margin:0 0 18px 20px;border:1px solid #ddd;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;-webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.075);-moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.075);box-shadow:0 1px 1px rgba(0, 0, 0, 0.075);}.media-grid a img{display:block;}
 .media-grid a:hover{border-color:#0069d6;-webkit-box-shadow:0 1px 4px rgba(0, 105, 214, 0.25);-moz-box-shadow:0 1px 4px rgba(0, 105, 214, 0.25);box-shadow:0 1px 4px rgba(0, 105, 214, 0.25);}
+*/

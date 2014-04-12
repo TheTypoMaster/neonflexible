@@ -30,5 +30,15 @@
 body.page-sidebar-closed div#steps {display:none;}
 body.mobile-nav div.now_import_accessories {display:none;}
 
+#display_popin_settings {width:90%;}
+#display_popin_settings .process-icon-save:before { content: "\f0c7"; }
+
+#display_popin_import_file {padding-left:10px;background-color:#EBEDF4;border:1px solid #CCCED7;width:600px;height:200px;border-radius: 3px;}
+#display_popin_import_file .hide {display:none;}
+#display_popin_import_file .form-group {margin:0 0 20px 20px;box-sizing:initial;clear:both;}
+
+
+
+
 
 
