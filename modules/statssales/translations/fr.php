@@ -2,7 +2,6 @@
 
 global $_MODULE;
 $_MODULE = array();
-
 $_MODULE['<{statssales}prestashop>statssales_45c4b3e103155326596d6ccd2fea0f25'] = 'Commandes et CA';
 $_MODULE['<{statssales}prestashop>statssales_e92c0b79c9f70251cb807a53bf1cdcb3'] = 'Ajoute l\'évolution des ventes et des commandes par état.';
 $_MODULE['<{statssales}prestashop>statssales_6602bbeb2956c035fb4cb5e844a4861b'] = 'Guide';
@@ -23,6 +22,3 @@ $_MODULE['<{statssales}prestashop>statssales_12c500ed0b7879105fb46af0f246be87'] 
 $_MODULE['<{statssales}prestashop>statssales_b52b44c9d23e141b067d7e83b44bb556'] = 'Produits';
 $_MODULE['<{statssales}prestashop>statssales_14f1c54626d722168ee62dff05ed811e'] = 'Chiffre d\'affaires en';
 $_MODULE['<{statssales}prestashop>statssales_b63d7e91b286748a447bf3573dbc9bfb'] = 'Pourcentage de commandes par état.';
-
-
-return $_MODULE;

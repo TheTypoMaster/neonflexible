@@ -2,7 +2,6 @@
 
 global $_MODULE;
 $_MODULE = array();
-
 $_MODULE['<{pscleaner}prestashop>pscleaner_e5a8af934462c05509c7de5f2f2c18a3'] = 'Nettoyage de PrestaShop';
 $_MODULE['<{pscleaner}prestashop>pscleaner_4bcb9cc248b7f6c8dc7f5c323bde76de'] = 'Vérifie et répare les problèmes d\'intégrité fonctionnelle et supprime les données par défaut (produits, commandes, clients)';
 $_MODULE['<{pscleaner}prestashop>pscleaner_752369f18aebeed9ae8384d8f1b5dc5e'] = 'Soyez très attentifs en utilisant cet outil, il n\'y a pas de retour en arrière possible !';
@@ -28,6 +27,3 @@ $_MODULE['<{pscleaner}prestashop>pscleaner_3535aa31bd9005bde626ad4312b67d6b'] = 
 $_MODULE['<{pscleaner}prestashop>pscleaner_e84c6595e849214a70b35ed8f95d7d16'] = 'Vérifier et réparer';
 $_MODULE['<{pscleaner}prestashop>pscleaner_ccc27439e3e08c444690af3bed668e2d'] = 'Nettoyage de la base de données';
 $_MODULE['<{pscleaner}prestashop>pscleaner_39707b9cfefe433d64f695623d2d3fd7'] = 'Nettoyer et optimiser';
-
-
-return $_MODULE;
