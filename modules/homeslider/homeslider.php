@@ -42,7 +42,7 @@ class HomeSlider extends Module
 	{
 		$this->name = 'homeslider';
 		$this->tab = 'front_office_features';
-		$this->version = '1.3.1';
+		$this->version = '1.3.7';
 		$this->author = 'PrestaShop';
 		$this->need_instance = 0;
 		$this->secure_key = Tools::encrypt($this->name);
@@ -452,7 +452,7 @@ class HomeSlider extends Module
 			if (!$slides)
 				return false;
 
-			$this->smarty->assign('homeslider_slides', $slides);
+			$this->smarty->assign(array('homeslider_slides' => $slides));
 		}
 
 		return true;
