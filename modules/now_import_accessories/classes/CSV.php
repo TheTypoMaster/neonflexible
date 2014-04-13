@@ -54,7 +54,8 @@ if (!class_exists('NowCSV'))
 			$this->sDecimalDelimiter    = $sDecimalDelimiter;
 			$this->bConvertFileToUTF8   = (bool)$bConvertFileToUTF8;
 			$this->iMaxFileSize         = $iMaxFileSize;
-			$this->sFilename            = $aFile['tmp_name'];
+            if (array_key_exists('tmp_name', $aFile))
+			    $this->sFilename        = $aFile['tmp_name'];
 			$this->context              = Context::getContext();
 
 			$this->setNewFilename();
@@ -79,21 +80,23 @@ if (!class_exists('NowCSV'))
 				$this->aErrors[] = 'File is empty.';
 			}
 
-			switch ($this->aFile['error'])
-			{
-				case UPLOAD_ERR_INI_SIZE:
-					$this->aErrors[] = 'The uploaded file exceeds the upload_max_filesize directive in php.ini. If your server configuration allows it, you may add a directive in your .htaccess.';
-					break;
-				case UPLOAD_ERR_FORM_SIZE:
-					$this->aErrors[] = 'The uploaded file exceeds the post_max_size directive in php.ini. If your server configuration allows it, you may add a directive in your .htaccess, for example: <br/><a href="'.$this->context->link->getAdminLink('AdminMeta').'" ><code>php_value post_max_size 20M</code> (click to open "Generators" page)</a>';
-					break;
-				case UPLOAD_ERR_PARTIAL:
-					$this->aErrors[] = 'The uploaded file was only partially uploaded.';
-					break;
-				case UPLOAD_ERR_NO_FILE:
-					$this->aErrors[] = 'No file was uploaded.';
-					break;
-			}
+            if (array_key_exists('error', $this->aFile)) {
+                switch ($this->aFile['error'])
+                {
+                    case UPLOAD_ERR_INI_SIZE:
+                        $this->aErrors[] = 'The uploaded file exceeds the upload_max_filesize directive in php.ini. If your server configuration allows it, you may add a directive in your .htaccess.';
+                        break;
+                    case UPLOAD_ERR_FORM_SIZE:
+                        $this->aErrors[] = 'The uploaded file exceeds the post_max_size directive in php.ini. If your server configuration allows it, you may add a directive in your .htaccess, for example: <br/><a href="'.$this->context->link->getAdminLink('AdminMeta').'" ><code>php_value post_max_size 20M</code> (click to open "Generators" page)</a>';
+                        break;
+                    case UPLOAD_ERR_PARTIAL:
+                        $this->aErrors[] = 'The uploaded file was only partially uploaded.';
+                        break;
+                    case UPLOAD_ERR_NO_FILE:
+                        $this->aErrors[] = 'No file was uploaded.';
+                        break;
+                }
+            }
 
 			if (!empty($this->aErrors)) {
 				return false;

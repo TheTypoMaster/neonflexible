@@ -27,7 +27,7 @@
 
 .toolbar_btn .process-icon-analyse-data:before, .toolbar_btn .process-icon-save-data:before { content: "\f01d"; }
 
-body.page-sidebar-closed div#steps {display:none;}
+/*body.page-sidebar-closed div#steps {display:none;}*/
 body.mobile-nav div.now_import_accessories {display:none;}
 
 #display_popin_settings {width:90%;}

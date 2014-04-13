@@ -53,18 +53,18 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 						),
 						'visibility' => Shop::CONTEXT_ALL
 					),
-					'NOW_IMPORT_ACCES_SEPARATOR' => array(
-						'title' => $this->module->l('Choose your separator', 'AdminNowImportAccessories'),
-						'type' => 'select',
-						'identifier' => 'value',
-						'list' => array(
-							array('value' => ';', 'name' => ';'),
-							array('value' => ',', 'name' => ','),
-							array('value' => '|', 'name' => '|'),
-							array('value' => '^', 'name' => '^')
-						),
-						'visibility' => Shop::CONTEXT_ALL
-					),
+                    'NOW_IMPORT_ACCES_SEPARATOR' => array(
+                        'title' => $this->module->l('Choose your separator', 'AdminNowImportAccessories'),
+                        'type' => 'select',
+                        'identifier' => 'value',
+                        'list' => array(
+                            array('value' => ';', 'name' => ';'),
+                            array('value' => ',', 'name' => ','),
+                            array('value' => '|', 'name' => '|'),
+                            array('value' => '^', 'name' => '^')
+                        ),
+                        'visibility' => Shop::CONTEXT_ALL
+                    ),
 					'NOW_IMPORT_ACCES_DELIMITER' => array(
 						'title' => $this->module->l('Choose your text delimiter', 'AdminNowImportAccessories'),
 						'type' => 'select',
@@ -168,24 +168,21 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 			if (!empty($aColumns))
 				$this->oCSV->removeColumnsInData($aColumns);
 
-			if (!in_array('product_reference', $aColumns) || !in_array('current_stock', $aColumns) || !in_array('warehouse', $aColumns)) {
-				$this->errors[] = $this->module->l('You must defined this columns before to go in the step 3: Product reference, Current stock, Warehouse reference.', 'AdminNowImportAccessories');
+			if (!(in_array('product_reference', $aColumns) || in_array('product_id', $aColumns)) || !in_array('accessories', $aColumns)) {
+				$this->errors[] = $this->module->l('You must defined this columns before to go in the step 3: Product reference or Product ID and Accessories (Separated by "::").', 'AdminNowImportAccessories');
 			} else {
 
 				$aNewData = array(0 => array(
 					'id_product'            => $this->module->l('Product ID', 'AdminNowImportAccessories'),
-					'id_product_attribute'  => $this->module->l('Product Attribute ID', 'AdminNowImportAccessories'),
+                    'product_reference'     => $this->module->l('Product reference', 'AdminNowImportAccessories'),
 					'product_name'          => $this->module->l('Product Name', 'AdminNowImportAccessories'),
-					'product_reference'     => $this->module->l('Product reference', 'AdminNowImportAccessories'),
-					'id_warehouse'          => $this->module->l('Warehouse ID', 'AdminNowImportAccessories'),
-					'warehouse'             => $this->module->l('Warehouse reference', 'AdminNowImportAccessories'),
-					'name_warehouse'        => $this->module->l('Warehouse Name', 'AdminNowImportAccessories'),
-					'current_stock'         => $this->module->l('Current stock', 'AdminNowImportAccessories'),
-					'quantity_physical'     => $this->module->l('Physical Quantity', 'AdminNowImportAccessories'),
+                    'accessories'           => $this->module->l('Accessories', 'AdminNowImportAccessories'),
+                    'new_accessories'       => $this->module->l('New accessories', 'AdminNowImportAccessories'),
+                    'old_accessories'       => $this->module->l('Old accessories', 'AdminNowImportAccessories'),
 					'error'                 => $this->module->l('Errors', 'AdminNowImportAccessories'),
 				));
 
-				$this->calculateStock($this->oCSV->aData, $aNewData);
+				$this->checkAccessories($this->oCSV->aData, $aNewData);
 			}
 
 			$tpl = $this->createTemplate('step-3.tpl');
@@ -238,17 +235,17 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 				$this->oCSV->removeColumnsInData($aColumns);
 
 			$aDataToImported = array();
-			$aDataImported = array(0 => array(
-				'product_reference'     => $this->module->l('Product reference', 'AdminNowImportAccessories'),
-				'product_name'          => $this->module->l('Product Name', 'AdminNowImportAccessories'),
-				'name_warehouse'        => $this->module->l('Warehouse Name', 'AdminNowImportAccessories'),
-				'action_type'           => $this->module->l('Sign', 'AdminNowImportAccessories'),
-				'current_stock'         => $this->module->l('Current stock', 'AdminNowImportAccessories'),
-				'action'                => $this->module->l('Label', 'AdminNowImportAccessories'),
-			));
 
-			$this->calculateStock($this->oCSV->aData, $aDataToImported);
-			$this->importStock($aDataToImported, $aDataImported);
+            $aDataImported = array(0 => array(
+                'id_product'            => $this->module->l('Product ID', 'AdminNowImportAccessories'),
+                'product_reference'     => $this->module->l('Product reference', 'AdminNowImportAccessories'),
+                'product_name'          => $this->module->l('Product Name', 'AdminNowImportAccessories'),
+                'accessories'           => $this->module->l('Accessories', 'AdminNowImportAccessories'),
+                'error'                 => $this->module->l('Errors', 'AdminNowImportAccessories'),
+            ));
+
+			$this->checkAccessories($this->oCSV->aData, $aDataToImported);
+			$this->importAccessories($aDataToImported, $aDataImported);
 
 			$tpl = $this->createTemplate('step-4.tpl');
 
@@ -269,121 +266,95 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 		}
 	}
 
-	public function calculateStock($aDatas, &$aNewData) {
+	public function checkAccessories($aDatas, &$aNewData) {
 		foreach ($aDatas as $aData) {
+            // Initialisation
 			$aData['error'] = "";
-			if (empty($aData['product_reference'])) {
-				$aData['error'] = $this->module->l('Product reference is empty.', 'AdminNowImportAccessories');
+
+            if (!array_key_exists('product_reference', $aData))
+                $aData['product_reference'] = '';
+
+            if (!array_key_exists('product_id', $aData))
+                $aData['product_id'] = '';
+
+			if (empty($aData['product_reference']) && empty($aData['product_id'])) {
+				$aData['error'] = $this->module->l('Product reference and product ID is empty.', 'AdminNowImportAccessories');
 			}
 
-			if (!isset($aData['warehouse']) || empty($aData['warehouse'])) {
-				$aData['error'] = $this->module->l('Warehouse is empty or doesn\'t exist.', 'AdminNowImportAccessories');
-			}
+            // On vérifie l'Id produit si il existe
+            if (empty($aData['product_id']) || !NowProduct::isRealProduct($aData['product_id'])) {
+                // Get product by product reference
+                if (empty($aData['product_reference']) || !$aData['product_id'] = NowProduct::getIdProductByProductReference($aData['product_reference'])) {
+                    $aData['error'] = sprintf($this->module->l('Product reference doesn\'t exist: "%s".', 'AdminNowImportAccessories'), $aData['product_reference']);
+                }
+            }
 
-			// Get id_product and id_product_attribute
-			$aIds = NowProduct::getIdProductAndAttributeByReference($aData['product_reference']);
-
-			if (empty($aIds) || !$aIds || !isset($aIds['id_product'])) {
-				$aData['error'] = sprintf($this->module->l('Product reference doesn\'t exist: "%s".', 'AdminNowImportAccessories'), $aData['product_reference']);
-			}
-
-			// Get Wharehouse id
-			if (is_numeric($aData['warehouse'])) {
-				$iIdWarehouse = $aData['warehouse'];
-			} else {
-				$iIdWarehouse = NowWarehouse::getWarehouseIdByReference($aData['warehouse']);
-			}
-
-			$sWarehouseName = Warehouse::getWarehouseNameById((int)$iIdWarehouse);
-
-			if (!$sWarehouseName || empty($sWarehouseName)) {
-				$aData['error'] = sprintf($this->module->l('Warehouse doesn\'t exist: "%s".', 'AdminNowImportAccessories'), $aData['warehouse']);
-			}
-
-			$aData['id_product']            = (int)$aIds['id_product'];
-			$aData['id_product_attribute']  = (int)$aIds['id_product_attribute'];
-			$aData['name_warehouse']       = $sWarehouseName;
-			$aData['id_warehouse']         = (int)$iIdWarehouse;
-
-			// Stock manager initialisation
-			$oSM  = new StockManager();
-
-			// Get physical quantity
-			$iQuantityPhysical = (int)$oSM->getProductPhysicalQuantities((int)$aData['id_product'], (int)$aData['id_product_attribute'], (int)$iIdWarehouse, false);
-			$aData['quantity_physical'] = (int)$iQuantityPhysical;
+            // On récuprère les informations du produit
+            $aProduct = NowProduct::getProductLight($aData['product_id']);
 
 			$aNewData[] = array(
-				'id_product'            => $aData['id_product'],
-				'id_product_attribute'  => $aData['id_product_attribute'],
-				'product_name'          => Product::getProductName((int)$aData['id_product'], (int)$aData['id_product_attribute'], (int)$this->context->language->id),
-				'product_reference'     => $aData['product_reference'],
-				'id_warehouse'          => $aData['id_warehouse'],
-				'warehouse'             => $aData['warehouse'],
-				'name_warehouse'        => $aData['name_warehouse'],
-				'current_stock'         => $aData['current_stock'],
-				'quantity_physical'     => $aData['quantity_physical'],
+				'id_product'            => $aProduct['id_product'],
+				'product_name'          => $aProduct['name'],
+				'product_reference'     => $aProduct['reference'],
+				'accessories'           => $aData['accessories'],
+                'new_accessories'       => $this->getNewAccessories($aData['accessories']),
+                'old_accessories'       => $this->getOldAccessories($aData['product_id']),
 				'error'                 => $aData['error'],
 			);
 		}
 	}
 
-	public function importStock($aDataToImported, &$aDataImported) {
+    public function getNewAccessories($sAccessories) {
+        if ($sAccessories == '')
+            return '';
+        $aAccessories = NowProduct::getProductsLight(explode('::', $sAccessories));
 
-		$oSM = new StockManager();
-		$aWarehouseCache = array();
+        $sAccessories = '<ul>';
+        foreach ($aAccessories as $aAccessory) {
+            $sAccessories .= '<li>'.sprintf($this->module->l('%1$s (Id product: %2$s, Reference: %3$s)', 'AdminNowImportAccessories'), $aAccessory['name'], $aAccessory['id_product'], $aAccessory['reference']).'</li>';
+        }
+        $sAccessories .= '</ul>';
+
+        return $sAccessories;
+    }
+
+    public function getOldAccessories($iIdProduct) {
+        $aAccessories = Product::getAccessoriesLight($this->context->language->id, $iIdProduct);
+
+        $sAccessories = '<ul>';
+        foreach ($aAccessories as $aAccessory) {
+            $sAccessories .= '<li>'.sprintf($this->module->l('%1$s (Id product: %2$s, Reference: %3$s)', 'AdminNowImportAccessories'), $aAccessory['name'], $aAccessory['id_product'], $aAccessory['reference']).'</li>';
+        }
+        $sAccessories .= '</ul>';
+
+        return $sAccessories;
+    }
+
+	public function importAccessories($aDataToImported, &$aDataImported) {
 
 		foreach ($aDataToImported as $aData) {
 
-			if (!isset($aWarehouseCache[(int)$aData['id_warehouse']])) {
-				$aWarehouseCache[(int)$aData['id_warehouse']] = new Warehouse($aData['id_warehouse']);
-			}
-
-			$oWarehouse = $aWarehouseCache[(int)$aData['id_warehouse']];
-
-			if (!Validate::isLoadedObject($oWarehouse)) {
-				if (!isset($this->errors['warehouse_object']))
-					$this->errors['warehouse_object'] = sprintf($this->module->l('Warehouse doesn\'t exists (Name: %1$s, Reference: %2$s, ID: %3$d)', 'AdminNowImportAccessories'), $aData['name_warehouse'], $aData['warehouse'], $aData['id_warehouse']);
-				continue;
-			}
-
 			if (empty($aData['error'])) {
 
-				if ($aData['current_stock'] == $aData['quantity_physical']) {
-					// Stock identical : no action
-					$aData['action'] = $this->module->l('Identical stock', 'AdminNowImportAccessories');
-					$aData['action_type'] = 'equal';
-				} elseif ($aData['current_stock'] > $aData['quantity_physical']) {
-					// Increase the available stock
-					$iQuantity = (int)$aData['current_stock'] - (int)$aData['quantity_physical'];
-					$fPriceTE = NowProduct::getWholesalePrice((int)$aData['id_product'], (int)$aData['id_product_attribute']);
+                // get product information
+                $aProduct = NowProduct::getProductLight($aData['id_product']);
 
-					if (!$oSM->addProduct((int)$aData['id_product'], (int)$aData['id_product_attribute'], $oWarehouse, (int)$iQuantity, (int)Configuration::get('NOW_IMPORT_INCREASE_STOCK'), $fPriceTE, true)) {
-						$this->errors[] = sprintf($this->module->l('Impossible to increase the stock of the following product: %1$s (Reference: %2$s)', 'AdminNowImportAccessories'), $aData['product_name'], $aData['product_reference']);
-						continue;
-					}
+                // Delete old accessories
+                if (!NowProduct::deleteAccessories($aData['id_product'])) {
+                    $aData['error'] = sprintf($this->module->l('Impossible to deleting old accesories to this product: %s', 'AdminNowImportAccessories'), $aProduct['reference']);
+                }
 
-					$aData['action'] = $this->module->l('Increase the available stock', 'AdminNowImportAccessories');
-					$aData['action_type'] = 'increase';
-				} elseif ($aData['current_stock'] < $aData['quantity_physical']) {
-					// Decrease the stock available
-					$iQuantity = (int)$aData['quantity_physical'] - (int)$aData['current_stock'];
-
-					if (!$oSM->removeProduct((int)$aData['id_product'], (int)$aData['id_product_attribute'], $oWarehouse, (int)$iQuantity, (int)Configuration::get('NOW_IMPORT_DECREASE_STOCK'), true)) {
-						$this->errors[] = sprintf($this->module->l('Impossible to decrease the stock of the following product: %1$s (Reference: %2$s)', 'AdminNowImportAccessories'), $aData['product_name'], $aData['product_reference']);
-						continue;
-					}
-
-					$aData['action'] = $this->module->l('Decrease the stock available', 'AdminNowImportAccessories');
-					$aData['action_type'] = 'decrease';
-				}
+                // Insert new accesssories
+                if (!NowProduct::changeAccessories($aData['id_product'], explode('::', $aData['accessories']))) {
+                    $aData['error'] = sprintf($this->module->l('Impossible to adding the new accesories to this product: %s', 'AdminNowImportAccessories'), $aProduct['reference']);
+                }
 
 				$aDataImported[] = array(
-					'product_reference'     => $aData['product_reference'],
-					'product_name'          => Product::getProductName((int)$aData['id_product'], (int)$aData['id_product_attribute'], (int)$this->context->language->id),
-					'name_warehouse'        => $aData['name_warehouse'],
-					'action_type'           => $aData['action_type'],
-					'current_stock'         => $aData['current_stock'],
-					'action'                => $aData['action'],
+                    'id_product'            => $aProduct['id_product'],
+                    'product_reference'     => $aProduct['reference'],
+                    'product_name'          => $aProduct['name'],
+                    'accessories'           => $this->getNewAccessories($aData['accessories']),
+                    'error'                 => $aData['error']
 				);
 			} else {
 				$this->errors[] = $aData['error'];
@@ -403,8 +374,8 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 		$this->aColumns = array(
 			'ignore_column'         => $this->module->l('Ignore this column', 'AdminNowImportAccessories'),
 			'product_reference'     => $this->module->l('Product reference', 'AdminNowImportAccessories'),
-			'current_stock'         => $this->module->l('Current stock', 'AdminNowImportAccessories'),
-			'warehouse'             => $this->module->l('Warehouse reference', 'AdminNowImportAccessories'),
+            'product_id'            => $this->module->l('Product ID', 'AdminNowImportAccessories'),
+			'accessories'           => $this->module->l('Accessories (Separated by "::")', 'AdminNowImportAccessories'),
 		);
 	}
 
@@ -422,7 +393,6 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 		unset($this->toolbar_btn['new']);
 
 		if ($this->iStep > 1) {
-
 			if ($sFilename = Tools::getValue('file_name')) {
 				$this->oCSV->sNewFilename = $sFilename;
 				$this->oCSV->sFilename = $this->sUploadDirectory.$sFilename;
@@ -542,6 +512,7 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 		$aParams['show_toolbar']    = $this->show_toolbar;
 		$aParams['toolbar_scroll']  = $this->toolbar_scroll;
 		$aParams['module_path']     = $this->module->module_dir.'/views/templates/admin/'.$this->module->name.'/';
+        $aParams['is_multishop']    = Shop::isFeatureActive();
 
 		return $aParams;
 	}

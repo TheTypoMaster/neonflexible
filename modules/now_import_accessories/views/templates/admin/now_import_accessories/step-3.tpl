@@ -31,7 +31,7 @@
 						<tr>
 							{foreach $aRow as $sKey => $sElement}
 								<td class="{if $sKey == 'error' && !empty($sElement)}error{elseif $sKey != 'error'}{$sKey}{/if} center">
-									{$sElement|escape:'htmlall':'UTF-8'}
+									{$sElement}
 								</td>
 							{/foreach}
 						</tr>

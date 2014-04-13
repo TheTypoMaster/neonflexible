@@ -33,7 +33,7 @@
 								{if $sKey == 'action_type'}
 									<img src="../modules/now_import_accessories/img/{$sElement}.png" alt="{$sElement|escape:'htmlall':'UTF-8'}" />
 								{else}
-									{$sElement|escape:'htmlall':'UTF-8'}
+									{$sElement}
 								{/if}
 							</td>
 						{/foreach}
