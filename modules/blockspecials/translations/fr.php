@@ -2,6 +2,7 @@
 
 global $_MODULE;
 $_MODULE = array();
+
 $_MODULE['<{blockspecials}prestashop>blockspecials_c19ed4ea98cbf319735f6d09bde6c757'] = 'Bloc promotions';
 $_MODULE['<{blockspecials}prestashop>blockspecials_f5bae06098deb9298cb9ceca89171944'] = 'Ajoute un bloc affiche vos produits actuellement en promotion.';
 $_MODULE['<{blockspecials}prestashop>blockspecials_b15e7271053fe9dd22d80db100179085'] = 'Ce module nécessite d\'être greffé sur une colonne, mais votre thème n\'a pas de colonne';
@@ -17,3 +18,6 @@ $_MODULE['<{blockspecials}prestashop>blockspecials_c9cc8cce247e49bae79f15173ce97
 $_MODULE['<{blockspecials}prestashop>blockspecials_d1aa22a3126f04664e0fe3f598994014'] = 'Promotions';
 $_MODULE['<{blockspecials}prestashop>blockspecials_b4f95c1ea534936cc60c6368c225f480'] = 'Toutes les promos';
 $_MODULE['<{blockspecials}prestashop>blockspecials_3c9f5a6dc6585f75042bd4242c020081'] = 'Aucune promotion pour le moment.';
+
+
+return $_MODULE;

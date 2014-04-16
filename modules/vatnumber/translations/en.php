@@ -5,7 +5,7 @@ $_MODULE = array();
 
 $_MODULE['<{vatnumber}prestashop>vatnumber_b0b9a606a1c251323825ca45d40964dc'] = 'No default country set.';
 $_MODULE['<{vatnumber}prestashop>vatnumber_cee549912e318726d2c4989bb507665f'] = 'European VAT number';
-$_MODULE['<{vatnumber}prestashop>vatnumber_6ede98a39e3f63c90e2f1443f5339c7e'] = 'Enable you to enter the intra-community VAT number when creating the address. You must fill in the company field to allow entering the VAT number.';
+$_MODULE['<{vatnumber}prestashop>vatnumber_9fa70ad6139f2a83269df74eb6747816'] = 'Enables you to enter the intra-community VAT number when creating the address. You must fill in the company field to allow entering the VAT number.';
 $_MODULE['<{vatnumber}prestashop>vatnumber_162b29cf61678af2aaac37f440265c28'] = 'Your country has been updated.';
 $_MODULE['<{vatnumber}prestashop>vatnumber_0ca51bcd22e4d7b56b6f1d8a01cefc1f'] = 'The check of the VAT number with the WebService is now enabled.';
 $_MODULE['<{vatnumber}prestashop>vatnumber_467c214bb76759108ece49873eda44e4'] = 'The check of the VAT number with the WebService is now disabled.';

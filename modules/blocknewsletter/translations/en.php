@@ -8,6 +8,15 @@ $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_ba457fab18d697d978befb95e
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_396c88991101b5ca362932952293d291'] = 'Are you sure that you want to delete all of your contacts?';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_417d63b1effb110e438d4b4b9f0fbd95'] = 'The voucher code is invalid.';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_c888438d14855d7d96a2724ee9c306bd'] = 'Settings updated';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_b718adec73e04ce3ec720dd11a06a308'] = 'ID';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_ccf107a5d46c6501c9f2f4345400dc2e'] = 'Shop ID';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_8d3f5eff9c40ee315d452392bed5309b'] = 'Last name';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_20db0bfeecd8fe60533206a2b5e9891a'] = 'First name';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_b357b524e740bc85b9790a0712d84a30'] = 'Email address';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_22ffd0379431f3b615eb8292f6c31d12'] = 'Registration date';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_3a1205098d0a13a9c41a8d538fd6a34a'] = 'Newsletter registrations';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_d37faa29432d65368723e141a02fb55c'] = 'Export as CSV';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_4351cfebe4b61d8aa5efa1d020710005'] = 'View';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_e267e2be02cf3e29f4ba53b5d97cf78a'] = 'Invalid email address.';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_1c623b291d95f4f1b1d0c03d0dc0ffa1'] = 'This email address is not registered.';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_3b1f17a6fd92e35bc744e986b8e7a61c'] = 'An error occurred while attempting to unsubscribe.';

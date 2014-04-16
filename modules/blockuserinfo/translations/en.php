@@ -14,9 +14,9 @@ $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_2cbfb6731610056e1d0aaacde0709
 $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_a0623b78a5f2cfe415d9dbbd4428ea40'] = 'Your Account';
 $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_83218ac34c1834c26781fe4bde918ee4'] = 'Welcome';
 $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_4b877ba8588b19f1b278510bf2b57ebb'] = 'Log me out';
-$_MODULE['<{blockuserinfo}prestashop>blockuserinfo_4394c8d8e63c470de62ced3ae85de5ae'] = 'Log out';
+$_MODULE['<{blockuserinfo}prestashop>blockuserinfo_c87aacf5673fada1108c9f809d354311'] = 'Sign out';
 $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_b145abfd6b2f88971d725cbd94a5879f'] = 'Login to your customer account';
-$_MODULE['<{blockuserinfo}prestashop>blockuserinfo_99dea78007133396a7b8ed70578ac6ae'] = 'Login';
+$_MODULE['<{blockuserinfo}prestashop>blockuserinfo_b6d4223e60986fa4c9af77ee5f7149c5'] = 'Sign in';
 $_MODULE['<{blockuserinfo}prestashop>nav_2cbfb6731610056e1d0aaacde07096c1'] = 'View my customer account';
 $_MODULE['<{blockuserinfo}prestashop>nav_4b877ba8588b19f1b278510bf2b57ebb'] = 'Log me out';
 $_MODULE['<{blockuserinfo}prestashop>nav_c87aacf5673fada1108c9f809d354311'] = 'Sign out';

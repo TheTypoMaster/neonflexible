@@ -2,6 +2,7 @@
 
 global $_MODULE;
 $_MODULE = array();
+
 $_MODULE['<{statsbestproducts}prestashop>statsbestproducts_8c4d7af5f578693f9a6cf391e912ee33'] = 'Aucun résultat';
 $_MODULE['<{statsbestproducts}prestashop>statsbestproducts_f5c493141bb4b2508c5938fd9353291a'] = 'Affichage de %1$s de %2$s';
 $_MODULE['<{statsbestproducts}prestashop>statsbestproducts_63d5049791d9d79d86e9a108b0a999ca'] = 'Référence';
@@ -15,3 +16,6 @@ $_MODULE['<{statsbestproducts}prestashop>statsbestproducts_7bd5825a1870640179755
 $_MODULE['<{statsbestproducts}prestashop>statsbestproducts_950cf49f8ca529be64c924f16fcb5404'] = 'Meilleures ventes';
 $_MODULE['<{statsbestproducts}prestashop>statsbestproducts_15429f69e40860368f6e113e4cba5601'] = 'Ajoute une liste des vos meilleures ventes dans le tableau de bord des statistiques.';
 $_MODULE['<{statsbestproducts}prestashop>statsbestproducts_998e4c5c80f27dec552e99dfed34889a'] = 'Export CSV';
+
+
+return $_MODULE;

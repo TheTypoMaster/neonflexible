@@ -20,7 +20,7 @@ $_MODULE['<{statsbestcustomers}prestashop>statsbestcustomers_197bad7ad08abfd1dc4
 $_MODULE['<{statsbestcustomers}prestashop>statsbestcustomers_bf0d87b5aa8d331563ee61f2ac82069d'] = 'In order to achieve this goal, you can organize:';
 $_MODULE['<{statsbestcustomers}prestashop>statsbestcustomers_397a5e109a5897ee7d699050cbc93347'] = 'Punctual operations: commercial rewards (personalized special offers, product or service offered), non commercial rewards (priority handling of an order or a product), pecuniary rewards (bonds, discount coupons, payback).';
 $_MODULE['<{statsbestcustomers}prestashop>statsbestcustomers_4bc24eed56e0ba89fc3ab4e094d18d8a'] = 'Sustainable operations: loyalty points or cards, which not only justify communication between merchant and client, but also offer advantages to clients (private offers, discounts).';
-$_MODULE['<{statsbestcustomers}prestashop>statsbestcustomers_8edb787c1ca24d387a198c9c187bd670'] = 'These operations encourage clients to buy products and visit your oneline store more regularly.';
+$_MODULE['<{statsbestcustomers}prestashop>statsbestcustomers_2f408c42912e3afe23a0e4adcbe34b96'] = 'These operations encourage clients to buy products and visit your online store more regularly.';
 $_MODULE['<{statsbestcustomers}prestashop>statsbestcustomers_998e4c5c80f27dec552e99dfed34889a'] = 'CSV Export';
 
 

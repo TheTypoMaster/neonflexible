@@ -18,7 +18,7 @@ $_MODULE['<{gamification}prestashop>admingamificationcontroller_e4be4f3e3ae4ee9d
 $_MODULE['<{gamification}prestashop>gamification_3d4aafb2eedeba2fbf92e852f0af745a'] = 'Expertise PrestaShop';
 $_MODULE['<{gamification}prestashop>gamification_bacc1bf300527bad9c6ac2d3b875a8d8'] = 'Devenez un marchand accompli à pas de géant !';
 $_MODULE['<{gamification}prestashop>filters_bt_e659b52eba1f0299b2d8ca3483919e72'] = 'Type :';
-$_MODULE['<{gamification}prestashop>filters_bt_b1c94ca2fbc3e78fc30069c8d0f01680'] = 'Toutes';
+$_MODULE['<{gamification}prestashop>filters_bt_b1c94ca2fbc3e78fc30069c8d0f01680'] = 'Tous';
 $_MODULE['<{gamification}prestashop>filters_bt_18325105de95083e4a1d10b78f29c2bc'] = 'État :';
 $_MODULE['<{gamification}prestashop>filters_bt_5364259abab90e94890f2ed2481b9824'] = 'Validé';
 $_MODULE['<{gamification}prestashop>filters_bt_dc450ba947e6adecbdbe68c25de03a1b'] = 'Non validé';
@@ -34,7 +34,7 @@ $_MODULE['<{gamification}prestashop>view_bt_2a0ab6a9172272d54f0d601b0ac157f3'] =
 $_MODULE['<{gamification}prestashop>view_bt_5cf06184f524aad72c14d3ec5d325c56'] = 'Avec toutes les fonctionnalités et avantages proposés par PrestaShop, il est important de rester à jour !';
 $_MODULE['<{gamification}prestashop>view_bt_2c3193c85bb2555c333adfcfb824804a'] = 'A chaque badge décerné, vous gagnez des points et nous vous présentons la prochaine action à réaliser selon votre activité. Vous êtes ainsi guidé(e) vers une boutique parfaitement configurée et optimisée pour votre succès !';
 $_MODULE['<{gamification}prestashop>view_bt_6b766dc388ad21053bde0f8fd95d1e04'] = 'Nous avons défini 3 thèmes essentiels pour évaluer le niveau de développement de votre boutique : les fonctionnalités clés à configurer, vos performances commerciales et votre visibilité à l\'international.';
-$_MODULE['<{gamification}prestashop>view_bt_21dc1cfc9ef1cdfbb665cab323d5e1a9'] = 'Désormais, en cliquant sur un bouton, vous pourrez voir les fonctionnalités d\'amélioration des ventes dont vous ne disposez pas encore. Profitez-en dès maintenant !';
+$_MODULE['<{gamification}prestashop>view_bt_21dc1cfc9ef1cdfbb665cab323d5e1a9'] = 'A vous de jouer !';
 $_MODULE['<{gamification}prestashop>view_bt_8ba134cf899d862079bbf3964bc7d7d4'] = 'Notre équipe est à votre disposition pour vous aider à progresser... Contactez-nous !';
 $_MODULE['<{gamification}prestashop>view_bt_bcc254b55c4a1babdf1dcb82c207506b'] = 'Téléphone';
 $_MODULE['<{gamification}prestashop>view_bt_b39131f9b4f81406be4f9cca784f99c8'] = 'Par téléphone : +33 (0)1 40 18 30 04';

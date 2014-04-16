@@ -40,8 +40,8 @@ $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_778118c7dd993db08f704e15efa4a7f
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_56e8bf6c54f1638e7bce5a2fcd5b20fe'] = 'Menu Top Links';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_449f6d82cde894eafd3c85b6fa918f89'] = 'Link ID';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_387a8014f530f080bf2f3be723f8c164'] = 'Link list';
-$_MODULE['<{blocktopmenu}prestashop>form_fcd7ab4061bb3846392cc34376902165'] = 'Set ID product';
-$_MODULE['<{blocktopmenu}prestashop>form_97f08a40f22a625d0cbfe03db3349108'] = 'Product ID';
+$_MODULE['<{blocktopmenu}prestashop>form_17a1352d3f69a733fd472fce0238a07d'] = 'Indicate the ID number for the product';
+$_MODULE['<{blocktopmenu}prestashop>form_6bb999afde6fca60d70edce79d20b370'] = 'Product ID #';
 $_MODULE['<{blocktopmenu}prestashop>form_3ee3549ff0c93372a730749f784e9438'] = 'Please select just one item';
 $_MODULE['<{blocktopmenu}prestashop>form_e1b11c03820641dd1d1441bf68898d08'] = 'Change position';
 $_MODULE['<{blocktopmenu}prestashop>form_3713a99a6284e39061bd48069807aa52'] = 'Selected items';

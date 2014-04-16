@@ -6,7 +6,6 @@ $_MODULE = array();
 $_MODULE['<{themeconfigurator}prestashop>themeconfigurator_e92dabb4907f1957cabc469cca4deefc'] = 'Theme configurator';
 $_MODULE['<{themeconfigurator}prestashop>themeconfigurator_cf8fdaf6e745133c90516eb9b74e31c3'] = 'Configure the main elements of your theme.';
 $_MODULE['<{themeconfigurator}prestashop>themeconfigurator_eedb7e9e8a884cb0a78a55528e8b8fab'] = 'Over 500+ PrestaShop premium templates! Browse now!';
-$_MODULE['<{themeconfigurator}prestashop>themeconfigurator_149cd107b688af7a007e739fd51ac919'] = 'Successful deletion.';
 $_MODULE['<{themeconfigurator}prestashop>themeconfigurator_ec870aa68b135c4f3adc9a3a2731ddbc'] = 'Can\'t delete the slide.';
 $_MODULE['<{themeconfigurator}prestashop>themeconfigurator_3ee0c881516fce384747e3107dbfc538'] = 'Invalid content';
 $_MODULE['<{themeconfigurator}prestashop>themeconfigurator_dd2681ec1593dd537587be3389ee24d3'] = 'An error occurred while saving data.';
@@ -18,6 +17,8 @@ $_MODULE['<{themeconfigurator}prestashop>themeconfigurator_00d23a76e43b46dae9ec7
 $_MODULE['<{themeconfigurator}prestashop>themeconfigurator_b9f5c797ebbf55adccdd8539a65a0241'] = 'Disabled';
 $_MODULE['<{themeconfigurator}prestashop>themeconfigurator_f4f70727dc34561dfde1a3c529b6205c'] = 'Settings';
 $_MODULE['<{themeconfigurator}prestashop>themeconfigurator_c9cc8cce247e49bae79f15173ce97354'] = 'Save';
+$_MODULE['<{themeconfigurator}prestashop>themeconfigurator_af2bd2483562a756a482a08840a46579'] = 'Only you can see this [1]on your Front-Office[/1] - your visitors will not see this tool.';
+$_MODULE['<{themeconfigurator}prestashop>themeconfigurator_058e1168dd26085fe8d317effdf70dc3'] = 'Only you can see this on your Front-Office - your visitors will not see this tool.';
 $_MODULE['<{themeconfigurator}prestashop>themeconfigurator_6e3670bb5e3826106c5243b242cc52d9'] = 'Display links to your store\'s social accounts (Twitter, Facebook, etc.)';
 $_MODULE['<{themeconfigurator}prestashop>themeconfigurator_4bae4cdd2d56a5a8b8c320288c5d3426'] = 'Display contact information';
 $_MODULE['<{themeconfigurator}prestashop>themeconfigurator_17a84b9793933f127b961f44b9c8bcbc'] = 'Display social sharing buttons on the products page';
@@ -28,7 +29,7 @@ $_MODULE['<{themeconfigurator}prestashop>themeconfigurator_158fc4b90f7acab3770c5
 $_MODULE['<{themeconfigurator}prestashop>themeconfigurator_cf5ca43ed94712fe0160fff0a523b8ef'] = 'Display your product payment logos';
 $_MODULE['<{themeconfigurator}prestashop>themeconfigurator_2e1328793a14abff890f7bae4234328c'] = 'Enable Live Configurator';
 $_MODULE['<{themeconfigurator}prestashop>themeconfigurator_f5a35b8e88be7f51ad3a3714a83df3a1'] = 'The customization tool allows you to make color and font changes in your theme.';
-$_MODULE['<{themeconfigurator}prestashop>themeconfigurator_b952538cab3142a26ac46f8da619e2f9'] = 'Only you can see this %s - your visitors will not see this tool.';
+$_MODULE['<{themeconfigurator}prestashop>install-0.8_0517dbd6d2749687c4deea4a6c917296'] = 'Can\'t change \'._DB_PREFIX_.\'themeconfigurator.url type';
 $_MODULE['<{themeconfigurator}prestashop>items_b9b371458ab7c314f88b81c553f6ce51'] = 'Hook';
 $_MODULE['<{themeconfigurator}prestashop>items_7dce122004969d56ae2e0245cb754d35'] = 'Edit';
 $_MODULE['<{themeconfigurator}prestashop>items_d3d2e617335f08df83599665eef8a418'] = 'Close';

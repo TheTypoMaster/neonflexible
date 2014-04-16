@@ -12,7 +12,8 @@ $_MODULE['<{blockcmsinfo}prestashop>blockcmsinfo_9dffbf69ffba8bc38bc4e01abf4b167
 $_MODULE['<{blockcmsinfo}prestashop>blockcmsinfo_c9cc8cce247e49bae79f15173ce97354'] = 'Save';
 $_MODULE['<{blockcmsinfo}prestashop>blockcmsinfo_630f6dc397fe74e52d5189e2c80f282b'] = 'Back to list';
 $_MODULE['<{blockcmsinfo}prestashop>blockcmsinfo_b27f049e3f0863e4de1ee11cc097e3e8'] = 'Custom block number';
-$_MODULE['<{blockcmsinfo}prestashop>blockcmsinfo_23498d91b6017e5d7f4ddde70daba286'] = 'ID Shop';
+$_MODULE['<{blockcmsinfo}prestashop>blockcmsinfo_e37b3353531668677ce46e721322803e'] = 'Custom block text';
+$_MODULE['<{blockcmsinfo}prestashop>blockcmsinfo_ccf107a5d46c6501c9f2f4345400dc2e'] = 'Shop ID';
 $_MODULE['<{blockcmsinfo}prestashop>blockcmsinfo_ef61fb324d729c341ea8ab9901e23566'] = 'Add new';
 
 

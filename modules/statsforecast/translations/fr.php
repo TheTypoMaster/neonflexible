@@ -2,6 +2,7 @@
 
 global $_MODULE;
 $_MODULE = array();
+
 $_MODULE['<{statsforecast}prestashop>statsforecast_240c994d8b61c7bd68ac1c5182bbdb2e'] = 'Tableau de bord statistiques';
 $_MODULE['<{statsforecast}prestashop>statsforecast_b17fbc0dacaf9964df883d8065118b98'] = 'Module principal du tableau de bord de statistiques. Affiche un résumé de toutes vos statistiques.';
 $_MODULE['<{statsforecast}prestashop>statsforecast_72c24d8aa8b0a7a47035b1e9d905b582'] = 'Tous les montants sont exprimés HT.';
@@ -13,7 +14,7 @@ $_MODULE['<{statsforecast}prestashop>statsforecast_4e77d12dde85c8586c0f1a3db7321
 $_MODULE['<{statsforecast}prestashop>statsforecast_d7e637a6e9ff116de2fa89551240a94d'] = 'Visites';
 $_MODULE['<{statsforecast}prestashop>statsforecast_a28735af01fbb1e35371cb120985ac47'] = 'Inscriptions';
 $_MODULE['<{statsforecast}prestashop>statsforecast_12c500ed0b7879105fb46af0f246be87'] = 'commandes';
-$_MODULE['<{statsforecast}prestashop>statsforecast_9dea4016dbcc290b773ab2fae678aaa8'] = 'Produits';
+$_MODULE['<{statsforecast}prestashop>statsforecast_9dea4016dbcc290b773ab2fae678aaa8'] = 'articles';
 $_MODULE['<{statsforecast}prestashop>statsforecast_a3acd8e86500a4d4e88935822cde948b'] = '% Inscriptions';
 $_MODULE['<{statsforecast}prestashop>statsforecast_1d34a18a13e480b0aa6a799bb8a49c1b'] = '% Com.';
 $_MODULE['<{statsforecast}prestashop>statsforecast_11ff9f68afb6b8b5b8eda218d7c83a65'] = 'Ventes';
@@ -58,3 +59,6 @@ $_MODULE['<{statsforecast}prestashop>statsforecast_61569923d8075889a162c4e603258
 $_MODULE['<{statsforecast}prestashop>statsforecast_8471eed257db7258f935588a664ba4f3'] = 'Répartition des ventes par attributs';
 $_MODULE['<{statsforecast}prestashop>statsforecast_03937134cedab9078be39a77ee3a48a0'] = 'Groupe';
 $_MODULE['<{statsforecast}prestashop>statsforecast_f2bbdf9f72c085adc4d0404e370f0f4c'] = 'Attribut';
+
+
+return $_MODULE;
