@@ -2,7 +2,7 @@
 <module>
 	<name>blockviewed</name>
 	<displayName><![CDATA[Bloc des derniers produits vus]]></displayName>
-	<version><![CDATA[1.1]]></version>
+	<version><![CDATA[1.2]]></version>
 	<description><![CDATA[Ajoute un bloc proposant les derniers produits vus par le client.]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
