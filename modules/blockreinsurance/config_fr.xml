@@ -2,7 +2,7 @@
 <module>
 	<name>blockreinsurance</name>
 	<displayName><![CDATA[Bloc r&eacute;assurance]]></displayName>
-	<version><![CDATA[2.0]]></version>
+	<version><![CDATA[2.1]]></version>
 	<description><![CDATA[Ajoute un bloc pour afficher des informations pour rassurer vos clients]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
