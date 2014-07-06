@@ -72,9 +72,13 @@
 				<span class="accroche-telephone">{Configuration::get('PS_SHOP_PHONE')}</span>
 			</div>
 			<div class="clearfix"></div>
+
+			{if isset($HOOK_TOP)}{$HOOK_TOP}{/if}
+
 		</div>
 
 		<div id="nav-header">
+			{hook h="displayNav"}
 
 			<div class="container">
 
@@ -115,8 +119,6 @@
 						</div>
 					</div>
 				</div>
-
-				{*$HOOK_TOP*}
 
 			</div>
 		</div>
