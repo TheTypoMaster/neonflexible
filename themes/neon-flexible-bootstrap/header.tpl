@@ -55,7 +55,7 @@
 			<div class="container">
 				{if isset($restricted_country_mode) && $restricted_country_mode}
 					<div id="restricted-country">
-						<p>{l s='You cannot place a new order  from your country.'} <span class="bold">{$geolocation_country}</span></p>
+						<p>{l s='You cannot place a new order from your country.'} <span class="bold">{$geolocation_country}</span></p>
 					</div>
 				{/if}
 				<ul class="nav-header-top hidden-xs" role="navigation">
@@ -66,7 +66,16 @@
 			</div>
 		</div>
 
+		<div class="container hidden-xs hidden-sm">
+			<div id="accroche">
+				<span class="accroche-texte">{l s='Un stock et un SAV garantis 100% français pour plus de réactivité'}</span>
+				<span class="accroche-telephone">{Configuration::get('PS_SHOP_PHONE')}</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+
 		<div id="nav-header">
+
 			<div class="container">
 
 				<div class="navbar navbar-inverse navbar-static-top" role="navigation">

@@ -45,3 +45,32 @@ span.clearBoth {clear:both;display:block;}
 #header #nav-header .navbar-inverse .navbar-collapse.collapse,
 #header #nav-header .navbar-inverse .navbar-collapse.collapsing,
 #header #nav-header .navbar-inverse .navbar-collapse.in {text-align:center;}
+
+#header #accroche {
+	display: block;
+	float: right;
+	margin: 25px 0 0 0;
+}
+#header #accroche .accroche-texte {
+	display:block;
+	color:#777;
+	width:140px;
+	float:left;
+	font-family: Lato;
+	font-size: 13px;
+	text-align:right;
+}
+
+#header #accroche .accroche-telephone {
+	background: url('../img/theme/header-telephone.png') no-repeat;
+	display: block;
+	width: 182px;
+	height: 54px;
+	line-height: 54px;
+	padding-left: 60px;
+	font-size: 17px;
+	color: #55a323;
+	margin-left:150px;
+	font-weight:bold;
+	font-family: Raleway;
+}
