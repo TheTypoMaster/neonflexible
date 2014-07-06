@@ -48,8 +48,9 @@ span.clearBoth {clear:both;display:block;}
 
 #header #accroche {
 	display: block;
-	float: right;
-	margin: 25px 0 0 0;
+	position:absolute;
+	margin:-80px 0 0 810px;
+	z-index:1;
 }
 #header #accroche .accroche-texte {
 	display:block;

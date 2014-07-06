@@ -46,6 +46,12 @@
 
 	<div id="header">
 		<div class="container">
+			<div class="row">
+				{hook h="displayBanner"}
+			</div>
+		</div>
+
+		<div class="container">
 			<a href="{$base_dir}" title="{$shop_name|escape:'htmlall':'UTF-8'}">
 				<img class="logo" src="{$logo_url}" alt="{$shop_name|escape:'htmlall':'UTF-8'}" {if $logo_image_width}width="{$logo_image_width}"{/if} {if $logo_image_height}height="{$logo_image_height}" {/if}/>
 			</a>
@@ -66,14 +72,15 @@
 			</div>
 		</div>
 
-		<div class="container hidden-xs hidden-sm">
+		{if isset($HOOK_TOP)}{$HOOK_TOP}{/if}
+
+		<div class="container hidden-xs hidden-sm hidden-md">
+
 			<div id="accroche">
 				<span class="accroche-texte">{l s='Un stock et un SAV garantis 100% français pour plus de réactivité'}</span>
 				<span class="accroche-telephone">{Configuration::get('PS_SHOP_PHONE')}</span>
 			</div>
 			<div class="clearfix"></div>
-
-			{if isset($HOOK_TOP)}{$HOOK_TOP}{/if}
 
 		</div>
 
