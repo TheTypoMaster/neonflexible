@@ -2,7 +2,7 @@
 <module>
 	<name>blockuserinfo</name>
 	<displayName><![CDATA[Bloc informations clients]]></displayName>
-	<version><![CDATA[0.3]]></version>
+	<version><![CDATA[0.3.1]]></version>
 	<description><![CDATA[Ajoute un bloc avec des liens utiles pour le client (login, d&eacute;connexion...)]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>

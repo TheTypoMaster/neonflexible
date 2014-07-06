@@ -11,7 +11,6 @@ $_MODULE['<{productpaymentlogos}prestashop>productpaymentlogos_f4f70727dc34561df
 $_MODULE['<{productpaymentlogos}prestashop>productpaymentlogos_223795d3a336ef80c5b6a070ae4e0d2a'] = 'En-tête du bloc';
 $_MODULE['<{productpaymentlogos}prestashop>productpaymentlogos_c7dd01cfb61ff8c984c0aff44f6540e3'] = 'Vous pouvez choisir d\'ajouter un titre au-dessus des logos.';
 $_MODULE['<{productpaymentlogos}prestashop>productpaymentlogos_89ca5c48bbc6b7a648a5c1996767484c'] = 'Image';
-$_MODULE['<{productpaymentlogos}prestashop>productpaymentlogos_fcca9fd0b196f59c7842b9d141045f81'] = 'Si votre les méthodes de paiement de votre boutique sont différentes de celles présentées dans l\'image par défaut, il vous faut créer votre propre image avec les logos utiles.';
 $_MODULE['<{productpaymentlogos}prestashop>productpaymentlogos_9ce38727cff004a058021a6c7351a74a'] = 'Lien de l\'image';
 $_MODULE['<{productpaymentlogos}prestashop>productpaymentlogos_826eeee52fe142372c3a2bc195eff911'] = 'Vous pouvez soit mettre votre propre image en ligne à l\'aide du formulaire ci-dessus, ou mettre un lien vers celle-ci grâce à l\'option "Lien de l\'image".';
 $_MODULE['<{productpaymentlogos}prestashop>productpaymentlogos_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';

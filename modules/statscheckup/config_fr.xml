@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>statscheckup</name>
-	<displayName><![CDATA[&Eacute;valuation du catalogue]]></displayName>
+	<displayName><![CDATA[Evaluation du catalogue]]></displayName>
 	<version><![CDATA[1.2]]></version>
 	<description><![CDATA[Ajoute une &eacute;valuation rapide de la qualit&eacute; de votre catalogue dans le tableau de bord des statistiques.]]></description>
 	<author><![CDATA[PrestaShop]]></author>

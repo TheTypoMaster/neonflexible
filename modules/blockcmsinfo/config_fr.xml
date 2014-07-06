@@ -2,7 +2,7 @@
 <module>
 	<name>blockcmsinfo</name>
 	<displayName><![CDATA[Bloc CMS d&#039;information client]]></displayName>
-	<version><![CDATA[1.4]]></version>
+	<version><![CDATA[1.5.1]]></version>
 	<description><![CDATA[Ajoute un bloc d&#039;information client sur votre boutique.]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>

@@ -4,7 +4,7 @@ global $_MODULE;
 $_MODULE = array();
 
 $_MODULE['<{cheque}prestashop>cheque_7b4cc4f79be9aae43efd53b4ae5cba4d'] = 'Chèque';
-$_MODULE['<{cheque}prestashop>cheque_14e41f4cfd99b10766cc15676d8cda66'] = 'Ce module vous permet d\'accepter des paiements par chèque.';
+$_MODULE['<{cheque}prestashop>cheque_14e41f4cfd99b10766cc15676d8cda66'] = 'Ce module vous permet d\'accepter des paiements par chèque';
 $_MODULE['<{cheque}prestashop>cheque_e09484ba6c16bc20236b63cc0d87ee95'] = 'Êtes-vous sûr de vouloir supprimer vos paramètres ?';
 $_MODULE['<{cheque}prestashop>cheque_32776feb26ff6f9648054e796aa0e423'] = 'Les champs "Payer à l\'ordre de" et "Adresse" doivent être configurés avant d\'utiliser ce module.';
 $_MODULE['<{cheque}prestashop>cheque_a02758d758e8bec77a33d7f392eb3f8a'] = 'Aucune devise disponible pour ce module';

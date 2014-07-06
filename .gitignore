@@ -10,6 +10,7 @@ cache/tcpdf/*
 config/xml/*.xml
 config/settings.inc.php
 
+admin220371/*.log
 log/*.log
 log/*_log
 php_errors.log
@@ -38,7 +39,18 @@ sitemap.xml
 .htpasswd
 
 # DEV version
-
 dev/*
 
+# Admin
+import/
+admin220371/autoupgrade/backup/*
+admin220371/autoupgrade/download/*
+admin220371/autoupgrade/latest/*
+admin220371/autoupgrade/tmp/*
+admin220371/autoupgrade/*.var
+admin220371/autoupgrade/*.list
+
 .DS_Store
+
+# Modules
+modules/now_import_accessories/uploads/*.csv

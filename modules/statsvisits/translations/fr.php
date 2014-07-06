@@ -4,7 +4,7 @@ global $_MODULE;
 $_MODULE = array();
 
 $_MODULE['<{statsvisits}prestashop>statsvisits_504c16c26a96283f91fb46a69b7c8153'] = 'Visites et visiteurs';
-$_MODULE['<{statsvisits}prestashop>statsvisits_714d65f65d68d66108e0515c44cc70a5'] = 'Ajoute des statistiques à propos de vos visites et visiteurs à votre tableau de bord des stats.';
+$_MODULE['<{statsvisits}prestashop>statsvisits_432c3ab90b3af30ad318201ba09aa824'] = 'Ajoute des statistiques à propos de vos visites et visiteurs au tableau de bord des statistiques.';
 $_MODULE['<{statsvisits}prestashop>statsvisits_6602bbeb2956c035fb4cb5e844a4861b'] = 'Guide';
 $_MODULE['<{statsvisits}prestashop>statsvisits_ffbee337f031c2282b311bac40bc8bb9'] = 'Déterminer l\'intérêt d\'une visite';
 $_MODULE['<{statsvisits}prestashop>statsvisits_e90d50ca1e68dc66c97bd62929dcbaf1'] = 'Le graphique d\'évolution visiteurs ressemble fortement au graphique des visites, mais fournit des informations supplémentaires:';

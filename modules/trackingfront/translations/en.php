@@ -4,7 +4,7 @@ global $_MODULE;
 $_MODULE = array();
 
 $_MODULE['<{trackingfront}prestashop>trackingfront_e8a827db4eca37d2c6cdef8e406f6fa9'] = 'Tracking - Front office';
-$_MODULE['<{trackingfront}prestashop>trackingfront_776d820ab23953c84ee17ca29a0f545d'] = 'Enable your affiliates to access their own statistics. See Stats/Referers.';
+$_MODULE['<{trackingfront}prestashop>trackingfront_d565f36c06949442a4eb998354376c5b'] = 'Enables your affiliates to access their own statistics. See Stats/Referrers.';
 $_MODULE['<{trackingfront}prestashop>trackingfront_8f5ac7793b2547cd025a7335f4934d26'] = 'login is required';
 $_MODULE['<{trackingfront}prestashop>trackingfront_6f658a5bbec855ca5ae4ef4c94eb5d43'] = 'invalid login';
 $_MODULE['<{trackingfront}prestashop>trackingfront_962c91be4b1056412febf0c272760814'] = 'password is required';
@@ -24,7 +24,7 @@ $_MODULE['<{trackingfront}prestashop>trackingfront_da9cb586c6689202ca65cd77fd9b8
 $_MODULE['<{trackingfront}prestashop>trackingfront_200f5c9c419f0a53d5d361eff7b33abc'] = 'Registration rate';
 $_MODULE['<{trackingfront}prestashop>trackingfront_89741aae300253f498b0993fa678fa18'] = 'Order rate';
 $_MODULE['<{trackingfront}prestashop>account_8954e140059f7b2544469f40161ba507'] = 'Affiliation space';
-$_MODULE['<{trackingfront}prestashop>account_0323de4f66a1700e2173e9bcdce02715'] = 'Logout';
+$_MODULE['<{trackingfront}prestashop>account_c87aacf5673fada1108c9f809d354311'] = 'Sign out';
 $_MODULE['<{trackingfront}prestashop>account_1dd1c5fb7f25cd41b291d43a89e3aefd'] = 'Today';
 $_MODULE['<{trackingfront}prestashop>account_7cbb885aa1164b390a0bc050a64e1812'] = 'Month';
 $_MODULE['<{trackingfront}prestashop>account_537c66b24ef5c83b7382cdc3f34885f2'] = 'Year';
@@ -47,9 +47,8 @@ $_MODULE['<{trackingfront}prestashop>account_0bcef9c45bd8a48eda1b26eb0c61c869'] 
 $_MODULE['<{trackingfront}prestashop>header_bf15e68d25d8a2b7664950ba7385ed0a'] = 'Affiliation';
 $_MODULE['<{trackingfront}prestashop>login_bf15e68d25d8a2b7664950ba7385ed0a'] = 'Affiliation';
 $_MODULE['<{trackingfront}prestashop>login_8954e140059f7b2544469f40161ba507'] = 'Affiliation space';
-$_MODULE['<{trackingfront}prestashop>login_99dea78007133396a7b8ed70578ac6ae'] = 'Login';
+$_MODULE['<{trackingfront}prestashop>login_b6d4223e60986fa4c9af77ee5f7149c5'] = 'Sign in';
 $_MODULE['<{trackingfront}prestashop>login_dc647eb65e6711e155375218212b3964'] = 'Password';
-$_MODULE['<{trackingfront}prestashop>login_bffe9a3c9a7e00ba00a11749e022d911'] = 'Log in';
 
 
 return $_MODULE;

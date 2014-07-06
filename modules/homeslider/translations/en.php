@@ -11,13 +11,13 @@ $_MODULE['<{homeslider}prestashop>homeslider_e0ce30bfbf90d2306ecf72f06a83133f'] 
 $_MODULE['<{homeslider}prestashop>homeslider_9f79795e050649dc6b8bd0cdc874cbdc'] = 'Invalid slide position.';
 $_MODULE['<{homeslider}prestashop>homeslider_76ad3ac84a702b0497cd6be8e8886d34'] = 'Invalid id_slide';
 $_MODULE['<{homeslider}prestashop>homeslider_14f09fd0804a8f1cd0eb757125fc9c28'] = 'The title is too long.';
-$_MODULE['<{homeslider}prestashop>homeslider_39fc40a0ebcbfcae901d20ab8980f188'] = 'The legend is too long.';
+$_MODULE['<{homeslider}prestashop>homeslider_dc89634d1d28cd4e055531e62047156b'] = 'The caption is too long.';
 $_MODULE['<{homeslider}prestashop>homeslider_4477f672766f6f255f760649af8bd92a'] = 'The URL is too long.';
 $_MODULE['<{homeslider}prestashop>homeslider_62239300ba982b06ab0f1aa7100ad297'] = 'The description is too long.';
 $_MODULE['<{homeslider}prestashop>homeslider_980f56796b8bf9d607283de9815fe217'] = 'The URL format is not correct.';
 $_MODULE['<{homeslider}prestashop>homeslider_73133ce32267e8c7a854d15258eb17e0'] = 'Invalid filename.';
 $_MODULE['<{homeslider}prestashop>homeslider_349097dadf7e6b01dd2af601d54fd59a'] = 'The title is not set.';
-$_MODULE['<{homeslider}prestashop>homeslider_ab53605e4a73424d186afccef7b4bc03'] = 'The legend is not set.';
+$_MODULE['<{homeslider}prestashop>homeslider_a9af2809b02444b9470f97dc66ba57a2'] = 'The caption is not set.';
 $_MODULE['<{homeslider}prestashop>homeslider_0f059227d0a750ce652337d911879671'] = 'The URL is not set.';
 $_MODULE['<{homeslider}prestashop>homeslider_8cf45ba354f4725ec8a0d31164910895'] = 'The image is not set.';
 $_MODULE['<{homeslider}prestashop>homeslider_7f82c65d548588c8d5412463c182e450'] = 'The configuration could not be updated.';
@@ -31,7 +31,7 @@ $_MODULE['<{homeslider}prestashop>homeslider_55b75a0d59fc613fa2e572226266ff08'] 
 $_MODULE['<{homeslider}prestashop>homeslider_792744786ed30c5623dd1cf0c16f4ffe'] = 'Select a file';
 $_MODULE['<{homeslider}prestashop>homeslider_b78a3223503896721cca1303f776159b'] = 'Title';
 $_MODULE['<{homeslider}prestashop>homeslider_e6b391a8d2c4d45902a23a8b6585703d'] = 'URL';
-$_MODULE['<{homeslider}prestashop>homeslider_9b27e12d584b3438e811533b32e026e8'] = 'Legend';
+$_MODULE['<{homeslider}prestashop>homeslider_272ba7d164aa836995be6319a698be84'] = 'Caption';
 $_MODULE['<{homeslider}prestashop>homeslider_b5a7adde1af5c87d7fd797b6245c2a39'] = 'Description';
 $_MODULE['<{homeslider}prestashop>homeslider_4d3d769b812b6faa6b76e1a8abaece2d'] = 'Active';
 $_MODULE['<{homeslider}prestashop>homeslider_93cba07454f06a4a960172bbd6e2a435'] = 'Yes';

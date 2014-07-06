@@ -7,7 +7,7 @@ $_MODULE['<{statsorigin}prestashop>statsorigin_f0b1507c6bdcdefb60a0e6f9b89d4ae8'
 $_MODULE['<{statsorigin}prestashop>statsorigin_a69c2a3091fe48c7f4f391595aa3ac19'] = 'Ajoute un graphique présentant les sites depuis lesquels vos visiteurs viennent, dans le tableau de bord des statistiques.';
 $_MODULE['<{statsorigin}prestashop>statsorigin_14542f5997c4a02d4276da364657f501'] = 'Lien direct';
 $_MODULE['<{statsorigin}prestashop>statsorigin_3edf8ca26a1ec14dd6e91dd277ae1de6'] = 'Origine';
-$_MODULE['<{statsorigin}prestashop>statsorigin_4b69c1f7f555aa19fd90ee01e4aa63cd'] = 'Dans cet onglet, vous trouverez les 10 sites référants les plus populaires, ceux qui amènent le plus de clients à votre boutique.';
+$_MODULE['<{statsorigin}prestashop>statsorigin_4b69c1f7f555aa19fd90ee01e4aa63cd'] = 'Dans cet onglet, vous trouverez les 10 sites référents les plus populaires, ceux qui amènent le plus de clients à votre boutique.';
 $_MODULE['<{statsorigin}prestashop>statsorigin_6602bbeb2956c035fb4cb5e844a4861b'] = 'Guide';
 $_MODULE['<{statsorigin}prestashop>statsorigin_cec998cc46cd200fa97490137de2cc7f'] = 'Qu\'est-ce qu\'un site affluent (référant) ?';
 $_MODULE['<{statsorigin}prestashop>statsorigin_54f00c2c9a36e2b300b5bacc1bb7912c'] = 'Le référant est l\'adresse web de la page précédente, qui contient un lien cliqué par votre visiteur.';

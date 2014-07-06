@@ -2,7 +2,7 @@
 <module>
 	<name>gamification</name>
 	<displayName><![CDATA[Expertise PrestaShop]]></displayName>
-	<version><![CDATA[1.8.6]]></version>
+	<version><![CDATA[1.8.8]]></version>
 	<description><![CDATA[Devenez un marchand accompli &agrave; pas de g&eacute;ant !]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[administration]]></tab>

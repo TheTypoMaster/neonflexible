@@ -15,7 +15,7 @@ $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_b9f5c797ebbf55adccdd853
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers-home_3cb29f0ccc5fd220a97df89dafe46290'] = 'Meilleures ventes';
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers-home_d3da97e2d9aee5c8fbe03156ad051c99'] = 'Détails';
-$_MODULE['<{blockbestsellers}prestashop>blockbestsellers-home_4351cfebe4b61d8aa5efa1d020710005'] = 'Détails';
+$_MODULE['<{blockbestsellers}prestashop>blockbestsellers-home_4351cfebe4b61d8aa5efa1d020710005'] = 'Afficher';
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers-home_eae99cd6a931f3553123420b16383812'] = 'Toutes les meilleures ventes';
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers-home_adc570b472f54d65d3b90b8cee8368a9'] = 'Pas encore de meilleure vente';
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_1d0a2e1f62ccf460d604ccbc9e09da95'] = 'Voir une des meilleures ventes';
@@ -23,7 +23,7 @@ $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_3cb29f0ccc5fd220a97df89
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_eae99cd6a931f3553123420b16383812'] = 'Toutes les meilleures ventes';
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_f7be84d6809317a6eb0ff3823a936800'] = 'Pas encore de meilleure vente';
 $_MODULE['<{blockbestsellers}prestashop>tab_d7b2933ba512ada478c97fa43dd7ebe6'] = 'Meilleures Ventes';
-$_MODULE['<{blockbestsellers}prestashop>blockbestsellers-home_09a5fe24fe0fc9ce90efc4aa507c66e7'] = 'Aucune meilleure vente à l\'heure actuelle.';
+$_MODULE['<{blockbestsellers}prestashop>blockbestsellers-home_09a5fe24fe0fc9ce90efc4aa507c66e7'] = 'Aucun meilleure vente à l\'heure actuelle.';
 
 
 return $_MODULE;

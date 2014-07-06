@@ -14,7 +14,7 @@ $_MODULE['<{statsforecast}prestashop>statsforecast_4e77d12dde85c8586c0f1a3db7321
 $_MODULE['<{statsforecast}prestashop>statsforecast_d7e637a6e9ff116de2fa89551240a94d'] = 'Visites';
 $_MODULE['<{statsforecast}prestashop>statsforecast_a28735af01fbb1e35371cb120985ac47'] = 'Inscriptions';
 $_MODULE['<{statsforecast}prestashop>statsforecast_12c500ed0b7879105fb46af0f246be87'] = 'commandes';
-$_MODULE['<{statsforecast}prestashop>statsforecast_9dea4016dbcc290b773ab2fae678aaa8'] = 'Produits';
+$_MODULE['<{statsforecast}prestashop>statsforecast_9dea4016dbcc290b773ab2fae678aaa8'] = 'articles';
 $_MODULE['<{statsforecast}prestashop>statsforecast_a3acd8e86500a4d4e88935822cde948b'] = '% Inscriptions';
 $_MODULE['<{statsforecast}prestashop>statsforecast_1d34a18a13e480b0aa6a799bb8a49c1b'] = '% Com.';
 $_MODULE['<{statsforecast}prestashop>statsforecast_11ff9f68afb6b8b5b8eda218d7c83a65'] = 'Ventes';

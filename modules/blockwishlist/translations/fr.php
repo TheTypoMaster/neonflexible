@@ -25,7 +25,7 @@ $_MODULE['<{blockwishlist}prestashop>blockwishlist_c440899c1d6f8c8271b9b1d171c7e
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_12246cb491c807e85279b8aed74ea3cf'] = 'Choisissez la liste de souhaits';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_be53a0541a6d36f6ecb879fa2c584b08'] = 'Image';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_47ac923d219501859fb68fed8c8db77b'] = 'Déclinaison';
-$_MODULE['<{blockwishlist}prestashop>blockwishlist_4351cfebe4b61d8aa5efa1d020710005'] = 'Détails';
+$_MODULE['<{blockwishlist}prestashop>blockwishlist_4351cfebe4b61d8aa5efa1d020710005'] = 'Afficher';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_7dce122004969d56ae2e0245cb754d35'] = 'Modifier';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_81355310011c137fdd21cf9a1394ed6a'] = 'Liste des produits';
 $_MODULE['<{blockwishlist}prestashop>buywishlistproduct_607e1d854783c8229998ac2b5b6923d3'] = 'Jeton non valable';
@@ -88,7 +88,7 @@ $_MODULE['<{blockwishlist}prestashop>mywishlist_5e729042e30967c9d6f65c6eab73e2fe
 $_MODULE['<{blockwishlist}prestashop>mywishlist_0eceeb45861f9585dd7a97a3e36f85c6'] = 'Créé le';
 $_MODULE['<{blockwishlist}prestashop>mywishlist_45284ef16392f85ff424b2ef36ab5948'] = 'Lien direct';
 $_MODULE['<{blockwishlist}prestashop>mywishlist_f2a6c498fb90ee345d997f888fce3b18'] = 'Supprimer';
-$_MODULE['<{blockwishlist}prestashop>mywishlist_4351cfebe4b61d8aa5efa1d020710005'] = 'Détails';
+$_MODULE['<{blockwishlist}prestashop>mywishlist_4351cfebe4b61d8aa5efa1d020710005'] = 'Afficher';
 $_MODULE['<{blockwishlist}prestashop>mywishlist_d025259319054206be54336a00defe89'] = 'Souhaitez-vous réellement supprimer cette liste ?';
 $_MODULE['<{blockwishlist}prestashop>mywishlist_0b3db27bc15f682e92ff250ebb167d4b'] = 'Retour à votre compte';
 $_MODULE['<{blockwishlist}prestashop>mywishlist_8cf04a9734132302f96da8e113e80ce5'] = 'Accueil';
@@ -97,7 +97,7 @@ $_MODULE['<{blockwishlist}prestashop>view_315356f4c2ed70df345ffc01021f7f56'] = '
 $_MODULE['<{blockwishlist}prestashop>view_4b7d496eedb665d0b5f589f2f874e7cb'] = 'Détails de l\'article';
 $_MODULE['<{blockwishlist}prestashop>view_694e8d1f2ee056f98ee488bdc4982d73'] = 'Quantité';
 $_MODULE['<{blockwishlist}prestashop>view_502996d9790340c5fd7b86a5b93b1c9f'] = 'Priorité';
-$_MODULE['<{blockwishlist}prestashop>view_4351cfebe4b61d8aa5efa1d020710005'] = 'Détails';
+$_MODULE['<{blockwishlist}prestashop>view_4351cfebe4b61d8aa5efa1d020710005'] = 'Afficher';
 $_MODULE['<{blockwishlist}prestashop>view_2d0f6b8300be19cf35e89e66f0677f95'] = 'Ajouter au panier';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_button_6a5373df703ab2827a4ba7facdfcf779'] = 'Ajouter à ma liste de cadeaux';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_top_16a23698e7cf5188ce1c07df74298076'] = 'Vous devez être connecté pour gérer votre liste de cadeaux';

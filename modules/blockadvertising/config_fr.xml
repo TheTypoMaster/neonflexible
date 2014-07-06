@@ -2,7 +2,7 @@
 <module>
 	<name>blockadvertising</name>
 	<displayName><![CDATA[Bloc publicit&eacute;s]]></displayName>
-	<version><![CDATA[0.7]]></version>
+	<version><![CDATA[0.8]]></version>
 	<description><![CDATA[Ajoute un bloc affichant une publicit&eacute;.]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[advertising_marketing]]></tab>

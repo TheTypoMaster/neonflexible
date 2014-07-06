@@ -12,6 +12,7 @@ $_MODULE['<{blockstore}prestashop>blockstore_efc226b17e0532afff43be870bff0de7'] 
 $_MODULE['<{blockstore}prestashop>blockstore_f4f70727dc34561dfde1a3c529b6205c'] = 'Réglages';
 $_MODULE['<{blockstore}prestashop>blockstore_89ca5c48bbc6b7a648a5c1996767484c'] = 'Image';
 $_MODULE['<{blockstore}prestashop>blockstore_616f723a17ccb34e38aa6e1ddc1c0b47'] = '(l\'image sélectionnée sera affichée en 174 pixels par 174)';
+$_MODULE['<{blockstore}prestashop>blockstore_56425383198d22fc8bb296bcca26cecf'] = 'Texte du bloc';
 $_MODULE['<{blockstore}prestashop>blockstore_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';
 $_MODULE['<{blockstore}prestashop>blockstore_8c0caec5616160618b362bcd4427d97b'] = 'Nos magasins';
 $_MODULE['<{blockstore}prestashop>blockstore_28fe12f949fd191685071517628df9b3'] = 'Découvrez nos magasins!';
