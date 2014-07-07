@@ -74,4 +74,185 @@ span.clearBoth {clear:both;display:block;}
 	margin-left:150px;
 	font-weight:bold;
 	font-family: Raleway;
+	cursor:default;
+	text-decoration:none;
+}
+
+/* Footer */
+
+footer {
+	background:#f4f4f4;
+	border-top: 1px solid #ccc;
+}
+
+footer #page-listing {
+	float:left;
+	margin:70px 10px;
+}
+
+footer #page-listing ul {
+	list-style-type:none;
+}
+
+footer #page-listing ul li {
+	color:#333;
+	font-family: Raleway;
+	font-size:17px;
+	font-weight:bold;
+	margin:0px;
+	padding:0px;
+	float: left;
+}
+
+footer #page-listing ul li span {
+	display:block;
+	margin: 0 0 10px 0;
+}
+
+footer #page-listing ul li:first-letter {
+	text-transform: capitalize;
+}
+
+footer #page-listing ul li > ul {
+	margin:0 70px 0 0;
+	padding:0px;
+	float: left;
+}
+
+footer #page-listing ul li > ul li {
+	color:#777;
+	font-size:14px;
+	font-family: Lato;
+	float: none;
+	font-weight:normal;
+	line-height:22px;
+	margin: 0;
+}
+
+footer .barre {
+	float: left;
+	width:1px;
+	height:260px;
+	background:#ccc;
+	display:block;
+	margin:30px 0px;
+}
+
+footer #contact {
+	color: #777;
+	width:350px;
+	height: 340px;
+	float: left;
+	padding:10px 0 10px 60px;
+	margin:20px 0px;
+}
+
+footer #contact .logo {
+	margin: 0 auto;
+	display: block;
+}
+
+footer #contact .adresse {
+	color:#777;
+	font-size:14px;
+	font-family: Lato;
+	text-align: center;
+	margin: 10px 0;
+}
+
+footer #contact .telephone {
+	background: url('../img/theme/footer-telephone.png') no-repeat;
+	display: block;
+	width: 161px;
+	height: 42px;
+	line-height: 36px;
+	padding-left: 40px;
+	font-size: 17px;
+	color: #55a323;
+	margin: 0 auto;
+	font-weight: bold;
+	font-family: Raleway;
+	cursor:default;
+	text-decoration:none;
+}
+
+footer hr {
+	margin:10px 0px;
+	padding:0px;
+	border-top: 1px solid #ccc;
+}
+
+footer #contact .follow-us {
+	color: #333;
+	font-family: Raleway;
+	font-size: 17px;
+	font-weight: bold;
+	width: 150px;
+	float: left;
+	line-height: 38px;
+	padding:0 0 0 5px;
+}
+
+footer #contact ul {
+	list-style-type:none;
+}
+
+footer #contact ul li {
+	float: left;
+	width:41px;
+	height:38px;
+	margin:2px;
+	padding:0px;
+}
+
+footer #contact ul li.facebook {
+	background: url('../img/theme/facebook.png') no-repeat;
+}
+
+footer #contact ul li.twitter {
+	background: url('../img/theme/twitter.png') no-repeat;
+}
+
+footer #contact ul li.google {
+	background: url('../img/theme/google-plus.png') no-repeat;
+}
+
+footer #contact ul li a {
+	width:41px;
+	height:38px;
+	text-indent:-9999px;
+	position:absolute;
+}
+
+
+/* Bloc reinsurance */
+
+#bloc-reinsurrance {
+	border-top: 1px solid #ccc;
+	padding: 40px 0;
+}
+
+#bloc-reinsurrance ul {
+	list-style-type:none;
+}
+
+#bloc-reinsurrance ul li {
+	float: left;
+	padding: 0;
+	width: 220px;
+	text-align: center;
+	margin:0 20px;
+}
+
+#bloc-reinsurrance ul li h6 {
+	color: #333;
+	font-family: Raleway;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#bloc-reinsurrance ul li p {
+	color:#777;
+	font-size:14px;
+	font-family: Lato;
 }
