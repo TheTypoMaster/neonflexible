@@ -1,12 +1,13 @@
-{*
+<?php
+/*
 * 2007-2014 PrestaShop
 *
 * NOTICE OF LICENSE
 *
-* This source file is subject to the Academic Free License (AFL 3.0)
+* This source file is subject to the Open Software License (OSL 3.0)
 * that is bundled with this package in the file LICENSE.txt.
 * It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/afl-3.0.php
+* http://opensource.org/licenses/osl-3.0.php
 * If you did not receive a copy of the license and are unable to
 * obtain it through the world-wide-web, please send an email
 * to license@prestashop.com so we can send you a copy immediately.
@@ -19,13 +20,14 @@
 *
 *  @author PrestaShop SA <contact@prestashop.com>
 *  @copyright  2007-2014 PrestaShop SA
-*  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
-*}
+*/
 
-<p class="payment_module">
-	<a href="{$link->getModuleLink('cheque', 'payment', [], true)|escape:'html'}" title="{l s='Pay by check' mod='cheque'}">
-		<img src="{$this_path_cheque}cheque.jpg" alt="{l s='Pay by check' mod='cheque'}" width="86" height="49" />
-		{l s='Pay by check' mod='cheque'} {l s='(order processing will be longer)' mod='cheque'}
-	</a>
-</p>
+if (!defined('_PS_VERSION_'))
+  exit;
+
+function upgrade_module_1_5_5($object)
+{
+  return Db::getInstance()->insert('configuration', array('name' => 'PS_BLOCK_BESTSELLERS_TO_DISPLAY', 'value' => 10));
+}
