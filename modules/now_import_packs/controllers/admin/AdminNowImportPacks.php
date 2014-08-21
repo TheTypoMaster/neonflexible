@@ -169,7 +169,7 @@ class AdminNowImportPacksController extends ModuleAdminControllerCore
 				$this->oCSV->removeColumnsInData($aColumns);
 
 			if (!(in_array('product_reference', $aColumns) || in_array('product_id', $aColumns)) || !in_array('products_pack', $aColumns)) {
-				$this->errors[] = $this->module->l('You must defined this columns before to go in the step 3: Product reference or Product ID and products pack id\'s (Separated by "::").', 'AdminNowImportPacks');
+				$this->errors[] = $this->module->l('You must defined this columns before to go in the step 3: Product reference or Product ID and products pack id\'s (Separated by "::" and quantity on "()").', 'AdminNowImportPacks');
 			} else {
 
 				$aNewData = array(0 => array(
@@ -316,13 +316,34 @@ class AdminNowImportPacksController extends ModuleAdminControllerCore
 	 * @return string
 	 */
 	public function getNewProductsPacks($sProductsPacks) {
-		if ($sProductsPacks == '')
+		if ($sProductsPacks == '') {
 			return '';
-		$aProductsPacks = NowProduct::getProductsLight(explode('::', $sProductsPacks));
+		}
+
+		$aProducts		= explode('::', $sProductsPacks);
+		$aProductsPacks	= NowProduct::getProductsLight($aProducts);
+
+
+		$aProductsID = array();
+
+		// On supprime les quantités
+		foreach ($aProducts as $sProduct) {
+			preg_match('#([0-9A-Za-z]*)\(([0-9]*)\)#', $sProduct, $matches);
+			$aProductsID[(isset($matches[1]) ? $matches[1] : $sProduct)] = (int)(isset($matches[2]) ? $matches[2] : 1);
+		}
 
 		$sProductsPacks = '<ul>';
 		foreach ($aProductsPacks as $aProductPack) {
-			$sProductsPacks .= '<li>'.sprintf($this->module->l('%1$s (Id product: %2$s, Reference: %3$s)', 'AdminNowImportPacks'), $aProductPack['name'], $aProductPack['id_product'], $aProductPack['reference']).'</li>';
+
+			// On récupère la bonne quantité
+			$aProductPack['pack_quantity']		= 1;
+			if (array_key_exists($aProductPack['id_product'], $aProductsID)) {
+				$aProductPack['pack_quantity']	= (int)$aProductsID[$aProductPack['id_product']];
+			} elseif (array_key_exists($aProductPack['reference'], $aProductsID)) {
+				$aProductPack['pack_quantity']	= (int)$aProductsID[$aProductPack['reference']];
+			}
+
+			$sProductsPacks .= '<li>'.sprintf($this->module->l('%1$s (Id product: %2$s, Reference: %3$s, Quantity: %4$d)', 'AdminNowImportPacks'), $aProductPack['name'], $aProductPack['id_product'], $aProductPack['reference'], $aProductPack['pack_quantity']).'</li>';
 		}
 		$sProductsPacks .= '</ul>';
 
@@ -339,7 +360,7 @@ class AdminNowImportPacksController extends ModuleAdminControllerCore
 
 		$sProductsPacks = '<ul>';
 		foreach ($aProductsPacks as $oProductPack) {
-			$sProductsPacks .= '<li>'.sprintf($this->module->l('%1$s (Id product: %2$s, Reference: %3$s)', 'AdminNowImportPacks'), $oProductPack->name, $oProductPack->id, $oProductPack->reference).'</li>';
+			$sProductsPacks .= '<li>'.sprintf($this->module->l('%1$s (Id product: %2$s, Reference: %3$s, Quantity: %4$d)', 'AdminNowImportPacks'), $oProductPack->name, $oProductPack->id, $oProductPack->reference, $oProductPack->pack_quantity).'</li>';
 		}
 		$sProductsPacks .= '</ul>';
 
@@ -395,7 +416,7 @@ class AdminNowImportPacksController extends ModuleAdminControllerCore
 			'ignore_column'			=> $this->module->l('Ignore this column', 'AdminNowImportPacks'),
 			'product_reference'		=> $this->module->l('Product reference', 'AdminNowImportPacks'),
 			'product_id'			=> $this->module->l('Product ID', 'AdminNowImportPacks'),
-			'products_pack'			=> $this->module->l('Products pack (Separated by "::")', 'AdminNowImportPacks'),
+			'products_pack'			=> $this->module->l('Products pack (Separated by "::" and quantity on "()")', 'AdminNowImportPacks'),
 		);
 	}
 

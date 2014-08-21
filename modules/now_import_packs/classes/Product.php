@@ -31,6 +31,15 @@ class NowProduct {
 	 * @return array Product
 	 */
 	public static function getProductsLight($aProducts) {
+
+		$aProductsID = array();
+
+		// On supprime les quantités
+		foreach ($aProducts as $sProduct) {
+			preg_match('#([0-9A-Za-z]*)\(([0-9]*)\)#', $sProduct, $matches);
+			$aProductsID[] = isset($matches[1]) ? $matches[1] : $sProduct;
+		}
+
 		$sql = 'SELECT p.`id_product`, p.`reference`, pl.`name`
 				FROM `'._DB_PREFIX_.'product` p
 				LEFT JOIN `'._DB_PREFIX_.'product_lang` pl ON (
@@ -38,8 +47,8 @@ class NowProduct {
 					AND pl.`id_lang` = '.(int)Context::getContext()->language->id.
 					Shop::addSqlRestrictionOnLang('pl').'
 				)
-				WHERE p.`id_product` IN ("'.implode('","', $aProducts).'")
-				OR p.`reference` IN ("'.implode('","', $aProducts).'")';
+				WHERE p.`id_product` IN ("'.implode('", "', $aProductsID).'")
+				OR p.`reference` IN ("'.implode('", "', $aProductsID).'")';
 
 		return Db::getInstance()->executeS($sql);
 	}
@@ -70,9 +79,26 @@ class NowProduct {
 	 */
 	public static function changeProductsPacks($iIdProduct, $aProductsPacks) {
 		$bResult = true;
+
+		$aProductsID = array();
+
+		foreach ($aProductsPacks as $sProduct) {
+			preg_match('#([0-9A-Za-z]*)\(([0-9]*)\)#', $sProduct, $matches);
+			$aProductsID[(isset($matches[1]) ? $matches[1] : $sProduct)] = (int)(isset($matches[2]) ? $matches[2] : 1);
+		}
+
 		$aProductsPacks = NowProduct::getProductsLight($aProductsPacks);
+
 		foreach ($aProductsPacks as $aProductPack) {
-			$bResult &= PackCore::addItem($iIdProduct, $aProductPack['id_product'], 1);
+		// On récupère la bonne quantité
+			$aProductPack['pack_quantity']		= 1;
+			if (array_key_exists($aProductPack['id_product'], $aProductsID)) {
+				$aProductPack['pack_quantity']	= (int)$aProductsID[$aProductPack['id_product']];
+			} elseif (array_key_exists($aProductPack['reference'], $aProductsID)) {
+				$aProductPack['pack_quantity']	= (int)$aProductsID[$aProductPack['reference']];
+			}
+
+			$bResult &= PackCore::addItem($iIdProduct, $aProductPack['id_product'], $aProductPack['pack_quantity']);
 		}
 		return $bResult;
 	}
