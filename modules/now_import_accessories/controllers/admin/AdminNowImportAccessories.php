@@ -22,7 +22,7 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 
 	public function __construct()
 	{
-        $this->bootstrap = true;
+		$this->bootstrap = true;
 		$this->module = new now_import_accessories();
 
 		$aDelimiter = array();
@@ -53,18 +53,18 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 						),
 						'visibility' => Shop::CONTEXT_ALL
 					),
-                    'NOW_IMPORT_ACCES_SEPARATOR' => array(
-                        'title' => $this->module->l('Choose your separator', 'AdminNowImportAccessories'),
-                        'type' => 'select',
-                        'identifier' => 'value',
-                        'list' => array(
-                            array('value' => ';', 'name' => ';'),
-                            array('value' => ',', 'name' => ','),
-                            array('value' => '|', 'name' => '|'),
-                            array('value' => '^', 'name' => '^')
-                        ),
-                        'visibility' => Shop::CONTEXT_ALL
-                    ),
+					'NOW_IMPORT_ACCES_SEPARATOR' => array(
+						'title' => $this->module->l('Choose your separator', 'AdminNowImportAccessories'),
+						'type' => 'select',
+						'identifier' => 'value',
+						'list' => array(
+							array('value' => ';', 'name' => ';'),
+							array('value' => ',', 'name' => ','),
+							array('value' => '|', 'name' => '|'),
+							array('value' => '^', 'name' => '^')
+						),
+						'visibility' => Shop::CONTEXT_ALL
+					),
 					'NOW_IMPORT_ACCES_DELIMITER' => array(
 						'title' => $this->module->l('Choose your text delimiter', 'AdminNowImportAccessories'),
 						'type' => 'select',
@@ -86,20 +86,20 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 					),
 				),
 				'submit' => array(
-                    'title' => $this->l('Save'),
-                    'class' => $this->l('Save'),
-                )
+					'title' => $this->l('Save'),
+					'class' => $this->l('Save'),
+				)
 			)
 		);
 
 		$this->setCurrentStep();
 		if ($this->iStep > 1) {
-			$sTypeFile          = Configuration::get('NOW_IMPORT_ACCES_FILE');
-			$sSeparator         = Configuration::get('NOW_IMPORT_ACCES_SEPARATOR');
-			$sDelimiter         = Configuration::get('NOW_IMPORT_ACCES_DELIMITER') == 1 ? '\'' : '"';
-			$sDecimalDelimiter  = Configuration::get('NOW_IMPORT_ACCES_DECIMAL');
-			$bConvertFileToUTF8 = Configuration::get('NOW_IMPORT_ACCES_CONVERT_UTF8');
-			$this->oCSV         = new NowCSV($this->aFile, $sTypeFile, $sSeparator, $sDelimiter, $sDecimalDelimiter, $bConvertFileToUTF8);
+			$sTypeFile			= Configuration::get('NOW_IMPORT_ACCES_FILE');
+			$sSeparator			= Configuration::get('NOW_IMPORT_ACCES_SEPARATOR');
+			$sDelimiter			= Configuration::get('NOW_IMPORT_ACCES_DELIMITER') == 1 ? '\'' : '"';
+			$sDecimalDelimiter	= Configuration::get('NOW_IMPORT_ACCES_DECIMAL');
+			$bConvertFileToUTF8	= Configuration::get('NOW_IMPORT_ACCES_CONVERT_UTF8');
+			$this->oCSV			= new NowCSV($this->aFile, $sTypeFile, $sSeparator, $sDelimiter, $sDecimalDelimiter, $bConvertFileToUTF8);
 		}
 	}
 
@@ -108,8 +108,8 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 		$tpl = $this->createTemplate('step-1.tpl');
 
 		$aParams = array(
-			'current_step'  => $this->iStep,
-			'pagination'    => Configuration::get('NOW_IMPORT_ACCES_PAGINATION'),
+			'current_step'	=> $this->iStep,
+			'pagination'	=> Configuration::get('NOW_IMPORT_ACCES_PAGINATION'),
 		);
 		$aParams = $this->setTemplateParams($aParams);
 
@@ -127,11 +127,11 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 		$this->errors = $this->oCSV->aErrors;
 
 		$aParams = array(
-			'current_step'  => $this->iStep,
-			'file_path'     => $this->sUploadDirectory.$this->oCSV->sNewFilename,
-			'aDatas'        => $this->oCSV->aData,
-			'aColumns'      => $this->getColumns(),
-			'pagination'    => Configuration::get('NOW_IMPORT_ACCES_PAGINATION'),
+			'current_step'	=> $this->iStep,
+			'file_path'		=> $this->sUploadDirectory.$this->oCSV->sNewFilename,
+			'aDatas'		=> $this->oCSV->aData,
+			'aColumns'		=> $this->getColumns(),
+			'pagination'	=> Configuration::get('NOW_IMPORT_ACCES_PAGINATION'),
 		);
 		$aParams = $this->setTemplateParams($aParams);
 
@@ -141,20 +141,20 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 	}
 
 	public function processThirdStep() {
-		$aColumns           = Tools::getValue('columns', array());
-		$aLines             = Tools::getValue('lines', array());
-		$sFilePath          = Tools::getValue('file_path');
+		$aColumns			= Tools::getValue('columns', array());
+		$aLines				= Tools::getValue('lines', array());
+		$sFilePath			= Tools::getValue('file_path');
 
-		$sTypeFile          = Configuration::get('NOW_IMPORT_ACCES_FILE');
-		$sSeparator         = Configuration::get('NOW_IMPORT_ACCES_SEPARATOR');
-		$sDelimiter         = Configuration::get('NOW_IMPORT_ACCES_DELIMITER') == 1 ? '\'' : '"';
-		$sDecimalDelimiter  = Configuration::get('NOW_IMPORT_ACCES_DECIMAL');
-		$bConvertFileToUTF8 = Configuration::get('NOW_IMPORT_ACCES_CONVERT_UTF8');
+		$sTypeFile			= Configuration::get('NOW_IMPORT_ACCES_FILE');
+		$sSeparator			= Configuration::get('NOW_IMPORT_ACCES_SEPARATOR');
+		$sDelimiter			= Configuration::get('NOW_IMPORT_ACCES_DELIMITER') == 1 ? '\'' : '"';
+		$sDecimalDelimiter	= Configuration::get('NOW_IMPORT_ACCES_DECIMAL');
+		$bConvertFileToUTF8	= Configuration::get('NOW_IMPORT_ACCES_CONVERT_UTF8');
 
-		$this->oCSV             = new NowCSV(array(), $sTypeFile, $sSeparator, $sDelimiter, $sDecimalDelimiter, $bConvertFileToUTF8);
-		$this->oCSV->sFilename  = $sFilePath;
-		$bCheckFile             = (bool)$this->oCSV->checkFile();
-		$this->errors           = $this->oCSV->aErrors;
+		$this->oCSV				= new NowCSV(array(), $sTypeFile, $sSeparator, $sDelimiter, $sDecimalDelimiter, $bConvertFileToUTF8);
+		$this->oCSV->sFilename	= $sFilePath;
+		$bCheckFile				= (bool)$this->oCSV->checkFile();
+		$this->errors			= $this->oCSV->aErrors;
 
 		if ($bCheckFile && $this->iStep == 3) {
 			// Read file data
@@ -173,13 +173,13 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 			} else {
 
 				$aNewData = array(0 => array(
-					'id_product'            => $this->module->l('Product ID', 'AdminNowImportAccessories'),
-                    'product_reference'     => $this->module->l('Product reference', 'AdminNowImportAccessories'),
-					'product_name'          => $this->module->l('Product Name', 'AdminNowImportAccessories'),
-                    'accessories'           => $this->module->l('Accessories', 'AdminNowImportAccessories'),
-                    'new_accessories'       => $this->module->l('New accessories', 'AdminNowImportAccessories'),
-                    'old_accessories'       => $this->module->l('Old accessories', 'AdminNowImportAccessories'),
-					'error'                 => $this->module->l('Errors', 'AdminNowImportAccessories'),
+					'id_product'			=> $this->module->l('Product ID', 'AdminNowImportAccessories'),
+					'product_reference'		=> $this->module->l('Product reference', 'AdminNowImportAccessories'),
+					'product_name'			=> $this->module->l('Product Name', 'AdminNowImportAccessories'),
+					'accessories'			=> $this->module->l('Accessories', 'AdminNowImportAccessories'),
+					'new_accessories'		=> $this->module->l('New accessories', 'AdminNowImportAccessories'),
+					'old_accessories'		=> $this->module->l('Old accessories', 'AdminNowImportAccessories'),
+					'error'					=> $this->module->l('Errors', 'AdminNowImportAccessories'),
 				));
 
 				$this->checkAccessories($this->oCSV->aData, $aNewData);
@@ -188,13 +188,13 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 			$tpl = $this->createTemplate('step-3.tpl');
 
 			$aParams = array(
-				'current_step'  => $this->iStep,
-				'file_path'     => $sFilePath,
-				'file_name'     => substr($sFilePath, strrpos($sFilePath, '/') + 1),
-				'aDatas'        => $aNewData,
-				'aColumns'      => $aColumns,
-				'aLines'        => $aLines,
-				'pagination'    => Configuration::get('NOW_IMPORT_ACCES_PAGINATION'),
+				'current_step'	=> $this->iStep,
+				'file_path'		=> $sFilePath,
+				'file_name'		=> substr($sFilePath, strrpos($sFilePath, '/') + 1),
+				'aDatas'		=> $aNewData,
+				'aColumns'		=> $aColumns,
+				'aLines'		=> $aLines,
+				'pagination'	=> Configuration::get('NOW_IMPORT_ACCES_PAGINATION'),
 			);
 			$aParams = $this->setTemplateParams($aParams);
 
@@ -207,20 +207,20 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 	}
 
 	public function processFourthStep() {
-		$aColumns           = Tools::getValue('aColumns', array());
-		$aLines             = Tools::getValue('aLines', array());
-		$sFilePath          = Tools::getValue('file_path');
+		$aColumns			= Tools::getValue('aColumns', array());
+		$aLines				= Tools::getValue('aLines', array());
+		$sFilePath			= Tools::getValue('file_path');
 
-		$sTypeFile          = Configuration::get('NOW_IMPORT_ACCES_FILE');
-		$sSeparator         = Configuration::get('NOW_IMPORT_ACCES_SEPARATOR');
-		$sDelimiter         = Configuration::get('NOW_IMPORT_ACCES_DELIMITER') == 1 ? '\'' : '"';
-		$sDecimalDelimiter  = Configuration::get('NOW_IMPORT_ACCES_DECIMAL');
-		$bConvertFileToUTF8 = Configuration::get('NOW_IMPORT_ACCES_CONVERT_UTF8');
+		$sTypeFile			= Configuration::get('NOW_IMPORT_ACCES_FILE');
+		$sSeparator			= Configuration::get('NOW_IMPORT_ACCES_SEPARATOR');
+		$sDelimiter			= Configuration::get('NOW_IMPORT_ACCES_DELIMITER') == 1 ? '\'' : '"';
+		$sDecimalDelimiter	= Configuration::get('NOW_IMPORT_ACCES_DECIMAL');
+		$bConvertFileToUTF8	= Configuration::get('NOW_IMPORT_ACCES_CONVERT_UTF8');
 
-		$this->oCSV             = new NowCSV(array(), $sTypeFile, $sSeparator, $sDelimiter, $sDecimalDelimiter, $bConvertFileToUTF8);
-		$this->oCSV->sFilename  = $sFilePath;
-		$bCheckFile             = (bool)$this->oCSV->checkFile();
-		$this->errors           = $this->oCSV->aErrors;
+		$this->oCSV				= new NowCSV(array(), $sTypeFile, $sSeparator, $sDelimiter, $sDecimalDelimiter, $bConvertFileToUTF8);
+		$this->oCSV->sFilename	= $sFilePath;
+		$bCheckFile				= (bool)$this->oCSV->checkFile();
+		$this->errors			= $this->oCSV->aErrors;
 
 		if ($bCheckFile && $this->iStep == 4) {
 			// Read file data
@@ -236,13 +236,13 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 
 			$aDataToImported = array();
 
-            $aDataImported = array(0 => array(
-                'id_product'            => $this->module->l('Product ID', 'AdminNowImportAccessories'),
-                'product_reference'     => $this->module->l('Product reference', 'AdminNowImportAccessories'),
-                'product_name'          => $this->module->l('Product Name', 'AdminNowImportAccessories'),
-                'accessories'           => $this->module->l('Accessories', 'AdminNowImportAccessories'),
-                'error'                 => $this->module->l('Errors', 'AdminNowImportAccessories'),
-            ));
+			$aDataImported = array(0 => array(
+				'id_product'			=> $this->module->l('Product ID', 'AdminNowImportAccessories'),
+				'product_reference'		=> $this->module->l('Product reference', 'AdminNowImportAccessories'),
+				'product_name'			=> $this->module->l('Product Name', 'AdminNowImportAccessories'),
+				'accessories'			=> $this->module->l('Accessories', 'AdminNowImportAccessories'),
+				'error'					=> $this->module->l('Errors', 'AdminNowImportAccessories'),
+			));
 
 			$this->checkAccessories($this->oCSV->aData, $aDataToImported);
 			$this->importAccessories($aDataToImported, $aDataImported);
@@ -250,11 +250,11 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 			$tpl = $this->createTemplate('step-4.tpl');
 
 			$aParams = array(
-				'current_step'  => $this->iStep,
-				'file_path'     => $this->sUploadDirectory.$this->oCSV->sNewFilename,
-				'file_name'     => substr($sFilePath, strrpos($sFilePath, '/') + 1),
-				'aDatas'        => $aDataImported,
-				'pagination'    => Configuration::get('NOW_IMPORT_ACCES_PAGINATION'),
+				'current_step'	=> $this->iStep,
+				'file_path'		=> $this->sUploadDirectory.$this->oCSV->sNewFilename,
+				'file_name'		=> substr($sFilePath, strrpos($sFilePath, '/') + 1),
+				'aDatas'		=> $aDataImported,
+				'pagination'	=> Configuration::get('NOW_IMPORT_ACCES_PAGINATION'),
 			);
 			$aParams = $this->setTemplateParams($aParams);
 
@@ -268,67 +268,67 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 
 	public function checkAccessories($aDatas, &$aNewData) {
 		foreach ($aDatas as $aData) {
-            // Initialisation
+			// Initialisation
 			$aData['error'] = "";
 
-            if (!array_key_exists('product_reference', $aData))
-                $aData['product_reference'] = '';
+			if (!array_key_exists('product_reference', $aData))
+				$aData['product_reference'] = '';
 
-            if (!array_key_exists('product_id', $aData))
-                $aData['product_id'] = '';
+			if (!array_key_exists('product_id', $aData))
+				$aData['product_id'] = '';
 
 			if (empty($aData['product_reference']) && empty($aData['product_id'])) {
 				$aData['error'] = $this->module->l('Product reference and product ID is empty.', 'AdminNowImportAccessories');
 			}
 
-            // On vérifie l'Id produit si il existe
-            if (empty($aData['product_id']) || !NowProduct::isRealProduct($aData['product_id'])) {
-                // Get product by product reference
-                if (empty($aData['product_reference']) || !$aData['product_id'] = NowProduct::getIdProductByProductReference($aData['product_reference'])) {
-                    $aData['error'] = sprintf($this->module->l('Product reference doesn\'t exist: "%s".', 'AdminNowImportAccessories'), $aData['product_reference']);
-                }
-            }
+			// On vérifie l'Id produit si il existe
+			if (empty($aData['product_id']) || !NowProduct::isRealProduct($aData['product_id'])) {
+				// Get product by product reference
+				if (empty($aData['product_reference']) || !$aData['product_id'] = NowProduct::getIdProductByProductReference($aData['product_reference'])) {
+					$aData['error'] = sprintf($this->module->l('Product reference doesn\'t exist: "%s".', 'AdminNowImportAccessories'), $aData['product_reference']);
+				}
+			}
 
-            // On récuprère les informations du produit
-            $aProduct = NowProduct::getProductLight($aData['product_id']);
+			// On récuprère les informations du produit
+			$aProduct = NowProduct::getProductLight($aData['product_id']);
 
 			$aNewData[] = array(
-				'id_product'            => $aProduct['id_product'],
-				'product_name'          => $aProduct['name'],
-				'product_reference'     => $aProduct['reference'],
-				'accessories'           => $aData['accessories'],
-                'new_accessories'       => $this->getNewAccessories($aData['accessories']),
-                'old_accessories'       => $this->getOldAccessories($aData['product_id']),
-				'error'                 => $aData['error'],
+				'id_product'			=> $aProduct['id_product'],
+				'product_name'			=> $aProduct['name'],
+				'product_reference'		=> $aProduct['reference'],
+				'accessories'			=> $aData['accessories'],
+				'new_accessories'		=> $this->getNewAccessories($aData['accessories']),
+				'old_accessories'		=> $this->getOldAccessories($aData['product_id']),
+				'error'					=> $aData['error'],
 			);
 		}
 	}
 
-    public function getNewAccessories($sAccessories) {
-        if ($sAccessories == '')
-            return '';
-        $aAccessories = NowProduct::getProductsLight(explode('::', $sAccessories));
+	public function getNewAccessories($sAccessories) {
+		if ($sAccessories == '')
+			return '';
+		$aAccessories = NowProduct::getProductsLight(explode('::', $sAccessories));
 
-        $sAccessories = '<ul>';
-        foreach ($aAccessories as $aAccessory) {
-            $sAccessories .= '<li>'.sprintf($this->module->l('%1$s (Id product: %2$s, Reference: %3$s)', 'AdminNowImportAccessories'), $aAccessory['name'], $aAccessory['id_product'], $aAccessory['reference']).'</li>';
-        }
-        $sAccessories .= '</ul>';
+		$sAccessories = '<ul>';
+		foreach ($aAccessories as $aAccessory) {
+			$sAccessories .= '<li>'.sprintf($this->module->l('%1$s (Id product: %2$s, Reference: %3$s)', 'AdminNowImportAccessories'), $aAccessory['name'], $aAccessory['id_product'], $aAccessory['reference']).'</li>';
+		}
+		$sAccessories .= '</ul>';
 
-        return $sAccessories;
-    }
+		return $sAccessories;
+	}
 
-    public function getOldAccessories($iIdProduct) {
-        $aAccessories = Product::getAccessoriesLight($this->context->language->id, $iIdProduct);
+	public function getOldAccessories($iIdProduct) {
+		$aAccessories = Product::getAccessoriesLight($this->context->language->id, $iIdProduct);
 
-        $sAccessories = '<ul>';
-        foreach ($aAccessories as $aAccessory) {
-            $sAccessories .= '<li>'.sprintf($this->module->l('%1$s (Id product: %2$s, Reference: %3$s)', 'AdminNowImportAccessories'), $aAccessory['name'], $aAccessory['id_product'], $aAccessory['reference']).'</li>';
-        }
-        $sAccessories .= '</ul>';
+		$sAccessories = '<ul>';
+		foreach ($aAccessories as $aAccessory) {
+			$sAccessories .= '<li>'.sprintf($this->module->l('%1$s (Id product: %2$s, Reference: %3$s)', 'AdminNowImportAccessories'), $aAccessory['name'], $aAccessory['id_product'], $aAccessory['reference']).'</li>';
+		}
+		$sAccessories .= '</ul>';
 
-        return $sAccessories;
-    }
+		return $sAccessories;
+	}
 
 	public function importAccessories($aDataToImported, &$aDataImported) {
 
@@ -336,25 +336,25 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 
 			if (empty($aData['error'])) {
 
-                // get product information
-                $aProduct = NowProduct::getProductLight($aData['id_product']);
+				// get product information
+				$aProduct = NowProduct::getProductLight($aData['id_product']);
 
-                // Delete old accessories
-                if (!NowProduct::deleteAccessories($aData['id_product'])) {
-                    $aData['error'] = sprintf($this->module->l('Impossible to deleting old accesories to this product: %s', 'AdminNowImportAccessories'), $aProduct['reference']);
-                }
+				// Delete old accessories
+				if (!NowProduct::deleteAccessories($aData['id_product'])) {
+					$aData['error'] = sprintf($this->module->l('Impossible to deleting old accesories to this product: %s', 'AdminNowImportAccessories'), $aProduct['reference']);
+				}
 
-                // Insert new accesssories
-                if (!NowProduct::changeAccessories($aData['id_product'], explode('::', $aData['accessories']))) {
-                    $aData['error'] = sprintf($this->module->l('Impossible to adding the new accesories to this product: %s', 'AdminNowImportAccessories'), $aProduct['reference']);
-                }
+				// Insert new accesssories
+				if (!NowProduct::changeAccessories($aData['id_product'], explode('::', $aData['accessories']))) {
+					$aData['error'] = sprintf($this->module->l('Impossible to adding the new accesories to this product: %s', 'AdminNowImportAccessories'), $aProduct['reference']);
+				}
 
 				$aDataImported[] = array(
-                    'id_product'            => $aProduct['id_product'],
-                    'product_reference'     => $aProduct['reference'],
-                    'product_name'          => $aProduct['name'],
-                    'accessories'           => $this->getNewAccessories($aData['accessories']),
-                    'error'                 => $aData['error']
+					'id_product'			=> $aProduct['id_product'],
+					'product_reference'		=> $aProduct['reference'],
+					'product_name'			=> $aProduct['name'],
+					'accessories'			=> $this->getNewAccessories($aData['accessories']),
+					'error'					=> $aData['error']
 				);
 			} else {
 				$this->errors[] = $aData['error'];
@@ -372,10 +372,10 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 	public function setColumns() {
 
 		$this->aColumns = array(
-			'ignore_column'         => $this->module->l('Ignore this column', 'AdminNowImportAccessories'),
-			'product_reference'     => $this->module->l('Product reference', 'AdminNowImportAccessories'),
-            'product_id'            => $this->module->l('Product ID', 'AdminNowImportAccessories'),
-			'accessories'           => $this->module->l('Accessories (Separated by "::")', 'AdminNowImportAccessories'),
+			'ignore_column'			=> $this->module->l('Ignore this column', 'AdminNowImportAccessories'),
+			'product_reference'		=> $this->module->l('Product reference', 'AdminNowImportAccessories'),
+			'product_id'			=> $this->module->l('Product ID', 'AdminNowImportAccessories'),
+			'accessories'			=> $this->module->l('Accessories (Separated by "::")', 'AdminNowImportAccessories'),
 		);
 	}
 
@@ -398,8 +398,8 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 				$this->oCSV->sFilename = $this->sUploadDirectory.$sFilename;
 			}
 
-			$bCheckFile     = (bool)$this->oCSV->checkFile();
-			$this->errors   = $this->oCSV->aErrors;
+			$bCheckFile		= (bool)$this->oCSV->checkFile();
+			$this->errors	= $this->oCSV->aErrors;
 
 			if ($bCheckFile && $this->iStep == 2) {
 				$this->content .= $this->processSecondStep();
@@ -432,8 +432,9 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 	public function setCurrentStep() {
 		$this->iStep = 1;
 
-        if (array_key_exists('file', $_FILES))
-		    $this->aFile = $_FILES['file'];
+		if (array_key_exists('file', $_FILES)) {
+			$this->aFile = $_FILES['file'];
+		}
 
 		if ((Tools::isSubmit('submitFileUpload') && isset($this->aFile['name'])) || (Tools::getValue('step') == 2 && Tools::getValue('file_name'))) {
 			$this->iStep = 2;
@@ -507,12 +508,12 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 
 	public function setTemplateParams($aParams)
 	{
-		$aParams['title']           = $this->toolbar_title;
-		$aParams['toolbar_btn']     = $this->toolbar_btn;
-		$aParams['show_toolbar']    = $this->show_toolbar;
-		$aParams['toolbar_scroll']  = $this->toolbar_scroll;
-		$aParams['module_path']     = $this->module->module_dir.'/views/templates/admin/'.$this->module->name.'/';
-        $aParams['is_multishop']    = Shop::isFeatureActive();
+		$aParams['title']			= $this->toolbar_title;
+		$aParams['toolbar_btn']		= $this->toolbar_btn;
+		$aParams['show_toolbar']	= $this->show_toolbar;
+		$aParams['toolbar_scroll']	= $this->toolbar_scroll;
+		$aParams['module_path']		= $this->module->module_dir.'/views/templates/admin/'.$this->module->name.'/';
+        $aParams['is_multishop']	= Shop::isFeatureActive();
 
 		return $aParams;
 	}

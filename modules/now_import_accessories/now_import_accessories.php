@@ -12,11 +12,11 @@ class now_import_accessories extends NowModule {
 
 	function __construct()
 	{
-		$this->name     = 'now_import_accessories';
-		$this->tab      = 'administration';
-		$this->version  = 1.0;
-		$this->author   = 'NinjaOfWeb';
-		$this->need_instance = 0;
+		$this->name				= 'now_import_accessories';
+		$this->tab				= 'administration';
+		$this->version			= 1.1;
+		$this->author			= 'NinjaOfWeb';
+		$this->need_instance	= 0;
 
 		parent::__construct();
 
@@ -29,27 +29,27 @@ class now_import_accessories extends NowModule {
 		}
 	}
 
-    /**
-     * Define admin controller which must be installed
-     */
-    public function setAdminControllers() {
-        $this->aAdminControllers = array(
-            'AdminNowImportAccessories' => array(
-                'parent' => 'AdminTools',
-                'name' => $this->l('Import accessories')
-            )
-        );
-    }
+	/**
+	 * Define admin controller which must be installed
+	 */
+	public function setAdminControllers() {
+		$this->aAdminControllers = array(
+			'AdminNowImportAccessories' => array(
+				'parent' => 'AdminTools',
+				'name' => $this->l('Import accessories')
+			)
+		);
+	}
 
 	public function install()
 	{
 		$this->aConfigurationDefaultSettings = array(
-			'NOW_IMPORT_ACCES_FILE'         => '.csv',
-			'NOW_IMPORT_ACCES_SEPARATOR'    => ';',
-			'NOW_IMPORT_ACCES_DELIMITER'    => 2,
-			'NOW_IMPORT_ACCES_DECIMAL'      => '.',
-			'NOW_IMPORT_ACCES_CONVERT_UTF8' => 1,
-			'NOW_IMPORT_ACCES_PAGINATION'   => 50
+			'NOW_IMPORT_ACCES_FILE'			=> '.csv',
+			'NOW_IMPORT_ACCES_SEPARATOR'	=> ';',
+			'NOW_IMPORT_ACCES_DELIMITER'	=> 2,
+			'NOW_IMPORT_ACCES_DECIMAL'		=> '.',
+			'NOW_IMPORT_ACCES_CONVERT_UTF8'	=> 1,
+			'NOW_IMPORT_ACCES_PAGINATION'	=> 50
 		);
 
 		return parent::install();
