@@ -2,7 +2,6 @@
 
 global $_MODULE;
 $_MODULE = array();
-
 $_MODULE['<{homeslider}prestashop>homeslider_693b83f5eca43e2bb1675287c37ce9e2'] = 'Diaporama (image slider) pour votre page d\'accueil';
 $_MODULE['<{homeslider}prestashop>homeslider_c17aed434289cedd02618451e12c8da6'] = 'Ajouter un carrousel d\'images à votre page d\'accueil';
 $_MODULE['<{homeslider}prestashop>homeslider_3f80dc2cdd06939d4f5514362067cd86'] = 'Valeur non valables';
@@ -46,6 +45,3 @@ $_MODULE['<{homeslider}prestashop>form_92fbf0e5d97b8afd7e73126b52bdc4bb'] = 'Cho
 $_MODULE['<{homeslider}prestashop>list_c82324ebbcea34f55627a897b37190e3'] = 'Liste des diapositives';
 $_MODULE['<{homeslider}prestashop>list_7dce122004969d56ae2e0245cb754d35'] = 'Modifier';
 $_MODULE['<{homeslider}prestashop>list_f2a6c498fb90ee345d997f888fce3b18'] = 'Supprimer';
-
-
-return $_MODULE;

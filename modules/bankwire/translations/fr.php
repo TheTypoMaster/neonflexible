@@ -2,7 +2,6 @@
 
 global $_MODULE;
 $_MODULE = array();
-
 $_MODULE['<{bankwire}prestashop>bankwire_05adcee99142c1a60fb38bb1330bbbc1'] = 'Virement bancaire';
 $_MODULE['<{bankwire}prestashop>bankwire_a246a8e9907530c4c36b8b4c37bbc823'] = 'Accepter les paiements par virement.';
 $_MODULE['<{bankwire}prestashop>bankwire_cbe0a99684b145e77f3e14174ac212e3'] = 'Êtes-vous certain de vouloir effacer vos données ?';
@@ -18,7 +17,6 @@ $_MODULE['<{bankwire}prestashop>bankwire_6b154cafbab54ba3a1e76a78c290c02a'] = 'C
 $_MODULE['<{bankwire}prestashop>bankwire_f9a1a1bb716cbae0503d351ea2af4b34'] = 'Adresse de la banque';
 $_MODULE['<{bankwire}prestashop>bankwire_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';
 $_MODULE['<{bankwire}prestashop>validation_e2b7dec8fa4b498156dfee6e4c84b156'] = 'Ce mode de paiement n\'est pas disponible.';
-$_MODULE['<{bankwire}prestashop>payment_execution_99227bacb2b4dfa29ce1701ac265a923'] = 'Paiement par virement bancaire';
 $_MODULE['<{bankwire}prestashop>payment_execution_f1d3b424cd68795ecaa552883759aceb'] = 'Récapitulatif de commande';
 $_MODULE['<{bankwire}prestashop>payment_execution_879f6b8877752685a966564d072f498f'] = 'Votre panier est vide.';
 $_MODULE['<{bankwire}prestashop>payment_execution_05adcee99142c1a60fb38bb1330bbbc1'] = 'Virement bancaire';
@@ -30,12 +28,13 @@ $_MODULE['<{bankwire}prestashop>payment_execution_b28be4c423d93e02081f4e79fe2434
 $_MODULE['<{bankwire}prestashop>payment_execution_a7a08622ee5c8019b57354b99b7693b2'] = 'Merci de choisir parmi les suivantes :';
 $_MODULE['<{bankwire}prestashop>payment_execution_a854d894458d66d92cabf0411c499ef4'] = 'Nous acceptons la devise suivante pour votre paiement :';
 $_MODULE['<{bankwire}prestashop>payment_execution_3dd021316505c0204989f984246c6ff1'] = 'Nos coordonnées bancaires seront affichées sur la page suivante.';
-$_MODULE['<{bankwire}prestashop>payment_execution_b939c4940deb5588f47ee8f12c61f11f'] = 'Merci de confirmer votre commande en cliquant sur « Je confirme ma commande »';
 $_MODULE['<{bankwire}prestashop>payment_execution_46b9e3665f187c739c55983f757ccda0'] = 'Je confirme ma commande';
 $_MODULE['<{bankwire}prestashop>payment_execution_569fd05bdafa1712c4f6be5b153b8418'] = 'Autres moyens de paiement';
 $_MODULE['<{bankwire}prestashop>infos_c1be305030739396775edaca9813f77d'] = 'Ce module vous permet d\'accepter les paiements par virement bancaire.';
-$_MODULE['<{bankwire}prestashop>infos_60742d06006fde3043c77e6549d71a99'] = 'Si le client choisit ce mode de paiement, la commande passera à l\'état "Paiement en attente".';
+$_MODULE['<{bankwire}prestashop>infos_60742d06006fde3043c77e6549d71a99'] = 'Si le client choisit ce mode de paiement, la commande passera à l\'état \"Paiement en attente\".';
 $_MODULE['<{bankwire}prestashop>infos_5fb4bbf993c23848433caf58e6b2816d'] = 'Par conséquent, vous devez confirmer manuellement la commande dès que vous recevrez le virement.';
+$_MODULE['<{bankwire}prestashop>payment_5e1695822fc5af98f6b749ea3cbc9b4c'] = 'Payer par virement bancaire';
+$_MODULE['<{bankwire}prestashop>payment_4e1fb9f4b46556d64db55d50629ee301'] = '(le traitement de la commande sera plus long)';
 $_MODULE['<{bankwire}prestashop>payment_return_88526efe38fd18179a127024aba8c1d7'] = 'Votre commande sur %s a bien été enregistrée.';
 $_MODULE['<{bankwire}prestashop>payment_return_1f8cdc30326f1f930b0c87b25fdac965'] = 'Veuillez nous envoyer un virement bancaire avec :';
 $_MODULE['<{bankwire}prestashop>payment_return_b2f40690858b404ed10e62bdf422c704'] = 'Montant';
@@ -49,8 +48,3 @@ $_MODULE['<{bankwire}prestashop>payment_return_b9a1cae09e5754424e33764777cfcaa0'
 $_MODULE['<{bankwire}prestashop>payment_return_ca7e41a658753c87973936d7ce2429a8'] = 'Pour toute question ou information complémentaire, veuillez contacter notre';
 $_MODULE['<{bankwire}prestashop>payment_return_dfe239de8c0b2453a8e8f7657a191d5d'] = 'support client';
 $_MODULE['<{bankwire}prestashop>payment_return_d15feee53d81ea16269e54d4784fa123'] = 'Nous avons rencontré un problème avec votre commande. Merci de prendre contact avec notre support client';
-$_MODULE['<{bankwire}prestashop>payment_5e1695822fc5af98f6b749ea3cbc9b4c'] = 'Payer par virement bancaire';
-$_MODULE['<{bankwire}prestashop>payment_4e1fb9f4b46556d64db55d50629ee301'] = '(le traitement de la commande sera plus long)';
-
-
-return $_MODULE;

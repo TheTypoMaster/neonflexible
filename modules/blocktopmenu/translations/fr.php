@@ -2,17 +2,18 @@
 
 global $_MODULE;
 $_MODULE = array();
-
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_e5b7525b4214a759876af4448bd6b87d'] = 'Menu Haut horizontal';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_f7979d86fe0b2cd11f44747ed4ff1100'] = 'Ajouter un nouveau menu horizontal en haut de votre site e-commerce.';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_efc226b17e0532afff43be870bff0de7'] = 'Paramètres mis à jour';
-$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_5d1994bf28899a87795983875a98c2e1'] = 'Impossible de mettre à jour les paramètres';
-$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_f32880ae5183a02c0a743bfd37a42cbc'] = 'Veuillez remplir le champ "Lien".';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_f32880ae5183a02c0a743bfd37a42cbc'] = 'Veuillez remplir le champ \"Lien\".';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_cf8d684bd5f89d30da67c95363a48ab9'] = 'Veuillez ajouter un label.';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_e8d6809226ab177013e0a26bd2d8b60d'] = 'Veuillez ajouter un label pour le langage par défaut';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_3da9d5745155a430aac6d7de3b6de0c8'] = 'Le lien a été ajouté';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_e24e88b590807c2816be15abd7c7dbbc'] = 'Le lien a été enlevé.';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_beb4f951c292ec9218473ffe5f59849d'] = 'Le lien a été modifié.';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_242e9577826290307cd3e45a259172cc'] = 'les modifications seront appliquées à';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_fb54f3c5992b96d001bb16e8e92d968d'] = 'boutique :';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_540c8f06b80b4ec911505764eb455f4d'] = 'toutes les boutiques';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_bf24faeb13210b5a703f3ccef792b000'] = 'Tous les fabricants';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_ecf253735ac0cba84a9d2eeff1f1b87c'] = 'Tous les fournisseurs';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_944d19a34e5fa333a6a0de27e8c971da'] = 'Lien du menu';
@@ -20,9 +21,6 @@ $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_eacd852cc1f621763dccbda3f3c1508
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'Activé';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_b9f5c797ebbf55adccdd8539a65a0241'] = 'Désactivé';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';
-$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_242e9577826290307cd3e45a259172cc'] = 'les modifications seront appliquées à';
-$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_fb54f3c5992b96d001bb16e8e92d968d'] = 'boutique :';
-$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_540c8f06b80b4ec911505764eb455f4d'] = 'toutes les boutiques';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_1a6191a2dc928ff8fb8c02c050975ea7'] = 'Mettre à jour le lien';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_58e9b25bb2e2699986a3abe2c92fc82e'] = 'Ajouter un nouveau lien';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_b021df6aac4654c454f46c77646e745f'] = 'Label';
@@ -48,6 +46,3 @@ $_MODULE['<{blocktopmenu}prestashop>form_3713a99a6284e39061bd48069807aa52'] = '�
 $_MODULE['<{blocktopmenu}prestashop>form_8fb31b552d63ffef9df733646a195bc0'] = 'Éléments disponibles';
 $_MODULE['<{blocktopmenu}prestashop>form_1063e38cb53d94d386f21227fcd84717'] = 'Retirer';
 $_MODULE['<{blocktopmenu}prestashop>form_ec211f7c20af43e742bf2570c3cb84f9'] = 'Ajouter';
-
-
-return $_MODULE;
