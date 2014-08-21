@@ -6,22 +6,22 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include(_PS_MODULE_DIR_ . 'now_import_accessories/classes/Module.php');
+include(_PS_MODULE_DIR_ . 'now_import_packs/classes/Module.php');
 
-class now_import_accessories extends NowModule {
+class now_import_packs extends NowModule {
 
 	function __construct()
 	{
-		$this->name				= 'now_import_accessories';
+		$this->name				= 'now_import_packs';
 		$this->tab				= 'administration';
-		$this->version			= 1.1;
+		$this->version			= 1.0;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
 		parent::__construct();
 
-		$this->displayName = $this->l('Import accessories');
-		$this->description = $this->l('Import accessories by .csv file');
+		$this->displayName = $this->l('Import packs of products');
+		$this->description = $this->l('Import packs of products pack by .csv file');
 
 		if ($this->active) {
 			$this->module_dir = _PS_MODULE_DIR_.$this->name.DIRECTORY_SEPARATOR;
@@ -34,9 +34,9 @@ class now_import_accessories extends NowModule {
 	 */
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
-			'AdminNowImportAccessories' => array(
+			'AdminNowImportPacks' => array(
 				'parent' => 'AdminTools',
-				'name' => $this->l('Import accessories')
+				'name' => $this->l('Import packs of products')
 			)
 		);
 	}

@@ -54,8 +54,8 @@ if (!class_exists('NowCSV'))
 			$this->sDecimalDelimiter    = $sDecimalDelimiter;
 			$this->bConvertFileToUTF8   = (bool)$bConvertFileToUTF8;
 			$this->iMaxFileSize         = $iMaxFileSize;
-            if (array_key_exists('tmp_name', $aFile))
-			    $this->sFilename        = $aFile['tmp_name'];
+			if (array_key_exists('tmp_name', $aFile))
+				$this->sFilename        = $aFile['tmp_name'];
 			$this->context              = Context::getContext();
 
 			$this->setNewFilename();

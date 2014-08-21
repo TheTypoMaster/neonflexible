@@ -11,8 +11,8 @@
 		<form action="{$current}&token={$token}" method="post" enctype="multipart/form-data">
 			<div class="form-group">
 				<label for="file" class="control-label col-lg-3">
-					<span class="label-tooltip" data-toggle="tooltip" title="{l s='Select your CSV file' mod='now_import_accessories'}">
-						{l s='Select your CSV file' mod='now_import_accessories'}
+					<span class="label-tooltip" data-toggle="tooltip" title="{l s='Select your CSV file' mod='now_import_packs'}">
+						{l s='Select your CSV file' mod='now_import_packs'}
 					</span>
 				</label>
 				<div class="col-sm-9">
@@ -24,7 +24,7 @@
 								<input id="file-name" type="text" class="disabled" name="filename" readonly />
 								<span class="input-group-btn">
 									<button id="file-selectbutton" type="button" name="submitAddAttachments" class="btn btn-default">
-										<i class="icon-folder-open"></i> {l s='Choose a file' mod='now_import_accessories'}
+										<i class="icon-folder-open"></i> {l s='Choose a file' mod='now_import_packs'}
 									</button>
 								</span>
 							</div>
@@ -34,8 +34,8 @@
 			</div>
 			<div class="form-group">
 				<label for="file" class="control-label col-lg-3"></label>
-				<input type="submit" name="submitFileUpload" value="{l s='Upload' mod='now_import_accessories'}" class="button" />
-				<p class="preference_description">{l s='Only UTF-8 and ISO-8859-1 encoding are allowed' mod='now_import_accessories'}</p>
+				<input type="submit" name="submitFileUpload" value="{l s='Upload' mod='now_import_packs'}" class="button" />
+				<p class="preference_description">{l s='Only UTF-8 and ISO-8859-1 encoding are allowed' mod='now_import_packs'}</p>
 			</div>
 		</form>
 	</div>
