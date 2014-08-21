@@ -2,7 +2,6 @@
 
 global $_MODULE;
 $_MODULE = array();
-
 $_MODULE['<{blockcms}prestashop>blockcms_ca3e06233b736d289df9f4580a4ab19a'] = 'Bloc CMS';
 $_MODULE['<{blockcms}prestashop>blockcms_cdca12007979fc49008fd125cdb775fc'] = 'Ajoute un bloc contenant plusieurs lien vers vos pages CMS';
 $_MODULE['<{blockcms}prestashop>blockcms_a82be0f551b8708bc08eb33cd9ded0cf'] = 'Informations';
@@ -16,13 +15,13 @@ $_MODULE['<{blockcms}prestashop>blockcms_89887a6d62110cbd72c15218a2d0fda9'] = 'A
 $_MODULE['<{blockcms}prestashop>blockcms_6f3ebe2ce8a7c3b873c1003b6ead60df'] = 'Liens de pied de page';
 $_MODULE['<{blockcms}prestashop>blockcms_e363df19c685465bca24d0c06d9394c7'] = 'Sélectionnez les pages que vous souhaitez afficher dans le bloc CMS de pied de page';
 $_MODULE['<{blockcms}prestashop>blockcms_6ee786b30298653a28bb5a5823dc77e0'] = 'Informations de pied de page';
-$_MODULE['<{blockcms}prestashop>blockcms_75cb29c17cf91bef81cc289b0dd1b1fa'] = 'Affiche le lien "Nos magasins" dans le pied de page';
-$_MODULE['<{blockcms}prestashop>blockcms_0e5da791148c92be6eca8c537a47569e'] = 'Ajouter le lien "Promotions" dans le pied de page';
-$_MODULE['<{blockcms}prestashop>blockcms_e12604a3a534f0f6c6969581050b7fb4'] = 'Ajouter le lien "Nouveaux produits" dans le pied de page';
-$_MODULE['<{blockcms}prestashop>blockcms_f71ab3534012976daf0283f6a8da7f30'] = 'Ajouter le lien "Meilleurs ventes" dans le pied de page';
-$_MODULE['<{blockcms}prestashop>blockcms_45bc5fe3bf5717315e42a831ba7da748'] = 'Ajouter le lien "Nous contacter" dans le pied de page';
+$_MODULE['<{blockcms}prestashop>blockcms_75cb29c17cf91bef81cc289b0dd1b1fa'] = 'Affiche le lien \"Nos magasins\" dans le pied de page';
+$_MODULE['<{blockcms}prestashop>blockcms_0e5da791148c92be6eca8c537a47569e'] = 'Ajouter le lien \"Promotions\" dans le pied de page';
+$_MODULE['<{blockcms}prestashop>blockcms_e12604a3a534f0f6c6969581050b7fb4'] = 'Ajouter le lien \"Nouveaux produits\" dans le pied de page';
+$_MODULE['<{blockcms}prestashop>blockcms_f71ab3534012976daf0283f6a8da7f30'] = 'Ajouter le lien \"Meilleurs ventes\" dans le pied de page';
+$_MODULE['<{blockcms}prestashop>blockcms_45bc5fe3bf5717315e42a831ba7da748'] = 'Ajouter le lien \"Nous contacter\" dans le pied de page';
 $_MODULE['<{blockcms}prestashop>blockcms_68b7b9e603633d155941fb1d665c3997'] = 'Ajouter le lien du plan du site dans le pied de page';
-$_MODULE['<{blockcms}prestashop>blockcms_fc3faf66c0ea5f710cc58d24fbe4a5b6'] = 'Afficher \\"Propulsé par PrestaShop\\"';
+$_MODULE['<{blockcms}prestashop>blockcms_fc3faf66c0ea5f710cc58d24fbe4a5b6'] = 'Afficher \"Propulsé par PrestaShop\"';
 $_MODULE['<{blockcms}prestashop>blockcms_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';
 $_MODULE['<{blockcms}prestashop>blockcms_be58fccb15fb119b8c3d485e3a8561c4'] = 'Configuration du bloc CMS';
 $_MODULE['<{blockcms}prestashop>blockcms_0eb46571f3ff926d8b2408cafcfc17e3'] = 'Modification du bloc CMS';
@@ -36,7 +35,7 @@ $_MODULE['<{blockcms}prestashop>blockcms_92b09c7c48c520c3c55e497875da437c'] = 'D
 $_MODULE['<{blockcms}prestashop>blockcms_b45a80a6e9360a40d4135eb78c9b35eb'] = 'Ajouter le lien de l\'outil des magasins';
 $_MODULE['<{blockcms}prestashop>blockcms_93cba07454f06a4a960172bbd6e2a435'] = 'Oui';
 $_MODULE['<{blockcms}prestashop>blockcms_bafd7322c6e97d25b6299b5d6fe8920b'] = 'Non';
-$_MODULE['<{blockcms}prestashop>blockcms_9a8d463045dc8c2ad89bcd455fd937e8'] = 'Ajoute le lien "Nos magasins" à la fin du bloc.';
+$_MODULE['<{blockcms}prestashop>blockcms_9a8d463045dc8c2ad89bcd455fd937e8'] = 'Ajoute le lien \"Nos magasins\" à la fin du bloc.';
 $_MODULE['<{blockcms}prestashop>blockcms_bbfdbbf61a22c160c5498b6ae08cb356'] = 'Contenu CMS';
 $_MODULE['<{blockcms}prestashop>blockcms_04313a11bf4a501b7cf2273ea7b32862'] = 'Sélectionnez les pages que vous souhaitez afficher dans ce bloc';
 $_MODULE['<{blockcms}prestashop>blockcms_0d6d7a7c758cd16507d4aebf18305691'] = 'Valeur d\'affichage non valable pour le magasin';
@@ -72,7 +71,3 @@ $_MODULE['<{blockcms}prestashop>form_7dce122004969d56ae2e0245cb754d35'] = 'Modif
 $_MODULE['<{blockcms}prestashop>form_f2a6c498fb90ee345d997f888fce3b18'] = 'Supprimer';
 $_MODULE['<{blockcms}prestashop>form_49ee3087348e8d44e1feda1917443987'] = 'Nom';
 $_MODULE['<{blockcms}prestashop>form_f7c68d40f8727c658e821c6e6d56af07'] = 'Aucune page créée';
-$_MODULE['<{blockcms}prestashop>blockcms_3cb29f0ccc5fd220a97df89dafe46290'] = 'Meilleures ventes';
-
-
-return $_MODULE;
