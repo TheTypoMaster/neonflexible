@@ -68,11 +68,14 @@
 					<li><a href="">{l s='Panier :'} <span class="nb-products-in-cart">0</span> produits <b class="caret"></b></a></li>
 					<li><a href="">{l s='Mon compte'}</a></li>
 					<li>
-						<ul class="list-languages">
+						<div class="list-languages">
 							{foreach Language::getLanguages() as $language}
-								<li><a href=""><img src="{$img_dir}/theme/lang/{$language.iso_code}.png" alt="{$language.iso_code}" /></a></li>
+								<a href="">
+									<img src="{$img_dir}/theme/lang/{$language.iso_code}.png" alt="{$language.iso_code}" />
+								</a>
 							{/foreach}
-						</ul>
+						</div>
+						<div class="clearfix"></div>
 					</li>
 					<li><a href="">{l s='Espace Pro'}</a></li>
 				</ul>

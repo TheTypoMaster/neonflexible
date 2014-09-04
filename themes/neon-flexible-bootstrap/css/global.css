@@ -24,11 +24,10 @@ span.clearBoth {clear:both;display:block;}
 #header ul.nav-header-top {list-style-type:none;margin:0;padding:0;height:36px;font-family:Lato,Verdana,Arial,sans-serif;}
 #header ul.nav-header-top li {float:right;}
 #header ul.nav-header-top li:before {content:"|";padding:0 15px;color:#6d6969;}
-#header ul.nav-header-top li:last-child a:before{content:none;padding:0;}
+#header ul.nav-header-top li:last-child:before{content:none;padding:0;}
 #header ul.nav-header-top li a {color:#fff;line-height:36px;text-decoration: none;}
-#header ul.nav-header-top li ul.list-languages {list-style-type:none;margin:0;padding:0;height:11px;}
-#header ul.nav-header-top li ul.list-languages li {list-style-type:none;margin:0;padding:0;height:11px;}
-#header ul.nav-header-top li ul.list-languages li:before {content:none;padding:0;}
+#header ul.nav-header-top li .list-languages {display: inline;}
+#header ul.nav-header-top li .list-languages a {margin:0 3px;}
 #header a img.logo {position:absolute;top:10px;z-index:10;}
 #header #nav-header {background:#f4f4f4;height:40px;bottom:0px;position:absolute;width:100%}
 #header #nav-header .navbar-collapse {padding:0;max-height:none;border:none;}
