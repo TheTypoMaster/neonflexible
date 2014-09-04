@@ -19,12 +19,16 @@ span.clearBoth {clear:both;display:block;}
 
 /* Header */
 #header {background:#fff;height:180px;position:relative}
-#header ul.nav-header-top {list-style-type:none;margin:0;padding:0;height:36px;}
 #header .navbar-inverse {background:#373a39;}
 #header .navbar-inverse .container {display:block;height:36px;}
+#header ul.nav-header-top {list-style-type:none;margin:0;padding:0;height:36px;font-family:Lato,Verdana,Arial,sans-serif;}
 #header ul.nav-header-top li {float:right;}
-#header ul.nav-header-top li:first-child a:before{content:"|";padding:0 15px;color:#6d6969;}
+#header ul.nav-header-top li:before {content:"|";padding:0 15px;color:#6d6969;}
+#header ul.nav-header-top li:last-child a:before{content:none;padding:0;}
 #header ul.nav-header-top li a {color:#fff;line-height:36px;text-decoration: none;}
+#header ul.nav-header-top li ul.list-languages {list-style-type:none;margin:0;padding:0;height:11px;}
+#header ul.nav-header-top li ul.list-languages li {list-style-type:none;margin:0;padding:0;height:11px;}
+#header ul.nav-header-top li ul.list-languages li:before {content:none;padding:0;}
 #header a img.logo {position:absolute;top:10px;z-index:10;}
 #header #nav-header {background:#f4f4f4;height:40px;bottom:0px;position:absolute;width:100%}
 #header #nav-header .navbar-collapse {padding:0;max-height:none;border:none;}
@@ -46,10 +50,49 @@ span.clearBoth {clear:both;display:block;}
 #header #nav-header .navbar-inverse .navbar-collapse.collapsing,
 #header #nav-header .navbar-inverse .navbar-collapse.in {text-align:center;}
 
+#header #rechercher {
+	background: url('../img/theme/barre-de-recherche.png') no-repeat;
+	display: block;
+	position: absolute;
+	margin: 40px 0 0 300px;
+	z-index: 1;
+	width: 299px;
+	height: 31px;
+	font-family: Raleway,Verdana,Arial,sans-serif;
+	font-weight: bold;
+}
+
+#header #rechercher input[type=text] {
+	border: none;
+	background: none;
+	width:260px;
+	height:34px;
+	text-transform:uppercase;
+	padding-left:20px;
+	color:#348ecd;
+	font-family:Raleway,Verdana,Arial,sans-serif;
+	font-weight:bold;
+}
+#header #rechercher input[type=text]::-webkit-input-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
+#header #rechercher input[type=text]:-moz-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
+#header #rechercher input[type=text]::-moz-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
+#header #rechercher input[type=text]:-ms-input-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
+
+#header #rechercher input[type=submit] {
+	border: none;
+	position: absolute;
+	background: none;
+	color: #373a39;
+	font-size: 13px;
+	font-weight: bold;
+	height: 33px;
+}
+
+
 #header #accroche {
 	display: block;
 	position:absolute;
-	margin:20px 0 0 810px;
+	margin:20px 0 0 640px;
 	z-index:1;
 }
 #header #accroche .accroche-texte {
@@ -57,25 +100,31 @@ span.clearBoth {clear:both;display:block;}
 	color:#777;
 	width:140px;
 	float:left;
-	font-family: Lato;
+	font-family:Lato,Verdana,Arial,sans-serif;
 	font-size: 13px;
 	text-align:right;
 }
 
 #header #accroche .accroche-telephone {
-	background: url('../img/theme/header-telephone.png') no-repeat;
+	background: url('../img/theme/header-telephone-international.png') no-repeat;
 	display: block;
-	width: 182px;
+	width:360px;
 	height: 54px;
 	line-height: 54px;
 	padding-left: 60px;
-	font-size: 17px;
-	color: #55a323;
+	font-size:13px;
+	color: #777;
 	margin-left:150px;
-	font-weight:bold;
-	font-family: Raleway;
+	font-weight:normal;
+	font-family:Raleway,Verdana,Arial,sans-serif;
 	cursor:default;
 	text-decoration:none;
+}
+
+#header #accroche .accroche-telephone span {
+	font-size:16px;
+	color:#55a323;
+	font-weight:bold;
 }
 
 /* Footer */
@@ -87,16 +136,26 @@ footer {
 
 footer #page-listing {
 	float:left;
-	margin:70px 10px;
+}
+
+footer #page-listing hr {
+	margin:0 60px;
+}
+
+footer #page-listing .footer-payement {
+	margin:20px 0 0 60px;
 }
 
 footer #page-listing ul {
 	list-style-type:none;
+	margin:51px 10px;
+	height:150px;
+	padding:0 0 0 50px;
 }
 
 footer #page-listing ul li {
 	color:#333;
-	font-family: Raleway;
+	font-family:Raleway,Verdana,Arial,sans-serif;
 	font-size:17px;
 	font-weight:bold;
 	margin:0px;
@@ -122,7 +181,7 @@ footer #page-listing ul li > ul {
 footer #page-listing ul li > ul li {
 	color:#777;
 	font-size:14px;
-	font-family: Lato;
+	font-family:Lato,Verdana,Arial,sans-serif;
 	float: none;
 	font-weight:normal;
 	line-height:22px;
@@ -155,29 +214,35 @@ footer #contact .logo {
 footer #contact .adresse {
 	color:#777;
 	font-size:14px;
-	font-family: Lato;
+	font-family:Lato,Verdana,Arial,sans-serif;
 	text-align: center;
 	margin: 10px 0;
 }
 
 footer #contact .telephone {
-	background: url('../img/theme/footer-telephone.png') no-repeat;
+	background: url('../img/theme/footer-telephone-international.png') no-repeat;
 	display: block;
-	width: 161px;
-	height: 42px;
-	line-height: 36px;
+	width:290px;
+	height:34px;
+	line-height:32px;
 	padding-left: 40px;
-	font-size: 17px;
-	color: #55a323;
+	font-size:13px;
 	margin: 0 auto;
-	font-weight: bold;
-	font-family: Raleway;
+	font-weight: normal;
+	font-family:Lato,Verdana,Arial,sans-serif;
 	cursor:default;
+	color:#777;
 	text-decoration:none;
 }
 
+footer #contact .telephone span {
+	color:#55a323;
+	font-weight:bold;
+	font-size:16px;
+}
+
 footer hr {
-	margin:10px 0px;
+	margin:18px 0px 10px 0;
 	padding:0px;
 	border-top: 1px solid #ccc;
 }

@@ -1,8 +1,4 @@
 
-
-
-
-
 		{if !$content_only}
 
 			<div id="bloc-reinsurrance">
@@ -15,18 +11,18 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 						</li>
 						<li>
-							<img src="{$img_dir}/theme/une-question.png" alt="{l s='Une question ?'}" />
-							<h6>{l s='Une question ?'}</h6>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-						</li>
-						<li>
 							<img src="{$img_dir}/theme/paiement-securise.png" alt="{l s='Paiement sécurisé'}" />
 							<h6>{l s='Paiement sécurisé'}</h6>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 						</li>
 						<li>
-							<img src="{$img_dir}/theme/suivi-de-livraison.png" alt="{l s='Suivi de livraison'}" />
-							<h6>{l s='Suivi de livraison'}</h6>
+							<img src="{$img_dir}/theme/expedition-sous-24.png" alt="{l s='Expedition sous 24h'}" />
+							<h6>{l s='Expedition sous 24h'}</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						</li>
+						<li>
+							<img src="{$img_dir}/theme/une-question.png" alt="{l s='Une question ?'}" />
+							<h6>{l s='Une question ?'}</h6>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 						</li>
 					</ul>
@@ -80,6 +76,10 @@
 							</li>
 						</ul>
 
+						<hr>
+
+						<img src="{$img_dir}/theme/cb-visa-mastercard-paypal.png" alt="{l s='CB / Visa / MasterCard / Paypal'}" class="footer-payement" />
+
 					</div>
 
 					<span class="barre hidden-xs hidden-sm hidden-md"></span>
@@ -96,9 +96,9 @@
 								<span itemprop="postal-code">45800</span> -
 								<span itemprop="locality">Saint-Jean-de-Braye</span>,
 								<span itemprop="country-name">France</span>
-					        </div>
+							</div>
 
-							<a href="tel:{Configuration::get('PS_SHOP_PHONE')}" class="telephone" itemprop="telephone">{Configuration::get('PS_SHOP_PHONE')}</a>
+							<a href="tel:{Configuration::get('PS_SHOP_PHONE')}" class="telephone" itemprop="telephone"><span>{Configuration::get('PS_SHOP_PHONE')}</span> {l s='/ Int. (+33) 234 321 179'}</a>
 						</div>
 
 						<hr />
@@ -117,9 +117,6 @@
 			</footer>
 
 		{/if}
-
-
-
 
 		<script type="text/javascript">
 			var baseDir = '{$content_dir|addslashes}';

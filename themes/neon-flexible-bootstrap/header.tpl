@@ -65,8 +65,16 @@
 					</div>
 				{/if}
 				<ul class="nav-header-top hidden-xs" role="navigation">
-					<li><a href="">Panier : <span class="nb-products-in-cart">0</span> produits <b class="caret"></b></a></li>
-					<li><a href="">Mon compte</a></li>
+					<li><a href="">{l s='Panier :'} <span class="nb-products-in-cart">0</span> produits <b class="caret"></b></a></li>
+					<li><a href="">{l s='Mon compte'}</a></li>
+					<li>
+						<ul class="list-languages">
+							{foreach Language::getLanguages() as $language}
+								<li><a href=""><img src="{$img_dir}/theme/lang/{$language.iso_code}.png" alt="{$language.iso_code}" /></a></li>
+							{/foreach}
+						</ul>
+					</li>
+					<li><a href="">{l s='Espace Pro'}</a></li>
 				</ul>
 				<div class="clearfix"></div>
 			</div>
@@ -76,9 +84,19 @@
 
 		<div class="container hidden-xs hidden-sm hidden-md">
 
+			<div id="rechercher">
+				<input type="text" placeholder="{l s='Rechercher'}"/>
+				<input type="submit" value="{l s='OK'}" />
+			</div>
+			<div class="clearfix"></div>
+
+		</div>
+
+		<div class="container hidden-xs hidden-sm hidden-md">
+
 			<div id="accroche">
 				<span class="accroche-texte">{l s='Un stock et un SAV garantis 100% français pour plus de réactivité'}</span>
-				<a href="tel:{Configuration::get('PS_SHOP_PHONE')}" class="accroche-telephone">{Configuration::get('PS_SHOP_PHONE')}</a>
+				<a href="tel:{Configuration::get('PS_SHOP_PHONE')}" class="accroche-telephone"><span>{Configuration::get('PS_SHOP_PHONE')}</span> {l s='/ International (+33) 234 321 179'}</a>
 			</div>
 			<div class="clearfix"></div>
 
@@ -99,9 +117,9 @@
 							<li><a href="#about">Bande Lumineuse</a></li>
 							<li><a href="#contact">Ruban led</a></li>
 							<li><a href="#contact">Néon led</a></li>
-							<li><a href="#contact">Néon led</a></li>
 							<li><a href="#contact">Fibre optique lumineuse</a></li>
 							<li><a href="#contact">Accessoires</a></li>
+							<li><a href="#contact">TUTORIELS</a></li>
 							<li><a href="#contact" class="visible-xs">Accès par métiers</a></li>
 						</ul>
 						<div class="btn-group dropdown hidden-xs">
