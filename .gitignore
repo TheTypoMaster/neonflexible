@@ -54,3 +54,4 @@ admin220371/autoupgrade/*.list
 
 # Modules
 modules/now_import_accessories/uploads/*.csv
+modules/now_import_packs/uploads/*.csv
