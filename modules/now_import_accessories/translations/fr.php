@@ -36,6 +36,7 @@ $_MODULE['<{now_import_accessories}prestashop>adminnowimportaccessories_446c4d18
 $_MODULE['<{now_import_accessories}prestashop>adminnowimportaccessories_5c6c75c03e5333a657a6673bf434a535'] = 'Retourner à l\'étape 2';
 $_MODULE['<{now_import_accessories}prestashop>adminnowimportaccessories_5a7a4830042962040ccfbdc4bb4288d7'] = 'Retourner à l\'étape 1';
 $_MODULE['<{now_import_accessories}prestashop>popin_import_b2ec03f98cab81a60aeabc4982ccc96a'] = 'Sélectionner votre fichier CSV';
+$_MODULE['<{now_import_accessories}prestashop>popin_import_92fbf0e5d97b8afd7e73126b52bdc4bb'] = 'Choisir un fichier';
 $_MODULE['<{now_import_accessories}prestashop>popin_import_91412465ea9169dfd901dd5e7c96dd99'] = 'Télécharger';
 $_MODULE['<{now_import_accessories}prestashop>popin_import_9e742d3cf5f5ef472a9425a47e344305'] = 'Seul l\'encodage du fichier en UTF-8 ou ISO 8859-1 seront pris en compte.';
 $_MODULE['<{now_import_accessories}prestashop>step-1_d518b3a4a540fa93e4c74257dd9f52c5'] = 'Ce module d\'import d\'accessoires vous permet de relier un produit à un ou plusieurs accessoires';

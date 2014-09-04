@@ -24,7 +24,7 @@
 								<input id="file-name" type="text" class="disabled" name="filename" readonly />
 								<span class="input-group-btn">
 									<button id="file-selectbutton" type="button" name="submitAddAttachments" class="btn btn-default">
-										<i class="icon-folder-open"></i> {l s='Choose a file'}
+										<i class="icon-folder-open"></i> {l s='Choose a file' mod='now_import_accessories'}
 									</button>
 								</span>
 							</div>

@@ -6,10 +6,10 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-$file = _PS_MODULE_DIR_.'now_import_stock/documentation/now_import_stock.pdf';
+$file = _PS_MODULE_DIR_.'now_import_accessories/documentation/now_import_accessories.pdf';
 
 header('Content-type: application/pdf');
-header("Content-Disposition: attachment;filename=now_import_stock.pdf");
+header("Content-Disposition: attachment;filename=now_import_accessories.pdf");
 header("Content-Transfer-Encoding: binary ");
 readfile($file);
 exit;
