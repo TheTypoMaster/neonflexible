@@ -1,0 +1,17 @@
+#nowBlockCmsFooter {height:150px;}
+#nowBlockCmsFooter ul {}
+#nowBlockCmsFooter ul li {list-style-type:none;font-size:12px;text-transform:uppercase;color:#000;float:left;margin:0 30px 0 0;line-height:36px;}
+#nowBlockCmsFooter ul li a {text-decoration:none;color:#000;}
+#nowBlockCmsFooter ul li ul {}
+#nowBlockCmsFooter ul li div ul {float:left;margin-right:90px;}
+#nowBlockCmsFooter ul li ul li {color:#666;float:none;line-height:18px;}
+#nowBlockCmsFooter ul li ul li a {text-decoration:none;color:#666;text-transform:none;}
+#nowBlockCmsFooter ul li ul li a:hover {color:#000;}
+#nowBlockCmsFooter ul li ul li a:first-letter {text-transform:capitalize;}
+
+#footer-copyright-payment {border-top:1px solid #d2d2d2;}
+#footer-copyright-payment .copyright {font-size:10px;color:#666;margin:20px 0;text-transform:uppercase;float:left;}
+#footer-copyright-payment .payment {float:right;width:350px;}
+#footer-copyright-payment .payment p {font-size:10px;color:#666;margin:20px 20px 20px 0;text-transform:uppercase;float:left;}
+#footer-copyright-payment .payment a {display:block;margin:14px 0 0 0;}
+#footer-copyright-payment .payment a img {}
