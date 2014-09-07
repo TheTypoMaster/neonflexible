@@ -1,61 +1,7 @@
-/* block top search */
-#search_block_top {
-	margin:35px auto;
-	width:325px;
-	height:35px;
-	border:2px solid #dadada;
-	-webkit-border-radius:25px !important;
-	-moz-border-radius:25px !important;
-	border-radius:25px !important;
-}
-
-#search_block_top p {
-	padding:0;
-	margin:0;
-}
-
-#search_block_top #search_query_top {
-	padding:0 5px;
-	height:23px;
-	width:260px;
-	border:0 none;
-	color:#348ECD;
-	font-weight:bold;
-	font-family: Raleway;
-}
-
-#search_block_top #search_query_top::-webkit-input-placeholder { /* WebKit browsers */
-	color:#348ECD;
-}
-#search_block_top #search_query_top:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-	color:#348ECD;
-	opacity:  1;
-}
-#search_block_top #search_query_top::-moz-placeholder { /* Mozilla Firefox 19+ */
-	color:#348ECD;
-	opacity:  1;
-}
-#search_block_top #search_query_top:-ms-input-placeholder { /* Internet Explorer 10+ */
-	color:#348ECD;
-}
-
-#search_block_top .button {
-	color:#333;
-	border: 0 none;
-	background: none;
-	font-weight:bold;
-	font-family: Raleway;
-}
-
-form#searchbox {
-	padding:4px 0 0 8px;
-}
-
-form#searchbox input#search_query_block {
-
-}
-
-form#searchbox input#search_button {
-
-}
-
+#header #search_block_top {background:url('../../../img/theme/barre-de-recherche.png') no-repeat;display:block;position:absolute;margin:40px 0 0 300px;z-index:1;width:299px;height:31px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
+#header #search_block_top #search_query_top {border:none;background:none;width:260px;height:34px;text-transform:uppercase;padding-left:20px;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
+#header #search_block_top #search_query_top::-webkit-input-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
+#header #search_block_top #search_query_top:-moz-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
+#header #search_block_top #search_query_top::-moz-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
+#header #search_block_top #search_query_top:-ms-input-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
+#header #search_block_top #search_query_submit {border:none;position:absolute;background:none;color:#373a39;font-size:13px;font-weight:bold;height:33px;}

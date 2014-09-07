@@ -87,16 +87,6 @@
 
 		<div class="container hidden-xs hidden-sm hidden-md">
 
-			<div id="rechercher">
-				<input type="text" placeholder="{l s='Rechercher'}"/>
-				<input type="submit" value="{l s='OK'}" />
-			</div>
-			<div class="clearfix"></div>
-
-		</div>
-
-		<div class="container hidden-xs hidden-sm hidden-md">
-
 			<div id="accroche">
 				<span class="accroche-texte">{l s='Un stock et un SAV garantis 100% français pour plus de réactivité'}</span>
 				<a href="tel:{Configuration::get('PS_SHOP_PHONE')}" class="accroche-telephone"><span>{Configuration::get('PS_SHOP_PHONE')}</span> {l s='/ International (+33) 234 321 179'}</a>

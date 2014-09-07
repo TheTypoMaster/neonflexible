@@ -20,9 +20,9 @@ span.clearBoth {clear:both;display:block;}
 /* Header */
 
 #header {background:#fff;height:180px;position:relative}
-#header .navbar-inverse {background:#373a39;}
+#header .navbar-inverse {background:#373a39;height:36px;}
 #header .navbar-inverse .container {display:block;height:36px;}
-#header ul.nav-header-top {list-style-type:none;margin:0;padding:0;height:36px;font-family:Lato,Verdana,Arial,sans-serif;}
+#header ul.nav-header-top {list-style-type:none;margin:0;padding:0;font-family:Lato,Verdana,Arial,sans-serif;}
 #header ul.nav-header-top li {float:right;}
 #header ul.nav-header-top li:before {content:"|";padding:0 15px;color:#6d6969;}
 #header ul.nav-header-top li:last-child:before{content:none;padding:0;}
@@ -50,15 +50,6 @@ span.clearBoth {clear:both;display:block;}
 #header #nav-header .navbar-inverse .navbar-collapse.collapse,
 #header #nav-header .navbar-inverse .navbar-collapse.collapsing,
 #header #nav-header .navbar-inverse .navbar-collapse.in {text-align:center;}
-
-#header #rechercher {background:url('../img/theme/barre-de-recherche.png') no-repeat;display:block;position:absolute;margin:40px 0 0 300px;z-index:1;width:299px;height:31px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
-#header #rechercher input[type=text] {border:none;background:none;width:260px;height:34px;text-transform:uppercase;padding-left:20px;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
-#header #rechercher input[type=text]::-webkit-input-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
-#header #rechercher input[type=text]:-moz-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
-#header #rechercher input[type=text]::-moz-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
-#header #rechercher input[type=text]:-ms-input-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
-#header #rechercher input[type=submit] {border:none;position:absolute;background:none;color:#373a39;font-size:13px;font-weight:bold;height:33px;}
-
 #header #accroche {display:block;position:absolute;margin:20px 0 0 640px;z-index:1;}
 #header #accroche .accroche-texte {display:block;color:#777;width:140px;float:left;font-family:Lato,Verdana,Arial,sans-serif;font-size:13px;text-align:right;}
 #header #accroche .accroche-telephone {background:url('../img/theme/header-telephone-international.png') no-repeat;display:block;width:360px;height:54px;line-height:54px;padding-left:60px;font-size:13px;color:#777;margin-left:150px;font-weight:normal;font-family:Raleway,Verdana,Arial,sans-serif;cursor:default;text-decoration:none;}
