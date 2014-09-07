@@ -1,17 +1,9 @@
-/*#nowBlockCmsFooter {height:150px;}
-#nowBlockCmsFooter ul {}
-#nowBlockCmsFooter ul li {list-style-type:none;font-size:12px;text-transform:uppercase;color:#000;float:left;margin:0 30px 0 0;line-height:36px;}
-#nowBlockCmsFooter ul li a {text-decoration:none;color:#000;}
-#nowBlockCmsFooter ul li ul {}
-#nowBlockCmsFooter ul li div ul {float:left;margin-right:90px;}
-#nowBlockCmsFooter ul li ul li {color:#666;float:none;line-height:18px;}
-#nowBlockCmsFooter ul li ul li a {text-decoration:none;color:#666;text-transform:none;}
-#nowBlockCmsFooter ul li ul li a:hover {color:#000;}
-#nowBlockCmsFooter ul li ul li a:first-letter {text-transform:capitalize;}
-
-#footer-copyright-payment {border-top:1px solid #d2d2d2;}
-#footer-copyright-payment .copyright {font-size:10px;color:#666;margin:20px 0;text-transform:uppercase;float:left;}
-#footer-copyright-payment .payment {float:right;width:350px;}
-#footer-copyright-payment .payment p {font-size:10px;color:#666;margin:20px 20px 20px 0;text-transform:uppercase;float:left;}
-#footer-copyright-payment .payment a {display:block;margin:14px 0 0 0;}
-#footer-copyright-payment .payment a img {}*/
+footer #page-listing {float:left;}
+footer #page-listing hr {margin:0 60px;}
+footer #page-listing .footer-payement {margin:20px 0 0 60px;}
+footer #page-listing ul {list-style-type:none;margin:51px 10px;height:150px;padding:0 0 0 50px;}
+footer #page-listing ul li, footer #page-listing ul li a {color:#333;font-family:Raleway,Verdana,Arial,sans-serif;font-size:17px;font-weight:bold;margin:0;padding:0;float:left;}
+footer #page-listing ul li span {display:block;	margin:0 0 10px 0;}
+footer #page-listing ul li:first-letter {text-transform:capitalize;}
+footer #page-listing ul li > ul {margin:0 70px 0 0;padding:0;float:left;}
+footer #page-listing ul li > ul li, footer #page-listing ul li > ul li a {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;float:none;font-weight:normal;line-height:22px;margin:0;}

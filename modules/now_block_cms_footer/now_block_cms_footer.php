@@ -15,7 +15,7 @@ class now_block_cms_footer extends NowModule {
 	public function __construct()
 	{
 		$this->name				= 'now_block_cms_footer';
-		$this->tab				= 'administration';
+		$this->tab				= 'front_office_features';
 		$this->version			= 1.1;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;

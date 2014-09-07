@@ -50,41 +50,23 @@ span.clearBoth {clear:both;display:block;}
 #header #nav-header .navbar-inverse .navbar-collapse.collapse,
 #header #nav-header .navbar-inverse .navbar-collapse.collapsing,
 #header #nav-header .navbar-inverse .navbar-collapse.in {text-align:center;}
-#header #accroche {display:block;position:absolute;margin:20px 0 0 640px;z-index:1;}
-#header #accroche .accroche-texte {display:block;color:#777;width:140px;float:left;font-family:Lato,Verdana,Arial,sans-serif;font-size:13px;text-align:right;}
-#header #accroche .accroche-telephone {background:url('../img/theme/header-telephone-international.png') no-repeat;display:block;width:360px;height:54px;line-height:54px;padding-left:60px;font-size:13px;color:#777;margin-left:150px;font-weight:normal;font-family:Raleway,Verdana,Arial,sans-serif;cursor:default;text-decoration:none;}
-#header #accroche .accroche-telephone span {font-size:16px;color:#55a323;font-weight:bold;}
 
 
-/* Bloc reinsurance */
-
-#bloc-reinsurrance {border-top:1px solid #ccc;padding:40px 0;}
-#bloc-reinsurrance ul {list-style-type:none;}
-#bloc-reinsurrance ul li {float:left;padding:0;width:220px;text-align:center;margin:0 20px;}
-#bloc-reinsurrance ul li h6, #bloc-reinsurrance ul li h6 a {color:#333;font-family:Raleway,Verdana,Arial,sans-serif;font-size:18px;font-weight:bold;text-decoration:none;}
-#bloc-reinsurrance ul li p, #bloc-reinsurrance ul li p a {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;text-decoration:none;}
 
 /* Footer */
 
 footer {background:#f4f4f4;border-top:1px solid #ccc;}
 footer hr {margin:18px 0 10px 0;padding:0;border-top:1px solid #ccc;}
-footer #page-listing {float:left;}
-footer #page-listing hr {margin:0 60px;}
-footer #page-listing .footer-payement {margin:20px 0 0 60px;}
-footer #page-listing ul {list-style-type:none;margin:51px 10px;height:150px;padding:0 0 0 50px;}
-footer #page-listing ul li, footer #page-listing ul li a {color:#333;font-family:Raleway,Verdana,Arial,sans-serif;font-size:17px;font-weight:bold;margin:0;padding:0;float:left;}
-footer #page-listing ul li span {display:block;	margin:0 0 10px 0;}
-footer #page-listing ul li:first-letter {text-transform:capitalize;}
-footer #page-listing ul li > ul {margin:0 70px 0 0;padding:0;float:left;}
-footer #page-listing ul li > ul li, footer #page-listing ul li > ul li a {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;float:none;font-weight:normal;line-height:22px;margin:0;}
 footer .barre {float:left;width:1px;height:260px;background:#ccc;display:block;margin:30px 0;}
 
+/* MODULE : blockcontactinfos */
 footer #contact {color:#777;width:350px;height:220px;float:left;padding:10px 0 0 60px;margin:20px 0 0 0;}
 footer #contact .logo {margin:0 auto;display:block;}
 footer #contact .adresse {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;text-align:center;margin:10px 0;}
 footer #contact .telephone {background:url('../img/theme/footer-telephone-international.png') no-repeat;display:block;width:290px;height:34px;line-height:32px;padding-left:40px;font-size:13px;margin:0 auto;font-weight:normal;font-family:Lato,Verdana,Arial,sans-serif;cursor:default;color:#777;text-decoration:none;}
 footer #contact .telephone span {color:#55a323;font-weight:bold;font-size:16px;}
 
+/* MODULE : blocksocial */
 footer #social_block {color:#777;width:350px;height:60px;float:left;padding:0 0 10px 60px;margin:0 0 20px 0;}
 footer #social_block hr {margin:13px 0 10px 0;}
 footer #social_block .follow-us {color:#333;font-family:Raleway,Verdana,Arial,sans-serif;font-size:17px;font-weight:bold;width:150px;float:left;line-height:38px;padding:0 0 0 5px;}

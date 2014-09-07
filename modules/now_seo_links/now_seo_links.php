@@ -10,31 +10,30 @@ include (_PS_MODULE_DIR_.'now_seo_links/classes/Module.php');
 
 class now_seo_links extends NowModule {
 
-    public static $ModuleRoutes = array(
-        'now_seo_links_display_image' => array(
-            'controller' =>  null,
-            'rule' =>        '{categories:/}/{id}-{type}/{product_name}.jpg',
-            'keywords' => array(
-                'id'            => array('regexp' => '[0-9]+', 'param' => 'id_image'),
-                'type'          => array('regexp' => '[/_a-zA-Z0-9-\pL]*', 'param' => 'image_type'),
-                'categories'    => array('regexp' => '[/_a-zA-Z0-9-\pL]*'),
-                'product_name'  => array('regexp' => '[_a-zA-Z0-9-\pL]*'),
-            ),
-            'params' => array(
-                'fc' => 'module',
-                'module' => 'now_seo_links',
-                'controller' => 'DisplayImage'
-            )
-        )
-    );
+	public static $ModuleRoutes = array(
+		'now_seo_links_display_image' => array(
+			'controller' =>  null,
+			'rule' =>        '{categories:/}/{id}-{type}/{product_name}.jpg',
+			'keywords' => array(
+				'id'            => array('regexp' => '[0-9]+', 'param' => 'id_image'),
+				'type'          => array('regexp' => '[/_a-zA-Z0-9-\pL]*', 'param' => 'image_type'),
+				'categories'    => array('regexp' => '[/_a-zA-Z0-9-\pL]*'),
+				'product_name'  => array('regexp' => '[_a-zA-Z0-9-\pL]*'),
+			),
+			'params' => array(
+				'fc' => 'module',
+				'module' => 'now_seo_links',
+				'controller' => 'DisplayImage'
+			)
+		)
+	);
 
-	public function __construct()
-	{
-		$this->name     = 'now_seo_links';
-		$this->tab      = 'front';
-		$this->version  = 1.0;
-		$this->author   = 'NinjaOfWeb';
-		$this->need_instance = 0;
+	public function __construct() {
+		$this->name				= 'now_seo_links';
+		$this->tab				= 'front_office_features';
+		$this->version			= 1.0;
+		$this->author			= 'NinjaOfWeb';
+		$this->need_instance	= 0;
 
 		parent::__construct();
 
@@ -46,12 +45,12 @@ class now_seo_links extends NowModule {
 		}
 	}
 
-    public function install() {
-        return parent::install() && $this->registerHook('moduleRoutes');
-    }
+	public function install() {
+		return parent::install() && $this->registerHook('moduleRoutes');
+	}
 
-    public function hookModuleRoutes() {
-        return self::$ModuleRoutes;
-    }
+	public function hookModuleRoutes() {
+		return self::$ModuleRoutes;
+	}
 }
 
