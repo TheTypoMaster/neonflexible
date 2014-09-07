@@ -32,7 +32,7 @@ span.clearBoth {clear:both;display:block;}
 #header a img.logo {position:absolute;top:10px;z-index:10;}
 #header .caret {margin-left:10px;border-top:7px solid #acacac;border-bottom:none;border-right:5px solid transparent;border-left:5px solid transparent;}
 
-#header #nav-header {background:#f4f4f4;height:40px;bottom:0px;position:absolute;width:100%}
+#header #nav-header {background:#f4f4f4;height:40px;bottom:0;position:absolute;width:100%}
 #header #nav-header .navbar-collapse {padding:0;max-height:none;border:none;}
 #header #nav-header .navbar-inverse {background:none;border:none;}
 #header #nav-header .navbar-inverse .navbar-nav > li:first-child > a,
@@ -70,23 +70,23 @@ span.clearBoth {clear:both;display:block;}
 #bloc-reinsurrance {border-top:1px solid #ccc;padding:40px 0;}
 #bloc-reinsurrance ul {list-style-type:none;}
 #bloc-reinsurrance ul li {float:left;padding:0;width:220px;text-align:center;margin:0 20px;}
-#bloc-reinsurrance ul li h6 {color:#333;font-family:Raleway,Verdana,Arial,sans-serif;font-size:18px;font-weight:bold;}
-#bloc-reinsurrance ul li p {color:#777;font-size:14px;font-family:Lato;}
+#bloc-reinsurrance ul li h6, #bloc-reinsurrance ul li h6 a {color:#333;font-family:Raleway,Verdana,Arial,sans-serif;font-size:18px;font-weight:bold;text-decoration:none;}
+#bloc-reinsurrance ul li p, #bloc-reinsurrance ul li p a {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;text-decoration:none;}
 
 /* Footer */
 
 footer {background:#f4f4f4;border-top:1px solid #ccc;}
-footer hr {margin:18px 0px 10px 0;padding:0px;border-top:1px solid #ccc;}
+footer hr {margin:18px 0 10px 0;padding:0;border-top:1px solid #ccc;}
 footer #page-listing {float:left;}
 footer #page-listing hr {margin:0 60px;}
 footer #page-listing .footer-payement {margin:20px 0 0 60px;}
 footer #page-listing ul {list-style-type:none;margin:51px 10px;height:150px;padding:0 0 0 50px;}
-footer #page-listing ul li, footer #page-listing ul li a {color:#333;font-family:Raleway,Verdana,Arial,sans-serif;font-size:17px;font-weight:bold;margin:0px;	padding:0px;float:left;}
+footer #page-listing ul li, footer #page-listing ul li a {color:#333;font-family:Raleway,Verdana,Arial,sans-serif;font-size:17px;font-weight:bold;margin:0;padding:0;float:left;}
 footer #page-listing ul li span {display:block;	margin:0 0 10px 0;}
 footer #page-listing ul li:first-letter {text-transform:capitalize;}
-footer #page-listing ul li > ul {margin:0 70px 0 0;padding:0px;float:left;}
+footer #page-listing ul li > ul {margin:0 70px 0 0;padding:0;float:left;}
 footer #page-listing ul li > ul li, footer #page-listing ul li > ul li a {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;float:none;font-weight:normal;line-height:22px;margin:0;}
-footer .barre {float:left;width:1px;height:260px;background:#ccc;display:block;margin:30px 0px;}
+footer .barre {float:left;width:1px;height:260px;background:#ccc;display:block;margin:30px 0;}
 
 footer #contact {color:#777;width:350px;height:220px;float:left;padding:10px 0 0 60px;margin:20px 0 0 0;}
 footer #contact .logo {margin:0 auto;display:block;}
@@ -98,7 +98,7 @@ footer #social_block {color:#777;width:350px;height:60px;float:left;padding:0 0 
 footer #social_block hr {margin:13px 0 10px 0;}
 footer #social_block .follow-us {color:#333;font-family:Raleway,Verdana,Arial,sans-serif;font-size:17px;font-weight:bold;width:150px;float:left;line-height:38px;padding:0 0 0 5px;}
 footer #social_block ul {list-style-type:none;}
-footer #social_block ul li {float:left;width:41px;height:38px;margin:2px;padding:0px;}
+footer #social_block ul li {float:left;width:41px;height:38px;margin:2px;padding:0;}
 footer #social_block ul li.facebook {background:url('../img/theme/facebook.png') no-repeat;}
 footer #social_block ul li.twitter {background:url('../img/theme/twitter.png') no-repeat;}
 footer #social_block ul li.google_plus {background:url('../img/theme/google-plus.png') no-repeat;}
