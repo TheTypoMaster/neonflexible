@@ -16,7 +16,7 @@ class now_block_cms_footer extends NowModule {
 	{
 		$this->name				= 'now_block_cms_footer';
 		$this->tab				= 'administration';
-		$this->version			= 1.0;
+		$this->version			= 1.1;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
@@ -81,7 +81,17 @@ class now_block_cms_footer extends NowModule {
 
 			$aLinksByColumnId		= array();
 			foreach ($aLinks as $aLink) {
-				$aLinksByColumnId[$aLink['id_now_block_cms_footer_column']][] = $aLink;
+				$aNewLink = $aLink;
+
+				if ($aLink['type'] == NowBlockFooterCms::TYPE_CMS) {
+					$aNewLink['object'] = new CMS($aLink['id_type'], Context::getContext()->language->id);
+				} elseif ($aLink['type'] == NowBlockFooterCms::TYPE_CATEGORY) {
+					$aNewLink['object'] = new Category($aLink['id_type'], Context::getContext()->language->id);
+				} elseif ($aLink['type'] == NowBlockFooterCms::TYPE_MANUFACTURER) {
+					$aNewLink['object'] = new Manufacturer($aLink['id_type'], Context::getContext()->language->id);
+				}
+
+				$aLinksByColumnId[$aLink['id_now_block_cms_footer_column']][] = $aNewLink;
 			}
 
 			$aLinksByColumnIdGood	= array();

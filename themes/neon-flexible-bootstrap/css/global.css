@@ -18,6 +18,7 @@ span.clearBoth {clear:both;display:block;}
 
 
 /* Header */
+
 #header {background:#fff;height:180px;position:relative}
 #header .navbar-inverse {background:#373a39;}
 #header .navbar-inverse .container {display:block;height:36px;}
@@ -25,10 +26,12 @@ span.clearBoth {clear:both;display:block;}
 #header ul.nav-header-top li {float:right;}
 #header ul.nav-header-top li:before {content:"|";padding:0 15px;color:#6d6969;}
 #header ul.nav-header-top li:last-child:before{content:none;padding:0;}
-#header ul.nav-header-top li a {color:#fff;line-height:36px;text-decoration: none;}
-#header ul.nav-header-top li .list-languages {display: inline;}
+#header ul.nav-header-top li a {color:#fff;line-height:36px;text-decoration:none;}
+#header ul.nav-header-top li .list-languages {display:inline;}
 #header ul.nav-header-top li .list-languages a {margin:0 3px;}
 #header a img.logo {position:absolute;top:10px;z-index:10;}
+#header .caret {margin-left:10px;border-top:7px solid #acacac;border-bottom:none;border-right:5px solid transparent;border-left:5px solid transparent;}
+
 #header #nav-header {background:#f4f4f4;height:40px;bottom:0px;position:absolute;width:100%}
 #header #nav-header .navbar-collapse {padding:0;max-height:none;border:none;}
 #header #nav-header .navbar-inverse {background:none;border:none;}
@@ -39,7 +42,6 @@ span.clearBoth {clear:both;display:block;}
 #header #nav-header .navbar-inverse .dropdown-menu > li > a {padding:6px 20px;color:#348ecd;font-weight:bold;font-size:13px;text-transform:uppercase;}
 #header #nav-header .navbar-inverse .dropdown > button {line-height:28px;border:none;background:none;padding:6px 20px;color:#348ecd;font-weight:bold;font-size:13px;text-transform:uppercase;}
 #header #nav-header .navbar-inverse .navbar-nav > .active > a {background:none;}
-#header .caret {margin-left:10px;border-top:7px solid #acacac;border-bottom:none;border-right:5px solid transparent;border-left:5px solid transparent;}
 #header #nav-header .access-by-jobs {float:right;}
 #header #nav-header .navbar-header {margin:auto;width:140px;}
 #header #nav-header .navbar-header .navbar-toggle {float:none;border:none;padding:0;line-height:40px;margin:0 10px;}
@@ -49,274 +51,55 @@ span.clearBoth {clear:both;display:block;}
 #header #nav-header .navbar-inverse .navbar-collapse.collapsing,
 #header #nav-header .navbar-inverse .navbar-collapse.in {text-align:center;}
 
-#header #rechercher {
-	background: url('../img/theme/barre-de-recherche.png') no-repeat;
-	display: block;
-	position: absolute;
-	margin: 40px 0 0 300px;
-	z-index: 1;
-	width: 299px;
-	height: 31px;
-	font-family: Raleway,Verdana,Arial,sans-serif;
-	font-weight: bold;
-}
-
-#header #rechercher input[type=text] {
-	border: none;
-	background: none;
-	width:260px;
-	height:34px;
-	text-transform:uppercase;
-	padding-left:20px;
-	color:#348ecd;
-	font-family:Raleway,Verdana,Arial,sans-serif;
-	font-weight:bold;
-}
+#header #rechercher {background:url('../img/theme/barre-de-recherche.png') no-repeat;display:block;position:absolute;margin:40px 0 0 300px;z-index:1;width:299px;height:31px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
+#header #rechercher input[type=text] {border:none;background:none;width:260px;height:34px;text-transform:uppercase;padding-left:20px;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
 #header #rechercher input[type=text]::-webkit-input-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
 #header #rechercher input[type=text]:-moz-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
 #header #rechercher input[type=text]::-moz-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
 #header #rechercher input[type=text]:-ms-input-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
+#header #rechercher input[type=submit] {border:none;position:absolute;background:none;color:#373a39;font-size:13px;font-weight:bold;height:33px;}
 
-#header #rechercher input[type=submit] {
-	border: none;
-	position: absolute;
-	background: none;
-	color: #373a39;
-	font-size: 13px;
-	font-weight: bold;
-	height: 33px;
-}
-
-
-#header #accroche {
-	display: block;
-	position:absolute;
-	margin:20px 0 0 640px;
-	z-index:1;
-}
-#header #accroche .accroche-texte {
-	display:block;
-	color:#777;
-	width:140px;
-	float:left;
-	font-family:Lato,Verdana,Arial,sans-serif;
-	font-size: 13px;
-	text-align:right;
-}
-
-#header #accroche .accroche-telephone {
-	background: url('../img/theme/header-telephone-international.png') no-repeat;
-	display: block;
-	width:360px;
-	height: 54px;
-	line-height: 54px;
-	padding-left: 60px;
-	font-size:13px;
-	color: #777;
-	margin-left:150px;
-	font-weight:normal;
-	font-family:Raleway,Verdana,Arial,sans-serif;
-	cursor:default;
-	text-decoration:none;
-}
-
-#header #accroche .accroche-telephone span {
-	font-size:16px;
-	color:#55a323;
-	font-weight:bold;
-}
-
-/* Footer */
-
-footer {
-	background:#f4f4f4;
-	border-top: 1px solid #ccc;
-}
-
-footer #page-listing {
-	float:left;
-}
-
-footer #page-listing hr {
-	margin:0 60px;
-}
-
-footer #page-listing .footer-payement {
-	margin:20px 0 0 60px;
-}
-
-footer #page-listing ul {
-	list-style-type:none;
-	margin:51px 10px;
-	height:150px;
-	padding:0 0 0 50px;
-}
-
-footer #page-listing ul li {
-	color:#333;
-	font-family:Raleway,Verdana,Arial,sans-serif;
-	font-size:17px;
-	font-weight:bold;
-	margin:0px;
-	padding:0px;
-	float: left;
-}
-
-footer #page-listing ul li span {
-	display:block;
-	margin: 0 0 10px 0;
-}
-
-footer #page-listing ul li:first-letter {
-	text-transform: capitalize;
-}
-
-footer #page-listing ul li > ul {
-	margin:0 70px 0 0;
-	padding:0px;
-	float: left;
-}
-
-footer #page-listing ul li > ul li {
-	color:#777;
-	font-size:14px;
-	font-family:Lato,Verdana,Arial,sans-serif;
-	float: none;
-	font-weight:normal;
-	line-height:22px;
-	margin: 0;
-}
-
-footer .barre {
-	float: left;
-	width:1px;
-	height:260px;
-	background:#ccc;
-	display:block;
-	margin:30px 0px;
-}
-
-footer #contact {
-	color: #777;
-	width:350px;
-	height: 340px;
-	float: left;
-	padding:10px 0 10px 60px;
-	margin:20px 0px;
-}
-
-footer #contact .logo {
-	margin: 0 auto;
-	display: block;
-}
-
-footer #contact .adresse {
-	color:#777;
-	font-size:14px;
-	font-family:Lato,Verdana,Arial,sans-serif;
-	text-align: center;
-	margin: 10px 0;
-}
-
-footer #contact .telephone {
-	background: url('../img/theme/footer-telephone-international.png') no-repeat;
-	display: block;
-	width:290px;
-	height:34px;
-	line-height:32px;
-	padding-left: 40px;
-	font-size:13px;
-	margin: 0 auto;
-	font-weight: normal;
-	font-family:Lato,Verdana,Arial,sans-serif;
-	cursor:default;
-	color:#777;
-	text-decoration:none;
-}
-
-footer #contact .telephone span {
-	color:#55a323;
-	font-weight:bold;
-	font-size:16px;
-}
-
-footer hr {
-	margin:18px 0px 10px 0;
-	padding:0px;
-	border-top: 1px solid #ccc;
-}
-
-footer #contact .follow-us {
-	color: #333;
-	font-family: Raleway;
-	font-size: 17px;
-	font-weight: bold;
-	width: 150px;
-	float: left;
-	line-height: 38px;
-	padding:0 0 0 5px;
-}
-
-footer #contact ul {
-	list-style-type:none;
-}
-
-footer #contact ul li {
-	float: left;
-	width:41px;
-	height:38px;
-	margin:2px;
-	padding:0px;
-}
-
-footer #contact ul li.facebook {
-	background: url('../img/theme/facebook.png') no-repeat;
-}
-
-footer #contact ul li.twitter {
-	background: url('../img/theme/twitter.png') no-repeat;
-}
-
-footer #contact ul li.google {
-	background: url('../img/theme/google-plus.png') no-repeat;
-}
-
-footer #contact ul li a {
-	width:41px;
-	height:38px;
-	text-indent:-9999px;
-	position:absolute;
-}
+#header #accroche {display:block;position:absolute;margin:20px 0 0 640px;z-index:1;}
+#header #accroche .accroche-texte {display:block;color:#777;width:140px;float:left;font-family:Lato,Verdana,Arial,sans-serif;font-size:13px;text-align:right;}
+#header #accroche .accroche-telephone {background:url('../img/theme/header-telephone-international.png') no-repeat;display:block;width:360px;height:54px;line-height:54px;padding-left:60px;font-size:13px;color:#777;margin-left:150px;font-weight:normal;font-family:Raleway,Verdana,Arial,sans-serif;cursor:default;text-decoration:none;}
+#header #accroche .accroche-telephone span {font-size:16px;color:#55a323;font-weight:bold;}
 
 
 /* Bloc reinsurance */
 
-#bloc-reinsurrance {
-	border-top: 1px solid #ccc;
-	padding: 40px 0;
-}
+#bloc-reinsurrance {border-top:1px solid #ccc;padding:40px 0;}
+#bloc-reinsurrance ul {list-style-type:none;}
+#bloc-reinsurrance ul li {float:left;padding:0;width:220px;text-align:center;margin:0 20px;}
+#bloc-reinsurrance ul li h6 {color:#333;font-family:Raleway,Verdana,Arial,sans-serif;font-size:18px;font-weight:bold;}
+#bloc-reinsurrance ul li p {color:#777;font-size:14px;font-family:Lato;}
 
-#bloc-reinsurrance ul {
-	list-style-type:none;
-}
+/* Footer */
 
-#bloc-reinsurrance ul li {
-	float: left;
-	padding: 0;
-	width: 220px;
-	text-align: center;
-	margin:0 20px;
-}
+footer {background:#f4f4f4;border-top:1px solid #ccc;}
+footer hr {margin:18px 0px 10px 0;padding:0px;border-top:1px solid #ccc;}
+footer #page-listing {float:left;}
+footer #page-listing hr {margin:0 60px;}
+footer #page-listing .footer-payement {margin:20px 0 0 60px;}
+footer #page-listing ul {list-style-type:none;margin:51px 10px;height:150px;padding:0 0 0 50px;}
+footer #page-listing ul li, footer #page-listing ul li a {color:#333;font-family:Raleway,Verdana,Arial,sans-serif;font-size:17px;font-weight:bold;margin:0px;	padding:0px;float:left;}
+footer #page-listing ul li span {display:block;	margin:0 0 10px 0;}
+footer #page-listing ul li:first-letter {text-transform:capitalize;}
+footer #page-listing ul li > ul {margin:0 70px 0 0;padding:0px;float:left;}
+footer #page-listing ul li > ul li, footer #page-listing ul li > ul li a {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;float:none;font-weight:normal;line-height:22px;margin:0;}
+footer .barre {float:left;width:1px;height:260px;background:#ccc;display:block;margin:30px 0px;}
 
-#bloc-reinsurrance ul li h6 {
-	color: #333;
-	font-family: Raleway;
-	font-size: 18px;
-	font-weight: bold;
-}
+footer #contact {color:#777;width:350px;height:220px;float:left;padding:10px 0 0 60px;margin:20px 0 0 0;}
+footer #contact .logo {margin:0 auto;display:block;}
+footer #contact .adresse {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;text-align:center;margin:10px 0;}
+footer #contact .telephone {background:url('../img/theme/footer-telephone-international.png') no-repeat;display:block;width:290px;height:34px;line-height:32px;padding-left:40px;font-size:13px;margin:0 auto;font-weight:normal;font-family:Lato,Verdana,Arial,sans-serif;cursor:default;color:#777;text-decoration:none;}
+footer #contact .telephone span {color:#55a323;font-weight:bold;font-size:16px;}
 
-#bloc-reinsurrance ul li p {
-	color:#777;
-	font-size:14px;
-	font-family: Lato;
-}
+footer #social_block {color:#777;width:350px;height:60px;float:left;padding:0 0 10px 60px;margin:0 0 20px 0;}
+footer #social_block hr {margin:13px 0 10px 0;}
+footer #social_block .follow-us {color:#333;font-family:Raleway,Verdana,Arial,sans-serif;font-size:17px;font-weight:bold;width:150px;float:left;line-height:38px;padding:0 0 0 5px;}
+footer #social_block ul {list-style-type:none;}
+footer #social_block ul li {float:left;width:41px;height:38px;margin:2px;padding:0px;}
+footer #social_block ul li.facebook {background:url('../img/theme/facebook.png') no-repeat;}
+footer #social_block ul li.twitter {background:url('../img/theme/twitter.png') no-repeat;}
+footer #social_block ul li.google_plus {background:url('../img/theme/google-plus.png') no-repeat;}
+footer #social_block ul li a {width:41px;height:38px;text-indent:-9999px;position:absolute;}

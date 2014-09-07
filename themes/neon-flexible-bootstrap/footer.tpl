@@ -1,7 +1,7 @@
 
 		{if !$content_only}
 
-			<div id="bloc-reinsurrance">
+			<div id="bloc-reinsurrance">now_block_reinsurance
 
 				<div class="container">
 					<ul>
@@ -32,87 +32,7 @@
 
 			<footer>
 
-				<div class="container">
-
-					<div id="page-listing">
-
-						<ul>
-							<li class="hidden-xs">
-								<span>{l s='Produits'}</span>
-								<ul>
-									<li>Fil lumineux</li>
-									<li>Bande lumineuse</li>
-									<li>Ruban led</li>
-									<li>Néon led</li>
-									<li>Fibre optique lumineuse</li>
-								</ul>
-							</li>
-							<li class="hidden-xs">
-								<span>{l s='Métiers'}</span>
-								<ul>
-									<li>Décoration</li>
-									<li>Tuning</li>
-									<li>Spectacle</li>
-									<li>Signalétique</li>
-									<li>Magasin</li>
-								</ul>
-								<ul>
-									<li>Vêtement</li>
-									<li>Lightpainting</li>
-									<li>Enseigne</li>
-									<li>Sécurité</li>
-									<li>Sport</li>
-								</ul>
-							</li>
-							<li>
-								<span>{l s='à propos'}</span>
-								<ul>
-									<li>Qui sommes-nous ?</li>
-									<li>Plan du site</li>
-									<li>Ruban led</li>
-									<li>Mentions légales</li>
-									<li>Contactez-nous</li>
-								</ul>
-							</li>
-						</ul>
-
-						<hr>
-
-						<img src="{$img_dir}/theme/cb-visa-mastercard-paypal.png" alt="{l s='CB / Visa / MasterCard / Paypal'}" class="footer-payement" />
-
-					</div>
-
-					<span class="barre hidden-xs hidden-sm hidden-md"></span>
-
-					<div id="contact">
-
-						<div itemscope itemtype="http://schema.org/LocalBusiness">
-							<a href="{$base_dir}" title="{$shop_name|escape:'htmlall':'UTF-8'}" itemprop="url">
-								<img class="logo" src="{$logo_url}" alt="{$shop_name|escape:'htmlall':'UTF-8'}" {if $logo_image_width}width="{$logo_image_width}"{/if} {if $logo_image_height}height="{$logo_image_height}" {/if}  itemprop="photo" />
-							</a>
-
-							<div class="adresse" itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
-								<span itemprop="street-address">95 avenue Denis Papin</span><br>
-								<span itemprop="postal-code">45800</span> -
-								<span itemprop="locality">Saint-Jean-de-Braye</span>,
-								<span itemprop="country-name">France</span>
-							</div>
-
-							<a href="tel:{Configuration::get('PS_SHOP_PHONE')}" class="telephone" itemprop="telephone"><span>{Configuration::get('PS_SHOP_PHONE')}</span> {l s='/ Int. (+33) 234 321 179'}</a>
-						</div>
-
-						<hr />
-
-						<p class="follow-us">{l s='Suivez-nous sur :'}</p>
-						<ul>
-							<li class="facebook"><a href="" title="{l s='Facebook'}">{l s='Facebook'}</a></li>
-							<li class="twitter"><a href="" title="{l s='Twitter'}">{l s='Twitter'}</a></li>
-							<li class="google"><a href="" title="{l s='Google +'}">{l s='Google +'}</a></li>
-						</ul>
-
-					</div>
-
-				</div>
+				<div class="container">{$HOOK_FOOTER}</div>
 
 			</footer>
 
