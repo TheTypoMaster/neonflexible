@@ -43,6 +43,6 @@
 
 	<hr>
 
-	<img src="{$img_dir}/theme/cb-visa-mastercard-paypal.png" alt="{l s='CB / Visa / MasterCard / Paypal'}" class="footer-payement" />
+	<img src="{$img_dir}/theme/cb-visa-mastercard-paypal.png" alt="{l s='CB / Visa / MasterCard / Paypal' mod='now_block_cms_footer'}" class="footer-payement" />
 
 </div>
