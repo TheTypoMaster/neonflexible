@@ -85,8 +85,6 @@ class NowBlockReinsurance extends ObjectModel {
 			WHERE 1 '.($bActive ? ' AND r.`active` = 1 ' : '').'
 			ORDER BY r.`position` ASC';
 
-		p($sSQL);
-
 		$result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sSQL);
 
 		return $result;
