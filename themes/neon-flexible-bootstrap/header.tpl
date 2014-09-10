@@ -64,30 +64,12 @@
 						<p>{l s='You cannot place a new order from your country.'} <span class="bold">{$geolocation_country}</span></p>
 					</div>
 				{/if}
-				<ul class="nav-header-top hidden-xs" role="navigation">
-					<li><a href="">{l s='Panier :'} <span class="nb-products-in-cart">0</span> produits <b class="caret"></b></a></li>
-					<li><a href="">{l s='Mon compte'}</a></li>
-					<li>
-						<div class="list-languages">
-							{foreach Language::getLanguages() as $language}
-								<a href="">
-									<img src="{$img_dir}/theme/lang/{$language.iso_code}.png" alt="{$language.iso_code}" />
-								</a>
-							{/foreach}
-						</div>
-						<div class="clearfix"></div>
-					</li>
-					<li><a href="">{l s='Espace Pro'}</a></li>
-				</ul>
+				{hook h="displayNav"}
 				<div class="clearfix"></div>
 			</div>
 		</div>
 
 		{if isset($HOOK_TOP)}{$HOOK_TOP}{/if}
-
-		<div id="nav-header">
-			{hook h="displayNav"}
-		</div>
 	</div>
 
 	{/if}

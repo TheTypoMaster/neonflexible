@@ -15,20 +15,13 @@ p {
 
 .clearBoth {clear:both;}
 span.clearBoth {clear:both;display:block;}
-
+.unvisible {display:none;}
 
 /* Header */
 
 #header {background:#fff;height:190px;position:relative}
 #header .navbar-inverse {background:#373a39;height:36px;}
 #header .navbar-inverse .container {display:block;height:36px;}
-#header ul.nav-header-top {list-style-type:none;margin:0;padding:0;font-family:Lato,Verdana,Arial,sans-serif;}
-#header ul.nav-header-top li {float:right;}
-#header ul.nav-header-top li:before {content:"|";padding:0 15px;color:#6d6969;}
-#header ul.nav-header-top li:last-child:before{content:none;padding:0;}
-#header ul.nav-header-top li a {color:#fff;line-height:36px;text-decoration:none;}
-#header ul.nav-header-top li .list-languages {display:inline;}
-#header ul.nav-header-top li .list-languages a {margin:0 3px;}
 #header a img.logo {position:absolute;top:10px;z-index:10;}
 #header .caret {margin-left:10px;border-top:7px solid #acacac;border-bottom:none;border-right:5px solid transparent;border-left:5px solid transparent;}
 
