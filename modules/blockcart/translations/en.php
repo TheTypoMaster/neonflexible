@@ -7,7 +7,6 @@ $_MODULE['<{blockcart}prestashop>blockcart_c2e1362a9710a3dd86f937c2ea1f336d'] = 
 $_MODULE['<{blockcart}prestashop>blockcart_e03093a5753b436ee1de63b6e3e1bd02'] = 'Adds a block containing the customer\'s shopping cart.';
 $_MODULE['<{blockcart}prestashop>blockcart_a21e5718d2a196280b729438933501c7'] = 'Ajax: Invalid choice.';
 $_MODULE['<{blockcart}prestashop>blockcart_02c793e3df4632db20e4d6e146095d62'] = 'Please complete the "Products to display" field.';
-$_MODULE['<{blockcart}prestashop>blockcart_73293a024e644165e9bf48f270af63a0'] = 'Invalid number.';
 $_MODULE['<{blockcart}prestashop>blockcart_c888438d14855d7d96a2724ee9c306bd'] = 'Settings updated';
 $_MODULE['<{blockcart}prestashop>blockcart_f4f70727dc34561dfde1a3c529b6205c'] = 'Settings';
 $_MODULE['<{blockcart}prestashop>blockcart_614a8820aa4ac08ce2ee398a41b10778'] = 'Ajax cart';
