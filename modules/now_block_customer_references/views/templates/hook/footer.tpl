@@ -16,8 +16,8 @@
 
 			<span class="clearBoth"></span>
 
-			<a href="#" class="button-plus-references" alt="{l s='Voir plus de références'}">
-				{l s='Voir plus de références'}
+			<a href="#" class="button-plus-references" title="{l s='Voir plus de références' mod='now_block_customer_references'}">
+				{l s='Voir plus de références' mod='now_block_customer_references'}
 			</a>
 
 		</div>

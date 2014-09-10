@@ -5,6 +5,7 @@ body {
 	font-family:Raleway,Verdana,Arial,sans-serif;
 	font-size:12px;
 	color:#333;
+	padding:0;
 }
 
 p {
@@ -29,7 +30,7 @@ span.clearBoth {clear:both;display:block;}
 
 /* Footer */
 
-footer {background:#f4f4f4;border-top:1px solid #ccc;}
+footer {background:#f4f4f4;border-top:1px solid #ccc;padding-bottom:50px;}
 footer hr {margin:18px 0 10px 0;padding:0;border-top:1px solid #ccc;}
 footer .barre {float:left;width:1px;height:260px;background:#ccc;display:block;margin:30px 0;}
 
