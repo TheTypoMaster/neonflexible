@@ -87,48 +87,6 @@
 
 		<div id="nav-header">
 			{hook h="displayNav"}
-
-			<div class="container">
-
-				<div class="navbar navbar-inverse navbar-static-top" role="navigation">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">Nos produits <b class="caret"></b></button>
-					</div>
-					<div class="navbar-collapse collapse navbar-ex1-collapse">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="#">Fil lumineux</a></li>
-							<li><a href="#about">Bande Lumineuse</a></li>
-							<li><a href="#contact">Ruban led</a></li>
-							<li><a href="#contact">Néon led</a></li>
-							<li><a href="#contact">Fibre optique lumineuse</a></li>
-							<li><a href="#contact">Accessoires</a></li>
-							<li><a href="#contact">TUTORIELS</a></li>
-							<li><a href="#contact" class="visible-xs">Accès par métiers</a></li>
-						</ul>
-						<div class="btn-group dropdown hidden-xs">
-							<ul class="nav navbar-nav access-by-jobs">
-								<li class="dropdown">
-									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Accès par métiers <b class="caret"></b></button>
-
-									<ul class="dropdown-menu">
-										<li><a href="#">Déco</a></li>
-										<li><a href="#">Vêtements</a></li>
-										<li><a href="#">Tunning</a></li>
-										<li><a href="#">Lightpainting</a></li>
-										<li><a href="#">Spectacle</a></li>
-										<li><a href="#">Enseigne</a></li>
-										<li><a href="#">Signalétiques</a></li>
-										<li><a href="#">Sécurité</a></li>
-										<li><a href="#">Magasin</a></li>
-										<li><a href="#">Sport</a></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-			</div>
 		</div>
 	</div>
 
