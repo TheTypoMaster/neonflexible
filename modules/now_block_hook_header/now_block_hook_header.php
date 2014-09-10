@@ -65,7 +65,7 @@ class now_block_hook_header extends NowModule {
 	 * @return mixed
 	 */
 	public function hookHeader($params) {
-		if (Configuration::get('NOW_FOOTER_ENABLE')) {
+		if (Configuration::get('NOW_ACCR_HEADER_ENABLE')) {
 			$this->context->controller->addCSS(($this->_path).'css/now_block_hook_header.css', 'all');
 		}
 	}

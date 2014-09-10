@@ -79,7 +79,6 @@ $_MODULE['<{pm_advancedtopmenu}prestashop>pm_advancedtopmenu_d390fe4c9f67890f46d
 $_MODULE['<{pm_advancedtopmenu}prestashop>pm_advancedtopmenu_77da27e0e517d2aab7a3b9f13bc943e4'] = 'Ouvir dans la même fenêtre (_top)';
 $_MODULE['<{pm_advancedtopmenu}prestashop>pm_advancedtopmenu_3954b84224bd26aed7e6ae394a89bc16'] = 'Ouvrir dans la frame parente (_parent)';
 $_MODULE['<{pm_advancedtopmenu}prestashop>pm_advancedtopmenu_cfe8acbd869cc2c42fd30b2ca2214103'] = 'Sujet sur le forum';
-$_MODULE['<{pm_advancedtopmenu}prestashop>pm_advancedtopmenu_e7fd45d4d37d3d4ec8b2543c9fc48269'] = 'Documentation en ligne';
 $_MODULE['<{pm_advancedtopmenu}prestashop>pm_advancedtopmenu_9f5ab71ba0b877b73860c16e009727bf'] = 'Contact support';
 $_MODULE['<{pm_advancedtopmenu}prestashop>pm_advancedtopmenu_bbf1812d7903fb0b7775ea6e55470825'] = 'Module mis à jour avec succès';
 $_MODULE['<{pm_advancedtopmenu}prestashop>pm_advancedtopmenu_dabe08e7b0fef88f1996b4756d9e6d48'] = 'Avant de configurer votre menu, donnez la permission d\'écrire aux fichiers/dossiers suivants :';
