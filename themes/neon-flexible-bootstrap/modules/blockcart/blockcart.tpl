@@ -18,6 +18,7 @@
 					{if $language.iso_code == $lang_iso}
 						<img src="{$img_dir}/theme/lang/{$language.iso_code}-on.png" alt="{$language.name}" />
 					{else}
+						{assign var=indice_lang value=$language.id_lang}
 						{if isset($lang_rewrite_urls.$indice_lang)}
 							<a href="{$lang_rewrite_urls.$indice_lang|escape:htmlall}" title="{$language.name}">
 						{else}
