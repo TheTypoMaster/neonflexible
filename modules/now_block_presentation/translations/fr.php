@@ -2,6 +2,7 @@
 
 global $_MODULE;
 $_MODULE = array();
-$_MODULE['<{now_block_presentation}prestashop>now_block_presentation_c5e05194bbc02e351345abe55607b48f'] = 'Gestion du bloc des références clients';
-$_MODULE['<{now_block_presentation}prestashop>now_block_presentation_2c44faa017b24393746c4377a4417a5c'] = 'Ajoute un bloc de gestion des références clients dans le footer.';
-$_MODULE['<{now_block_presentation}prestashop>now_block_presentation_196035bd5e8bfaa51a02328c9cdb96b0'] = 'Gestion des références clients';
+$_MODULE['<{now_block_presentation}prestashop>now_block_presentation_1348cac958c096cbc56e256e9f6a29e3'] = 'Gestion du bloc de présentation de votre entreprise';
+$_MODULE['<{now_block_presentation}prestashop>now_block_presentation_c9a00508bbf63ee82d17c596902976e2'] = 'Ajout un bloc de présentation de votre entreprise';
+$_MODULE['<{now_block_presentation}prestashop>now_block_presentation_1be96a72fe009d795d77c73a0288d9b6'] = 'Gestion du bloc de présentation';
+$_MODULE['<{now_block_presentation}prestashop>footer_4e246c50e28a72b4b98836958299a953'] = 'EN SAVOIR PLUS sur neon flexible';
