@@ -47,7 +47,6 @@
 					{* colonne de gauche avec les filtres à facette *}
 					<div id="left-column" class="left">
 						{hook h="displayLeftColumn"}
-						{$HOOK_LEFT_COLUMN}
 					</div>
 
 					<div id="center-column" class="left">
