@@ -99,14 +99,21 @@ footer #social_block ul li a {width:41px;height:38px;text-indent:-9999px;positio
 
 /* Filtres */
 .pagination > li.truncate {float:left;border:1px solid #ddd;padding:6px 12px;margin-left:-1px;}
-.filter-top {border-bottom:1px solid #d4d4d4;}
+.filter-top {border-bottom:1px solid #d4d4d4;height:64px;}
 .filter-top label, .filter-top p {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:normal;}
-.filter-top #displayed-list p {display:inline;float:left;}
-.filter-top #displayed-list ul li {float:left;margin:0 5px;cursor:pointer;list-style-type:none;}
-.filter-top #displayed-list ul li {float:left;margin:0 5px;cursor:pointer;list-style-type:none;}
+.filter-top #displayed-list {float:right;margin:15px 0;}
+.filter-top #displayed-list p {display:inline;float:left;margin:5px 0;padding:0;}
+.filter-top #displayed-list ul {margin:0;padding:0;display:block;float:left;}
+.filter-top #displayed-list ul li {float:left;margin:0 0 0 15px;cursor:pointer;list-style-type:none;}
+.filter-top .productsSortForm {border-right:1px solid #d4d4d4;margin:15px 20px 15px 0;padding:5px 0;float:left;}
+.filter-top .productsSortForm p {margin:0;padding:0;}
+.filter-top .productsSortForm p select {margin:0 20px;}
+.filter-top .nbrItemPage {margin:15px 0;padding:5px 0;float:left;}
+.filter-top .nbrItemPage p {margin:0;padding:0;}
+.filter-top .nbrItemPage p select {margin:0 20px;}
 
 /* Colonne de gauche */
-#left-column {width:300px;background:red;height:400px;}
+#left-column {width:270px;margin-right:20px;background:red;min-height:600px;}
 
 /* Categorie mode liste */
 
