@@ -8,17 +8,17 @@
 
 class AdminMetaController extends AdminMetaControllerCore {
 
-    /**
-     * Method addAllRouteFields() : Add a new route rule : attachment_rule
-     *
-     * @module now_seo_links
-     *
-     * @see AdminMetaControllerCore::addAllRouteFields()
-     */
-    public function addAllRouteFields()
-    {
-        parent::addAllRouteFields();
-        $this->addFieldRoute('attachment_rule', $this->l('Route to Attachment'));
-    }
+	/**
+	 * Method addAllRouteFields() : Add a new route rule : attachment_rule
+	 *
+	 * @module now_seo_links
+	 *
+	 * @see AdminMetaControllerCore::addAllRouteFields()
+	 */
+	public function addAllRouteFields()
+	{
+		parent::addAllRouteFields();
+		//$this->addFieldRoute('attachment_rule', $this->l('Route to Attachment'));
+	}
 
 }
