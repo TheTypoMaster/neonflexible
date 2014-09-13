@@ -8,7 +8,7 @@
 
 include (_PS_MODULE_DIR_.'now_block_customer_references/now_block_customer_references.php');
 
-class AdminBlockCustomerReferences extends ModuleAdminController {
+class AdminBlockCustomerReferencesController extends ModuleAdminController {
 	public $module;
 
 	public function __construct()

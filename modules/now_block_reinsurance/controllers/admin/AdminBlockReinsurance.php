@@ -8,7 +8,7 @@
 
 include (_PS_MODULE_DIR_.'now_block_cms_footer/now_block_cms_footer.php');
 
-class AdminBlockFooterCms extends ModuleAdminController {
+class AdminBlockReinsuranceController extends ModuleAdminController {
 	public $module;
 
 	public function __construct()

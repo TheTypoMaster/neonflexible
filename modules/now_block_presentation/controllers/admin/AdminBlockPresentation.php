@@ -8,7 +8,7 @@
 
 include (_PS_MODULE_DIR_.'now_block_presentation/now_block_presentation.php');
 
-class AdminBlockPresentation extends ModuleAdminController {
+class AdminBlockPresentationController extends ModuleAdminController {
 	public $module;
 
 	public function __construct()

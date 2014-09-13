@@ -8,7 +8,7 @@
 
 include (_PS_MODULE_DIR_.'now_mea_home/now_mea_home.php');
 
-class AdminMeaProductsHomePage extends ModuleAdminController {
+class AdminMeaProductsHomePageController extends ModuleAdminController {
 	public $module;
 
 	public function __construct()
