@@ -7,7 +7,7 @@
 		<p>{l s='Affichage :'}</p>
 		<ul>
 			<li>
-				<img src="{$img_dir}theme/mode-liste.png" alt="" data-type-affichage="list" class="jqAffichage" />
+				<img src="{$img_dir}theme/mode-liste-on.png" alt="" data-type-affichage="list" class="jqAffichage" />
 			</li>
 			<li>
 				<img src="{$img_dir}theme/mode-block.png" alt="" data-type-affichage="block" class="jqAffichage" />

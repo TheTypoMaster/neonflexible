@@ -25,7 +25,7 @@
 	<!-- Pagination -->
 	<div id="pagination{if isset($paginationId)}_{$paginationId}{/if}" class="pagination">
 	{if $start!=$stop}
-		<ul class="pagination">
+		<ul>
 		{if $p != 1}
 			{assign var='p_previous' value=$p-1}
 			<li id="pagination_previous{if isset($paginationId)}_{$paginationId}{/if}" class="pagination_previous"><a {$no_follow_text} href="{$link->goPage($requestPage, $p_previous)}">&laquo;&nbsp;{l s='Previous'}</a></li>

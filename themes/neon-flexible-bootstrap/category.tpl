@@ -33,35 +33,41 @@
 
 		</div>
 
-		{* Contenu des produits de cette catégorie *}
-		<div class="container">
+		{if $nb_products > 0}
+			{* Contenu des produits de cette catégorie *}
+			<div class="container">
 
-			{include file="$tpl_dir./errors.tpl"}
+				{include file="$tpl_dir./errors.tpl"}
 
 
-			{if $products}
-				{* Filtres haut *}
-				{include file="$tpl_dir./filter-top.tpl"}
+				{if $products}
+					{* Filtres haut *}
+					{include file="$tpl_dir./filter-top.tpl"}
 
-				{* colonne de gauche avec les filtres à facette *}
-				<div id="left-column" class="left">
-					{hook h="displayLeftColumn"}
-					{$HOOK_LEFT_COLUMN}
-				</div>
+					{* colonne de gauche avec les filtres à facette *}
+					<div id="left-column" class="left">
+						{hook h="displayLeftColumn"}
+						{$HOOK_LEFT_COLUMN}
+					</div>
 
-				<div class="left">
+					<div id="center-column" class="left">
 
-					{include file="$tpl_dir./filter.tpl"}
+						{include file="$tpl_dir./filter.tpl" class="top"}
 
-					{* Liste des produits *}
-					{include file="./product-list.tpl" products=$products}
+						{* Liste des produits *}
+						{include file="./product-list.tpl" products=$products}
 
-					{include file="$tpl_dir./filter.tpl"}
+						{include file="$tpl_dir./filter.tpl" class="bottom"}
 
-				</div>
-			{/if}
+					</div>
+				{/if}
 
-		</div>
+			</div>
+		{elseif $category->id == 1 OR $nb_products == 0}
+			<div class="container">
+				<p class="warning">{l s='There are no products in this category'}</p>
+			</div>
+		{/if}
 	{elseif $category->id}
 		<div class="container">
 			<p class="warning">{l s='This category is currently unavailable.'}</p>
