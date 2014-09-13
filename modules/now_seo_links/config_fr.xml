@@ -2,7 +2,7 @@
 <module>
 	<name>now_seo_links</name>
 	<displayName><![CDATA[Liens sans ID]]></displayName>
-	<version><![CDATA[1.1]]></version>
+	<version><![CDATA[1.2]]></version>
 	<description><![CDATA[Ce modules permet de configurer le format de vos liens sans ID.]]></description>
 	<author><![CDATA[NinjaOfWeb]]></author>
 	<tab><![CDATA[administration]]></tab>

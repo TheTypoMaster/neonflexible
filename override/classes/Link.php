@@ -167,5 +167,36 @@ class Link extends LinkCore
 
 		return $url.$dispatcher->createUrl('cms_rule', $id_lang, $params, $this->allow, '', $id_shop);
 	}
+
+	/**
+	 * Override method getLangLink for redirect "lang" link to method : getLangLink
+	 *
+	 * @module now_seo_links
+	 *
+	 * @param null $id_lang
+	 * @param string $controller
+	 * @param null $id_shop
+	 * @return string
+	 * @see LinkCore::getLangLink()
+	 */
+	protected function getLangLink($id_lang = null, Context $context = null, $id_shop = null)
+	{
+		if (!$context)
+			$context = Context::getContext();
+
+		if ((!$this->allow && in_array($id_shop, array($context->shop->id,  null))) || !Language::isMultiLanguageActivated($id_shop) || !(int)Configuration::get('PS_REWRITING_SETTINGS', null, null, $id_shop))
+			return '';
+
+		if (!$id_lang)
+			$id_lang = $context->language->id;
+
+		$folder = NowLanguageLink::getFolderNameByIdlang($id_lang);
+
+		if ($folder) {
+			$folder .= '/';
+		}
+
+		return $folder;
+	}
 }
 

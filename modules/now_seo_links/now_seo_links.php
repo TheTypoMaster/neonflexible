@@ -7,6 +7,7 @@
  */
 
 include (_PS_MODULE_DIR_.'now_seo_links/classes/Module.php');
+require_once (_PS_MODULE_DIR_.'now_seo_links/classes/NowLanguageLink.php');
 
 class now_seo_links extends NowModule {
 
@@ -26,7 +27,7 @@ class now_seo_links extends NowModule {
 	public function __construct() {
 		$this->name				= 'now_seo_links';
 		$this->tab				= 'administration';
-		$this->version			= 1.1;
+		$this->version			= 1.2;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
@@ -38,6 +39,27 @@ class now_seo_links extends NowModule {
 		if ($this->active) {
 			$this->module_dir = _PS_MODULE_DIR_.$this->name.DIRECTORY_SEPARATOR;
 		}
+	}
+
+	/**
+	 * Define admin controller which must be installed
+	 */
+	public function setAdminControllers() {
+		$this->aAdminControllers = array(
+			'AdminLanguageLink' => array(
+				'parent' => 'AdminParentLocalization',
+				'name' => $this->l('Languages Link')
+			)
+		);
+	}
+
+	/**
+	 * Define the list of SQL file to execute to install
+	 */
+	public function setSqlFileToInstall() {
+		$this->aSqlFileToInstall = array(
+			1.0 => 'install.sql'
+		);
 	}
 
 	public function install() {

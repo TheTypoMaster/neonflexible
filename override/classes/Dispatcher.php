@@ -5,6 +5,7 @@
  * Site: www.ninja-of-web.fr
  * Mail: contact@ninja-of-web.fr
  */
+require_once (_PS_MODULE_DIR_.'now_seo_links/classes/NowLanguageLink.php');
 
 class Dispatcher extends DispatcherCore
 {
@@ -160,46 +161,52 @@ class Dispatcher extends DispatcherCore
 	 * @return string
 	 */
 	public function getOldController($id_shop = null) {
-		if (defined('_PS_ADMIN_DIR_'))
+		if (defined('_PS_ADMIN_DIR_')) {
 			$_GET['controllerUri'] = Tools::getvalue('controller');
+		}
 		if ($this->controller)
 		{
 			$_GET['controller'] = $this->controller;
 			return $this->controller;
 		}
 
-		if ($id_shop === null)
+		if ($id_shop === null) {
 			$id_shop = (int)Context::getContext()->shop->id;
+		}
 
 		$controller = Tools::getValue('controller');
 
 		if (isset($controller) && is_string($controller) && preg_match('/^([0-9a-z_-]+)\?(.*)=(.*)$/Ui', $controller, $m))
 		{
 			$controller = $m[1];
-			if (isset($_GET['controller']))
+			if (isset($_GET['controller'])) {
 				$_GET[$m[2]] = $m[3];
-			else if (isset($_POST['controller']))
+			} elseif (isset($_POST['controller'])) {
 				$_POST[$m[2]] = $m[3];
+			}
 		}
 
-		if (!Validate::isControllerName($controller))
+		if (!Validate::isControllerName($controller)) {
 			$controller = false;
+		}
 
 		// Use routes ? (for url rewriting)
 		if ($this->use_routes && !$controller && !defined('_PS_ADMIN_DIR_'))
 		{
-			if (!$this->request_uri)
+			if (!$this->request_uri) {
 				return strtolower($this->controller_not_found);
+			}
 			$controller = $this->controller_not_found;
 
 			// If the request_uri matches a static file, then there is no need to check the routes, we keep "controller_not_found" (a static file should not go through the dispatcher)
 			if (!preg_match('/\.(gif|jpe?g|png|css|js|ico)$/i', $this->request_uri))
 			{
 				// Add empty route as last route to prevent this greedy regexp to match request uri before right time
-				if ($this->empty_route)
+				if ($this->empty_route) {
 					$this->addRoute($this->empty_route['routeID'], $this->empty_route['rule'], $this->empty_route['controller'], Context::getContext()->language->id, array(), array(), $id_shop);
+				}
 
-				if (isset($this->routes[$id_shop][Context::getContext()->language->id]))
+				if (isset($this->routes[$id_shop][Context::getContext()->language->id])) {
 					foreach ($this->routes[$id_shop][Context::getContext()->language->id] as $route) {
 						if (preg_match($route['oldRegexp'], $this->request_uri, $m))
 						{
@@ -226,6 +233,7 @@ class Dispatcher extends DispatcherCore
 							break;
 						}
 					}
+				}
 			}
 
 			if ($controller == 'index' || $this->request_uri == '/index.php')
@@ -233,8 +241,9 @@ class Dispatcher extends DispatcherCore
 			$this->controller = $controller;
 		}
 		// Default mode, take controller from url
-		else
+		else {
 			$this->controller = $controller;
+		}
 
 		$this->controller = str_replace('-', '', $this->controller);
 		$_GET['controller'] = $this->controller;
@@ -307,6 +316,41 @@ class Dispatcher extends DispatcherCore
 
 		return $rule;
 
+	}
+
+	/**
+	 * Set request uri and iso lang
+	 */
+	protected function setRequestUri()
+	{
+		// Get request uri (HTTP_X_REWRITE_URL is used by IIS)
+		if (isset($_SERVER['REQUEST_URI']))
+			$this->request_uri = $_SERVER['REQUEST_URI'];
+		else if (isset($_SERVER['HTTP_X_REWRITE_URL']))
+			$this->request_uri = $_SERVER['HTTP_X_REWRITE_URL'];
+		$this->request_uri = rawurldecode($this->request_uri);
+
+		if (isset(Context::getContext()->shop) && is_object(Context::getContext()->shop))
+			$this->request_uri = preg_replace('#^'.preg_quote(Context::getContext()->shop->getBaseURI(), '#').'#i', '/', $this->request_uri);
+
+
+		// If there are several languages, get language from uri
+		if ($this->use_routes && Language::isMultiLanguageActivated()) {
+			// Default Language
+			$_GET['isolang'] = 'fr';
+
+			if (preg_match('#^/([a-z-]{2,20})(?:/.*)?$#', $this->request_uri, $m))
+			{
+				$sIsoCode = NowLanguageLink::getIsoCodeByFolderName($m[1]);
+
+				if ($sIsoCode) {
+					$_GET['isolang'] = $sIsoCode;
+
+					$this->request_uri = substr($this->request_uri, (strlen($m[1]) + 1));
+				}
+
+			}
+		}
 	}
 
 
