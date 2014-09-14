@@ -2,7 +2,7 @@
 <module>
 	<name>pscleaner</name>
 	<displayName><![CDATA[Nettoyage de PrestaShop]]></displayName>
-	<version><![CDATA[1.8.1]]></version>
+	<version><![CDATA[1.8.2]]></version>
 	<description><![CDATA[V&eacute;rifie et r&eacute;pare les probl&egrave;mes d&#039;int&eacute;grit&eacute; fonctionnelle et supprime les donn&eacute;es par d&eacute;faut (produits, commandes, clients)]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[administration]]></tab>
