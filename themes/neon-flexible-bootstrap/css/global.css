@@ -85,7 +85,8 @@ footer #social_block ul li a {width:41px;height:38px;text-indent:-9999px;positio
 .button-add-to-cart span {background:url('../img/theme/caddie.png') no-repeat;width:24px;height:24px;display:block;margin:12px 0 12px 12px;float:left;}
 
 /* Fil ariane */
-#breadcrumb {margin:10px 0;font-family:Lato,Verdana,Arial,sans-serif;font-size:14px;color:#777;line-height:27px;}
+#breadcrumb {margin:10px 0;font-family:Lato,Verdana,Arial,sans-serif;font-size:14px;color:#777;line-height:27px;border-bottom:1px solid #d4d4d4;padding:0 0 15px 0;}
+#breadcrumb.no-border {padding:0;border:none;}
 #breadcrumb .navigation-pipe {margin:10px;text-indent:9999999px;background:url('../img/theme/navigation-pipe.png') no-repeat;width:5px;height:10px;display:block;float:left;}
 #breadcrumb a {font-family:Lato,Verdana,Arial,sans-serif;font-size:14px;color:#348ecd;text-decoration:underline;display:block;float:left;}
 #breadcrumb a:hover {text-decoration:none;}
@@ -137,8 +138,14 @@ footer #social_block ul li a {width:41px;height:38px;text-indent:-9999px;positio
 
 
 
-
-
+/* MOn compte */
+#my-account {}
+#my-account h1 {color:#333;font-size:33px;font-weight:normal;font-family:Raleway,Verdana,Arial,sans-serif;}
+#my-account ul.myaccount_lnk_list {margin:40px 0 0 0;}
+#my-account ul.myaccount_lnk_list li {line-height:20px;list-style-type:none;float:left;width:190px;margin:0 40px;height:230px;text-align:center;}
+#my-account ul.myaccount_lnk_list li a {line-height: 20px;text-decoration:none;color:#333;font-size:18px;font-weight:normal;font-family:Raleway,Verdana,Arial,sans-serif;}
+#my-account ul.myaccount_lnk_list li a:hover {text-decoration:underline;}
+#my-account ul.myaccount_lnk_list li img {border:none;display:block;width:104px;margin:15px auto;}
 
 
 

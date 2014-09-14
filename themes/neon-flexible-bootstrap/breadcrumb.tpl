@@ -4,7 +4,7 @@
 {/if}
 
 <div class="container">
-	<div id="breadcrumb">
+	<div id="breadcrumb" {if in_array(Context::getContext()->controller->php_self, array('category', 'cms'))}class="no-border"{/if}>
 		<a href="{$base_dir}" title="{l s='Return to Home'}">
 			<img src="{$img_dir}theme/home-fil-ariane.png" height="26" width="27" alt="{l s='Home'}" />
 		</a>
