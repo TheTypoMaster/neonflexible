@@ -52,7 +52,7 @@ class Blocktopmenu extends Module
 	{
 		$this->name = 'blocktopmenu';
 		$this->tab = 'front_office_features';
-		$this->version = '2.0.2';
+		$this->version = '2.0.5';
 		$this->author = 'PrestaShop';
 
 		$this->bootstrap = true;
@@ -309,8 +309,17 @@ class Blocktopmenu extends Module
 
 	private function getCurrentShopInfoMsg()
 	{
+		$shop_info = null;
+
+		if (Shop::getContext() == Shop::CONTEXT_SHOP)
+			$shop_info = $this->l(sprintf('The modifications will be applied to shop: %s', $this->context->shop->name));
+		else if (Shop::getContext() == Shop::CONTEXT_GROUP)
+			$shop_info = $this->l(sprintf('The modifications will be applied to this group: %s', Shop::getContextShopGroup()->name));
+		else
+			$shop_info = $this->l('The modifications will be applied to all shops');
+
 		return '<div class="alert alert-info">'.
-					$this->l('The modifications will be applied to').' '.(Shop::getContext() == Shop::CONTEXT_SHOP ? $this->l('shop').' '.$this->context->shop->name : $this->l('all shops')).
+					$shop_info.
 				'</div>';
 	}
 
@@ -599,7 +608,7 @@ class Blocktopmenu extends Module
 						$html .= '<li class="category-thumbnail">';
 
 						foreach ($files as $file)
-							if (preg_match('/'.$category['id_category'].'-([0-9])?_thumb.jpg/i', $file) === 1)
+							if (preg_match('/^'.$category['id_category'].'-([0-9])?_thumb.jpg/i', $file) === 1)
 								$html .= '<div><img src="'.$this->context->link->getMediaLink(_THEME_CAT_DIR_.$file)
 								.'" alt="'.Tools::SafeOutput($category['name']).'" title="'
 								.Tools::SafeOutput($category['name']).'" class="imgm" /></div>';
@@ -1232,6 +1241,10 @@ class Blocktopmenu extends Module
 		if (Tools::isSubmit('updatelinksmenutop'))
 		{
 			$link = MenuTopLinks::getLinkLang(Tools::getValue('id_linksmenutop'), (int)Shop::getContextShopID());
+
+			foreach ($link['link'] as $key => $label)
+				$link['link'][$key] = Tools::htmlentitiesDecodeUTF8($label);
+
 			$links_label_edit = $link['link'];
 			$labels_edit = $link['label'];
 			$new_window_edit = $link['new_window'];
