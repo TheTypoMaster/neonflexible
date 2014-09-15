@@ -1,29 +1,4 @@
 {*
-* 2007-2013 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Academic Free License (AFL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/afl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2013 PrestaShop SA
-*  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*}
-
-{*
 ** Retro compatibility for PrestaShop version < 1.4.2.5 with a recent theme
 *}
 
@@ -89,42 +64,39 @@
 {capture name=path}<a href="{$link->getPageLink('my-account', true)|escape:'html'}">{l s='My account'}</a><span class="navigation-pipe">{$navigationPipe}</span>{l s='My addresses'}{/capture}
 {include file="$tpl_dir./breadcrumb.tpl"}
 
-<h1>{l s='My addresses'}</h1>
-<p>{l s='Please configure your default billing and delivery addresses when placing an order. You may also add additional addresses, which can be useful for sending gifts or receiving an order at your office.'}</p>
+<div class="container">
+	<h1>{l s='My addresses'}</h1>
+	<p>{l s='Please configure your default billing and delivery addresses when placing an order. You may also add additional addresses, which can be useful for sending gifts or receiving an order at your office.'}</p>
 
-{if isset($multipleAddresses) && $multipleAddresses}
-<div class="addresses">
-	<h3>{l s='Your addresses are listed below.'}</h3>
-	<p>{l s='Be sure to update your personal information if it has changed.'}</p>
-	{assign var="adrs_style" value=$addresses_style}
-	<div class="bloc_adresses clearfix">
-	{foreach from=$multipleAddresses item=address name=myLoop}
-		<ul class="address {if $smarty.foreach.myLoop.last}last_item{elseif $smarty.foreach.myLoop.first}first_item{/if} {if $smarty.foreach.myLoop.index % 2}alternate_item{else}item{/if}">
-			<li class="address_title">{$address.object.alias}</li>
-			{foreach from=$address.ordered name=adr_loop item=pattern}
-				{assign var=addressKey value=" "|explode:$pattern}
-				<li>
-				{foreach from=$addressKey item=key name="word_loop"}
-					<span{if isset($addresses_style[$key])} class="{$addresses_style[$key]}"{/if}>
+	{if isset($multipleAddresses) && $multipleAddresses}
+		<div class="addresses">
+			<h3>{l s='Your addresses are listed below.'}</h3>
+			<p>{l s='Be sure to update your personal information if it has changed.'}</p>
+			{assign var="adrs_style" value=$addresses_style}
+			<div class="bloc_adresses clearfix">
+				{foreach from=$multipleAddresses item=address name=myLoop}
+					<ul class="address {if $smarty.foreach.myLoop.last}last_item{elseif $smarty.foreach.myLoop.first}first_item{/if} {if $smarty.foreach.myLoop.index % 2}alternate_item{else}item{/if}">
+						<li class="address_title">{$address.object.alias}</li>
+						{foreach from=$address.ordered name=adr_loop item=pattern}
+							{assign var=addressKey value=" "|explode:$pattern}
+							<li>
+								{foreach from=$addressKey item=key name="word_loop"}
+									<span{if isset($addresses_style[$key])} class="{$addresses_style[$key]}"{/if}>
 						{$address.formated[$key|replace:',':'']|escape:'htmlall':'UTF-8'}
 					</span>
+								{/foreach}
+							</li>
+						{/foreach}
+						<li class="address_update"><a href="{$link->getPageLink('address', true, null, "id_address={$address.object.id|intval}")|escape:'html'}" title="{l s='Update'}">&raquo; {l s='Update'}</a></li>
+						<li class="address_delete"><a href="{$link->getPageLink('address', true, null, "id_address={$address.object.id|intval}&delete")|escape:'html'}" onclick="return confirm('{l s='Are you sure?' js=1}');" title="{l s='Delete'}">&raquo; {l s='Delete'}</a></li>
+					</ul>
 				{/foreach}
-				</li>
-			{/foreach}
-			<li class="address_update"><a href="{$link->getPageLink('address', true, null, "id_address={$address.object.id|intval}")|escape:'html'}" title="{l s='Update'}">&raquo; {l s='Update'}</a></li>
-			<li class="address_delete"><a href="{$link->getPageLink('address', true, null, "id_address={$address.object.id|intval}&delete")|escape:'html'}" onclick="return confirm('{l s='Are you sure?' js=1}');" title="{l s='Delete'}">&raquo; {l s='Delete'}</a></li>
-		</ul>
-	{/foreach}
-	</div>
-	<p class="clear" />
+			</div>
+			<p class="clear" />
+		</div>
+	{else}
+		<p class="warning">{l s='No addresses are available.'}&nbsp;<a href="{$link->getPageLink('address', true)|escape:'html'}">{l s='Add a new address'}</a></p>
+	{/if}
+
+	<div class="clear address_add"><a href="{$link->getPageLink('address', true)|escape:'html'}" title="{l s='Add an address'}" class="button_large">{l s='Add an address'}</a></div>
 </div>
-{else}
-	<p class="warning">{l s='No addresses are available.'}&nbsp;<a href="{$link->getPageLink('address', true)|escape:'html'}">{l s='Add a new address'}</a></p>
-{/if}
-
-<div class="clear address_add"><a href="{$link->getPageLink('address', true)|escape:'html'}" title="{l s='Add an address'}" class="button_large">{l s='Add an address'}</a></div>
-
-<ul class="footer_links">
-	<li><a href="{$link->getPageLink('my-account', true)|escape:'html'}"><img src="{$img_dir}icon/my-account.gif" alt="" class="icon" /> {l s='Back to your account'}</a></li>
-	<li class="f_right"><a href="{$base_dir}"><img src="{$img_dir}icon/home.gif" alt="" class="icon" /> {l s='Home'}</a></li>
-</ul>
