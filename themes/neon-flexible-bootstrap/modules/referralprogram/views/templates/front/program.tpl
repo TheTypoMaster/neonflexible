@@ -11,10 +11,10 @@
 
 
 <div class="container">
-	<h2>{l s='Referral program' mod='referralprogram'}</h2>
+	<p class="titre-size-1">{l s='Referral program' mod='referralprogram'}</p>
 
 	{if $error}
-		<p class="error">
+		<p class="alert alert-danger">
 			{if $error == 'conditions not valided'}
 				{l s='You need to agree to the conditions of the referral program!' mod='referralprogram'}
 			{elseif $error == 'email invalid'}
@@ -32,7 +32,7 @@
 	{/if}
 
 	{if $invitation_sent}
-		<p class="success">
+		<p class="alert alert-success">
 			{if $nbInvitation > 1}
 				{l s='E-mails have been sent to your friends!' mod='referralprogram'}
 			{else}
@@ -42,7 +42,7 @@
 	{/if}
 
 	{if $revive_sent}
-		<p class="success">
+		<p class="alert alert-success">
 			{if $nbRevive > 1}
 				{l s='Reminder e-mails have been sent to your friends!' mod='referralprogram'}
 			{else}
@@ -50,15 +50,14 @@
 			{/if}
 		</p>
 	{/if}
-
-	<ul class="idTabs clearfix">
-		<li><a href="#idTab1" title="{l s='Sponsor my friends' mod='referralprogram'}" {if $activeTab eq 'sponsor'}class="selected"{/if} rel="nofollow">{l s='Sponsor my friends' mod='referralprogram'}</a></li>
-		<li><a href="#idTab2" title="{l s='List of pending friends' mod='referralprogram'}" {if $activeTab eq 'pending'}class="selected"{/if} rel="nofollow">{l s='Pending friends' mod='referralprogram'}</a></li>
-		<li><a href="#idTab3" title="{l s='List of friends I sponsored' mod='referralprogram'}" {if $activeTab eq 'subscribed'}class="selected"{/if} rel="nofollow">{l s='Friends I sponsored' mod='referralprogram'}</a></li>
+	<ul class="nav nav-tabs" id="idTabs">
+		<li class="active"><a data-toggle="tab" href="#idTab1" class="tab-pane {if $activeTab eq 'sponsor'} active{/if}" title="{l s='Sponsor my friends' mod='referralprogram'}" rel="nofollow">{l s='Sponsor my friends' mod='referralprogram'}</a></li>
+		<li><a data-toggle="tab" href="#idTab2"  class="tab-pane {if $activeTab eq 'pending'} selected{/if}" title="{l s='List of pending friends' mod='referralprogram'}" rel="nofollow">{l s='Pending friends' mod='referralprogram'}</a></li>
+		<li><a data-toggle="tab" href="#idTab3" class="tab-pane {if $activeTab eq 'subscribed'} selected{/if}" title="{l s='List of friends I sponsored' mod='referralprogram'}" rel="nofollow">{l s='Friends I sponsored' mod='referralprogram'}</a></li>
 	</ul>
-	<div class="sheets">
+	<div class="sheets tab-content">
 
-		<div id="idTab1">
+		<div id="idTab1" class="tab-pane active">
 			<p class="bold">
 				<strong>{l s='Get a discount of %1$s for you and your friends by recommending this Website.' sprintf=[$discount] mod='referralprogram'}</strong>
 			</p>
@@ -66,14 +65,14 @@
 				<p>
 					{l s='It\'s quick and it\'s easy. Just fill in the first name, last name, and e-mail address(es) of your friend(s) in the fields below.' mod='referralprogram'}
 					{if $orderQuantity > 1}
-						{l s='When one of them makes at least %d orders' sprintf=$orderQuantity mod='referralprogram'}
+						{l s='When one of them makes at least %d orders, ' sprintf=$orderQuantity mod='referralprogram'}
 					{else}
-						{l s='When one of them makes at least %d order' sprintf=$orderQuantity mod='referralprogram'}
+						{l s='When one of them makes at least %d order, ' sprintf=$orderQuantity mod='referralprogram'}
 					{/if},
 					{l s='he or she will receive a %1$s voucher and you will receive your own voucher worth %1$s.' sprintf=[$discount] mod='referralprogram'}
 				</p>
-				<form method="post" action="{$link->getModuleLink('referralprogram', 'program', [], true)|escape:'html'}" class="std">
-					<table class="std">
+				<form method="post" action="{$link->getModuleLink('referralprogram', 'program', [], true)|escape:'html':'UTF-8'}" class="std">
+					<table class="table table-bordered">
 						<thead>
 						<tr>
 							<th class="first_item">&nbsp;</th>
@@ -86,9 +85,9 @@
 						{section name=friends start=0 loop=$nbFriends step=1}
 							<tr class="{if $smarty.section.friends.index % 2}item{else}alternate_item{/if}">
 								<td class="align_right">{$smarty.section.friends.iteration}</td>
-								<td><input type="text" class="text" name="friendsLastName[{$smarty.section.friends.index}]" size="14" value="{if isset($smarty.post.friendsLastName[$smarty.section.friends.index])}{$smarty.post.friendsLastName[$smarty.section.friends.index]|escape:'html':'UTF-8'}{/if}" /></td>
-								<td><input type="text" class="text" name="friendsFirstName[{$smarty.section.friends.index}]" size="14" value="{if isset($smarty.post.friendsFirstName[$smarty.section.friends.index])}{$smarty.post.friendsFirstName[$smarty.section.friends.index]|escape:'html':'UTF-8'}{/if}" /></td>
-								<td><input type="text" class="text" name="friendsEmail[{$smarty.section.friends.index}]" size="20" value="{if isset($smarty.post.friendsEmail[$smarty.section.friends.index])}{$smarty.post.friendsEmail[$smarty.section.friends.index]|escape:'html':'UTF-8'}{/if}" /></td>
+								<td><input type="text" class="form-control" name="friendsLastName[{$smarty.section.friends.index}]" size="14" value="{if isset($smarty.post.friendsLastName[$smarty.section.friends.index])}{$smarty.post.friendsLastName[$smarty.section.friends.index]|escape:'html':'UTF-8'}{/if}" /></td>
+								<td><input type="text" class="form-control" name="friendsFirstName[{$smarty.section.friends.index}]" size="14" value="{if isset($smarty.post.friendsFirstName[$smarty.section.friends.index])}{$smarty.post.friendsFirstName[$smarty.section.friends.index]|escape:'html':'UTF-8'}{/if}" /></td>
+								<td><input type="text" class="form-control" name="friendsEmail[{$smarty.section.friends.index}]" size="20" value="{if isset($smarty.post.friendsEmail[$smarty.section.friends.index])}{$smarty.post.friendsEmail[$smarty.section.friends.index]|escape:'html':'UTF-8'}{/if}" /></td>
 							</tr>
 						{/section}
 						</tbody>
@@ -99,31 +98,31 @@
 					<p class="checkbox">
 						<input type="checkbox" name="conditionsValided" id="conditionsValided" value="1" {if isset($smarty.post.conditionsValided) AND $smarty.post.conditionsValided eq 1}checked="checked"{/if} />
 						<label for="conditionsValided">{l s='I agree to the terms of service and adhere to them unconditionally.' mod='referralprogram'}</label>
-						<a href="{$link->getModuleLink('referralprogram', 'rules', ['height' => '500', 'width' => '400'], true)|escape:'html'}" class="thickbox" title="{l s='Conditions of the referral program' mod='referralprogram'}" rel="nofollow">{l s='Read conditions.' mod='referralprogram'}</a>
+						<a href="{$link->getModuleLink('referralprogram', 'rules', ['height' => '500', 'width' => '400'], true)|escape:'html':'UTF-8'}" class="thickbox" title="{l s='Conditions of the referral program' mod='referralprogram'}" rel="nofollow">{l s='Read conditions.' mod='referralprogram'}</a>
 					</p>
 					<p class="see_email">
 						{l s='Preview' mod='referralprogram'}
 						{assign var="file" value="{$lang_iso}/referralprogram-invitation.html"}
-						<a href="{$link->getModuleLink('referralprogram', 'email', ['height' => '500', 'width' => '600', 'mail' => {$file}], true)|escape:'html'}" class="thickbox" title="{l s='Invitation e-mail' mod='referralprogram'}" rel="nofollow">{l s='the default e-mail' mod='referralprogram'}</a> {l s='that will be sent to your friend(s).' mod='referralprogram'}
+						<a href="{$link->getModuleLink('referralprogram', 'email', ['height' => '500', 'width' => '600', 'mail' => {$file}], true)|escape:'html':'UTF-8'}" class="thickbox" title="{l s='Invitation e-mail' mod='referralprogram'}" rel="nofollow">{l s='the default e-mail' mod='referralprogram'}</a> {l s='that will be sent to your friend(s).' mod='referralprogram'}
 					</p>
 					<p class="submit">
-						<input type="submit" id="submitSponsorFriends" name="submitSponsorFriends" class="button_large" value="{l s='Validate' mod='referralprogram'}" />
+						<button type="submit" id="submitSponsorFriends" name="submitSponsorFriends" class="btn btn-default button button-medium"><span>{l s='Validate' mod='referralprogram'}<i class="icon-chevron-right right"></i></span></button>
 					</p>
 				</form>
 			{else}
-				<p class="warning">
+				<p class="alert alert-warning">
 					{l s='To become a sponsor, you need to have completed at least' mod='referralprogram'} {$orderQuantity} {if $orderQuantity > 1}{l s='orders' mod='referralprogram'}{else}{l s='order' mod='referralprogram'}{/if}.
 				</p>
 			{/if}
 		</div>
 
-		<div id="idTab2">
+		<div id="idTab2" class="tab-pane">
 			{if $pendingFriends AND $pendingFriends|@count > 0}
 				<p>
 					{l s='These friends have not yet placed an order on this Website since you sponsored them, but you can try again! To do so, mark the checkboxes of the friend(s) you want to remind, then click on the button "Remind my friend(s)"' mod='referralprogram'}
 				</p>
-				<form method="post" action="{$link->getModuleLink('referralprogram', 'program', [], true)|escape:'html'}" class="std">
-					<table class="std">
+				<form method="post" action="{$link->getModuleLink('referralprogram', 'program', [], true)|escape:'html':'UTF-8'}" class="std">
+					<table class="table table-bordered">
 						<thead>
 						<tr>
 							<th class="first_item">&nbsp;</th>
@@ -150,20 +149,20 @@
 						</tbody>
 					</table>
 					<p class="submit">
-						<input type="submit" value="{l s='Remind my friend(s)' mod='referralprogram'}" name="revive" id="revive" class="button_large" />
+						<button type="submit" name="revive" id="revive" class="button_large btn btn-default">{l s='Remind my friend(s)' mod='referralprogram'}</button>
 					</p>
 				</form>
 			{else}
-				<p class="warning">{l s='You have not sponsored any friends.' mod='referralprogram'}</p>
+				<p class="alert alert-warning">{l s='You have not sponsored any friends.' mod='referralprogram'}</p>
 			{/if}
 		</div>
 
-		<div id="idTab3">
+		<div id="idTab3" class="tab-pane">
 			{if $subscribeFriends AND $subscribeFriends|@count > 0}
 				<p>
 					{l s='Here are sponsored friends who have accepted your invitation:' mod='referralprogram'}
 				</p>
-				<table class="std">
+				<table class="table table-bordered">
 					<thead>
 					<tr>
 						<th class="first_item">&nbsp;</th>
@@ -186,7 +185,7 @@
 					</tbody>
 				</table>
 			{else}
-				<p class="warning">
+				<p class="alert alert-warning">
 					{l s='No sponsored friends have accepted your invitation yet.' mod='referralprogram'}
 				</p>
 			{/if}

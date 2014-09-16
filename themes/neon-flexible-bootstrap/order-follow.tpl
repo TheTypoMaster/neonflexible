@@ -2,7 +2,7 @@
 {include file="$tpl_dir./breadcrumb.tpl"}
 
 <div class="container">
-	<h1>{l s='Return Merchandise Authorization (RMA)'}</h1>
+	<p class="titre-size-1">{l s='Return Merchandise Authorization (RMA)'}</p>
 	{if isset($errorQuantity) && $errorQuantity}<p class="error">{l s='You do not have enough products to request an additional merchandise return.'}</p>{/if}
 	{if isset($errorMsg) && $errorMsg}
 		<p class="error">
@@ -32,7 +32,7 @@
 	<p>{l s='Here is a list of pending merchandise returns'}.</p>
 	<div class="block-center" id="block-history">
 		{if $ordersReturn && count($ordersReturn)}
-			<table id="order-list" class="std">
+			<table id="order-list" class="table table-bordered">
 				<thead>
 				<tr>
 					<th class="first_item">{l s='Return'}</th>

@@ -2,11 +2,11 @@
 {include file="$tpl_dir./breadcrumb.tpl"}
 
 <div class="container">
-	<h1>{l s='Credit slips'}</h1>
+	<p class="titre-size-1">{l s='Credit slips'}</p>
 	<p>{l s='Credit slips you have received after cancelled orders'}.</p>
 	<div class="block-center" id="block-history">
 		{if $ordersSlip && count($ordersSlip)}
-			<table id="order-list" class="std">
+			<table id="order-list" class="table table-bordered">
 				<thead>
 				<tr>
 					<th class="first_item">{l s='Credit slip'}</th>

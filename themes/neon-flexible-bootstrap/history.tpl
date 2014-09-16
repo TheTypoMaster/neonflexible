@@ -5,14 +5,14 @@
 
 
 <div class="container">
-	<h1>{l s='Order history'}</h1>
+	<p class="titre-size-1">{l s='Order history'}</p>
 	<p>{l s='Here are the orders you\'ve placed since your account was created.'}</p>
 
 	{if $slowValidation}<p class="warning">{l s='If you have just placed an order, it may take a few minutes for it to be validated. Please refresh this page if your order is missing.'}</p>{/if}
 
 	<div class="block-center" id="block-history">
 		{if $orders && count($orders)}
-			<table id="order-list" class="std">
+			<table id="order-list" class="table table-bordered">
 				<thead>
 				<tr>
 					<th class="first_item">{l s='Order reference'}</th>
