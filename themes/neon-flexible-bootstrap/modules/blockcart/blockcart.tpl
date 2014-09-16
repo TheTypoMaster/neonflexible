@@ -2,8 +2,7 @@
 
 	<div class="header_right">
 
-		{Context::getContext()->controller->php_self|var_dump}
-		{if Context::getContext()->controller->php_self == "authentication"}
+		{if in_array(Context::getContext()->controller->php_self, array("authentication", "order"))}
 			<div class="shop-return">
 				<a href="{Context::getContext()->link->getPageLink('index')}">{l s='Retour à la boutique' mod='blockcart'}</a>
 			</div>

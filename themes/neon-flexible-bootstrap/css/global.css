@@ -47,6 +47,7 @@ form.std p.password input,
 form.std p.select input {padding:0 5px;height:22px;width:360px;border:1px solid #ccc;font-size:12px;color:#777;}
 form.std p.select select {margin-right:10px;border:1px solid #ccc;font-size:12px;color:#777;}
 form.std p.textarea textarea {height:80px;width:370px;border:1px solid #ccc;font-size:12px;color:#777;}
+form.std div.radio {margin:22px;float:left;}
 
 /* Tableau */
 .table-bordered {border:1px solid #ddd;background:#fff;}
@@ -54,7 +55,7 @@ form.std p.textarea textarea {height:80px;width:370px;border:1px solid #ccc;font
 /* Bloc moyen flotant */
 ul.block {float:left;width:500px;background:#f4f4f4;height:250px;margin:20px;padding:20px;border:1px solid #dedede;position:relative;}
 ul.block li {padding:0 15px;line-height:18px;list-style-type:none;}
-ul.block li.title {border-bottom:1px solid #ccc;text-transform:uppercase;font-weight:bold;padding: 0 0 15px 15px;}
+ul.block li.title, ul.block li.address_title {border-bottom:1px solid #ccc;text-transform:uppercase;font-weight:bold;padding: 0 0 15px 15px;}
 ul.block >li:first-child + li {margin-top:8px}
 #block-order-detail {display:none;background:#f4f4f4;border:1px solid #d4d4d4;padding:15px;margin-bottom:20px;}
 
@@ -68,6 +69,7 @@ ul.block >li:first-child + li {margin-top:8px}
 #header .navbar-inverse .container {display:block;height:36px;}
 #header a img.logo {position:absolute;top:10px;z-index:10;}
 #header .caret {margin-left:10px;border-top:7px solid #acacac;border-bottom:none;border-right:5px solid transparent;border-left:5px solid transparent;}
+#authentication #header, #order #header {height:150px;}
 
 
 

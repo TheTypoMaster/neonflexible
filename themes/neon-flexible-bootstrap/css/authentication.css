@@ -1,8 +1,4 @@
-#authentication #header {height:150px;}
-#authentication #header .shop-return {float:right;position:absolute;top:0;}
-#authentication #header .shop-return a {color:#fff;font-size:13px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;line-height: 35px;}
-#authentication #header .shop-return a:before {content:url('../img/theme/navigation-back.png');margin-right:10px;}
-#authentication #header .shop-return a:hover {text-decoration:underline;}
+
 #authentication #create-account_form, #authentication #login_form {float:left;width:500px;background:#f4f4f4;height:250px;margin:20px;padding:20px;border:1px solid #dedede;position:relative;}
 #authentication #create-account_form h3 , #authentication #login_form h3 {border-bottom:1px solid #dedede;color:#333;font-size:16px;font-weight:bold;font-family:Raleway,Verdana,Arial,sans-serif;margin:0 0 15px 0;padding:0 0 15px 0;}
 #authentication #create-account_form label , #authentication #login_form label {width:130px;}
