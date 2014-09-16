@@ -69,7 +69,7 @@
 {/if}
 <p>{l s='Your shopping cart contains:'} <span id="summary_products_quantity">{$productNumber} {if $productNumber == 1}{l s='product'}{else}{l s='products'}{/if}</span></p>
 <div id="order-detail-content" class="table_block">
-	<table id="cart_summary" class="std">
+	<table id="cart_summary" class="table table-bordered">
 		<thead>
 			<tr>
 				<th class="cart_product first_item">{l s='Product'}</th>

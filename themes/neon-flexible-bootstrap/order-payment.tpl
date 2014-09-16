@@ -58,7 +58,7 @@
 {if $HOOK_PAYMENT}
 	{if !$opc}
 <div id="order-detail-content" class="table_block">
-	<table id="cart_summary" class="std">
+	<table id="cart_summary" class="table table-bordered">
 		<thead>
 			<tr>
 				<th class="cart_product first_item">{l s='Product'}</th>

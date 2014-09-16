@@ -9,7 +9,7 @@
 		<p>{l s='List of items to be returned:'}</p>
 	</div>
 	<div id="order-detail-content" class="table table-bordered">
-		<table class="std">
+		<table class="table table-bordered">
 			<thead>
 				<tr>
 					<th class="first_item">{l s='Reference'}</th>

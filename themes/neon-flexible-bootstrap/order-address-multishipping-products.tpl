@@ -30,7 +30,7 @@
 	ShipToAnOtherAddress = '{l s='Ship to multiple addresses' js=1}';
 </script>
 <div id="order-detail-content" class="table_block">
-	<table id="cart_summary" class="std multishipping-cart">
+	<table id="cart_summary" class="table table-bordered multishipping-cart">
 		<thead>
 			<tr>
 				<th class="cart_product first_item">{l s='Product'}</th>

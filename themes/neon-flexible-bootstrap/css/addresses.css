@@ -1,14 +1,7 @@
 #addresses div.addresses {position:relative;}
-#addresses ul.address {float:left;width:500px;background:#f4f4f4;height:250px;margin:20px;padding:20px;border:1px solid #dedede;position:relative;}
 #addresses #address_delivery {margin-right:35px;}
 #addresses #address_invoice {margin-right:0}
 #addresses #delivery_address {margin-right:65px;}
-#addresses ul.address li {padding:0 15px;line-height:18px;list-style-type:none;}
-#addresses ul.address li.address_title {border-bottom:1px solid #ccc;text-transform:uppercase;font-weight:bold;padding: 0 0 15px 15px;}
-#addresses ul.address .address_alias {font-weight:normal;text-transform:none;}
-#addresses ul.address >li:first-child + li {margin-top:8px}
-#addresses ul.address  li.address_update {margin-top:20px}
-#addresses ul.address  li.address_update, #addresses ul.address li.address_delete {font-size:11px;text-transform:none}
 #addresses .address_add {padding:20px 0}
 #addresses .address_select {border:1px solid #ccc;width:200px;margin-left:10px;}
 #addresses label[for=id_address_delivery], #addresses label[for=id_address_invoice] {float:left;width:225px;}

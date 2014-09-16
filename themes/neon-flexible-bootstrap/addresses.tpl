@@ -71,8 +71,8 @@
 			{assign var="adrs_style" value=$addresses_style}
 			<div class="bloc_adresses clearfix">
 				{foreach from=$multipleAddresses item=address name=myLoop}
-					<ul class="address {if $smarty.foreach.myLoop.last}last_item{elseif $smarty.foreach.myLoop.first}first_item{/if} {if $smarty.foreach.myLoop.index % 2}alternate_item{else}item{/if}">
-						<li class="address_title">{$address.object.alias}</li>
+					<ul class="block {if $smarty.foreach.myLoop.last}last_item{elseif $smarty.foreach.myLoop.first}first_item{/if} {if $smarty.foreach.myLoop.index % 2}alternate_item{else}item{/if}">
+						<li class="title">{$address.object.alias}</li>
 						{foreach from=$address.ordered name=adr_loop item=pattern}
 							{assign var=addressKey value=" "|explode:$pattern}
 							<li>

@@ -1,14 +1,17 @@
-{capture name=path}<a href="{$link->getPageLink('my-account', true)|escape:'html'}" title="{l s='Manage my account' mod='loyalty'}" rel="nofollow">{l s='My account' mod='loyalty'}</a><span class="navigation-pipe">{$navigationPipe}</span>{l s='My loyalty points' mod='loyalty'}{/capture}
-
+{capture name=path}
+	<a href="{$link->getPageLink('my-account', true)|escape:'html'}" title="{l s='Manage my account' mod='loyalty'}" rel="nofollow">{l s='My account' mod='loyalty'}</a>
+	<span class="navigation-pipe">{$navigationPipe}</span>
+	{l s='My loyalty points' mod='loyalty'}
+{/capture}
 {include file="$tpl_dir./breadcrumb.tpl"}
 
 <div class="container">
-	<h2>{l s='My loyalty points' mod='loyalty'}</h2>
+	<p class="titre-size-1">{l s='My loyalty points' mod='loyalty'}</p>
 
 	{if $orders}
 		<div class="block-center" id="block-history">
 			{if $orders && count($orders)}
-				<table id="order-list" class="std">
+				<table id="order-list" class="table table-bordered">
 					<thead>
 					<tr>
 						<th class="first_item">{l s='Order' mod='loyalty'}</th>
@@ -109,11 +112,11 @@
 		<br />
 		<br />
 
-		<h2>{l s='My vouchers from loyalty points' mod='loyalty'}</h2>
+		<p class="titre-size-1">{l s='My vouchers from loyalty points' mod='loyalty'}</p>
 
 		{if $nbDiscounts}
 			<div class="block-center" id="block-history">
-				<table id="order-list" class="std">
+				<table id="order-list" class="table table-bordered">
 					<thead>
 					<tr>
 						<th class="first_item">{l s='Created' mod='loyalty'}</th>

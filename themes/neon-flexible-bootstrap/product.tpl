@@ -458,7 +458,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 	<li><a href="#discount" style="cursor: pointer" class="selected">{l s='Sliding scale pricing'}</a></li>
 </ul>
 <div id="quantityDiscount">
-	<table class="std">
+	<table class="table table-bordered">
 	<thead>
 		<tr>
 			<th>{l s='Product'}</th>
