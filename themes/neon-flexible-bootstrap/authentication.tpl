@@ -172,7 +172,7 @@
 
 		<form action="{$link->getPageLink('authentication', true)|escape:'html'}" method="post" id="login_form" class="std">
 			<fieldset>
-				<h3>{l s='VSous avez déjà un compte ?'}</h3>
+				<h3>{l s='Vous avez déjà un compte ?'}</h3>
 				<div class="form_content clearfix">
 					<p>
 						<label for="email">{l s='Votre identifiant'}</label>

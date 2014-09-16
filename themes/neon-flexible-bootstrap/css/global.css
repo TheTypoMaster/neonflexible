@@ -29,6 +29,7 @@ div.error ol li {color:red;}
 /* Forms */
 form.std {margin:0 0 20px 0;}
 form.std p {margin:0;padding:0;clear:both;}
+form.std p.inline-infos {margin:10px 0 0 250px;}
 form.std p.required {}
 form.std p.required sup {}
 form.std div.radio {float:left;}
