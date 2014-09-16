@@ -174,13 +174,13 @@
 			<fieldset>
 				<h3>{l s='VSous avez déjà un compte ?'}</h3>
 				<div class="form_content clearfix">
-					<p class="text">
+					<p>
 						<label for="email">{l s='Votre identifiant'}</label>
-						<span><input type="text" id="email" name="email" value="{if isset($smarty.post.email)}{$smarty.post.email|stripslashes}{/if}" class="account_input" /></span>
+						<input type="text" id="email" name="email" value="{if isset($smarty.post.email)}{$smarty.post.email|stripslashes}{/if}" class="account_input" />
 					</p>
-					<p class="text">
+					<p>
 						<label for="passwd">{l s='Votre mot de passe'}</label>
-						<span><input type="password" id="passwd" name="passwd" value="{if isset($smarty.post.passwd)}{$smarty.post.passwd|stripslashes}{/if}" class="account_input" /></span>
+						<input type="password" id="passwd" name="passwd" value="{if isset($smarty.post.passwd)}{$smarty.post.passwd|stripslashes}{/if}" class="account_input" />
 					</p>
 					<p class="lost_password"><a href="{$link->getPageLink('password')|escape:'html'}" title="{l s='Recover your forgotten password'}" rel="nofollow">{l s='Forgot your password?'}</a></p>
 					<p class="submit">
@@ -197,9 +197,9 @@
 				<div class="form_content clearfix">
 					<p class="title_block">{l s='Saisissez votre adresse e-mail pour créer gratuitement votre compte.'}</p>
 					<div class="error" id="create_account_error" style="display:none"></div>
-					<p class="text">
+					<p>
 						<label for="email_create">{l s='Email address'}</label>
-						<span><input type="text" id="email_create" name="email_create" value="{if isset($smarty.post.email_create)}{$smarty.post.email_create|stripslashes}{/if}" class="account_input" /></span>
+						<input type="text" id="email_create" name="email_create" value="{if isset($smarty.post.email_create)}{$smarty.post.email_create|stripslashes}{/if}" class="account_input" />
 					</p>
 					<p class="submit">
 						{if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back}" />{/if}
@@ -213,7 +213,7 @@
 		{if isset($inOrderProcess) && $inOrderProcess && $PS_GUEST_CHECKOUT_ENABLED}
 			<form action="{$link->getPageLink('authentication', true, NULL, "back=$back")|escape:'html'}" method="post" id="new_account_form" class="std clearfix">
 			<fieldset>
-			<h3>{l s='Instant checkout'}</h3>
+			<p class="titre-size-1">{l s='Instant checkout'}</p>
 			<div id="opc_account_form" style="display: block; ">
 			<!-- Account -->
 			<p class="required text">
@@ -282,7 +282,7 @@
 					<label for="optin">{l s='Receive special offers from our partners!'}</label>
 				</p>
 			{/if}
-			<h3>{l s='Delivery address'}</h3>
+			<p class="titre-size-1">{l s='Delivery address'}</p>
 			{foreach from=$dlv_all_fields item=field_name}
 				{if $field_name eq "company" && $b2b_enable}
 					<p class="text">
@@ -377,7 +377,7 @@
 				{assign var=stateExist value=false}
 				{assign var=postCodeExist value=false}
 				{assign var=dniExist value=false}
-				<h3>{l s='Invoice address'}</h3>
+				<p class="titre-size-1">{l s='Invoice address'}</p>
 				{foreach from=$inv_all_fields item=field_name}
 					{if $field_name eq "company" &&  $b2b_enable}
 						<p class="text">
@@ -477,7 +477,7 @@
 			<p class="cart_navigation required submit">
 				<span><sup>*</sup>{l s='Required field'}</span>
 				<input type="hidden" name="display_guest_checkout" value="1" />
-				<input type="submit" class="exclusive" name="submitGuestAccount" id="submitGuestAccount" value="{l s='Continue'}" />
+				<input type="submit" class="button-rose" name="submitGuestAccount" id="submitGuestAccount" value="{l s='Continue'}" />
 			</p>
 			</form>
 		{/if}
@@ -499,7 +499,7 @@
 		<form action="{$link->getPageLink('authentication', true)|escape:'html'}" method="post" id="account-creation_form" class="std">
 		{$HOOK_CREATE_ACCOUNT_TOP}
 		<fieldset class="account_creation">
-			<h3>{l s='Your personal information'}</h3>
+			<p class="titre-size-1">{l s='Your personal information'}</p>
 			<p class="radio required">
 				<span>{l s='Title'}</span>
 				{foreach from=$genders key=k item=gender}
@@ -572,7 +572,7 @@
 		</fieldset>
 		{if $b2b_enable}
 			<fieldset class="account_creation">
-				<h3>{l s='Your company information'}</h3>
+				<p class="titre-size-1">{l s='Your company information'}</p>
 				<p class="text">
 					<label for="">{l s='Company'}</label>
 					<input type="text" class="text" id="company" name="company" value="{if isset($smarty.post.company)}{$smarty.post.company}{/if}" />
@@ -593,7 +593,7 @@
 		{/if}
 		{if isset($PS_REGISTRATION_PROCESS_TYPE) && $PS_REGISTRATION_PROCESS_TYPE}
 			<fieldset class="account_creation">
-				<h3>{l s='Your address'}</h3>
+				<p class="titre-size-1">{l s='Your address'}</p>
 				{foreach from=$dlv_all_fields item=field_name}
 					{if $field_name eq "company"}
 						{if !$b2b_enable}
@@ -701,7 +701,7 @@
 				</p>
 			</fieldset>
 			<fieldset class="account_creation dni">
-				<h3>{l s='Tax identification'}</h3>
+				<p class="titre-size-1">{l s='Tax identification'}</p>
 				<p class="required text">
 					<label for="dni">{l s='Identification number'} <sup>*</sup></label>
 					<input type="text" class="text" name="dni" id="dni" value="{if isset($smarty.post.dni)}{$smarty.post.dni}{/if}" />
@@ -714,7 +714,7 @@
 			<input type="hidden" name="email_create" value="1" />
 			<input type="hidden" name="is_new_customer" value="1" />
 			{if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'htmlall':'UTF-8'}" />{/if}
-			<input type="submit" name="submitAccount" id="submitAccount" value="{l s='Register'}" class="exclusive" />
+			<input type="submit" name="submitAccount" id="submitAccount" value="{l s='Register'}" class="button-rose" />
 			<span><sup>*</sup>{l s='Required field'}</span>
 		</p>
 		</form>

@@ -20,6 +20,27 @@ span.clearBoth {clear:both;display:block;}
 .left {float:left;}
 .right {float:right;}
 
+/* Forms */
+p.required {}
+p.required sup {}
+p.radio span,
+p.text label,
+p.password label,
+p.select label,
+p.select span,
+p.textarea label {display:block;padding:6px 15px;width:250px;font-size:14px;text-align:right;float:left;color:#333;}
+p.radio label {float:left;padding:0 10px;width:auto;font-size:14px;}
+p.radio input {float:left;}
+p.checkbox label {float:none;width:auto;font-size:12px;}
+p.text input,
+p.password input,
+p.select input {padding:0 5px;height:22px;width:360px;border:1px solid #ccc;font-size:12px;color:#777;}
+p.select select {margin-right:10px;border:1px solid #ccc;font-size:12px;color:#777;}
+p.textarea textarea {height:80px;width:370px;border:1px solid #ccc;font-size:12px;color:#777;}
+
+/* Titre*/
+.titre-size-1 {font-size:32px;color:#333;text-align:center;font-family:Raleway,Verdana,Arial,sans-serif;margin:30px 0;}
+
 /* Header */
 
 #header {background:#fff;height:190px;position:relative}
@@ -138,29 +159,6 @@ footer #social_block ul li a {width:41px;height:38px;text-indent:-9999px;positio
 /* Categorie mode carré */
 
 
-
-/* Mon compte */
-#my-account {}
-#my-account h1 {color:#333;font-size:33px;font-weight:300;font-family:Raleway,Verdana,Arial,sans-serif;}
-#my-account ul.myaccount_lnk_list {margin:40px 0 0 0;}
-#my-account ul.myaccount_lnk_list li {line-height:20px;list-style-type:none;float:left;width:190px;margin:0 40px;height:230px;text-align:center;}
-#my-account ul.myaccount_lnk_list li a {line-height: 20px;text-decoration:none;color:#333;font-size:18px;font-weight:300;font-family:Raleway,Verdana,Arial,sans-serif;}
-#my-account ul.myaccount_lnk_list li a:hover {text-decoration:underline;}
-#my-account ul.myaccount_lnk_list li img {border:none;display:block;width:104px;margin:15px auto;}
-
-/* Authentification / création de compte */
-#authentication #header {height:150px;}
-#authentication #header .shop-return {float:right;position:absolute;top:0;}
-#authentication #header .shop-return a {color:#fff;font-size:13px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;line-height: 35px;}
-#authentication #header .shop-return a:before {content:url('../img/theme/navigation-back.png');margin-right:10px;}
-#authentication #header .shop-return a:hover {text-decoration:underline;}
-#authentication #create-account_form, #authentication #login_form {float:left;width:500px;background:#f4f4f4;height:250px;margin:20px;padding:20px;border:1px solid #dedede;position:relative;}
-#authentication #create-account_form h3 , #authentication #login_form h3 {border-bottom:1px solid #dedede;color:#333;font-size:16px;font-weight:bold;font-family:Raleway,Verdana,Arial,sans-serif;margin:0 0 15px 0;padding:0 0 15px 0;}
-#authentication #create-account_form label , #authentication #login_form label {width:130px;}
-#authentication #create-account_form label , #authentication #login_form label,
-#authentication #create-account_form p , #authentication #login_form p {color:#777;font-size:14px;font-weight:normal;font-family:Lato,Verdana,Arial,sans-serif;}
-#authentication #login_form p.lost_password a {color:#348ecd;font-size:14px;font-weight:normal;font-family:Lato,Verdana,Arial,sans-serif;margin: 0 0 0 130px;text-decoration:underline;}
-#authentication #create-account_form .submit , #authentication #login_form .submit {position:absolute;bottom:10px;left:130px;}
 
 /* Etapes de la commande */
 #order_step {background:#f4f4f4;width:100%;height:150px;}
