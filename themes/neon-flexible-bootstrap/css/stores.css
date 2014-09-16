@@ -26,8 +26,6 @@ select#radiusSelect {
 	border:1px solid #ccc
 }
 
-#stores #center_column p .button {float:right}
-
 #map {
    margin:15px auto;
    height:375px;
