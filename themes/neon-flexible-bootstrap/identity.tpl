@@ -3,7 +3,7 @@
 
 
 <div class="container">
-	<h1>{l s='Your personal information'}</h1>
+	<p class="titre-size-1">{l s='Your personal information'}</p>
 
 	{include file="$tpl_dir./errors.tpl"}
 
@@ -13,12 +13,12 @@
 			{if isset($pwd_changed)}<br />{l s='Your password has been sent to your email:'} {$email}{/if}
 		</p>
 	{else}
-		<h3>{l s='Please be sure to update your personal information if it has changed.'}</h3>
+		<p>{l s='Please be sure to update your personal information if it has changed.'}</p>
 		<p class="required"><sup>*</sup>{l s='Required field'}</p>
 		<form action="{$link->getPageLink('identity', true)|escape:'html'}" method="post" class="std">
 			<fieldset>
 				<p class="radio">
-					<span>{l s='Title'}</span>
+					<span class="label">{l s='Title'}</span>
 					{foreach from=$genders key=k item=gender}
 						<input type="radio" name="id_gender" id="id_gender{$gender->id}" value="{$gender->id|intval}" {if isset($smarty.post.id_gender) && $smarty.post.id_gender == $gender->id}checked="checked"{/if} />
 						<label for="id_gender{$gender->id}" class="top">{$gender->name}</label>
@@ -94,7 +94,7 @@
 					</p>
 				{/if}
 				<p class="submit">
-					<input type="submit" class="button" name="submitIdentity" value="{l s='Save'}" />
+					<input type="submit" class="button-rose" name="submitIdentity" value="{l s='Save'}" />
 				</p>
 				<p id="security_informations">
 					{l s='[Insert customer data privacy clause here, if applicable]'}

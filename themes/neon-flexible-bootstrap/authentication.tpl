@@ -221,7 +221,7 @@
 				<input type="text" class="text" id="guest_email" name="guest_email" value="{if isset($smarty.post.guest_email)}{$smarty.post.guest_email}{/if}" />
 			</p>
 			<p class="radio required">
-				<span>{l s='Title'}</span>
+				<span class="label">{l s='Title'}</span>
 				{foreach from=$genders key=k item=gender}
 					<input type="radio" name="id_gender" id="id_gender{$gender->id}" value="{$gender->id}"{if isset($smarty.post.id_gender) && $smarty.post.id_gender == $gender->id} checked="checked"{/if} />
 					<label for="id_gender{$gender->id}" class="top">{$gender->name}</label>

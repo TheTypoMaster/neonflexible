@@ -20,23 +20,33 @@ span.clearBoth {clear:both;display:block;}
 .left {float:left;}
 .right {float:right;}
 
+/* Errors */
+div.error {background:#f4f4f4;padding:10px;margin:0 0 10px 0;}
+div.error p {color:red;text-decoration:underline;}
+div.error ol {}
+div.error ol li {color:red;}
+
 /* Forms */
-p.required {}
-p.required sup {}
-p.radio span,
-p.text label,
-p.password label,
-p.select label,
-p.select span,
-p.textarea label {display:block;padding:6px 15px;width:250px;font-size:14px;text-align:right;float:left;color:#333;}
-p.radio label {float:left;padding:0 10px;width:auto;font-size:14px;}
-p.radio input {float:left;}
-p.checkbox label {float:none;width:auto;font-size:12px;}
-p.text input,
-p.password input,
-p.select input {padding:0 5px;height:22px;width:360px;border:1px solid #ccc;font-size:12px;color:#777;}
-p.select select {margin-right:10px;border:1px solid #ccc;font-size:12px;color:#777;}
-p.textarea textarea {height:80px;width:370px;border:1px solid #ccc;font-size:12px;color:#777;}
+form.std {margin:0 0 20px 0;}
+form.std p {margin:0;padding:0;clear:both;}
+form.std p.required {}
+form.std p.required sup {}
+form.std div.radio {float:left;}
+form.std p.radio span.label,
+form.std p.text label,
+form.std p.password label,
+form.std p.select label,
+form.std p.select span,
+form.std p.textarea label {display:block;padding:6px 15px;width:250px;font-size:14px;text-align:right;float:left;color:#333;}
+form.std p.radio label {float:left;padding:0 10px;width:auto;font-size:14px;}
+form.std p.radio input {float:left;}
+form.std p.checkbox label {float:none;width:auto;font-size:12px;}
+form.std p.text input,
+form.std p.password input,
+form.std p.select input {padding:0 5px;height:22px;width:360px;border:1px solid #ccc;font-size:12px;color:#777;}
+form.std p.select select {margin-right:10px;border:1px solid #ccc;font-size:12px;color:#777;}
+form.std p.textarea textarea {height:80px;width:370px;border:1px solid #ccc;font-size:12px;color:#777;}
+form.std p.submit .button-rose {margin:0 auto 20px auto;}
 
 /* Titre*/
 .titre-size-1 {font-size:32px;color:#333;text-align:center;font-family:Raleway,Verdana,Arial,sans-serif;margin:30px 0;}
