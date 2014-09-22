@@ -17,6 +17,9 @@ $_MODULE['<{bankwire}neon-flexible-bootstrap>bankwire_6b154cafbab54ba3a1e76a78c2
 $_MODULE['<{bankwire}neon-flexible-bootstrap>bankwire_f9a1a1bb716cbae0503d351ea2af4b34'] = 'Adresse de la banque';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>bankwire_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>validation_e2b7dec8fa4b498156dfee6e4c84b156'] = 'Ce mode de paiement n\'est pas disponible.';
+$_MODULE['<{bankwire}neon-flexible-bootstrap>payment_execution_644818852b4dd8cf9da73543e30f045a'] = 'Retour au paiement';
+$_MODULE['<{bankwire}neon-flexible-bootstrap>payment_execution_6ff063fbc860a79759a7369ac32cee22'] = 'Paiement';
+$_MODULE['<{bankwire}neon-flexible-bootstrap>payment_execution_511e8b930b4d3d6002984c0373eb6d4b'] = 'Paiement par virement bancaire';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_execution_f1d3b424cd68795ecaa552883759aceb'] = 'Récapitulatif de commande';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_execution_879f6b8877752685a966564d072f498f'] = 'Votre panier est vide.';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_execution_05adcee99142c1a60fb38bb1330bbbc1'] = 'Virement bancaire';
@@ -28,6 +31,7 @@ $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_execution_b28be4c423d93e020
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_execution_a7a08622ee5c8019b57354b99b7693b2'] = 'Merci de choisir parmi les suivantes :';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_execution_a854d894458d66d92cabf0411c499ef4'] = 'Nous acceptons la devise suivante pour votre paiement :';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_execution_3dd021316505c0204989f984246c6ff1'] = 'Nos coordonnées bancaires seront affichées sur la page suivante.';
+$_MODULE['<{bankwire}neon-flexible-bootstrap>payment_execution_edd87c9059d88fea45c0bd6384ce92b9'] = 'S\'il vous plaît, veuillez valider votre commande en cliquant sur \"Je confirme ma commande\".';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_execution_46b9e3665f187c739c55983f757ccda0'] = 'Je confirme ma commande';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_execution_569fd05bdafa1712c4f6be5b153b8418'] = 'Autres moyens de paiement';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>infos_c1be305030739396775edaca9813f77d'] = 'Ce module vous permet d\'accepter les paiements par virement bancaire.';
@@ -41,10 +45,9 @@ $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_b2f40690858b404ed10e
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_5ca0b1b910f393ed1f9f6fa99e414255'] = 'à l\'ordre de';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_d717aa33e18263b8405ba00e94353cdc'] = 'suivant ces détails';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_984482eb9ff11e6310fef641d2268a2a'] = 'à cette banque';
-$_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_63fb3f7c94ee5d8027bf599885de279d'] = 'N\'oubliez pas d\'indiquer votre numéro de commande n°%d dans le sujet de votre virement.';
+$_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_bb4ec5aac6864a05fcc220cccd8e82f9'] = 'N\'oubliez pas d\'indiquer votre numéro de commande #%d dans le sujet de votre virement.';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_1faa25b80a8d31e5ef25a78d3336606d'] = 'N\'oubliez pas d\'indiquer votre référence de commande %s dans le sujet de votre virement.';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_19c419a8a4f1cd621853376a930a2e24'] = 'Un e-mail contenant ces informations vous a été envoyé.';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_b9a1cae09e5754424e33764777cfcaa0'] = 'Votre commande sera expédiée dès réception de votre virement.';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_ca7e41a658753c87973936d7ce2429a8'] = 'Pour toute question ou information complémentaire, veuillez contacter notre';
-$_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_dfe239de8c0b2453a8e8f7657a191d5d'] = 'support client';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_d15feee53d81ea16269e54d4784fa123'] = 'Nous avons rencontré un problème avec votre commande. Merci de prendre contact avec notre support client';

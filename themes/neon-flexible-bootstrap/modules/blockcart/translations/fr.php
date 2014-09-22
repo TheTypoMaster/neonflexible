@@ -40,15 +40,6 @@ $_MODULE['<{blockcart}neon-flexible-bootstrap>crossselling_ef2b66b0b65479e08ff0c
 $_MODULE['<{blockcart}neon-flexible-bootstrap>crossselling_dd1f775e443ff3b9a89270713580a51b'] = 'Précédent';
 $_MODULE['<{blockcart}neon-flexible-bootstrap>crossselling_4351cfebe4b61d8aa5efa1d020710005'] = 'Afficher';
 $_MODULE['<{blockcart}neon-flexible-bootstrap>crossselling_10ac3d04253ef7e1ddc73e6091c0cd55'] = 'Suivant';
+$_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_9c9e312f81fab7dd636fe287d2b46975'] = 'Retour à la boutique';
+$_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_277f28c311392036a81c8a9beebea2a8'] = 'Espace Pro';
 $_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_d95cf4ab2cbf1dfb63f066b50558b07d'] = 'Mon compte';
-$_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_98b3009e61879600839e1ee486bb3282'] = 'Fermer la fenêtre';
-$_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_544c3bd0eac526113a9c66542be1e5bc'] = 'Produit ajouté au panier avec succès';
-$_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_694e8d1f2ee056f98ee488bdc4982d73'] = 'Quantité';
-$_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_e5694b7726ceaf2f057e5f06cf86209e'] = 'Il y a [1]%d[/1] produits dans votre panier.';
-$_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_fc86c43dbffcadc193832a310f7a444a'] = 'Il y a 1 produit dans votre panier.';
-$_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_db205f01b4fd580fb5daa9072d96849d'] = 'Total produits';
-$_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_21034ae6d01a83e702839a72ba8a77b0'] = '(HT)';
-$_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_1f87346a16cf80c372065de3c54c86d9'] = 'TTC';
-$_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_f4e8b53a114e5a17d051ab84d326cae5'] = 'Frais de port';
-$_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_300225ee958b6350abc51805dab83c24'] = 'Continuer mes achats';
-$_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_7e0bf6d67701868aac3116ade8fea957'] = 'Commander';
