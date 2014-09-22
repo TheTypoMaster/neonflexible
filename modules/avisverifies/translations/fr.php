@@ -15,6 +15,7 @@ $_MODULE['<{avisverifies}prestashop>avisverifies_2d66d8bc992a85ab6eff516a91f9460
 $_MODULE['<{avisverifies}prestashop>avisverifies_a7bd33e04301af31a81e910df89fb4d8'] = 'La table n\'a pas pu être supprimée';
 $_MODULE['<{avisverifies}prestashop>avisverifies_1442970f725443a69915e732214e0dda'] = 'SQL ERROR : $sql | La table n\'a pas été créé';
 $_MODULE['<{avisverifies}prestashop>avisverifies_3f36c15b8aae9c00d847a2ec25e784a8'] = 'SQL ERROR : $sql > La table n\'existe pas.';
+$_MODULE['<{avisverifies}prestashop>avisverifiesapi_1442970f725443a69915e732214e0dda'] = 'SQL ERROR : $sql | La table n\'a pas été créé';
 $_MODULE['<{avisverifies}prestashop>product-list_d976940c094e04083bdeb5d88d1c8ea3'] = 'avis';
 $_MODULE['<{avisverifies}prestashop>product-list_f35a8740b65be2b1aa45f588f2809377'] = 'avis';
 $_MODULE['<{avisverifies}prestashop>extraright_b1901fc3f8eefda081b7db0bd452a85e'] = 'avis';

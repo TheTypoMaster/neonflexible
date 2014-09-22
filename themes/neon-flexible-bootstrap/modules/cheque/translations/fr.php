@@ -16,6 +16,8 @@ $_MODULE['<{cheque}neon-flexible-bootstrap>cheque_dd7bf230fde8d4836917806aff6a6b
 $_MODULE['<{cheque}neon-flexible-bootstrap>cheque_0fe62049ad5246bc188ec1bae347269e'] = 'Adresse à laquelle le chèque doit être envoyé.';
 $_MODULE['<{cheque}neon-flexible-bootstrap>cheque_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';
 $_MODULE['<{cheque}neon-flexible-bootstrap>validation_e2b7dec8fa4b498156dfee6e4c84b156'] = 'Ce mode de paiement n\'est pas disponible.';
+$_MODULE['<{cheque}neon-flexible-bootstrap>payment_execution_644818852b4dd8cf9da73543e30f045a'] = 'Retour au paiement';
+$_MODULE['<{cheque}neon-flexible-bootstrap>payment_execution_6ff063fbc860a79759a7369ac32cee22'] = 'Paiement';
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_execution_8520b283b0884394b13b80d5689628b3'] = 'Paiement par chèque';
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_execution_f1d3b424cd68795ecaa552883759aceb'] = 'Récapitulatif de commande';
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_execution_879f6b8877752685a966564d072f498f'] = 'Votre panier est vide.';
@@ -28,6 +30,7 @@ $_MODULE['<{cheque}neon-flexible-bootstrap>payment_execution_7b1c6e78d93817f61f2
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_execution_a7a08622ee5c8019b57354b99b7693b2'] = 'Merci de choisir parmi les suivantes :';
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_execution_f73ad0f08052884ff465749bf48b55ce'] = 'Nous acceptons la devise suivante pour votre paiement :';
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_execution_7135ff14c7931e1c8e9d33aff3dfc7f7'] = 'L\'ordre et l\'adresse du chèque seront affichés sur la page suivante.';
+$_MODULE['<{cheque}neon-flexible-bootstrap>payment_execution_52f64bc0164b0e79deaeaaaa7e93f98f'] = 'S\'il vous plaît, veuillez valider votre commande en cliquant sur \"Je confirme ma commande\".';
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_execution_46b9e3665f187c739c55983f757ccda0'] = 'Je confirme ma commande';
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_execution_569fd05bdafa1712c4f6be5b153b8418'] = 'Autres moyens de paiement';
 $_MODULE['<{cheque}neon-flexible-bootstrap>infos_14e41f4cfd99b10766cc15676d8cda66'] = 'Ce module vous permet d\'accepter des paiements par chèque';
