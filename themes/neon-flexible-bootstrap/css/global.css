@@ -187,7 +187,10 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 #order_step ul li.step_done a, #order_step ul li.step_done span {color:#cbcbcb;}
 
 
-
+/* PAGE 404 */
+#pagenotfound .pagenotfound {margin:50px}
+#pagenotfound .pagenotfound h1 {font-size:210px;font-weight:bold;font-family:Lato,Verdana,Arial,sans-serif;color:#7db232;text-align:center;}
+#pagenotfound .pagenotfound p {color:#777;font-size:40px;font-weight:bold;font-family:Lato,Verdana,Arial,sans-serif;text-align:center;}
 
 /* Couleurs */
 .couleur_metier_0:hover {
