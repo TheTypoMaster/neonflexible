@@ -43,7 +43,9 @@ form.std p.password input,
 form.std p.select input {padding:0 5px;height:22px;width:360px;border:1px solid #ccc;font-size:12px;color:#777;}
 form.std p.select select {margin-right:10px;border:1px solid #ccc;font-size:12px;color:#777;}
 form.std p.textarea textarea {height:80px;width:370px;border:1px solid #ccc;font-size:12px;color:#777;}
+form.std p.submit {margin:10px;}
 form.std div.radio {margin:22px;float:left;}
+form.std div.uploader {width:300px;float:left;}
 
 /* Tableau */
 .table-bordered {border:1px solid #ddd;background:#fff;}
