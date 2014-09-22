@@ -1,5 +1,5 @@
 ul#product_list {margin:0;padding:0;}
-ul#product_list li {position:relative;float:left;list-style-type:none;border:3px solid #fff;width:205px;height:370px;padding:10px;margin:0 10px 10px 0;}
+ul#product_list li {position:relative;float:left;list-style-type:none;border:3px solid #fff;width:206px;height:370px;padding:10px;margin:0 10px 10px 0;}
 ul#product_list li.alternate_item {margin:0 0 10px 0;}
 ul#product_list li:hover {border:3px solid #dbdbdb;}
 ul#product_list li a {}
