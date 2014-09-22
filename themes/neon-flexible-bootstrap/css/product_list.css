@@ -25,13 +25,13 @@ ul#product_list li .button-add-to-cart {width:180px;height:37px;font-size:13px;l
 ul#product_list li .button-add-to-cart span {margin:6px;}
 
 
-ul#product_list.mode-list li {height:100%;float:none;width:100%;border:1px solid #fff;border-bottom:1px solid #dbdbdb;margin:0 0 20px 0;}
+ul#product_list.mode-list li {height:220px;float:none;width:100%;border:1px solid #fff;border-bottom:1px solid #dbdbdb;margin:0 0 20px 0;}
 ul#product_list.mode-list li:hover {border:1px solid #dbdbdb;}
 ul#product_list.mode-list li .image {width:175px;height:190px;}
 ul#product_list.mode-list li .left_block {float:left;width:190px;}
 ul#product_list.mode-list li .center_block {float:left;width:380px;padding:40px 20px 0 0;}
 ul#product_list.mode-list li .right_block {float:left;width:260px;text-align:center;border-left:1px solid #dbdbdb;padding:0 0 0 20px;height:130px;margin:20px 0;}
-ul#product_list.mode-list li .product_title {height:100%}
+ul#product_list.mode-list li .product_title {height:20px;}
 ul#product_list.mode-list li .product_desc {display:block;}
 ul#product_list.mode-list li .button-add-to-cart {margin:0 0 0 30px;}
 ul#product_list.mode-list li .compare {margin:45px 0 0 30px;}
