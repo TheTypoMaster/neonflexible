@@ -36,8 +36,6 @@ $(function() {
 
 	var listType = $.totalStorage('category-mode');
 
-	console.log(listType);
-
 	if (listType == 'block') {
 		imageHover  = $('img[data-type-displayed=block]').attr('data-image-hover');
 		image       = $('img[data-type-displayed=block]').attr('src');
