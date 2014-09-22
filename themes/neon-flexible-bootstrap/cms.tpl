@@ -24,6 +24,10 @@
 				<div class="right">
 					<img src="/images/cms/{$cms->id|intval}.jpg" alt="{$cms->meta_title|escape:'htmlall':'UTF-8'}" title="{$cms->meta_title|escape:'htmlall':'UTF-8'}" id="cmsImage" />
 				</div>
+			{elseif file_exists('_PS_ROOT_DIR_'|constant|cat:'/images/cms/default.jpg')}
+				<div class="right">
+					<img src="/images/cms/default.jpg" alt="{$cms->meta_title|escape:'htmlall':'UTF-8'}" title="{$cms->meta_title|escape:'htmlall':'UTF-8'}" id="cmsImage" />
+				</div>
 			{/if}
 
 		</div>
@@ -35,9 +39,35 @@
 		</div>
 	</div>
 {elseif isset($cms_category)}
+	<div id="bandeau-cms">
+		<div class="container">
+
+			<div class="left">
+
+				<p class="titre-vert">{l s='Tutorial'}</p>
+
+				<h1>
+					{$cms_category->name|escape:'htmlall':'UTF-8'}
+				</h1>
+
+				<div class="desc"><p>{$cms_category->description|truncate:550:'...'}</p></div>
+
+			</div>
+
+			{if file_exists('_PS_ROOT_DIR_'|constant|cat:'/images/cms/category/'|cat:$cms_category->id|cat:'.jpg')}
+				<div class="right">
+					<img src="/images/cms/category/{$cms_category->id|intval}.jpg" alt="{$cms_category->name|escape:'htmlall':'UTF-8'}" title="{$cms_category->name|escape:'htmlall':'UTF-8'}" id="cmsImage" />
+				</div>
+			{elseif file_exists('_PS_ROOT_DIR_'|constant|cat:'/images/cms/category/default.jpg')}
+				<div class="right">
+					<img src="/images/cms/category/default.jpg" alt="{$cms_category->name|escape:'htmlall':'UTF-8'}" title="{$cms_category->name|escape:'htmlall':'UTF-8'}" id="cmsImage" />
+				</div>
+			{/if}
+
+		</div>
+	</div>
 	<div class="container">
 		<div class="block-cms">
-			<p class="titre-size-1">{$cms_category->name|escape:'htmlall':'UTF-8'}</p>
 			{if isset($sub_category) && !empty($sub_category)}
 				<ul class="bullet">
 					{foreach from=$sub_category item=subcategory}

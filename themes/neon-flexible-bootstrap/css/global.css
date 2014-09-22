@@ -9,6 +9,7 @@ span.clearBoth {clear:both;display:block;}
 .unvisible {display:none;}
 .left {float:left;}
 .right {float:right;}
+hr {border-top:1px solid #dedede;}
 
 /* Listes */
 ul.bullet {}
