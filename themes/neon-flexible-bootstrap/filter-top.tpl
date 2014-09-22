@@ -7,10 +7,10 @@
 		<p>{l s='Affichage :'}</p>
 		<ul>
 			<li>
-				<img src="{$img_dir}theme/mode-liste-on.png" alt="" data-type-displayed="list" class="jqDisplayed" />
+				<img src="{$img_dir}theme/mode-liste.png" alt="{l s='Mode liste de produits'}" data-type-displayed="list" data-image-hover="{$img_dir}theme/mode-liste-on.png" class="jqDisplayed" />
 			</li>
 			<li>
-				<img src="{$img_dir}theme/mode-block.png" alt="" data-type-displayed="block" class="jqDisplayed" />
+				<img src="{$img_dir}theme/mode-block.png" alt="{l s='Mode liste de produits'}" data-type-displayed="block" data-image-hover="{$img_dir}theme/mode-block-on.png" class="jqDisplayed" />
 			</li>
 		</ul>
 		<span class="clearBoth"></span>

@@ -14,6 +14,49 @@ $(function() {
 
 		$('#product_list').addClass('mode-' + $.totalStorage('category-mode'));
 
+		imageHover  = $('img[data-type-displayed=block]').attr('data-image-hover');
+		image       = $('img[data-type-displayed=block]').attr('src');
+
+		$('img[data-type-displayed=block]').attr('src', imageHover);
+		$('img[data-type-displayed=block]').attr('data-image-hover', image);
+		imageHover  = $('img[data-type-displayed=list]').attr('data-image-hover');
+		image       = $('img[data-type-displayed=list]').attr('src');
+
+		$('img[data-type-displayed=list]').attr('src', imageHover);
+		$('img[data-type-displayed=list]').attr('data-image-hover', image);
+
 		return false;
 	});
+
+	$('.jqDisplayed').hover(function(e) {
+		getImageHover($(this));
+
+		return false;
+	});
+
+	var listType = $.totalStorage('category-mode');
+
+	console.log(listType);
+
+	if (listType == 'block') {
+		imageHover  = $('img[data-type-displayed=block]').attr('data-image-hover');
+		image       = $('img[data-type-displayed=block]').attr('src');
+
+		$('img[data-type-displayed=block]').attr('src', imageHover);
+		$('img[data-type-displayed=block]').attr('data-image-hover', image);
+	} else {
+		imageHover  = $('img[data-type-displayed=list]').attr('data-image-hover');
+		image       = $('img[data-type-displayed=list]').attr('src');
+
+		$('img[data-type-displayed=list]').attr('src', imageHover);
+		$('img[data-type-displayed=list]').attr('data-image-hover', image);
+	}
 });
+
+getImageHover = function(el) {
+	imageHover  = $(el).attr('data-image-hover');
+	image       = $(el).attr('src');
+
+	$(el).attr('src', imageHover);
+	$(el).attr('data-image-hover', image);
+}
