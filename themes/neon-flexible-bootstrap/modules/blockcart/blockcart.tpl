@@ -39,7 +39,7 @@
 				</a>
 			</div>
 
-			<div class="shopping_cart">
+			<div id="shopping_cart">
 				<a href="{$link->getPageLink($order_process, true)|escape:'html':'UTF-8'}" title="{l s='View my shopping cart' mod='blockcart'}" rel="nofollow">
 					{l s='Cart' mod='blockcart'}
 					<span class="ajax_cart_quantity{if $cart_qties == 0} unvisible{/if}">{$cart_qties}</span>

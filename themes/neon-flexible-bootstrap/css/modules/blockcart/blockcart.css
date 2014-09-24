@@ -1,9 +1,9 @@
 #header .header_right {position:relative;float:right;margin:-36px 0 0 0;}
 
-#header .shopping_cart {float:left;}
-#header .shopping_cart a {color:#fff;line-height:36px;text-decoration:none;}
-#header .shopping_cart .ajax_cart_total {display:none !important;}
-#header .shopping_cart:before {content:"|";padding:0 15px;color:#6d6969;}
+#header #shopping_cart {float:left;}
+#header #shopping_cart a {color:#fff;line-height:36px;text-decoration:none;}
+#header #shopping_cart .ajax_cart_total {display:none !important;}
+#header #shopping_cart:before {content:"|";padding:0 15px;color:#6d6969;}
 
 #header .my_account {float:left;}
 #header .my_account a {color:#fff;line-height:36px;text-decoration:none;}
