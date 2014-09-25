@@ -35,7 +35,7 @@ class Dashactivity extends Module
 	{
 		$this->name = 'dashactivity';
 		$this->tab = 'dashboard';
-		$this->version = '0.4.3';
+		$this->version = '0.4.5';
 		$this->author = 'PrestaShop';
 		$this->push_filename = _PS_CACHE_DIR_.'push/activity';
 		$this->allow_push = true;
@@ -97,7 +97,7 @@ class Dashactivity extends Module
 				'dashactivity_config_form' => $this->renderConfigForm(),
 				'date_subtitle' => $this->l('(from %s to %s)'),
 				'date_format' => $this->context->language->date_format_lite,
-				'link' => $this->context->link,
+				'link' => $this->context->link
 			)
 		);
 
