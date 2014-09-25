@@ -10,7 +10,7 @@ include(_PS_MODULE_DIR_ . 'now_import_accessories/classes/Module.php');
 
 class now_import_accessories extends NowModule {
 
-	function __construct()
+	public function __construct()
 	{
 		$this->name				= 'now_import_accessories';
 		$this->tab				= 'administration';

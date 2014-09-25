@@ -1,0 +1,17 @@
+/* Bloc presentation */
+
+#presentation-company {border-top:1px solid #ccc;padding:40px 0;background:#f4f4f4 url('../img/fond-presentation.jpg') no-repeat right;width:100%;height:616px;}
+#presentation-company ul {list-style-type:none;margin:0;}
+#presentation-company ul li {padding-top: 50px;}
+#presentation-company ul li + li {margin:50px 0;border-top:1px solid #ccc;}
+#presentation-company ul li img {float:left;margin:0;}
+#presentation-company ul li.float-left img {float:left;margin-right:50px;}
+#presentation-company ul li.float-right img {float:right;margin-left:50px;}
+#presentation-company ul li p.desc {color:#777;font-weight:normal;font-size:16px;text-align:justify;font-family:Lato,Verdana,Arial,sans-serif;}
+#presentation-company ul li p.titre {color:#333;font-weight:normal;font-size:32px;font-family:Raleway,Verdana,Arial,sans-serif;}
+#presentation-company ul li.float-left p {margin-left:170px;}
+#presentation-company ul li.float-right p {margin-right:170px;}
+#presentation-company ul li.float-left p.titre {text-align:left;}
+#presentation-company ul li.float-right p.titre {text-align:right;}
+#presentation-company a.button-plus {font-family:Raleway,Verdana,Arial,sans-serif;border:2px solid #ccc;border-radius:20px;padding:10px;text-transform:uppercase;color:#569e24;font-weight:bold;text-align:center;display:block;width:280px;background:#fff;margin:40px auto;}
+#presentation-company a.button-plus:hover {text-decoration:none;}

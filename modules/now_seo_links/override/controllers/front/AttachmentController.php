@@ -8,19 +8,19 @@
 
 class AttachmentController extends AttachmentControllerCore {
 
-    /**
-     * Method postProcess() : Initialize id_attachment with attachment_file_name params
-     *
-     * @module now_seo_links
-     *
-     * @see AttachmentControllerCore::postProcess()
-     */
-    public function postProcess() {
-        if ($sFileName = Tools::getValue('attachment_file_name')) {
-            $_GET['id_attachment'] = Attachment::getIdAttachmentByFileName($sFileName);
-        }
+	/**
+	 * Method postProcess() : Initialize id_attachment with attachment_file_name params
+	 *
+	 * @module now_seo_links
+	 *
+	 * @see AttachmentControllerCore::postProcess()
+	 */
+	public function postProcess() {
+		/*if ($sFileName = Tools::getValue('attachment_file_name')) {
+			$_GET['id_attachment'] = Attachment::getIdAttachmentByFileName($sFileName);
+		}*/
 
-        parent::postProcess();
-    }
+		parent::postProcess();
+	}
 
 }

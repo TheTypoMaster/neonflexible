@@ -1,0 +1,7 @@
+#my-account {}
+#my-account h1 {color:#333;font-size:33px;font-weight:300;font-family:Raleway,Verdana,Arial,sans-serif;}
+#my-account ul.myaccount_lnk_list {margin:40px 0 0 0;}
+#my-account ul.myaccount_lnk_list li {line-height:20px;list-style-type:none;float:left;width:190px;margin:0 40px;height:230px;text-align:center;}
+#my-account ul.myaccount_lnk_list li a {line-height: 20px;text-decoration:none;color:#333;font-size:18px;font-weight:300;font-family:Raleway,Verdana,Arial,sans-serif;}
+#my-account ul.myaccount_lnk_list li a:hover {text-decoration:underline;}
+#my-account ul.myaccount_lnk_list li img {border:none;display:block;width:104px;margin:15px auto;}

@@ -7,21 +7,21 @@
  */
 
 class Attachment extends AttachmentCore {
-    public static function getIdAttachmentByFileName($sFileName)
-    {
-        return (int)Db::getInstance()->getValue('
+	public static function getIdAttachmentByFileName($sFileName)
+	{
+		return (int)Db::getInstance()->getValue('
 			SELECT `id_attachment`
 			FROM `'._DB_PREFIX_.'attachment`
 			WHERE `file_name` = "'.$sFileName.'"'
-        );
-    }
+		);
+	}
 
-    public static function getProductIdByIdAttachment($iIdAttachment)
-    {
-        return Db::getInstance()->getValue('
+	public static function getProductIdByIdAttachment($iIdAttachment)
+	{
+		return Db::getInstance()->getValue('
 			SELECT `id_product`
 			FROM `'._DB_PREFIX_.'product_attachment`
 			WHERE `id_attachment` = '.(int)$iIdAttachment
-        );
-    }
+		);
+	}
 }

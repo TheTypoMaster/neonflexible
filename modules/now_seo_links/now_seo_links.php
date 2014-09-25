@@ -7,34 +7,29 @@
  */
 
 include (_PS_MODULE_DIR_.'now_seo_links/classes/Module.php');
+require_once (_PS_MODULE_DIR_.'now_seo_links/classes/NowLanguageLink.php');
 
 class now_seo_links extends NowModule {
 
-    public static $ModuleRoutes = array(
-        'now_seo_links_display_image' => array(
-            'controller' =>  null,
-            'rule' =>        '{categories:/}/{id}-{type}/{product_name}.jpg',
-            'keywords' => array(
-                'id'            => array('regexp' => '[0-9]+', 'param' => 'id_image'),
-                'type'          => array('regexp' => '[/_a-zA-Z0-9-\pL]*', 'param' => 'image_type'),
-                'categories'    => array('regexp' => '[/_a-zA-Z0-9-\pL]*'),
-                'product_name'  => array('regexp' => '[_a-zA-Z0-9-\pL]*'),
-            ),
-            'params' => array(
-                'fc' => 'module',
-                'module' => 'now_seo_links',
-                'controller' => 'DisplayImage'
-            )
-        )
-    );
+	public static $ModuleRoutes = array(
+		'now_seo_links' => array(
+			'controller'	=>  null,
+			'rule'			=> '{categories:/}/{id}-{type}/{product_name}.jpg',
+			'keywords'		=> array(
+				'id'			=> array('regexp' => '[0-9]+', 'param' => 'id_image'),
+				'type'			=> array('regexp' => '[/_a-zA-Z0-9-\pL]*', 'param' => 'image_type'),
+				'categories'	=> array('regexp' => '[/_a-zA-Z0-9-\pL]*'),
+				'product_name'	=> array('regexp' => '[_a-zA-Z0-9-\pL]*'),
+			)
+		)
+	);
 
-	public function __construct()
-	{
-		$this->name     = 'now_seo_links';
-		$this->tab      = 'front';
-		$this->version  = 1.0;
-		$this->author   = 'NinjaOfWeb';
-		$this->need_instance = 0;
+	public function __construct() {
+		$this->name				= 'now_seo_links';
+		$this->tab				= 'administration';
+		$this->version			= 1.2;
+		$this->author			= 'NinjaOfWeb';
+		$this->need_instance	= 0;
 
 		parent::__construct();
 
@@ -46,12 +41,33 @@ class now_seo_links extends NowModule {
 		}
 	}
 
-    public function install() {
-        return parent::install() && $this->registerHook('moduleRoutes');
-    }
+	/**
+	 * Define admin controller which must be installed
+	 */
+	public function setAdminControllers() {
+		$this->aAdminControllers = array(
+			'AdminLanguageLink' => array(
+				'parent' => 'AdminParentLocalization',
+				'name' => $this->l('Languages Link')
+			)
+		);
+	}
 
-    public function hookModuleRoutes() {
-        return self::$ModuleRoutes;
-    }
+	/**
+	 * Define the list of SQL file to execute to install
+	 */
+	public function setSqlFileToInstall() {
+		$this->aSqlFileToInstall = array(
+			1.0 => 'install.sql'
+		);
+	}
+
+	public function install() {
+		return parent::install() && $this->registerHook('moduleRoutes');
+	}
+
+	public function hookModuleRoutes() {
+		return self::$ModuleRoutes;
+	}
 }
 

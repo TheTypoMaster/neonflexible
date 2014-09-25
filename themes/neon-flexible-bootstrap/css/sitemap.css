@@ -1,0 +1,8 @@
+#sitemap_content {margin-left: 20px}
+#sitemap_content .sitemap_block h3, #sitemap_content .categTree h3 {margin: 20px 0 0 0}
+#sitemap_content div.sitemap_block {float:left;min-height:120px;padding:0;width:33%}
+#sitemap_content div.sitemap_block ul {list-style-type:none}
+#sitemap_content div.sitemap_block li a {display:block;padding:2px 0 2px 10px;color:#333;}
+#listpage_content {margin:50px 0 20px 20px;}
+#listpage_content div.categTree {float:left;width:33%}
+#listpage_content div.tree_top a {font-family:Lato,Verdana,Arial,sans-serif;color:#777;font-size:14px;}

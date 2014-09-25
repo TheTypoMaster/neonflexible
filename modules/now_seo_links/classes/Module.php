@@ -11,35 +11,35 @@ if (!class_exists('NowModule'))
 	class NowModule extends Module {
 
 		/*
-		 * Path of this module
-		 */
+		  * Path of this module
+		  */
 		public $module_dir;
 
 		/*
-		 * Uri of this module
-		 */
+		  * Uri of this module
+		  */
 		public $module_uri;
 
-	    /*
-	     * Name of controllers which are used on this module
-	     */
-	    public $aAdminControllers = array();
+		/*
+		  * Name of controllers which are used on this module
+		  */
+		public $aAdminControllers = array();
 
 		/*
-		 * List of params which are added on the configuration database during the installation
-		 */
+		  * List of params which are added on the configuration database during the installation
+		  */
 		public $aConfigurationDefaultSettings = array();
 
 		/*
-		 * List of sql files for the install module
-		 * ex: array('1.5' => 'install_1.5.sql')
-		 */
+		  * List of sql files for the install module
+		  * ex: array('1.5' => 'install_1.5.sql')
+		  */
 		public $aSqlFileToInstall = array();
 
 		/*
-		 * List of sql file for the unistall module
-		 * ex: array('1.5' => 'uninstall_1.5.sql')
-		 */
+		  * List of sql file for the unistall module
+		  * ex: array('1.5' => 'uninstall_1.5.sql')
+		  */
 		public $aSqlFileToUninstall = array();
 
 		public function __construct() {
@@ -51,23 +51,24 @@ if (!class_exists('NowModule'))
 			parent::__construct();
 		}
 
-	    public function install()
-	    {
-	        $this->installSqlFiles();
-	        $this->installModuleTabs();
-	        $this->installConfigurationSettings();
-	        return parent::install();
-	    }
+		public function install()
+		{
+			$this->installSqlFiles();
+			$this->installModuleTabs();
+			$this->installConfigurationSettings();
+			return parent::install();
+		}
 
-	    public function uninstall()
-	    {
-	        $this->uninstallSqlFiles();
-	        $this->uninstallModuleTabs();
-	        return parent::uninstall();
-	    }
+		public function uninstall()
+		{
+			$this->uninstallSqlFiles();
+			$this->uninstallModuleTabs();
+			return parent::uninstall();
+		}
 
 		public function installSqlFiles() {
 			$bReturn = true;
+			$this->setSqlFileToInstall();
 			if (!empty($this->aSqlFileToInstall)) {
 				foreach ($this->aSqlFileToInstall as $sVersion => $sFileName) {
 					$bReturn &= $this->executeSqlFile($sVersion, $sFileName);
@@ -78,6 +79,7 @@ if (!class_exists('NowModule'))
 
 		public function uninstallSqlFiles() {
 			$bReturn = true;
+			$this->setSqlFileToUninstall();
 			if (!empty($this->aSqlFileToUninstall)) {
 				foreach ($this->aSqlFileToUninstall as $sVersion => $sFileName) {
 					$bReturn &= $this->executeSqlFile($sVersion, $sFileName);
@@ -112,22 +114,24 @@ if (!class_exists('NowModule'))
 			return false;
 		}
 
-	    public function installConfigurationSettings() {
-	        if (!empty($this->aConfigurationDefaultSettings)) {
-	            foreach ($this->aConfigurationDefaultSettings as $name => $value) {
-	                if (!Configuration::get($name)) {
-	                    Configuration::updateValue($name, $value);
-	                }
-	            }
-	        }
-	        return true;
-	    }
+		public function installConfigurationSettings() {
+			$this->setConfigurationSettings();
+			if (!empty($this->aConfigurationDefaultSettings)) {
+				foreach ($this->aConfigurationDefaultSettings as $name => $value) {
+					if (!Configuration::get($name)) {
+						Configuration::updateValue($name, $value);
+					}
+				}
+			}
+			return true;
+		}
 
-	    public function installModuleTabs() {
-	        if (!empty($this->aAdminControllers)) {
-	            foreach ($this->aAdminControllers as $controller_name => $params) {
+		public function installModuleTabs() {
+			$this->setAdminControllers();
+			if (!empty($this->aAdminControllers)) {
+				foreach ($this->aAdminControllers as $controller_name => $params) {
 
-		            @copy(_PS_MODULE_DIR_.$this->name.'/logo.gif', _PS_IMG_DIR_.'t/'.$controller_name.'.gif');
+					@copy(_PS_MODULE_DIR_.$this->name.'/logo.gif', _PS_IMG_DIR_.'t/'.$controller_name.'.gif');
 
 					// Check if the AdminController isset or not
 					if (!Tab::getIdFromClassName($controller_name)) {
@@ -138,57 +142,45 @@ if (!class_exists('NowModule'))
 						$tab->id_parent = (int)Tab::getIdFromClassName($params['parent']);
 						$tab->save();
 					}
-	            }
-	        }
-	        return true;
-	    }
+				}
+			}
+			return true;
+		}
 
-	    public function uninstallModuleTabs() {
-	        if (!empty($this->aAdminControllers)) {
-	            foreach ($this->aAdminControllers as $controller_name => $params) {
-	                $id_tab = Tab::getIdFromClassName($controller_name);
-	                if($id_tab != 0)
-	                {
-	                    $tab = new Tab((int)$id_tab);
-	                    $tab->delete();
-	                }
-	            }
-	        }
-	        return true;
-	    }
+		public function uninstallModuleTabs() {
+			if (!empty($this->aAdminControllers)) {
+				foreach ($this->aAdminControllers as $controller_name => $params) {
+					$id_tab = Tab::getIdFromClassName($controller_name);
+					if($id_tab != 0)
+					{
+						$tab = new Tab((int)$id_tab);
+						$tab->delete();
+					}
+				}
+			}
+			return true;
+		}
 
 
 		/**
 		 * Define the configuration of default settings
 		 */
-		public function setConfigurationSettings($aConfigurationSettings = array()) {
-            $this->aConfigurationDefaultSettings = $aConfigurationSettings;
-            return $this->aConfigurationDefaultSettings;
-        }
+		public function setConfigurationSettings() {}
 
 		/**
 		 * Define admin controller which must be installed
 		 */
-		public function setAdminControllers($aAdminControllers) {
-            $this->aAdminControllers = $aAdminControllers;
-            return $this->aAdminControllers;
-        }
+		public function setAdminControllers() {}
 
 		/**
 		 * Define the list of SQL file to execute to install
 		 */
-		public function setSqlFileToInstall($aListSqlFiles = array()) {
-            $this->aSqlFileToInstall = $aListSqlFiles;
-            return $this->aSqlFileToInstall;
-        }
+		public function setSqlFileToInstall() {}
 
 		/**
 		 * Define the list of SQL file to execute to uninstall
 		 */
-		public function setSqlFileToUninstall($aListSqlFiles = array()) {
-            $this->aSqlFileToUninstall = $aListSqlFiles;
-            return $this->aSqlFileToUninstall;
-        }
+		public function setSqlFileToUninstall() {}
 
 	}
 }

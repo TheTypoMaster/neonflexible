@@ -1,0 +1,14 @@
+.info-order {margin-bottom:20px;}
+.info-order p {padding-bottom:10px}
+.info-order p .icon {position:relative;top:2px;left:0}
+.adresses_bloc {margin-bottom:20px}
+.adresses_bloc .item {margin-right:60px}
+.detail_step_by_step {width:100%}
+.detail_step_by_step tr.last_item td {border-bottom:1px solid #999}
+#order-detail-content table {width:100%}
+#order-detail-content table .order_qte_input {display:none}
+#order-detail-content table tr.totalprice td {border-bottom:1px solid #999}
+#order-detail-content table tr:nth-child(even) {background:#f3f3f3;}
+#sendOrderMessage {margin-bottom:20px}
+#sendOrderMessage p {padding-bottom:10px}
+#returnOrderMessage .textarea textarea, #sendOrderMessage .textarea textarea {width:100%;border:1px solid #999}

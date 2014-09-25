@@ -1,0 +1,10 @@
+#addresses div.addresses {position:relative;}
+#addresses #address_delivery {margin-right:35px;}
+#addresses #address_invoice {margin-right:0}
+#addresses #delivery_address {margin-right:65px;}
+#addresses .address_add {padding:20px 0}
+#addresses .address_select {border:1px solid #ccc;width:200px;margin-left:10px;}
+#addresses label[for=id_address_delivery], #addresses label[for=id_address_invoice] {float:left;width:225px;}
+#addresses .addressesAreEquals label {margin-left:5px;}
+#addresses .addressesAreEquals input {float:left;}
+#addresses p.address_delivery, p.addressesAreEquals {padding-bottom:14px}

@@ -1,0 +1,10 @@
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,700,900,300italic);
+p {font-family:Lato,Verdana,Arial,sans-serif;font-size:24px;color:#333;}
+
+#maintenance {
+	margin:0 auto;
+	width:940px;
+	font:normal 30px Arial, Verdana, sans-serif;
+	color:#333;
+}
