@@ -42,7 +42,7 @@ class ProductComments extends Module
 	{
 		$this->name = 'productcomments';
 		$this->tab = 'front_office_features';
-		$this->version = '3.3.2';
+		$this->version = '3.3.8';
 		$this->author = 'PrestaShop';
 		$this->need_instance = 0;
 		$this->bootstrap = true;
@@ -51,14 +51,10 @@ class ProductComments extends Module
 
 		parent::__construct();
 
-		$this->ps_versions_compliancy = array(
-			'min' => '1.5.6.1',
-			'max' => _PS_VERSION_
-		);
 		$this->secure_key = Tools::encrypt($this->name);
 
 		$this->displayName = $this->l('Product Comments');
-		$this->description = $this->l('Allows users to post reviews.');
+		$this->description = $this->l('Allows users to post reviews and rate products on specific criteria.');
 	}
 
 	public function install($keep = true)
@@ -131,6 +127,11 @@ class ProductComments extends Module
 			`'._DB_PREFIX_.'product_comment_usefulness`,
 			`'._DB_PREFIX_.'product_comment_report`');
 	}
+	
+	public function getCacheId($id_product = null)
+	{
+		return parent::getCacheId().'|'.(int)$id_product;
+	}
 
 	protected function _postProcess()
 	{
@@ -141,7 +142,7 @@ class ProductComments extends Module
 			Configuration::updateValue('PRODUCT_COMMENTS_MODERATE', (int)Tools::getValue('PRODUCT_COMMENTS_MODERATE'));
 			Configuration::updateValue('PRODUCT_COMMENTS_ALLOW_GUESTS', (int)Tools::getValue('PRODUCT_COMMENTS_ALLOW_GUESTS'));
 			Configuration::updateValue('PRODUCT_COMMENTS_MINIMAL_TIME', (int)Tools::getValue('PRODUCT_COMMENTS_MINIMAL_TIME'));
-			$this->_html .= '<div class="conf confirm">'.$this->l('Settings updated').'</div>';
+			$this->_html .= '<div class="conf confirm alert alert-success">'.$this->l('Settings updated').'</div>';
 		}
 		elseif (Tools::isSubmit('productcomments'))
 		{
@@ -188,14 +189,17 @@ class ProductComments extends Module
 						foreach ($products as $product)
 							$criterion->addProduct((int)$product);
 			}
-			$criterion->save();
+			if ($criterion->save())
+				Tools::redirectAdmin(Context::getContext()->link->getAdminLink('AdminModules').'&configure='.$this->name.'&conf=4');
+			else
+				$this->_html .= '<div class="conf confirm alert alert-danger">'.$this->l('The criterion could not be saved').'</div>';
 		}
 		elseif (Tools::isSubmit('deleteproductcommentscriterion'))
 		{
 			$productCommentCriterion = new ProductCommentCriterion((int)Tools::getValue('id_product_comment_criterion'));
 			if ($productCommentCriterion->id)
 				if ($productCommentCriterion->delete())
-					$this->_html .= '<div class="conf confirm">'.$this->l('Criterion deleted').'</div>';
+					$this->_html .= '<div class="conf confirm alert alert-success">'.$this->l('Criterion deleted').'</div>';
 		}
 		elseif (Tools::isSubmit('statusproductcommentscriterion'))
 		{
@@ -224,7 +228,7 @@ class ProductComments extends Module
 	{
 		include_once(dirname(__FILE__).'/ProductComment.php');
 		include_once(dirname(__FILE__).'/ProductCommentCriterion.php');
-		
+
 		$this->_html  = '';
 		if (Tools::isSubmit('updateproductcommentscriterion'))
 			$this->_html .= $this->renderCriterionForm((int)Tools::getValue('id_product_comment_criterion'));
@@ -239,11 +243,6 @@ class ProductComments extends Module
 
 		$this->_setBaseUrl();
 		$this->_productCommentsCriterionTypes = ProductCommentCriterion::getTypes();
-		//$this->_checkModerateComment();
-		//$this->_checkReportedComment();
-		//$this->_checkCriterion();
-		//$this->_updateApplicationCriterion();
-		//$this->_checkDeleteComment();
 
 		$this->context->controller->addJs($this->_path.'js/moderate.js');
 
@@ -271,7 +270,7 @@ class ProductComments extends Module
 					array(
 						'type' => 'switch',
 						'is_bool' => true, //retro compat 1.5
-						'label' => $this->l('All comments must be validated by an employee'),
+						'label' => $this->l('All reviews must be validated by an employee'),
 						'name' => 'PRODUCT_COMMENTS_MODERATE',
 						'values' => array(
 										array(
@@ -289,7 +288,7 @@ class ProductComments extends Module
 					array(
 						'type' => 'switch',
 						'is_bool' => true, //retro compat 1.5
-						'label' => $this->l('Allow guest comments'),
+						'label' => $this->l('Allow guest reviews'),
 						'name' => 'PRODUCT_COMMENTS_ALLOW_GUESTS',
 						'values' => array(
 										array(
@@ -306,10 +305,10 @@ class ProductComments extends Module
 					),
 					array(
 						'type' => 'text',
-						'label' => $this->l('Minimum time between 2 comments from the same user'),
+						'label' => $this->l('Minimum time between 2 reviews from the same user'),
 						'name' => 'PRODUCT_COMMENTS_MINIMAL_TIME',
 						'class' => 'fixed-width-xs',
-						'desc' => $this->l('In seconds'),
+						'suffix' => 'seconds',
 					),
 				),
 			'submit' => array(
@@ -353,12 +352,12 @@ class ProductComments extends Module
 
 			if (version_compare(_PS_VERSION_, '1.6', '<'))
 			{
-				$return .= "<h1>".$this->l('Moderate Comments')."</h1>";
+				$return .= "<h1>".$this->l('Reviews waiting for approval')."</h1>";
 				$actions = array('enable', 'delete');
 			}
 			else
 				$actions = array('approve', 'delete');
-			
+
 			$helper = new HelperList();
 			$helper->shopLinkType = '';
 			$helper->simple_header = true;
@@ -367,7 +366,7 @@ class ProductComments extends Module
 			$helper->module = $this;
 			$helper->listTotal = count($comments);
 			$helper->identifier = 'id_product_comment';
-			$helper->title = $this->l('Moderate Comments');
+			$helper->title = $this->l('Reviews waiting for approval');
 			$helper->table = $this->name;
 			$helper->token = Tools::getAdminTokenLite('AdminModules');
 			$helper->currentIndex = AdminController::$currentIndex.'&configure='.$this->name;
@@ -379,10 +378,10 @@ class ProductComments extends Module
 		$comments = ProductComment::getReportedComments();
 
 		$fields_list = $this->getStandardFieldList();
-		
+
 		if (version_compare(_PS_VERSION_, '1.6', '<'))
 		{
-			$return .= "<h1>".$this->l('Reported Comments')."</h1>";
+			$return .= "<h1>".$this->l('Reported Reviews')."</h1>";
 			$actions = array('enable', 'delete');
 		}
 		else
@@ -396,7 +395,7 @@ class ProductComments extends Module
 		$helper->module = $this;
 		$helper->listTotal = count($comments);
 		$helper->identifier = 'id_product_comment';
-		$helper->title = $this->l('Reported Comments');
+		$helper->title = $this->l('Reported Reviews');
 		$helper->table = $this->name;
 		$helper->token = Tools::getAdminTokenLite('AdminModules');
 		$helper->currentIndex = AdminController::$currentIndex.'&configure='.$this->name;
@@ -410,7 +409,7 @@ class ProductComments extends Module
 
 	public function renderCriterionList()
 	{
-		
+
 		include_once(dirname(__FILE__).'/ProductCommentCriterion.php');
 
 		$criterions = ProductCommentCriterion::getCriterions($this->context->language->id, false, false);
@@ -446,7 +445,7 @@ class ProductComments extends Module
 		);
 		$helper->module = $this;
 		$helper->identifier = 'id_product_comment_criterion';
-		$helper->title = $this->l('Comment Criterions');
+		$helper->title = $this->l('Review Criterions');
 		$helper->table = $this->name.'criterion';
 		$helper->token = Tools::getAdminTokenLite('AdminModules');
 		$helper->currentIndex = AdminController::$currentIndex.'&configure='.$this->name;
@@ -471,7 +470,7 @@ class ProductComments extends Module
 		$helper->module = $this;
 		$helper->listTotal = count($comments);
 		$helper->identifier = 'id_product_comment';
-		$helper->title = $this->l('Moderate Comments');
+		$helper->title = $this->l('Approved Reviews');
 		$helper->table = $this->name;
 		$helper->token = Tools::getAdminTokenLite('AdminModules');
 		$helper->currentIndex = AdminController::$currentIndex.'&configure='.$this->name;
@@ -501,7 +500,7 @@ class ProductComments extends Module
 					'id_product_comment_criterion' => $criterion->id,
 				);
 	}
-	
+
 	public function getStandardFieldList()
 	{
 		return array(
@@ -509,13 +508,18 @@ class ProductComments extends Module
 				'title' => $this->l('ID'),
 				'type' => 'text',
 			),
+			'title' => array(
+				'title' => $this->l('Review title'),
+				'type' => 'text',
+			),
 			'content' => array(
-				'title' => $this->l('Comment'),
+				'title' => $this->l('Review'),
 				'type' => 'text',
 			),
 			'grade' => array(
-				'title' => $this->l('Rate'),
+				'title' => $this->l('Rating'),
 				'type' => 'text',
+				'suffix' => '/5',
 			),
 			'customer_name' => array(
 				'title' => $this->l('Author'),
@@ -526,8 +530,8 @@ class ProductComments extends Module
 				'type' => 'text',
 			),
 			'date_add' => array(
-				'title' => $this->l('Posted on'),
-				'type' => 'text',
+				'title' => $this->l('Time of publication'),
+				'type' => 'date',
 			),
 		);
 	}
@@ -558,15 +562,15 @@ class ProductComments extends Module
 			$field_category_tree = array(
 									'type' => 'categories_select',
 									'name' => 'categoryBox',
-									'label' => $this->l('Criterion will be restricted to the following categories:'),
+									'label' => $this->l('Criterion will be restricted to the following categories'),
 									'category_tree' => $this->initCategoriesAssociation(null, $id_criterion),
 								);
 		else
 			$field_category_tree = array(
 							'type' => 'categories',
-							'label' => $this->l('Criterion will be restricted to the following categories:'),
+							'label' => $this->l('Criterion will be restricted to the following categories'),
 							'name' => 'categoryBox',
-							'desc' => $this->l('Mark the box(es) of categories to which this criterion applies.'),
+							'desc' => $this->l('Mark the boxes of categories to which this criterion applies.'),
 							'tree' => array(
 								'use_search' => false,
 								'id' => 'categoryBox',
@@ -607,13 +611,13 @@ class ProductComments extends Module
 					array(
 						'type' => 'text',
 						'lang' => true,
-						'label' => $this->l('Name'),
+						'label' => $this->l('Criterion name'),
 						'name' => 'name',
 					),
 					array(
 						'type' => 'select',
 						'name' => 'id_product_comment_criterion_type',
-						'label' => $this->l('Apply to'),
+						'label' => $this->l('Application scope of the criterion'),
 						'options' => array(
 										'query' => $query,
 										'id' => 'id',
@@ -623,7 +627,7 @@ class ProductComments extends Module
 					$field_category_tree,
 					array(
 						'type' => 'products',
-						'label' => $this->l('Criterion will be restricted to the following products:'),
+						'label' => $this->l('The criterion will be restricted to the following products'),
 						'name' => 'ids_product',
 						'values' => $product_table_values,
 					),
@@ -753,15 +757,19 @@ class ProductComments extends Module
 
 	public function hookDisplayProductListReviews($params)
 	{
-		require_once(dirname(__FILE__).'/ProductComment.php');
-
-		$average = ProductComment::getAverageGrade((int)$params['product']['id_product']);
-		$this->smarty->assign(array(
-								   'product' => $params['product'],
-								   'averageTotal' => round($average['grade']),
-								   'nbComments' => (int)(ProductComment::getCommentNumber((int)$params['product']['id_product']))
-							  ));
-		return $this->display(__FILE__, 'productcomments_reviews.tpl', $this->getCacheId((int)$params['product']['id_product']));
+		$id_product = (int)$params['product']['id_product'];
+		if (!$this->isCached('productcomments_reviews.tpl', $this->getCacheId($id_product)))
+		{
+			require_once(dirname(__FILE__).'/ProductComment.php');
+			$average = ProductComment::getAverageGrade($id_product);
+			$this->smarty->assign(array(
+				'product' => $params['product'],
+				'averageTotal' => round($average['grade']),
+				'ratings' => ProductComment::getRatings($id_product),
+				'nbComments' => (int)ProductComment::getCommentNumber($id_product)
+			));
+		}
+		return $this->display(__FILE__, 'productcomments_reviews.tpl', $this->getCacheId($id_product));
 	}
 
 	public function hookDisplayRightColumnProduct($params)
@@ -789,11 +797,17 @@ class ProductComments extends Module
 			'criterions' => ProductCommentCriterion::getByProduct((int)Tools::getValue('id_product'), $this->context->language->id),
 			'action_url' => '',
 			'averageTotal' => round($average['grade']),
+			'ratings' => ProductComment::getRatings((int)Tools::getValue('id_product')),
 			'too_early' => ($customerComment && (strtotime($customerComment['date_add']) + Configuration::get('PRODUCT_COMMENTS_MINIMAL_TIME')) > time()),
 			'nbComments' => (int)(ProductComment::getCommentNumber((int)Tools::getValue('id_product')))
 	   ));
 
 		return ($this->display(__FILE__, '/productcomments-extra.tpl'));
+	}
+
+	public function hookDisplayLeftColumnProduct($params)
+	{
+		return $this->hookDisplayRightColumnProduct($params);
 	}
 
 	public function hookProductTabContent($params)
@@ -898,8 +912,13 @@ class ProductComments extends Module
 		if (count($list_grades) < 1)
 			return false;
 
-		$this->context->smarty->assign(array('grades' => $list_grades,	'product_grades' => $list_product_grades, 'list_ids_product' => $params['list_ids_product'],
-											'list_product_average' => $list_product_average, 'product_comments' => $list_product_comment));
+		$this->context->smarty->assign(array(
+			'grades' => $list_grades,
+			'product_grades' => $list_product_grades,
+			'list_ids_product' => $params['list_ids_product'],
+			'list_product_average' => $list_product_average,
+			'product_comments' => $list_product_comment
+		));
 
 		return $this->display(__FILE__, '/products-comparison.tpl');
 	}
