@@ -24,11 +24,11 @@
 *}
 <script type="text/javascript">
 var productcomments_controller_url = '{$productcomments_controller_url}';
-var confirm_report_message = '{l s='Are you sure you want report this comment?' mod='productcomments' js=1}';
+var confirm_report_message = '{l s='Are you sure that you want to report this comment?' mod='productcomments' js=1}';
 var secure_key = '{$secure_key}';
 var productcomments_url_rewrite = '{$productcomments_url_rewriting_activated}';
 var productcomment_added = '{l s='Your comment has been added!' mod='productcomments' js=1}';
-var productcomment_added_moderation = '{l s='Your comment has been added and will be available once approved by a moderator' mod='productcomments' js=1}';
+var productcomment_added_moderation = '{l s='Your comment has been submitted and will be available once approved by a moderator.' mod='productcomments' js=1}';
 var productcomment_title = '{l s='New comment' mod='productcomments' js=1}';
 var productcomment_ok = '{l s='OK' mod='productcomments' js=1}';
 var moderation_active = {$moderation_active};
@@ -87,7 +87,7 @@ var moderation_active = {$moderation_active};
 			<a id="new_comment_tab_btn" class="open-comment-form" href="#new_comment_form">{l s='Be the first to write your review' mod='productcomments'} !</a>
 		</p>
 		{else}
-		<p class="align_center">{l s='No customer comments for the moment.' mod='productcomments'}</p>
+		<p class="align_center">{l s='No customer reviews for the moment.' mod='productcomments'}</p>
 		{/if}
 	{/if}	
 	</div>
@@ -95,7 +95,7 @@ var moderation_active = {$moderation_active};
 
 {if isset($product) && $product}
 <!-- Fancybox -->
-<div style="display: none;">
+<div style="display:none">
 	<div id="new_comment_form">
 		<form id="id_new_comment_form" action="#">
 			<h2 class="title">{l s='Write your review' mod='productcomments'}</h2>
@@ -110,37 +110,34 @@ var moderation_active = {$moderation_active};
 			{/if}
 			<div class="new_comment_form_content">
 				<h2>{l s='Write your review' mod='productcomments'}</h2>
-
-				<div id="new_comment_form_error" class="error" style="display: none; padding: 15px 25px">
+				<div id="new_comment_form_error" class="error" style="display:none;padding:15px 25px">
 					<ul></ul>
 				</div>
-
 				{if $criterions|@count > 0}
 					<ul id="criterions_list">
 					{foreach from=$criterions item='criterion'}
 						<li>
-							<label>{$criterion.name|escape:'html':'UTF-8'}:</label>
+							<label>{$criterion.name|escape:'html':'UTF-8'}</label>
 							<div class="star_content">
 								<input class="star" type="radio" name="criterion[{$criterion.id_product_comment_criterion|round}]" value="1" />
 								<input class="star" type="radio" name="criterion[{$criterion.id_product_comment_criterion|round}]" value="2" />
-								<input class="star" type="radio" name="criterion[{$criterion.id_product_comment_criterion|round}]" value="3" checked="checked" />
+								<input class="star" type="radio" name="criterion[{$criterion.id_product_comment_criterion|round}]" value="3" />
 								<input class="star" type="radio" name="criterion[{$criterion.id_product_comment_criterion|round}]" value="4" />
-								<input class="star" type="radio" name="criterion[{$criterion.id_product_comment_criterion|round}]" value="5" />
+								<input class="star" type="radio" name="criterion[{$criterion.id_product_comment_criterion|round}]" value="5" checked="checked" />
 							</div>
 							<div class="clearfix"></div>
 						</li>
 					{/foreach}
 					</ul>
 				{/if}
-
-				<label for="comment_title">{l s='Title' mod='productcomments'}: <sup class="required">*</sup></label>
+				<label for="comment_title">{l s='Title for your review' mod='productcomments'}<sup class="required">*</sup></label>
 				<input id="comment_title" name="title" type="text" value=""/>
 
-				<label for="content">{l s='Comment' mod='productcomments'}: <sup class="required">*</sup></label>
+				<label for="content">{l s='Your review' mod='productcomments'}<sup class="required">*</sup></label>
 				<textarea id="content" name="content"></textarea>
 
 				{if $allow_guests == true && !$logged}
-				<label>{l s='Your name' mod='productcomments'}: <sup class="required">*</sup></label>
+				<label>{l s='Your name' mod='productcomments'}<sup class="required">*</sup></label>
 				<input id="commentCustomerName" name="customer_name" type="text" value=""/>
 				{/if}
 
