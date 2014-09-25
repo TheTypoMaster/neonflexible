@@ -1,5 +1,15 @@
 
 $(function() {
+
+	// ------------ Fiche Produit tabs
+	$('ul#more_info_tabs li a').on('click', function() {
+		$('ul#more_info_tabs li').removeClass('active');
+		$(this).parents('li').addClass('active');
+	});
+
+
+	// ------------ Mode d'affichage des catégories :
+
 	if ($.totalStorage('category-mode')) {
 		$('#product_list').addClass('mode-' + $.totalStorage('category-mode'));
 	}
