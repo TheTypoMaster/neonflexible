@@ -39,3 +39,4 @@
 #header #adtm_menu #adtm_menu_inner .li-niveau1 a:hover .advtm_menu_span,
 #header #adtm_menu #adtm_menu_inner .li-niveau1 a.advtm_menu_actif .advtm_menu_span,
 #header #adtm_menu #adtm_menu_inner .li-niveau1:hover > a.a-niveau1 .advtm_menu_span {color:#348ecd;}
+#header #adtm_menu #adtm_menu_inner .li-niveau1 table.columnWrapTable  td {padding:0;}
