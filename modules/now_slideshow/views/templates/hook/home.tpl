@@ -21,7 +21,7 @@
 
 					{if file_exists('_PS_ROOT_DIR_'|constant|cat:'/images/slides/'|cat:$aSlide['id_now_slideshow']|cat:'.jpg')}
 						<div class="right">
-							<img src="/images/slides/{$aSlide['id_now_slideshow']|intval}.jpg" alt="{$aSlide['name']|escape:'htmlall':'UTF-8'}" title="{$cms->meta_title|escape:'htmlall':'UTF-8'}" />
+							<img src="/images/slides/{$aSlide['id_now_slideshow']|intval}.jpg" alt="{$aSlide['name']|escape:'htmlall':'UTF-8'}" title="{$aSlide['name']|escape:'htmlall':'UTF-8'}" />
 						</div>
 					{elseif file_exists('_PS_ROOT_DIR_'|constant|cat:'/images/slides/default.jpg')}
 						<div class="right">
