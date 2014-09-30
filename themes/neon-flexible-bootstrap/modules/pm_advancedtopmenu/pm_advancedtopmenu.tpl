@@ -43,7 +43,7 @@
 																		<ul class="adtm_elements adtm_elements_{$column.id_column|intval}">
 																			{foreach from=$advtm_elements[$column.id_column] item=element name=loop3}
 																				{if ($element.privacy eq 2 && $isLogged) || ($element.privacy eq 1 && !$isLogged) || (!$element.privacy)}
-																					<li class="couleur_metier_{$element.position|intval}">{$advtm_obj->getLinkOutputValue($element,'element',true)}</li>
+																					<li class="couleur_metier_{$element.position|intval}_on">{$advtm_obj->getLinkOutputValue($element,'element',true)}</li>
 																				{/if}
 																			{/foreach}
 																		</ul>
