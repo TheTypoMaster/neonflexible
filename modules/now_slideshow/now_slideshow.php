@@ -15,7 +15,7 @@ class now_slideshow extends NowModule {
 	{
 		$this->name				= 'now_slideshow';
 		$this->tab				= 'front_office_features';
-		$this->version			= 1.0;
+		$this->version			= 1.1;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
@@ -89,7 +89,10 @@ class now_slideshow extends NowModule {
 	 */
 	public function hookHeader($params) {
 		if (Configuration::get('NOW_SLIDESHOW_ENABLE')) {
-			$this->context->controller->addCSS(($this->_path).'css/now_slideshow.css', 'all');
+			$this->context->controller->addCSS($this->_path . 'css/now_slideshow.css', 'all');
+			$this->context->controller->addCSS($this->_path . 'css/slick.css', 'all');
+			$this->context->controller->addJS($this->_path . 'js/slick.min.js');
+			$this->context->controller->addJS($this->_path . 'js/now_slideshow.js');
 		}
 	}
 }
