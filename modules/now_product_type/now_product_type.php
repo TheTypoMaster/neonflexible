@@ -61,8 +61,87 @@ class now_product_type extends NowModule {
 
 		);
 
-		return parent::install();
+		return parent::install() && $this->registerHook('actionProductUpdate') && $this->registerHook('actionProductAdd') && $this->registerHook('actionProductDelete') && $this->registerHook('displayBackOfficeHeader');
 	}
 
-}
+	/**
+	 * Hook actionProductUpdate
+	 * @param $aParams
+	 */
+	public function hookActionProductUpdate($aParams) {
 
+		if (isset($_POST['type_product']) && preg_match('#id_now_product_type_([0-9]*)#', $_POST['type_product'], $matches)) {
+
+			$iIdNowProductType	= (int)$matches[1];
+			$oProduct			= $aParams['product'];
+
+			if (Validate::isLoadedObject($oProduct)) {
+				$oProductTypeProduct = NowProductTypeProduct::getObjectByProductId($oProduct->id);
+				if (Validate::isLoadedObject($oProductTypeProduct)) {
+					$oProductTypeProduct->id_now_product_type = $iIdNowProductType;
+					$oProductTypeProduct->update();
+				} else {
+					return $this->hookActionProductAdd($aParams);
+				}
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * Hook actionProductAdd
+	 * @param $aParams
+	 */
+	public function hookActionProductAdd($aParams) {
+
+		if (isset($_POST['type_product']) && preg_match('#id_now_product_type_([0-9]*)#', $_POST['type_product'], $matches)) {
+
+			$iIdNowProductType	= (int)$matches[1];
+			$oProduct			= $aParams['product'];
+
+			if (Validate::isLoadedObject($oProduct)) {
+				$oProductTypeProduct = new NowProductTypeProduct();
+				$oProductTypeProduct->id_now_product_type	= $iIdNowProductType;
+				$oProductTypeProduct->id_product			= $oProduct->id;
+				return $oProductTypeProduct->add();
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * Hook actionProductDelete
+	 * @param $aParams
+	 * @return bool
+	 */
+	public function hookActionProductDelete($aParams) {
+
+		$oProduct = $aParams['product'];
+		if (Validate::isLoadedObject($oProduct)) {
+			$oProductTypeProduct = NowProductTypeProduct::getObjectByProductId($oProduct->id);
+			if (Validate::isLoadedObject($oProductTypeProduct)) {
+				return $oProductTypeProduct->delete();
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * Hook displayBackOfficeHeader
+	 * @param $aParams
+	 * @return bool
+	 */
+	public function hookDisplayBackOfficeHeader($aParams) {
+		if (in_array(get_class($this->context->controller), array('AdminProductsController', 'AdminProductsControllerCore')) && isset($_GET['id_product'])) {
+			$this->context->smarty->assign(array(
+				'aNowProductTypes'			=> NowProductType::getItems(),
+				'oNowProductTypeProduct'	=> NowProductTypeProduct::getObjectByProductId($_GET['id_product']),
+			));
+		}
+	}
+
+
+}

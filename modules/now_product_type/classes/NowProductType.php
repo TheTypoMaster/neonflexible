@@ -7,9 +7,6 @@ class NowProductType extends ObjectModel {
 	/** @var integer ID */
 	public $id_now_product_type;
 
-	/** @var integer id shop */
-	public $id_shop;
-
 	/** @var boolean Status for display */
 	public $active = 1;
 
@@ -32,9 +29,7 @@ class NowProductType extends ObjectModel {
 		'table' => 'now_product_type',
 		'primary' => 'id_now_product_type',
 		'multilang' => true,
-		'multilang_shop' => true,
 		'fields' => array(
-			'id_shop'							=> array('type' => self::TYPE_INT, 'validate' => 'isUnsignedInt', 'required' => true),
 			'active' 							=> array('type' => self::TYPE_BOOL, 'validate' => 'isBool', 'required' => true),
 			'date_add' 							=> array('type' => self::TYPE_DATE, 'validate' => 'isDate'),
 			'date_upd' 							=> array('type' => self::TYPE_DATE, 'validate' => 'isDate'),
@@ -44,4 +39,25 @@ class NowProductType extends ObjectModel {
 			'button_name' 						=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCatalogName', 'required' => true, 'size' => 255),
 		),
 	);
+
+	public static function getItems($iIdLang = null, $bActive = true) {
+
+		if (!Validate::isBool($bActive)) {
+			die(Tools::displayError());
+		}
+
+		if (is_null($iIdLang)) {
+			$iIdLang = (int)Context::getContext()->language->id;
+		}
+
+		$sSQL = '
+			SELECT *
+			FROM `'._DB_PREFIX_.'now_product_type` pt
+			INNER JOIN `'._DB_PREFIX_.'now_product_type_lang` ptl ON (pt.`id_now_product_type` = ptl.`id_now_product_type` AND ptl.`id_lang` = ' . (int)$iIdLang .')
+			WHERE 1  '.($bActive ? 'AND pt.`active` = 1' : '');
+
+		$result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sSQL);
+
+		return $result;
+	}
 }
