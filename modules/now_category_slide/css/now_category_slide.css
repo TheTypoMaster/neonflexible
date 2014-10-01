@@ -1,0 +1,23 @@
+#now_category_slide {width:100%;}
+#now_category_slide .slick-slide {height:110px;position:relative;}
+#now_category_slide .slick-slide a {text-align:center;display:block;padding:40px 0 0 0;width:100%;height:100%;color:#fff;font-size:18px;font-weight:normal;text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}
+#now_category_slide .slick-slide a:hover {text-decoration:none;}
+
+#now_category_slide .slick-prev, #now_category_slide .slick-next {
+	background:#a22c5a; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2EyMmM1YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4NzE3M2QiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background:-moz-linear-gradient(top,  #a22c5a 0%, #87173d 100%); /* FF3.6+ */
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#a22c5a), color-stop(100%,#87173d)); /* Chrome,Safari4+ */
+	background:-webkit-linear-gradient(top,  #a22c5a 0%,#87173d 100%); /* Chrome10+,Safari5.1+ */
+	background:-o-linear-gradient(top,  #a22c5a 0%,#87173d 100%); /* Opera 11.10+ */
+	background:-ms-linear-gradient(top,  #a22c5a 0%,#87173d 100%); /* IE10+ */
+	background:linear-gradient(to bottom,  #a22c5a 0%,#87173d 100%); /* W3C */
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#a22c5a', endColorstr='#87173d',GradientType=0 ); /* IE6-8 */
+	top:10px;
+	height:100%;
+}
+
+#now_category_slide .slick-prev:before, #now_category_slide .slick-next:before {content:" ";position:absolute;width:74px;height:75px;display:block;top:20px;background:url("../../now_slideshow/img/button-slider.png");}
+#now_category_slide .slick-prev {left:0;}
+#now_category_slide .slick-next {right:0;}

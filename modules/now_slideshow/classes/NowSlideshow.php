@@ -49,6 +49,7 @@ class NowSlideshow extends ObjectModel {
 		'table' => 'now_slideshow',
 		'primary' => 'id_now_slideshow',
 		'multilang' => true,
+		'multilang_shop' => true,
 		'fields' => array(
 			'id_shop'			=> array('type' => self::TYPE_INT, 'validate' => 'isUnsignedInt', 'required' => true),
 			'type'				=> array('type' => self::TYPE_INT, 'validate' => 'isUnsignedInt', 'required' => true),

@@ -23,13 +23,12 @@
 
 /* Arrows */
 .slick-prev, .slick-next {position:absolute;display:block;height:75px;width:74px;cursor:pointer;top:50%;margin-top:-10px;padding:0;border:none;outline:none;text-indent:999999px;background:url("../img/button-slider.png") no-repeat;}
-.slick-prev:hover, .slick-next:hover {outline:none;background:url("../img/button-slider-on.png") no-repeat;;}
+.slick-prev:hover, .slick-next:hover {outline:none;background:url("../img/button-slider-on.png") no-repeat;}
 .slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {opacity:0.99;}
 .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {opacity:0.25;}
 
 
 .slick-prev {left:-100px;}
-.slick-prev {background-position:0;}
 
 .slick-next {right:560px;}
 .slick-next {-webkit-transform:rotate(179deg);-moz-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg);writing-mode:lr-tb;}
