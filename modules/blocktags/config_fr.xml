@@ -2,7 +2,7 @@
 <module>
 	<name>blocktags</name>
 	<displayName><![CDATA[Bloc mots-cl&eacute;s]]></displayName>
-	<version><![CDATA[1.2]]></version>
+	<version><![CDATA[1.2.1]]></version>
 	<description><![CDATA[Ajoute un bloc contenant vos mots-cl&eacute;s de produit.]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
