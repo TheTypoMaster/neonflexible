@@ -84,6 +84,8 @@ class now_product_type extends NowModule {
 					return $this->hookActionProductAdd($aParams);
 				}
 			}
+		} else {
+			return $this->hookActionProductDelete($aParams);
 		}
 
 		return false;
@@ -106,6 +108,8 @@ class now_product_type extends NowModule {
 				$oProductTypeProduct->id_product			= $oProduct->id;
 				return $oProductTypeProduct->add();
 			}
+		} else {
+			return $this->hookActionProductDelete($aParams);
 		}
 
 		return false;
