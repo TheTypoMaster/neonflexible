@@ -1,31 +1,8 @@
-/*
-* 2007-2014 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Academic Free License (AFL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/afl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2014 PrestaShop SA
-*  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
+
 //global variables
 var responsiveflag = false;
 
-$(document).ready(function(){
+$(document).ready(function() {
 	highdpiInit();
 	responsiveResize();
 	$(window).resize(responsiveResize);
@@ -42,7 +19,7 @@ $(document).ready(function(){
 
 	if (typeof page_name != 'undefined' && !in_array(page_name, ['index', 'product']))
 	{
-		bindGrid();
+		bindBlock();
 
  		$(document).on('change', '.selectProductSort', function(e){
 			if (typeof request != 'undefined' && request)
@@ -132,7 +109,7 @@ function responsiveResize()
 
 function blockHover(status)
 {
-	$(document).off('mouseenter').on('mouseenter', '.product_list.grid li.ajax_block_product .product-container', function(e){
+	$(document).off('mouseenter').on('mouseenter', '#product_list.mode-block li.ajax_block_product .product-container', function(e){
 
 		if ('ontouchstart' in document.documentElement)
 			return;
@@ -145,7 +122,7 @@ function blockHover(status)
 		}
 	});
 
-	$(document).off('mouseleave').on('mouseleave', '.product_list.grid li.ajax_block_product .product-container', function(e){
+	$(document).off('mouseleave').on('mouseleave', '#product_list.mode-block li.ajax_block_product .product-container', function(e){
 		if ($('body').find('.container').width() == 1170)
 			$(this).parent().removeClass('hovered').removeAttr('style');
 	});
@@ -173,33 +150,39 @@ function quick_view()
 	});
 }
 
-function bindGrid()
+function bindBlock()
 {
 	var view = $.totalStorage('display');
 
-	if (view && view != 'grid')
+	console.log('view', view);
+
+	if (view && view != 'mode-block')
 		display(view);
 	else
-		$('.display').find('li#grid').addClass('selected');
+		$('.display').find('li.mode-block').addClass('selected');
 	
-	$(document).on('click', '#grid', function(e){
+	$(document).on('click', '.mode-block', function(e){
 		e.preventDefault();
-		display('grid');
+		display('mode-block');
 	});
 
-	$(document).on('click', '#list', function(e){
+	$(document).on('click', '.mode-list', function(e){
 		e.preventDefault();
-		display('list');
+		display('mode-list');
 	});
 }
 
 function display(view)
 {
-	if (view == 'list')
+	console.log('category-mode', $.totalStorage('category-mode'));
+	console.log('view', view);
+
+	if (view == 'mode-list')
 	{
-		$('ul.product_list').removeClass('grid').addClass('list row');
-		$('.product_list > li').removeClass('col-xs-12 col-sm-6 col-md-4').addClass('col-xs-12');
-		$('.product_list > li').each(function(index, element) {
+		$('ul#product_list').removeClass('mode-block').addClass('mode-list row');
+		$('#product_list > li').removeClass('col-xs-12 col-sm-6 col-md-4').addClass('col-xs-12');
+		$('#product_list').addClass('mode-' + $.totalStorage('category-mode'));
+		/*$('#product_list > li').each(function(index, element) {
 			html = '';
 			html = '<div class="product-container"><div class="row">';
 				html += '<div class="left-block col-xs-4 col-xs-5 col-md-4">' + $(element).find('.left-block').html() + '</div>';
@@ -230,16 +213,17 @@ function display(view)
 				html += '</div>';
 			html += '</div></div>';
 		$(element).html(html);
-		});		
-		$('.display').find('li#list').addClass('selected');
-		$('.display').find('li#grid').removeAttr('class');
-		$.totalStorage('display', 'list');
+		});		*/
+		$('.display').find('li.mode-list').addClass('selected');
+		$('.display').find('li.mode-block').removeAttr('class');
+		$.totalStorage('display', 'mode-list');
 	}
 	else 
 	{
-		$('ul.product_list').removeClass('list').addClass('grid row');
-		$('.product_list > li').removeClass('col-xs-12').addClass('col-xs-12 col-sm-6 col-md-4');
-		$('.product_list > li').each(function(index, element) {
+		$('ul#product_list').removeClass('mode-list').addClass('mode-block row');
+		$('#product_list > li').removeClass('col-xs-12').addClass('col-xs-12 col-sm-6 col-md-4');
+		$('#product_list').addClass('mode-' + $.totalStorage('category-mode'));
+		/*$('#product_list > li').each(function(index, element) {
 		html = '';
 		html += '<div class="product-container">';
 			html += '<div class="left-block">' + $(element).find('.left-block').html() + '</div>';
@@ -268,10 +252,10 @@ function display(view)
 			html += '<div class="functional-buttons clearfix">' + $(element).find('.functional-buttons').html() + '</div>';
 		html += '</div>';		
 		$(element).html(html);
-		});
-		$('.display').find('li#grid').addClass('selected');
-		$('.display').find('li#list').removeAttr('class');
-		$.totalStorage('display', 'grid');
+		});*/
+		$('.display').find('li.mode-block').addClass('selected');
+		$('.display').find('li.mode-list').removeAttr('class');
+		$.totalStorage('display', 'mode-block');
 	}	
 }
 

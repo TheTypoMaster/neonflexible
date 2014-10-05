@@ -18,6 +18,7 @@ $(function() {
 		mode = $(this).attr('data-type-displayed');
 
 		$.totalStorage('category-mode', mode);
+		$.totalStorage('display',       mode);
 
 		$('#product_list').removeClass('mode-block');
 		$('#product_list').removeClass('mode-list');
