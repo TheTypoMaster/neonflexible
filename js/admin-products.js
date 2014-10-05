@@ -1027,7 +1027,7 @@ product_tabs['Informations'] = new function(){
 		}
 		else
 		{
-			$('#simple_product').attr('checked', true);
+			//$('#simple_product').attr('checked', true);
 		}
 
 		$('input[name="type_product"]').on('click', function(e)

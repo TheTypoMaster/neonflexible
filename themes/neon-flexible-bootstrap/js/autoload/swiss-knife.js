@@ -1,6 +1,12 @@
 
 $(function() {
 
+	// ------------ Afficher tout les produits
+	$('.jqDisplayedAllProductsButton').on('click', function() {
+		$('#nb_item option.jqDisplayedAllProducts').attr('selected', true);
+		$('#nb_item option.jqDisplayedAllProducts').change();
+	});
+
 	// ------------ Fiche Produit tabs
 	$('ul#more_info_tabs li a').on('click', function() {
 		$('ul#more_info_tabs li').removeClass('active');
@@ -18,6 +24,7 @@ $(function() {
 		mode = $(this).attr('data-type-displayed');
 
 		$.totalStorage('category-mode', mode);
+		$.totalStorage('display',       mode);
 
 		$('#product_list').removeClass('mode-block');
 		$('#product_list').removeClass('mode-list');

@@ -30,6 +30,9 @@ $_MODULE['<{referralprogram}neon-flexible-bootstrap>referralprogram_46da7ad7d01e
 $_MODULE['<{referralprogram}neon-flexible-bootstrap>referralprogram_97839379a0f447599405341b852e2e24'] = 'Bon de réduction avec un montant (par devise)';
 $_MODULE['<{referralprogram}neon-flexible-bootstrap>referralprogram_37be07209f53a5d636d5c904ca9ae64c'] = 'Pourcentage';
 $_MODULE['<{referralprogram}neon-flexible-bootstrap>referralprogram_edf7f0a17b8a8f1732f12856fcbc8a6b'] = 'Montant du bon de réduction';
+$_MODULE['<{referralprogram}neon-flexible-bootstrap>referralprogram_c2fac6cb3fc5ec77cb3957e148d18b0d'] = 'Taxe du bons de réduction';
+$_MODULE['<{referralprogram}neon-flexible-bootstrap>referralprogram_befcac0f9644a7abee43e69f49252ac4'] = 'HT';
+$_MODULE['<{referralprogram}neon-flexible-bootstrap>referralprogram_f4a0d7cb0cd45214c8ca5912c970de13'] = 'TTC';
 $_MODULE['<{referralprogram}neon-flexible-bootstrap>referralprogram_cf6964e57fc5ed2000af41b39cc71f10'] = 'Description du bon';
 $_MODULE['<{referralprogram}neon-flexible-bootstrap>referralprogram_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';
 $_MODULE['<{referralprogram}neon-flexible-bootstrap>referralprogram_6b719c160f9b08dad4760bcc4b52ed48'] = 'Conditions du programme de parrainage';

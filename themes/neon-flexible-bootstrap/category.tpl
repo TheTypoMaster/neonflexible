@@ -25,7 +25,7 @@
 
 				{if $category->id_image}
 					<div class="right">
-						<img src="{$link->getCatImageLink($category->link_rewrite, $category->id_image, 'bandeau_category')|escape:'html'}" alt="{$category->name|escape:'htmlall':'UTF-8'}" title="{$category->name|escape:'htmlall':'UTF-8'}" id="categoryImage" />
+						<img class="img-responsive" src="{$link->getCatImageLink($category->link_rewrite, $category->id_image, 'bandeau_category')|escape:'html'}" alt="{$category->name|escape:'htmlall':'UTF-8'}" title="{$category->name|escape:'htmlall':'UTF-8'}" id="categoryImage" />
 					</div>
 				{/if}
 

@@ -71,4 +71,6 @@
 	{/if}
 	</div>
 	<!-- /Pagination -->
+
+	<a href="javascript:void(0);" class="jqDisplayedAllProductsButton">{l s='Display all'}</a>
 {/if}

@@ -26,14 +26,15 @@
 						{/if}
 					{/foreach}
 				{/if}
-				<select name="n" id="nb_item{if isset($paginationId)}_{$paginationId}{/if}" class="js-nb_item" onchange="this.form.submit();">
-				{assign var="lastnValue" value="0"}
-				{foreach from=$nArray item=nValue}
-					{if $lastnValue <= $nb_products}
-						<option value="{$nValue|escape:'htmlall':'UTF-8'}" {if $n == $nValue}selected="selected"{/if}>{$nValue|escape:'htmlall':'UTF-8'}</option>
-					{/if}
-					{assign var="lastnValue" value=$nValue}
-				{/foreach}
+				<select name="n" id="nb_item{if isset($paginationId)}_{$paginationId}{/if}" class="js-nb_item">
+					{assign var="lastnValue" value="0"}
+					{foreach from=$nArray item=nValue}
+						{if $lastnValue <= $nb_products}
+							<option value="{$nValue|escape:'htmlall':'UTF-8'}" {if $n == $nValue}selected="selected"{/if}>{$nValue|escape:'htmlall':'UTF-8'}</option>
+						{/if}
+						{assign var="lastnValue" value=$nValue}
+					{/foreach}
+					<option value="1000000" class="jqDisplayedAllProducts">{l s='Display all'}</option>
 				</select>
 				<span>{l s='by page'}</span>
 			</p>

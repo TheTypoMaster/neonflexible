@@ -1,5 +1,5 @@
 /*
-* 2007-2013 PrestaShop
+* 2007-2014 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -18,67 +18,106 @@
 * needs please refer to http://www.prestashop.com for more information.
 *
 *  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2013 PrestaShop SA
+*  @copyright  2007-2014 PrestaShop SA
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 */
+$(document).ready(function(){
+	$(document).on('click', '.add_to_compare', function(e){
+		e.preventDefault();
+		if (typeof addToCompare != 'undefined')
+			addToCompare(parseInt($(this).data('id-product')));
+	});
 
-$('document').ready(function(){
 	reloadProductComparison();
+	compareButtonsStatusRefresh();
+	totalCompareButtons();
 });
 
-reloadProductComparison = function() {
-	$('a.cmp_remove').click(function(){
-
-		var idProduct = $(this).attr('rel').replace('ajax_id_product_', '');
-
-		$.ajax({
-  			url: 'index.php?controller=products-comparison&ajax=1&action=remove&id_product=' + idProduct,
- 			async: false,
- 			cache: false,
-  			success: function(){
-				return true;
-			}
-		});	
-	});
-
-	$('input:checkbox.comparator').click(function(){
-	
-		var idProduct = $(this).attr('value').replace('comparator_item_', '');
-		var checkbox = $(this);
-		
-		if(checkbox.is(':checked'))
+function addToCompare(productId)
 {
-			$.ajax({
-	  			url: 'index.php?controller=products-comparison&ajax=1&action=add&id_product=' + idProduct,
-	 			async: true,
-	 			cache: false,
-	  			success: function(data){
-	  				if (data === '0')
-	  				{
-	  					checkbox.attr('checked', false);
-						alert(max_item);
-					}
-	  			},
-	    		error: function(){
-	    			checkbox.attr('checked', false);
-	    		}
-			});	
-		}
-		else
-		{
-			$.ajax({
-	  			url: 'index.php?controller=products-comparison&ajax=1&action=remove&id_product=' + idProduct,
-	 			async: true,
-	 			cache: false,
-	  			success: function(data){
-	  				if (data === '0')
-	  					checkbox.attr('checked', true);
-	    		},
-	    		error: function(){
-	    			checkbox.attr('checked', true);
-	    		}
-			});	
-		}
+	var totalValueNow = parseInt($('.bt_compare').next('.compare_product_count').val());
+	var action, totalVal;
+	if($.inArray(parseInt(productId),comparedProductsIds) === -1)
+		action = 'add';
+	else
+		action = 'remove';
+
+	$.ajax({
+		url: 'index.php?controller=products-comparison&ajax=1&action='+action+'&id_product=' + productId,
+		async: true,
+		cache: false,
+		success: function(data) {
+			if (action === 'add' && comparedProductsIds.length < comparator_max_item) {
+				comparedProductsIds.push(parseInt(productId)),
+				compareButtonsStatusRefresh(),
+				totalVal = totalValueNow +1,
+				$('.bt_compare').next('.compare_product_count').val(totalVal),
+				totalValue(totalVal);
+			}
+			else if (action === 'remove') {
+				comparedProductsIds.splice($.inArray(parseInt(productId),comparedProductsIds), 1),
+				compareButtonsStatusRefresh(),
+				totalVal = totalValueNow -1,
+				$('.bt_compare').next('.compare_product_count').val(totalVal),
+				totalValue(totalVal);
+			}
+			else
+			{
+	            if (!!$.prototype.fancybox)
+	                $.fancybox.open([
+	                    {
+	                        type: 'inline',
+	                        autoScale: true,
+	                        minHeight: 30,
+	                        content: '<p class="fancybox-error">' + max_item + '</p>'
+	                    }
+	                ], {
+	                    padding: 0
+	                });
+	            else
+	                alert(max_item);
+			}
+			totalCompareButtons();
+		},
+		error: function(){}
 	});
+}
+
+function reloadProductComparison()
+{
+	$(document).on('click', 'a.cmp_remove', function(e){
+		e.preventDefault();
+		var idProduct = parseInt($(this).data('id-product'));
+		$.ajax({
+			url: 'index.php?controller=products-comparison&ajax=1&action=remove&id_product=' + idProduct,
+			async: false,
+			cache: false
+		});
+		$('td.product-'+idProduct).fadeOut(600);
+	});
+};
+
+function compareButtonsStatusRefresh()
+{
+	$('.add_to_compare').each(function() {
+		if ($.inArray(parseInt($(this).data('id-product')),comparedProductsIds)!== -1)
+			$(this).addClass('checked');
+		else
+			$(this).removeClass('checked');
+	});
+}
+
+function totalCompareButtons()
+{
+	var totalProductsToCompare = parseInt($('.bt_compare .total-compare-val').html());
+	if (typeof totalProductsToCompare !== "number" || totalProductsToCompare === 0)
+		$('.bt_compare').attr("disabled",true);
+	else
+		$('.bt_compare').attr("disabled",false);
+}
+
+function totalValue(value)
+{
+	$('.bt_compare').find('.total-compare-val').html(value);
 }
