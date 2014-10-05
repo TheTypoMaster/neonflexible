@@ -7,7 +7,7 @@ $_MODULE['<{blockwishlist}prestashop>blockwishlist_2715a65604e1af3d6933b61704865
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_7244141a5de030c4c882556f4fd70a8b'] = 'Ajoute un bloc gérant les listes de cadeaux';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_9ae79c1fccd231ac7fbbf3235dbf6326'] = 'Ma liste de cadeaux';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_5ef2d617096ae7b47a83f3d4de9c84bd'] = 'Choix invalide pour l\'activation du module';
-$_MODULE['<{blockwishlist}prestashop>blockwishlist_c888438d14855d7d96a2724ee9c306bd'] = 'Paramètres sauvegardés';
+$_MODULE['<{blockwishlist}prestashop>blockwishlist_c888438d14855d7d96a2724ee9c306bd'] = 'Mise à jour réussie';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_deb10517653c255364175796ace3553f'] = 'Produit';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_694e8d1f2ee056f98ee488bdc4982d73'] = 'Quantité';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_502996d9790340c5fd7b86a5b93b1c9f'] = 'Priorité';
@@ -25,8 +25,6 @@ $_MODULE['<{blockwishlist}prestashop>blockwishlist_c440899c1d6f8c8271b9b1d171c7e
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_12246cb491c807e85279b8aed74ea3cf'] = 'Choisissez la liste de souhaits';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_be53a0541a6d36f6ecb879fa2c584b08'] = 'Image';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_47ac923d219501859fb68fed8c8db77b'] = 'Déclinaison';
-$_MODULE['<{blockwishlist}prestashop>blockwishlist_4351cfebe4b61d8aa5efa1d020710005'] = 'Afficher';
-$_MODULE['<{blockwishlist}prestashop>blockwishlist_7dce122004969d56ae2e0245cb754d35'] = 'Modifier';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_81355310011c137fdd21cf9a1394ed6a'] = 'Liste des produits';
 $_MODULE['<{blockwishlist}prestashop>buywishlistproduct_607e1d854783c8229998ac2b5b6923d3'] = 'Jeton non valable';
 $_MODULE['<{blockwishlist}prestashop>buywishlistproduct_b0ffc4925401f6f4edb038f5ca954937'] = 'Vous devez vous connecter';

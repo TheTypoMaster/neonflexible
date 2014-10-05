@@ -25,8 +25,6 @@ $_MODULE['<{blockwishlist}prestashop>blockwishlist_c440899c1d6f8c8271b9b1d171c7e
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_12246cb491c807e85279b8aed74ea3cf'] = 'Choose wishlist';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_be53a0541a6d36f6ecb879fa2c584b08'] = 'Image';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_47ac923d219501859fb68fed8c8db77b'] = 'Combination';
-$_MODULE['<{blockwishlist}prestashop>blockwishlist_4351cfebe4b61d8aa5efa1d020710005'] = 'View';
-$_MODULE['<{blockwishlist}prestashop>blockwishlist_7dce122004969d56ae2e0245cb754d35'] = 'Edit';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_81355310011c137fdd21cf9a1394ed6a'] = 'Product list';
 $_MODULE['<{blockwishlist}prestashop>buywishlistproduct_607e1d854783c8229998ac2b5b6923d3'] = 'Invalid token';
 $_MODULE['<{blockwishlist}prestashop>buywishlistproduct_b0ffc4925401f6f4edb038f5ca954937'] = 'You must log in';
