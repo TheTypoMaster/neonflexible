@@ -1,18 +1,18 @@
 {if $comparator_max_item}
-{if !isset($paginationId) || $paginationId == ''}
-<script type="text/javascript">
-// <![CDATA[
-	var min_item = '{l s='Please select at least one product' js=1}';
-	var max_item = "{l s='You cannot add more than %d product(s) to the product comparison' sprintf=$comparator_max_item js=1}";
-//]]>
-</script>
-{/if}
-	<form method="post" action="{$link->getPageLink('products-comparison')|escape:'html'}" onsubmit="true" class="product-compare">
+	<form method="post" action="{$link->getPageLink('products-comparison')|escape:'html':'UTF-8'}" class="compare-form">
 		<p>
-			<input type="submit" id="bt_compare{if isset($paginationId)}_{$paginationId}{/if}" class="button bt_compare" value="{l s='Compare'}" />
+			<button type="submit" class="button bt_compare bt_compare{if isset($paginationId)}_{$paginationId}{/if}" disabled="disabled">
+				<span>{l s='Compare'} (<strong class="total-compare-val">{count($compared_products)}</strong>)<i class="icon-chevron-right right"></i></span>
+			</button>
+			<input type="hidden" name="compare_product_count" class="compare_product_count" value="{count($compared_products)}" />
 			<input type="hidden" name="compare_product_list" class="compare_product_list" value="" />
-			&nbsp;(<span>0</span>)
 		</p>
 	</form>
+	{if !isset($paginationId) || $paginationId == ''}
+		{addJsDefL name=min_item}{l s='Please select at least one product' js=1}{/addJsDefL}
+		{addJsDefL name=max_item}{l s='You cannot add more than %d product(s) to the product comparison' sprintf=$comparator_max_item js=1}{/addJsDefL}
+		{addJsDef comparator_max_item=$comparator_max_item}
+		{addJsDef comparedProductsIds=$compared_products}
+	{/if}
 {/if}
 

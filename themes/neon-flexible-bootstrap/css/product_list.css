@@ -18,9 +18,9 @@ ul#product_list li .content_price {}
 ul#product_list li .content_price .price {color:#333;font-size:19px;font-weight:bold;font-family:Lato,Verdana,Arial,sans-serif;}
 ul#product_list li .content_price .availability {display:none;}
 ul#product_list li .note {margin:5px 0 10px 0;}
-ul#product_list li .compare {position:absolute;z-index:1;margin:40px 0 0 0;}
-ul#product_list li .compare label {color:#777;font-size:14px;font-weight:normal;font-family:Lato,Verdana,Arial,sans-serif;}
-ul#product_list li .compare label:before {content:url('../img/theme/plus-compare.png');width:12px;height:12px;margin:0 5px 0 0;}
+ul#product_list li .functional-buttons {position:absolute;z-index:2;margin:40px 0 0 0;}
+ul#product_list li .functional-buttons .compare a {color:#777;font-size:14px;font-weight:normal;font-family:Lato,Verdana,Arial,sans-serif;}
+ul#product_list li .functional-buttons .compare a:before {content:url('../img/theme/plus-compare.png');width:12px;height:12px;margin:0 5px 0 0;}
 ul#product_list li .button-add-to-cart {width:180px;height:37px;font-size:13px;line-height:40px;text-align:left;position:absolute;z-index:2}
 ul#product_list li .button-add-to-cart span {margin:6px;}
 

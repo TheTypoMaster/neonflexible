@@ -167,9 +167,9 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 .filter .pagination ul li a {text-decoration:underline;color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;}
 .filter .pagination ul li a:hover {text-decoration:none;}
 .filter .pagination ul li.pagination_next, .filter .pagination ul li.pagination_previous {}
-.filter .product-compare {float:right;border-radius:15px;padding:8px 20px 6px 25px;background:#f13e70;}
-.filter .product-compare p {padding:0;margin:0;color:#fff;font-size:13px;text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}
-.filter .product-compare #bt_compare {border:none;background:none;padding:0;margin:0;color:#fff;font-size:13px;text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}
+.filter .compare-form {float:right;border-radius:15px;padding:8px 20px 6px 25px;background:#f13e70;}
+.filter .compare-form p {padding:0;margin:0;color:#fff;font-size:13px;text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}
+.filter .compare-form p .bt_compare {border:none;background:none;padding:0;margin:0;color:#fff;font-size:13px;text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}
 
 /* Colonnes */
 #left-column {width:270px;margin-right:10px;min-height:200px;}

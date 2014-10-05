@@ -60,11 +60,15 @@
 						<span class="button-add-to-cart"><span></span>{l s='Add to cart'}</span><br />
 					{/if}
 				{/if}
-				{if isset($comparator_max_item) && $comparator_max_item}
-					<p class="compare">
-						<input type="hidden" class="comparator" id="comparator_item_{$product.id_product}" value="comparator_item_{$product.id_product}" {if isset($compareProducts) && in_array($product.id_product, $compareProducts)}checked="checked"{/if} autocomplete="off"/>
-						<label for="comparator_item_{$product.id_product}">{l s='Ajouter au comparateur'}</label>
-					</p>
+				{if $page_name != 'index'}
+					<div class="functional-buttons clearfix">
+						{hook h='displayProductListFunctionalButtons' product=$product}
+						{if isset($comparator_max_item) && $comparator_max_item}
+							<div class="compare">
+								<a class="add_to_compare" href="{$product.link|escape:'html':'UTF-8'}" data-id-product="{$product.id_product}">{l s='Add to Compare'}</a>
+							</div>
+						{/if}
+					</div>
 				{/if}
 			</div>
 			<a href="{$product.link|escape:'htmlall':'UTF-8'}" title="{$product.name|escape:'htmlall':'UTF-8'}" class="link"></a>
@@ -72,4 +76,8 @@
 	{/foreach}
 	</ul>
 	<span class="clearBoth"></span>
+	{addJsDefL name=min_item}{l s='Please select at least one product' js=1}{/addJsDefL}
+	{addJsDefL name=max_item}{l s='You cannot add more than %d product(s) to the product comparison' sprintf=$comparator_max_item js=1}{/addJsDefL}
+	{addJsDef comparator_max_item=$comparator_max_item}
+	{addJsDef comparedProductsIds=$compared_products}
 {/if}
