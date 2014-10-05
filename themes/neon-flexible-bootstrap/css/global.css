@@ -50,7 +50,8 @@ form.std div.uploader {width:300px;float:left;}
 /* Tableau */
 .table-bordered {border:1px solid #ddd;background:#fff;}
 table.std {width:100%;border-top:1px solid #ddd;margin:20px 0 0 0;}
-table.std tr.row-surligne {border:1px solid #ddd;background:#f4f4f4;}
+table.std tr {border:1px solid #ddd;}
+table.std tr.row-surligne {background:#f4f4f4;}
 table.std td {padding:5px 0 5px 20px;color:#777;font-size:14px;font-weight:normal;font-family:Lato,Verdana,Arial,sans-serif;}
 table.std td:first-letter {text-transform:capitalize;}
 table.std td:first-child {border-right:1px solid #ddd;}
