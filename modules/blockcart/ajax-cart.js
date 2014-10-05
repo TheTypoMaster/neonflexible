@@ -212,7 +212,7 @@ var ajaxCart = {
 					WishlistAddProductCart(wishlist[0], idProduct, idCombination, wishlist[1]);
 
 				// add the picture to the cart
-				var $element = $(callerElement).parent().parent().find('a.product_image img,a.product_img_link img');
+				var $element = $(callerElement).parent().parent().find('.product_image img');
 				if (!$element.length)
 					$element = $('#bigpic');
 				var $picture = $element.clone();

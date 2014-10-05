@@ -3,7 +3,7 @@
 	{foreach from=$products item=product name=products}
 		<li class="ajax_block_product {if $smarty.foreach.products.first}first_item{elseif $smarty.foreach.products.last}last_item{/if} {if ($smarty.foreach.products.index %4) == 3}alternate_item{else}item{/if} clearfix">
 
-			<div class="left_block">
+			<div class="left_block product_image">
 				<img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category_mode_block')|escape:'html'}" alt="{if !empty($product.legend)}{$product.legend|escape:'htmlall':'UTF-8'}{else}{$product.name|escape:'htmlall':'UTF-8'}{/if}" title="{if !empty($product.legend)}{$product.legend|escape:'htmlall':'UTF-8'}{else}{$product.name|escape:'htmlall':'UTF-8'}{/if}" class="image"/>
 			</div>
 
