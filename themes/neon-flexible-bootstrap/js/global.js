@@ -154,8 +154,6 @@ function bindBlock()
 {
 	var view = $.totalStorage('display');
 
-	console.log('view', view);
-
 	if (view && view != 'mode-block')
 		display(view);
 	else
@@ -174,8 +172,6 @@ function bindBlock()
 
 function display(view)
 {
-	console.log('category-mode', $.totalStorage('category-mode'));
-	console.log('view', view);
 
 	if (view == 'mode-list')
 	{

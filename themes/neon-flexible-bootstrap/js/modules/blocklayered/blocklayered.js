@@ -271,6 +271,7 @@ function initLayered()
 }
 
 function paginationButton(nbProductsIn, nbProductOut) {
+
 	if (typeof(current_friendly_url) === 'undefined')
 		current_friendly_url = '#';
 
@@ -304,12 +305,12 @@ function paginationButton(nbProductsIn, nbProductOut) {
 		});
 	});
 
+	// Rafraichissement du nombre de résultats
+	if (nbProductsIn!=false) {
 
-	//product count refresh
-	if(nbProductsIn!=false){
-		if(isNaN(nbProductsIn) == 0) {
+		if (isNaN(nbProductsIn) == 0) {
 			// add variables
-			var productCountRow = $('.product-count').html();
+			var productCountRow = $('.nb-products-results').html();
 			var nbPage = parseInt($('div.pagination li.current').children().children().html());
 			var nb_products = nbProductsIn;
 
@@ -323,7 +324,7 @@ function paginationButton(nbProductsIn, nbProductOut) {
 			nbPage==1 ? productShowingStart=1 : productShowingStart=nbPerPage*nbPage-nbPerPage+1;
 
 
-			//insert values into a .product-count
+			//insert values into a .nb-products-results
 			productCountRow = $.trim(productCountRow);
 			productCountRow = productCountRow.split(' ');
 			productCountRow[1] = productShowingStart;
@@ -334,11 +335,10 @@ function paginationButton(nbProductsIn, nbProductOut) {
 				productCountRow[3] = productCountRow[5];
 
 			productCountRow = productCountRow.join(' ');
-			$('.product-count').html(productCountRow);
-			$('.product-count').show();
-		}
-		else {
-			$('.product-count').hide();
+			$('.nb-products-results').html(productCountRow);
+			$('.nb-products-results').show();
+		} else {
+			$('.nb-products-results').hide();
 		}
 	}
 }
