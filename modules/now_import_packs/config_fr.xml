@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>now_import_packs</name>
-	<displayName><![CDATA[Import packs of products]]></displayName>
-	<version><![CDATA[1]]></version>
-	<description><![CDATA[Import packs of products pack by .csv file]]></description>
+	<displayName><![CDATA[Import de packs de produits]]></displayName>
+	<version><![CDATA[1.1]]></version>
+	<description><![CDATA[Import de packs de produits &agrave; partir d&#039;un fichier CSV]]></description>
 	<author><![CDATA[NinjaOfWeb]]></author>
 	<tab><![CDATA[administration]]></tab>
 	<is_configurable>0</is_configurable>
