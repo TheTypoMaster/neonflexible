@@ -43,3 +43,6 @@ $_MODULE['<{blockcart}neon-flexible-bootstrap>crossselling_10ac3d04253ef7e1ddc73
 $_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_9c9e312f81fab7dd636fe287d2b46975'] = 'Retour à la boutique';
 $_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_277f28c311392036a81c8a9beebea2a8'] = 'Espace Pro';
 $_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_d95cf4ab2cbf1dfb63f066b50558b07d'] = 'Mon compte';
+$_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_7fc68677a16caa0f02826182468617e6'] = 'Panier :';
+$_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_f5bf48aa40cad7891eb709fcf1fde128'] = 'produit';
+$_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_86024cad1e83101d97359d7351051156'] = 'produits';

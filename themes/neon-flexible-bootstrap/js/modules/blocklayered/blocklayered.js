@@ -669,10 +669,7 @@ function updateProductUrl()
 {
 	// Adding the filters to URL product
 	if (typeof(param_product_url) != 'undefined' && param_product_url != '' && param_product_url !='#') {
-		$.each($('ul#product_list li.ajax_block_product .product_img_link,'+
-				'ul#product_list li.ajax_block_product h5 a,'+
-				'ul#product_list li.ajax_block_product .product_desc a,'+
-				'ul#product_list li.ajax_block_product .lnk_view'), function() {
+		$.each($('ul#product_list li.ajax_block_product a.link'), function() {
 			$(this).attr('href', $(this).attr('href') + param_product_url);
 		});
 	}
