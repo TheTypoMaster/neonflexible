@@ -16,13 +16,15 @@
 					<li {if $smarty.foreach.mea.first}class="first"{/if}>
 
 						{* Images *}
-						{assign var=image value=Product::getCover($oProduct->id)}
-						{if isset($image.id_image)}
-							{assign var=imageIds value=$oProduct->id|cat:'-'|cat:$image.id_image}
-							<img src="{Context::getContext()->link->getImageLink($oProduct->link_rewrite, $imageIds, $imageType)|escape:'html':'UTF-8'}" alt="{$oProduct->name|escape:'html':'UTF-8'}" />
-						{else}
-							<img src="{$img_prod_dir}{$lang_iso}-default-{$imageType}.jpg" alt="{$oProduct->name|escape:'html':'UTF-8'}" />
-						{/if}
+						<span class="product_image">
+							{assign var=image value=Product::getCover($oProduct->id)}
+							{if isset($image.id_image)}
+								{assign var=imageIds value=$oProduct->id|cat:'-'|cat:$image.id_image}
+								<img src="{Context::getContext()->link->getImageLink($oProduct->link_rewrite, $imageIds, $imageType)|escape:'html':'UTF-8'}" alt="{$oProduct->name|escape:'html':'UTF-8'}" />
+							{else}
+								<img src="{$img_prod_dir}{$lang_iso}-default-{$imageType}.jpg" alt="{$oProduct->name|escape:'html':'UTF-8'}" />
+							{/if}
+						</span>
 
 						<div>
 
@@ -46,15 +48,15 @@
 							{* Note *}
 
 							{* Bouton ajouter au panier *}
-							{if ((isset($add_prod_display) && ($add_prod_display == 1))) && $oProduct->available_for_order && !isset($restricted_country_mode) && $oProduct->minimal_quantity <= 1 && $oProduct->customizable != 2 && !$PS_CATALOG_MODE}
-								{if ($oProduct->quantity > 0)}
+							{if (isset($add_prod_display) && ($add_prod_display == 1)) && $oProduct->available_for_order && !isset($restricted_country_mode) && $oProduct->minimal_quantity <= 1 && $oProduct->customizable != 2 && (!($PS_CATALOG_MODE))}
+								{if (Product::isAvailableWhenOutOfStock($oProduct->out_of_stock) || $oProduct->quantity > 0)}
 									{if isset($static_token)}
-										<a class="button-add-to-cart ajax_add_to_cart_button" rel="ajax_id_product_{$oProduct->id_product|intval}" href="{$link->getPageLink('cart',false, NULL, "add=1&amp;id_product={$oProduct->id_product|intval}&amp;token={$static_token}", false)|escape:'html'}" title="{l s='Add to cart' mod='now_mea_home'}"><span></span>{l s='Add to cart' mod='now_mea_home'}</a>
+										<a class="button-add-to-cart ajax_add_to_cart_button" rel="ajax_id_product_{$oProduct->id|intval}" href="{$link->getPageLink('cart',false, NULL, "add=1&amp;id_product={$oProduct->id|intval}&amp;token={$static_token}", false)|escape:'html'}" title="{l s='Add to cart' mod='now_mea_home'}"><span></span>{l s='Add to cart' mod='now_mea_home'}</a>
 									{else}
-										<a class="button-add-to-cart ajax_add_to_cart_button" rel="ajax_id_product_{$oProduct->id_product|intval}" href="{$link->getPageLink('cart',false, NULL, "add=1&amp;id_product={$oProduct->id_product|intval}", false)|escape:'html'}" title="{l s='Add to cart' mod='now_mea_home'}"><span></span>{l s='Add to cart' mod='now_mea_home'}</a>
+										<a class="button-add-to-cart ajax_add_to_cart_button" rel="ajax_id_product_{$oProduct->id|intval}" href="{$link->getPageLink('cart',false, NULL, "add=1&amp;id_product={$oProduct->id|intval}", false)|escape:'html'}" title="{l s='Add to cart' mod='now_mea_home'}"><span></span>{l s='Add to cart' mod='now_mea_home'}</a>
 									{/if}
 								{else}
-									<span class="button-add-to-cart"><span></span>{l s='Add to cart' mod='now_mea_home'}</span><br />
+									<span class="button-add-to-cart disabled"><span></span>{l s='Add to cart' mod='now_mea_home'}</span><br />
 								{/if}
 							{/if}
 						</div>

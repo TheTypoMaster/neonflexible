@@ -57,8 +57,8 @@ class NowMeaHome extends ObjectModel {
 		$sSQL = '
 			SELECT r.`id_product`
 			FROM `'._DB_PREFIX_.'now_mea_home` r
-			'.Shop::addSqlAssociation('now_mea_home', 'r').'
-			WHERE 1 '.($bActive ? ' AND r.`active` = 1 ' : '') . '
+			' . Shop::addSqlAssociation('now_mea_home', 'r') . '
+			WHERE 1 ' . ($bActive ? ' AND r.`active` = 1 ' : '') . '
 			ORDER BY RAND() LIMIT 0 , ' . Configuration::get('NOW_MEA_HOME_NB_PRODUCT');
 
 		$result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sSQL);
@@ -66,7 +66,9 @@ class NowMeaHome extends ObjectModel {
 		$aProducts = array();
 
 		foreach ($result as $row) {
-			$aProducts[] = new Product($row['id_product'], false, $iIdLang);
+			$oProduct = new Product($row['id_product'], false, $iIdLang);
+			$oProduct->loadStockData();
+			$aProducts[] = $oProduct;
 		}
 
 		return $aProducts;
