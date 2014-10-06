@@ -47,12 +47,39 @@ class NowProductTypeProduct extends ObjectModel {
 
 		$sSQL = '
 			SELECT pt.`id_now_product_type_product`
-			FROM `'._DB_PREFIX_.'now_product_type_product` pt
-			'.Shop::addSqlAssociation('now_product_type_product', 'pt').'
-			WHERE pt.`id_product` = '.(int)$iIdProduct;
+			FROM `' . _DB_PREFIX_ . 'now_product_type_product` pt
+			' . Shop::addSqlAssociation('now_product_type_product', 'pt') . '
+			WHERE pt.`id_product` = ' . (int)$iIdProduct;
 
 		$iIdProductType = Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue($sSQL);
 
 		return new NowProductTypeProduct($iIdProductType);
+	}
+
+	/**
+	 * Permet de récupèrer tous les produits qui sont "typer"
+	 * @return array
+	 */
+	public static function getProductsById($bActive = true) {
+
+		if (!Validate::isBool($bActive)) {
+			die(Tools::displayError());
+		}
+
+		$sSQL = '
+			SELECT *
+			FROM `' . _DB_PREFIX_ . 'now_product_type_product` pt
+			' . Shop::addSqlAssociation('now_product_type_product', 'pt') . '
+			WHERE 1  ' . ($bActive ? 'AND pt.`active` = 1' : '');
+
+		$aResults = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sSQL);
+
+		$aProductsTypes = array();
+
+		foreach ($aResults as $aRow) {
+			$aProductsTypes[$aRow['id_product']] = $aRow['id_now_product_type'];
+		}
+
+		return $aProductsTypes;
 	}
 }

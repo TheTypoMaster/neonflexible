@@ -51,7 +51,7 @@ class NowBlockFooterCms extends ObjectModel {
 		'multilang' => true,
 		'fields' => array(
 			'id_now_block_cms_footer_column'	=> array('type' => self::TYPE_INT, 'validate' => 'isUnsignedInt', 'required' => true),
-			'type' 								=> array('type' => self::TYPE_INT, 'validate' => 'isUnsignedInt', 'required' => true),
+			'type' 								=> array('type' => self::TYPE_STRING, 'validate' => 'isUnsignedInt', 'required' => true),
 			'id_type' 							=> array('type' => self::TYPE_INT, 'validate' => 'isUnsignedInt'),
 			'active' 							=> array('type' => self::TYPE_BOOL, 'validate' => 'isBool', 'required' => true),
 			'position' 							=> array('type' => self::TYPE_INT),

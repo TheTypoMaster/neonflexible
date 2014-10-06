@@ -16,7 +16,7 @@ class now_product_type extends NowModule {
 	{
 		$this->name				= 'now_product_type';
 		$this->tab				= 'front_office_features';
-		$this->version			= 1.1;
+		$this->version			= 1.2;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
@@ -48,7 +48,8 @@ class now_product_type extends NowModule {
 	 */
 	public function setSqlFileToInstall() {
 		$this->aSqlFileToInstall = array(
-			1.0 => 'install.sql'
+			1.0 => 'install.sql',
+			1.2 => 'install-1.2.sql',
 		);
 	}
 
@@ -61,7 +62,12 @@ class now_product_type extends NowModule {
 
 		);
 
-		return parent::install() && $this->registerHook('actionProductUpdate') && $this->registerHook('actionProductAdd') && $this->registerHook('actionProductDelete') && $this->registerHook('displayBackOfficeHeader');
+		return parent::install() &&
+				$this->registerHook('actionProductUpdate') &&
+				$this->registerHook('actionProductAdd') &&
+				$this->registerHook('actionProductDelete') &&
+				$this->registerHook('displayBackOfficeHeader') &&
+				$this->registerHook('actionProductListOverride');
 	}
 
 	/**
@@ -144,6 +150,24 @@ class now_product_type extends NowModule {
 				'aNowProductTypes'			=> NowProductType::getItems(),
 				'oNowProductTypeProduct'	=> NowProductTypeProduct::getObjectByProductId($_GET['id_product']),
 			));
+		}
+	}
+
+	/**
+	 * Hook actionProductListOverride
+	 * @param $aParams
+	 * @return bool
+	 */
+	public function hookActionProductListOverride($aParams) {
+		if ((int)$aParams['nbProducts'] > 0) {
+			$aProductsTypesProducts	= NowProductTypeProduct::getProductsById();
+			$aProductsTypes			= NowProductType::getByIdProductTypes($aProductsTypesProducts);
+
+			foreach ($aParams['catProducts'] as &$aProduct) {
+				if (array_key_exists($aProduct['id_product'], $aProductsTypesProducts) && array_key_exists($aProductsTypesProducts[$aProduct['id_product']], $aProductsTypes)) {
+					$aProduct['product_type'] = $aProductsTypes[$aProductsTypesProducts[$aProduct['id_product']]];
+				}
+			}
 		}
 	}
 
