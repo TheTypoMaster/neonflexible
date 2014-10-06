@@ -4,7 +4,7 @@
 
 	<div itemscope itemtype="http://schema.org/LocalBusiness">
 		<a href="{$base_dir}" title="{$shop_name|escape:'htmlall':'UTF-8'}" itemprop="url">
-			<img class="logo" src="{$logo_url}" alt="{$shop_name|escape:'htmlall':'UTF-8'}" {if $logo_image_width}width="{$logo_image_width}"{/if} {if $logo_image_height}height="{$logo_image_height}" {/if}  itemprop="photo" />
+			<img class="logo" src="{$img_dir}theme/logo-footer.png" alt="{$shop_name|escape:'htmlall':'UTF-8'}" itemprop="photo" />
 		</a>
 
 		<div class="adresse" itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">

@@ -53,7 +53,7 @@
 
 		<div class="container">
 			<a href="{Context::getContext()->link->getPageLink('index')}" title="{$shop_name|escape:'htmlall':'UTF-8'}">
-				<img class="logo" src="{$logo_url}" alt="{$shop_name|escape:'htmlall':'UTF-8'}" {if $logo_image_width}width="{$logo_image_width}"{/if} {if $logo_image_height}height="{$logo_image_height}" {/if} />
+				<img class="logo" src="{$logo_url}" alt="{$shop_name|escape:'htmlall':'UTF-8'}" />
 			</a>
 		</div>
 
