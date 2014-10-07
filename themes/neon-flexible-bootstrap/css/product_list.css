@@ -25,10 +25,13 @@ ul#product_list li .button-add-to-cart {width:180px;height:37px;font-size:13px;l
 ul#product_list li .button-add-to-cart span {margin:6px;}
 
 
-ul#product_list li.is_content_type {width:412px;padding:0;border:1px solid #dbdbdb;}
+ul#product_list li.is_content_type {width:412px;padding:0;border:3px solid #fff;}
+ul#product_list li.is_content_type:before {border:1px solid #dbdbdb;width:410px;height:368px;background:transparent;position:absolute;margin:-3px;}
+ul#product_list li.is_content_type:hover {border:3px solid #dbdbdb;}
+ul#product_list li.is_content_type:before:hover {border:1px solid #dbdbdb;}
 ul#product_list li.is_content_type .left_block_product_type {float:left;}
 ul#product_list li.is_content_type .left_block_product_type img {display:none;width:206px;height:364px;}
-ul#product_list li.is_content_type .right_block_product_type {float:right;background:#f4f4f4;height:100%;width:204px;}
+ul#product_list li.is_content_type .right_block_product_type {float:right;background:#f4f4f4;height:100%;width:200px;}
 ul#product_list li.is_content_type .right_block_product_type:before {content:" ";width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:10px solid #f4f4f4;position:absolute;margin:170px -10px;}
 ul#product_list li.is_content_type .right_block_product_type .product_type_name {margin:80px 0 10px 20px;color:#f13d6f;font-size:16px;line-height:16px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:600;text-transform:uppercase;}
 ul#product_list li.is_content_type .right_block_product_type .product_type_product {color:#333;font-size:16px;line-height:20px;margin:10px 0 20px 20px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
@@ -50,6 +53,9 @@ ul#product_list.mode-list li .link {}
 
 
 ul#product_list.mode-list li.is_content_type {border:1px solid #dbdbdb;}
+ul#product_list.mode-list li.is_content_type:before {border:none;}
+ul#product_list.mode-list li.is_content_type:hover {border:1px solid #dbdbdb;}
+ul#product_list.mode-list li.is_content_type:before:hover {border:none;}
 ul#product_list.mode-list li.is_content_type .left_block_product_type {}
 ul#product_list.mode-list li.is_content_type .left_block_product_type img {display:none;width:200px;height:218px;}
 ul#product_list.mode-list li.is_content_type .right_block_product_type {width:658px;}
