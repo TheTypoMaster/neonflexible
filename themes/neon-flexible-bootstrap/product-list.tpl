@@ -6,7 +6,8 @@
 			{if isset($product.product_type) && $product.product_type.type == NowProductType::TYPE_CONTENT}
 
 				<div class="left_block_product_type">
-					<img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'product_type_category')|escape:'html'}" alt="{if !empty($product.legend)}{$product.legend|escape:'htmlall':'UTF-8'}{else}{$product.name|escape:'htmlall':'UTF-8'}{/if}" title="{if !empty($product.legend)}{$product.legend|escape:'htmlall':'UTF-8'}{else}{$product.name|escape:'htmlall':'UTF-8'}{/if}" />
+					<img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'product_type_category_block')|escape:'html'}" alt="{if !empty($product.legend)}{$product.legend|escape:'htmlall':'UTF-8'}{else}{$product.name|escape:'htmlall':'UTF-8'}{/if}" title="{if !empty($product.legend)}{$product.legend|escape:'htmlall':'UTF-8'}{else}{$product.name|escape:'htmlall':'UTF-8'}{/if}" data-mode-affichage="block" />
+					<img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'product_type_category_list')|escape:'html'}" alt="{if !empty($product.legend)}{$product.legend|escape:'htmlall':'UTF-8'}{else}{$product.name|escape:'htmlall':'UTF-8'}{/if}" title="{if !empty($product.legend)}{$product.legend|escape:'htmlall':'UTF-8'}{else}{$product.name|escape:'htmlall':'UTF-8'}{/if}" data-mode-affichage="list" />
 				</div>
 
 				<div class="right_block_product_type">

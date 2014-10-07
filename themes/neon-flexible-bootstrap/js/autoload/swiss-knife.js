@@ -18,6 +18,9 @@ $(function() {
 
 	if ($.totalStorage('category-mode')) {
 		$('#product_list').addClass('mode-' + $.totalStorage('category-mode'));
+
+		$('img[data-mode-affichage]').css('display', 'none');
+		$('img[data-mode-affichage=' + $.totalStorage('category-mode') + ']').css('display', 'block');
 	}
 
 	$('.jqDisplayed').click(function(e) {
@@ -41,6 +44,9 @@ $(function() {
 
 		$('img[data-type-displayed=list]').attr('src', imageHover);
 		$('img[data-type-displayed=list]').attr('data-image-hover', image);
+
+		$('img[data-mode-affichage]').css('display', 'none');
+		$('img[data-mode-affichage=' + mode + ']').css('display', 'block');
 
 		return false;
 	});
