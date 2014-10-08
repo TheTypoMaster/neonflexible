@@ -56,6 +56,8 @@
 #product #product-top-right .content_prices .price-ecotax {}
 #product #product-top-right .content_prices .unit-price {}
 #product #product-top-right .content_prices .unit-price #unit_price_display {}
+#product #product-top-right .sur-commande {padding:10px 20px 30px 20px;border-top:1px solid #dbdbdb;margin:10px 0;}
+#product #product-top-right .sur-commande .button-rose-and-grey {margin:20px 0 0 35px;}
 #product #product-top-right .product-quantity {padding:10px 20px 30px 20px;border-top:1px solid #dbdbdb;margin:10px 0;}
 #product #product-top-right .product-quantity #quantity_wanted_p label {color:#777;font-size:14px;font-weight:normal;font-family:Lato,Verdana,Arial,sans-serif;display:block;}
 #product #product-top-right .product-quantity #quantity_wanted_p .button-qty {color:#777;font-size:18px;font-weight:bold;font-family:Lato,Verdana,Arial,sans-serif;padding:0;margin:0;width:30px;height:30px;float:left;}

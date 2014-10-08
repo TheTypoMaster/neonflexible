@@ -35,7 +35,6 @@ ul#product_list li.is_content_type .center_block_product_type {float:right;backg
 ul#product_list li.is_content_type .center_block_product_type:before {content:" ";width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:10px solid #f4f4f4;position:absolute;margin:170px -10px;}
 ul#product_list li.is_content_type .center_block_product_type .product_type_name {margin:80px 0 10px 20px;color:#f13d6f;font-size:16px;line-height:16px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:600;text-transform:uppercase;}
 ul#product_list li.is_content_type .center_block_product_type .product_type_product {color:#333;font-size:16px;line-height:20px;margin:10px 10px 20px 20px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
-ul#product_list li.is_content_type .center_block_product_type .button-rose-and-grey {z-index:2;position:absolute;margin:0 0 0 20px;border:2px solid #dadada;padding:5px 10px;border-radius:20px;background:#fff;color:#f13d6f;font-size:13px;line-height:13px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:600;text-transform:uppercase;}
 ul#product_list li.is_content_type:hover .center_block_product_type .button-rose-and-grey {border:2px solid #f13d6f;text-decoration:none;}
 
 

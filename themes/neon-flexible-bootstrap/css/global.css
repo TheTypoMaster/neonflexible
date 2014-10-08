@@ -139,6 +139,8 @@ ul.footer_link li {list-style-type:none;}
 .button-rose {background:#f13e70;line-height:40px;text-align:center;width:220px;height:40px;display:block;color:#fff;font-family:Raleway,Verdana,Arial,sans-serif;font-size:15px;font-weight:bold;text-transform:uppercase;position:relative;border-radius:30px;border:none;}
 .button-rose:hover {color:#fff;text-decoration:underline;}
 p.submit .button-rose {margin:0 auto 20px auto;}
+.button-rose-and-grey {z-index:2;position:absolute;margin:0 0 0 20px;border:2px solid #dadada;padding:5px 10px;border-radius:20px;background:#fff;color:#f13d6f;font-size:13px;line-height:13px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:600;text-transform:uppercase;}
+.button-rose-and-grey:hover {border:2px solid #f13d6f;text-decoration:none;color:#f13d6f;}
 
 /* Fil ariane */
 #breadcrumb {margin:10px 0;font-family:Lato,Verdana,Arial,sans-serif;font-size:14px;color:#777;line-height:27px;border-bottom:1px solid #d4d4d4;padding:0 0 15px 0;}

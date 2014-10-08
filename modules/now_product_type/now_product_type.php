@@ -16,7 +16,7 @@ class now_product_type extends NowModule {
 	{
 		$this->name				= 'now_product_type';
 		$this->tab				= 'front_office_features';
-		$this->version			= 1.2;
+		$this->version			= 1.3;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
@@ -67,7 +67,8 @@ class now_product_type extends NowModule {
 				$this->registerHook('actionProductAdd') &&
 				$this->registerHook('actionProductDelete') &&
 				$this->registerHook('displayBackOfficeHeader') &&
-				$this->registerHook('actionProductListOverride');
+				$this->registerHook('actionProductListOverride') &&
+				$this->registerHook('displayProductButtons');
 	}
 
 	/**
@@ -169,6 +170,15 @@ class now_product_type extends NowModule {
 				}
 			}
 		}
+	}
+
+	/**
+	 * Hook displayProductButtons
+	 * @param $aParams
+	 * @return bool
+	 */
+	public function hookDisplayProductButtons($aParams) {
+		// Permet de tester si un produit est typer "sur commande" pour gérer le bouton directement dans le template
 	}
 
 

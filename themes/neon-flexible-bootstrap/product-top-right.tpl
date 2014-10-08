@@ -107,33 +107,40 @@
 		<div class="clear"></div>
 	</div>
 
-	<div class="product-quantity">
-		<!-- quantity wanted -->
-		<p id="quantity_wanted_p"{if (!$allow_oosp && $product->quantity <= 0) OR $virtual OR !$product->available_for_order OR $PS_CATALOG_MODE} style="display: none;"{/if}>
-			<label>{l s='Quantity:'}</label>
-			<input type="submit" name="qty-remove" id="qty-remove" class="button-qty" value="-" />
-			<input type="text" name="qty" id="quantity_wanted" class="text" value="{if isset($quantityBackup)}{$quantityBackup|intval}{else}{if $product->minimal_quantity > 1}{$product->minimal_quantity}{else}1{/if}{/if}" size="2" maxlength="3" {if $product->minimal_quantity > 1}onkeyup="checkMinimalQuantity({$product->minimal_quantity});"{/if} />
-			<input type="submit" name="qty-add" id="qty-add" class="button-qty" value="+" />
-		</p>
+	{if NowProductTypeProduct::isProductTyped($product->id)}
+		<div class="sur-commande">
+			<p>{l s='Pour une commande ou une information sur ce produit contactez-nous par téléphone au <b>%s</b> ou par mail en cliquant sur le bouton ci-dessous.' sprintf=Configuration::get('PS_SHOP_PHONE')}</p>
+			<a href="{Context::getContext()->link->getPageLink('contact')}" class="button-rose-and-grey">{l s='Contactez-nous'}</a>
+		</div>
+	{else}
+		<div class="product-quantity">
+			<!-- quantity wanted -->
+			<p id="quantity_wanted_p"{if (!$allow_oosp && $product->quantity <= 0) OR $virtual OR !$product->available_for_order OR $PS_CATALOG_MODE} style="display: none;"{/if}>
+				<label>{l s='Quantity:'}</label>
+				<input type="submit" name="qty-remove" id="qty-remove" class="button-qty" value="-" />
+				<input type="text" name="qty" id="quantity_wanted" class="text" value="{if isset($quantityBackup)}{$quantityBackup|intval}{else}{if $product->minimal_quantity > 1}{$product->minimal_quantity}{else}1{/if}{/if}" size="2" maxlength="3" {if $product->minimal_quantity > 1}onkeyup="checkMinimalQuantity({$product->minimal_quantity});"{/if} />
+				<input type="submit" name="qty-add" id="qty-add" class="button-qty" value="+" />
+			</p>
 
-		<!-- minimal quantity wanted -->
-		<p id="minimal_quantity_wanted_p"{if $product->minimal_quantity <= 1 OR !$product->available_for_order OR $PS_CATALOG_MODE} style="display: none;"{/if}>
-			{l s='This product is not sold individually. You must select at least'} <b id="minimal_quantity_label">{$product->minimal_quantity}</b> {l s='quantity for this product.'}
-		</p>
-		{if $product->minimal_quantity > 1}
-			<script type="text/javascript">
-				checkMinimalQuantity();
-			</script>
-		{/if}
-	</div>
+			<!-- minimal quantity wanted -->
+			<p id="minimal_quantity_wanted_p"{if $product->minimal_quantity <= 1 OR !$product->available_for_order OR $PS_CATALOG_MODE} style="display: none;"{/if}>
+				{l s='This product is not sold individually. You must select at least'} <b id="minimal_quantity_label">{$product->minimal_quantity}</b> {l s='quantity for this product.'}
+			</p>
+			{if $product->minimal_quantity > 1}
+				<script type="text/javascript">
+					checkMinimalQuantity();
+				</script>
+			{/if}
+		</div>
 
-	<div id="add_to_cart" {if (!$allow_oosp && $product->quantity <= 0) OR !$product->available_for_order OR (isset($restricted_country_mode) AND $restricted_country_mode) OR $PS_CATALOG_MODE}style="display:none"{/if} class="buttons_bottom_block">
-		<p class="button-add-to-cart">
-			<span></span>
-			<input type="submit" name="Submit" value="{l s='Add to cart'}" class="button-none" />
-		</p>
-	</div>
+		<div id="add_to_cart" {if (!$allow_oosp && $product->quantity <= 0) OR !$product->available_for_order OR (isset($restricted_country_mode) AND $restricted_country_mode) OR $PS_CATALOG_MODE}style="display:none"{/if} class="buttons_bottom_block">
+			<p class="button-add-to-cart">
+				<span></span>
+				<input type="submit" name="Submit" value="{l s='Add to cart'}" class="button-none" />
+			</p>
+		</div>
 
-	{if isset($HOOK_EXTRA_RIGHT) && $HOOK_EXTRA_RIGHT}{$HOOK_EXTRA_RIGHT}{/if}
+		{if isset($HOOK_EXTRA_RIGHT) && $HOOK_EXTRA_RIGHT}{$HOOK_EXTRA_RIGHT}{/if}
+	{/if}
 
 </div>

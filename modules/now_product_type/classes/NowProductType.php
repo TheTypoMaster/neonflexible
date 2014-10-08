@@ -28,6 +28,12 @@ class NowProductType extends ObjectModel {
 	const TYPE_BUTTON		= 'BUTTON';
 	const TYPE_CONTENT 		= 'CONTENT';
 
+	const TYPE_SUR_COMMANDE			= 2;
+	const TYPE_TUTORIEL				= 3;
+	const TYPE_TUTORIEL_VIDEO		= 4;
+	const TYPE_NEWS					= 5;
+	const TYPE_PHOTO				= 6;
+
 	/** @var array liste des types */
 	public $typeList = array(NowProductType::TYPE_BUTTON, NowProductType::TYPE_CONTENT);
 

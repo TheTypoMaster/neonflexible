@@ -82,4 +82,22 @@ class NowProductTypeProduct extends ObjectModel {
 
 		return $aProductsTypes;
 	}
+
+	/**
+	 * Permet de tester si un produit est typer ou pas
+	 * @param $iIdProduct
+	 * @param int $iIdNowProductType
+	 * @return bool
+	 */
+	public static function isProductTyped($iIdProduct, $iIdNowProductType = NowProductType::TYPE_SUR_COMMANDE) {
+
+		$sSQL = '
+			SELECT 1
+			FROM `' . _DB_PREFIX_ . 'now_product_type_product` pt
+			' . Shop::addSqlAssociation('now_product_type_product', 'pt') . '
+			WHERE pt.`id_product` = ' . (int)$iIdProduct . '
+			AND pt.`id_now_product_type` = ' . (int)$iIdNowProductType;
+
+		return (bool)Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue($sSQL);
+	}
 }
