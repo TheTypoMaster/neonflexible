@@ -15,6 +15,7 @@
 					<div class="left_block_product_type2">
 						<p class="product_type_name">{$product.product_type.name|escape:'htmlall':'UTF-8'}</p>
 						<p class="product_type_product">{$product.name|escape:'htmlall':'UTF-8'}</p>
+						<p class="product_desc">{$product.description_short|strip_tags:'UTF-8'|truncate:360:'...'}</p>
 					</div>
 
 					<div class="right_block_product_type">
