@@ -18,15 +18,27 @@
 											</a>
 										{elseif $aLink['type'] == NowBlockFooterCms::TYPE_CATEGORY}
 											<a href="{Context::getContext()->link->getCategoryLink($aLink['object'])}">
-												{$aLink['object']->name}
+												{if !is_null($aLink['name'])}
+													{$aLink['name']}
+												{else}
+													{$aLink['object']->name}
+												{/if}
 											</a>
 										{elseif $aLink['type'] == NowBlockFooterCms::TYPE_MANUFACTURER}
 											<a href="{Context::getContext()->link->getManufacturerLink($aLink['object'])}">
-												{$aLink['object']->name}
+												{if !is_null($aLink['name'])}
+													{$aLink['name']}
+												{else}
+													{$aLink['object']->name}
+												{/if}
 											</a>
 										{elseif $aLink['type'] == NowBlockFooterCms::TYPE_CMS}
 											<a href="{Context::getContext()->link->getCMSLink($aLink['object'])}">
-												{$aLink['object']->meta_title}
+												{if !is_null($aLink['name'])}
+													{$aLink['name']}
+												{else}
+													{$aLink['object']->meta_title}
+												{/if}
 											</a>
 										{/if}
 									</li>
