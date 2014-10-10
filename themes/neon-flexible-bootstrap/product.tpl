@@ -2,8 +2,10 @@
 
 	{include file="$tpl_dir./product-script.tpl"}
 
-		{if NowProductTypeProduct::isProductTyped($product->id) && !NowProductTypeProduct::isProductTyped($product->id, NowProductType::TYPE_SUR_COMMANDE)}
+		{assign var=nowProductTypeProduct value=NowProductTypeProduct::getObjectByProductId($product->id)}
+		{if Validate::isLoadedObject($nowProductTypeProduct) && $nowProductTypeProduct->id_now_product_type != NowProductType::TYPE_SUR_COMMANDE}
 
+			{assign var=nowProductType value=NowProductType::getObjectByIdProductType($nowProductTypeProduct->id_now_product_type, Context::getContext()->language->id)}
 			{include file="$tpl_dir./breadcrumb.tpl" noBorder=true}
 
 			<div id="product-type-tuto">

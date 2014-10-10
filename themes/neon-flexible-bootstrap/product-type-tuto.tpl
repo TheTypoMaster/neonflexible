@@ -3,7 +3,7 @@
 
 		<div class="left">
 
-			<p class="titre-vert">{l s='Tutorial'}</p>
+			<p class="titre-vert">{$nowProductType->name}</p>
 
 			<h1>
 				{$product->name|escape:'htmlall':'UTF-8'}

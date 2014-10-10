@@ -119,4 +119,14 @@ class NowProductType extends ObjectModel {
 
 		return $aProductTypes;
 	}
+
+	/**
+	 * Permet de récupèrer le type de produit
+	 * @param int $iIdProductType
+	 * @param string $lang
+	 * @return array
+	 */
+	public static function getObjectByIdProductType($iIdProductType, $lang = null) {
+		return new NowProductType($iIdProductType, $lang);
+	}
 }
