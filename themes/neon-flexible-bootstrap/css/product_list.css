@@ -40,7 +40,7 @@ ul#product_list li.is_content_type:hover .center_block_product_type .button-rose
 
 ul#product_list.mode-list li {height:220px;float:none;width:100%;border:1px solid #fff;border-bottom:1px solid #dbdbdb;margin:0 0 20px 0;}
 ul#product_list.mode-list li:hover {border:1px solid #dbdbdb;}
-ul#product_list.mode-list li .image {width:175px;height:190px;}
+ul#product_list.mode-list li .image {width:200px;height:175px;margin:20px 0;}
 ul#product_list.mode-list li .left_block {float:left;width:190px;}
 ul#product_list.mode-list li .center_block {float:left;width:380px;padding:40px 20px 0 0;}
 ul#product_list.mode-list li .right_block {float:left;width:260px;text-align:center;border-left:1px solid #dbdbdb;padding:0 0 0 20px;height:130px;margin:20px 0;}
