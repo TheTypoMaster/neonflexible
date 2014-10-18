@@ -40,7 +40,7 @@ class Cheque extends PaymentModule
 	{
 		$this->name = 'cheque';
 		$this->tab = 'payments_gateways';
-		$this->version = '2.5.2';
+		$this->version = '2.5.3';
 		$this->author = 'PrestaShop';
 		$this->controllers = array('payment', 'validation');
 
@@ -195,12 +195,14 @@ class Cheque extends PaymentModule
 						'type' => 'text',
 						'label' => $this->l('Pay to the order of (name)'),
 						'name' => 'CHEQUE_NAME',
+						'required' => true
 					),
 					array(
 						'type' => 'textarea',
 						'label' => $this->l('Address'),
 						'desc' => $this->l('Address where the check should be sent to.'),
 						'name' => 'CHEQUE_ADDRESS',
+						'required' => true
 					),
 				),
 				'submit' => array(
