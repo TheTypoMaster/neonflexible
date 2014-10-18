@@ -4,6 +4,6 @@ footer #page-listing .footer-payement {margin:20px 0 0 0;}
 footer #page-listing ul {list-style-type:none;margin:51px 0;height:150px;padding:0;}
 footer #page-listing ul li, footer #page-listing ul li a {color:#333;font-family:Raleway,Verdana,Arial,sans-serif;font-size:17px;font-weight:bold;margin:0 50px 0 0;padding:0;float:left;}
 footer #page-listing ul li span {display:block;	margin:0 0 10px 0;}
-footer #page-listing ul li:first-letter {text-transform:capitalize;}
+footer #page-listing ul li span:first-letter {text-transform:capitalize;}
 footer #page-listing ul li > ul {margin:0 70px 0 0;padding:0;float:left;}
 footer #page-listing ul li > ul li, footer #page-listing ul li > ul li a {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;float:none;font-weight:normal;line-height:22px;margin:0;}
