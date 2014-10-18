@@ -28,7 +28,7 @@
 #header #adtm_menu #adtm_menu_inner ul#menu  :hover div.adtm_sub {left:0;}
 #header #adtm_menu #adtm_menu_inner ul#menu a:hover div.adtm_sub {left:-1px; top:29px;}
 
-#header #adtm_menu #adtm_menu_inner ul#menu > li.advtm_menu_8 {margin:0 0 0 120px;}
+#header #adtm_menu #adtm_menu_inner ul#menu > li.advtm_menu_8 {float:right;}
 #header #adtm_menu #adtm_menu_inner ul#menu > li.advtm_menu_8 a span {margin:0;padding:0;}
 
 #header #adtm_menu #adtm_menu_inner .li-niveau1 a:hover .advtm_menu_span,
