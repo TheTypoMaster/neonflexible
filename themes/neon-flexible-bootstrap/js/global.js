@@ -1,3 +1,7 @@
+
+
+function display(view) {}
+
 /*
 
 //global variables
