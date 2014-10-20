@@ -5,7 +5,7 @@
 	{/if}
 
 	{if $product->description && preg_match('#jqDescriptif#', $product->description)}
-		<li><span><a href="#descriptif">{l s='Descriptif'}</a></span></li>
+		<li><span><a href="#description">{l s='Description'}</a></span></li>
 	{/if}
 
 	{if $features}
