@@ -98,6 +98,8 @@
 #product #product-type-tuto #bandeau-product .left .titre-vert {letter-spacing:1.2px;color:#bddf60;font-size:33px;font-family:Raleway,Verdana,Arial,sans-serif;margin:50px 0 0 0;font-weight:300;text-transform:uppercase;}
 #product #product-type-tuto #bandeau-product .left h1 {color:#fff;font-size:37px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;margin:0;}
 #product #product-type-tuto #bandeau-product .left .desc p {font-family:Lato,Verdana,Arial,sans-serif;font-size:16px;color:#fff;text-shadow:0px 0px 3px rgba(0, 0, 0, 0.6);text-align:justify;}
+#product #product-type-tuto #bandeau-product .right {width:586px;}
+#product #product-type-tuto #bandeau-product .right img {width:397px;display:block;margin:0 auto;}
 
 #product #product-type-tuto h2 {font-size:32px;color:#333;text-align:left;font-family:Raleway,Verdana,Arial,sans-serif;margin:70px 0 30px 0;padding:0;border:none;}
 #product #product-type-tuto h3 {padding:0;font-size:16px;color:#333;text-align:left;font-family:Raleway,Verdana,Arial,sans-serif;margin:0;font-weight:bold;text-transform:uppercase;}
