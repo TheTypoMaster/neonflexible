@@ -119,7 +119,7 @@
 
 		{if NowProductTypeProduct::isProductTyped($product->id, NowProductType::TYPE_SUR_COMMANDE)}
 			<div class="sur-commande">
-				<p>{l s='Pour une commande ou une information sur ce produit contactez-nous par téléphone au <b>%s</b> ou par mail en cliquant sur le bouton ci-dessous.' sprintf=Configuration::get('PS_SHOP_PHONE')}</p>
+				<p>{l s='Pour une commande ou une information sur ce produit contactez-nous par téléphone au'} <strong>{Configuration::get('PS_SHOP_PHONE')}</strong> {l s='ou par mail en cliquant sur le bouton ci-dessous.'}</p>
 				<a href="{Context::getContext()->link->getPageLink('contact')}" class="button-rose-and-grey">{l s='Contactez-nous'}</a>
 			</div>
 		{else}

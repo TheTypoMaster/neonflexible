@@ -3,7 +3,7 @@
 
 #product #product-top-left,
 #product #product-top-center,
-#product #product-top-right {float:left;margin:20px 0;height:450px;}
+#product #product-top-right {float:left;margin:20px 0;}
 
 /* Colonne de gauche en haut */
 #product #product-top-left {margin:20px 30px 20px 0;}
@@ -57,7 +57,7 @@
 #product #product-top-right .content_prices .unit-price {}
 #product #product-top-right .content_prices .unit-price #unit_price_display {}
 #product #product-top-right .sur-commande {padding:10px 20px 30px 20px;border-top:1px solid #dbdbdb;margin:10px 0;}
-#product #product-top-right .sur-commande .button-rose-and-grey {margin:20px 0 0 35px;}
+#product #product-top-right .sur-commande .button-rose-and-grey {margin:35px 35px 0 35px;position:static;display:block;}
 #product #product-top-right .product-quantity {padding:10px 20px 30px 20px;border-top:1px solid #dbdbdb;margin:10px 0;}
 #product #product-top-right .product-quantity #quantity_wanted_p .product_quantity_down {float:left;}
 #product #product-top-right .product-quantity #quantity_wanted_p .product_quantity_up {float:left;}
