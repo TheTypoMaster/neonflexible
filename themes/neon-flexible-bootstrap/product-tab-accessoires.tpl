@@ -19,7 +19,7 @@
 
 							{* Nom du produit *}
 							<p class="product-name">
-								{$accessory.name|escape:'htmlall':'UTF-8'}
+								{$accessory.name|truncate:35:'...':true|escape:'htmlall':'UTF-8'}
 							</p>
 
 							{* Description *}
@@ -50,7 +50,7 @@
 
 						<span class="clearBoth"></span>
 
-						<a class="link" href="{$accessoryLink|escape:'htmlall':'UTF-8'}" title="{l s='View'}">{l s='View'}</a>
+						<a class="link" href="{$accessoryLink|escape:'htmlall':'UTF-8'}" title="{$accessory.name|escape:'htmlall':'UTF-8'}">{$accessory.name|escape:'htmlall':'UTF-8'}</a>
 
 					</li>
 				{/if}

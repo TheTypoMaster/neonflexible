@@ -33,4 +33,7 @@
 	<div class="rte">
 		{$product->description}
 	</div>
+
+	{include file="$tpl_dir./product-tab-accessoires.tpl"}
+
 </div>
