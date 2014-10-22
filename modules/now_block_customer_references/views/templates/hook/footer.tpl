@@ -3,19 +3,21 @@
 
 		<div class="container">
 
-			<ul>
+			<div class="carousel-customer-references">
+
 				{foreach $aItems as $key => $aItem}
-					{if $aItem['active'] && $key < 2}
-						<li>
+					{if $aItem['active']}
+						<div class="item{if $smarty.foreach.foo.first} active{/if}">
 							<img src="{$module_dir}{$aItem['file_name']}" alt="{$aItem['name']}" />
 							<p>{$aItem['description']}</p>
-							{if $aItem['link']}
+							{*if $aItem['link']}
 								<a href="{$aItem['link']}" target="_blank">{l s='En savoir plus'}</a>
-							{/if}
-						</li>
+							{/if*}
+						</div>
 					{/if}
 				{/foreach}
-			</ul>
+
+			</div>
 
 			<span class="clearBoth"></span>
 

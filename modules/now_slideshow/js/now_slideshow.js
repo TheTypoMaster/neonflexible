@@ -8,3 +8,11 @@ $('.carousel-slick').slick({
 	autoplay: true,
 	autoplaySpeed:5000
 });
+
+$('.carousel-customer-references').slick({
+	infinite: true,
+	slidesToShow: 2,
+	autoplay: true,
+	autoplaySpeed:5000,
+	arrows:false
+});

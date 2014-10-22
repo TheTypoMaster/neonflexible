@@ -1,13 +1,12 @@
 /* Bloc customer references */
-
 #references-clients {background:url('../img/fond-clients.png') center;width:100%;height:363px;}
-#references-clients ul {list-style-type:none;margin:70px 0 0 0;}
-#references-clients ul li {float:left;padding:0;width:500px;text-align:center;margin:0 80px 0 0;height:135px;position:relative;}
-#references-clients ul li + li {margin:0}
-#references-clients ul li img {float:left;margin:0;}
-#references-clients ul li p {margin:35px 0 0 0;font-style:italic;font-family:Lato,Verdana,Arial,sans-serif;text-decoration:none;color:#fff;font-weight:normal;font-size:16px;text-align:justify;}
-#references-clients ul li p:before {content:url('../img/paragraphe-before.png') no-repeat;float:left;display:block;height:80px;margin:0 5px 0 5px;}
-#references-clients ul li p:after {content:url('../img/paragraphe-after.png') no-repeat;float:right;display:block;margin-left:5px;}
-#references-clients ul li a {position:absolute;right:0;color:#fff;margin:10px 0;}
+#references-clients .carousel-customer-references {list-style-type:none;margin:70px 0 0 0;}
+#references-clients .carousel-customer-references .item {position:relative;}
+#references-clients .carousel-customer-references .item + .item {margin:0}
+#references-clients .carousel-customer-references .item img {float:left;margin:0 0 0 70px;}
+#references-clients .carousel-customer-references .item p {margin:35px 0 0 0;font-style:italic;font-family:Lato,Verdana,Arial,sans-serif;text-decoration:none;color:#fff;font-weight:normal;font-size:16px;text-align:justify;}
+#references-clients .carousel-customer-references .item p:before {content:url('../img/paragraphe-before.png') no-repeat;float:left;display:block;height:80px;margin:0 5px 0 5px;}
+#references-clients .carousel-customer-references .item p:after {content:url('../img/paragraphe-after.png') no-repeat;float:right;display:block;margin-left:5px;}
+#references-clients .carousel-customer-references .item a {position:absolute;right:0;color:#fff;margin:10px 0;}
 #references-clients a.button-plus-references {font-family:Raleway,Verdana,Arial,sans-serif;border:2px solid #fff;border-radius:20px;padding:10px;text-transform:uppercase;color:#fff;text-align:center;display:block;width:200px;margin:40px auto;}
 #references-clients a.button-plus-references:hover {text-decoration:none;}
