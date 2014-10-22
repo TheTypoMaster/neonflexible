@@ -117,14 +117,14 @@
 										{if (!$product->hasAttributes() OR (isset($add_prod_display) AND ($add_prod_display == 1))) AND $product->minimal_quantity == 1 AND $product->customizable != 2 AND !$PS_CATALOG_MODE}
 											{if ($product->quantity > 0 OR $product->allow_oosp)}
 												<a
-														class="button ajax_add_to_cart_button button-add-to-cart"
+														class="button ajax_add_to_cart_button button-add-to-cart gradient"
 														data-id-product="{$product->id}"
 														href="{$link->getPageLink('cart', true, NULL, "qty=1&amp;id_product={$product->id}&amp;token={$static_token}&amp;add")|escape:'html':'UTF-8'}"
 														title="{l s='Add to cart'}">
 													<span></span>{l s='Add to cart'}
 												</a>
 											{else}
-												<span class="ajax_add_to_cart_button button button-add-to-cart disabled">
+												<span class="ajax_add_to_cart_button button button-add-to-cart gradient disabled">
 													<span></span>{l s='Add to cart'}
 												</span>
 											{/if}
