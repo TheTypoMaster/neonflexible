@@ -4,9 +4,6 @@
 
 #layered_block_left ul {
 	padding-left: 0;
-	max-height: 120px;
-	overflow-y: auto;
-	overflow-x: hidden;
 	padding-left: 1px;
 	padding-right: 1px;
 }
@@ -171,7 +168,5 @@
 	font-weight: bold;
 }
 #layered_form div div ul {
-	max-height: 200px;
-	overflow-x: auto;
 	margin-top: 15px;
 }

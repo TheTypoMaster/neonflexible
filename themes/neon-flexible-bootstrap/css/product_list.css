@@ -73,3 +73,9 @@ ul#product_list.mode-list li.is_content_type .center_block_product_type .product
 ul#product_list.mode-list li.is_content_type .center_block_product_type .button-rose-and-grey {margin:50px 0 0 40px;}
 ul#product_list.mode-list li.is_content_type:hover .center_block_product_type .button-rose-and-grey {}
 ul#product_list.mode-list li.is_content_type .right_block_product_type {float:left;width:260px;border-left:1px solid #dbdbdb;padding:0 0 0 20px;height:130px;margin:40px 0;}
+
+
+
+/* Page Search */
+#search #center-column {width:100%;}
+#search ul#product_list {margin:0 auto;padding:0;width:860px;}

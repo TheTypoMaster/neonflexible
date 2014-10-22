@@ -30,26 +30,9 @@
 				{/if}
 			</span>
 		</h3>
-		{*include file="./product-compare.tpl"}
-		{if !isset($instantSearch) || (isset($instantSearch) && !$instantSearch)}
-			<div class="sortPagiBar clearfix">
-				{include file="$tpl_dir./product-sort.tpl"}
-			</div>
-		{/if}
-
-		{include file="$tpl_dir./product-list.tpl" products=$search_products}
-		{if !isset($instantSearch) || (isset($instantSearch) && !$instantSearch)}{include file="$tpl_dir./pagination.tpl"}{/if}
-		{include file="./product-compare.tpl"*}
-
-
 
 		{* Filtres haut *}
 		{include file="$tpl_dir./filter-top.tpl"}
-
-		{* colonne de gauche avec les filtres à facette *}
-		<div id="left-column" class="left">
-			{hook h="displayLeftColumn"}
-		</div>
 
 		<div id="center-column" class="left">
 
