@@ -69,7 +69,7 @@
 #product ul#more_info_tabs li {list-style-type:none;float:left;position:relative;height:45px;padding:0 10px;}
 #product ul#more_info_tabs li a {color:#777;font-size:14px;font-weight:normal;font-family:Lato,Verdana,Arial,sans-serif;}
 #product ul#more_info_tabs li a:hover {text-decoration:none;}
-#product ul#more_info_tabs li span a {color:#777;font-size:14px;font-weight:normal;font-family:Lato,Verdana,Arial,sans-serif;}
+#product ul#more_info_tabs li span a {color:#777;font-size:16px;font-weight:normal;font-family:Lato,Verdana,Arial,sans-serif;}
 #product ul#more_info_tabs li span {display:inline-block;vertical-align:middle;width:100%;line-height:33px;}
 #product ul#more_info_tabs li.active span {border-bottom:4px solid #55a323;}
 #product ul#more_info_tabs li.active a {color:#55a323;}
