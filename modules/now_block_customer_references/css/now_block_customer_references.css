@@ -10,3 +10,10 @@
 #references-clients .carousel-customer-references .item a {position:absolute;right:0;color:#fff;margin:10px 0;}
 #references-clients a.button-plus-references {font-family:Raleway,Verdana,Arial,sans-serif;border:2px solid #fff;border-radius:20px;padding:10px;text-transform:uppercase;color:#fff;text-align:center;display:block;width:200px;margin:40px auto;}
 #references-clients a.button-plus-references:hover {text-decoration:none;}
+
+/* Page "Nos références clients" */
+#module-now_block_customer_references-default ul.list-customer-reference {margin:0;padding:0;}
+#module-now_block_customer_references-default ul.list-customer-reference li {margin:0;padding:20px 0;list-style-type:none;border-top:1px solid #333;}
+#module-now_block_customer_references-default ul.list-customer-reference li img {float:left;margin:0 20px 0 0;}
+#module-now_block_customer_references-default ul.list-customer-reference li div {margin:30px 0;}
+
