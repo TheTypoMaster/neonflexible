@@ -11,8 +11,8 @@
 
 			<div class="desc"><p>{$product->description_short|truncate:550:'...'}</p></div>
 
-			{*<a href="#"><span class="fleche-tuto-gauche"></span></a>*}
-			<a href="#"><span class="fleche-tuto-droite"></span></a>
+			{*<span class="fleche-tuto-gauche"></span>*}
+			<span class="fleche-tuto-droite"></span>
 
 		</div>
 
