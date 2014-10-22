@@ -9,6 +9,9 @@
 						<li>
 							<img src="{$module_dir}{$aItem['file_name']}" alt="{$aItem['name']}" />
 							<p>{$aItem['description']}</p>
+							{if $aItem['link']}
+								<a href="{$aItem['link']}" target="_blank">{l s='En savoir plus'}</a>
+							{/if}
 						</li>
 					{/if}
 				{/foreach}
