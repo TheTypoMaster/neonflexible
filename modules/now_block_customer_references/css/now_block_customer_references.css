@@ -14,6 +14,7 @@
 /* Page "Nos références clients" */
 #module-now_block_customer_references-default ul.list-customer-reference {margin:0;padding:0;}
 #module-now_block_customer_references-default ul.list-customer-reference li {margin:0;padding:20px 0;list-style-type:none;border-top:1px solid #333;}
+#module-now_block_customer_references-default ul.list-customer-reference li:first-child {border-top:none;}
 #module-now_block_customer_references-default ul.list-customer-reference li img {float:left;margin:0 20px 0 0;}
 #module-now_block_customer_references-default ul.list-customer-reference li div {margin:30px 0;}
 
