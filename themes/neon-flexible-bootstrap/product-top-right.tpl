@@ -120,7 +120,7 @@
 		{if NowProductTypeProduct::isProductTyped($product->id, NowProductType::TYPE_SUR_COMMANDE)}
 			<div class="sur-commande">
 				<p>{l s='Pour une commande ou une information sur ce produit contactez-nous par téléphone au'} <strong>{Configuration::get('PS_SHOP_PHONE')}</strong> {l s='ou par mail en cliquant sur le bouton ci-dessous.'}</p>
-				<a href="{Context::getContext()->link->getPageLink('contact')}" class="button-rose-and-grey">{l s='Contactez-nous'}</a>
+				<a href="{Context::getContext()->link->getPageLink('contact')}" class="button-rose-contact-us"><span>@</span>{l s='Contactez-nous'}</a>
 			</div>
 		{else}
 			<div class="product-quantity">
@@ -151,7 +151,7 @@
 			</div>
 
 			<div id="add_to_cart" {if (!$allow_oosp && $product->quantity <= 0) OR !$product->available_for_order OR (isset($restricted_country_mode) AND $restricted_country_mode) OR $PS_CATALOG_MODE}style="display:none"{/if} class="buttons_bottom_block">
-				<p class="button-add-to-cart">
+				<p class="button-add-to-cart gradient">
 					<span></span>
 					<input type="submit" name="Submit" value="{l s='Add to cart'}" class="button-none" />
 				</p>

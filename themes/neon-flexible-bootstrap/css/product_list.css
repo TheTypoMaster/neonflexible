@@ -23,7 +23,7 @@ ul#product_list li .functional-buttons .compare a {color:#777;font-size:14px;fon
 ul#product_list li .functional-buttons .compare a:before {content:url('../img/theme/plus-compare.png');width:12px;height:12px;margin:0 5px 0 0;}
 ul#product_list li .button-add-to-cart {width:180px;height:37px;font-size:13px;line-height:37px;text-align:center;position:absolute;z-index:2}
 ul#product_list li .button-add-to-cart span {margin:6px;}
-
+ul#product_list li .button-add-to-cart.on-order span {background:url('../img/theme/commande-white.png') no-repeat;width:31px;margin:5px 0 6px 6px;}
 
 ul#product_list li.is_content_type {width:421px;padding:0;border:3px solid #fff;margin-right:8px;}
 ul#product_list li.is_content_type:before {border:1px solid #dbdbdb;width:416px;height:365px;background:transparent;position:absolute;margin:0;}
@@ -66,10 +66,16 @@ ul#product_list.mode-list li.is_content_type:before:hover {border:none;}
 ul#product_list.mode-list li.is_content_type .left_block_product_type2 {float:left;width:380px;padding:0 20px 0 20px;}
 ul#product_list.mode-list li.is_content_type .left_block_product_type {left:0;top:0;}
 ul#product_list.mode-list li.is_content_type .left_block_product_type img {display:none;height:218px;}
-ul#product_list.mode-list li.is_content_type .center_block_product_type {width:658px;height:218px;top: 0;}
+ul#product_list.mode-list li.is_content_type .center_block_product_type {width:658px;height:218px;top:0;}
 ul#product_list.mode-list li.is_content_type .center_block_product_type:before {margin:100px -10px;}
 ul#product_list.mode-list li.is_content_type .center_block_product_type .product_type_name {width:400px;margin:20px 0 10px 0px;}
 ul#product_list.mode-list li.is_content_type .center_block_product_type .product_type_product {width:400px;margin:10px 0 10px 0;}
 ul#product_list.mode-list li.is_content_type .center_block_product_type .button-rose-and-grey {margin:50px 0 0 40px;}
 ul#product_list.mode-list li.is_content_type:hover .center_block_product_type .button-rose-and-grey {}
 ul#product_list.mode-list li.is_content_type .right_block_product_type {float:left;width:260px;border-left:1px solid #dbdbdb;padding:0 0 0 20px;height:130px;margin:40px 0;}
+
+
+
+/* Page Search */
+#search #center-column {width:100%;}
+#search ul#product_list {margin:0 auto;padding:0;width:860px;}

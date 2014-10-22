@@ -91,40 +91,20 @@
 								{/if}
 							</div> <!-- end prices-container -->
 
-							<div class="product_desc">
-								{$product->description_short|strip_tags|truncate:60:'...'}
-							</div>
-
 							<div class="comparison_product_infos">
-								<p class="comparison_availability_statut">
-									{if !(($product->quantity <= 0 && !$product->available_later) OR ($product->quantity != 0 && !$product->available_now) OR !$product->available_for_order OR $PS_CATALOG_MODE)}
-										<span class="availability_label">{l s='Availability:'}</span>
-										<span class="availability_value"{if $product->quantity <= 0} class="warning-inline"{/if}>
-											{if $product->quantity <= 0}
-												{if $allow_oosp}
-													{$product->available_later|escape:'html':'UTF-8'}
-												{else}
-													{l s='This product is no longer in stock.'}
-												{/if}
-											{else}
-												{$product->available_now|escape:'html':'UTF-8'}
-											{/if}
-										</span>
-									{/if}
-								</p>
 								<div class="clearfix">
 									<div class="button-container">
 										{if (!$product->hasAttributes() OR (isset($add_prod_display) AND ($add_prod_display == 1))) AND $product->minimal_quantity == 1 AND $product->customizable != 2 AND !$PS_CATALOG_MODE}
 											{if ($product->quantity > 0 OR $product->allow_oosp)}
 												<a
-														class="button ajax_add_to_cart_button button-add-to-cart"
+														class="button ajax_add_to_cart_button button-add-to-cart gradient"
 														data-id-product="{$product->id}"
 														href="{$link->getPageLink('cart', true, NULL, "qty=1&amp;id_product={$product->id}&amp;token={$static_token}&amp;add")|escape:'html':'UTF-8'}"
 														title="{l s='Add to cart'}">
 													<span></span>{l s='Add to cart'}
 												</a>
 											{else}
-												<span class="ajax_add_to_cart_button button button-add-to-cart disabled">
+												<span class="ajax_add_to_cart_button button button-add-to-cart gradient disabled">
 													<span></span>{l s='Add to cart'}
 												</span>
 											{/if}

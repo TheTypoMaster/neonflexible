@@ -1,4 +1,5 @@
 #products-comparison td {text-align:center;vertical-align:middle;}
 #products-comparison td .product-image-block img {margin:0 auto;}
 #products-comparison td .button-container .lnk_view {margin:10px auto;}
+#products-comparison .prices-container {font-size:20px;font-weight:bold;margin:10px auto;}
 .icon-chevron-left:before {text-decoration:inherit;display:inline-block;padding:4px;speak:none;}
