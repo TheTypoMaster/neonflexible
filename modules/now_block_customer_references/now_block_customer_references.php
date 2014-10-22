@@ -57,7 +57,8 @@ class now_block_customer_references extends NowModule {
 	public function install()
 	{
 		$this->aConfigurationDefaultSettings = array(
-			'NOW_CUST_REFERENCE_ENABLE'	=> true
+			'NOW_CUST_REFERENCE_ENABLE'		=> true,
+			'NOW_CUST_REFERENCE_CAT_CMS'	=> 3
 		);
 
 		return parent::install() && $this->registerHook('rightColumn') && $this->registerHook('header');

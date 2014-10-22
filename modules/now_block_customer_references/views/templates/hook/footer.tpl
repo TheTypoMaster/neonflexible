@@ -21,7 +21,7 @@
 
 			<span class="clearBoth"></span>
 
-			<a href="#" class="button-plus-references" title="{l s='Voir plus de références' mod='now_block_customer_references'}">
+			<a href="{Context::getContext()->link->getCMSCategoryLink(Configuration::get('NOW_CUST_REFERENCE_CAT_CMS'))}" class="button-plus-references" title="{l s='Voir plus de références' mod='now_block_customer_references'}">
 				{l s='Voir plus de références' mod='now_block_customer_references'}
 			</a>
 
