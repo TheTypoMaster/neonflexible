@@ -31,7 +31,7 @@ class Autoupgrade extends Module
 		$this->name = 'autoupgrade';
 		$this->tab = 'administration';
 		$this->author = 'PrestaShop';
-		$this->version = '1.4.3';
+		$this->version = '1.4.4';
 		if (version_compare(_PS_VERSION_, '1.5.0.0 ', '>='))
 			$this->multishop_context = Shop::CONTEXT_ALL;
 
@@ -51,6 +51,9 @@ class Autoupgrade extends Module
 
 	public function install()
 	{
+		if (defined('_PS_HOST_MODE_') && _PS_HOST_MODE_)
+			return false;
+
 		/* Before creating a new tab "AdminSelfUpgrade" we need to remove any existing "AdminUpgrade" tab (present in v1.4.4.0 and v1.4.4.1) */
 		if ($id_tab = Tab::getIdFromClassName('AdminUpgrade'))
 		{
