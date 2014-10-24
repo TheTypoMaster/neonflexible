@@ -9,7 +9,7 @@ ul#product_list li .image {position:absolute;top:0;left:0;width:200px;height:175
 ul#product_list li .left_block {height:170px;}
 ul#product_list li .center_block {}
 ul#product_list li .right_block {}
-ul#product_list li .product_title {height:50px;color:#333;font-size:15px;line-height:15px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
+ul#product_list li .product_title {height:50px;color:#333;font-size:15px;line-height:15px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;text-align:left;}
 ul#product_list li .product_desc {display:none;}
 ul#product_list li .on_sale {}
 ul#product_list li .discount {}

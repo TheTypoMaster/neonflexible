@@ -3,6 +3,10 @@
 	{include file="$tpl_dir./breadcrumb.tpl"}
 {/if}
 
+{if !isset($noDescription)}
+	{assign var=noDescription value=false}
+{/if}
+
 
 {if isset($cms) && !isset($cms_category)}
 	<div id="bandeau-cms">
@@ -10,7 +14,10 @@
 
 			<div class="left">
 
-				<p class="titre-vert">{l s='Tutorial'}</p>
+				{if isset($cms->id_cms_category) && $cms->id_cms_category != 0}
+					{assign var=cms_category value=CMSCategory::getCmsCategoryObjectById($cms->id_cms_category)}
+					<p class="titre-vert">{$cms_category->name|escape:'htmlall':'UTF-8'}</p>
+				{/if}
 
 				<h1>
 					{$cms->meta_title|escape:'htmlall':'UTF-8'}
@@ -33,11 +40,14 @@
 		</div>
 	</div>
 
-	<div class="container">
-		<div class="rte{if $content_only} content_only{/if}">
-			{$cms->content}
+	{if !$noDescription}
+		<div class="container">
+			<div class="rte{if $content_only} content_only{/if}">
+				{$cms->content}
+			</div>
 		</div>
-	</div>
+	{/if}
+
 {elseif isset($cms_category)}
 	<div id="bandeau-cms">
 		<div class="container">

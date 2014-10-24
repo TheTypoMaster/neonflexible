@@ -18,3 +18,10 @@
 #module-now_block_customer_references-default ul.list-customer-reference li img {float:left;margin:0 20px 0 0;}
 #module-now_block_customer_references-default ul.list-customer-reference li div {margin:30px 0;}
 
+
+#module-now_block_customer_references-default #center_column #bandeau-cms {width:100%;background:#86b62c url('../img/fond-categorie-big.png') no-repeat;}
+#module-now_block_customer_references-default #center_column #bandeau-cms .left {width:520px;margin-right:20px;}
+#module-now_block_customer_references-default #center_column #bandeau-cms .left .titre-vert {letter-spacing:1.2px;color:#bddf60;font-size:33px;font-family:Raleway,Verdana,Arial,sans-serif;margin:50px 0 0 0;font-weight:300;text-transform:uppercase;}
+#module-now_block_customer_references-default #center_column #bandeau-cms .left h1 {color:#fff;font-size:37px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;margin:0;}
+#module-now_block_customer_references-default #center_column #bandeau-cms .left .desc p {font-family:Lato,Verdana,Arial,sans-serif;font-size:16px;color:#fff;text-shadow:0px 0px 3px rgba(0, 0, 0, 0.6);text-align:justify;}
+

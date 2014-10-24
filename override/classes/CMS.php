@@ -44,4 +44,19 @@ class CMS extends CMSCore {
 		return (bool)Db::getInstance()->executeS($sSQL);
 	}
 
+	/**
+	 * Retourne un objet CMS à partir de son id_cms
+	 * @param int $iIdsCms
+	 * @param int|null $iIdLang
+	 * @return CMS
+	 */
+	public static function getCmsObjectById($iIdsCms, $iIdLang = null) {
+
+		if (is_null($iIdLang)) {
+			$iIdLang = (int)Context::getContext()->language->id;
+		}
+
+		return new CMS($iIdsCms, $iIdLang);
+	}
+
 }
