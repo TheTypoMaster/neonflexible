@@ -21,8 +21,9 @@ ul#product_list li .note {margin:5px 0 10px 0;}
 ul#product_list li .functional-buttons {position:absolute;z-index:2;margin:40px 0 0 0;}
 ul#product_list li .functional-buttons .compare a {color:#777;font-size:14px;font-weight:normal;font-family:Lato,Verdana,Arial,sans-serif;}
 ul#product_list li .functional-buttons .compare a:before {content:url('../img/theme/plus-compare.png');width:12px;height:12px;margin:0 5px 0 0;}
-ul#product_list li .button-add-to-cart {width:180px;height:37px;font-size:13px;line-height:37px;text-align:center;position:absolute;z-index:2}
+ul#product_list li .button-add-to-cart {width:180px;height:37px;font-size:13px;line-height:37px;text-align:left;position:absolute;z-index:2}
 ul#product_list li .button-add-to-cart span {margin:6px;}
+ul#product_list li .button-add-to-cart.on-order {text-align:center;padding:0 5px 0 0;}
 ul#product_list li .button-add-to-cart.on-order span {background:url('../img/theme/commande-white.png') no-repeat;width:31px;margin:5px 0 6px 6px;}
 
 ul#product_list li.is_content_type {width:421px;padding:0;border:3px solid #fff;margin-right:8px;}

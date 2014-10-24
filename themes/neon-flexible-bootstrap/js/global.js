@@ -18,9 +18,9 @@ $(document).ready(function() {
 
 	if (typeof page_name != 'undefined' && !in_array(page_name, ['index', 'product']))
 	{
-		bindBlock();
+		//bindBlock();
 
- 		$(document).on('change', '.selectProductSort', function(e){
+		 $(document).on('change', '.selectProductSort', function(e){
 			if (typeof request != 'undefined' && request)
 				var requestSortProducts = request;
  			var splitData = $(this).val().split(':');
@@ -129,7 +129,7 @@ function blockHover(status)
 
 function quick_view()
 {
-	$(document).on('click', '.quick-view:visible', function(e) 
+	$(document).on('click', '.quick-view:visible', function(e)
 	{
 		e.preventDefault();
 		var url = this.rel;
@@ -158,12 +158,12 @@ function bindBlock()
 	else
 		$('.display').find('li.mode-block').addClass('selected');
 	
-	$(document).on('click', '.mode-block', function(e){
+	$(document).on('click', '.mode-block', function(e) {
 		e.preventDefault();
 		display('mode-block');
 	});
 
-	$(document).on('click', '.mode-list', function(e){
+	$(document).on('click', '.mode-list', function(e) {
 		e.preventDefault();
 		display('mode-list');
 	});
@@ -175,7 +175,7 @@ function display(view)
 	if (view == 'mode-list')
 	{
 		$('ul#product_list').removeClass('mode-block').addClass('mode-list row');
-		$('#product_list > li').removeClass('col-xs-12 col-sm-6 col-md-4').addClass('col-xs-12');
+		//$('#product_list > li').removeClass('col-xs-12 col-sm-6 col-md-4').addClass('col-xs-12');
 		$('#product_list').addClass('mode-' + $.totalStorage('category-mode'));
 
 		/*$('#product_list > li').each(function(index, element) {
@@ -214,11 +214,9 @@ function display(view)
 		$('.display').find('li.mode-list').addClass('selected');
 		$('.display').find('li.mode-block').removeAttr('class');
 		$.totalStorage('display', 'mode-list');
-	}
-	else 
-	{
+	} else {
 		$('ul#product_list').removeClass('mode-list').addClass('mode-block row');
-		$('#product_list > li').removeClass('col-xs-12').addClass('col-xs-12 col-sm-6 col-md-4');
+		//$('#product_list > li').removeClass('col-xs-12').addClass('col-xs-12 col-sm-6 col-md-4');
 		$('#product_list').addClass('mode-' + $.totalStorage('category-mode'));
 
 		/*$('#product_list > li').each(function(index, element) {
