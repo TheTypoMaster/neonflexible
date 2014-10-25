@@ -10,6 +10,10 @@
 #header .my_account a {color:#fff;font-size:13px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;line-height:36px;text-decoration:none;}
 #header .my_account:before {content:"|";padding:0 10px;color:#6d6969;}
 
+#header .logout {float:left;}
+#header .logout a {color:#fff;font-size:13px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;line-height:36px;text-decoration:none;}
+#header .logout:before {content:"|";padding:0 10px;color:#6d6969;}
+
 #header .languages {float:left;}
 #header .languages img {margin:0 3px;}
 #header .languages a {color:#fff;font-size:13px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;line-height:36px;text-decoration:none;}

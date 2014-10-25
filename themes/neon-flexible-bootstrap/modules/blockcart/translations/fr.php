@@ -43,6 +43,7 @@ $_MODULE['<{blockcart}neon-flexible-bootstrap>crossselling_10ac3d04253ef7e1ddc73
 $_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_9c9e312f81fab7dd636fe287d2b46975'] = 'Retour à la boutique';
 $_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_277f28c311392036a81c8a9beebea2a8'] = 'Espace Pro';
 $_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_d95cf4ab2cbf1dfb63f066b50558b07d'] = 'Mon compte';
+$_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_c87aacf5673fada1108c9f809d354311'] = 'Déconnexion';
 $_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_98b3009e61879600839e1ee486bb3282'] = 'Fermer la fenêtre';
 $_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_544c3bd0eac526113a9c66542be1e5bc'] = 'Produit ajouté au panier avec succès';
 $_MODULE['<{blockcart}neon-flexible-bootstrap>blockcart_694e8d1f2ee056f98ee488bdc4982d73'] = 'Quantité';

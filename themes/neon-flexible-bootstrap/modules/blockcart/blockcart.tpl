@@ -39,6 +39,14 @@
 				</a>
 			</div>
 
+			{if $is_logged}
+				<div class="logout">
+					<a href="{$link->getPageLink('index', true, NULL, "mylogout")|escape:'html':'UTF-8'}" title="{l s='Sign out' mod='blockcart'}">
+						{l s='Sign out' mod='blockcart'}
+					</a>
+				</div>
+			{/if}
+
 			<div class="shopping_cart">
 				<a href="{$link->getPageLink($order_process, true)|escape:'html':'UTF-8'}" title="{l s='View my shopping cart' mod='blockcart'}" rel="nofollow">
 					{l s='Cart' mod='blockcart'}
