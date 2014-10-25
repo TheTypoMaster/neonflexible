@@ -36,6 +36,21 @@ class CMSCategory extends CMSCategoryCore {
 		return (bool)Db::getInstance()->executeS($sSQL);
 	}
 
+	/**
+	 * Retourne un objet CMS category à partir de son id_cms
+	 * @param int $iIdsCmsCategory
+	 * @param int|null $iIdLang
+	 * @return CMS
+	 */
+	public static function getCmsCategoryObjectById($iIdsCmsCategory, $iIdLang = null) {
+
+		if (is_null($iIdLang)) {
+			$iIdLang = (int)Context::getContext()->language->id;
+		}
+
+		return new CMSCategory($iIdsCmsCategory, $iIdLang);
+	}
+
 }
 
 

@@ -1,8 +1,10 @@
-
+{assign var=cms value=CMS::getCmsObjectById(Configuration::get('NOW_CUST_REFERENCE_CMS_ID'))}
+{capture name=path}
+	{$cms->meta_title}
+{/capture}
+{include file="$tpl_dir./cms.tpl" cms=$cms noDescription=true noBorder=true}
 
 <div class="container">
-
-	<p class="titre-size-1">{l s='Nos Références clients'}</p>
 
 	<ul class="list-customer-reference">
 		{foreach $nowBlockCustomerReferencesList as $nowBlockCustomerReferences}

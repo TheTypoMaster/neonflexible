@@ -3,7 +3,7 @@
 	<div class="carousel-slick-category">
 
 		{foreach $aSlides as $oCategory key=k name=foo}
-			<div class="item {if $smarty.foreach.foo.first} active{/if} couleur_metier_{$k} gradient">
+			<div class="item {if $smarty.foreach.foo.first} active{/if} couleur_metier_{$k} gradient" style="display:none;">
 
 				<a href="{Context::getContext()->link->getCategoryLink($oCategory)}" title="{$oCategory->name}">
 					{$oCategory->name}

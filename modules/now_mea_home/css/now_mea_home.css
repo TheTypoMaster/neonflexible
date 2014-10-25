@@ -2,17 +2,19 @@
 #mea-home ul {width:100%;margin:0;padding:0;}
 
 /* Block petit */
-#mea-home ul li {width:380px;height:255px;list-style-type:none;float:left;margin:0 8px 10px 8px;position:relative;}
-#mea-home ul li img {float:left;margin-right:10px;}
-#mea-home ul li div {margin-left:150px;}
+#mea-home ul li {width:350px;height:255px;list-style-type:none;float:left;margin:0 0 10px 60px;position:relative;}
+#mea-home ul li img {float:left;margin:5px 0 0 0;}
+#mea-home ul li div {margin-left:180px;}
 #mea-home ul li .titre {font-family:Raleway,Verdana,Arial,sans-serif;font-size:16px;color:#333;font-weight:bold;}
-#mea-home ul li .desc {font-family:Lato,Verdana,Arial,sans-serif;font-size:14px;color:#777;text-overflow:ellipsis;word-wrap:break-word;overflow:hidden;max-height:60px;}
-#mea-home ul li .price {font-family:Lato,Verdana,Arial,sans-serif;font-size:21px;color:#333;}
-#mea-home ul li .button-add-to-cart {position:absolute;z-index:2}
+#mea-home ul li .desc {font-family:Lato,Verdana,Arial,sans-serif;font-size:14px;color:#777;text-overflow:ellipsis;word-wrap:break-word;overflow:hidden;height:80px;}
+#mea-home ul li .price {font-family:Lato,Verdana,Arial,sans-serif;font-size:21px;color:#333;font-weight:bold;}
+#mea-home ul li .button-add-to-cart {position:absolute;z-index:2;width:180px;font-size:13px;height:40px;line-height:40px;}
+#mea-home ul li .button-add-to-cart span {margin:6px 0 6px 6px;}
 #mea-home ul li .link {width:100%;height:100%;display:block;top:0;position:absolute;z-index:1}
 
 /* Bloc moyen */
-#mea-home ul li.first {width:306px;height:500px;margin-left:0;}
+#mea-home ul li.first {width:306px;height:500px;margin:0;}
 #mea-home ul li.first img {border:3px solid #dbdbdb;float:none;}
-#mea-home ul li.first div {margin-left:0;}
+#mea-home ul li.first div {margin:10px 0 0 0;}
+#mea-home ul li.first div .desc {height:47px;}
 

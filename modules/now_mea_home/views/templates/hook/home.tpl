@@ -32,7 +32,7 @@
 							<p class="titre">{$oProduct->name|escape:'html':'UTF-8'}</p>
 
 							{* Courte description *}
-							<p class="desc">{$oProduct->description_short|strip_tags:false|truncate:130:'...'}</p>
+							<p class="desc">{$oProduct->description_short|strip_tags:false|truncate:110:'...'}</p>
 
 							{* Prix *}
 							{if isset($oProduct->show_price) && $oProduct->show_price && !isset($restricted_country_mode)}
