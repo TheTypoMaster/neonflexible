@@ -51,9 +51,9 @@
 							{if (isset($add_prod_display) && ($add_prod_display == 1)) && $oProduct->available_for_order && !isset($restricted_country_mode) && $oProduct->minimal_quantity <= 1 && $oProduct->customizable != 2 && (!($PS_CATALOG_MODE))}
 								{if (Product::isAvailableWhenOutOfStock($oProduct->out_of_stock) || $oProduct->quantity > 0)}
 									{if isset($static_token)}
-										<a class="button-add-to-cart gradient ajax_add_to_cart_button" rel="ajax_id_product_{$oProduct->id|intval}" href="{$link->getPageLink('cart',false, NULL, "add=1&amp;id_product={$oProduct->id|intval}&amp;token={$static_token}", false)|escape:'html'}" title="{l s='Add to cart' mod='now_mea_home'}"><span></span>{l s='Add to cart' mod='now_mea_home'}</a>
+										<a class="button-add-to-cart gradient ajax_add_to_cart_button" data-id-product="{$oProduct->id|intval}" href="{$link->getPageLink('cart',false, NULL, "add=1&amp;id_product={$oProduct->id|intval}&amp;token={$static_token}", false)|escape:'html'}" title="{l s='Add to cart' mod='now_mea_home'}"><span></span>{l s='Add to cart' mod='now_mea_home'}</a>
 									{else}
-										<a class="button-add-to-cart gradient ajax_add_to_cart_button" rel="ajax_id_product_{$oProduct->id|intval}" href="{$link->getPageLink('cart',false, NULL, "add=1&amp;id_product={$oProduct->id|intval}", false)|escape:'html'}" title="{l s='Add to cart' mod='now_mea_home'}"><span></span>{l s='Add to cart' mod='now_mea_home'}</a>
+										<a class="button-add-to-cart gradient ajax_add_to_cart_button" data-id-product="{$oProduct->id|intval}" href="{$link->getPageLink('cart',false, NULL, "add=1&amp;id_product={$oProduct->id|intval}", false)|escape:'html'}" title="{l s='Add to cart' mod='now_mea_home'}"><span></span>{l s='Add to cart' mod='now_mea_home'}</a>
 									{/if}
 								{else}
 									<span class="button-add-to-cart gradient disabled"><span></span>{l s='Add to cart' mod='now_mea_home'}</span><br />
