@@ -54,6 +54,7 @@ form.std div.uploader {width:300px;float:left;}
 .radio-inline .checker span, .checkbox .checker span {	top:0px;}
 .radio-inline div.radio, .checkbox div.radio {display:inline-block;}
 .radio-inline div.radio span, .checkbox div.radio span {float:left;top:0px;}
+.checkbox label {color: #777777;}
 
 /* Tableau */
 .table-bordered {border:1px solid #ddd;background:#fff;}

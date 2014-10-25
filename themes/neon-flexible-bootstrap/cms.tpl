@@ -9,36 +9,39 @@
 
 
 {if isset($cms) && !isset($cms_category)}
-	<div id="bandeau-cms">
-		<div class="container">
 
-			<div class="left">
+	{if ($content_only == 0)}
+		<div id="bandeau-cms">
+			<div class="container">
 
-				{if isset($cms->id_cms_category) && $cms->id_cms_category != 0}
-					{assign var=cms_category value=CMSCategory::getCmsCategoryObjectById($cms->id_cms_category)}
-					<p class="titre-vert">{$cms_category->name|escape:'htmlall':'UTF-8'}</p>
+				<div class="left">
+
+					{if isset($cms->id_cms_category) && $cms->id_cms_category != 0}
+						{assign var=cms_category value=CMSCategory::getCmsCategoryObjectById($cms->id_cms_category)}
+						<p class="titre-vert">{$cms_category->name|escape:'htmlall':'UTF-8'}</p>
+					{/if}
+
+					<h1>
+						{$cms->meta_title|escape:'htmlall':'UTF-8'}
+					</h1>
+
+					<div class="desc"><p>{$cms->meta_description|truncate:550:'...'}</p></div>
+
+				</div>
+
+				{if file_exists('_PS_ROOT_DIR_'|constant|cat:'/images/cms/'|cat:$cms->id|cat:'.jpg')}
+					<div class="right">
+						<img src="/images/cms/{$cms->id|intval}.jpg" alt="{$cms->meta_title|escape:'htmlall':'UTF-8'}" title="{$cms->meta_title|escape:'htmlall':'UTF-8'}" id="cmsImage" />
+					</div>
+				{elseif file_exists('_PS_ROOT_DIR_'|constant|cat:'/images/cms/default.jpg')}
+					<div class="right">
+						<img src="/images/cms/default.jpg" alt="{$cms->meta_title|escape:'htmlall':'UTF-8'}" title="{$cms->meta_title|escape:'htmlall':'UTF-8'}" id="cmsImage" />
+					</div>
 				{/if}
 
-				<h1>
-					{$cms->meta_title|escape:'htmlall':'UTF-8'}
-				</h1>
-
-				<div class="desc"><p>{$cms->meta_description|truncate:550:'...'}</p></div>
-
 			</div>
-
-			{if file_exists('_PS_ROOT_DIR_'|constant|cat:'/images/cms/'|cat:$cms->id|cat:'.jpg')}
-				<div class="right">
-					<img src="/images/cms/{$cms->id|intval}.jpg" alt="{$cms->meta_title|escape:'htmlall':'UTF-8'}" title="{$cms->meta_title|escape:'htmlall':'UTF-8'}" id="cmsImage" />
-				</div>
-			{elseif file_exists('_PS_ROOT_DIR_'|constant|cat:'/images/cms/default.jpg')}
-				<div class="right">
-					<img src="/images/cms/default.jpg" alt="{$cms->meta_title|escape:'htmlall':'UTF-8'}" title="{$cms->meta_title|escape:'htmlall':'UTF-8'}" id="cmsImage" />
-				</div>
-			{/if}
-
 		</div>
-	</div>
+	{/if}
 
 	{if !$noDescription}
 		<div class="container">
