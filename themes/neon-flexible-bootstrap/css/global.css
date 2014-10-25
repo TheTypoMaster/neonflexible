@@ -169,7 +169,20 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 .button-rose-contact-us:before {background:none;border:1px solid #ff5db1;content:"";display:block;position:absolute;top:1px;left:1px;right:1px;bottom:1px;pointer-events:none;border-radius:5px;}
 .button-rose-contact-us:hover {text-decoration:none;color:#fff;}
 .button-rose-contact-us span {font-size:25px;margin:0 10px;line-height:25px;}
-
+.button.button-medium {font-size:17px;line-height:21px;color:white;padding:0;font-weight:bold;
+	background:#ff5db1; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmNWRiMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZjAxN2MiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background:-moz-linear-gradient(top,  #ff5db1 0%, #ef017c 100%); /* FF3.6+ */
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff5db1), color-stop(100%,#ef017c)); /* Chrome,Safari4+ */
+	background:-webkit-linear-gradient(top,  #ff5db1 0%,#ef017c 100%); /* Chrome10+,Safari5.1+ */
+	background:-o-linear-gradient(top,  #ff5db1 0%,#ef017c 100%); /* Opera 11.10+ */
+	background:-ms-linear-gradient(top,  #ff5db1 0%,#ef017c 100%); /* IE10+ */
+	background:linear-gradient(to bottom,  #ff5db1 0%,#ef017c 100%); /* W3C */
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5db1', endColorstr='#ef017c',GradientType=0 ); /* IE6-8 */
+	border:1px solid;border-color:#ff5db1 #ef017c #ff5db1 #ef017c;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.button.button-medium span {display:block;padding:10px 10px 10px 14px;border:1px solid;border-color:#ff5db1;}
+.button.button-medium span i.right {margin-right:0;margin-left:9px;}
 
 /* Fil ariane */
 #breadcrumb {margin:10px 0;font-family:Lato,Verdana,Arial,sans-serif;font-size:14px;color:#777;line-height:27px;border-bottom:1px solid #d4d4d4;padding:0 0 15px 0;}
