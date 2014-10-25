@@ -2,7 +2,7 @@
 <module>
 	<name>now_block_customer_references</name>
 	<displayName><![CDATA[Gestion du bloc des r&eacute;f&eacute;rences clients]]></displayName>
-	<version><![CDATA[1]]></version>
+	<version><![CDATA[1.1]]></version>
 	<description><![CDATA[Ajoute un bloc de gestion des r&eacute;f&eacute;rences clients dans le footer.]]></description>
 	<author><![CDATA[NinjaOfWeb]]></author>
 	<tab><![CDATA[front_office_features]]></tab>

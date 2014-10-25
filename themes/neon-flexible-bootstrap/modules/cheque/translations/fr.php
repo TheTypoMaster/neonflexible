@@ -50,3 +50,5 @@ $_MODULE['<{cheque}neon-flexible-bootstrap>payment_return_ffd2478830ca2f519f7fe7
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_return_0db71da7150c27142eef9d22b843b4a9'] = 'Pour toute question ou information complémentaire merci de contacter notre';
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_return_decce112a9e64363c997b04aa71b7cb8'] = 'support client';
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_return_9bdf695c5a30784327137011da6ef568'] = 'Nous avons rencontré un problème avec votre commande, veuillez contacter notre support client';
+$_MODULE['<{cheque}neon-flexible-bootstrap>payment_execution_0881a11f7af33bc1b43e437391129d66'] = 'S\'il vous plaît, veuillez valider votre commande en cliquant sur \"Je confirme ma commande\".';
+$_MODULE['<{cheque}neon-flexible-bootstrap>payment_f05fd8637f8a6281466a507fcb56baec'] = 'Payer par chèque.';

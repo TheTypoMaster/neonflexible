@@ -2,7 +2,7 @@
 
 	<div class="header_right">
 
-		{if in_array(Context::getContext()->controller->php_self, array("authentication", "order"))}
+		{if in_array(Context::getContext()->controller->php_self, array('authentication', 'order', 'order-confirmation'))}
 			<div class="shop-return">
 				<a href="{Context::getContext()->link->getPageLink('index')}">{l s='Retour à la boutique' mod='blockcart'}</a>
 			</div>

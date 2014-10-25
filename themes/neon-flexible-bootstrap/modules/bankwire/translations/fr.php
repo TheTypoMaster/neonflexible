@@ -51,3 +51,5 @@ $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_19c419a8a4f1cd621853
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_b9a1cae09e5754424e33764777cfcaa0'] = 'Votre commande sera expédiée dès réception de votre virement.';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_ca7e41a658753c87973936d7ce2429a8'] = 'Pour toute question ou information complémentaire, veuillez contacter notre';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_d15feee53d81ea16269e54d4784fa123'] = 'Nous avons rencontré un problème avec votre commande. Merci de prendre contact avec notre support client';
+$_MODULE['<{bankwire}neon-flexible-bootstrap>payment_execution_99227bacb2b4dfa29ce1701ac265a923'] = 'Paiement par virement bancaire.';
+$_MODULE['<{bankwire}neon-flexible-bootstrap>payment_execution_b939c4940deb5588f47ee8f12c61f11f'] = 'S\'il vous plaît, veuillez valider votre commande en cliquant sur \"Je confirme ma commande\".';

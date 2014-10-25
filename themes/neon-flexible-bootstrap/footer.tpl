@@ -3,7 +3,7 @@
 
 			{$HOOK_RIGHT_COLUMN}
 
-			{if !in_array(Context::getContext()->controller->php_self, array('authentication', 'order'))}
+			{if !in_array(Context::getContext()->controller->php_self, array('authentication', 'order', 'order-confirmation'))}
 				<footer>
 
 					<div class="container">{$HOOK_FOOTER}</div>
