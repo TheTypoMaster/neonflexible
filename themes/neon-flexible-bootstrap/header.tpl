@@ -22,7 +22,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="{$favicon_url}?{$img_update_time}" />
 
 	<!-- Bootstrap -->
-	<link href="{$css_dir}bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="{$css_dir}bootstrap/bootstrap.css" rel="stylesheet" media="screen">
 	<link href="{$css_dir}example/carousel.css" rel="stylesheet" media="screen">
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
