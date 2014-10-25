@@ -31,3 +31,6 @@ $('.carousel-slick-category').slick({
 		}
 	]
 });
+
+
+$('.slick-slide').show();
