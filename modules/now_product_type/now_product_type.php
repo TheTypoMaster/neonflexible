@@ -9,8 +9,11 @@
 require_once (_PS_MODULE_DIR_.'now_product_type/classes/Module.php');
 require_once (_PS_MODULE_DIR_.'now_product_type/classes/NowProductType.php');
 require_once (_PS_MODULE_DIR_.'now_product_type/classes/NowProductTypeProduct.php');
+require_once (_PS_MODULE_DIR_.'now_product_type/classes/NowIdeasOrTips.php');
 
 class now_product_type extends NowModule {
+
+	private static $aNowIdeasOrTips = array();
 
 	public function __construct()
 	{
@@ -82,7 +85,9 @@ class now_product_type extends NowModule {
 				$this->registerHook('actionProductDelete') &&
 				$this->registerHook('displayBackOfficeHeader') &&
 				$this->registerHook('actionProductListOverride') &&
-				$this->registerHook('displayProductButtons');
+				$this->registerHook('displayProductButtons') &&
+				$this->registerHook('displayProductTab') &&
+				$this->registerHook('displayProductTabContent');
 	}
 
 	/**
@@ -193,6 +198,52 @@ class now_product_type extends NowModule {
 	 */
 	public function hookDisplayProductButtons($aParams) {
 		// Permet de tester si un produit est typer "sur commande" pour gérer le bouton directement dans le template
+	}
+
+	/**
+	 * Hook displayProductTab
+	 * @param $aParams
+	 * @return bool
+	 */
+	public function hookDisplayProductTab($aParams) {
+		if (Validate::isLoadedObject($aParams['product'])) {
+			$aNowIdeasOrTips = self::getIdeasOrTipsByproductId($aParams['product']->id);
+
+			$this->context->smarty->assign(array(
+				'aNowIdeasOrTips' => $aNowIdeasOrTips
+			));
+
+			return $this->context->smarty->fetch($this->module_dir.'views/templates/hook/product-tab.tpl');
+		}
+	}
+
+	/**
+	 * Hook displayProductTabContent
+	 * @param $aParams
+	 * @return bool
+	 */
+	public function hookDisplayProductTabContent($aParams) {
+		if (Validate::isLoadedObject($aParams['product'])) {
+			$aNowIdeasOrTips = self::getIdeasOrTipsByproductId($aParams['product']->id);
+
+			$this->context->smarty->assign(array(
+				'aNowIdeasOrTips' => $aNowIdeasOrTips
+			));
+
+			return $this->context->smarty->fetch($this->module_dir.'views/templates/hook/product-tab-content.tpl');
+		}
+	}
+
+	/**
+	 * @param $iIdProduct
+	 * @return mixed
+	 */
+	private static function getIdeasOrTipsByproductId($iIdProduct) {
+		if (!array_key_exists($iIdProduct, self::$aNowIdeasOrTips)) {
+			self::$aNowIdeasOrTips[$iIdProduct] = NowIdeasOrTips::getItems($iIdProduct, Context::getcontext()->language->id);
+		}
+
+		return self::$aNowIdeasOrTips[$iIdProduct];
 	}
 
 
