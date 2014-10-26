@@ -1,5 +1,5 @@
 
-{if isset($aNowIdeasOrTips) && count(aNowIdeasOrTips) > 0}
+{if isset($aNowIdeasOrTips) && count($aNowIdeasOrTips) > 0 && $aNowIdeasOrTips}
 	<div class="product-tab">
 		<h2 id="ideasOrTips">{l s='Idées & conseils'}</h2>
 		<ul class="product-accessories">
