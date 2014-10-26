@@ -28,6 +28,7 @@ $_MODULE['<{statsforecast}prestashop>statsforecast_844c29394eea07066bb2efefc3578
 $_MODULE['<{statsforecast}prestashop>statsforecast_88183b946cc5f0e8c96b2e66e1c74a7e'] = 'Inconnu';
 $_MODULE['<{statsforecast}prestashop>statsforecast_f1dd68fb6a00d3e4d7f751deacde995d'] = 'Répartition par langue';
 $_MODULE['<{statsforecast}prestashop>statsforecast_4994a8ffeba4ac3140beb89e8d41f174'] = 'Langue';
+$_MODULE['<{statsforecast}prestashop>statsforecast_37be07209f53a5d636d5c904ca9ae64c'] = 'Pourcentage';
 $_MODULE['<{statsforecast}prestashop>statsforecast_699aed86dada6ca01ef74013a4464066'] = 'Evolution';
 $_MODULE['<{statsforecast}prestashop>statsforecast_07aa83862ec591697b4325b66d36a78b'] = 'Répartition par zones';
 $_MODULE['<{statsforecast}prestashop>statsforecast_ec0fc0100c4fc1ce4eea230c3dc10360'] = 'Indéfini';

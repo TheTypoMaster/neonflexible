@@ -206,9 +206,7 @@ $_MODULE['<{autoupgrade}prestashop>adminselfupgrade_7f034b1e149cf228e8dfc51dcab6
 $_MODULE['<{autoupgrade}prestashop>adminselfupgrade_22f1a4b9e524d8fabb6f058bf3bb5a9f'] = 'Ces fichiers seront modifiés';
 $_MODULE['<{autoupgrade}prestashop>adminselfupgrade_8c4e88bd9187e21ab076fb9a92343e8b'] = 'Cacher les options';
 $_MODULE['<{autoupgrade}prestashop>adminselfupgrade_e3da2aa16a78084597288574550e7f39'] = 'Les champs lien et hash ne doivent pas être vides';
-$_MODULE['<{autoupgrade}prestashop>adminselfupgrade_e9f6d5b5c45e6c971620523b98c5ac32'] = 'Vous devez entrer le numéro de version correspondant à l\'archive.';
 $_MODULE['<{autoupgrade}prestashop>adminselfupgrade_4f926e733c4f9087633a1be8c59cbd5e'] = 'Aucune archive n\'a été sélectionnée.';
-$_MODULE['<{autoupgrade}prestashop>adminselfupgrade_34b7e02033f3d68357f3161ae9cc606f'] = 'Il est nécessaire d\'entrer le numéro de version associé au répertoire';
 $_MODULE['<{autoupgrade}prestashop>adminselfupgrade_9311ab161709b4f5efe9c6ff08b33699'] = '%s n\'est pas un fichier';
 $_MODULE['<{autoupgrade}prestashop>adminselfupgrade_0f9f19a4f5e93b3d5a94405e3af32a28'] = 'Impossible d\'ouvrir le fichier zip %s';
 $_MODULE['<{autoupgrade}prestashop>autoupgrade_cade82f9025d8fb9d2af869af19c72b8'] = 'Impossible de créer le menu \"AdminSelfUpgrade\"';
