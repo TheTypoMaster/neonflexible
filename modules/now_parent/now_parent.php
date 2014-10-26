@@ -6,7 +6,7 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_parent/classes/Module.php');
+require_once (_PS_MODULE_DIR_ . 'now_parent/classes/Module.php');
 
 class now_parent extends NowModule {
 

@@ -6,7 +6,7 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_seo_links/classes/Module.php');
+require_once (_PS_MODULE_DIR_ . 'now_seo_links/classes/Module.php');
 require_once (_PS_MODULE_DIR_.'now_seo_links/classes/NowLanguageLink.php');
 
 class now_seo_links extends NowModule {

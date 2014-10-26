@@ -6,7 +6,7 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_slideshow/now_slideshow.php');
+require_once (_PS_MODULE_DIR_ . 'now_slideshow/now_slideshow.php');
 
 class AdminSlideshowController extends ModuleAdminController {
 	public $module;

@@ -6,7 +6,7 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_block_customer_references/now_block_customer_references.php');
+require_once (_PS_MODULE_DIR_ . 'now_block_customer_references/now_block_customer_references.php');
 
 class AdminBlockCustomerReferencesController extends ModuleAdminController {
 	public $module;

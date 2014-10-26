@@ -6,7 +6,7 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_parent/now_parent.php');
+require_once (_PS_MODULE_DIR_ . 'now_parent/now_parent.php');
 
 class AdminParentNinjaOfWebController extends ModuleAdminController {
 	public $module;

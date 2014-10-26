@@ -6,7 +6,7 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_block_cms_footer/now_block_cms_footer.php');
+require_once (_PS_MODULE_DIR_ . 'now_block_cms_footer/now_block_cms_footer.php');
 
 class AdminBlockFooterCmsController extends ModuleAdminController {
 	public $module;

@@ -6,9 +6,9 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_block_cms_footer/classes/Module.php');
-include (_PS_MODULE_DIR_.'now_block_cms_footer/classes/NowBlockFooterCms.php');
-include (_PS_MODULE_DIR_.'now_block_cms_footer/classes/NowBlockFooterCmsColumn.php');
+require_once (_PS_MODULE_DIR_ . 'now_block_cms_footer/classes/Module.php');
+require_once (_PS_MODULE_DIR_ . 'now_block_cms_footer/classes/NowBlockFooterCms.php');
+require_once (_PS_MODULE_DIR_ . 'now_block_cms_footer/classes/NowBlockFooterCmsColumn.php');
 
 class now_block_cms_footer extends NowModule {
 

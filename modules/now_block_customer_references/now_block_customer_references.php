@@ -6,8 +6,8 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_block_customer_references/classes/Module.php');
-include (_PS_MODULE_DIR_.'now_block_customer_references/classes/NowBlockCustomerReferences.php');
+require_once (_PS_MODULE_DIR_ . 'now_block_customer_references/classes/Module.php');
+require_once (_PS_MODULE_DIR_ . 'now_block_customer_references/classes/NowBlockCustomerReferences.php');
 
 class now_block_customer_references extends NowModule {
 

@@ -6,8 +6,8 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_block_presentation/classes/Module.php');
-include (_PS_MODULE_DIR_.'now_block_presentation/classes/NowBlockPresentation.php');
+require_once (_PS_MODULE_DIR_ . 'now_block_presentation/classes/Module.php');
+require_once (_PS_MODULE_DIR_ . 'now_block_presentation/classes/NowBlockPresentation.php');
 
 class now_block_presentation extends NowModule {
 

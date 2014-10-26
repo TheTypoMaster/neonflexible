@@ -6,8 +6,8 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_category_slide/classes/Module.php');
-include (_PS_MODULE_DIR_.'now_category_slide/classes/NowCategorySlide.php');
+require_once (_PS_MODULE_DIR_ . 'now_category_slide/classes/Module.php');
+require_once (_PS_MODULE_DIR_ . 'now_category_slide/classes/NowCategorySlide.php');
 
 class now_category_slide extends NowModule {
 

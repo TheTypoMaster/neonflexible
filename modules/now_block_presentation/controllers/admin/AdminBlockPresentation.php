@@ -6,7 +6,7 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_block_presentation/now_block_presentation.php');
+require_once (_PS_MODULE_DIR_ . 'now_block_presentation/now_block_presentation.php');
 
 class AdminBlockPresentationController extends ModuleAdminController {
 	public $module;
