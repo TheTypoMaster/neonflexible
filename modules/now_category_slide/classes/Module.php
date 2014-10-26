@@ -53,13 +53,9 @@ if (!class_exists('NowModule'))
 
 		public function install()
 		{
-			$this->database_version = Configuration::get(strtoupper($this->name . '_key_install'));
-
 			$this->installSqlFiles();
 			$this->installModuleTabs();
 			$this->installConfigurationSettings();
-
-			Configuration::updateValue(strtoupper($this->name . '_key_install'), $this->version);
 
 			return parent::install();
 		}
@@ -95,7 +91,7 @@ if (!class_exists('NowModule'))
 
 		public function executeSqlFile($sVersion, $sFileName) {
 
-			if (Tools::version_compare($this->version, $this->database_version, '>')) {
+			if (Tools::version_compare($sVersion, $this->version, '=')) {
 
 				$sFilePath = $this->module_dir.'sql'.DIRECTORY_SEPARATOR;
 
@@ -112,7 +108,6 @@ if (!class_exists('NowModule'))
 					if (!Db::getInstance()->execute(trim($query)))
 						return false;
 
-				Configuration::updateValue(strtoupper($this->name.'_key'), (int)$sVersion);
 				return true;
 			}
 

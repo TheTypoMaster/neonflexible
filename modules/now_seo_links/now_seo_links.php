@@ -58,7 +58,7 @@ class now_seo_links extends NowModule {
 	 */
 	public function setSqlFileToInstall() {
 		$this->aSqlFileToInstall = array(
-			1.0 => 'install.sql'
+			'1.0' => 'install.sql'
 		);
 	}
 

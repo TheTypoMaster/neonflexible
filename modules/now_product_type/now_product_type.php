@@ -16,7 +16,7 @@ class now_product_type extends NowModule {
 	{
 		$this->name				= 'now_product_type';
 		$this->tab				= 'front_office_features';
-		$this->version			= 2.0;
+		$this->version			= 2.1;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
@@ -56,8 +56,9 @@ class now_product_type extends NowModule {
 	 */
 	public function setSqlFileToInstall() {
 		$this->aSqlFileToInstall = array(
-			1.0 => 'install.sql',
-			1.2 => 'install-1.2.sql',
+			'1.0' => 'install.sql',
+			'1.2' => 'install-1.2.sql',
+			'2.1' => 'install-2.1.sql'
 		);
 	}
 

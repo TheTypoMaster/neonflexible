@@ -47,7 +47,7 @@ class now_block_reinsurance extends NowModule {
 	 */
 	public function setSqlFileToInstall() {
 		$this->aSqlFileToInstall = array(
-			1.0 => 'install.sql'
+			'1.0' => 'install.sql'
 		);
 	}
 

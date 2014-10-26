@@ -48,7 +48,7 @@ class now_block_cms_footer extends NowModule {
 	 */
 	public function setSqlFileToInstall() {
 		$this->aSqlFileToInstall = array(
-			1.0 => 'install.sql'
+			'1.0' => 'install.sql'
 		);
 	}
 
