@@ -63,35 +63,4 @@ class NowProduct {
 		return Db::getInstance()->getRow($sql);
 	}
 
-	/**
-	 * Delete product accessories
-	 *
-	 * @param $iIdProduct
-	 * @return bool Deletion result
-	 */
-	public static function deleteAccessories($iIdProduct) {
-		return Db::getInstance()->execute('
-			DELETE FROM `'._DB_PREFIX_.'accessory`
-			WHERE `id_product_1` = '.(int)$iIdProduct
-		);
-	}
-
-	/**
-	 * Link accessories with product
-	 *
-	 * @param $iIdProduct
-	 * @param $aAccessories
-	 * @return bool
-	 */
-	public static function changeAccessories($iIdProduct, $aAccessories) {
-		$bResult = true;
-		foreach ($aAccessories as $iIdAccessory) {
-			$bResult &= Db::getInstance()->insert('accessory', array(
-				'id_product_1' => (int)$iIdProduct,
-				'id_product_2' => (int)$iIdAccessory
-			));
-		}
-		return $bResult;
-	}
-
 }
