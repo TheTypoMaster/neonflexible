@@ -6,9 +6,9 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_product_type/classes/Module.php');
-include (_PS_MODULE_DIR_.'now_product_type/classes/NowProductType.php');
-include (_PS_MODULE_DIR_.'now_product_type/classes/NowProductTypeProduct.php');
+require_once (_PS_MODULE_DIR_.'now_product_type/classes/Module.php');
+require_once (_PS_MODULE_DIR_.'now_product_type/classes/NowProductType.php');
+require_once (_PS_MODULE_DIR_.'now_product_type/classes/NowProductTypeProduct.php');
 
 class now_product_type extends NowModule {
 
@@ -16,14 +16,14 @@ class now_product_type extends NowModule {
 	{
 		$this->name				= 'now_product_type';
 		$this->tab				= 'front_office_features';
-		$this->version			= 1.4;
+		$this->version			= 2.0;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
 		parent::__construct();
 
 		$this->displayName = $this->l('Manage Product Type');
-		$this->description = $this->l('Manage types of yours products');
+		$this->description = $this->l('Manage types of yours products, add a tip block and ideas and import product types');
 
 		if ($this->active) {
 			$this->module_dir = _PS_MODULE_DIR_.$this->name.DIRECTORY_SEPARATOR;
@@ -36,9 +36,17 @@ class now_product_type extends NowModule {
 	 */
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
-			'AdminProductType' => array(
-				'parent' => 'AdminTools',
+			'AdminNowProductType' => array(
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Manage Product Type')
+			),
+			'AdminNowImportProductType' => array(
+				'parent' => 'AdminParentNinjaOfWeb',
+				'name' => $this->l('Import Product Type')
+			),
+			'AdminNowImportTipsAndIdeas' => array(
+				'parent' => 'AdminParentNinjaOfWeb',
+				'name' => $this->l('Import tips and ideas')
 			)
 		);
 	}
@@ -59,7 +67,12 @@ class now_product_type extends NowModule {
 	public function install()
 	{
 		$this->aConfigurationDefaultSettings = array(
-
+			'NOW_IMPORT_PRO_TYPE_FILE'			=> '.csv',
+			'NOW_IMPORT_PRO_TYPE_SEPARATOR'		=> ';',
+			'NOW_IMPORT_PRO_TYPE_DELIMITER'		=> 2,
+			'NOW_IMPORT_PRO_TYPE_DECIMAL'		=> '.',
+			'NOW_IMPORT_PRO_TYPE_CONVERT_UTF8'	=> 1,
+			'NOW_IMPORT_PRO_TYPE_PAGINATION'	=> 50
 		);
 
 		return parent::install() &&
