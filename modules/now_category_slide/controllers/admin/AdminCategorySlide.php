@@ -6,7 +6,7 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_category_slide/now_category_slide.php');
+require_once (_PS_MODULE_DIR_ . 'now_category_slide/now_category_slide.php');
 
 class AdminCategorySlideController extends ModuleAdminController {
 	public $module;

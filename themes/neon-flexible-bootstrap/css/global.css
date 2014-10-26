@@ -235,6 +235,8 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 .button.button-small span i {vertical-align:0px;margin-right:5px;}
 .button.button-small span i.right {margin-right:0;margin-left:5px;}
 .button.button-small span:hover {background:#575757;border-color:#303030 #303030 #666666 #444444;}
+.button-grey-and-green {font-family:Raleway,Verdana,Arial,sans-serif;border:2px solid #ccc;border-radius:20px;padding:10px;text-transform:uppercase;color:#569e24;font-weight:bold;text-align:center;display:block;width:280px;background:#fff;margin:40px auto;}
+.button-grey-and-green:hover {text-decoration:none;color:#569e24;border:2px solid #569e24;}
 
 /* Fil ariane */
 #breadcrumb {margin:10px 0;font-family:Lato,Verdana,Arial,sans-serif;font-size:14px;color:#777;line-height:27px;border-bottom:1px solid #d4d4d4;padding:0 0 15px 0;}

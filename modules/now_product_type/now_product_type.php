@@ -6,24 +6,27 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_product_type/classes/Module.php');
-include (_PS_MODULE_DIR_.'now_product_type/classes/NowProductType.php');
-include (_PS_MODULE_DIR_.'now_product_type/classes/NowProductTypeProduct.php');
+require_once (_PS_MODULE_DIR_.'now_product_type/classes/Module.php');
+require_once (_PS_MODULE_DIR_.'now_product_type/classes/NowProductType.php');
+require_once (_PS_MODULE_DIR_.'now_product_type/classes/NowProductTypeProduct.php');
+require_once (_PS_MODULE_DIR_.'now_product_type/classes/NowIdeasOrTips.php');
 
 class now_product_type extends NowModule {
+
+	private static $aNowIdeasOrTips = array();
 
 	public function __construct()
 	{
 		$this->name				= 'now_product_type';
 		$this->tab				= 'front_office_features';
-		$this->version			= 1.4;
+		$this->version			= 2.1;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
 		parent::__construct();
 
 		$this->displayName = $this->l('Manage Product Type');
-		$this->description = $this->l('Manage types of yours products');
+		$this->description = $this->l('Manage types of yours products, add a tip block and ideas and import product types');
 
 		if ($this->active) {
 			$this->module_dir = _PS_MODULE_DIR_.$this->name.DIRECTORY_SEPARATOR;
@@ -36,9 +39,17 @@ class now_product_type extends NowModule {
 	 */
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
-			'AdminProductType' => array(
-				'parent' => 'AdminTools',
+			'AdminNowProductType' => array(
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Manage Product Type')
+			),
+			'AdminNowImportProductType' => array(
+				'parent' => 'AdminParentNinjaOfWeb',
+				'name' => $this->l('Import Product Type')
+			),
+			'AdminNowImportTipsAndIdeas' => array(
+				'parent' => 'AdminParentNinjaOfWeb',
+				'name' => $this->l('Import tips and ideas')
 			)
 		);
 	}
@@ -48,8 +59,9 @@ class now_product_type extends NowModule {
 	 */
 	public function setSqlFileToInstall() {
 		$this->aSqlFileToInstall = array(
-			1.0 => 'install.sql',
-			1.2 => 'install-1.2.sql',
+			'1.0' => 'install.sql',
+			'1.2' => 'install-1.2.sql',
+			'2.1' => 'install-2.1.sql'
 		);
 	}
 
@@ -59,7 +71,12 @@ class now_product_type extends NowModule {
 	public function install()
 	{
 		$this->aConfigurationDefaultSettings = array(
-
+			'NOW_IMPORT_PRO_TYPE_FILE'			=> '.csv',
+			'NOW_IMPORT_PRO_TYPE_SEPARATOR'		=> ';',
+			'NOW_IMPORT_PRO_TYPE_DELIMITER'		=> 2,
+			'NOW_IMPORT_PRO_TYPE_DECIMAL'		=> '.',
+			'NOW_IMPORT_PRO_TYPE_CONVERT_UTF8'	=> 1,
+			'NOW_IMPORT_PRO_TYPE_PAGINATION'	=> 50
 		);
 
 		return parent::install() &&
@@ -68,7 +85,9 @@ class now_product_type extends NowModule {
 				$this->registerHook('actionProductDelete') &&
 				$this->registerHook('displayBackOfficeHeader') &&
 				$this->registerHook('actionProductListOverride') &&
-				$this->registerHook('displayProductButtons');
+				$this->registerHook('displayProductButtons') &&
+				$this->registerHook('displayProductTab') &&
+				$this->registerHook('displayProductTabContent');
 	}
 
 	/**
@@ -179,6 +198,52 @@ class now_product_type extends NowModule {
 	 */
 	public function hookDisplayProductButtons($aParams) {
 		// Permet de tester si un produit est typer "sur commande" pour gérer le bouton directement dans le template
+	}
+
+	/**
+	 * Hook displayProductTab
+	 * @param $aParams
+	 * @return bool
+	 */
+	public function hookDisplayProductTab($aParams) {
+		if (Validate::isLoadedObject($aParams['product'])) {
+			$aNowIdeasOrTips = self::getIdeasOrTipsByproductId($aParams['product']->id);
+
+			$this->context->smarty->assign(array(
+				'aNowIdeasOrTips' => $aNowIdeasOrTips
+			));
+
+			return $this->context->smarty->fetch($this->module_dir.'views/templates/hook/product-tab.tpl');
+		}
+	}
+
+	/**
+	 * Hook displayProductTabContent
+	 * @param $aParams
+	 * @return bool
+	 */
+	public function hookDisplayProductTabContent($aParams) {
+		if (Validate::isLoadedObject($aParams['product'])) {
+			$aNowIdeasOrTips = self::getIdeasOrTipsByproductId($aParams['product']->id);
+
+			$this->context->smarty->assign(array(
+				'aNowIdeasOrTips' => $aNowIdeasOrTips
+			));
+
+			return $this->context->smarty->fetch($this->module_dir.'views/templates/hook/product-tab-content.tpl');
+		}
+	}
+
+	/**
+	 * @param $iIdProduct
+	 * @return mixed
+	 */
+	private static function getIdeasOrTipsByproductId($iIdProduct) {
+		if (!array_key_exists($iIdProduct, self::$aNowIdeasOrTips)) {
+			self::$aNowIdeasOrTips[$iIdProduct] = NowIdeasOrTips::getItems($iIdProduct, Context::getcontext()->language->id);
+		}
+
+		return self::$aNowIdeasOrTips[$iIdProduct];
 	}
 
 

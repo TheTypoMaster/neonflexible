@@ -6,8 +6,8 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_block_reinsurance/classes/Module.php');
-include (_PS_MODULE_DIR_.'now_block_reinsurance/classes/NowBlockReinsurance.php');
+require_once (_PS_MODULE_DIR_ . 'now_block_reinsurance/classes/Module.php');
+require_once (_PS_MODULE_DIR_ . 'now_block_reinsurance/classes/NowBlockReinsurance.php');
 
 class now_block_reinsurance extends NowModule {
 
@@ -36,7 +36,7 @@ class now_block_reinsurance extends NowModule {
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
 			'AdminBlockReinsurance' => array(
-				'parent' => 'AdminTools',
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Manage block reinsurance')
 			)
 		);
@@ -47,7 +47,7 @@ class now_block_reinsurance extends NowModule {
 	 */
 	public function setSqlFileToInstall() {
 		$this->aSqlFileToInstall = array(
-			1.0 => 'install.sql'
+			'1.0' => 'install.sql'
 		);
 	}
 

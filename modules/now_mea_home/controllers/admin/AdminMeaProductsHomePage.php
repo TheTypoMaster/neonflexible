@@ -6,7 +6,7 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_mea_home/now_mea_home.php');
+require_once (_PS_MODULE_DIR_ . 'now_mea_home/now_mea_home.php');
 
 class AdminMeaProductsHomePageController extends ModuleAdminController {
 	public $module;

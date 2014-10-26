@@ -6,8 +6,8 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_block_presentation/classes/Module.php');
-include (_PS_MODULE_DIR_.'now_block_presentation/classes/NowBlockPresentation.php');
+require_once (_PS_MODULE_DIR_ . 'now_block_presentation/classes/Module.php');
+require_once (_PS_MODULE_DIR_ . 'now_block_presentation/classes/NowBlockPresentation.php');
 
 class now_block_presentation extends NowModule {
 
@@ -36,7 +36,7 @@ class now_block_presentation extends NowModule {
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
 			'AdminBlockPresentation' => array(
-				'parent' => 'AdminTools',
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Manage block presentation')
 			)
 		);
@@ -47,7 +47,7 @@ class now_block_presentation extends NowModule {
 	 */
 	public function setSqlFileToInstall() {
 		$this->aSqlFileToInstall = array(
-			1.0 => 'install.sql'
+			'1.0' => 'install.sql'
 		);
 	}
 

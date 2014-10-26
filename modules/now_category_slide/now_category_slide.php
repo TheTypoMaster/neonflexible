@@ -6,8 +6,8 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_category_slide/classes/Module.php');
-include (_PS_MODULE_DIR_.'now_category_slide/classes/NowCategorySlide.php');
+require_once (_PS_MODULE_DIR_ . 'now_category_slide/classes/Module.php');
+require_once (_PS_MODULE_DIR_ . 'now_category_slide/classes/NowCategorySlide.php');
 
 class now_category_slide extends NowModule {
 
@@ -36,7 +36,7 @@ class now_category_slide extends NowModule {
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
 			'AdminCategorySlide' => array(
-				'parent' => 'AdminTools',
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Manage Category Slide')
 			)
 		);
@@ -47,7 +47,7 @@ class now_category_slide extends NowModule {
 	 */
 	public function setSqlFileToInstall() {
 		$this->aSqlFileToInstall = array(
-			1.0 => 'install.sql'
+			'1.0' => 'install.sql'
 		);
 	}
 

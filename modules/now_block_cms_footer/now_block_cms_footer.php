@@ -6,9 +6,9 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_block_cms_footer/classes/Module.php');
-include (_PS_MODULE_DIR_.'now_block_cms_footer/classes/NowBlockFooterCms.php');
-include (_PS_MODULE_DIR_.'now_block_cms_footer/classes/NowBlockFooterCmsColumn.php');
+require_once (_PS_MODULE_DIR_ . 'now_block_cms_footer/classes/Module.php');
+require_once (_PS_MODULE_DIR_ . 'now_block_cms_footer/classes/NowBlockFooterCms.php');
+require_once (_PS_MODULE_DIR_ . 'now_block_cms_footer/classes/NowBlockFooterCmsColumn.php');
 
 class now_block_cms_footer extends NowModule {
 
@@ -37,7 +37,7 @@ class now_block_cms_footer extends NowModule {
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
 			'AdminBlockFooterCms' => array(
-				'parent' => 'AdminTools',
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Manage Footer')
 			)
 		);
@@ -48,7 +48,7 @@ class now_block_cms_footer extends NowModule {
 	 */
 	public function setSqlFileToInstall() {
 		$this->aSqlFileToInstall = array(
-			1.0 => 'install.sql'
+			'1.0' => 'install.sql'
 		);
 	}
 

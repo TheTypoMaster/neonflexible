@@ -6,7 +6,7 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_seo_links/classes/Module.php');
+require_once (_PS_MODULE_DIR_ . 'now_seo_links/classes/Module.php');
 require_once (_PS_MODULE_DIR_.'now_seo_links/classes/NowLanguageLink.php');
 
 class now_seo_links extends NowModule {
@@ -47,7 +47,7 @@ class now_seo_links extends NowModule {
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
 			'AdminLanguageLink' => array(
-				'parent' => 'AdminParentLocalization',
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Languages Link')
 			)
 		);
@@ -58,7 +58,7 @@ class now_seo_links extends NowModule {
 	 */
 	public function setSqlFileToInstall() {
 		$this->aSqlFileToInstall = array(
-			1.0 => 'install.sql'
+			'1.0' => 'install.sql'
 		);
 	}
 

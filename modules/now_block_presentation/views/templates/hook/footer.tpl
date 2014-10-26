@@ -17,7 +17,7 @@
 
 			<span class="clearBoth"></span>
 
-			<a href="{Context::getContext()->link->getCMSLink(Configuration::get('NOW_PRESENTATION_CMS_ID'))}" class="button-plus" title="{l s='EN SAVOIR PLUS sur neon flexible' mod='now_block_presentation'}">
+			<a href="{Context::getContext()->link->getCMSLink(Configuration::get('NOW_PRESENTATION_CMS_ID'))}" class="button-grey-and-green" title="{l s='EN SAVOIR PLUS sur neon flexible' mod='now_block_presentation'}">
 				{l s='EN SAVOIR PLUS sur neon flexible' mod='now_block_presentation'}
 			</a>
 

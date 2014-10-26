@@ -10,6 +10,3 @@
 {/if}
 
 <div class="leadin">{block name="leadin"}{/block}</div>
-
-
-{$toto}

@@ -121,12 +121,24 @@ class NowProductType extends ObjectModel {
 	}
 
 	/**
-	 * Permet de récupèrer le type de produit
+	 * Permet de récupèrer le type de produit à partir de son ID
 	 * @param int $iIdProductType
 	 * @param string $lang
 	 * @return array
 	 */
 	public static function getObjectByIdProductType($iIdProductType, $lang = null) {
 		return new NowProductType($iIdProductType, $lang);
+	}
+
+	/**
+	 * Permet de récupèrer le type de produit à partir de l'id du produit
+	 * @param int $iIdProduct
+	 * @param string $lang
+	 * @return array
+	 */
+	public static function getObjectByIdProduct($iIdProduct, $lang = null) {
+		$oNowProductTypeProduct = NowProductTypeProduct::getObjectByProductId($iIdProduct, $lang);
+
+		return new NowProductType($oNowProductTypeProduct->id_now_product_type, $lang);
 	}
 }

@@ -19,6 +19,8 @@ $_MODULE['<{blocksocial}prestashop>blocksocial_76abe3a162f22f63fae44d60fbe8f11b'
 $_MODULE['<{blocksocial}prestashop>blocksocial_e158a81859319b5e442bc490b0e81af3'] = 'Votre compte officiel Pinterest.';
 $_MODULE['<{blocksocial}prestashop>blocksocial_815f12ace0a25af8c12e036810002683'] = 'Vimeo URL :';
 $_MODULE['<{blocksocial}prestashop>blocksocial_cba991994fe165dfcf4f5bd256bbe119'] = 'Votre compte Officiel Vimeo.';
+$_MODULE['<{blocksocial}prestashop>blocksocial_130bab903955b2f6047a0db82f460386'] = 'Instagram URL :';
+$_MODULE['<{blocksocial}prestashop>blocksocial_d55a27c3408d38f3137182c89b69a7a7'] = 'Votre compte Officiel Instagram.';
 $_MODULE['<{blocksocial}prestashop>blocksocial_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';
 $_MODULE['<{blocksocial}prestashop>blocksocial_d918f99442796e88b6fe5ad32c217f76'] = 'Nous suivre';
 $_MODULE['<{blocksocial}prestashop>blocksocial_d85544fce402c7a2a96a48078edaf203'] = 'Facebook';
@@ -28,3 +30,4 @@ $_MODULE['<{blocksocial}prestashop>blocksocial_8dd1bae8da2e2408210d0656fbe6b7d1'
 $_MODULE['<{blocksocial}prestashop>blocksocial_5b2c8bfd1bc974966209b7be1cb51a72'] = 'Google+';
 $_MODULE['<{blocksocial}prestashop>blocksocial_86709a608bd914b28221164e6680ebf7'] = 'Pinterest';
 $_MODULE['<{blocksocial}prestashop>blocksocial_15db599e0119be476d71bfc1fda72217'] = 'Vimeo';
+$_MODULE['<{blocksocial}prestashop>blocksocial_55f015a0c5605702f913536afe70cfb0'] = 'Instagram';

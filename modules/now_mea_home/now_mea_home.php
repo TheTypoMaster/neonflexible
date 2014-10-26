@@ -6,8 +6,8 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_mea_home/classes/Module.php');
-include (_PS_MODULE_DIR_.'now_mea_home/classes/NowMeaHome.php');
+require_once (_PS_MODULE_DIR_ . 'now_mea_home/classes/Module.php');
+require_once (_PS_MODULE_DIR_ . 'now_mea_home/classes/NowMeaHome.php');
 
 class now_mea_home extends NowModule {
 
@@ -36,7 +36,7 @@ class now_mea_home extends NowModule {
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
 			'AdminMeaProductsHomePage' => array(
-				'parent' => 'AdminTools',
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Highlighted')
 			)
 		);
@@ -47,7 +47,7 @@ class now_mea_home extends NowModule {
 	 */
 	public function setSqlFileToInstall() {
 		$this->aSqlFileToInstall = array(
-			1.0 => 'install.sql'
+			'1.0' => 'install.sql'
 		);
 	}
 
