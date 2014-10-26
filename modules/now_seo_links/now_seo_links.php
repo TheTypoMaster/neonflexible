@@ -47,7 +47,7 @@ class now_seo_links extends NowModule {
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
 			'AdminLanguageLink' => array(
-				'parent' => 'AdminParentLocalization',
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Languages Link')
 			)
 		);

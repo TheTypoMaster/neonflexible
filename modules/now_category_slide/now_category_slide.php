@@ -36,7 +36,7 @@ class now_category_slide extends NowModule {
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
 			'AdminCategorySlide' => array(
-				'parent' => 'AdminTools',
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Manage Category Slide')
 			)
 		);

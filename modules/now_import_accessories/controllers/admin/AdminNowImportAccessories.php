@@ -40,8 +40,8 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 		$this->sUploadDirectory = $this->module->module_dir.'uploads/';
 
 		$this->fields_options = array(
-			'import_stock' => array(
-				'title' =>	$this->module->l('Manage settings of import stock', 'AdminNowImportAccessories'),
+			'import_accessories' => array(
+				'title' =>	$this->module->l('Manage settings of import accessories', 'AdminNowImportAccessories'),
 				'fields' =>	array(
 					'NOW_IMPORT_ACCES_FILE' => array(
 						'title' => $this->module->l('Choose your file type', 'AdminNowImportAccessories'),

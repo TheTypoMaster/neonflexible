@@ -36,7 +36,7 @@ class now_block_customer_references extends NowModule {
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
 			'AdminBlockCustomerReferences' => array(
-				'parent' => 'AdminTools',
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Manage block references')
 			)
 		);

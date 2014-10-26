@@ -36,7 +36,7 @@ class now_block_presentation extends NowModule {
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
 			'AdminBlockPresentation' => array(
-				'parent' => 'AdminTools',
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Manage block presentation')
 			)
 		);

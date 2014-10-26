@@ -36,7 +36,7 @@ class now_mea_home extends NowModule {
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
 			'AdminMeaProductsHomePage' => array(
-				'parent' => 'AdminTools',
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Highlighted')
 			)
 		);

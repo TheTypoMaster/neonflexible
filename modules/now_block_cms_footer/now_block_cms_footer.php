@@ -37,7 +37,7 @@ class now_block_cms_footer extends NowModule {
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
 			'AdminBlockFooterCms' => array(
-				'parent' => 'AdminTools',
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Manage Footer')
 			)
 		);

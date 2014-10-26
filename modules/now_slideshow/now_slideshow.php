@@ -36,7 +36,7 @@ class now_slideshow extends NowModule {
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
 			'AdminSlideshow' => array(
-				'parent' => 'AdminTools',
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Manage Slideshow')
 			)
 		);

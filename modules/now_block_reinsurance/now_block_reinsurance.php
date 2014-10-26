@@ -36,7 +36,7 @@ class now_block_reinsurance extends NowModule {
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
 			'AdminBlockReinsurance' => array(
-				'parent' => 'AdminTools',
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Manage block reinsurance')
 			)
 		);

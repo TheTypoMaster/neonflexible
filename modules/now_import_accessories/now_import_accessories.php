@@ -35,7 +35,7 @@ class now_import_accessories extends NowModule {
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
 			'AdminNowImportAccessories' => array(
-				'parent' => 'AdminTools',
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Import accessories')
 			)
 		);

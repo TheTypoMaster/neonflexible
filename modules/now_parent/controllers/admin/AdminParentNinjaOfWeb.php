@@ -6,14 +6,14 @@
  * Mail: contact@ninja-of-web.fr
  */
 
-include (_PS_MODULE_DIR_.'now_product_type/now_product_type.php');
+include (_PS_MODULE_DIR_.'now_parent/now_parent.php');
 
-class AdminProductTypeController extends ModuleAdminController {
+class AdminParentNinjaOfWebController extends ModuleAdminController {
 	public $module;
 
 	public function __construct()
 	{
-		$this->module = new now_product_type();
+		$this->module = new now_parent();
 
 		parent::__construct();
 	}

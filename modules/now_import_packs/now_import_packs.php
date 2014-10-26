@@ -35,7 +35,7 @@ class now_import_packs extends NowModule {
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
 			'AdminNowImportPacks' => array(
-				'parent' => 'AdminTools',
+				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Import packs of products')
 			)
 		);
