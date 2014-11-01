@@ -21,10 +21,10 @@ class AdminLanguageLinkController extends ModuleAdminController {
 		$this->addRowAction('edit');
 
 		$this->fields_list = array(
-			'id_now_language_link'	=> array('title' => $this->l('ID'), 'align' => 'center', 'class' => 'fixed-width-xs'),
-			'name'				=> array('title' => $this->l('Lang'), 'width' => 'auto'),
-			'folder_name'			=> array('title' => $this->l('Folder name'), 'width' => 'auto'),
-			'date_upd'				=> array('title' => $this->l('Updated Date'), 'width' => 'auto'),
+			'id_now_language_link'	=> array('title' => $this->module->l('ID', 'AdminLanguageLink'), 'align' => 'center', 'class' => 'fixed-width-xs'),
+			'name'				=> array('title' => $this->module->l('Lang', 'AdminLanguageLink'), 'width' => 'auto'),
+			'folder_name'			=> array('title' => $this->module->l('Folder name', 'AdminLanguageLink'), 'width' => 'auto'),
+			'date_upd'				=> array('title' => $this->module->l('Updated Date', 'AdminLanguageLink'), 'width' => 'auto'),
 		);
 
 		$this->_select	= ' l.`name`';
@@ -40,13 +40,13 @@ class AdminLanguageLinkController extends ModuleAdminController {
 	{
 		$this->fields_form = array(
 			'legend' => array(
-				'title' => $this->l('URL language'),
+				'title' => $this->module->l('URL language', 'AdminLanguageLink'),
 				'icon' => 'icon-globe'
 			),
 			'input' => array(
 				array(
 					'type' => 'text',
-					'label' => $this->l('Folder name'),
+					'label' => $this->module->l('Folder name', 'AdminLanguageLink'),
 					'name' => 'folder_name'
 				),
 				array(
@@ -55,7 +55,7 @@ class AdminLanguageLinkController extends ModuleAdminController {
 				),
 			),
 			'submit' => array(
-				'title' => $this->l('Save')
+				'title' => $this->module->l('Save', 'AdminLanguageLink')
 			)
 		);
 
