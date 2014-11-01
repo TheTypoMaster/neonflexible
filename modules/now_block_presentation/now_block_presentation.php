@@ -15,7 +15,7 @@ class now_block_presentation extends NowModule {
 	{
 		$this->name				= 'now_block_presentation';
 		$this->tab				= 'front_office_features';
-		$this->version			= 1.0;
+		$this->version			= 1.1;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
@@ -58,7 +58,7 @@ class now_block_presentation extends NowModule {
 	{
 		$this->aConfigurationDefaultSettings = array(
 			'NOW_PRESENTATION_ENABLE'	=> true,
-			'NOW_PRESENTATION_CMS_ID'	=> 4,
+			'NOW_PRESENTATION_CMS_ID'	=> 4
 		);
 
 		return parent::install() && $this->registerHook('rightColumn') && $this->registerHook('header');

@@ -4,12 +4,12 @@
 		<div class="container">
 
 			<ul>
-				{foreach $aItems as $key => $aItem}
-					{if $aItem['active'] && $key < 2}
-						<li class="float-{$aItem['float']|default:'left'}">
-							<img src="{$module_dir}{$aItem['file_name']}" alt="{$aItem['name']}" />
-							<p class="titre">{$aItem['name']}</p>
-							<p class="desc">{$aItem['description']}</p>
+				{foreach $aItems as $position => $oNowBlockPresentation}
+					{if $oNowBlockPresentation->active}
+						<li class="float-{$oNowBlockPresentation->float|default:'left'}">
+							<img src="{$oNowBlockPresentation->getImageLink()}" alt="{$oNowBlockPresentation->name}" />
+							<p class="titre">{$oNowBlockPresentation->name}</p>
+							<p class="desc">{$oNowBlockPresentation->description}</p>
 						</li>
 					{/if}
 				{/foreach}

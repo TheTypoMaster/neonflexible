@@ -1,6 +1,8 @@
 <?php
 
 
+define('_PS_IMG_DIR_BP', _PS_IMG_DIR_ . 'now_block_presentation');
+
 class NowBlockPresentation extends ObjectModel {
 	public $id;
 
@@ -25,9 +27,6 @@ class NowBlockPresentation extends ObjectModel {
 	/** @var string Object last modification date */
 	public $date_upd;
 
-	/** @var string */
-	public $file_name;
-
 	/** @var string Name */
 	public $name;
 
@@ -37,6 +36,8 @@ class NowBlockPresentation extends ObjectModel {
 	/** @var string string used in rewrited URL */
 	public $link;
 
+	protected $image_dir = _PS_IMG_DIR_BP;
+
 	/**
 	 * @see ObjectModel::$definition
 	 */
@@ -44,9 +45,9 @@ class NowBlockPresentation extends ObjectModel {
 		'table' => 'now_block_presentation',
 		'primary' => 'id_now_block_presentation',
 		'multilang' => true,
-		'multilang_shop' => true,
+		//'multilang_shop' => true,
 		'fields' => array(
-			'id_shop'			=> array('type' => self::TYPE_INT,		'validate' => 'isUnsignedInt', 'required' => true),
+			'id_shop'			=> array('type' => self::TYPE_INT),
 			'active' 			=> array('type' => self::TYPE_BOOL,		'validate' => 'isBool', 'required' => true),
 			'position' 			=> array('type' => self::TYPE_INT),
 			'float' 			=> array('type' => self::TYPE_STRING,	'validate' => 'isCatalogName', 'required' => true, 'size' => 10),
@@ -54,12 +55,127 @@ class NowBlockPresentation extends ObjectModel {
 			'date_upd' 			=> array('type' => self::TYPE_DATE,		'validate' => 'isDate'),
 
 			// Lang fields
-			'name' 				=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCatalogName', 'required' => true, 'size' => 255),
-			'description' 		=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCatalogName', 'required' => true, 'size' => 255),
-			'link'				=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isLinkRewrite', 'required' => true, 'size' => 255),
-			'file_name'			=> array('type' => self::TYPE_STRING, 'validate' => 'isFileName'),
+			'name' 				=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCatalogName', 'required' => true),
+			'description' 		=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCatalogName', 'required' => true),
+			'link'				=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCatalogName')
 		)
 	);
+
+	public function getFields()
+	{
+		$fields = parent::getFields();
+
+		if ($this->id_shop)
+			$fields['id_shop'] = (int)$this->id_shop;
+		else
+			$fields['id_shop'] = Context::getContext()->shop->id;
+
+		return $fields;
+	}
+
+	/**
+	 * Moves a bloc presentation
+	 *
+	 * @param boolean $way Up (1) or Down (0)
+	 * @param integer $position
+	 * @return boolean Update result
+	 */
+	public function updatePosition($way, $position)
+	{
+		if (!$res = Db::getInstance()->executeS('
+			SELECT `id_now_block_presentation`, `position`
+			FROM `'._DB_PREFIX_.'now_block_presentation`
+			ORDER BY `position` ASC'
+		))
+			return false;
+
+		foreach ($res as $aNowBlocPresentation)
+			if ((int)$aNowBlocPresentation['id_now_block_presentation'] == (int)$this->id)
+				$moved_NowBlocPresentation = $aNowBlocPresentation;
+
+		if (!isset($moved_NowBlocPresentation) || !isset($position))
+			return false;
+
+		$sql1 = '
+			UPDATE `'._DB_PREFIX_.'now_block_presentation` SET `position`= `position` '.($way ? '- 1' : '+ 1').' WHERE `position`
+			'.($way
+				? '> '.(int)$moved_NowBlocPresentation['position'].' AND `position` <= '.(int)$position
+				: '< '.(int)$moved_NowBlocPresentation['position'].' AND `position` >= '.(int)$position
+			);
+
+		$sql2 = '
+			UPDATE `'._DB_PREFIX_.'now_block_presentation` SET `position` = '.(int)$position.' WHERE `id_now_block_presentation` = '.(int)$moved_NowBlocPresentation['id_now_block_presentation'];
+
+		return (
+			Db::getInstance()->execute($sql1) &&
+			Db::getInstance()->execute($sql2)
+		);
+	}
+
+	/**
+	 * Reorders positions.
+	 * Called after deleting a carrier.
+	 *
+	 * @return bool $return
+	 */
+	public static function cleanPositions()
+	{
+		$return = true;
+
+		$sql = '
+		SELECT `id_now_block_presentation`
+		FROM `'._DB_PREFIX_.'now_block_presentation`
+		ORDER BY `position` ASC';
+		$result = Db::getInstance()->executeS($sql);
+
+		$i = 0;
+		foreach ($result as $value)
+			$return = Db::getInstance()->execute('
+			UPDATE `'._DB_PREFIX_.'now_block_presentation`
+			SET `position` = '.(int)$i++.'
+			WHERE `id_now_block_presentation` = '.(int)$value['id_now_block_presentation']);
+		return $return;
+	}
+
+	/**
+	 * Gets the highest carrier position
+	 *
+	 * @return int $position
+	 */
+	public static function getHigherPosition()
+	{
+		$sql = 'SELECT MAX(`position`)
+				FROM `'._DB_PREFIX_.'now_block_presentation`';
+		$position = DB::getInstance()->getValue($sql);
+		return (is_numeric($position)) ? $position : -1;
+	}
+
+	/**
+	 * @param bool $autodate
+	 * @param bool $null_values
+	 * @return bool
+	 * @throws PrestaShopException
+	 */
+	public function add($autodate = true, $null_values = false)
+	{
+		if ($this->position <= 0)
+			$this->position = NowBlockPresentation::getHigherPosition() + 1;
+
+		if (!parent::add($autodate, $null_values) || !Validate::isLoadedObject($this))
+			return false;
+
+		return true;
+	}
+
+	/**
+	 * @see ObjectModel::delete()
+	 */
+	public function delete() {
+		if (!parent::delete())
+			return false;
+		NowBlockPresentation::cleanPositions();
+
+	}
 
 	/**
 	 * Lists of items
@@ -77,15 +193,38 @@ class NowBlockPresentation extends ObjectModel {
 		}
 
 		$sSQL = '
-			SELECT r.*, rl.*
+			SELECT r.`id_now_block_presentation`
 			FROM `'._DB_PREFIX_.'now_block_presentation` r
 			'.Shop::addSqlAssociation('now_block_presentation', 'r').'
-			INNER JOIN `'._DB_PREFIX_.'now_block_presentation_lang` rl ON (r.`id_now_block_presentation` = rl.`id_now_block_presentation` AND rl.`id_lang` = ' . (int)$iIdLang .')
 			WHERE 1 '.($bActive ? ' AND r.`active` = 1 ' : '').'
 			ORDER BY r.`position` ASC';
 
 		$result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sSQL);
 
-		return $result;
+		$aNowBlockPresentation = array();
+
+		foreach ($result as $aRow) {
+			$oNowBlockPresentation = new NowBlockPresentation($aRow['id_now_block_presentation'], $iIdLang);
+			$aNowBlockPresentation[$oNowBlockPresentation->position] = $oNowBlockPresentation;
+		}
+
+		return $aNowBlockPresentation;
+	}
+
+	/**
+	 * Image path
+	 * @param string $dir
+	 * @return string
+	 */
+	public function getImageLink($dir = _PS_IMG_) {
+		return $dir . 'now_block_presentation' . DIRECTORY_SEPARATOR . $this->getImageName();
+	}
+
+	/**
+	 * Image Name
+	 * @return string
+	 */
+	public function getImageName() {
+		return $this->id . '.png';
 	}
 }
