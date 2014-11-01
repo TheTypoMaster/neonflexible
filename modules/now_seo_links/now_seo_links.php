@@ -27,7 +27,7 @@ class now_seo_links extends NowModule {
 	public function __construct() {
 		$this->name				= 'now_seo_links';
 		$this->tab				= 'administration';
-		$this->version			= 1.2;
+		$this->version			= 1.3;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
@@ -63,11 +63,32 @@ class now_seo_links extends NowModule {
 	}
 
 	public function install() {
-		return parent::install() && $this->registerHook('moduleRoutes');
+		return parent::install() &&
+			$this->registerHook('moduleRoutes') &&
+			$this->registerHook('actionObjectLanguageAddAfter');
 	}
 
+	/**
+	 * Hook ModuleRoutes
+	 * @return array
+	 */
 	public function hookModuleRoutes() {
 		return self::$ModuleRoutes;
+	}
+
+	/**
+	 * Hook actionObjectLanguageAddAfter
+	 * @return array
+	 */
+	public function hookActionObjectLanguageAddAfter($aParams) {
+		$oLanguages = $aParams['object'];
+
+		if (Validate::isLoadedObject($oLanguages)) {
+			$oNowLanguageLink				= new NowLanguageLink();
+			$oNowLanguageLink->id_lang		= $oLanguages->id;
+			$oNowLanguageLink->folder_name	= $oLanguages->iso_code;
+			$oNowLanguageLink->save();
+		}
 	}
 }
 

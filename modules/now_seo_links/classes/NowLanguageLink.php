@@ -32,7 +32,7 @@ class NowLanguageLink extends ObjectModel {
 		'fields' => array(
 			'id_shop'			=> array('type' => self::TYPE_INT,		'validate' => 'isUnsignedInt', 'required' => true),
 			'id_lang'			=> array('type' => self::TYPE_INT,		'validate' => 'isUnsignedInt', 'required' => true),
-			'folder_name' 		=> array('type' => self::TYPE_STRING,	'validate' => 'isBool', 'required' => true),
+			'folder_name' 		=> array('type' => self::TYPE_STRING,	'validate' => 'isGenericName', 'required' => true),
 			'date_add' 			=> array('type' => self::TYPE_DATE,		'validate' => 'isDate'),
 			'date_upd' 			=> array('type' => self::TYPE_DATE,		'validate' => 'isDate')
 		)
