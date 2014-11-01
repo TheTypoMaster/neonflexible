@@ -2,7 +2,7 @@
 <module>
 	<name>now_product_type</name>
 	<displayName><![CDATA[Gestion des types de produits]]></displayName>
-	<version><![CDATA[2.2]]></version>
+	<version><![CDATA[2.1]]></version>
 	<description><![CDATA[Gestion des types de produits, imports de vos types de produits et ajoute un bloc &amp;quot;conseils et id&eacute;es&amp;quot; dans vos page produits.]]></description>
 	<author><![CDATA[NinjaOfWeb]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
