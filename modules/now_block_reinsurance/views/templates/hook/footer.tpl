@@ -2,29 +2,29 @@
 
 	<div class="container">
 		<ul>
-			{foreach $aItems as $aItem}
+			{foreach $aItems as $oNowBlockReinsurance}
 				<li>
-					<img src="{$module_dir}{$aItem['file_name']}" alt="{$aItem['name']}" />
+					<img src="{$oNowBlockReinsurance->getImageLink()}" alt="{$oNowBlockReinsurance->name}" />
 
-					{if !is_null($aItem['id_cms'])}
-						{if is_null($aItem['name']) && !is_null($aItem['cms_name'])}
-							{assign var=nameReinsurance value=$aItem['cms_name']}
+					{if !is_null($oNowBlockReinsurance->id_cms) && $oNowBlockReinsurance->id_cms}
+						{if is_null($oNowBlockReinsurance->name) && !is_null($oNowBlockReinsurance->cms_name)}
+							{assign var=nameReinsurance value=$oNowBlockReinsurance->cms_name}
 						{else}
-							{assign var=nameReinsurance value=$aItem['name']}
+							{assign var=nameReinsurance value=$oNowBlockReinsurance->name}
 						{/if}
 					{else}
-						{assign var=nameReinsurance value=$aItem['name']}
+						{assign var=nameReinsurance value=$oNowBlockReinsurance->name}
 					{/if}
 
 					<h6>{$nameReinsurance}</h6>
-					<p>{$aItem['description']}</p>
+					<p>{$oNowBlockReinsurance->description}</p>
 
 					<span class="clearBoth"></span>
 
-					{if !is_null($aItem['id_cms'])}
-						<a href="{Context::getContext()->link->getCMSLink($aItem['id_cms'])}" title="{$nameReinsurance}" class="link"></a>
-					{elseif !is_null($aItem['link'])}
-						<a href="{$aItem['link']}" title="{$nameReinsurance}" class="link"></a>
+					{if !is_null($oNowBlockReinsurance->id_cms) && $oNowBlockReinsurance->id_cms}
+						<a href="{Context::getContext()->link->getCMSLink($oNowBlockReinsurance->id_cms)}" title="{$nameReinsurance}" class="link"></a>
+					{elseif !is_null($oNowBlockReinsurance->link)}
+						<a href="{$oNowBlockReinsurance->link}" title="{$nameReinsurance}" class="link"></a>
 					{/if}
 				</li>
 			{/foreach}

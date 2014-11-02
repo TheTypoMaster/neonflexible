@@ -11,8 +11,6 @@ require_once (_PS_MODULE_DIR_ . 'now_block_presentation/classes/NowBlockPresenta
 
 class AdminBlockPresentationController extends ModuleAdminController {
 
-	public $id_now_block_presentation;
-
 	public function __construct()
 	{
 		$this->bootstrap = true;
@@ -31,8 +29,8 @@ class AdminBlockPresentationController extends ModuleAdminController {
 
 		$this->bulk_actions = array(
 			'delete' => array(
-				'text' => $this->module->l('Delete selected', 'AdminNowProductType'),
-				'confirm' => $this->module->l('Delete selected items?', 'AdminNowProductType'),
+				'text' => $this->module->l('Delete selected', 'AdminBlockPresentation'),
+				'confirm' => $this->module->l('Delete selected items?', 'AdminBlockPresentation'),
 				'icon' => 'icon-trash'
 			)
 		);
@@ -47,10 +45,10 @@ class AdminBlockPresentationController extends ModuleAdminController {
 
 		$this->fields_list = array(
 			'id_now_block_presentation'	=> array('title' => $this->module->l('ID', 'AdminBlockPresentation'), 'align' => 'center', 'class' => 'fixed-width-xs'),
-			'image'						=> array('title' => $this->module->l('Image', 'AdminNowProductType'), 'align' => 'center', 'image' => 'now_block_presentation', 'class' => 'fixed-width-xs', 'orderby' => false, 'search' => false),
+			'image'						=> array('title' => $this->module->l('Image', 'AdminBlockPresentation'), 'align' => 'center', 'image' => 'now_block_presentation', 'class' => 'fixed-width-xs', 'orderby' => false, 'search' => false),
 			'name'						=> array('title' => $this->module->l('Name', 'AdminBlockPresentation'), 'width' => 'auto'),
-			'active'					=> array('title' => $this->module->l('Enabled', 'AdminNowProductType'), 'width' => 25, 'align' => 'center', 'active' => 'status', 'type' => 'bool', 'orderby' => false, 'class' => 'fixed-width-sm'),
-			'position'					=> array('title' => $this->module->l('Position', 'AdminNowProductType'), 'filter_key' => 'a!position', 'position' => 'position', 'align' => 'center'),
+			'active'					=> array('title' => $this->module->l('Enabled', 'AdminBlockPresentation'), 'width' => 25, 'align' => 'center', 'active' => 'status', 'type' => 'bool', 'orderby' => false, 'class' => 'fixed-width-sm'),
+			'position'					=> array('title' => $this->module->l('Position', 'AdminBlockPresentation'), 'filter_key' => 'a!position', 'position' => 'position', 'align' => 'center'),
 			'date_upd'					=> array('title' => $this->module->l('Updated Date', 'AdminBlockPresentation'), 'width' => 'auto', 'type' => 'datetime'),
 		);
 
@@ -135,14 +133,14 @@ class AdminBlockPresentationController extends ModuleAdminController {
 				),
 				array(
 					'type' => 'select',
-					'label' => $this->module->l('Float', 'AdminNowProductType'),
+					'label' => $this->module->l('Float', 'AdminBlockPresentation'),
 					'name' => 'float',
 					'required' => true,
 					'default_value' => 'left',
 					'options' => array(
 						'query' => array(
-							array('id' => 'left', 'name' => $this->module->l('Left', 'AdminNowProductType')),
-							array('id' => 'right', 'name' => $this->module->l('Right', 'AdminNowProductType')),
+							array('id' => 'left', 'name' => $this->module->l('Left', 'AdminBlockPresentation')),
+							array('id' => 'right', 'name' => $this->module->l('Right', 'AdminBlockPresentation')),
 						),
 						'id' => 'id',
 						'name' => 'name'
@@ -205,7 +203,10 @@ class AdminBlockPresentationController extends ModuleAdminController {
 		}
 	}
 
-	/*public function processDelete() {
+	/**
+	 * @return mixed
+	 */
+	public function processDelete() {
 		$oNowBlockPresentation = $this->loadObject();
 
 		if (!$oNowBlockPresentation->deleteImage()) {
@@ -215,6 +216,9 @@ class AdminBlockPresentationController extends ModuleAdminController {
 		return parent::processDelete();
 	}
 
+	/**
+	 * @return bool
+	 */
 	protected function processBulkDelete() {
 		if (is_array($this->boxes) && !empty($this->boxes)) {
 			foreach ($this->boxes as $iIdNowBlockPresentation) {
@@ -229,16 +233,4 @@ class AdminBlockPresentationController extends ModuleAdminController {
 
 		return parent::processBulkDelete();
 	}
-
-	protected function deleteImage(NowBlockPresentation $oNowBlockPresentation)
-	{
-		if (file_exists($oNowBlockPresentation->getImageLink(_PS_IMG_DIR_))) {
-			if (!unlink($oNowBlockPresentation->getImageLink(_PS_IMG_DIR_))) {
-				$this->errors[] = Tools::displayError('An error occurred during image deletion process.');
-			}
-		}
-
-		return !count($this->errors) ? true : false;
-	}*/
-
 }

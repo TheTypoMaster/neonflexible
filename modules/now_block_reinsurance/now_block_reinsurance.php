@@ -15,7 +15,7 @@ class now_block_reinsurance extends NowModule {
 	{
 		$this->name				= 'now_block_reinsurance';
 		$this->tab				= 'front_office_features';
-		$this->version			= 1.0;
+		$this->version			= 1.1;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
