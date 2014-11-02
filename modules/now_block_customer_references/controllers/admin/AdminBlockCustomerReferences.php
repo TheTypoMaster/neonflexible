@@ -61,7 +61,7 @@ class AdminBlockCustomerReferencesController extends ModuleAdminController {
 			);
 		}
 
-		$this->fields_options = array(
+		/*$this->fields_options = array(
 			'contact' => array(
 				'title' =>	$this->module->l('Bloc customer reference option', 'AdminBlockCustomerReferences'),
 				'fields' =>	array(
@@ -77,7 +77,7 @@ class AdminBlockCustomerReferencesController extends ModuleAdminController {
 				),
 				'submit' => array('title' => $this->module->l('Save', 'AdminBlockCustomerReferences'))
 			)
-		);
+		);*/
 
 		parent::__construct();
 	}
