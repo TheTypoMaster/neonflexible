@@ -449,6 +449,10 @@ class AdminNowImportAccessoriesController extends ModuleAdminControllerCore
 	 * Override AdminController::initToolbar() method for add bouton "Import File" by stock file
 	 */
 	public function initToolbar() {
+		$this->toolbar_btn['cloud-download icon-cloud-download'] = array(
+			'href' => $this->context->link->getModuleLink('now_import_accessories', 'readthedocumendation'),
+			'desc' => $this->module->l('Exemple', 'AdminNowImportAccessories')
+		);
 		$this->toolbar_btn['edit'] = array(
 			'href' => '#display_popin_settings',
 			'desc' => $this->module->l('Settings', 'AdminNowImportAccessories')

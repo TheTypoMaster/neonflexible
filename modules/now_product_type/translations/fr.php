@@ -28,6 +28,7 @@ $_MODULE['<{now_product_type}prestashop>adminnowimportproducttype_c2b710bbe6fcf6
 $_MODULE['<{now_product_type}prestashop>adminnowimportproducttype_2bddf149017d19612d9f8fae7c6d61cc'] = 'Cette référence de produit n\'existe pas : \"%s\"';
 $_MODULE['<{now_product_type}prestashop>adminnowimportproducttype_c9980b4b5f8962652c18ab59a6485466'] = 'Cette ID de type de produit n\'existe pas : \"%s\"';
 $_MODULE['<{now_product_type}prestashop>adminnowimportproducttype_b8495b50f5c172ebad1cc5c615548afa'] = 'Ignorer cette colonne';
+$_MODULE['<{now_product_type}prestashop>adminnowimportproducttype_63264e32bdd7447cda85527b16d39cb4'] = 'Exemple';
 $_MODULE['<{now_product_type}prestashop>adminnowimportproducttype_f4f70727dc34561dfde1a3c529b6205c'] = 'Paramètres';
 $_MODULE['<{now_product_type}prestashop>adminnowimportproducttype_4dc7e5c4435f2900428b15d1c544edfa'] = 'Importer le fichier';
 $_MODULE['<{now_product_type}prestashop>adminnowimportproducttype_e33b362990961702f6d20e8dedd4914f'] = 'Analyser les données';
@@ -59,6 +60,7 @@ $_MODULE['<{now_product_type}prestashop>adminnowimporttipsandideas_229faa1913437
 $_MODULE['<{now_product_type}prestashop>adminnowimporttipsandideas_f1017ecd1e5a0d60f7c8c21f71658366'] = 'Impossible d\'ajouter les nouvelles idées ou nouveaux conseils à ce produit : %s ';
 $_MODULE['<{now_product_type}prestashop>adminnowimporttipsandideas_b8495b50f5c172ebad1cc5c615548afa'] = 'Ignorer cette colonne';
 $_MODULE['<{now_product_type}prestashop>adminnowimporttipsandideas_5c4ac4b8b2d39aa5cd586235ba0aa070'] = 'Conseils ou idées (séparer par des \"::\")';
+$_MODULE['<{now_product_type}prestashop>adminnowimporttipsandideas_63264e32bdd7447cda85527b16d39cb4'] = 'Exemple';
 $_MODULE['<{now_product_type}prestashop>adminnowimporttipsandideas_f4f70727dc34561dfde1a3c529b6205c'] = 'Paramètres';
 $_MODULE['<{now_product_type}prestashop>adminnowimporttipsandideas_4dc7e5c4435f2900428b15d1c544edfa'] = 'Importer le fichier';
 $_MODULE['<{now_product_type}prestashop>adminnowimporttipsandideas_e33b362990961702f6d20e8dedd4914f'] = 'Analyser les données';

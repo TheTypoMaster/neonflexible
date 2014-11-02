@@ -28,6 +28,7 @@ $_MODULE['<{now_import_accessories}prestashop>adminnowimportaccessories_16385887
 $_MODULE['<{now_import_accessories}prestashop>adminnowimportaccessories_02042d3d41c613b375c561f6ebcceb96'] = 'Impossible d\'ajouter les nouveaux accessoires pour ce produit : %s ';
 $_MODULE['<{now_import_accessories}prestashop>adminnowimportaccessories_b8495b50f5c172ebad1cc5c615548afa'] = 'Ignorer cette colonne';
 $_MODULE['<{now_import_accessories}prestashop>adminnowimportaccessories_bc6b86f374a325adef2751d688e6afde'] = 'Accessoires (séparer par des \"::\")';
+$_MODULE['<{now_import_accessories}prestashop>adminnowimportaccessories_63264e32bdd7447cda85527b16d39cb4'] = 'Exemple';
 $_MODULE['<{now_import_accessories}prestashop>adminnowimportaccessories_f4f70727dc34561dfde1a3c529b6205c'] = 'Paramètres';
 $_MODULE['<{now_import_accessories}prestashop>adminnowimportaccessories_4dc7e5c4435f2900428b15d1c544edfa'] = 'Importer le fichier';
 $_MODULE['<{now_import_accessories}prestashop>adminnowimportaccessories_e33b362990961702f6d20e8dedd4914f'] = 'Analyser les données';

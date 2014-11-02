@@ -461,6 +461,11 @@ class AdminNowImportTipsAndIdeasController extends ModuleAdminControllerCore {
 	 * Override AdminController::initToolbar() method for add bouton "Import File" by stock file
 	 */
 	public function initToolbar() {
+		$this->toolbar_btn['cloud-download icon-cloud-download'] = array(
+			'href' => $this->context->link->getModuleLink('now_product_type', 'readthedocumendation', array('type' => 'ideas')),
+			'desc' => $this->module->l('Exemple', 'AdminNowImportProductType')
+		);
+
 		$this->toolbar_btn['edit'] = array(
 			'href' => '#display_popin_settings',
 			'desc' => $this->module->l('Settings', 'AdminNowImportTipsAndIdeas')
