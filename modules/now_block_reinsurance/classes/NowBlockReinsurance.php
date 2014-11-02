@@ -27,9 +27,6 @@ class NowBlockReinsurance extends ObjectModel {
 	/** @var string Object last modification date */
 	public $date_upd;
 
-	/** @var string */
-	public $file_name;
-
 	/** @var string Name */
 	public $name;
 

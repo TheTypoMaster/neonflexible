@@ -7,15 +7,15 @@
 <div class="container">
 
 	<ul class="list-customer-reference">
-		{foreach $nowBlockCustomerReferencesList as $nowBlockCustomerReferences}
+		{foreach $nowBlockCustomerReferencesList as $oNowBlockCustomerReferences}
 			<li>
-				<img src="{$module_dir}{$nowBlockCustomerReferences['file_name']}" alt="{$nowBlockCustomerReferences['name']}" />
+				<img src="{$oNowBlockCustomerReferences->getImageLink()}" alt="{$oNowBlockCustomerReferences->name}" />
 
 				<div>
-					<p>{$nowBlockCustomerReferences['name']}</p>
-					<p>{$nowBlockCustomerReferences['description']}</p>
-					{if $nowBlockCustomerReferences['link']}
-						<a href="{$nowBlockCustomerReferences['link']}" target="_blank">{$nowBlockCustomerReferences['link']}</a>
+					<p>{$oNowBlockCustomerReferences->name}</p>
+					<p>{$oNowBlockCustomerReferences->description}</p>
+					{if $oNowBlockCustomerReferences->link}
+						<a href="{$oNowBlockCustomerReferences->link}" target="_blank">{$oNowBlockCustomerReferences->link}</a>
 					{/if}
 				</div>
 

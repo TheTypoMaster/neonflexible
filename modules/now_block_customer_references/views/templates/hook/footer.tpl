@@ -5,13 +5,13 @@
 
 			<div class="carousel-customer-references">
 
-				{foreach $aItems as $key => $aItem}
-					{if $aItem['active']}
+				{foreach $aItems as $key => $oNowBlockCustomerReferences}
+					{if $oNowBlockCustomerReferences->active}
 						<div class="item{if $smarty.foreach.foo.first} active{/if}">
-							<img src="{$module_dir}{$aItem['file_name']}" alt="{$aItem['name']}" />
-							<p>{$aItem['description']}</p>
-							{*if $aItem['link']}
-								<a href="{$aItem['link']}" target="_blank">{l s='En savoir plus'}</a>
+							<img src="{$oNowBlockCustomerReferences->getImageLink()}" alt="{$oNowBlockCustomerReferences->name}" />
+							<p>{$oNowBlockCustomerReferences->description}</p>
+							{*if oNowBlockCustomerReferences->link}
+								<a href="{$oNowBlockCustomerReferences->link}" target="_blank">{l s='En savoir plus'}</a>
 							{/if*}
 						</div>
 					{/if}

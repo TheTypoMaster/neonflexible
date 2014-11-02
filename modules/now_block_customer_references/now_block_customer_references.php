@@ -15,7 +15,7 @@ class now_block_customer_references extends NowModule {
 	{
 		$this->name				= 'now_block_customer_references';
 		$this->tab				= 'front_office_features';
-		$this->version			= 1.1;
+		$this->version			= 1.2;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
