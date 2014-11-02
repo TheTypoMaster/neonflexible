@@ -2,7 +2,7 @@
 <module>
 	<name>now_import_accessories</name>
 	<displayName><![CDATA[Import d&#039;accessoires]]></displayName>
-	<version><![CDATA[1.1]]></version>
+	<version><![CDATA[1.2]]></version>
 	<description><![CDATA[Import d&#039;accessoires par fichier .CSV]]></description>
 	<author><![CDATA[NinjaOfWeb]]></author>
 	<tab><![CDATA[administration]]></tab>

@@ -2,7 +2,7 @@
 <module>
 	<name>now_import_packs</name>
 	<displayName><![CDATA[Import de packs de produits]]></displayName>
-	<version><![CDATA[1.1]]></version>
+	<version><![CDATA[1.2]]></version>
 	<description><![CDATA[Import de packs de produits &agrave; partir d&#039;un fichier CSV]]></description>
 	<author><![CDATA[NinjaOfWeb]]></author>
 	<tab><![CDATA[administration]]></tab>

@@ -2,7 +2,7 @@
 <module>
 	<name>now_block_reinsurance</name>
 	<displayName><![CDATA[Gestion du bloc de r&eacute;insurance]]></displayName>
-	<version><![CDATA[1]]></version>
+	<version><![CDATA[1.1]]></version>
 	<description><![CDATA[Ajoute un block de r&eacute;insurance]]></description>
 	<author><![CDATA[NinjaOfWeb]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
