@@ -1,0 +1,44 @@
+/*
+ * 2014
+ * Author: LEFEVRE LOIC
+ * Site: www.ninja-of-web.fr
+ * Mail: contact@ninja-of-web.fr
+ */
+
+/* Ban Now */
+#ninja-of-web {background:url('http://www.ninja-of-web.fr/ban/logo.png') 30px 30px no-repeat;width:150px;height:110px;margin:40px 0;border:2px solid #111;padding:10px 20px 6px 350px;border-radius:5px;box-shadow:5px 10px 5px #ccc;float:right;margin-right:-690px;position:relative;z-index:100;box-shadow:-2px 5px 18px #ccc;box-sizing:initial;}
+#ninja-of-web.hover {margin-right:-260px}
+#ninja-of-web a.open-now {cursor:pointer;width:110px;height:126px;display:block;position:absolute;z-index:150;left:0;top:0;}
+#ninja-of-web.hover a.click-now {display:none;}
+#ninja-of-web a.close-now {background:url('http://www.ninja-of-web.fr/ban/close.png')no-repeat;cursor:pointer;width:32px;height:32px;display:block;position:absolute;z-index:150;right:0;top:0;margin:5px;}
+
+#content.bootstrap div.now_all_import {margin:20px 0 0 0;}
+#content.bootstrap div#steps {box-sizing:initial;margin-top:-35px;height:150px;border-bottom:1px dashed #ccc;}
+#content.bootstrap div#steps div {box-sizing:initial;float:left;border-left:1px dashed #ccc;padding:15px;margin:15px}
+#content.bootstrap div#steps div:first-child {border-left:none}
+#content.bootstrap div#steps div h3 {color:#555555;border:none;font-size:40px;font-weight:bold;display:block;margin:-20px 0 0 0;text-shadow:3px 3px 3px #ccc;height:50px;padding:5px;line-height:normal;}
+#content.bootstrap div#steps div span.step_number {font-size:40px;font-weight:bold;display:block;text-shadow:3px 3px 3px #ccc;line-height:40px;padding:5px;width:56px;}
+#content.bootstrap div#steps div.selected span.step_number {border-radius:5px;background:#eee;}
+#content.bootstrap div#steps div.selected h3 {border-radius:5px;background:#eee;}
+#content.bootstrap div#steps div span.green {color:#71b238;}
+#content.bootstrap div#steps div span.blue {color:#00aff0;}
+#content.bootstrap div#steps div span.red {color:#cc3333;}
+#content.bootstrap div#steps div span.orange {color:#ff9933;}
+
+.toolbar_btn .process-icon-analyse-data:before, .toolbar_btn .process-icon-save-data:before { content: "\f01d"; }
+
+/*body.page-sidebar-closed div#steps {display:none;}*/
+body.mobile-nav div.now_all_import {display:none;}
+
+#display_popin_settings {width:90%;}
+#display_popin_settings .process-icon-save:before { content: "\f0c7"; }
+
+#display_popin_import_file {padding-left:10px;background-color:#EBEDF4;border:1px solid #CCCED7;width:600px;height:200px;border-radius: 3px;}
+#display_popin_import_file .hide {display:none;}
+#display_popin_import_file .form-group {margin:0 0 20px 20px;box-sizing:initial;clear:both;}
+
+
+
+
+
+
