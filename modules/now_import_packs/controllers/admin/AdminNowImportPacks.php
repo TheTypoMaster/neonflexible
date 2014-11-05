@@ -321,16 +321,16 @@ class AdminNowImportPacksController extends ModuleAdminControllerCore
 		}
 
 		$aProducts		= explode('::', $sProductsPacks);
-		$aProductsPacks	= NowProduct::getProductsLight($aProducts);
-
-
-		$aProductsID = array();
 
 		// On supprime les quantités
+		$aProductsID = $aProductsCleaned = array();
 		foreach ($aProducts as $sProduct) {
 			preg_match('#([0-9A-Za-z]*)\(([0-9]*)\)#', $sProduct, $matches);
 			$aProductsID[(isset($matches[1]) ? $matches[1] : $sProduct)] = (int)(isset($matches[2]) ? $matches[2] : 1);
+			$aProductsCleaned[] = (isset($matches[1]) ? $matches[1] : $sProduct);
 		}
+
+		$aProductsPacks	= NowProduct::getProductsLight($aProductsCleaned);
 
 		$sProductsPacks = '<ul>';
 		foreach ($aProductsPacks as $aProductPack) {

@@ -78,19 +78,20 @@ class NowProduct {
 	 * @return bool
 	 */
 	public static function changeProductsPacks($iIdProduct, $aProductsPacks) {
+
 		$bResult = true;
 
-		$aProductsID = array();
-
+		$aProductsID = $aProductsCleaned = array();
 		foreach ($aProductsPacks as $sProduct) {
 			preg_match('#([0-9A-Za-z]*)\(([0-9]*)\)#', $sProduct, $matches);
 			$aProductsID[(isset($matches[1]) ? $matches[1] : $sProduct)] = (int)(isset($matches[2]) ? $matches[2] : 1);
+			$aProductsCleaned[] = (isset($matches[1]) ? $matches[1] : $sProduct);
 		}
 
-		$aProductsPacks = NowProduct::getProductsLight($aProductsPacks);
+		$aProductsPacks	= NowProduct::getProductsLight($aProductsCleaned);
 
 		foreach ($aProductsPacks as $aProductPack) {
-		// On récupère la bonne quantité
+			// On récupère la bonne quantité
 			$aProductPack['pack_quantity']		= 1;
 			if (array_key_exists($aProductPack['id_product'], $aProductsID)) {
 				$aProductPack['pack_quantity']	= (int)$aProductsID[$aProductPack['id_product']];
