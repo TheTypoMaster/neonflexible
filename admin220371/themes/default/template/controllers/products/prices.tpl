@@ -486,7 +486,7 @@ $(document).ready(function () {
 				pmNames: ['PM', 'P'],
 				timeFormat: 'hh:mm:ss tt',
 				timeSuffix: '',
-				timeOnlyTitle: '{l s='Choose Time'}',
+				timeOnlyTitle: "{l s='Choose Time'}",
 				timeText: '{l s='Time'}',
 				hourText: '{l s='Hour'}',
 				minuteText: '{l s='Minute'}',
