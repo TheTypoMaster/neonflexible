@@ -16,7 +16,7 @@ class now_block_cms_footer extends NowModule {
 	{
 		$this->name				= 'now_block_cms_footer';
 		$this->tab				= 'front_office_features';
-		$this->version			= 1.1;
+		$this->version			= 1.2;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
@@ -48,7 +48,8 @@ class now_block_cms_footer extends NowModule {
 	 */
 	public function setSqlFileToInstall() {
 		$this->aSqlFileToInstall = array(
-			'1.0' => 'install.sql'
+			'1.0' => 'install.sql',
+			'1.2' => 'install-1.2.sql'
 		);
 	}
 
