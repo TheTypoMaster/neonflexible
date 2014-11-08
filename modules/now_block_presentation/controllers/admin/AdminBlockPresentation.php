@@ -120,7 +120,8 @@ class AdminBlockPresentationController extends ModuleAdminController {
 					'label' => $this->module->l('Description', 'AdminBlockPresentation'),
 					'name' => 'description',
 					'required' => true,
-					'lang' => true
+					'lang' => true,
+					'autoload_rte' => true
 				),
 				array(
 					'type' => 'file',

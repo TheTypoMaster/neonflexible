@@ -61,24 +61,6 @@ class AdminBlockCustomerReferencesController extends ModuleAdminController {
 			);
 		}
 
-		/*$this->fields_options = array(
-			'contact' => array(
-				'title' =>	$this->module->l('Bloc customer reference option', 'AdminBlockCustomerReferences'),
-				'fields' =>	array(
-					'NOW_PRESENTATION_CMS_ID' => array(
-						'title' => $this->module->l('CMS Page', 'AdminBlockCustomerReferences'),
-						'desc' => $this->module->l('CMS page witch redirect when to click on the button "Voir plus de références"', 'AdminBlockCustomerReferences'),
-						'cast' => 'intval',
-						'type' => 'select',
-						'identifier' => 'id_cms',
-						'list' => $aCmsList,
-						'visibility' => Shop::CONTEXT_ALL
-					),
-				),
-				'submit' => array('title' => $this->module->l('Save', 'AdminBlockCustomerReferences'))
-			)
-		);*/
-
 		parent::__construct();
 	}
 
@@ -120,7 +102,8 @@ class AdminBlockCustomerReferencesController extends ModuleAdminController {
 					'label' => $this->module->l('Description', 'AdminBlockCustomerReferences'),
 					'name' => 'description',
 					'required' => true,
-					'lang' => true
+					'lang' => true,
+					'autoload_rte' => true
 				),
 				array(
 					'type' => 'file',

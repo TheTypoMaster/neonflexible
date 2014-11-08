@@ -55,7 +55,7 @@ class NowBlockReinsurance extends ObjectModel {
 
 			// Lang fields
 			'name' 				=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCatalogName', 'required' => true),
-			'description' 		=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCatalogName', 'required' => true),
+			'description' 		=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCleanHtml', 'required' => true),
 			'link'				=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCatalogName'),
 		)
 	);

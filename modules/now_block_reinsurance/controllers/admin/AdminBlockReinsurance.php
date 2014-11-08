@@ -97,7 +97,8 @@ class AdminBlockReinsuranceController extends ModuleAdminController {
 					'label' => $this->module->l('Description', 'AdminBlockReinsurance'),
 					'name' => 'description',
 					'required' => true,
-					'lang' => true
+					'lang' => true,
+					'autoload_rte' => true
 				),
 				array(
 					'type' => 'file',
