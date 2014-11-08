@@ -17,14 +17,24 @@ class AdminMeaProductsHomePageController extends ModuleAdminController {
 		$this->table = 'now_mea_home';
 		$this->className = 'NowMeaHome';
 		$this->module = new now_mea_home();
+
 		$this->addRowAction('edit');
 		$this->addRowAction('delete');
+
+		$this->bulk_actions = array(
+			'delete' => array(
+				'text' => $this->module->l('Delete selected', 'AdminBlockReinsurance'),
+				'confirm' => $this->module->l('Delete selected items?', 'AdminBlockReinsurance'),
+				'icon' => 'icon-trash'
+			)
+		);
 
 		$this->fields_list = array(
 			'id_now_mea_home'	=> array('title' => $this->module->l('ID', 'AdminMeaProductsHomePage'), 'align' => 'center', 'class' => 'fixed-width-xs'),
 			'id_product'		=> array('title' => $this->module->l('Product ID', 'AdminMeaProductsHomePage'), 'width' => 'auto'),
 			'product_name'		=> array('title' => $this->module->l('Product name', 'AdminMeaProductsHomePage'), 'width' => 'auto'),
-			'active'			=> array('title' => $this->module->l('Enabled', 'AdminMeaProductsHomePage'), 'width' => 25, 'align' => 'center', 'active' => 'status', 'type' => 'bool', 'orderby' => false, 'class' => 'fixed-width-sm')
+			'active'			=> array('title' => $this->module->l('Enabled', 'AdminMeaProductsHomePage'), 'width' => 25, 'align' => 'center', 'active' => 'status', 'type' => 'bool', 'orderby' => false, 'class' => 'fixed-width-sm'),
+			'date_upd'			=> array('title' => $this->module->l('Updated Date', 'AdminMeaProductsHomePage'), 'width' => 'auto', 'type' => 'datetime'),
 		);
 
 		$this->_select .= ' pl.`name` as product_name ';
@@ -32,18 +42,6 @@ class AdminMeaProductsHomePageController extends ModuleAdminController {
 		$this->_join .= ' INNER JOIN `' . _DB_PREFIX_ . 'product_lang` pl ON (pl.`id_product` = p.`id_product` AND pl.`id_lang` = ' . (int)Context::getContext()->language->id . ')';
 
 		parent::__construct();
-	}
-
-	public function initPageHeaderToolbar()
-	{
-		if (empty($this->display))
-			$this->page_header_toolbar_btn['new_product_type'] = array(
-				'href' => self::$currentIndex . '&token=' . $this->token,
-				'desc' => $this->module->l('Add new product', 'AdminMeaProductsHomePage', null, false),
-				'icon' => 'process-icon-new'
-			);
-
-		parent::initPageHeaderToolbar();
 	}
 
 	public function renderForm()

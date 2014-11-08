@@ -88,22 +88,22 @@ class NowBlockReinsurance extends ObjectModel {
 		))
 			return false;
 
-		foreach ($res as $aNowBlocPresentation)
-			if ((int)$aNowBlocPresentation['id_now_block_reinsurance'] == (int)$this->id)
-				$moved_NowBlocPresentation = $aNowBlocPresentation;
+		foreach ($res as $aNowBlockReinsurance)
+			if ((int)$aNowBlockReinsurance['id_now_block_reinsurance'] == (int)$this->id)
+				$moved_NowBlockReinsurance = $aNowBlockReinsurance;
 
-		if (!isset($moved_NowBlocPresentation) || !isset($position))
+		if (!isset($moved_NowBlockReinsurance) || !isset($position))
 			return false;
 
 		$sql1 = '
 			UPDATE `'._DB_PREFIX_.'now_block_reinsurance` SET `position`= `position` '.($way ? '- 1' : '+ 1').' WHERE `position`
 			'.($way
-				? '> '.(int)$moved_NowBlocPresentation['position'].' AND `position` <= '.(int)$position
-				: '< '.(int)$moved_NowBlocPresentation['position'].' AND `position` >= '.(int)$position
+				? '> '.(int)$moved_NowBlockReinsurance['position'].' AND `position` <= '.(int)$position
+				: '< '.(int)$moved_NowBlockReinsurance['position'].' AND `position` >= '.(int)$position
 			);
 
 		$sql2 = '
-			UPDATE `'._DB_PREFIX_.'now_block_reinsurance` SET `position` = '.(int)$position.' WHERE `id_now_block_reinsurance` = '.(int)$moved_NowBlocPresentation['id_now_block_reinsurance'];
+			UPDATE `'._DB_PREFIX_.'now_block_reinsurance` SET `position` = '.(int)$position.' WHERE `id_now_block_reinsurance` = '.(int)$moved_NowBlockReinsurance['id_now_block_reinsurance'];
 
 		return (
 			Db::getInstance()->execute($sql1) &&
