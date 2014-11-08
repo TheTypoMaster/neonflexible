@@ -71,7 +71,7 @@ class NowSlideshow extends ObjectModel {
 			'name'				=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCatalogName', 'required' => true, 'size' => 255),
 			'title'				=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCatalogName', 'required' => true, 'size' => 255),
 			'button_name'		=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCatalogName', 'required' => true, 'size' => 255),
-			'description'		=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCleanHtml', 'required' => true, 'size' => 255),
+			'description'		=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCleanHtml', 'required' => true),
 			'link'				=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isUrl'),
 		),
 	);

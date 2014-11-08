@@ -124,7 +124,8 @@ class AdminNowSlideshowController extends ModuleAdminController {
 					'label' => $this->module->l('Description', 'AdminNowSlideshow'),
 					'name' => 'description',
 					'required' => true,
-					'lang' => true
+					'lang' => true,
+					'autoload_rte' => true
 				),
 				array(
 					'type' => 'select',
@@ -146,12 +147,45 @@ class AdminNowSlideshowController extends ModuleAdminController {
 				array(
 					'type' => 'text',
 					'label' => $this->module->l('ID type', 'AdminNowSlideshow'),
-					'name' => 'id_type'
+					'name' => 'id_type',
+					'form_group_class' => 'idTypeDiv'
+				),
+				array(
+					'type'  => 'categories',
+					'label' => $this->l('Category'),
+					'name'  => 'category',
+					'tree'  => array(
+						'id' => 'categories-tree'
+					),
+					'form_group_class' => 'categoryDiv'
+				),
+				array(
+					'type' => 'select',
+					'label' => $this->module->l('CMS', 'AdminNowSlideshow'),
+					'name' => 'cms',
+					'options' => array(
+						'query' => CMS::listCms($this->context->language->id),
+						'id'	=> 'id_cms',
+						'name'	=> 'meta_title',
+					),
+					'form_group_class' => 'cmsDiv'
+				),
+				array(
+					'type' => 'select',
+					'label' => $this->module->l('Manufacturer', 'AdminNowSlideshow'),
+					'name' => 'manufacturer',
+					'options' => array(
+						'query' => Manufacturer::getManufacturers(false, $this->context->language->id),
+						'id'	=> 'id_manufacturer',
+						'name'	=> 'name',
+					),
+					'form_group_class' => 'manufacturerDiv'
 				),
 				array(
 					'type' => 'text',
 					'label' => $this->module->l('Link', 'AdminNowSlideshow'),
 					'name' => 'link',
+					'form_group_class' => 'linkDiv',
 					'lang' => true
 				),
 				array(
