@@ -15,7 +15,7 @@ class now_category_slide extends NowModule {
 	{
 		$this->name				= 'now_category_slide';
 		$this->tab				= 'front_office_features';
-		$this->version			= 1.0;
+		$this->version			= 1.1;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
