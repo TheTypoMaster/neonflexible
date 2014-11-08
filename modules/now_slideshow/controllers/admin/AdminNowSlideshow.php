@@ -9,13 +9,14 @@
 require_once (_PS_MODULE_DIR_ . 'now_slideshow/now_slideshow.php');
 require_once (_PS_MODULE_DIR_ . 'now_slideshow/classes/NowSlideshow.php');
 
-class AdminSlideshowController extends ModuleAdminController {
+class AdminNowSlideshowController extends ModuleAdminController {
 
 	public function __construct()
 	{
 		$this->bootstrap = true;
 		$this->table = 'now_slideshow';
 		$this->className = 'NowSlideshow';
+		$this->override_folder = 'now_slideshow';
 		$this->module = new now_slideshow();
 
 		$this->lang = true;
@@ -29,8 +30,8 @@ class AdminSlideshowController extends ModuleAdminController {
 
 		$this->bulk_actions = array(
 			'delete' => array(
-				'text' => $this->module->l('Delete selected', 'AdminSlideshow'),
-				'confirm' => $this->module->l('Delete selected items?', 'AdminSlideshow'),
+				'text' => $this->module->l('Delete selected', 'AdminNowSlideshow'),
+				'confirm' => $this->module->l('Delete selected items?', 'AdminNowSlideshow'),
 				'icon' => 'icon-trash'
 			)
 		);
@@ -44,26 +45,26 @@ class AdminSlideshowController extends ModuleAdminController {
 		$this->imageType = 'jpg';
 
 		$this->fields_list = array(
-			'id_now_slideshow'			=> array('title' => $this->module->l('ID', 'AdminSlideshow'), 'align' => 'center', 'class' => 'fixed-width-xs'),
-			'image'						=> array('title' => $this->module->l('Image', 'AdminSlideshow'), 'align' => 'center', 'image' => 'now_slideshow', 'class' => 'fixed-width-xs', 'orderby' => false, 'search' => false),
-			'id_type'					=> array('title' => $this->module->l('type ID', 'AdminSlideshow'), 'width' => 'auto'),
-			'item_type'					=> array('title' => $this->module->l('Type of link', 'AdminSlideshow'), 'width' => 'auto'),
-			'name_type'					=> array('title' => $this->module->l('Name of link', 'AdminSlideshow'), 'width' => 'auto'),
-			'name'						=> array('title' => $this->module->l('Slide Name', 'AdminSlideshow'), 'width' => 'auto'),
-			'title'						=> array('title' => $this->module->l('Slide title', 'AdminSlideshow'), 'width' => 'auto'),
-			'active'					=> array('title' => $this->module->l('Enabled', 'AdminSlideshow'), 'width' => 25, 'align' => 'center', 'active' => 'status', 'type' => 'bool', 'orderby' => false, 'class' => 'fixed-width-sm'),
-			'position'					=> array('title' => $this->module->l('Position', 'AdminSlideshow'), 'filter_key' => 'a!position', 'position' => 'position', 'align' => 'center'),
-			'date_upd'					=> array('title' => $this->module->l('Updated Date', 'AdminSlideshow'), 'width' => 'auto', 'type' => 'datetime'),
+			'id_now_slideshow'			=> array('title' => $this->module->l('ID', 'AdminNowSlideshow'), 'align' => 'center', 'class' => 'fixed-width-xs'),
+			'image'						=> array('title' => $this->module->l('Image', 'AdminNowSlideshow'), 'align' => 'center', 'image' => 'now_slideshow', 'class' => 'fixed-width-xs', 'orderby' => false, 'search' => false),
+			'id_type'					=> array('title' => $this->module->l('type ID', 'AdminNowSlideshow'), 'width' => 'auto'),
+			'item_type'					=> array('title' => $this->module->l('Type of link', 'AdminNowSlideshow'), 'width' => 'auto'),
+			'name_type'					=> array('title' => $this->module->l('Name of link', 'AdminNowSlideshow'), 'width' => 'auto'),
+			'name'						=> array('title' => $this->module->l('Slide Name', 'AdminNowSlideshow'), 'width' => 'auto'),
+			'title'						=> array('title' => $this->module->l('Slide title', 'AdminNowSlideshow'), 'width' => 'auto'),
+			'active'					=> array('title' => $this->module->l('Enabled', 'AdminNowSlideshow'), 'width' => 25, 'align' => 'center', 'active' => 'status', 'type' => 'bool', 'orderby' => false, 'class' => 'fixed-width-sm'),
+			'position'					=> array('title' => $this->module->l('Position', 'AdminNowSlideshow'), 'filter_key' => 'a!position', 'position' => 'position', 'align' => 'center'),
+			'date_upd'					=> array('title' => $this->module->l('Updated Date', 'AdminNowSlideshow'), 'width' => 'auto', 'type' => 'datetime'),
 		);
 
 		$this->_select	= '
 		IF(a.`id_type` = 0, NULL, a.`id_type`) as id_type,
 		(
 			CASE a.type
-				WHEN "category"		THEN "' . $this->module->l('Category', 'AdminSlideshow') . '"
-				WHEN "cms"			THEN "' . $this->module->l('CMS', 'AdminSlideshow') . '"
-				WHEN "link" 		THEN "' . $this->module->l('Link', 'AdminSlideshow') . '"
-				WHEN "manufacturer"	THEN "' . $this->module->l('Manufacturer', 'AdminSlideshow') . '"
+				WHEN "category"		THEN "' . $this->module->l('Category', 'AdminNowSlideshow') . '"
+				WHEN "cms"			THEN "' . $this->module->l('CMS', 'AdminNowSlideshow') . '"
+				WHEN "link" 		THEN "' . $this->module->l('Link', 'AdminNowSlideshow') . '"
+				WHEN "manufacturer"	THEN "' . $this->module->l('Manufacturer', 'AdminNowSlideshow') . '"
 			END
 		) as "item_type", (
 			CASE a.type
@@ -93,50 +94,50 @@ class AdminSlideshowController extends ModuleAdminController {
 
 		$this->fields_form = array(
 			'legend' => array(
-				'title' => $this->module->l('Block Slideshow', 'AdminSlideshow'),
+				'title' => $this->module->l('Block Slideshow', 'AdminNowSlideshow'),
 				'icon' => 'icon-list-alt'
 			),
 			'input' => array(
 				array(
 					'type' => 'text',
-					'label' => $this->module->l('Name', 'AdminSlideshow'),
+					'label' => $this->module->l('Name', 'AdminNowSlideshow'),
 					'name' => 'name',
 					'required' => true,
 					'lang' => true
 				),
 				array(
 					'type' => 'text',
-					'label' => $this->module->l('Title', 'AdminSlideshow'),
+					'label' => $this->module->l('Title', 'AdminNowSlideshow'),
 					'name' => 'title',
 					'required' => true,
 					'lang' => true
 				),
 				array(
 					'type' => 'text',
-					'label' => $this->module->l('Button name', 'AdminSlideshow'),
+					'label' => $this->module->l('Button name', 'AdminNowSlideshow'),
 					'name' => 'button_name',
 					'required' => true,
 					'lang' => true
 				),
 				array(
 					'type' => 'textarea',
-					'label' => $this->module->l('Description', 'AdminSlideshow'),
+					'label' => $this->module->l('Description', 'AdminNowSlideshow'),
 					'name' => 'description',
 					'required' => true,
 					'lang' => true
 				),
 				array(
 					'type' => 'select',
-					'label' => $this->module->l('Type of link', 'AdminSlideshow'),
+					'label' => $this->module->l('Type of link', 'AdminNowSlideshow'),
 					'name' => 'type',
 					'required' => true,
 					'default_value' => NowSlideshow::TYPE_LINK,
 					'options' => array(
 						'query' => array(
-							array('id_type' => NowSlideshow::TYPE_CATEGORY, 'type' => $this->module->l('Category', 'AdminSlideshow')),
-							array('id_type' => NowSlideshow::TYPE_CMS, 'type' => $this->module->l('CMS', 'AdminSlideshow')),
-							array('id_type' => NowSlideshow::TYPE_LINK, 'type' => $this->module->l('Link', 'AdminSlideshow')),
-							array('id_type' => NowSlideshow::TYPE_MANUFACTURER, 'type' => $this->module->l('Manufacturer', 'AdminSlideshow')),
+							array('id_type' => NowSlideshow::TYPE_CATEGORY, 'type' => $this->module->l('Category', 'AdminNowSlideshow')),
+							array('id_type' => NowSlideshow::TYPE_CMS, 'type' => $this->module->l('CMS', 'AdminNowSlideshow')),
+							array('id_type' => NowSlideshow::TYPE_LINK, 'type' => $this->module->l('Link', 'AdminNowSlideshow')),
+							array('id_type' => NowSlideshow::TYPE_MANUFACTURER, 'type' => $this->module->l('Manufacturer', 'AdminNowSlideshow')),
 						),
 						'id'	=> 'id_type',
 						'name'	=> 'type',
@@ -144,18 +145,18 @@ class AdminSlideshowController extends ModuleAdminController {
 				),
 				array(
 					'type' => 'text',
-					'label' => $this->module->l('ID type', 'AdminSlideshow'),
+					'label' => $this->module->l('ID type', 'AdminNowSlideshow'),
 					'name' => 'id_type'
 				),
 				array(
 					'type' => 'text',
-					'label' => $this->module->l('Link', 'AdminSlideshow'),
+					'label' => $this->module->l('Link', 'AdminNowSlideshow'),
 					'name' => 'link',
 					'lang' => true
 				),
 				array(
 					'type' => 'file',
-					'label' => $this->module->l('Image (.png)', 'AdminSlideshow'),
+					'label' => $this->module->l('Image (.png)', 'AdminNowSlideshow'),
 					'name' => 'image',
 					'display_image' => true,
 					'show_thumbnail' => true,
@@ -164,7 +165,7 @@ class AdminSlideshowController extends ModuleAdminController {
 				),
 				array(
 					'type' => 'switch',
-					'label' => $this->module->l('Enable', 'AdminSlideshow'),
+					'label' => $this->module->l('Enable', 'AdminNowSlideshow'),
 					'name' => 'active',
 					'required' => false,
 					'is_bool' => true,
@@ -172,18 +173,18 @@ class AdminSlideshowController extends ModuleAdminController {
 						array(
 							'id' => 'active_on',
 							'value' => 1,
-							'label' => $this->module->l('Enabled', 'AdminSlideshow')
+							'label' => $this->module->l('Enabled', 'AdminNowSlideshow')
 						),
 						array(
 							'id' => 'active_off',
 							'value' => 0,
-							'label' => $this->module->l('Disabled', 'AdminSlideshow')
+							'label' => $this->module->l('Disabled', 'AdminNowSlideshow')
 						)
 					)
 				)
 			),
 			'submit' => array(
-				'title' => $this->module->l('Save', 'AdminSlideshow')
+				'title' => $this->module->l('Save', 'AdminNowSlideshow')
 			)
 		);
 

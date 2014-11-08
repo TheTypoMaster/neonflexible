@@ -15,7 +15,7 @@ class now_slideshow extends NowModule {
 	{
 		$this->name				= 'now_slideshow';
 		$this->tab				= 'front_office_features';
-		$this->version			= 1.2;
+		$this->version			= 1.3;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
@@ -35,7 +35,7 @@ class now_slideshow extends NowModule {
 	 */
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
-			'AdminSlideshow' => array(
+			'AdminNowSlideshow' => array(
 				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Manage Slideshow')
 			)
