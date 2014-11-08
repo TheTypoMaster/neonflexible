@@ -15,7 +15,7 @@ class now_slideshow extends NowModule {
 	{
 		$this->name				= 'now_slideshow';
 		$this->tab				= 'front_office_features';
-		$this->version			= 1.1;
+		$this->version			= 1.2;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
@@ -72,6 +72,17 @@ class now_slideshow extends NowModule {
 		if (Configuration::get('NOW_SLIDESHOW_ENABLE')) {
 
 			$aSlides = NowSlideshow::getSlides();
+
+			foreach ($aSlides as $position => $oSlide) {
+
+				if ($oSlide->type == NowSlideshow::TYPE_CMS) {
+					$aSlides[$position]->object = new CMS($oSlide->id_type, Context::getContext()->language->id);
+				} elseif ($oSlide->type == NowSlideshow::TYPE_CATEGORY) {
+					$aSlides[$position]->object = new Category($oSlide->id_type, Context::getContext()->language->id);
+				} elseif ($oSlide->type == NowSlideshow::TYPE_MANUFACTURER) {
+					$aSlides[$position]->object = new Manufacturer($oSlide->id_type, Context::getContext()->language->id);
+				}
+			}
 
 			$this->context->smarty->assign(array(
 				'aSlides' => $aSlides

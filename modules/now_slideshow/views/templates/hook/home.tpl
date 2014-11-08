@@ -4,30 +4,34 @@
 
 		<div class="carousel-slick">
 
-			{foreach $aSlides as $aSlide key=k name=foo}
+			{foreach $aSlides as $oSlide key=k name=foo}
 				<div class="item{if $smarty.foreach.foo.first} active{/if}">
 
 					<div class="left">
 
-						<p class="titre-vert">{$aSlide['name']|escape:'htmlall':'UTF-8'}</p>
+						{if $oSlide->type == NowSlideshow::TYPE_LINK}
+							{assign var=link value=$oSlide->link}
+						{elseif $oSlide->type == NowSlideshow::TYPE_CATEGORY}
+							{assign var=link value=Context::getContext()->link->getCategoryLink($oSlide->object)}
+						{elseif $oSlide->type == NowSlideshow::TYPE_MANUFACTURER}
+							{assign var=link value=Context::getContext()->link->getManufacturerLink($oSlide->object)}
+						{elseif $oSlide->type == NowSlideshow::TYPE_CMS}
+							{assign var=link value=Context::getContext()->link->getCMSLink($oSlide->object)}
+						{/if}
 
-						<p class="titre-blanc">{$aSlide['title']|escape:'htmlall':'UTF-8'}</p>
+						<p class="titre-vert">{$oSlide->name|escape:'htmlall':'UTF-8'}</p>
 
-						<div class="desc"><p>{$aSlide['description']|truncate:550:'...'}</p></div>
+						<p class="titre-blanc">{$oSlide->title|escape:'htmlall':'UTF-8'}</p>
 
-						<a href="" class="button-white">{$aSlide['button_name']|escape:'htmlall':'UTF-8'}</a>
+						<div class="desc"><p>{$oSlide->description|truncate:550:'...'}</p></div>
+
+						<a href="{$link}" class="button-white">{$oSlide->button_name|escape:'htmlall':'UTF-8'}</a>
 
 					</div>
 
-					{if file_exists('_PS_ROOT_DIR_'|constant|cat:'/images/slides/'|cat:$aSlide['id_now_slideshow']|cat:'.jpg')}
-						<div class="right">
-							<img src="/images/slides/{$aSlide['id_now_slideshow']|intval}.jpg" alt="{$aSlide['name']|escape:'htmlall':'UTF-8'}" title="{$aSlide['name']|escape:'htmlall':'UTF-8'}" />
-						</div>
-					{elseif file_exists('_PS_ROOT_DIR_'|constant|cat:'/images/slides/default.jpg')}
-						<div class="right">
-							<img src="/images/slides/default.jpg" alt="{$aSlide['name']|escape:'htmlall':'UTF-8'}" title="{$aSlide['name']|escape:'htmlall':'UTF-8'}" />
-						</div>
-					{/if}
+					<div class="right">
+						<img src="{$oSlide->getImageLink()}" alt="{$oSlide->name}" />
+					</div>
 
 				</div>
 			{/foreach}
