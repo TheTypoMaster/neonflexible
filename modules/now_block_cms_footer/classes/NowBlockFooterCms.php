@@ -92,6 +92,7 @@ class NowBlockFooterCms extends ObjectModel {
 		if (!$res = Db::getInstance()->executeS('
 			SELECT `id_now_block_cms_footer`, `position`
 			FROM `'._DB_PREFIX_.'now_block_cms_footer`
+			WHERE `id_now_block_cms_footer_column` = ' . (int)$this->id_now_block_cms_footer_column . '
 			ORDER BY `position` ASC'
 		))
 			return false;
@@ -104,7 +105,7 @@ class NowBlockFooterCms extends ObjectModel {
 			return false;
 
 		$sql1 = '
-			UPDATE `'._DB_PREFIX_.'now_block_cms_footer` SET `position`= `position` '.($way ? '- 1' : '+ 1').' WHERE `position`
+			UPDATE `'._DB_PREFIX_.'now_block_cms_footer` SET `position`= `position` '.($way ? '- 1' : '+ 1').' WHERE `id_now_block_cms_footer_column` = ' . (int)$this->id_now_block_cms_footer_column . ' AND `position`
 			'.($way
 				? '> '.(int)$moved_NowBlockFooterCms['position'].' AND `position` <= '.(int)$position
 				: '< '.(int)$moved_NowBlockFooterCms['position'].' AND `position` >= '.(int)$position
@@ -125,13 +126,14 @@ class NowBlockFooterCms extends ObjectModel {
 	 *
 	 * @return bool $return
 	 */
-	public static function cleanPositions()
+	public static function cleanPositions($id_now_block_cms_footer_column)
 	{
 		$return = true;
 
 		$sql = '
 		SELECT `id_now_block_cms_footer`
 		FROM `'._DB_PREFIX_.'now_block_cms_footer`
+		WHERE `id_now_block_cms_footer_column` = ' . (int)$id_now_block_cms_footer_column . '
 		ORDER BY `position` ASC';
 		$result = Db::getInstance()->executeS($sql);
 
@@ -149,10 +151,11 @@ class NowBlockFooterCms extends ObjectModel {
 	 *
 	 * @return int $position
 	 */
-	public static function getHigherPosition()
+	public static function getHigherPosition($id_now_block_cms_footer_column)
 	{
 		$sql = 'SELECT MAX(`position`)
-				FROM `'._DB_PREFIX_.'now_block_cms_footer`';
+				FROM `'._DB_PREFIX_.'now_block_cms_footer`
+				WHERE `id_now_block_cms_footer_column` = ' . (int)$id_now_block_cms_footer_column;
 		$position = DB::getInstance()->getValue($sql);
 		return (is_numeric($position)) ? $position : -1;
 	}
@@ -166,7 +169,7 @@ class NowBlockFooterCms extends ObjectModel {
 	public function add($autodate = true, $null_values = false)
 	{
 		if ($this->position <= 0)
-			$this->position = NowBlockFooterCms::getHigherPosition() + 1;
+			$this->position = NowBlockFooterCms::getHigherPosition($this->id_now_block_cms_footer_column) + 1;
 
 		if (!parent::add($autodate, $null_values) || !Validate::isLoadedObject($this))
 			return false;
@@ -178,10 +181,12 @@ class NowBlockFooterCms extends ObjectModel {
 	 * @see ObjectModel::delete()
 	 */
 	public function delete() {
+		$id_now_block_cms_footer_column = $this->id_now_block_cms_footer_column;
+
 		if (!parent::delete())
 			return false;
-		NowBlockFooterCms::cleanPositions();
 
+		NowBlockFooterCms::cleanPositions($id_now_block_cms_footer_column);
 	}
 
 	/**
@@ -210,6 +215,13 @@ class NowBlockFooterCms extends ObjectModel {
 
 		$result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sSQL);
 
-		return $result;
+		$aNowBlockFooterCms = array();
+
+		foreach ($result as $aRow) {
+			$oNowBlockFooterCms = new NowBlockFooterCms($aRow['id_now_block_cms_footer'], $iIdLang);
+			$aNowBlockFooterCms[$oNowBlockFooterCms->id_now_block_cms_footer] = $oNowBlockFooterCms;
+		}
+
+		return $aNowBlockFooterCms;
 	}
 }

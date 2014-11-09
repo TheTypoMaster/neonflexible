@@ -13,14 +13,11 @@ $_MODULE['<{now_block_customer_references}prestashop>adminblockcustomerreference
 $_MODULE['<{now_block_customer_references}prestashop>adminblockcustomerreferences_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'Activé';
 $_MODULE['<{now_block_customer_references}prestashop>adminblockcustomerreferences_52f5e0bc3859bc5f5e25130b6c7e8881'] = 'Position';
 $_MODULE['<{now_block_customer_references}prestashop>adminblockcustomerreferences_6759b907f024adc9050b29ec21be12ea'] = 'Date de modification';
-$_MODULE['<{now_block_customer_references}prestashop>adminblockcustomerreferences_cf2a964c35e591af144f7b912c3f4750'] = 'Option du bloc référence client';
-$_MODULE['<{now_block_customer_references}prestashop>adminblockcustomerreferences_87d49200bfc48e0bcfd3bae27d5616f3'] = 'Page CMS';
-$_MODULE['<{now_block_customer_references}prestashop>adminblockcustomerreferences_d9ca7a4f982bd6a1140508db47b12ec6'] = 'Page CMS qui redirigera vos client au clic sur le bouton \"Voir plus de références\"';
-$_MODULE['<{now_block_customer_references}prestashop>adminblockcustomerreferences_c9cc8cce247e49bae79f15173ce97354'] = 'Sauvegarder';
 $_MODULE['<{now_block_customer_references}prestashop>adminblockcustomerreferences_7c2eb5517715a1ce535d27cce8ca1c7c'] = 'Bloc référence client';
 $_MODULE['<{now_block_customer_references}prestashop>adminblockcustomerreferences_97e7c9a7d06eac006a28bf05467fcc8b'] = 'Lien';
 $_MODULE['<{now_block_customer_references}prestashop>adminblockcustomerreferences_b5a7adde1af5c87d7fd797b6245c2a39'] = 'Description';
 $_MODULE['<{now_block_customer_references}prestashop>adminblockcustomerreferences_2da0412d2d7de44a32d2c1a31e437a4e'] = 'Image (.png)';
 $_MODULE['<{now_block_customer_references}prestashop>adminblockcustomerreferences_2faec1f9f8cc7f8f40d521c4dd574f49'] = 'Activer';
 $_MODULE['<{now_block_customer_references}prestashop>adminblockcustomerreferences_b9f5c797ebbf55adccdd8539a65a0241'] = 'Désactiver';
+$_MODULE['<{now_block_customer_references}prestashop>adminblockcustomerreferences_c9cc8cce247e49bae79f15173ce97354'] = 'Sauvegarder';
 $_MODULE['<{now_block_customer_references}prestashop>footer_5b9b2e38bc2330fce607d260dea22a78'] = 'Voir plus de références';

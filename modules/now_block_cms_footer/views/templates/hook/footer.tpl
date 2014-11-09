@@ -2,42 +2,42 @@
 
 	<ul>
 
-		{foreach $aColumns as $aColumn}
-			{if $aColumn['active'] && array_key_exists($aColumn['id_now_block_cms_footer_column'], $aLinksByColumnId) && count($aLinksByColumnId[$aColumn['id_now_block_cms_footer_column']]) > 0}
+		{foreach $aNowBlockFooterCmsColumns as $oNowBlockFooterCmsColumn}
+			{if $oNowBlockFooterCmsColumn->active && array_key_exists($oNowBlockFooterCmsColumn->id_now_block_cms_footer_column, $aNowBlockFooterCmsByColumnIds) && count($aNowBlockFooterCmsByColumnIds[$oNowBlockFooterCmsColumn->id_now_block_cms_footer_column]) > 0}
 				<li class="hidden-xs">
-					<span>{$aColumn['name']}</span>
+					<span>{$oNowBlockFooterCmsColumn->name}</span>
 
-					{foreach $aLinksByColumnId[$aColumn['id_now_block_cms_footer_column']] as $aColumns}
+					{foreach $aNowBlockFooterCmsByColumnIds[$oNowBlockFooterCmsColumn->id_now_block_cms_footer_column] as $aNowBlockFooterCmsList}
 						<ul>
-							{foreach $aColumns as $aLink}
-								{if $aLink['active']}
+							{foreach $aNowBlockFooterCmsList as $oNowBlockFooterCms}
+								{if $oNowBlockFooterCms->active}
 									<li>
-										{if $aLink['type'] == NowBlockFooterCms::TYPE_LINK}
-											<a href="{$aLink['link']}">
-												{$aLink['name']}
+										{if $oNowBlockFooterCms->type == NowBlockFooterCms::TYPE_LINK}
+											<a href="{$oNowBlockFooterCms->link}">
+												{$oNowBlockFooterCms->name}
 											</a>
-										{elseif $aLink['type'] == NowBlockFooterCms::TYPE_CATEGORY}
-											<a href="{Context::getContext()->link->getCategoryLink($aLink['object'])}">
-												{if !is_null($aLink['name'])}
-													{$aLink['name']}
+										{elseif $oNowBlockFooterCms->type == NowBlockFooterCms::TYPE_CATEGORY}
+											<a href="{Context::getContext()->link->getCategoryLink($oNowBlockFooterCms->object)}">
+												{if !is_null($oNowBlockFooterCms->name)}
+													{$oNowBlockFooterCms->name}
 												{else}
-													{$aLink['object']->name}
+													{$oNowBlockFooterCms->object->name}
 												{/if}
 											</a>
-										{elseif $aLink['type'] == NowBlockFooterCms::TYPE_MANUFACTURER}
-											<a href="{Context::getContext()->link->getManufacturerLink($aLink['object'])}">
-												{if !is_null($aLink['name'])}
-													{$aLink['name']}
+										{elseif $oNowBlockFooterCms->type == NowBlockFooterCms::TYPE_MANUFACTURER}
+											<a href="{Context::getContext()->link->getManufacturerLink($oNowBlockFooterCms->object)}">
+												{if !is_null($oNowBlockFooterCms->name)}
+													{$oNowBlockFooterCms->name}
 												{else}
-													{$aLink['object']->name}
+													{$oNowBlockFooterCms->object->name}
 												{/if}
 											</a>
-										{elseif $aLink['type'] == NowBlockFooterCms::TYPE_CMS}
-											<a href="{Context::getContext()->link->getCMSLink($aLink['object'])}">
-												{if !is_null($aLink['name'])}
-													{$aLink['name']}
+										{elseif $oNowBlockFooterCms->type == NowBlockFooterCms::TYPE_CMS}
+											<a href="{Context::getContext()->link->getCMSLink($oNowBlockFooterCms->object)}">
+												{if !is_null($oNowBlockFooterCms->name)}
+													{$oNowBlockFooterCms->name}
 												{else}
-													{$aLink['object']->meta_title}
+													{$oNowBlockFooterCms->object->meta_title}
 												{/if}
 											</a>
 										{/if}

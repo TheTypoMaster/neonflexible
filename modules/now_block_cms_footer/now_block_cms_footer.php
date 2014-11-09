@@ -36,7 +36,7 @@ class now_block_cms_footer extends NowModule {
 	 */
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
-			'AdminBlockFooterCms' => array(
+			'AdminNowBlockFooterCms' => array(
 				'parent' => 'AdminParentNinjaOfWeb',
 				'name' => $this->l('Manage Footer')
 			)
@@ -75,34 +75,34 @@ class now_block_cms_footer extends NowModule {
 		if (Configuration::get('NOW_FOOTER_ENABLE')) {
 
 			// Lists of columns
-			$aColumns = NowBlockFooterCmsColumn::getColumns();
+			$aNowBlockFooterCmsColumn = NowBlockFooterCmsColumn::getColumns();
 
 			// Lists of links
-			$aLinks = NowBlockFooterCms::getLinks();
+			$aNowBlockFooterCms = NowBlockFooterCms::getLinks();
 
-			$aLinksByColumnId		= array();
-			foreach ($aLinks as $aLink) {
-				$aNewLink = $aLink;
+			$aNowBlockFooterCmsByColumnId		= array();
+			foreach ($aNowBlockFooterCms as $oNowBlockFooterCms) {
+				$oNewNowBlockFooterCms = $oNowBlockFooterCms;
 
-				if ($aLink['type'] == NowBlockFooterCms::TYPE_CMS) {
-					$aNewLink['object'] = new CMS($aLink['id_type'], Context::getContext()->language->id);
-				} elseif ($aLink['type'] == NowBlockFooterCms::TYPE_CATEGORY) {
-					$aNewLink['object'] = new Category($aLink['id_type'], Context::getContext()->language->id);
-				} elseif ($aLink['type'] == NowBlockFooterCms::TYPE_MANUFACTURER) {
-					$aNewLink['object'] = new Manufacturer($aLink['id_type'], Context::getContext()->language->id);
+				if ($oNowBlockFooterCms->type == NowBlockFooterCms::TYPE_CMS) {
+					$oNewNowBlockFooterCms->object = new CMS($oNowBlockFooterCms->id_type, Context::getContext()->language->id);
+				} elseif ($oNowBlockFooterCms->type == NowBlockFooterCms::TYPE_CATEGORY) {
+					$oNewNowBlockFooterCms->object = new Category($oNowBlockFooterCms->id_type, Context::getContext()->language->id);
+				} elseif ($oNowBlockFooterCms->type == NowBlockFooterCms::TYPE_MANUFACTURER) {
+					$oNewNowBlockFooterCms->object = new Manufacturer($oNowBlockFooterCms->id_type, Context::getContext()->language->id);
 				}
 
-				$aLinksByColumnId[$aLink['id_now_block_cms_footer_column']][] = $aNewLink;
+				$aNowBlockFooterCmsByColumnId[$oNowBlockFooterCms->id_now_block_cms_footer_column][] = $oNewNowBlockFooterCms;
 			}
 
-			$aLinksByColumnIdGood	= array();
-			foreach ($aLinksByColumnId as $id => $aColumn) {
-				$aLinksByColumnIdGood[$id] = array_chunk($aColumn, Configuration::get('NOW_MAX_LINE_BY_COLUMN'));
+			$aNowBlockFooterCmsByColumnIdGood	= array();
+			foreach ($aNowBlockFooterCmsByColumnId as $id => $aColumn) {
+				$aNowBlockFooterCmsByColumnIdGood[$id] = array_chunk($aColumn, Configuration::get('NOW_MAX_LINE_BY_COLUMN'));
 			}
 
 			$this->context->smarty->assign(array(
-				'aLinksByColumnId'	=> $aLinksByColumnIdGood,
-				'aColumns'			=> $aColumns
+				'aNowBlockFooterCmsByColumnIds'	=> $aNowBlockFooterCmsByColumnIdGood,
+				'aNowBlockFooterCmsColumns'		=> $aNowBlockFooterCmsColumn
 			));
 
 

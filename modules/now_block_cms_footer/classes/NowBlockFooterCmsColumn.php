@@ -166,7 +166,7 @@ class NowBlockFooterCmsColumn extends ObjectModel {
 	 * @param bool $active
 	 * @return array
 	 */
-	public static function getColumns($iIdLang = null, $bActive = true) {
+	public static function getColumns($iIdLang = null, $bActive = true, $returnArray = false) {
 
 		if (!Validate::isBool($bActive)) {
 			die(Tools::displayError());
@@ -186,6 +186,17 @@ class NowBlockFooterCmsColumn extends ObjectModel {
 
 		$result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sSQL);
 
-		return $result;
+		if ($returnArray) {
+			return $result;
+		}
+
+		$aNowBlockFooterCmsColumn = array();
+
+		foreach ($result as $aRow) {
+			$oNowBlockFooterCmsColumn = new NowBlockFooterCmsColumn($aRow['id_now_block_cms_footer_column'], $iIdLang);
+			$aNowBlockFooterCmsColumn[$oNowBlockFooterCmsColumn->position] = $oNowBlockFooterCmsColumn;
+		}
+
+		return $aNowBlockFooterCmsColumn;
 	}
 }
