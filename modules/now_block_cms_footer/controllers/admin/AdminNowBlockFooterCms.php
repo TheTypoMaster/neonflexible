@@ -18,7 +18,7 @@ class AdminNowBlockFooterCmsController extends ModuleAdminController {
 		$this->module				= new now_block_cms_footer();
 		$this->override_folder		= 'now_block_cms_footer';
 
-		if (Tools::getIsset('addnow_block_cms_footer') || Tools::getIsset('updatenow_block_cms_footer')) {
+		if (Tools::getIsset('addnow_block_cms_footer') || Tools::getIsset('updatenow_block_cms_footer') || Tools::getIsset('submitAddnow_block_cms_footer')) {
 			$this->table				= 'now_block_cms_footer';
 			$this->identifier			= 'id_now_block_cms_footer';
 			$this->className			= 'NowBlockFooterCms';
@@ -220,6 +220,9 @@ class AdminNowBlockFooterCmsController extends ModuleAdminController {
 	 * @return mixed
 	 */
 	public function renderFormColumn() {
+		$this->context->smarty->assign(array(
+			'back_url_override' => self::$currentIndex . '&token=' . $this->token
+		));
 
 		$this->fields_form = array(
 			'legend' => array(
@@ -266,6 +269,9 @@ class AdminNowBlockFooterCmsController extends ModuleAdminController {
 	 * @return mixed
 	 */
 	public function renderFormLink() {
+		$this->context->smarty->assign(array(
+			'back_url_override' => self::$currentIndex . '&id_now_block_cms_footer_column=' . Tools::getValue('id_now_block_cms_footer_column', $this->object->id_now_block_cms_footer_column) . '&detailsnow_block_cms_footer_column&token=' . $this->token
+		));
 
 		$this->fields_form = array(
 			'legend' => array(
@@ -446,5 +452,14 @@ class AdminNowBlockFooterCmsController extends ModuleAdminController {
 				break;
 			}
 		}
+	}
+
+	public function processSave() {
+
+		if (Tools::getIsset('addnow_block_cms_footer') || Tools::getIsset('updatenow_block_cms_footer') || Tools::getIsset('submitAddnow_block_cms_footer')) {
+			$this->redirect_after = self::$currentIndex . '&id_now_block_cms_footer_column=' . Tools::getValue('id_now_block_cms_footer_column', $this->object->id_now_block_cms_footer_column) . '&detailsnow_block_cms_footer_column&token=' . $this->token;
+		}
+
+		return parent::processSave();
 	}
 }

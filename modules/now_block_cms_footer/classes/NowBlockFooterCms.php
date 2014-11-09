@@ -55,16 +55,16 @@ class NowBlockFooterCms extends ObjectModel {
 		'fields' => array(
 			'id_shop'							=> array('type' => self::TYPE_INT),
 			'id_now_block_cms_footer_column'	=> array('type' => self::TYPE_INT, 'validate' => 'isUnsignedInt', 'required' => true),
-			'type' 								=> array('type' => self::TYPE_STRING, 'validate' => 'isUnsignedInt', 'required' => true),
-			'id_type' 							=> array('type' => self::TYPE_INT, 'validate' => 'isUnsignedInt'),
+			'type'								=> array('type' => self::TYPE_STRING,	'validate' => 'isCatalogName', 'required' => true),
+			'id_type'							=> array('type' => self::TYPE_INT,		'validate' => 'isUnsignedInt'),
 			'active' 							=> array('type' => self::TYPE_BOOL, 'validate' => 'isBool', 'required' => true),
 			'position' 							=> array('type' => self::TYPE_INT),
 			'date_add' 							=> array('type' => self::TYPE_DATE, 'validate' => 'isDate'),
 			'date_upd' 							=> array('type' => self::TYPE_DATE, 'validate' => 'isDate'),
 
 			// Lang fields
-			'name' 								=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCatalogName', 'required' => true, 'size' => 255),
-			'link' 								=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isLinkRewrite', 'required' => true, 'size' => 255),
+			'name' 								=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCatalogName', 'size' => 255),
+			'link'				=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isUrl'),
 		),
 	);
 
