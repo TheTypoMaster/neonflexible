@@ -2,7 +2,7 @@
 <module>
 	<name>now_category_slide</name>
 	<displayName><![CDATA[Gestion des slides des m&eacute;tiers]]></displayName>
-	<version><![CDATA[1]]></version>
+	<version><![CDATA[1.1]]></version>
 	<description><![CDATA[Gestion des slides des m&eacute;tiers sur votre home page]]></description>
 	<author><![CDATA[NinjaOfWeb]]></author>
 	<tab><![CDATA[front_office_features]]></tab>

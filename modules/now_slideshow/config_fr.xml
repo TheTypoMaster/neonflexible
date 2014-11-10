@@ -2,7 +2,7 @@
 <module>
 	<name>now_slideshow</name>
 	<displayName><![CDATA[Gestion des slides]]></displayName>
-	<version><![CDATA[1.1]]></version>
+	<version><![CDATA[1.4]]></version>
 	<description><![CDATA[Gestion des slides de la home page]]></description>
 	<author><![CDATA[NinjaOfWeb]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
