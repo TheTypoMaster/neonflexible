@@ -92,7 +92,7 @@ table.std td, table.table_block td {padding:12px;border-right:1px solid #e9e9e9;
 .table .table {background-color:white;}
 
 /* Bloc moyen flotant */
-ul.block {float:left;width:500px;background:#f4f4f4;height:250px;margin:20px;padding:20px;border:1px solid #dedede;position:relative;}
+ul.block {float:left;width:500px;background:#f4f4f4;height:100%;margin:20px;padding:20px;border:1px solid #dedede;position:relative;}
 ul.block li {padding:0 15px;line-height:18px;list-style-type:none;}
 ul.block li.title, ul.block li.address_title {border-bottom:1px solid #ccc;text-transform:uppercase;font-weight:bold;padding:0 0 15px 15px;}
 ul.block >li:first-child + li {margin-top:8px}
