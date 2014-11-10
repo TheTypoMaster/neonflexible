@@ -70,11 +70,12 @@ form.std div.uploader {width:300px;float:left;}
 .table-bordered {border:1px solid #ddd;background:#fff;}
 table.std {width:100%;border-top:1px solid #ddd;margin:20px 0 0 0;}
 table.std tr {border:1px solid #ddd;}
+table.std tr:last-child {border:1px solid #ddd;}
 table.std tr.row-surligne {background:#f4f4f4;}
 table.std td {padding:5px 0 5px 20px;color:#777;font-size:14px;font-weight:normal;font-family:Lato,Verdana,Arial,sans-serif;}
 table.std td:first-letter {text-transform:capitalize;}
 table.std td:first-child {border-right:1px solid #ddd;}
-table.std, table.table_block {margin-bottom:20px;width:100%;border:1px solid #999999;border-bottom:none;background:white;border-collapse:inherit;}
+table.std, table.table_block {margin-bottom:20px;width:100%;border:1px solid #999999;background:white;border-collapse:inherit;}
 table.std th, table.table_block th {padding:14px 12px;font-size:12px;color:white;font-weight:bold;text-transform:uppercase;text-shadow:0 1px 0 black;background:#999999;}
 table.std tr.alternate_item, table.table_block tr.alternate_item {background-color:#f3f3f3;}
 table.std td, table.table_block td {padding:12px;border-right:1px solid #e9e9e9;border-bottom:1px solid #e9e9e9;font-size:12px;vertical-align:top;}
