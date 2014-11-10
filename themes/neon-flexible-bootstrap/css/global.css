@@ -216,8 +216,8 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	border:1px solid;border-color:#ff5db1 #ef017c #ff5db1 #ef017c;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .button.button-medium span {display:block;padding:10px 10px 10px 14px;border:1px solid;border-color:#ff5db1;}
 .button.button-medium span i.right {margin-right:0;margin-left:9px;}
-.btn.button-plus, .btn.button-minus {font-size:14px;line-height:14px;color:silver;text-shadow:1px -1px rgba(0, 0, 0, 0.05);padding:0;border:1px solid;border-color:#dedcdc #c1bfbf #b5b4b4 #dad8d8;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
-.btn.button-plus span, .btn.button-minus span {display:block;border:1px solid white;vertical-align:middle;width:25px;height:25px;text-align:center;vertical-align:middle;padding:4px 0 0 0;  
+.btn.button-plus, .btn.button-minus {font-size:10px;line-height:22px;color:#777;text-shadow:1px -1px rgba(0, 0, 0, 0.05);padding:0;border:1px solid;border-color:#dedcdc #c1bfbf #b5b4b4 #dad8d8;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.btn.button-plus span, .btn.button-minus span {display:block;border:1px solid white;vertical-align:middle;width:30px;height:30px;text-align:center;vertical-align:middle;padding:4px 0 0 0;
 	background:#1e5799;
 	background:white;
 	background:-moz-linear-gradient(top, white 0%, #fbfbfb 100%);
