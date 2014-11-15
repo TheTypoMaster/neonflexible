@@ -1,6 +1,6 @@
 /* Bloc reinsurance */
 
-#bloc-reinsurrance {border-top:1px solid #ccc;padding:40px 0;}
+#bloc-reinsurrance {border-top:1px solid #ccc;padding:40px 0;background:#fff;}
 #bloc-reinsurrance ul {list-style-type:none;padding:0;}
 #bloc-reinsurrance ul li {float:left;padding:0;width:230px;text-align:center;margin:0 70px 0 0;position:relative;}
 #bloc-reinsurrance ul li:last-child {margin:0;}
