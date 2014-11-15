@@ -115,6 +115,7 @@ $_LANG['category-count_c2fa5785ffc9398e567dd537740cd7d4'] = 'Résultats %1$d - %
 $_LANG['category_068f80c7519d0528fb08e82137a72131'] = 'Produits';
 $_LANG['category_2f4e54ec9bebe1122b5c23217e764828'] = 'Cette catégorie est actuellement indisponible.';
 $_LANG['category_5785d4b04472cb3958cf87a891899230'] = 'Aucun produit dans cette catégorie.';
+$_LANG['category_cf51066f49e517f274b8173cc265c60b'] = 'Métier';
 $_LANG['cms_368fe771261fcb18f7988833c9294a20'] = 'Tutoriel';
 $_LANG['cms_eecc2cef7e0fa128ecb0557b66486539'] = 'Cette page n\'existe pas';
 $_LANG['contact-form_02d4482d332e1aef3437cd61c9bcc624'] = 'Contactez-nous';

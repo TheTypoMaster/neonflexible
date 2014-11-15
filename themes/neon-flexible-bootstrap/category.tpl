@@ -10,8 +10,12 @@
 
 				<div class="left">
 
-					<p class="titre-vert">{l s='Products'}</p>
-
+					{assign var=nowCategorySlide value=NowCategorySlide::getCategorySlideByIdCategory($category->id)}
+					{if is_array($nowCategorySlide)}
+						<p class="titre-vert">{l s='Job'}</p>
+					{else}
+						<p class="titre-vert">{l s='Products'}</p>
+					{/if}
 					<h1>
 						{$category->name|escape:'htmlall':'UTF-8'}
 						{if isset($categoryNameComplement)}

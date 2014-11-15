@@ -192,4 +192,32 @@ class NowCategorySlide extends ObjectModel {
 
 		return $aCategory;
 	}
+
+	/**
+	 * @param $iIdCategory
+	 * @param null $iIdLang
+	 * @param bool $bActive
+	 * @return array
+	 */
+	public static function getCategorySlideByIdCategory($iIdCategory, $iIdLang = null, $bActive = true) {
+
+		if (!Validate::isBool($bActive)) {
+			die(Tools::displayError());
+		}
+
+		if (is_null($iIdLang)) {
+			$iIdLang = (int)Context::getContext()->language->id;
+		}
+
+		$sSQL = '
+			SELECT *
+			FROM `' . _DB_PREFIX_ . 'now_category_slide` cs
+			' . Shop::addSqlAssociation('now_category_slide', 'cs') .
+			'WHERE 1 ' . ($bActive ? ' AND cs.`active` = 1 ' : '') . '
+			AND cs.`id_category` = ' . (int)$iIdCategory . '
+			ORDER BY cs.`position` ASC
+		';
+
+		return Db::getInstance(_PS_USE_SQL_SLAVE_)->getRow($sSQL);
+	}
 }
