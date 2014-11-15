@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,700,900,300italic);
 
 body {font-family:Raleway,Verdana,Arial,sans-serif;font-size:14px;color:#333;padding:0;}
-p {font-family:Lato,Verdana,Arial,sans-serif;font-size:13px;color:#333;text-align:justify;}
+p {font-family:Lato,Verdana,Arial,sans-serif;font-size:14px;color:#333;text-align:justify;}
 p.warning {margin:20px;}
 .clearBoth {clear:both;}
 span.clearBoth {clear:both;display:block;}
@@ -47,12 +47,12 @@ form.std p.select span,
 form.std p.textarea label {display:block;padding:6px 15px;width:250px;font-size:14px;text-align:right;float:left;color:#333;}
 form.std p.radio label {float:left;padding:0 10px;width:auto;font-size:14px;}
 form.std p.radio input {float:left;}
-form.std p.checkbox label {float:none;width:auto;font-size:12px;}
+form.std p.checkbox label {float:none;width:auto;/*font-size:12px;*/}
 form.std p.text input,
 form.std p.password input,
-form.std p.select input {padding:0 5px;height:22px;width:360px;border:1px solid #ccc;font-size:12px;color:#777;}
-form.std p.select select {margin-right:10px;border:1px solid #ccc;font-size:12px;color:#777;}
-form.std p.textarea textarea {height:80px;width:370px;border:1px solid #ccc;font-size:12px;color:#777;}
+form.std p.select input {padding:0 5px;height:22px;width:360px;border:1px solid #ccc;/*font-size:12px;*/color:#777;}
+form.std p.select select {margin-right:10px;border:1px solid #ccc;/*font-size:12px;*/color:#777;}
+form.std p.textarea textarea {height:80px;width:370px;border:1px solid #ccc;/*font-size:12px;*/color:#777;}
 form.std p.submit {margin:10px;}
 form.std div.radio {margin:22px;float:left;}
 form.std div.uploader {width:300px;float:left;}
@@ -76,9 +76,9 @@ table.std td {padding:5px 0 5px 20px;color:#777;font-size:14px;font-weight:norma
 table.std td:first-letter {text-transform:capitalize;}
 table.std td:first-child {border-right:1px solid #ddd;}
 table.std, table.table_block {margin-bottom:20px;width:100%;border:1px solid #999999;background:white;border-collapse:inherit;}
-table.std th, table.table_block th {padding:14px 12px;font-size:12px;color:white;font-weight:bold;text-transform:uppercase;text-shadow:0 1px 0 black;background:#999999;}
+table.std th, table.table_block th {padding:14px 12px;/*font-size:12px;*/color:white;font-weight:bold;text-transform:uppercase;text-shadow:0 1px 0 black;background:#999999;}
 table.std tr.alternate_item, table.table_block tr.alternate_item {background-color:#f3f3f3;}
-table.std td, table.table_block td {padding:12px;border-right:1px solid #e9e9e9;border-bottom:1px solid #e9e9e9;font-size:12px;vertical-align:top;}
+table.std td, table.table_block td {padding:12px;border-right:1px solid #e9e9e9;border-bottom:1px solid #e9e9e9;/*font-size:12px;*/vertical-align:top;}
 .table {margin-bottom:30px;}
 .table > thead > tr > th {background:#fbfbfb;border-bottom-width:1px;color:#333333;vertical-align:middle;}
 .table td a.color-myaccount {color:#777777;text-decoration:underline;}
@@ -122,7 +122,7 @@ footer .container {padding:0;}
 footer #contact {color:#777;/*width:317px;*/height:220px;float:right;padding:10px 0 0 0;margin:20px 0 0 0;}
 footer #contact .logo {margin:0 auto;display:block;}
 footer #contact .adresse {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;text-align:center;margin:10px 0;}
-footer #contact .telephone {background:url('../img/theme/footer-telephone-international.png') no-repeat;display:block;width:290px;height:34px;line-height:32px;padding-left:40px;font-size:13px;margin:0 auto;font-weight:300;font-family:Lato,Verdana,Arial,sans-serif;cursor:default;color:#777;text-decoration:none;}
+footer #contact .telephone {background:url('../img/theme/footer-telephone-international.png') no-repeat;display:block;width:290px;height:34px;line-height:32px;padding-left:40px;/*font-size:13px;*/margin:0 auto;font-weight:300;font-family:Lato,Verdana,Arial,sans-serif;cursor:default;color:#777;text-decoration:none;}
 footer #contact .telephone span {color:#55a323;font-weight:bold;font-size:16px;}
 
 /* MODULE :blocksocial */
@@ -173,7 +173,7 @@ ul.footer_link li {list-style-type:none;}
 .button-rose {background:#f13e70;line-height:40px;text-align:center;width:220px;height:40px;display:block;color:#fff;font-family:Raleway,Verdana,Arial,sans-serif;font-size:15px;font-weight:bold;text-transform:uppercase;position:relative;border-radius:30px;border:none;}
 .button-rose:hover {color:#fff;text-decoration:underline;}
 p.submit .button-rose {margin:0 auto 20px auto;}
-.button-rose-and-grey {z-index:2;position:absolute;margin:0 0 0 20px;border:2px solid #dadada;padding:5px 10px;border-radius:20px;background:#fff;color:#f13d6f;font-size:13px;line-height:13px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:600;text-transform:uppercase;}
+.button-rose-and-grey {z-index:2;position:absolute;margin:0 0 0 20px;border:2px solid #dadada;padding:5px 10px;border-radius:20px;background:#fff;color:#f13d6f;/*font-size:13px;*/line-height:13px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:600;text-transform:uppercase;}
 .button-rose-and-grey:hover {border:2px solid #f13d6f;text-decoration:none;color:#f13d6f;}
 .button-rose-contact-us {
 	background:#ff5db1; /* Old browsers */
@@ -272,8 +272,8 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 .filter .pagination ul li a:hover {text-decoration:none;}
 .filter .pagination ul li.pagination_next, .filter .pagination ul li.pagination_previous {}
 .filter .compare-form {float:right;border-radius:15px;padding:8px 20px 6px 25px;background:#f13e70;}
-.filter .compare-form p {padding:0;margin:0;color:#fff;font-size:13px;text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}
-.filter .compare-form p .bt_compare {border:none;background:none;padding:0;margin:0;color:#fff;font-size:13px;text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}
+.filter .compare-form p {padding:0;margin:0;color:#fff;/*font-size:13px;*/text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}
+.filter .compare-form p .bt_compare {border:none;background:none;padding:0;margin:0;color:#fff;/*font-size:13px;*/text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}
 .filter .jqDisplayedAllProductsButton {text-decoration:underline;color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;display:block;float:right;margin:5px 5% 0 0;}
 .filter .jqDisplayedAllProductsButton:hover {text-decoration:none;}
 
@@ -290,7 +290,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 #order_step ul li {float:left;list-style-type:none;text-align:center;width:160px;margin:0 20px;position:relative;}
 #order_step ul li span.step-number{background:url('../img/theme/step_todo.png') no-repeat;width:69px;height:66px;display:block;margin:25px auto 10px auto;font-size:49px;font-weight:300;font-family:Raleway,Verdana,Arial,sans-serif;line-height:59px;}
 #order_step ul li.step_current span.step-number{background:url('../img/theme/step_current.png') no-repeat;color:#fff;}
-#order_step ul li a, #order_step ul li span {text-transform:uppercase;color:#333;font-size:13px;font-weight:bold;font-family:Raleway,Verdana,Arial,sans-serif;text-decoration:none;}
+#order_step ul li a, #order_step ul li span {text-transform:uppercase;color:#333;/*font-size:13px;*/font-weight:bold;font-family:Raleway,Verdana,Arial,sans-serif;text-decoration:none;}
 #order_step ul li.step_current a, #order_step ul li.step_current span {color:#7db232;}
 #order_step ul li.step_done a, #order_step ul li.step_done span {color:#cbcbcb;}
 
@@ -1224,7 +1224,7 @@ table#cart_summary .gift-icon {color:white;background:#0088cc;line-height:20px;p
 @media (max-width:768px) {
 	.product-name a {font-size:14px;}
 }
-.price {font-size:13px;color:#777777;white-space:nowrap;}
+.price {/*font-size:13px;*/color:#777777;white-space:nowrap;}
 .price.product-price {font:600 21px/26px "Open Sans", sans-serif;color:#333333;}
 .old-price {color:#6f6f6f;text-decoration:line-through;}
 .old-price.product-price {font-size:17px;}
