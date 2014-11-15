@@ -9,6 +9,7 @@ span.clearBoth {clear:both;display:block;}
 .unvisible {display:none;}
 .left {float:left;}
 .right {float:right;}
+.bold {font-weight:bold;}
 hr {border-top:1px solid #dedede;}
 
 .text-muted {color:#999999;}
@@ -72,7 +73,7 @@ table.std {width:100%;border-top:1px solid #ddd;margin:20px 0 0 0;}
 table.std tr {border:1px solid #ddd;}
 table.std tr:last-child {border:1px solid #ddd;}
 table.std tr.row-surligne {background:#f4f4f4;}
-table.std td {padding:5px 0 5px 20px;color:#777;font-size:14px;font-weight:normal;font-family:Lato,Verdana,Arial,sans-serif;}
+table.std td {padding:5px 0 5px 20px;color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;}
 table.std td:first-letter {text-transform:capitalize;}
 table.std td:first-child {border-right:1px solid #ddd;}
 table.std, table.table_block {margin-bottom:20px;width:100%;border:1px solid #999999;background:white;border-collapse:inherit;}

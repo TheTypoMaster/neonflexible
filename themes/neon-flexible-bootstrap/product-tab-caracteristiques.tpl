@@ -5,7 +5,7 @@
 			{foreach $features as $key => $feature}
 				{if isset($feature.value)}
 					<tr {if $key%2}class="row-surligne"{/if}>
-						<td>{$feature.name|escape:'htmlall':'UTF-8'}</td>
+						<td class="bold">{$feature.name|escape:'htmlall':'UTF-8'}</td>
 						<td>{$feature.value|escape:'htmlall':'UTF-8'}</td>
 					</tr>
 				{/if}
