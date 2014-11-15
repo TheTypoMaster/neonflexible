@@ -310,7 +310,7 @@ class AdminMetaControllerCore extends AdminController
 							'query' => 'query',
 						),
 					),
-					'hint' => $this->l('Name of the related page.'),
+					'desc' => $this->l('Name of the related page.'),
 					'required' => true,
 					'empty_message' => '<p>'.$this->l('There is no page available!').'</p>',
 				),
@@ -319,7 +319,7 @@ class AdminMetaControllerCore extends AdminController
 					'label' => $this->l('Page title'),
 					'name' => 'title',
 					'lang' => true,
-					'hint' => array(
+					'desc' => array(
 						$this->l('Title of this page.'),
 						$this->l('Invalid characters:').' &lt;&gt;;=#{}'
 					)
@@ -329,7 +329,7 @@ class AdminMetaControllerCore extends AdminController
 					'label' => $this->l('Meta description'),
 					'name' => 'description',
 					'lang' => true,
-					'hint' => array(
+					'desc' => array(
 						$this->l('A short description of your shop.'),
 						$this->l('Invalid characters:').' &lt;&gt;;=#{}'
 					)
@@ -339,7 +339,7 @@ class AdminMetaControllerCore extends AdminController
 					'label' => $this->l('Meta keywords'),
 					'name' => 'keywords',
 					'lang' => true,
-					'hint' =>  array(
+					'desc' =>  array(
 						$this->l('List of keywords for search engines.'),
 						$this->l('To add tags, click in the field, write something, and then press the "Enter" key.'),
 						$this->l('Invalid characters:').' &lt;&gt;;=#{}'
@@ -352,7 +352,7 @@ class AdminMetaControllerCore extends AdminController
 					'lang' => true,
 					'required' => true,
 					'disabled' => (bool)$is_index,
-					'hint' => array(
+					'desc' => array(
 						$this->l('For instance, "contacts" for http://example.com/shop/contacts to redirect to http://example.com/shop/contact-form.php'),
 						$this->l('Only letters and hyphens are allowed.'),
 					)
