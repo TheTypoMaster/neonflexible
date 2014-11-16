@@ -254,7 +254,7 @@
 					<button type="submit" name="processCarrier" class="button btn btn-default standard-checkout button-medium">
 									<span>
 										{l s='Proceed to checkout'}
-										<i class="icon-chevron-right right"></i>
+										<i class="icon-chevron-right"></i>
 									</span>
 					</button>
 				{/if}

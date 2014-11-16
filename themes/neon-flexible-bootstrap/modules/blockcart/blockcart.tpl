@@ -209,7 +209,7 @@
 								<p class="cart-buttons">
 									<a id="button_order_cart" class="btn btn-default button button-small" href="{$link->getPageLink("$order_process", true)|escape:"html":"UTF-8"}" title="{l s='Check out' mod='blockcart'}" rel="nofollow">
 								<span>
-									{l s='Check out' mod='blockcart'}<i class="icon-chevron-right right"></i>
+									{l s='Check out' mod='blockcart'}<i class="icon-chevron-right"></i>
 								</span>
 									</a>
 								</p>
@@ -340,12 +340,12 @@
 				<div class="button-container">
 					<span class="continue btn btn-default button exclusive-medium" title="{l s='Continue shopping' mod='blockcart'}">
 						<span>
-							<i class="icon-chevron-left left"></i>{l s='Continue shopping' mod='blockcart'}
+							<i class="icon-chevron-left"></i>{l s='Continue shopping' mod='blockcart'}
 						</span>
 					</span>
 					<a class="btn btn-default button button-medium"	href="{$link->getPageLink("$order_process", true)|escape:"html":"UTF-8"}" title="{l s='Proceed to checkout' mod='blockcart'}" rel="nofollow">
 						<span>
-							{l s='Proceed to checkout' mod='blockcart'}<i class="icon-chevron-right right"></i>
+							{l s='Proceed to checkout' mod='blockcart'}<i class="icon-chevron-right"></i>
 						</span>
 					</a>
 				</div>

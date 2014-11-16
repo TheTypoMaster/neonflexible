@@ -54,7 +54,7 @@
 					<i class="icon-chevron-left"></i>{l s='Other payment methods' mod='cheque'}
 				</a>
 				<button type="submit" class="button btn btn-default button-medium">
-					<span>{l s='I confirm my order' mod='cheque'}<i class="icon-chevron-right right"></i></span>
+					<span>{l s='I confirm my order' mod='cheque'}<i class="icon-chevron-right"></i></span>
 				</button>
 			</p>
 		</form>

@@ -197,7 +197,7 @@
 <ul class="footer_link">
 	<li>
 		<a class="button lnk_view btn btn-default" href="{$base_dir}">
-			<span><i class="icon-chevron-left left"></i>{l s='Continue Shopping'}</span>
+			<span><i class="icon-chevron-left"></i>{l s='Continue Shopping'}</span>
 		</a>
 	</li>
 </ul>

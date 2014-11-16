@@ -119,7 +119,7 @@
 					</div>
 				</div>
 				<div class="submit">
-					<button type="submit" name="submitMessage" id="submitMessage" class="button btn btn-default button-medium"><span>{l s='Send'}<i class="icon-chevron-right right"></i></span></button>
+					<button type="submit" name="submitMessage" id="submitMessage" class="button btn btn-default button-medium"><span>{l s='Send'}<i class="icon-chevron-right"></i></span></button>
 				</div>
 			</fieldset>
 		</form>

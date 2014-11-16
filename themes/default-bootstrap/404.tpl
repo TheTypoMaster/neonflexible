@@ -43,5 +43,5 @@
 		</fieldset>
 	</form>
 
-	<div class="buttons"><a class="btn btn-default button button-medium" href="{$base_dir}" title="{l s='Home'}"><span><i class="icon-chevron-left left"></i>{l s='Home page'}</span></a></div>
+	<div class="buttons"><a class="btn btn-default button button-medium" href="{$base_dir}" title="{l s='Home'}"><span><i class="icon-chevron-left"></i>{l s='Home page'}</span></a></div>
 </div>

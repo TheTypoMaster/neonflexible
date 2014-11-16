@@ -40,7 +40,7 @@
 <div class="pull-right">
 	<strong>
 		<a href="{$smarty.server.HTTP_REFERER|escape}" name="back">
-			<i class="icon-chevron-left left"></i> {l s='Back to Search results for "%s" (%d other results)' sprintf=[$smarty.get.search_query,$smarty.get.results]}
+			<i class="icon-chevron-left"></i> {l s='Back to Search results for "%s" (%d other results)' sprintf=[$smarty.get.search_query,$smarty.get.results]}
 		</a>
 	</strong>
 </div>
