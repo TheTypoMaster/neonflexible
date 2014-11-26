@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>dashactivity</name>
-	<displayName><![CDATA[Dashboard Activity]]></displayName>
-	<version><![CDATA[0.4.5]]></version>
+	<displayName><![CDATA[Tableau de bord de l&#039;activit&eacute;]]></displayName>
+	<version><![CDATA[0.4.6]]></version>
 	<description><![CDATA[]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[dashboard]]></tab>
