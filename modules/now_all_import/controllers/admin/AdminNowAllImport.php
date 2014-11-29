@@ -489,7 +489,7 @@ class AdminNowAllImportController extends ModuleAdminControllerCore
 
 			if (empty($aData['error'])) {
 
-				// get product information
+				// Get product information
 				$aProduct = NowProduct::getProductLight($aData['id_product']);
 
 				// Gestion des accessoires
