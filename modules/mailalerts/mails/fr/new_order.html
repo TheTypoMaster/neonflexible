@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<title>Message de {shop_name}</title>
 		
-
+		
 		<style>	@media only screen and (max-width: 300px){ 
 				body {
 					width:218px !important;
@@ -31,7 +31,7 @@
 				.table-recap table, .table-recap thead, .table-recap tbody, .table-recap th, .table-recap td, .table-recap tr { 
 					display: block !important; 
 				}
-				.table-recap{width: 293px !important;}
+				.table-recap{width: 295px !important;}
 				.table-recap tr td, .conf_body td{text-align:center !important;}
 				
 			}
@@ -45,7 +45,7 @@
 				.table {width:285px;margin:auto!important;}	
 				.logo, .titleblock, .linkbelow, .box, .footer, .space_footer{width:auto!important;display: block!important;}
 				
-				.table-recap{width: 285px!important;}
+				.table-recap{width: 295px!important;}
 				.table-recap tr td, .conf_body td{text-align:center!important;}	
 				.address{display: block !important;margin-bottom: 10px !important;}
 				.space_address{display: none !important;}	
@@ -92,10 +92,10 @@
 				<td style="padding:7px 0">
 					<font size="2" face="Open-sans, sans-serif" color="#555454">
 						<p data-html-only="1" style="border-bottom:1px solid #D6D4D4;margin:3px 0 7px;text-transform:uppercase;font-weight:500;font-size:18px;padding-bottom:10px">
-							Détail de la commande						</p>
+							Détails de la commande						</p>
 						<span style="color:#777">
-							<span style="color:#333"><strong>Commande :</strong></span> {order_name} Passée le {date}<br /><br />
-							<span style="color:#333"><strong>Paiement</strong></span> {payment}
+							<span style="color:#333"><strong>Commande :</strong></span> {order_name} Date {date}<br /><br />
+							<span style="color:#333"><strong>Paiement :</strong></span> {payment}
 						</span>
 					</font>
 				</td>
@@ -242,7 +242,7 @@
 									<td width="10" style="color:#333;padding:0">&nbsp;</td>
 									<td align="right" style="color:#333;padding:0">
 										<font size="2" face="Open-sans, sans-serif" color="#555454">
-											<strong>TVA totale payée</strong>
+											<strong>TVA totale</strong>
 										</font>
 									</td>
 									<td width="10" style="color:#333;padding:0">&nbsp;</td>
@@ -304,7 +304,7 @@
 				<td style="padding:7px 0">
 					<font size="2" face="Open-sans, sans-serif" color="#555454">
 						<p data-html-only="1" style="border-bottom:1px solid #D6D4D4;margin:3px 0 7px;text-transform:uppercase;font-weight:500;font-size:18px;padding-bottom:10px">
-							Transporteur						</p>
+							Transporteur :						</p>
 						<span style="color:#777">
 							{carrier}
 						</span>
@@ -389,7 +389,7 @@
 						</tr>
 						<tr>
 							<td class="footer" style="border-top:4px solid #333333;padding:7px 0">
-								<span><a href="{shop_url}" style="color:#337ff1">{shop_name}</a> propulsé par <a href="http://www.prestashop.com/" style="color:#337ff1">PrestaShop&trade;</a></span>
+								<span><a href="{shop_url}" style="color:#337ff1">{shop_name}</a> réalisé avec <a href="http://www.prestashop.com/" style="color:#337ff1">PrestaShop&trade;</a></span>
 							</td>
 						</tr>
 					</table>

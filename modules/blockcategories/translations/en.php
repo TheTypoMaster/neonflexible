@@ -10,12 +10,12 @@ $_MODULE['<{blockcategories}prestashop>blockcategories_23e0d4ecc25de9b2777fdaca3
 $_MODULE['<{blockcategories}prestashop>blockcategories_0cf328636f0d607ac24a5c435866b94b'] = 'Dynamic HTML: Invalid choice.';
 $_MODULE['<{blockcategories}prestashop>blockcategories_f4f70727dc34561dfde1a3c529b6205c'] = 'Settings';
 $_MODULE['<{blockcategories}prestashop>blockcategories_1379a6b19242372c1f23cc9adedfcdd6'] = 'Category root';
-$_MODULE['<{blockcategories}prestashop>blockcategories_8cf04a9734132302f96da8e113e80ce5'] = 'Home';
-$_MODULE['<{blockcategories}prestashop>blockcategories_222a267cc5778206b253be35ee3ddab5'] = 'Current';
+$_MODULE['<{blockcategories}prestashop>blockcategories_89b278a71f2be5f620307502326587a0'] = 'Home category';
+$_MODULE['<{blockcategories}prestashop>blockcategories_62381fc27e62649a16182a616de3f7ea'] = 'Current category';
 $_MODULE['<{blockcategories}prestashop>blockcategories_19561e33450d1d3dfe6af08df5710dd0'] = 'Maximum depth';
-$_MODULE['<{blockcategories}prestashop>blockcategories_4a99c9eebe78078e29e6193e05eac626'] = 'Set the maximum depth of sublevels displayed in this block (0 = infinite).';
+$_MODULE['<{blockcategories}prestashop>blockcategories_584d4e251b6f778eda9cfc2fc756b0b0'] = 'Set the maximum depth of category sublevels displayed in this block (0 = infinite).';
 $_MODULE['<{blockcategories}prestashop>blockcategories_971fd8cc345d8bd9f92e9f7d88fdf20c'] = 'Dynamic';
-$_MODULE['<{blockcategories}prestashop>blockcategories_e16f248b047fb7d0c97dcc19b17296a3'] = 'Activate dynamic (animated) mode for sublevels.';
+$_MODULE['<{blockcategories}prestashop>blockcategories_c10efcaa2a8ff4eedaa3538fff78eb53'] = 'Activate dynamic (animated) mode for category sublevels.';
 $_MODULE['<{blockcategories}prestashop>blockcategories_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'Enabled';
 $_MODULE['<{blockcategories}prestashop>blockcategories_b9f5c797ebbf55adccdd8539a65a0241'] = 'Disabled';
 $_MODULE['<{blockcategories}prestashop>blockcategories_6b46ae48421828d9973deec5fa9aa0c3'] = 'Sort';

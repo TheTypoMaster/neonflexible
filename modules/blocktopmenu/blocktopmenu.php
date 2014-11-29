@@ -52,7 +52,7 @@ class Blocktopmenu extends Module
 	{
 		$this->name = 'blocktopmenu';
 		$this->tab = 'front_office_features';
-		$this->version = '2.0.5';
+		$this->version = '2.0.9';
 		$this->author = 'PrestaShop';
 
 		$this->bootstrap = true;
@@ -63,12 +63,10 @@ class Blocktopmenu extends Module
 		$this->ps_versions_compliancy = array('min' => '1.6', 'max' => _PS_VERSION_);
 	}
 
-	public function install()
+	public function install($delete_params = true)
 	{
 		if (!parent::install() ||
 			!$this->registerHook('displayTop') ||
-			!Configuration::updateGlobalValue('MOD_BLOCKTOPMENU_ITEMS', 'CAT3,CAT26') ||
-			!Configuration::updateGlobalValue('MOD_BLOCKTOPMENU_SEARCH', '1') ||
 			!$this->registerHook('actionObjectCategoryUpdateAfter') ||
 			!$this->registerHook('actionObjectCategoryDeleteAfter') ||
 			!$this->registerHook('actionObjectCategoryAddAfter') ||
@@ -85,9 +83,15 @@ class Blocktopmenu extends Module
 			!$this->registerHook('actionObjectProductDeleteAfter') ||
 			!$this->registerHook('actionObjectProductAddAfter') ||
 			!$this->registerHook('categoryUpdate') ||
-			!$this->registerHook('actionShopDataDuplication') ||
-			!$this->installDB())
+			!$this->registerHook('actionShopDataDuplication'))
 			return false;
+
+		$this->clearMenuCache();
+
+		if ($delete_params)
+			if (!$this->installDb() || !Configuration::updateGlobalValue('MOD_BLOCKTOPMENU_ITEMS', 'CAT3,CAT26') || !Configuration::updateGlobalValue('MOD_BLOCKTOPMENU_SEARCH', '1'))
+				return false;
+
 		return true;
 	}
 
@@ -111,13 +115,17 @@ class Blocktopmenu extends Module
 		) ENGINE = '._MYSQL_ENGINE_.' CHARACTER SET utf8 COLLATE utf8_general_ci;'));
 	}
 
-	public function uninstall()
+	public function uninstall($delete_params = true)
 	{
-		if (!parent::uninstall() ||
-			!Configuration::deleteByName('MOD_BLOCKTOPMENU_ITEMS') ||
-			!Configuration::deleteByName('MOD_BLOCKTOPMENU_SEARCH') ||
-			!$this->uninstallDB())
+		if (!parent::uninstall())
 			return false;
+
+		$this->clearMenuCache();
+
+		if ($delete_params)
+			if (!$this->uninstallDB() || !Configuration::deleteByName('MOD_BLOCKTOPMENU_ITEMS') || !Configuration::deleteByName('MOD_BLOCKTOPMENU_SEARCH'))
+				return false;
+
 		return true;
 	}
 
@@ -125,6 +133,16 @@ class Blocktopmenu extends Module
 	{
 		Db::getInstance()->execute('DROP TABLE `'._DB_PREFIX_.'linksmenutop`');
 		Db::getInstance()->execute('DROP TABLE `'._DB_PREFIX_.'linksmenutop_lang`');
+		return true;
+	}
+
+	public function reset()
+	{
+		if (!$this->uninstall(false))
+			return false;
+		if (!$this->install(false))
+			return false;
+
 		return true;
 	}
 
@@ -245,7 +263,7 @@ class Blocktopmenu extends Module
 
 			}
 
-			if (!count($errors_add_link))
+			if (!count($errors_delete_link))
 				$this->_html .= $this->displayConfirmation($this->l('The link has been removed.'));
 			else
 				$this->_html .= $this->displayError(sprintf($this->l('Unable to remove link for the following shop(s): %s'), implode(', ', $errors_delete_link)));
@@ -576,7 +594,7 @@ class Blocktopmenu extends Module
 		return $html;
 	}
 
-	private function generateCategoriesMenu($categories)
+	private function generateCategoriesMenu($categories, $is_children = 0)
 	{
 		$html = '';
 
@@ -597,9 +615,9 @@ class Blocktopmenu extends Module
 			if (isset($category['children']) && !empty($category['children']))
 			{
 				$html .= '<ul>';
-				$html .= $this->generateCategoriesMenu($category['children']);
+				$html .= $this->generateCategoriesMenu($category['children'], 1);
 
-				if ((int)$category['level_depth'] == 2)
+				if ((int)$category['level_depth'] > 1 && !$is_children)
 				{
 					$files = scandir(_PS_CAT_IMG_DIR_);
 
@@ -1162,8 +1180,6 @@ class Blocktopmenu extends Module
 
 	public function customGetNestedCategories($shop_id, $root_category = null, $id_lang = false, $active = true, $groups = null, $use_shop_restriction = true, $sql_filter = '', $sql_sort = '', $sql_limit = '')
 	{
-
-
 		if (isset($root_category) && !Validate::isInt($root_category))
 			die(Tools::displayError());
 
@@ -1182,9 +1198,9 @@ class Blocktopmenu extends Module
 							SELECT c.*, cl.*
 				FROM `'._DB_PREFIX_.'category` c
 				INNER JOIN `'._DB_PREFIX_.'category_shop` category_shop ON (category_shop.`id_category` = c.`id_category` AND category_shop.`id_shop` = "'.(int)$shop_id.'")
-				LEFT JOIN `'._DB_PREFIX_.'category_lang` cl ON c.`id_category` = cl.`id_category` AND cl.`id_shop` = "'.(int)$shop_id.'"
-				WHERE 1 '.$sql_filter.' '.($id_lang ? 'AND `id_lang` = '.(int)$id_lang : '').'
-				'.($active ? ' AND c.`active` = 1' : '').'
+				LEFT JOIN `'._DB_PREFIX_.'category_lang` cl ON (c.`id_category` = cl.`id_category` AND cl.`id_shop` = "'.(int)$shop_id.'")
+				WHERE 1 '.$sql_filter.' '.($id_lang ? 'AND cl.`id_lang` = '.(int)$id_lang : '').'
+				'.($active ? ' AND (c.`active` = 1 OR c.`is_root_category` = 1)' : '').'
 				'.(isset($groups) && Group::isFeatureActive() ? ' AND cg.`id_group` IN ('.implode(',', $groups).')' : '').'
 				'.(!$id_lang || (isset($groups) && Group::isFeatureActive()) ? ' GROUP BY c.`id_category`' : '').'
 				'.($sql_sort != '' ? $sql_sort : ' ORDER BY c.`level_depth` ASC').'
@@ -1195,15 +1211,12 @@ class Blocktopmenu extends Module
 			$categories = array();
 			$buff = array();
 
-			if (!isset($root_category))
-				$root_category = 1;
-
 			foreach ($result as $row)
 			{
 				$current = &$buff[$row['id_category']];
 				$current = $row;
 
-				if ($row['id_category'] == $root_category)
+				if ($row['id_parent'] == 0)
 					$categories[$row['id_category']] = &$current;
 				else
 					$buff[$row['id_parent']]['children'][$row['id_category']] = &$current;

@@ -3,6 +3,7 @@
 global $_MODULE;
 $_MODULE = array();
 
+$_MODULE['<{dashproducts}prestashop>dashproducts_6655df4af87b2038afd507a33545a56d'] = 'Dashboard Products';
 $_MODULE['<{dashproducts}prestashop>dashproducts_2ea989f83006e233627987293f4bde0a'] = 'Customer Name';
 $_MODULE['<{dashproducts}prestashop>dashproducts_068f80c7519d0528fb08e82137a72131'] = 'Products';
 $_MODULE['<{dashproducts}prestashop>dashproducts_96b0141273eabab320119c467cdcaf17'] = 'Total';
@@ -18,7 +19,7 @@ $_MODULE['<{dashproducts}prestashop>dashproducts_9e79098315622e58529d664b9a8b3cf
 $_MODULE['<{dashproducts}prestashop>dashproducts_ed4832a84ee072b00a6740f657183598'] = 'Views';
 $_MODULE['<{dashproducts}prestashop>dashproducts_2c04f1ad7694378897b98624780327ff'] = 'Added to cart';
 $_MODULE['<{dashproducts}prestashop>dashproducts_ce4ee01637f4279d02d0f232459dc9a4'] = 'Purchased';
-$_MODULE['<{dashproducts}prestashop>dashproducts_dcb66ff6e4a2517ade22183779939c9d'] = 'Rate';
+$_MODULE['<{dashproducts}prestashop>dashproducts_37be07209f53a5d636d5c904ca9ae64c'] = 'Percentage';
 $_MODULE['<{dashproducts}prestashop>dashproducts_1eb18ea1d018abef5759cef60ddc289b'] = 'You must enable the "Save global page views" option from the "Data mining for statistics" module in order to display the most viewed products, or use the Google Analytics module.';
 $_MODULE['<{dashproducts}prestashop>dashproducts_cf5f3091e30dee6597885d8c0e0c357f'] = 'Term';
 $_MODULE['<{dashproducts}prestashop>dashproducts_13348442cc6a27032d2b4aa28b75a5d3'] = 'Search';

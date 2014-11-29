@@ -3,9 +3,9 @@
 global $_LANGMAIL;
 $_LANGMAIL = array();
 
-$_LANGMAIL['Your guest account has been transformed to customer account'] = 'Your guest account has been transformed to customer account';
-$_LANGMAIL['Virtual product to download'] = 'Virtual product to download';
-$_LANGMAIL['New voucher regarding your order %s'] = 'New voucher regarding your order %s';
+$_LANGMAIL['Your guest account has been transformed into a customer account'] = 'Your guest account was converted to a customer account';
+$_LANGMAIL['The virtual product that you bought is available for download'] = 'The virtual product that you bought is available for download';
+$_LANGMAIL['New voucher for your order %s'] = 'New voucher for your order %s';
 $_LANGMAIL['Order confirmation'] = 'Order confirmation';
 $_LANGMAIL['Log: You have a new alert from your shop'] = 'Log: You have a new alert from your shop';
 $_LANGMAIL['Fwd: Customer message'] = 'Fwd: Customer message';
@@ -13,6 +13,7 @@ $_LANGMAIL['An answer to your message is available #ct%1$s #tc%2$s'] = 'An answe
 $_LANGMAIL['Your new password'] = 'Your new password';
 $_LANGMAIL['Package in transit'] = 'Package in transit';
 $_LANGMAIL['New message regarding your order'] = 'New message regarding your order';
+$_LANGMAIL['New voucher for your order #%s'] = 'New voucher for your order #%s';
 $_LANGMAIL['New credit slip regarding your order'] = 'New credit slip regarding your order';
 $_LANGMAIL['Process the payment of your order'] = 'Process the payment of your order';
 $_LANGMAIL['Your order has been changed'] = 'Your order has been changed';

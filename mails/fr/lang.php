@@ -3,9 +3,9 @@
 global $_LANGMAIL;
 $_LANGMAIL = array();
 
-$_LANGMAIL['Your guest account has been transformed to customer account'] = 'Votre compte invité a été transformé en compte client';
-$_LANGMAIL['Virtual product to download'] = 'Produit virtuel à télécharger';
-$_LANGMAIL['New voucher regarding your order %s'] = 'Nouveau bon de réduction concernant votre commande %s';
+$_LANGMAIL['Your guest account has been transformed into a customer account'] = 'Votre compte invité a été transformé en compte client';
+$_LANGMAIL['The virtual product that you bought is available for download'] = 'Le produit  que vous avez acheté est prêt à être téléchargé';
+$_LANGMAIL['New voucher for your order %s'] = 'Nouveau bon de réduction pour votre commande %s';
 $_LANGMAIL['Order confirmation'] = 'Confirmation de commande';
 $_LANGMAIL['Log: You have a new alert from your shop'] = 'Log : Vous avez un nouveau message d\'alerte dans votre boutique';
 $_LANGMAIL['Fwd: Customer message'] = 'TR: Message d\'un client';
@@ -13,6 +13,7 @@ $_LANGMAIL['An answer to your message is available #ct%1$s #tc%2$s'] = 'Une rép
 $_LANGMAIL['Your new password'] = 'Votre nouveau mot de passe';
 $_LANGMAIL['Package in transit'] = 'Livraison en cours';
 $_LANGMAIL['New message regarding your order'] = 'Nouveau message concernant votre commande';
+$_LANGMAIL['New voucher for your order #%s'] = 'Nouveau bon de réduction pour votre commande %s';
 $_LANGMAIL['New credit slip regarding your order'] = 'Nouvel avoir concernant votre commande';
 $_LANGMAIL['Process the payment of your order'] = 'Régler votre commande';
 $_LANGMAIL['Your order has been changed'] = 'Votre commande a été modifiée';
@@ -25,7 +26,7 @@ $_LANGMAIL['Message from a customer'] = 'Message d\'un client';
 $_LANGMAIL['Password query confirmation'] = 'Confirmation de demande de mot de passe';
 $_LANGMAIL['Newsletter voucher'] = 'Bon de réduction newsletter';
 $_LANGMAIL['Newsletter confirmation'] = 'Confirmation newsletter';
-$_LANGMAIL['Email verification'] = 'Email de vérification';
+$_LANGMAIL['Email verification'] = 'E-mail de vérification';
 $_LANGMAIL['Your wishlist\'s link'] = 'Lien vers votre liste de cadeaux';
 $_LANGMAIL['Message from %1$s %2$s'] = 'Message de %1$s %2$s';
 $_LANGMAIL['Your cart and your discount'] = 'Votre panier et votre réduction';

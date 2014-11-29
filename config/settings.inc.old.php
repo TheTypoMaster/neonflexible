@@ -13,7 +13,7 @@ define('_MEDIA_SERVER_3_', '');
 define('_COOKIE_KEY_', 'Z4dDEaicXUzeG4A74HzYV3d1f0bXv36bpYsVz8hyLszuNh0ai7u2L0Mq');
 define('_COOKIE_IV_', 'nUAzwAN9');
 define('_PS_CREATION_DATE_', '2014-04-02');
-define('_PS_VERSION_', '1.6.0.5');
+define('_PS_VERSION_', '1.6.0.6');
 define('_RIJNDAEL_KEY_', 'GifhtUjAVeC5JNN0BY8ehJahFdOjkO4M');
 define('_RIJNDAEL_IV_', 'k9DTnnLosFdxQBHce+57aA==');
-
+define('_PS_DIRECTORY_', '/../../');

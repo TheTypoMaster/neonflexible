@@ -5,9 +5,9 @@ Bonjour {firstname} {lastname},
 
 Une nouvelle commande a été générée à votre demande. 
 
-Veuillez vous rendre sur {order_link}
-[{order_link}] afin de finaliser votre paiement.
+Veuillez vous rendre sur {order_link} [{order_link}]
+pour finaliser votre paiement. 		 
 
-{shop_name} [{shop_url}] propulsé par
+{shop_name} [{shop_url}] réalisé avec
 PrestaShop(tm) [http://www.prestashop.com/] 
 

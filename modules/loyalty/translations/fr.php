@@ -2,12 +2,13 @@
 
 global $_MODULE;
 $_MODULE = array();
+
 $_MODULE['<{loyalty}prestashop>loyalty_30146a132c2aa28808a8411ed74c12ed'] = 'Programme de fidélité';
 $_MODULE['<{loyalty}prestashop>loyalty_f8763c754ba455aa6e8ddf0e62911eb7'] = 'Propose un programme de fidélité à vos clients';
 $_MODULE['<{loyalty}prestashop>loyalty_f0338d5a7bbd642cc188ca69c8a97b12'] = 'Cette action effacera tous les points de fidélité et l\'historique des points de tous vos clients, êtes vous sûr ?';
 $_MODULE['<{loyalty}prestashop>loyalty_7307b68f93443d5863f1d3943c546b20'] = 'Points fidélité';
 $_MODULE['<{loyalty}prestashop>loyalty_e81b2826b5aebd9c92fb5d090f0cdc9d'] = 'Vous devez choisir au moins une catégorie pour l\'action de bon de réduction';
-$_MODULE['<{loyalty}prestashop>loyalty_f38f5974cdc23279ffe6d203641a8bdf'] = 'Configuration mise à jour.';
+$_MODULE['<{loyalty}prestashop>loyalty_f38f5974cdc23279ffe6d203641a8bdf'] = 'Réglages mis à jour.';
 $_MODULE['<{loyalty}prestashop>loyalty_8b80d4b6307990874b832cc15a92e5a3'] = 'Certain paramètres sont manquants.';
 $_MODULE['<{loyalty}prestashop>loyalty_a82e0d057f443115e807bd6ca595fc8c'] = 'L\'objet Commande est incorrecte.';
 $_MODULE['<{loyalty}prestashop>loyalty_94c69408d25102ba7ddcf3533b56c407'] = 'L\'objet Client est incorrecte.';
@@ -27,7 +28,7 @@ $_MODULE['<{loyalty}prestashop>loyalty_a149e85a44aeec9140e92733d9ed694e'] = 'Ann
 $_MODULE['<{loyalty}prestashop>loyalty_4cb08bf5ad3d3c7b010dde725a078b28'] = 'Déjà convertis';
 $_MODULE['<{loyalty}prestashop>loyalty_df05c2db84dacb19b599b489bf3963db'] = 'Non disponible sur les remises';
 $_MODULE['<{loyalty}prestashop>loyalty_01371a1d58e9234c0b9dbc08cf54fa8b'] = 'Non valables sur les promotions';
-$_MODULE['<{loyalty}prestashop>loyalty_f4f70727dc34561dfde1a3c529b6205c'] = 'Réglages';
+$_MODULE['<{loyalty}prestashop>loyalty_f4f70727dc34561dfde1a3c529b6205c'] = 'Paramètres';
 $_MODULE['<{loyalty}prestashop>loyalty_8334a158298fbcf163f4dcb4a387d150'] = 'Ratio';
 $_MODULE['<{loyalty}prestashop>loyalty_ea92f82fb14a544ac9d38c3e6c8dc03b'] = '= 1 point de fidélité.';
 $_MODULE['<{loyalty}prestashop>loyalty_cd53f34f7289c573ba717b7767919a96'] = '1 point =';
@@ -39,16 +40,18 @@ $_MODULE['<{loyalty}prestashop>loyalty_dd98e4d652530674f61201056fdbe9b4'] = 'Mon
 $_MODULE['<{loyalty}prestashop>loyalty_af720a2679a80545d064cf0350a7fc38'] = 'Appliquer les taxes sur le bon de réduction';
 $_MODULE['<{loyalty}prestashop>loyalty_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'Activé';
 $_MODULE['<{loyalty}prestashop>loyalty_b9f5c797ebbf55adccdd8539a65a0241'] = 'Désactivé';
-$_MODULE['<{loyalty}prestashop>loyalty_ade45d72ab6ba1ab576d8b9deb0c2438'] = 'Points attribués au statut suivant';
-$_MODULE['<{loyalty}prestashop>loyalty_9611a682e61c503c32e2dc58fdbc8ddf'] = 'Points annulés au statut suivant';
+$_MODULE['<{loyalty}prestashop>loyalty_ade45d72ab6ba1ab576d8b9deb0c2438'] = 'Points attribués à l\'état suivant';
+$_MODULE['<{loyalty}prestashop>loyalty_9611a682e61c503c32e2dc58fdbc8ddf'] = 'Points annulés pour l\'état suivant';
 $_MODULE['<{loyalty}prestashop>loyalty_51ab56dd5b46c7b5c8fdf22651ae0db6'] = 'Donner des points sur les produits en promotion';
+$_MODULE['<{loyalty}prestashop>loyalty_e32f75d18c920282f6d8770d19d43d91'] = 'Les bons de réductions crées par le système de fidélité peuvent être utilisés dans les catégories suivantes :';
+$_MODULE['<{loyalty}prestashop>loyalty_9516494d859b2819c76023f8ce906795'] = 'Cochez les cases de catégories dans lesquelles les bon de réduction peuvent être utilisés.';
 $_MODULE['<{loyalty}prestashop>loyalty_91b442d385b54e1418d81adc34871053'] = 'Sélectionnés';
 $_MODULE['<{loyalty}prestashop>loyalty_b56c3bda503a8dc4be356edb0cc31793'] = 'Réduire tout';
 $_MODULE['<{loyalty}prestashop>loyalty_5ffd7a335dd836b3373f5ec570a58bdc'] = 'Ouvrir tout';
 $_MODULE['<{loyalty}prestashop>loyalty_5e9df908eafa83cb51c0a3720e8348c7'] = 'Tout cocher';
 $_MODULE['<{loyalty}prestashop>loyalty_9747d23c8cc358c5ef78c51e59cd6817'] = 'Tout décocher';
 $_MODULE['<{loyalty}prestashop>loyalty_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';
-$_MODULE['<{loyalty}prestashop>loyalty_30e793698766edbaaf84a74d4c377f72'] = 'Statuts des points de fidélité';
+$_MODULE['<{loyalty}prestashop>loyalty_30e793698766edbaaf84a74d4c377f72'] = 'Progression des points de fidélité';
 $_MODULE['<{loyalty}prestashop>loyalty_4f2a91e15af2631ff9424564b8a45fb2'] = 'Initial';
 $_MODULE['<{loyalty}prestashop>loyalty_453e6aa38d87b28ccae545967c53004f'] = 'Indisponible';
 $_MODULE['<{loyalty}prestashop>loyalty_6366c60fc5b4f4fce0e3dd146494a4f4'] = 'Converti';
@@ -63,7 +66,7 @@ $_MODULE['<{loyalty}prestashop>loyalty_10ac3d04253ef7e1ddc73e6091c0cd55'] = 'Sui
 $_MODULE['<{loyalty}prestashop>loyalty_e0aa021e21dddbd6d8cecec71e9cf564'] = 'ok';
 $_MODULE['<{loyalty}prestashop>loyalty_6c583afb157e33bfb5b7c3d4114c4dd5'] = 'objets :';
 $_MODULE['<{loyalty}prestashop>loyalty_c48105520852bbd0fa692e4c9fd61628'] = 'Les bons de réductions générés ici peuvent être utilisés pour les articles des catégories suivantes :';
-$_MODULE['<{loyalty}prestashop>loyalty_b1c94ca2fbc3e78fc30069c8d0f01680'] = 'Tous';
+$_MODULE['<{loyalty}prestashop>loyalty_b1c94ca2fbc3e78fc30069c8d0f01680'] = 'Toutes';
 $_MODULE['<{loyalty}prestashop>loyalty_5b7d558a20e8bcb6d9355a012becb1eb'] = 'Etes-vous sûrs de vouloir transformer vos points en bon de réduction ?';
 $_MODULE['<{loyalty}prestashop>loyalty_4db04271e368fe3d4e1aa7332a18fa9d'] = 'Transformer mes points en un bon de réduction de';
 $_MODULE['<{loyalty}prestashop>loyalty_b39cba8836db01a04888aef6ba386420'] = 'Mes bons de réductions obtenus';
@@ -75,7 +78,7 @@ $_MODULE['<{loyalty}prestashop>loyalty_b2844b8e17ecaaeae68d018fe9418af0'] = 'Val
 $_MODULE['<{loyalty}prestashop>loyalty_ec53a8c4f07baed5d8825072c89799be'] = 'État';
 $_MODULE['<{loyalty}prestashop>loyalty_3ec365dd533ddb7ef3d1c111186ce872'] = 'Détails';
 $_MODULE['<{loyalty}prestashop>loyalty_29aa46cc3d2677c7e0f216910df600ff'] = 'Frais de port offerts';
-$_MODULE['<{loyalty}prestashop>loyalty_2c8bb57a0b1dff255f3d6684a9fddda3'] = 'Prêt à être utiliser';
+$_MODULE['<{loyalty}prestashop>loyalty_2c8bb57a0b1dff255f3d6684a9fddda3'] = 'Prêt à être utilisé';
 $_MODULE['<{loyalty}prestashop>loyalty_24b9e0a0faa7aa28dcadeb4cf7f860fd'] = 'Déjà utilisé';
 $_MODULE['<{loyalty}prestashop>loyalty_2af3bf4c82c5b33875d532820a959799'] = 'Généré par les commandes suivantes';
 $_MODULE['<{loyalty}prestashop>loyalty_18fb6221fe0d9895c2e9ba08283f00e9'] = 'Commande n°%d';
@@ -103,3 +106,8 @@ $_MODULE['<{loyalty}prestashop>shopping-cart_e7e421ccebbe3fafffe0f67dbd595d5b'] 
 $_MODULE['<{loyalty}prestashop>shopping-cart_443c3e03e194c2a4cdb107808b051615'] = 'pouvant être transformé(s) en un bon de réduction de';
 $_MODULE['<{loyalty}prestashop>shopping-cart_2d354f4df80bbebf309f184c3953dc1d'] = 'Offre non applicable pour les commandes passées en tant qu\'invité';
 $_MODULE['<{loyalty}prestashop>shopping-cart_8cec799df06a3f5a026b31fcd95e0172'] = 'Ajoutez des produits à votre panier pour gagner plus de points de fidélité.';
+$_MODULE['<{loyalty}prestashop>loyalty_cec73b5ce095a59305ad92a0d47495cb'] = 'A utiliser';
+$_MODULE['<{loyalty}prestashop>loyalty_019d1ca7d50cc54b995f60d456435e87'] = 'Utilisé';
+
+
+return $_MODULE;

@@ -2,7 +2,7 @@
 <module>
 	<name>blockpermanentlinks</name>
 	<displayName><![CDATA[Bloc liens permanents]]></displayName>
-	<version><![CDATA[0.2]]></version>
+	<version><![CDATA[0.2.1]]></version>
 	<description><![CDATA[Ajoute un bloc qui affiche des liens permanents (contact, plan du site, etc.).]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
