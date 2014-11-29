@@ -150,6 +150,9 @@
 				{/if}
 			</div>
 
+			{* Hook permettant d'afficher les délais de livraison des transporteurs *}
+			{hook h='displayCarrierDeliveryTimeList'}
+
 			<div id="add_to_cart" {if (!$allow_oosp && $product->quantity <= 0) OR !$product->available_for_order OR (isset($restricted_country_mode) AND $restricted_country_mode) OR $PS_CATALOG_MODE}style="display:none"{/if} class="buttons_bottom_block">
 				<p class="button-add-to-cart gradient">
 					<span></span>
