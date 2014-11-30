@@ -1,5 +1,5 @@
 {if isset($products)}
-	<ul id="product_list" class="clear">
+	<ul id="product_list" class="clear mode-{if isset($smarty.cookies['category-mode'])}{$smarty.cookies['category-mode']}{else}list{/if} {if isset($class) && $class} {$class}{/if}{if isset($active) && $active == 1} active{/if}">
 	{foreach from=$products item=product name=products}
 		<li class="ajax_block_product {if $smarty.foreach.products.first}first_item{elseif $smarty.foreach.products.last}last_item{/if} {if ($smarty.foreach.products.index %4) == 3}alternate_item{else}item{/if} clearfix {if isset($product.product_type) && $product.product_type.type == NowProductType::TYPE_CONTENT}is_content_type{/if}">
 
