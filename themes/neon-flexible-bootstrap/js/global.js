@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 	if (typeof page_name != 'undefined' && !in_array(page_name, ['index', 'product']))
 	{
-		bindGrid();
+		//bindGrid();
 
 		 $(document).on('change', '.selectProductSort', function(e){
 			if (typeof request != 'undefined' && request)
