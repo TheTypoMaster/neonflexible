@@ -6,6 +6,8 @@ cache/smarty/compile/*
 !cache/smarty/compile/index.php
 cache/tcpdf/*
 !cache/tcpdf/index.php
+cache/purifier/*
+!cache/purifier/index.php
 
 config/xml/*.xml
 config/settings.inc.php
@@ -57,3 +59,4 @@ modules/now_import_accessories/uploads/*.csv
 modules/now_import_packs/uploads/*.csv
 modules/now_product_type/uploads/*.csv
 modules/now_all_import/uploads/*.csv
+modules/*/config_.xml
