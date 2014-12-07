@@ -29,6 +29,8 @@ $(function() {
 		$.totalStorage('category-mode', mode);
 		$.totalStorage('display',       mode);
 
+		document.cookie = 'category-mode=' + mode;
+
 		$('#product_list').removeClass('mode-block');
 		$('#product_list').removeClass('mode-list');
 
