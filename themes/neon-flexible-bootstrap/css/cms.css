@@ -8,7 +8,7 @@
 .block-cms {margin:50px 0 100px 0;}
 
 #cms #center_column h2 {font-size:32px;color:#333;text-align:left;font-family:Raleway,Verdana,Arial,sans-serif;margin:70px 0 30px 0;}
-#cms #center_column h3 {padding:0;font-size:16px;color:#333;text-align:left;font-family:Raleway,Verdana,Arial,sans-serif;margin:0;font-weight:bold;text-transform:uppercase;}
+#cms #center_column h2.en-savoir-plus {padding:0;font-size:16px;color:#333;text-align:left;font-family:Raleway,Verdana,Arial,sans-serif;margin:0;font-weight:bold;text-transform:uppercase;}
 #cms #center_column p {font-family:Lato,Verdana,Arial,sans-serif;color:#777;font-size:14px;}
 #cms #center_column p strong {color:#000;}
 #cms #center_column ul {font-family:Lato,Verdana,Arial,sans-serif;color:#777;font-size:14px;}

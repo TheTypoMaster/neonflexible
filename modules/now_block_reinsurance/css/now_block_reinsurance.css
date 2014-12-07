@@ -4,6 +4,6 @@
 #bloc-reinsurrance ul {list-style-type:none;padding:0;}
 #bloc-reinsurrance ul li {float:left;padding:0;width:230px;text-align:center;margin:0 70px 0 0;position:relative;}
 #bloc-reinsurrance ul li:last-child {margin:0;}
-#bloc-reinsurrance ul li h6 {color:#333;font-family:Raleway,Verdana,Arial,sans-serif;font-size:18px;font-weight:bold;text-decoration:none;}
+#bloc-reinsurrance ul li p.title_h6 {color:#333;font-family:Raleway,Verdana,Arial,sans-serif;font-size:18px;font-weight:bold;text-decoration:none;text-align:center;}
 #bloc-reinsurrance ul li p {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;text-decoration:none;}
 #bloc-reinsurrance ul li a.link {width:100%;height:100%;position:absolute;z-index:1;top:0;left:0;text-indent:99999999px;}

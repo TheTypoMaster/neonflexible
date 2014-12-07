@@ -264,23 +264,23 @@
 	padding:30px 30px 30px 30px;
 	overflow:hidden;
 	position:static;}
-#layer_cart .layer_cart_product h2 {
+#layer_cart .layer_cart_product p.title_h2 {
 	font:400 23px/29px Arial, Helvetica, sans-serif;
 	color:#46a74e;
 	margin-bottom:22px;
 	padding-right:100px;}
 @media (max-width:767px) {
-	#layer_cart .layer_cart_product h2 {
+	#layer_cart .layer_cart_product p.title_h2 {
 		font-size:18px;
 		padding-right:0;
 		line-height:normal;}}
-#layer_cart .layer_cart_product h2 i {
+#layer_cart .layer_cart_product p.title_h2 i {
 	font-size:30px;
 	line-height:30px;
 	float:left;
 	padding-right:8px;}
 @media (max-width:767px) {
-	#layer_cart .layer_cart_product h2 i {
+	#layer_cart .layer_cart_product p.title_h2 i {
 		font-size:22px;
 		line-height:22px;}}
 #layer_cart .layer_cart_product .product-image-container {
@@ -323,14 +323,14 @@
 	#layer_cart .layer_cart_cart {
 		border-left:none;
 		border-top:1px solid #d6d4d4;}}
-#layer_cart .layer_cart_cart h2 {
+#layer_cart .layer_cart_cart p.title_h2 {
 	font:400 23px/29px Arial, Helvetica, sans-serif;
 	color:#333333;
 	border-bottom:1px solid #d6d4d4;
 	padding-bottom:13px;
 	margin-bottom:17px;}
 @media (max-width:767px) {
-	#layer_cart .layer_cart_cart h2 {
+	#layer_cart .layer_cart_cart p.title_h2 {
 		font-size:18px;}}
 #layer_cart .layer_cart_cart .layer_cart_row {
 	padding:0 0 7px 0;}
@@ -375,7 +375,7 @@
 	border-top:1px solid #d6d4d4;
 	padding:26px 30px 40px 30px;
 	position:relative;}
-#layer_cart .crossseling h2 {
+#layer_cart .crossseling p.title_h2 {
 	font:400 23px/26px Arial, Helvetica, sans-serif;
 	color:#333333;
 	margin-bottom:25px;}

@@ -108,6 +108,7 @@ ul.block >li:first-child + li {margin-top:8px}
 #header {background:#fff;height:190px;position:relative}
 #header .navbar-inverse {background:#373a39;height:36px;}
 #header .navbar-inverse .container {display:block;height:36px;}
+#header h1 {margin:0;}
 #header a img.logo {position:absolute;top:10px;z-index:10;}
 #header .caret {margin-left:10px;border-top:7px solid #acacac;border-bottom:none;border-right:5px solid transparent;border-left:5px solid transparent;}
 #authentication #header, #order #header, #module-bankwire-payment #header, #module-cheque-payment #header, #order-confirmation #header {height:150px;}

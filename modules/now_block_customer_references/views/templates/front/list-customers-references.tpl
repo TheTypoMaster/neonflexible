@@ -12,7 +12,7 @@
 				<img src="{$oNowBlockCustomerReferences->getImageLink()}" alt="{$oNowBlockCustomerReferences->name}" />
 
 				<div>
-					<p>{$oNowBlockCustomerReferences->name}</p>
+					<h2>{$oNowBlockCustomerReferences->name}</h2>
 					<p>{$oNowBlockCustomerReferences->description}</p>
 					{if $oNowBlockCustomerReferences->link}
 						<a href="{$oNowBlockCustomerReferences->link}" target="_blank">{$oNowBlockCustomerReferences->link}</a>

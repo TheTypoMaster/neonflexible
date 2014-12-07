@@ -85,9 +85,11 @@
 				<ul class="bullet">
 					{foreach from=$sub_category item=subcategory}
 						<li>
-							<a href="{$link->getCMSCategoryLink($subcategory.id_cms_category, $subcategory.link_rewrite)|escape:'htmlall':'UTF-8'}">
-								{$subcategory.name|escape:'htmlall':'UTF-8'}
-							</a>
+							<h2>
+								<a href="{$link->getCMSCategoryLink($subcategory.id_cms_category, $subcategory.link_rewrite)|escape:'htmlall':'UTF-8'}">
+									{$subcategory.name|escape:'htmlall':'UTF-8'}
+								</a>
+							</h2>
 						</li>
 					{/foreach}
 				</ul>
@@ -96,9 +98,11 @@
 				<ul class="bullet">
 					{foreach from=$cms_pages item=cmspages}
 						<li>
-							<a href="{$link->getCMSLink($cmspages.id_cms)|escape:'htmlall':'UTF-8'}">
-								{$cmspages.meta_title|escape:'htmlall':'UTF-8'}
-							</a>
+							<h2>
+								<a href="{$link->getCMSLink($cmspages.id_cms)|escape:'htmlall':'UTF-8'}">
+									{$cmspages.meta_title|escape:'htmlall':'UTF-8'}
+								</a>
+							</h2>
 						</li>
 					{/foreach}
 				</ul>

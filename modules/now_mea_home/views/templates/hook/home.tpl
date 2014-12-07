@@ -2,7 +2,7 @@
 	<div class="container">
 
 		<div id="mea-home">
-			<p class="titre-size-1">{l s='Les produits Néon Flexible à la UNE' mod='now_mea_home'}</p>
+			<h2 class="titre-size-1">{l s='Les produits Néon Flexible à la UNE' mod='now_mea_home'}</h2>
 
 			<ul>
 				{foreach from=$aProducts item=oProduct name=mea}
@@ -29,7 +29,7 @@
 						<div>
 
 							{* Nom du produit *}
-							<p class="titre">{$oProduct->name|escape:'html':'UTF-8'}</p>
+							<h3 class="titre">{$oProduct->name|escape:'html':'UTF-8'}</h3>
 
 							{* Courte description *}
 							<p class="desc">{$oProduct->description_short|strip_tags:false|truncate:110:'...'}</p>

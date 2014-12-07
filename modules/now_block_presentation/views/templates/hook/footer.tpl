@@ -3,12 +3,14 @@
 
 		<div class="container">
 
+			<h2>{l s='Neon flexible, présentation de notre entreprise'}</h2>
+
 			<ul>
 				{foreach $aItems as $position => $oNowBlockPresentation}
 					{if $oNowBlockPresentation->active}
 						<li class="float-{$oNowBlockPresentation->float|default:'left'}">
 							<img src="{$oNowBlockPresentation->getImageLink()}" alt="{$oNowBlockPresentation->name}" />
-							<p class="titre">{$oNowBlockPresentation->name}</p>
+							<h3 class="titre">{$oNowBlockPresentation->name}</h3>
 							<p class="desc">{$oNowBlockPresentation->description}</p>
 						</li>
 					{/if}
