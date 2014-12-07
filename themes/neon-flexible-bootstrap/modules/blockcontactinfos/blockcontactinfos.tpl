@@ -16,6 +16,9 @@
 			<span itemprop="addressCountry">France</span>
 		</div>
 
-		<a href="tel:{Configuration::get('PS_SHOP_PHONE')|replace:' ':''}" class="telephone"><span itemprop="telephone">{Configuration::get('PS_SHOP_PHONE')}</span>  {l s='/ Int. %s' sprintf=Configuration::get('NOW_PHONE_INTERNATIONAL') mod='blockcontactinfos'}</a>
+		<a href="tel:{Configuration::get('PS_SHOP_PHONE')|replace:' ':''}" class="telephone">
+			<span class="tel-fr">{Configuration::get('PS_SHOP_PHONE')}</span>
+			{l s='/ Int.' mod='blockcontactinfos'} <span itemprop="telephone">{Configuration::get('NOW_PHONE_INTERNATIONAL')}</span>
+		</a>
 	</div>
 </div>
