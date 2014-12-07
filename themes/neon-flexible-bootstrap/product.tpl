@@ -15,7 +15,7 @@
 
 		{include file="$tpl_dir./breadcrumb.tpl"}
 
-		<div class="container">
+		<div class="container" itemscope itemtype="http://schema.org/Product">
 
 			{if isset($confirmation) && $confirmation}
 				<p class="confirmation">

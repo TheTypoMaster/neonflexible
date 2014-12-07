@@ -27,10 +27,10 @@
 					<p class="online_only">{l s='Online only'}</p>
 				{/if}
 
-				<div class="price">
+				<div class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 					<p class="our_price_display">
 						{if $priceDisplay >= 0 && $priceDisplay <= 2}
-							<span id="our_price_display">{convertPrice price=$productPrice}</span>
+							<span id="our_price_display" itemprop="price">{convertPrice price=$productPrice}</span>
 						<!--{if $tax_enabled  && ((isset($display_tax_label) && $display_tax_label == 1) OR !isset($display_tax_label))}
 								{if $priceDisplay == 1}
 									{l s='tax excl.'}
