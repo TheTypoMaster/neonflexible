@@ -3,7 +3,7 @@
 
 <div class="container">
 
-	<p class="titre-size-1">{l s='Customer service'} - {if isset($customerThread) && $customerThread}{l s='Your reply'}{else}{l s='Contact us'}{/if}</p>
+	<h1 class="titre-size-1">{l s='Customer service'} - {if isset($customerThread) && $customerThread}{l s='Your reply'}{else}{l s='Contact us'}{/if}</h1>
 
 
 	{if isset($confirmation)}
@@ -11,9 +11,9 @@
 		<ul class="footer_links clearfix">
 			<li>
 				<a class="btn btn-default button button-small" href="{$base_dir}">
-                <span>
-                    <i class="icon-chevron-left"></i>{l s='Home'}
-                </span>
+					<span>
+						<i class="icon-chevron-left"></i>{l s='Home'}
+					</span>
 				</a>
 			</li>
 		</ul>
@@ -22,9 +22,9 @@
 		<ul class="footer_links clearfix">
 			<li>
 				<a class="btn btn-default button button-small" href="{$base_dir}">
-                <span>
-                    <i class="icon-chevron-left"></i>{l s='Home'}
-                </span>
+					<span>
+						<i class="icon-chevron-left"></i>{l s='Home'}
+					</span>
 				</a>
 			</li>
 		</ul>

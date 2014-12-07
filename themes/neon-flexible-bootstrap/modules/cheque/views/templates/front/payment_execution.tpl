@@ -5,7 +5,7 @@
 
 <div class="container">
 
-	<p class="titre-size-1">{l s='Order summary' mod='cheque'}</p>
+	<h1 class="titre-size-1">{l s='Order summary' mod='cheque'}</h1>
 
 	{if isset($nbProducts) && $nbProducts <= 0}
 		<p class="alert alert-warning">{l s='Your shopping cart is empty.' mod='cheque'}</p>

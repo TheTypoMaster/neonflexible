@@ -11,7 +11,7 @@
 
 
 <div class="container">
-	<p class="titre-size-1">{l s='Referral program' mod='referralprogram'}</p>
+	<h1 class="titre-size-1">{l s='Referral program' mod='referralprogram'}</h1>
 
 	{if $error}
 		<p class="alert alert-danger">

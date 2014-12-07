@@ -8,7 +8,7 @@
 
 <div class="container">
 
-	<p class="titre-size-1">{l s='Shopping-cart summary'}</p>
+	<h1 class="titre-size-1">{l s='Shopping-cart summary'}</h1>
 
 	{if isset($empty)}
 		<p class="alert alert-warning">{l s='Your shopping cart is empty.'}</p>

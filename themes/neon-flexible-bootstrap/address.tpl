@@ -45,7 +45,7 @@
 	{capture name=path}{l s='Your addresses'}{/capture}
 	{include file="$tpl_dir./breadcrumb.tpl"}
 
-	<p class="titre-size-1">{if isset($id_address)}{l s='Your address'}{else}{l s='New address'}{/if}</p>
+	<h1 class="titre-size-1">{if isset($id_address)}{l s='Your address'}{else}{l s='New address'}{/if}</h1>
 
 	<p>
 		{if isset($id_address) && (isset($smarty.post.alias) || isset($address->alias))}

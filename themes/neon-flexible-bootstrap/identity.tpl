@@ -3,7 +3,7 @@
 
 
 <div class="container">
-	<p class="titre-size-1">{l s='Your personal information'}</p>
+	<h1 class="titre-size-1">{l s='Your personal information'}</h1>
 
 	{include file="$tpl_dir./errors.tpl"}
 

@@ -61,7 +61,7 @@
 {include file="$tpl_dir./breadcrumb.tpl"}
 
 <div class="container">
-	<p class="titre-size-1">{l s='My addresses'}</p>
+	<h1 class="titre-size-1">{l s='My addresses'}</h1>
 	<p>{l s='Please configure your default billing and delivery addresses when placing an order. You may also add additional addresses, which can be useful for sending gifts or receiving an order at your office.'}</p>
 
 	{if isset($multipleAddresses) && $multipleAddresses}

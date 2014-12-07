@@ -3,7 +3,7 @@
 
 <div class="container">
 
-	<p class="titre-size-1">{l s='Sitemap'}</p>
+	<h1 class="titre-size-1">{l s='Sitemap'}</h1>
 	<div id="sitemap_content" class="clearfix">
 		<div class="sitemap_block">
 			<h3>{l s='Our offers'}</h3>
