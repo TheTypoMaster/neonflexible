@@ -26,7 +26,7 @@
 {capture name=path}{l s='Price drop'}{/capture}
 {include file="./breadcrumb.tpl"}
 
-<h1>{l s='Price drop'}</h1>
+<h1 class="titre-size-1" itemprop="name">{l s='Price drop'}</h1>
 
 {if $products}
 	<div class="content_sortPagiBar">

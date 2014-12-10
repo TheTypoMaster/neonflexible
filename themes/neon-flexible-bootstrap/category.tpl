@@ -16,14 +16,14 @@
 					{else}
 						<p class="titre-vert">{l s='Products'}</p>
 					{/if}
-					<h1>
+					<h1 itemprop="name">
 						{$category->name|escape:'htmlall':'UTF-8'}
 						{if isset($categoryNameComplement)}
 							{$categoryNameComplement|escape:'htmlall':'UTF-8'}
 						{/if}
 					</h1>
 
-					<div class="desc">{$category->description|truncate:550:'...'}</div>
+					<div class="desc" itemprop="description">{$category->description|truncate:550:'...'}</div>
 
 				</div>
 

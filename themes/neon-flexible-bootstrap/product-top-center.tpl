@@ -38,7 +38,7 @@
 		{* Référence du produit *}
 		<p id="product_reference" {if isset($groups) OR !$product->reference}style="display: none;"{/if}>
 			<label>{l s='Ref :'} </label>
-			<span class="editable" itemprop="identifier">{$product->reference|escape:'htmlall':'UTF-8'}</span>
+			<span class="editable" itemprop="sku">{$product->reference|escape:'htmlall':'UTF-8'}</span>
 		</p>
 
 		{* Quantité en stock *}

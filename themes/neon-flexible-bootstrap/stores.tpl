@@ -26,7 +26,7 @@
 {capture name=path}{l s='Our stores'}{/capture}
 {include file="$tpl_dir./breadcrumb.tpl"}
 
-<h1>{l s='Our stores'}</h1>
+<h1 itemprop="name">{l s='Our stores'}</h1>
 
 {if $simplifiedStoresDiplay}
 	{if $stores|@count}

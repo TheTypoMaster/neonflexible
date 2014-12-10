@@ -21,11 +21,11 @@
 						<p class="titre-vert">{$cms_category->name|escape:'htmlall':'UTF-8'}</p>
 					{/if}
 
-					<h1>
+					<h1 itemprop="name">
 						{$cms->meta_title|escape:'htmlall':'UTF-8'}
 					</h1>
 
-					<div class="desc"><p>{$cms->meta_description|truncate:550:'...'}</p></div>
+					<div class="desc" itemprop="description"><p>{$cms->meta_description|truncate:550:'...'}</p></div>
 
 				</div>
 
@@ -59,11 +59,11 @@
 
 				<p class="titre-vert">{l s='Tutorial'}</p>
 
-				<h1>
+				<h1 itemprop="name">
 					{$cms_category->name|escape:'htmlall':'UTF-8'}
 				</h1>
 
-				<div class="desc"><p>{$cms_category->description|truncate:550:'...'}</p></div>
+				<div class="desc" itemprop="description"><p>{$cms_category->description|truncate:550:'...'}</p></div>
 
 			</div>
 

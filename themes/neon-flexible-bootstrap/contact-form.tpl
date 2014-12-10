@@ -3,7 +3,7 @@
 
 <div class="container">
 
-	<h1 class="titre-size-1">{l s='Customer service'} - {if isset($customerThread) && $customerThread}{l s='Your reply'}{else}{l s='Contact us'}{/if}</h1>
+	<h1 class="titre-size-1" itemprop="name">{l s='Customer service'} - {if isset($customerThread) && $customerThread}{l s='Your reply'}{else}{l s='Contact us'}{/if}</h1>
 
 
 	{if isset($confirmation)}

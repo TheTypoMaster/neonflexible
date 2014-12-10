@@ -2,7 +2,7 @@
 {include file="$tpl_dir./breadcrumb.tpl"}
 
 <div class="container">
-	<h1 class="titre-size-1" {if isset($instantSearch) && $instantSearch}id="instant_search_results"{/if}>
+	<h1 class="titre-size-1" {if isset($instantSearch) && $instantSearch}id="instant_search_results"{/if} itemprop="name">
 		{l s='Search'}&nbsp;{if $nbProducts > 0}"{if isset($search_query) && $search_query}{$search_query|escape:'htmlall':'UTF-8'}{elseif $search_tag}{$search_tag|escape:'htmlall':'UTF-8'}{elseif $ref}{$ref|escape:'htmlall':'UTF-8'}{/if}"{/if}
 		{if isset($instantSearch) && $instantSearch}<a href="#" class="close">{l s='Return to the previous page'}</a>{/if}
 	</h1>
