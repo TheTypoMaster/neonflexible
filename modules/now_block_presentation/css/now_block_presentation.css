@@ -1,6 +1,6 @@
 /* Bloc presentation */
 
-#presentation-company {border-top:1px solid #ccc;padding:40px 0;background:#f4f4f4 url('../img/fond-presentation.jpg') no-repeat right;width:100%;max-height:616px;}
+#presentation-company {border-top:1px solid #ccc;padding:40px 0;background:#f4f4f4 url('../img/fond-presentation.jpg') no-repeat right top;width:100%;max-height:616px;}
 #presentation-company h2 {display:none;}
 #presentation-company ul {list-style-type:none;margin:0;}
 #presentation-company ul li {padding-top: 50px;}
