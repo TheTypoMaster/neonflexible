@@ -1,27 +1,35 @@
 <ul id="more_info_tabs" >
 
+	{assign var=ok value=false}
+
 	{if $product->description && preg_match('#jqExempleUtilisation#', $product->description)}
-		<li class="active"><span><a href="#exemple">{l s='Exemple d\'utilisation'}</a></span></li>
+		<li class="{if !$ok}active{/if}"><span><a href="#exemple">{l s='Exemple d\'utilisation'}</a></span></li>
+		{assign var=ok value=true}
 	{/if}
 
 	{if $product->description && preg_match('#jqDescriptif#', $product->description)}
-		<li><span><a href="#description">{l s='Description'}</a></span></li>
+		<li class="{if !$ok}active{/if}"><span><a href="#description">{l s='Description'}</a></span></li>
+		{assign var=ok value=true}
 	{/if}
 
 	{if $features}
-		<li><span><a href="#features">{l s='Caractéristiques'}</a></span></li>
+		<li class="{if !$ok}active{/if}"><span><a href="#features">{l s='Caractéristiques'}</a></span></li>
+		{assign var=ok value=true}
 	{/if}
 
 	{if $attachments}
-		<li><span><a href="#download">{l s='Download'}</a></span></li>
+		<li class="{if !$ok}active{/if}"><span><a href="#download">{l s='Download'}</a></span></li>
+		{assign var=ok value=true}
 	{/if}
 
 	{if isset($accessories) AND $accessories}
-		<li><span><a href="#accessories">{l s='Produits complémentaires'}</a></span></li>
+		<li class="{if !$ok}active{/if}"><span><a href="#accessories">{l s='Produits complémentaires'}</a></span></li>
+		{assign var=ok value=true}
 	{/if}
 
 	{if isset($product) && $product->customizable}
-		<li><span><a href="#custom">{l s='Product customization'}</a></span></li>
+		<li class="{if !$ok}active{/if}"><span><a href="#custom">{l s='Product customization'}</a></span></li>
+		{assign var=ok value=true}
 	{/if}
 
 	{$HOOK_PRODUCT_TAB}
