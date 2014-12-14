@@ -7,6 +7,7 @@ $(document).ready(function()
 {
 	cancelFilter();
 	openCloseFilter();
+	reloadOrderValues();
 
 	// Click on color
 	$(document).on('click', '#layered_form input[type=button], #layered_form label.layered_color', function(e) {
@@ -602,6 +603,7 @@ function reloadContent(params_plus)
 				if (view && view != 'grid')
 					display(view);
 			}
+			reloadOrderValues();
 		}
 	});
 	ajaxQueries.push(ajaxQuery);
@@ -678,4 +680,19 @@ function utf8_decode (utfstr) {
 		}
 	}
 	return res;
+}
+
+/**
+ * This code move the list of features values
+ * @author: ninjaofweb
+ * @module: now_move_blocklayered
+ */
+function reloadOrderValues() {
+	$.each(tabOrdered, function(id_feature, tabOrderedFeature) {
+		$('ul#ul_layered_id_feature_' + id_feature).append('<li class="toRemove' + id_feature + '"></li>');
+
+		$.each(tabOrderedFeature, function(position, tab) {
+			$('ul#ul_layered_id_feature_' + id_feature + ' li#li_layered_id_feature_value_' + tab.id_feature_value).prependTo('li.toRemove' + id_feature);
+		});
+	});
 }
