@@ -40,7 +40,6 @@ form.std p {margin:0;padding:0;clear:both;}
 form.std p.inline-infos {margin:10px 0 0 250px;}
 form.std p.required {}
 form.std p.required sup {}
-form.std div.radio {float:left;}
 form.std p.radio span.label,
 form.std p.text label,
 form.std p.password label,
@@ -56,7 +55,7 @@ form.std p.select input {padding:0 5px;height:22px;width:360px;border:1px solid 
 form.std p.select select {margin-right:10px;border:1px solid #ccc;/*font-size:12px;*/color:#777;}
 form.std p.textarea textarea {height:80px;width:370px;border:1px solid #ccc;/*font-size:12px;*/color:#777;}
 form.std p.submit {margin:10px;}
-form.std div.radio {margin:22px;float:left;}
+form.std div.radio {line-height:27px;float:left;}
 form.std div.uploader {width:300px;float:left;}
 .form-group.form-error input, .form-group.form-error textarea {border:1px solid #f13340;color:#f13340;background:url(../img/icon/form-error.png) 98% 5px no-repeat #fff1f2;}
 .form-group.form-ok input, .form-group.form-ok textarea {border:1px solid #46a74e;color:#35b33f;background:url(../img/icon/form-ok.png) 98% 5px no-repeat #ddf9e1;}
