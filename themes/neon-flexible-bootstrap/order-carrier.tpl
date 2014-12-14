@@ -3,7 +3,7 @@
 
 <div class="container">
 
-	<h1 class="titre-size-1">{l s='Shipping:'}</h1>
+	<h1 class="titre-size-1 invisible">{l s='Shipping:'}</h1>
 
 	<div id="carrier_area">
 

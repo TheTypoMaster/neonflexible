@@ -16,7 +16,7 @@
 
 <div class="container">
 
-	<h1 class="titre-size-1">{l s='Please choose your payment method'}</h1>
+	<h1 class="titre-size-1 invisible">{l s='Please choose your payment method'}</h1>
 
 
 	{if !$opc}

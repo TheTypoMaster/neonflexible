@@ -5,7 +5,7 @@
 <div class="container">
 
 
-	<h1 class="titre-size-1">{l s='Addresses'}</h1>
+	<h1 class="titre-size-1 invisible">{l s='Addresses'}</h1>
 
 	{if !$opc}
 		{include file="$tpl_dir./errors.tpl"}
