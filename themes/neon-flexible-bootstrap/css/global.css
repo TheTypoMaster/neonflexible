@@ -1114,7 +1114,7 @@ width:auto;}
 	.cart_navigation > span {display:block;width:100%;padding-bottom:15px;}
 }
 .cart_last_product {display:none;}
-.cart_quantity .cart_quantity_input {height:27px;line-height:27px;padding:0;text-align:center;width:57px;}
+.cart_quantity .cart_quantity_input {height:27px;line-height:27px;padding:0;text-align:center;width:67px;}
 .cart_gift_quantity .cart_quantity_input {height:27px;line-height:27px;padding:0;text-align:center;width:57px;}
 
 .table tbody > tr > td {vertical-align:middle;}
@@ -1192,12 +1192,12 @@ p.cheque-indent {margin-bottom:9px;}
 }
 
 .cart_last_product {display:none;}
-.cart_quantity .cart_quantity_input {height:27px;line-height:27px;padding:0;text-align:center;width:57px;}
+.cart_quantity .cart_quantity_input {height:27px;line-height:27px;padding:0;text-align:center;width:67px;}
 .cart_gift_quantity .cart_quantity_input {height:27px;line-height:27px;padding:0;text-align:center;width:57px;}
 
 .table tbody > tr > td {vertical-align:middle;}
 .table tbody > tr > td.cart_quantity {padding:41px 14px 25px;width:88px;}
-.table tbody > tr > td.cart_quantity .cart_quantity_button {margin-top:3px;}
+.table tbody > tr > td.cart_quantity .cart_quantity_button {margin-top:3px;width: 80px;}
 .table tbody > tr > td.cart_quantity .cart_quantity_button a {float:left;margin-right:3px;}
 .table tbody > tr > td.cart_quantity .cart_quantity_button a + a {margin-right:0;}
 .table tbody > tr > td.cart_delete, .table tbody > tr > td.price_discount_del {padding:5px;}
