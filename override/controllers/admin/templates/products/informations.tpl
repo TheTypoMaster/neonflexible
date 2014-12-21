@@ -82,7 +82,7 @@
 	<div class="col-lg-9">
 		<div class="radio">
 			<label for="simple_product">
-				<input type="radio" name="type_product" id="simple_product" value="{Product::PTYPE_SIMPLE}" {if is_null($oNowProductTypeProduct->id_now_product_type) && $product_type == Product::PTYPE_SIMPLE}checked="checked"{/if} />
+				<input type="radio" name="type_product" id="simple_product_old" value="{Product::PTYPE_SIMPLE}" {if is_null($oNowProductTypeProduct->id_now_product_type) && $product_type == Product::PTYPE_SIMPLE}checked="checked"{/if} />
 				{l s='Standard product'}
 			</label>
 		</div>
