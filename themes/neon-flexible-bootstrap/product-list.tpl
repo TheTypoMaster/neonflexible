@@ -15,7 +15,7 @@
 					<div class="left_block_product_type2">
 						<p class="product_type_name">{$product.product_type.name|escape:'htmlall':'UTF-8'}</p>
 						<h2 class="product_type_product">{$product.name|escape:'htmlall':'UTF-8'}</h2>
-						<p class="product_desc">{$product.description_short|strip_tags:'UTF-8'|truncate:360:'...'}</p>
+						<div class="product_desc">{$product.description_short|truncate:320:'...'}</div>
 					</div>
 
 					<div class="right_block_product_type">
@@ -33,7 +33,7 @@
 
 				<div class="center_block">
 					<h2 class="product_title">{$product.name|truncate:55:'...':true|escape:'htmlall':'UTF-8'}</h2>
-					<p class="product_desc">{$product.description_short|strip_tags:'UTF-8'|truncate:360:'...'}</p>
+					<div class="product_desc">{$product.description_short|truncate:320:'...'}</div>
 				</div>
 
 				<div class="right_block">
