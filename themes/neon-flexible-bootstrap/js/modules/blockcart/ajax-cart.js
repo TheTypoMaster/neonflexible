@@ -133,7 +133,7 @@ var ajaxCart = {
 				ajaxCart.add(idProduct, null, false, this);
 		});
 		//for product page 'add' button...
-		$(document).on('click', '#add_to_cart button', function(e){
+		$(document).on('click', '#add_to_cart button, #add_to_cart input[type=submit]', function(e){
 			e.preventDefault();
 			ajaxCart.add( $('#product_page_product_id').val(), $('#idCombination').val(), true, null, $('#quantity_wanted').val(), null);
 		});
