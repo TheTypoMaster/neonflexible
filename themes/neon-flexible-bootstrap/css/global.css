@@ -306,7 +306,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 .filter.bottom {border-top:1px solid #d4d4d4;}
 .filter .nb-products-results {float:left;}
 .filter .nb-products-results p {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;margin:0;padding:0;line-height:35px;}
-.filter .pagination {margin:-40px 0 0 260px;display:block;}
+.filter .pagination {margin:-40px 0 0 220px;display:block;}
 .filter .pagination ul {margin:0;padding:0;}
 .filter .pagination ul li {list-style-type:none;float:left;display:block;padding:5px;text-align:center;color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;}
 .filter .pagination ul li a {text-decoration:underline;color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;}
@@ -315,7 +315,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 .filter .compare-form {float:right;border-radius:15px;padding:8px 20px 6px 25px;background:#f13e70;}
 .filter .compare-form p {padding:0;margin:0;color:#fff;/*font-size:13px;*/text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}
 .filter .compare-form p .bt_compare {border:none;background:none;padding:0;margin:0;color:#fff;/*font-size:13px;*/text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}
-.filter .jqDisplayedAllProductsButton {text-decoration:underline;color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;display:block;float:right;margin:5px 5% 0 0;}
+.filter .jqDisplayedAllProductsButton {background:none;border:none;text-decoration:underline;color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;display:block;float:right;margin:5px 5% 0 0;}
 .filter .jqDisplayedAllProductsButton:hover {text-decoration:none;}
 
 /* Colonnes */

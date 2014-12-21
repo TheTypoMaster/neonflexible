@@ -198,5 +198,15 @@ class Link extends LinkCore
 
 		return $folder;
 	}
+
+	/**
+	 * @param $url
+	 * @param $p
+	 * @return string
+	 */
+	public function goPage($url, $p) {
+		$url = rtrim(str_replace('?&', '?', $url), '?');
+		return $url.($p == 1 ? '' : (!strstr($url, '?') ? '?' : '&').'&p='.(int)$p);
+	}
 }
 
