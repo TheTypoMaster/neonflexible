@@ -174,7 +174,7 @@ function display(view)
 
 	if (view == 'mode-list')
 	{
-		//$('ul#product_list').removeClass('mode-block').addClass('mode-list row');
+		$('ul#product_list').removeClass('mode-block').addClass('mode-list row');
 		//$('#product_list > li').removeClass('col-xs-12 col-sm-6 col-md-4').addClass('col-xs-12');
 		$('#product_list').addClass('row mode-' + $.totalStorage('category-mode'));
 
@@ -215,7 +215,7 @@ function display(view)
 		$('.display').find('li.mode-block').removeAttr('class');
 		$.totalStorage('display', 'mode-list');
 	} else {
-		//$('ul#product_list').removeClass('mode-list').addClass('mode-block row');
+		$('ul#product_list').removeClass('mode-list').addClass('mode-block row');
 		//$('#product_list > li').removeClass('col-xs-12').addClass('col-xs-12 col-sm-6 col-md-4');
 		$('#product_list').addClass('row mode-' + $.totalStorage('category-mode'));
 
