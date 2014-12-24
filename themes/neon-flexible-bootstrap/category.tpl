@@ -55,12 +55,12 @@
 
 					<div id="center-column" class="left">
 
-						{include file="$tpl_dir./filter.tpl" class="top"}
+						{include file="$tpl_dir./filter.tpl" class="top" paginationId=false}
 
 						{* Liste des produits *}
 						{include file="./product-list.tpl" products=$products}
 
-						{include file="$tpl_dir./filter.tpl" class="bottom"}
+						{include file="$tpl_dir./filter.tpl" class="bottom" paginationId="bottom"}
 
 					</div>
 				{/if}

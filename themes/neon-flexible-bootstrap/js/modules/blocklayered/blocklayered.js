@@ -111,7 +111,6 @@ $(document).ready(function()
 		$('select[name=n]').val($(this).val());
 		reloadContent(true);
 	});
-
 	paginationButton(false);
 	initLayered();
 });
@@ -261,6 +260,7 @@ function paginationButton(nbProductsIn, nbProductOut) {
 		var location = window.location.href.replace(/#.*$/, '');
 		$(this).attr('href', location+current_friendly_url.replace(/\/page-(\d+)/, '')+'/page-'+page);
 	});
+
 	$('div.pagination li').not('.current, .disabled').each(function () {
 		var nbPage = 0;
 		if ($(this).hasClass('pagination_next'))
@@ -529,12 +529,12 @@ function reloadContent(params_plus)
 			ajaxLoaderOn = 0;
 
 			// On submiting nb items form, relaod with the good nb of items
-			$('div.pagination form').on('submit', function(e)
+			$('#filter-top form').on('submit', function(e)
 			{
 				e.preventDefault();
-				val = $('div.pagination select[name=n]').val();
+				val = $('#filter-top select[name=n]').val();
 			
-				$('div.pagination select[name=n]').children().each(function(it, option) {
+				$('#filter-top select[name=n]').children().each(function(it, option) {
 					if (option.value == val)
 						$(option).attr('selected', true);
 					else

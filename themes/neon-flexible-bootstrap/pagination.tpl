@@ -27,7 +27,7 @@
 		{assign var='requestNb' value=$link->getPaginationLink(false, false, true, false, false, true)}
 	{/if}
 	<!-- Pagination -->
-	<div id="pagination{if isset($paginationId)}_{$paginationId}{/if}" class="pagination">
+	<div id="pagination{if isset($paginationId) && $paginationId}_{$paginationId}{/if}" class="pagination">
 		{if $start!=$stop}
 			<ul>
 				{if $p != 1}
