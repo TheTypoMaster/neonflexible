@@ -5,7 +5,7 @@ $_MODULE = array();
 $_MODULE['<{now_import_accessories}neon-flexible-bootstrap>now_import_accessories_2578d7342258810736fd236d60cc8232'] = 'Import d\'accessoires';
 $_MODULE['<{now_import_accessories}neon-flexible-bootstrap>now_import_accessories_ff33832326c6fb7b583a93f1a45667c5'] = 'Import d\'accessoires par fichier .CSV';
 $_MODULE['<{now_import_accessories}neon-flexible-bootstrap>adminnowimportaccessories_99b5dddcf9a11988a299c018802d4243'] = 'Vous devez activer ce module :%s';
-$_MODULE['<{now_import_accessories}neon-flexible-bootstrap>adminnowimportaccessories_e139357641c886521baf889aa4332600'] = 'Gestion des paramètres de l\'import de stock';
+$_MODULE['<{now_import_accessories}neon-flexible-bootstrap>adminnowimportaccessories_32d35124a1a13127e6cdb57f0c161d28'] = 'Gestion des paramètres de l\'import d\'accesoires';
 $_MODULE['<{now_import_accessories}neon-flexible-bootstrap>adminnowimportaccessories_0baadd9fa5b385ce569d7e6efe21a7e5'] = 'Choisir votre type de fichier';
 $_MODULE['<{now_import_accessories}neon-flexible-bootstrap>adminnowimportaccessories_654a598e377e279c983b44aa9b4214a5'] = 'Fichier CSV (.csv)';
 $_MODULE['<{now_import_accessories}neon-flexible-bootstrap>adminnowimportaccessories_37e7cbd80d404d24c847e36fc4a8da01'] = 'Fichier texte (.txt)';
@@ -28,6 +28,7 @@ $_MODULE['<{now_import_accessories}neon-flexible-bootstrap>adminnowimportaccesso
 $_MODULE['<{now_import_accessories}neon-flexible-bootstrap>adminnowimportaccessories_02042d3d41c613b375c561f6ebcceb96'] = 'Impossible d\'ajouter les nouveaux accessoires pour ce produit : %s ';
 $_MODULE['<{now_import_accessories}neon-flexible-bootstrap>adminnowimportaccessories_b8495b50f5c172ebad1cc5c615548afa'] = 'Ignorer cette colonne';
 $_MODULE['<{now_import_accessories}neon-flexible-bootstrap>adminnowimportaccessories_bc6b86f374a325adef2751d688e6afde'] = 'Accessoires (séparer par des \"::\")';
+$_MODULE['<{now_import_accessories}neon-flexible-bootstrap>adminnowimportaccessories_63264e32bdd7447cda85527b16d39cb4'] = 'Exemple';
 $_MODULE['<{now_import_accessories}neon-flexible-bootstrap>adminnowimportaccessories_f4f70727dc34561dfde1a3c529b6205c'] = 'Paramètres';
 $_MODULE['<{now_import_accessories}neon-flexible-bootstrap>adminnowimportaccessories_4dc7e5c4435f2900428b15d1c544edfa'] = 'Importer le fichier';
 $_MODULE['<{now_import_accessories}neon-flexible-bootstrap>adminnowimportaccessories_e33b362990961702f6d20e8dedd4914f'] = 'Analyser les données';

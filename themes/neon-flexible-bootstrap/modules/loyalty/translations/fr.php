@@ -42,6 +42,8 @@ $_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_b9f5c797ebbf55adccdd8539a65a
 $_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_ade45d72ab6ba1ab576d8b9deb0c2438'] = 'Points attribués au statut suivant';
 $_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_9611a682e61c503c32e2dc58fdbc8ddf'] = 'Points annulés au statut suivant';
 $_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_51ab56dd5b46c7b5c8fdf22651ae0db6'] = 'Donner des points sur les produits en promotion';
+$_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_e32f75d18c920282f6d8770d19d43d91'] = 'Les bons de réductions crées par le système de fidélité peuvent être utilisés dans les catégories suivantes :';
+$_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_9516494d859b2819c76023f8ce906795'] = 'Cochez les cases de catégories dans lesquelles les bon de réduction peuvent être utilisés.';
 $_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_91b442d385b54e1418d81adc34871053'] = 'Sélectionnés';
 $_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_b56c3bda503a8dc4be356edb0cc31793'] = 'Réduire tout';
 $_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_5ffd7a335dd836b3373f5ec570a58bdc'] = 'Ouvrir tout';

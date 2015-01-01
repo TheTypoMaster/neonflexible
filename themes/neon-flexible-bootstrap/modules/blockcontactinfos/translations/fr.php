@@ -14,4 +14,4 @@ $_MODULE['<{blockcontactinfos}neon-flexible-bootstrap>blockcontactinfos_c9cc8cce
 $_MODULE['<{blockcontactinfos}neon-flexible-bootstrap>blockcontactinfos_02d4482d332e1aef3437cd61c9bcc624'] = 'Contactez-nous';
 $_MODULE['<{blockcontactinfos}neon-flexible-bootstrap>blockcontactinfos_2e006b735fbd916d8ab26978ae6714d4'] = 'Tél. :';
 $_MODULE['<{blockcontactinfos}neon-flexible-bootstrap>blockcontactinfos_6a1e265f92087bb6dd18194833fe946b'] = 'E-mail :';
-$_MODULE['<{blockcontactinfos}neon-flexible-bootstrap>blockcontactinfos_4cf5a939aca4d418065f7d61d489a637'] = '/ Int. %s';
+$_MODULE['<{blockcontactinfos}neon-flexible-bootstrap>blockcontactinfos_0a1e7842f50595deff8e41b15a4aa716'] = '/ Int.';

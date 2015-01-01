@@ -2,6 +2,7 @@
 
 global $_MODULE;
 $_MODULE = array();
+$_MODULE['<{dashactivity}neon-flexible-bootstrap>dashactivity_0369e7f54bf8a30b2766e6a9a708de0b'] = 'Tableau de bord de l\'activité';
 $_MODULE['<{dashactivity}neon-flexible-bootstrap>dashactivity_02b5205ddff3073efc5c8b5b9cc165ba'] = '(du %s au %s)';
 $_MODULE['<{dashactivity}neon-flexible-bootstrap>dashactivity_14542f5997c4a02d4276da364657f501'] = 'Lien direct';
 $_MODULE['<{dashactivity}neon-flexible-bootstrap>dashactivity_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';
@@ -16,6 +17,8 @@ $_MODULE['<{dashactivity}neon-flexible-bootstrap>dashactivity_c760237f74bcc7e3f9
 $_MODULE['<{dashactivity}neon-flexible-bootstrap>dashactivity_a5493eb7cba36f452249d093e7757adc'] = 'Panier abandonné (max)';
 $_MODULE['<{dashactivity}neon-flexible-bootstrap>dashactivity_45e9c82415a3bee4413485c6bcb4347f'] = 'Durée (en heures) au delà de laquelle un panier cesse d\'être considéré comme abandonné après la dernière action enregistrée (valeur par défaut : 48 h).';
 $_MODULE['<{dashactivity}neon-flexible-bootstrap>dashboard_zone_one_91b1b529580f2bb429493a51a1af932b'] = 'Aperçu de l\'activité';
+$_MODULE['<{dashactivity}neon-flexible-bootstrap>dashboard_zone_one_f1206f9fadc5ce41694f69129aecac26'] = 'Configurer';
+$_MODULE['<{dashactivity}neon-flexible-bootstrap>dashboard_zone_one_63a6a88c066880c5ac42394a22803ca6'] = 'Rafraîchir';
 $_MODULE['<{dashactivity}neon-flexible-bootstrap>dashboard_zone_one_254f642527b45bc260048e30704edb39'] = 'Configuration';
 $_MODULE['<{dashactivity}neon-flexible-bootstrap>dashboard_zone_one_edfc5fccc0439856b5bd432522ef47aa'] = 'Visiteurs en ligne';
 $_MODULE['<{dashactivity}neon-flexible-bootstrap>dashboard_zone_one_962b7da7912bc637b03626e23b5832b5'] = 'Dans les %d dernières minutes';
@@ -33,6 +36,7 @@ $_MODULE['<{dashactivity}neon-flexible-bootstrap>dashboard_zone_one_8471314b4a53
 $_MODULE['<{dashactivity}neon-flexible-bootstrap>dashboard_zone_one_d833d1b3c98b980090f79ad42badcf9f'] = 'Nouveaux Abonnements';
 $_MODULE['<{dashactivity}neon-flexible-bootstrap>dashboard_zone_one_e42bc03dcf18091455cb8a06ce1d56e9'] = 'Total des Abonnés';
 $_MODULE['<{dashactivity}neon-flexible-bootstrap>dashboard_zone_one_e7935ae6c516d89405ec532359d2d75a'] = 'Trafic';
+$_MODULE['<{dashactivity}neon-flexible-bootstrap>dashboard_zone_one_1a4aeb4ca6cd736a4a7b25d8657d9972'] = 'Lien vers votre compte Google Analytics';
 $_MODULE['<{dashactivity}neon-flexible-bootstrap>dashboard_zone_one_d7e637a6e9ff116de2fa89551240a94d'] = 'Visites';
 $_MODULE['<{dashactivity}neon-flexible-bootstrap>dashboard_zone_one_945f170a18e4894c90381a3d01bdef8b'] = 'Visiteurs Uniques';
 $_MODULE['<{dashactivity}neon-flexible-bootstrap>dashboard_zone_one_0fcff541ec15c6ed895d5dec49436488'] = 'Sources de Trafic';

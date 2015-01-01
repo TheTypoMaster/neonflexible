@@ -2,6 +2,7 @@
 
 global $_MODULE;
 $_MODULE = array();
+$_MODULE['<{dashproducts}neon-flexible-bootstrap>dashproducts_6655df4af87b2038afd507a33545a56d'] = 'Tableau de bord Produits';
 $_MODULE['<{dashproducts}neon-flexible-bootstrap>dashproducts_2ea989f83006e233627987293f4bde0a'] = 'Nom du client';
 $_MODULE['<{dashproducts}neon-flexible-bootstrap>dashproducts_068f80c7519d0528fb08e82137a72131'] = 'Produits';
 $_MODULE['<{dashproducts}neon-flexible-bootstrap>dashproducts_96b0141273eabab320119c467cdcaf17'] = 'Total';
@@ -17,6 +18,7 @@ $_MODULE['<{dashproducts}neon-flexible-bootstrap>dashproducts_9e79098315622e5852
 $_MODULE['<{dashproducts}neon-flexible-bootstrap>dashproducts_ed4832a84ee072b00a6740f657183598'] = 'Vues';
 $_MODULE['<{dashproducts}neon-flexible-bootstrap>dashproducts_2c04f1ad7694378897b98624780327ff'] = 'Ajoutés au panier';
 $_MODULE['<{dashproducts}neon-flexible-bootstrap>dashproducts_ce4ee01637f4279d02d0f232459dc9a4'] = 'Achetés';
+$_MODULE['<{dashproducts}neon-flexible-bootstrap>dashproducts_37be07209f53a5d636d5c904ca9ae64c'] = 'Pourcentage';
 $_MODULE['<{dashproducts}neon-flexible-bootstrap>dashproducts_1eb18ea1d018abef5759cef60ddc289b'] = 'Vous devez activer l\'option \"Enregistrer les pages vues pour chaque client\" du module \"Récupération des données statistiques\" afin d\'afficher les produits les plus vus, ou utiliser le module Google Analytics.';
 $_MODULE['<{dashproducts}neon-flexible-bootstrap>dashproducts_cf5f3091e30dee6597885d8c0e0c357f'] = 'Terme';
 $_MODULE['<{dashproducts}neon-flexible-bootstrap>dashproducts_13348442cc6a27032d2b4aa28b75a5d3'] = 'Rechercher';

@@ -12,6 +12,7 @@ $_MODULE['<{statsbestproducts}neon-flexible-bootstrap>statsbestproducts_11ff9f68
 $_MODULE['<{statsbestproducts}neon-flexible-bootstrap>statsbestproducts_25f4b31e8f3baec8b2f266e05af88943'] = 'Quantité vendue en une journée';
 $_MODULE['<{statsbestproducts}neon-flexible-bootstrap>statsbestproducts_7664a37e0cc56aaf39aebf2edbd3f98e'] = 'Pages vues';
 $_MODULE['<{statsbestproducts}neon-flexible-bootstrap>statsbestproducts_7bd5825a187064017975513b95d7f7de'] = 'Quantité disponible à la vente';
+$_MODULE['<{statsbestproducts}neon-flexible-bootstrap>statsbestproducts_4d3d769b812b6faa6b76e1a8abaece2d'] = 'Activé';
 $_MODULE['<{statsbestproducts}neon-flexible-bootstrap>statsbestproducts_950cf49f8ca529be64c924f16fcb5404'] = 'Meilleures ventes';
 $_MODULE['<{statsbestproducts}neon-flexible-bootstrap>statsbestproducts_15429f69e40860368f6e113e4cba5601'] = 'Ajoute une liste des vos meilleures ventes dans le tableau de bord des statistiques.';
 $_MODULE['<{statsbestproducts}neon-flexible-bootstrap>statsbestproducts_998e4c5c80f27dec552e99dfed34889a'] = 'Export CSV';
