@@ -11,7 +11,7 @@ $_MODULE['<{dateofdelivery}prestashop>dateofdelivery_7ccf58c950043c9fbfed668df13
 $_MODULE['<{dateofdelivery}prestashop>dateofdelivery_ecfe3ba0ff66a97029088e8e90a3f051'] = 'Minimum time is invalid';
 $_MODULE['<{dateofdelivery}prestashop>dateofdelivery_0245cd1cce5ecea8eb23b043be00d80a'] = 'Maximum time is invalid';
 $_MODULE['<{dateofdelivery}prestashop>dateofdelivery_e6843321c8b0edea8cf333519316ed7b'] = 'Carrier is invalid';
-$_MODULE['<{dateofdelivery}prestashop>dateofdelivery_17673c1595a3722522f581c854b8edc5'] = 'You cannot use this carrier, a rule has already been saved.';
+$_MODULE['<{dateofdelivery}prestashop>dateofdelivery_3499ed6a79c0b8cd01157de23fc1cfe6'] = 'This rule has already been defined for this carrier.';
 $_MODULE['<{dateofdelivery}prestashop>dateofdelivery_50e1f1030812a9a8fd66dfff17099fcd'] = 'An error occurred on adding of carrier rule.';
 $_MODULE['<{dateofdelivery}prestashop>dateofdelivery_240276f48ff2e0e5fe620ff311e677b5'] = 'An error occurred on updating of carrier rule.';
 $_MODULE['<{dateofdelivery}prestashop>dateofdelivery_b9e3eda70ccb175c96a56bd79b89bd8b'] = 'Carrier rule deleted successfully';

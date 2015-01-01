@@ -49,7 +49,7 @@
 
 </head>
 
-<body {if isset($page_name)}id="{$page_name|escape:'htmlall':'UTF-8'}"{/if} class="{if isset($page_name)}{$page_name|escape:'htmlall':'UTF-8'}{/if}{if $hide_left_column} hide-left-column{/if}{if $hide_right_column} hide-right-column{/if}{if $content_only} content_only{/if}">
+<body {if isset($page_name)}id="{$page_name|escape:'htmlall':'UTF-8'}"{/if} class="{if isset($page_name)}{$page_name|escape:'htmlall':'UTF-8'}{/if}{if $hide_left_column} hide-left-column{/if}{if $hide_right_column} hide-right-column{/if}{if $content_only} content_only{/if}" itemscope itemtype="http://schema.org/WebPage">
 	{if !$content_only}
 
 	<div id="header">
@@ -60,9 +60,17 @@
 		</div>
 
 		<div class="container">
-			<a href="{Context::getContext()->link->getPageLink('index')}" title="{$shop_name|escape:'htmlall':'UTF-8'}">
-				<img class="logo" src="{$logo_url}" alt="{$shop_name|escape:'htmlall':'UTF-8'}" />
-			</a>
+			{if Context::getContext()->controller->php_self == 'index'}
+				<h1>
+					<a href="{Context::getContext()->link->getPageLink('index')}" title="{l s='%s, just imagine' sprintf=$shop_name|escape:'htmlall':'UTF-8'}">
+						<img class="logo" src="{$logo_url}" alt="{l s='%s, just imagine' sprintf=$shop_name|escape:'htmlall':'UTF-8'}" />
+					</a>
+				</h1>
+			{else}
+				<a href="{Context::getContext()->link->getPageLink('index')}" title="{l s='%s, just imagine' sprintf=$shop_name|escape:'htmlall':'UTF-8'}">
+					<img class="logo" src="{$logo_url}" alt="{l s='%s, just imagine' sprintf=$shop_name|escape:'htmlall':'UTF-8'}" />
+				</a>
+			{/if}
 		</div>
 
 		<div class="navbar-inverse">

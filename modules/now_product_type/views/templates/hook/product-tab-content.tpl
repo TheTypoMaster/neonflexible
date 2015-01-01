@@ -19,9 +19,9 @@
 						<div class="content-right">
 
 							{* Nom du produit *}
-							<p class="product-name">
+							<h3 class="product-name">
 								{$aNowIdeaOrTip.name|truncate:35:'...':true|escape:'htmlall':'UTF-8'}
-							</p>
+							</h3>
 
 							{* Description *}
 							<div class="block_description">

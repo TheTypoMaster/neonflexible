@@ -7,6 +7,7 @@ $(document).ready(function()
 {
 	cancelFilter();
 	openCloseFilter();
+	reloadOrderValues();
 
 	// Click on color
 	$(document).on('click', '#layered_form input[type=button], #layered_form label.layered_color', function(e) {
@@ -110,7 +111,6 @@ $(document).ready(function()
 		$('select[name=n]').val($(this).val());
 		reloadContent(true);
 	});
-
 	paginationButton(false);
 	initLayered();
 });
@@ -260,6 +260,7 @@ function paginationButton(nbProductsIn, nbProductOut) {
 		var location = window.location.href.replace(/#.*$/, '');
 		$(this).attr('href', location+current_friendly_url.replace(/\/page-(\d+)/, '')+'/page-'+page);
 	});
+
 	$('div.pagination li').not('.current, .disabled').each(function () {
 		var nbPage = 0;
 		if ($(this).hasClass('pagination_next'))
@@ -528,12 +529,12 @@ function reloadContent(params_plus)
 			ajaxLoaderOn = 0;
 
 			// On submiting nb items form, relaod with the good nb of items
-			$('div.pagination form').on('submit', function(e)
+			$('#filter-top form').on('submit', function(e)
 			{
 				e.preventDefault();
-				val = $('div.pagination select[name=n]').val();
+				val = $('#filter-top select[name=n]').val();
 			
-				$('div.pagination select[name=n]').children().each(function(it, option) {
+				$('#filter-top select[name=n]').children().each(function(it, option) {
 					if (option.value == val)
 						$(option).attr('selected', true);
 					else
@@ -597,11 +598,12 @@ function reloadContent(params_plus)
 			});
 
 			if (display instanceof Function) {
-				var view = $.totalStorage('display');
+				var view = $.totalStorage('category-mode');
 
 				if (view && view != 'grid')
 					display(view);
 			}
+			reloadOrderValues();
 		}
 	});
 	ajaxQueries.push(ajaxQuery);
@@ -678,4 +680,19 @@ function utf8_decode (utfstr) {
 		}
 	}
 	return res;
+}
+
+/**
+ * This code move the list of features values
+ * @author: ninjaofweb
+ * @module: now_move_blocklayered
+ */
+function reloadOrderValues() {
+	$.each(tabOrdered, function(id_feature, tabOrderedFeature) {
+		$('ul#ul_layered_id_feature_' + id_feature).append('<li class="toRemove' + id_feature + '"></li>');
+
+		$.each(tabOrderedFeature, function(position, tab) {
+			$('ul#ul_layered_id_feature_' + id_feature + ' li#li_layered_id_feature_value_' + tab.id_feature_value).prependTo('li.toRemove' + id_feature);
+		});
+	});
 }

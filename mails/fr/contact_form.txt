@@ -7,14 +7,14 @@ Votre message a bien été envoyé à notre service client.
 
 MESSAGE : {message}
 
-COMMANDE N° : {order_name}
+COMMANDE # : {order_name}
 
 PRODUIT : {product_name}
 
-FICHIER JOINT : {attached_file} 		 
+PIÈCE JOINTE : {attached_file} 		 
 
 Nous vous répondrons dés que possible. 
 
-{shop_name} [{shop_url}] propulsé par
+{shop_name} [{shop_url}] réalisé avec
 PrestaShop(tm) [http://www.prestashop.com/] 
 

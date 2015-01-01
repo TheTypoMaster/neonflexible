@@ -17,7 +17,7 @@ $_MODULE['<{blockreinsurance}prestashop>blockreinsurance_23498d91b6017e5d7f4ddde
 $_MODULE['<{blockreinsurance}prestashop>blockreinsurance_ef61fb324d729c341ea8ab9901e23566'] = 'Ajouter';
 $_MODULE['<{blockreinsurance}prestashop>blockreinsurance_f3295a93167b56c5a19030e91823f7bf'] = 'Satisfait ou remboursé';
 $_MODULE['<{blockreinsurance}prestashop>blockreinsurance_56e140ebd6f399c22c8859a694b247f3'] = 'Échange en magasin';
-$_MODULE['<{blockreinsurance}prestashop>blockreinsurance_597ce11744f9bbf116ec9e4a719ec9d3'] = 'Paiement à l\'expédition';
+$_MODULE['<{blockreinsurance}prestashop>blockreinsurance_597ce11744f9bbf116ec9e4a719ec9d3'] = 'Paiement à l\'expédition.';
 $_MODULE['<{blockreinsurance}prestashop>blockreinsurance_3aca7ac5cf7e462b658960931946f824'] = 'Livraison gratuite';
 $_MODULE['<{blockreinsurance}prestashop>blockreinsurance_d05244e0e410a6b85ed53a014908c657'] = 'Paiement 100% sécurisé';
 

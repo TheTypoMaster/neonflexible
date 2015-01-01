@@ -7,10 +7,10 @@ ADRESSE E-MAIL DU CLIENT : {email}
 
 MESSAGE DU CLIENT : {message}
 
-COMMANDE N° : {order_name}
+COMMANDE # : {order_name}
 
-FICHIER JOINT : {attached_file} 		 
+PIÈCE JOINTE : {attached_file} 		 
 
-{shop_name} [{shop_url}] propulsé par
+{shop_name} [{shop_url}] réalisé avec
 PrestaShop(tm) [http://www.prestashop.com/] 
 

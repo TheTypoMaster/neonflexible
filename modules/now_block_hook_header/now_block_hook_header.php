@@ -36,7 +36,7 @@ class now_block_hook_header extends NowModule {
 	{
 		$this->aConfigurationDefaultSettings = array(
 			'NOW_ACCR_HEADER_ENABLE'	=> true,
-			'NOW_PHONE_INTERNATIONAL'	=> '(+33) 234 321 179',
+			'NOW_PHONE_INTERNATIONAL'	=> '+33 234 321 179',
 		);
 
 		return parent::install() && $this->registerHook('top') && $this->registerHook('header');

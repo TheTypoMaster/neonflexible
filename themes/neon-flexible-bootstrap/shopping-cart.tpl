@@ -8,7 +8,7 @@
 
 <div class="container">
 
-	<p class="titre-size-1">{l s='Shopping-cart summary'}</p>
+	<h1 class="titre-size-1 invisible" itemprop="name">{l s='Shopping-cart summary'}</h1>
 
 	{if isset($empty)}
 		<p class="alert alert-warning">{l s='Your shopping cart is empty.'}</p>
@@ -501,12 +501,12 @@
 					<span>{l s='Proceed to checkout'}<i class="icon-chevron-right"></i></span>
 				</a>
 			{/if}
-			<a
+			{*<a
 					href="{if (isset($smarty.server.HTTP_REFERER) && strstr($smarty.server.HTTP_REFERER, 'order.php')) || isset($smarty.server.HTTP_REFERER) && strstr($smarty.server.HTTP_REFERER, 'order-opc') || !isset($smarty.server.HTTP_REFERER)}{$link->getPageLink('index')}{else}{$smarty.server.HTTP_REFERER|escape:'html':'UTF-8'|secureReferrer}{/if}"
 					class="button-exclusive btn btn-default"
 					title="{l s='Continue shopping'}">
 				<i class="icon-chevron-left"></i>{l s='Continue shopping'}
-			</a>
+			</a>*}
 		</p>
 		{if !empty($HOOK_SHOPPING_CART_EXTRA)}
 			<div class="clear"></div>

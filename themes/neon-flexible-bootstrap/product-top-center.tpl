@@ -1,14 +1,14 @@
 <div id="product-top-center">
 
 	{* Titre *}
-	<h1>{$product->name|escape:'htmlall':'UTF-8'}</h1>
+	<h1 itemprop="name">{$product->name|escape:'htmlall':'UTF-8'}</h1>
 
 	{* Description *}
 	{if $product->description_short OR $packItems|@count > 0}
 		<div id="short_description_block">
 
 			{if $product->description_short}
-				<div id="short_description_content" class="rte align_justify">
+				<div id="short_description_content" class="rte align_justify" itemprop="description">
 					{$product->description_short}
 				</div>
 			{/if}
@@ -38,7 +38,7 @@
 		{* Référence du produit *}
 		<p id="product_reference" {if isset($groups) OR !$product->reference}style="display: none;"{/if}>
 			<label>{l s='Ref :'} </label>
-			<span class="editable">{$product->reference|escape:'htmlall':'UTF-8'}</span>
+			<span class="editable" itemprop="sku">{$product->reference|escape:'htmlall':'UTF-8'}</span>
 		</p>
 
 		{* Quantité en stock *}

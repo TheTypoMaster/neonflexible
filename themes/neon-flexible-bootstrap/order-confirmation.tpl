@@ -4,7 +4,7 @@
 
 <div class="container">
 
-	<p class="titre-size-1">{l s='Order confirmation'}</p>
+	<h1 class="titre-size-1">{l s='Order confirmation'}</h1>
 
 	{include file="$tpl_dir./errors.tpl"}
 

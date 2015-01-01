@@ -3,7 +3,7 @@
 
 <div class="container">
 
-	<p class="titre-size-1">{l s='My vouchers'}</p>
+	<h1 class="titre-size-1" itemprop="name">{l s='My vouchers'}</h1>
 
 	{if isset($cart_rules) && count($cart_rules) && $nb_cart_rules}
 		<table class="discount table table-bordered">

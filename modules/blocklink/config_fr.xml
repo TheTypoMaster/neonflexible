@@ -2,7 +2,7 @@
 <module>
 	<name>blocklink</name>
 	<displayName><![CDATA[Bloc liens]]></displayName>
-	<version><![CDATA[1.5.2]]></version>
+	<version><![CDATA[1.5.6]]></version>
 	<description><![CDATA[Ajoute un bloc avec des liens additionels.]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>

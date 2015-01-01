@@ -8,6 +8,8 @@ $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_ed6476843a865d9daf92e40
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_b15e7271053fe9dd22d80db100179085'] = 'Ce module nécessite d\'être greffé sur une colonne, mais votre thème n\'a pas de colonne.';
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_c888438d14855d7d96a2724ee9c306bd'] = 'Mise à jour réussie';
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_f4f70727dc34561dfde1a3c529b6205c'] = 'Paramètres';
+$_MODULE['<{blockbestsellers}prestashop>blockbestsellers_26986c3388870d4148b1b5375368a83d'] = 'Produits à afficher';
+$_MODULE['<{blockbestsellers}prestashop>blockbestsellers_2b21378492166b0e5a855e2da611659c'] = 'Définit le nombre de produits à afficher dans ce bloc';
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_24ff4e4d39bb7811f6bdf0c189462272'] = 'Toujours afficher ce bloc';
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_84b0c5fdef19ab8ef61cd809f9250d85'] = 'Afficher le bloc même si il n\'y a aucune meilleure vente à afficher.';
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'Activé';

@@ -20,7 +20,7 @@ hr {border-top:1px solid #dedede;}
 .text-success {color:white;}
 .text-info {color:white;}
 .text-left {text-align:left;}
-.text-right, #cart_summary tbody td.cart_unit, #cart_summary tbody td.cart_total {text-align:right;}
+.text-right, #cart_summary tbody td.cart_unit, #cart_summary tbody td.cart_total, #cart_summary tbody td.cart_discount_price {text-align:right;}
 .text-center, #cart_summary tbody td.cart_product, #cart_summary tbody td.cart_avail {text-align:center;}
 
 /* Listes */
@@ -40,7 +40,6 @@ form.std p {margin:0;padding:0;clear:both;}
 form.std p.inline-infos {margin:10px 0 0 250px;}
 form.std p.required {}
 form.std p.required sup {}
-form.std div.radio {float:left;}
 form.std p.radio span.label,
 form.std p.text label,
 form.std p.password label,
@@ -55,8 +54,8 @@ form.std p.password input,
 form.std p.select input {padding:0 5px;height:22px;width:360px;border:1px solid #ccc;/*font-size:12px;*/color:#777;}
 form.std p.select select {margin-right:10px;border:1px solid #ccc;/*font-size:12px;*/color:#777;}
 form.std p.textarea textarea {height:80px;width:370px;border:1px solid #ccc;/*font-size:12px;*/color:#777;}
-form.std p.submit {margin:10px;}
-form.std div.radio {margin:22px;float:left;}
+form.std p.submit {margin:10px;text-align:center;}
+form.std div.radio {line-height:27px;float:left;}
 form.std div.uploader {width:300px;float:left;}
 .form-group.form-error input, .form-group.form-error textarea {border:1px solid #f13340;color:#f13340;background:url(../img/icon/form-error.png) 98% 5px no-repeat #fff1f2;}
 .form-group.form-ok input, .form-group.form-ok textarea {border:1px solid #46a74e;color:#35b33f;background:url(../img/icon/form-ok.png) 98% 5px no-repeat #ddf9e1;}
@@ -88,9 +87,9 @@ table.std td, table.table_block td {padding:12px;border-right:1px solid #e9e9e9;
 .table tfoot tr {background:#fbfbfb;}
 .table {width:100%;margin-bottom:18px;}
 .table thead > tr > th, .table thead > tr > td, .table tbody > tr > th, .table tbody > tr > td, .table tfoot > tr > th, .table tfoot > tr > td {padding:9px 8px 11px 18px;line-height:1.42857;vertical-align:top;border-top:1px solid #d6d4d4;}
-.table thead > tr > th {vertical-align:bottom;border-bottom:2px solid #d6d4d4;}
+.table thead > tr > th {vertical-align:bottom;}
 .table caption + thead tr:first-child th, .table caption + thead tr:first-child td, .table colgroup + thead tr:first-child th, .table colgroup + thead tr:first-child td, .table thead:first-child tr:first-child th, .table thead:first-child tr:first-child td {border-top:0;}
-.table tbody + tbody {border-top:2px solid #d6d4d4;}
+.table tbody + tbody {border-top:none;}
 .table .table {background-color:white;}
 
 /* Bloc moyen flotant */
@@ -99,15 +98,18 @@ ul.block li {padding:0 15px;line-height:18px;list-style-type:none;}
 ul.block li.title, ul.block li.address_title {border-bottom:1px solid #ccc;text-transform:uppercase;font-weight:bold;padding:0 0 15px 15px;}
 ul.block >li:first-child + li {margin-top:8px}
 #block-order-detail {display:none;background:#f4f4f4;border:1px solid #d4d4d4;padding:15px;margin-bottom:20px;}
+#block-order-detail #center_column {padding:10px;}
 
 /* Titre*/
-.titre-size-1 {font-size:32px;color:#333;text-align:center;font-family:Raleway,Verdana,Arial,sans-serif;margin:30px 0;}
+.titre-size-1 {font-size:32px;color:#333;text-align:center;font-family:Raleway,Verdana,Arial,sans-serif;margin:30px 0;letter-spacing: 2px;}
+#order .titre-size-1 {margin:0;}
 
 /* Header */
 
 #header {background:#fff;height:190px;position:relative}
 #header .navbar-inverse {background:#373a39;height:36px;}
 #header .navbar-inverse .container {display:block;height:36px;}
+#header h1 {margin:0;}
 #header a img.logo {position:absolute;top:10px;z-index:10;}
 #header .caret {margin-left:10px;border-top:7px solid #acacac;border-bottom:none;border-right:5px solid transparent;border-left:5px solid transparent;}
 #authentication #header, #order #header, #module-bankwire-payment #header, #module-cheque-payment #header, #order-confirmation #header {height:150px;}
@@ -125,7 +127,7 @@ footer #contact {color:#777;/*width:317px;*/height:220px;float:right;padding:10p
 footer #contact .logo {margin:0 auto;display:block;}
 footer #contact .adresse {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;text-align:center;margin:10px 0;}
 footer #contact .telephone {background:url('../img/theme/footer-telephone-international.png') no-repeat;display:block;width:290px;height:34px;line-height:32px;padding-left:40px;/*font-size:13px;*/margin:0 auto;font-weight:300;font-family:Lato,Verdana,Arial,sans-serif;cursor:default;color:#777;text-decoration:none;}
-footer #contact .telephone span {color:#55a323;font-weight:bold;font-size:16px;}
+footer #contact .telephone span.tel-fr {color:#55a323;font-weight:bold;font-size:16px;}
 
 /* MODULE :blocksocial */
 footer #social_block {color:#777;width:290px;height:60px;float:right;}
@@ -138,8 +140,8 @@ footer #social_block ul li.twitter {background:url('../img/theme/twitter.png') n
 footer #social_block ul li.google_plus {background:url('../img/theme/google-plus.png') no-repeat;}
 footer #social_block ul li a {width:41px;height:38px;text-indent:-9999px;position:absolute;}
 
-ul.footer_link {padding:0}
-ul.footer_link li {list-style-type:none;}
+ul.footer_link, ul.footer_links {padding:0}
+ul.footer_link li, ul.footer_links li {list-style-type:none;}
 
 /* Bouton */
 .button-none {border:none;right:15px;background:none;line-height:50px;text-align:right;display:block;color:#fff;font-family:Raleway,Verdana,Arial,sans-serif;font-size:15px;font-weight:bold;text-transform:uppercase;position:absolute;width:220px;top:0;}
@@ -282,6 +284,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 /* Fil ariane */
 #breadcrumb {margin:10px 0;font-family:Lato,Verdana,Arial,sans-serif;font-size:14px;color:#777;line-height:27px;border-bottom:1px solid #d4d4d4;padding:0 0 15px 0;}
 #breadcrumb.no-border {padding:0;border:none;}
+#breadcrumb div span.home {display:block;text-indent:-9999999px;background:url('../img/theme/home-fil-ariane.png') no-repeat;width:30px;position:relative;}
 #breadcrumb .navigation-pipe {margin:10px;text-indent:9999999px;background:url('../img/theme/navigation-pipe.png') no-repeat;width:5px;height:10px;display:block;float:left;}
 #breadcrumb a {font-family:Lato,Verdana,Arial,sans-serif;font-size:14px;color:#348ecd;text-decoration:underline;display:block;float:left;}
 #breadcrumb a:hover {text-decoration:none;}
@@ -302,26 +305,28 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 .filter-top .nbrItemPage p select {margin:0 20px;}
 
 .filter {padding:20px 0;height:70px;}
-.filter.bottom {border-top:1px solid #d4d4d4;}
+.filter.bottom {padding:0;}
 .filter .nb-products-results {float:left;}
 .filter .nb-products-results p {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;margin:0;padding:0;line-height:35px;}
-.filter .pagination {margin:-40px 0 0 260px;display:block;}
+.filter .pagination {margin:-60px 0 0 220px;display:block;}
 .filter .pagination ul {margin:0;padding:0;}
 .filter .pagination ul li {list-style-type:none;float:left;display:block;padding:5px;text-align:center;color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;}
 .filter .pagination ul li a {text-decoration:underline;color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;}
 .filter .pagination ul li a:hover {text-decoration:none;}
 .filter .pagination ul li.pagination_next, .filter .pagination ul li.pagination_previous {}
-.filter .compare-form {float:right;border-radius:15px;padding:8px 20px 6px 25px;background:#f13e70;}
-.filter .compare-form p {padding:0;margin:0;color:#fff;/*font-size:13px;*/text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}
-.filter .compare-form p .bt_compare {border:none;background:none;padding:0;margin:0;color:#fff;/*font-size:13px;*/text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}
-.filter .jqDisplayedAllProductsButton {text-decoration:underline;color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;display:block;float:right;margin:5px 5% 0 0;}
+.filter .compare-form {float:right;}
+.filter .compare-form p .bt_compare {font-size:14px;text-transform:uppercase;line-height:10px}
+.filter .compare-form p .bt_compare .total-compare-val {margin:0;padding:0;display:inline;border:none;}
+/*.filter .compare-form p {padding:0;margin:0;color:#fff;text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}
+.filter .compare-form p .bt_compare {border:none;background:none;padding:0;margin:0;color:#fff;text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}*/
+.filter .jqDisplayedAllProductsButton {background:none;border:none;text-decoration:underline;color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;display:block;float:right;margin:5px 5% 0 0;}
 .filter .jqDisplayedAllProductsButton:hover {text-decoration:none;}
 
 /* Colonnes */
 #left-column {width:270px;margin-right:10px;min-height:200px;}
 #center-column {width:860px;}
 #left_column {}
-#center_column {padding:0 0 20px 0;background:#fff;}
+#center_column {padding:0 0 10px 0;background:#fff;}
 
 /* Etapes de la commande */
 #order_step {background:#f4f4f4;width:100%;height:150px;}
@@ -1099,13 +1104,14 @@ width:auto;}
 
 /* Processus de commande */
 
-.cart_navigation {margin:0 0 20px;}
+.cart_navigation {margin:0 0 10px;}
 .cart_navigation .button-medium {float:right;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;font-size:20px;line-height:24px;}
 .cart_navigation .button-medium span {-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;padding:11px 15px 10px 15px;}
 @media (max-width:992px) {
 	.cart_navigation .button-medium span {	font-size:16px;}
 }
 .cart_navigation .button-medium i.right {font-size:25px;line-height:25px;vertical-align:-4px;margin-left:6px;}
+.submit.cart_navigation .button-medium {float:none;}
 .cart_navigation .button-exclusive {border:none;background:none;padding:0;font-size:17px;font-weight:bold;color:#333333;margin:9px 0 0 0;}
 .cart_navigation .button-exclusive i {color:#777777;margin-right:8px;}
 .cart_navigation .button-exclusive:hover, .cart_navigation .button-exclusive:focus, .cart_navigation .button-exclusive:active {color:#515151;-webkit-box-shadow:none;box-shadow:none;}
@@ -1113,7 +1119,7 @@ width:auto;}
 	.cart_navigation > span {display:block;width:100%;padding-bottom:15px;}
 }
 .cart_last_product {display:none;}
-.cart_quantity .cart_quantity_input {height:27px;line-height:27px;padding:0;text-align:center;width:57px;}
+.cart_quantity .cart_quantity_input {height:27px;line-height:27px;padding:0;text-align:center;width:67px;}
 .cart_gift_quantity .cart_quantity_input {height:27px;line-height:27px;padding:0;text-align:center;width:57px;}
 
 .table tbody > tr > td {vertical-align:middle;}
@@ -1191,12 +1197,12 @@ p.cheque-indent {margin-bottom:9px;}
 }
 
 .cart_last_product {display:none;}
-.cart_quantity .cart_quantity_input {height:27px;line-height:27px;padding:0;text-align:center;width:57px;}
+.cart_quantity .cart_quantity_input {height:27px;line-height:27px;padding:0;text-align:center;width:67px;}
 .cart_gift_quantity .cart_quantity_input {height:27px;line-height:27px;padding:0;text-align:center;width:57px;}
 
 .table tbody > tr > td {vertical-align:middle;}
 .table tbody > tr > td.cart_quantity {padding:41px 14px 25px;width:88px;}
-.table tbody > tr > td.cart_quantity .cart_quantity_button {margin-top:3px;}
+.table tbody > tr > td.cart_quantity .cart_quantity_button {margin-top:3px;width: 80px;}
 .table tbody > tr > td.cart_quantity .cart_quantity_button a {float:left;margin-right:3px;}
 .table tbody > tr > td.cart_quantity .cart_quantity_button a + a {margin-right:0;}
 .table tbody > tr > td.cart_delete, .table tbody > tr > td.price_discount_del {padding:5px;}
@@ -1260,7 +1266,7 @@ table#cart_summary .gift-icon {color:white;background:#0088cc;line-height:20px;p
 .multishipping-cart .cart_address_delivery.form-control {width:198px;}
 #order .address_add.submit {margin-bottom:20px;}
 #ordermsg {margin-bottom:30px;}
-.product-name {font-size:17px;line-height:23px;color:#3a3939;margin-bottom:0;}
+.product-name {font-size:17px;line-height:23px;color:#3a3939;margin-bottom:0;font-weight:bold;}
 .product-name a {font-size:17px;line-height:23px;color:#3a3939;}
 .product-name a:hover {color:#515151;}
 @media (max-width:768px) {

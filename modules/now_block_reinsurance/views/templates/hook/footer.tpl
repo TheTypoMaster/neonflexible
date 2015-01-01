@@ -16,7 +16,7 @@
 						{assign var=nameReinsurance value=$oNowBlockReinsurance->name}
 					{/if}
 
-					<h6>{$nameReinsurance}</h6>
+					<p class="title_h6">{$nameReinsurance}</p>
 					<p>{$oNowBlockReinsurance->description}</p>
 
 					<span class="clearBoth"></span>

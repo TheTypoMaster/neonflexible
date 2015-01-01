@@ -30,6 +30,7 @@ $_MODULE['<{mailalerts}prestashop>mailalerts_c0146c441cd6d5dc9d6e0ea1464b345f'] 
 $_MODULE['<{mailalerts}prestashop>mailalerts_2a63f555989152ba866b43a1faacd680'] = 'Seuil';
 $_MODULE['<{mailalerts}prestashop>mailalerts_5b38721cd2e6ea2e12a664fb6dca1990'] = 'Quantité à partir de laquelle le produit est considéré en rupture de stock.';
 $_MODULE['<{mailalerts}prestashop>mailalerts_135d106e835a4fa3b6fb5c4638a5d76b'] = 'Alerte de couverture';
+$_MODULE['<{mailalerts}prestashop>mailalerts_218786c9273b95bc637e7adb710b4195'] = 'Recevoir une notification quand la couverture d\'un produit est insuffisante.';
 $_MODULE['<{mailalerts}prestashop>mailalerts_9841bdc50c4226cb6ec5db76494249e6'] = 'Couverture';
 $_MODULE['<{mailalerts}prestashop>mailalerts_2a4ae220a78d0c4a4d4c2b7285753321'] = 'Couverture de stock, en jours. Cette valeur est également utilisée pour calculer la couverture actuelle d\'un produit.';
 $_MODULE['<{mailalerts}prestashop>mailalerts_4c3c81fd56b02829a5a1cf953396cd55'] = 'Adresses e-mail';

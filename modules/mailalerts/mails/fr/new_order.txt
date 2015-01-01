@@ -6,9 +6,9 @@ Bravo !
 Une nouvelle commande a été passée sur votre boutique
 {shop_name} par ce client : {firstname} {lastname} ({email}) 
 
-COMMANDE : {order_name} Passée le {date}
+COMMANDE : {order_name} Date {date}
 
-PAIEMENT {payment} 		 
+PAIEMENT : {payment} 		 
 
 RÉFÉRENCE
 
@@ -38,7 +38,7 @@ LIVRAISON
 
 {total_shipping} 
 
-TVA TOTALE PAYÉE 
+TVA TOTALE 
 
 {total_tax_paid} 
 
@@ -54,6 +54,6 @@ TOTAL PAYÉ
 
 {message} 
 
-{shop_name} [{shop_url}] propulsé par
+{shop_name} [{shop_url}] réalisé avec
 PrestaShop(tm) [http://www.prestashop.com/] 
 

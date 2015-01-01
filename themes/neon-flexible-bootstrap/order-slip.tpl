@@ -7,7 +7,7 @@
 {include file="$tpl_dir./breadcrumb.tpl"}
 
 <div class="container">
-	<p class="titre-size-1">{l s='Credit slips'}</p>
+	<h1 class="titre-size-1">{l s='Credit slips'}</h1>
 	<p class="info-title">
 		{l s='Credit slips you have received after cancelled orders'}.
 	</p>

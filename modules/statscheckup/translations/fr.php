@@ -2,7 +2,8 @@
 
 global $_MODULE;
 $_MODULE = array();
-$_MODULE['<{statscheckup}prestashop>statscheckup_e7a908d79d3758c911692ba791da9c70'] = 'Evaluation du catalogue';
+
+$_MODULE['<{statscheckup}prestashop>statscheckup_e7a908d79d3758c911692ba791da9c70'] = 'Évaluation du catalogue';
 $_MODULE['<{statscheckup}prestashop>statscheckup_11c7290f636a816cbcffb9059958b5c0'] = 'Ajoute une évaluation rapide de la qualité de votre catalogue dans le tableau de bord des statistiques.';
 $_MODULE['<{statscheckup}prestashop>statscheckup_20015706a8cbd457cbb6ea3e7d5dc9b3'] = 'Configuration mise à jour';
 $_MODULE['<{statscheckup}prestashop>statscheckup_7ff3e75ce6aca348bc513ed3d5882946'] = 'mauvais';
@@ -22,10 +23,13 @@ $_MODULE['<{statscheckup}prestashop>statscheckup_f4abc77d498c89880f6733160940677
 $_MODULE['<{statscheckup}prestashop>statscheckup_ad647e4ae904c7ed54ee93040d8298c7'] = 'inférieur à';
 $_MODULE['<{statscheckup}prestashop>statscheckup_05824b7be006782aaefd1fdb97c71e06'] = 'supérieur à';
 $_MODULE['<{statscheckup}prestashop>statscheckup_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';
-$_MODULE['<{statscheckup}prestashop>statscheckup_01fda57aa6c7e9f07f5aa36b108e95cb'] = 'Ordonner de manière';
+$_MODULE['<{statscheckup}prestashop>statscheckup_01fda57aa6c7e9f07f5aa36b108e95cb'] = 'Trier par';
 $_MODULE['<{statscheckup}prestashop>statscheckup_b718adec73e04ce3ec720dd11a06a308'] = 'ID';
 $_MODULE['<{statscheckup}prestashop>statscheckup_49ee3087348e8d44e1feda1917443987'] = 'Nom';
 $_MODULE['<{statscheckup}prestashop>statscheckup_7d74f3b92b19da5e606d737d339a9679'] = 'Article';
 $_MODULE['<{statscheckup}prestashop>statscheckup_4d3d769b812b6faa6b76e1a8abaece2d'] = 'Activé';
 $_MODULE['<{statscheckup}prestashop>statscheckup_3f74e68055b1123e5d7deb32cd8b0b1b'] = 'Desc.';
 $_MODULE['<{statscheckup}prestashop>statscheckup_4cc6684df7b4a92b1dec6fce3264fac8'] = 'Global';
+
+
+return $_MODULE;

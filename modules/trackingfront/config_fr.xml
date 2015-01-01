@@ -2,7 +2,7 @@
 <module>
 	<name>trackingfront</name>
 	<displayName><![CDATA[Affiliation - Acc&egrave;s boutique]]></displayName>
-	<version><![CDATA[1.5]]></version>
+	<version><![CDATA[1.8.3]]></version>
 	<description><![CDATA[Permet &agrave; vos affili&eacute;s d&#039;acc&eacute;der &agrave; leurs propres statistiques. Voir Statistiques/Affili&eacute;s.]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[shipping_logistics]]></tab>

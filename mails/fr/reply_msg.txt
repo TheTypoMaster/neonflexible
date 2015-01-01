@@ -5,14 +5,12 @@ Bonjour {firstname} {lastname},
 
 {reply} 
 
-Vous pouvez consulter le détail de votre commande via le lien
-"Historique de mes commandes" [{history_url}]
-dans la rubrique "Mon Compte" [{my_account_url}]
-sur notre site. 
+Veuillez ne pas répondre directement à ce message, nous ne
+recevrons pas votre réponse. 
 
-Si vous avez un compte invité vous pouvez suivre votre commande
-via ce lien [{guest_tracking_url}]. 
+Pour répondre, veuillez utiliser le lien suivant : {link}
+[{link}] 
 
-{shop_name} [{shop_url}] propulsé par
+{shop_name} [{shop_url}] réalisé avec
 PrestaShop(tm) [http://www.prestashop.com/] 
 

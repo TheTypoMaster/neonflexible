@@ -1,12 +1,10 @@
 
 [{shop_url}] 
 
-Bonjour {name}
-
-Merci d'avoir créé votre compte client sur {shop_name}. 
+Bonjour {name},
 
 Il s'agit de: {product} [{product_link}] 
 
-{shop_name} [{shop_url}] propulsé par
+{shop_name} [{shop_url}] réalisé avec
 PrestaShop(tm) [http://www.prestashop.com/] 
 

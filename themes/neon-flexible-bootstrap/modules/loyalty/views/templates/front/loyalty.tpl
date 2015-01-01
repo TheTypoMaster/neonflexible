@@ -6,7 +6,7 @@
 {include file="$tpl_dir./breadcrumb.tpl"}
 
 <div class="container">
-	<p class="titre-size-1">{l s='My loyalty points' mod='loyalty'}</p>
+	<h1 class="titre-size-1">{l s='My loyalty points' mod='loyalty'}</h1>
 
 	{if $orders}
 		<div class="block-center" id="block-history">
@@ -112,7 +112,7 @@
 		<br />
 		<br />
 
-		<p class="titre-size-1">{l s='My vouchers from loyalty points' mod='loyalty'}</p>
+		<h2 class="titre-size-1">{l s='My vouchers from loyalty points' mod='loyalty'}</h2>
 
 		{if $nbDiscounts}
 			<div class="block-center" id="block-history">

@@ -11,7 +11,7 @@
 				<tr>
 					<td class="td_empty compare_extra_information">
 						{$HOOK_COMPARE_EXTRA_INFORMATION}
-						<strong>{l s='Features:'}</strong>
+						<strong>{l s='Products:'}</strong>
 					</td>
 					{assign var='taxes_behavior' value=false}
 					{if $use_taxes && (!$priceDisplay  || $priceDisplay == 2)}

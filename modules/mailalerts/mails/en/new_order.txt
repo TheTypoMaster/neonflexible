@@ -6,9 +6,11 @@ Congratulations!
 A new order was placed on {shop_name} from the following customer:
 {firstname} {lastname} ({email}) 
 
+Order details 
+
 ORDER: {order_name} Placed on {date}
 
-PAYMENT: {payment} 		 
+PAYMENT: {payment} 
 
 REFERENCE
 
@@ -22,35 +24,43 @@ TOTAL PRICE
 
 {items} 
 
-PRODUCTS 
+PRODUCTS
 
-{total_products} 
+{total_products}
 
-DISCOUNTS 
+DISCOUNTS
 
-{total_discounts} 
+{total_discounts}
 
-GIFT-WRAPPING 
+GIFT-WRAPPING
 
-{total_wrapping} 
+{total_wrapping}
 
-SHIPPING 
+SHIPPING
 
-{total_shipping} 
+{total_shipping}
 
-TOTAL TAX PAID 
+TOTAL TAX PAID
 
-{total_tax_paid} 
+{total_tax_paid}
 
-TOTAL PAID 
+TOTAL PAID
 
-{total_paid} 
+{total_paid}
+
+Carrier: 
 
 {carrier} 
 
-{delivery_block_html} 
+Delivery address 
+
+{delivery_block_html} 		 
+
+Billing address 
 
 {invoice_block_html} 
+
+Customer message: 
 
 {message} 
 

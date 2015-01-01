@@ -31,6 +31,9 @@ $_MODULE['<{referralprogram}prestashop>referralprogram_46da7ad7d01e209241016d308
 $_MODULE['<{referralprogram}prestashop>referralprogram_97839379a0f447599405341b852e2e24'] = 'Voucher offering a fixed amount (by currency)';
 $_MODULE['<{referralprogram}prestashop>referralprogram_37be07209f53a5d636d5c904ca9ae64c'] = 'Percentage';
 $_MODULE['<{referralprogram}prestashop>referralprogram_edf7f0a17b8a8f1732f12856fcbc8a6b'] = 'Voucher amount';
+$_MODULE['<{referralprogram}prestashop>referralprogram_c2fac6cb3fc5ec77cb3957e148d18b0d'] = 'Voucher tax';
+$_MODULE['<{referralprogram}prestashop>referralprogram_befcac0f9644a7abee43e69f49252ac4'] = 'Tax excluded';
+$_MODULE['<{referralprogram}prestashop>referralprogram_f4a0d7cb0cd45214c8ca5912c970de13'] = 'Tax included';
 $_MODULE['<{referralprogram}prestashop>referralprogram_cf6964e57fc5ed2000af41b39cc71f10'] = 'Voucher description';
 $_MODULE['<{referralprogram}prestashop>referralprogram_c9cc8cce247e49bae79f15173ce97354'] = 'Save';
 $_MODULE['<{referralprogram}prestashop>referralprogram_6b719c160f9b08dad4760bcc4b52ed48'] = 'Conditions of the referral program';
@@ -81,7 +84,8 @@ $_MODULE['<{referralprogram}prestashop>program_70a17ffa722a3985b86d30b034ad06d7'
 $_MODULE['<{referralprogram}prestashop>program_ec7342814444c667ab93181b30b28e38'] = 'These friends have not yet placed an order on this Website since you sponsored them, but you can try again! To do so, mark the checkboxes of the friend(s) you want to remind, then click on the button "Remind my friend(s)"';
 $_MODULE['<{referralprogram}prestashop>program_3e717a04ff77cd5fa068d8ad9d3facc8'] = 'Last invitation';
 $_MODULE['<{referralprogram}prestashop>program_9c9d4ed270f02c72124702edb192ff19'] = 'Remind my friend(s)';
-$_MODULE['<{referralprogram}prestashop>program_8b9f390369560635a2ba5ba271d953df'] = 'You have not sponsored any friends.';
+$_MODULE['<{referralprogram}prestashop>program_161133b6c2d0f520d9221ec8180c16e2'] = 'You have no pending invitations.';
+$_MODULE['<{referralprogram}prestashop>program_26ef5cd4989dd9b7a6e81a22312b06fd'] = 'You have not sponsored any friends yet.';
 $_MODULE['<{referralprogram}prestashop>program_193f3d8bbaceba40499cab1a3545e9e8'] = 'Here are sponsored friends who have accepted your invitation:';
 $_MODULE['<{referralprogram}prestashop>program_3c648ba41cfb45f13b083a9cbbacdfdf'] = 'Inscription date';
 $_MODULE['<{referralprogram}prestashop>program_8d4e5c2bc4c3cf67d2b59b263a707cb6'] = 'No sponsored friends have accepted your invitation yet.';
@@ -90,6 +94,30 @@ $_MODULE['<{referralprogram}prestashop>program_8cf04a9734132302f96da8e113e80ce5'
 $_MODULE['<{referralprogram}prestashop>rules_01705c0177ebf5fbcbf4e882bc454405'] = 'Referral program rules';
 $_MODULE['<{referralprogram}prestashop>authentication_6b31baf25848e7a6563ecc3946626c80'] = 'Referral program';
 $_MODULE['<{referralprogram}prestashop>authentication_8fdb2298a0db461ac64e71192a562ca1'] = 'E-mail address of your sponsor';
+$_MODULE['<{referralprogram}prestashop>hook_customers_16_6b31baf25848e7a6563ecc3946626c80'] = 'Referral program';
+$_MODULE['<{referralprogram}prestashop>hook_customers_16_7790d51a3d62c85aae65464dee12ee8b'] = 'Customer\'s sponsor:';
+$_MODULE['<{referralprogram}prestashop>hook_customers_16_f964f762284ede747ed9f6428a5469b8'] = 'No one has sponsored this customer.';
+$_MODULE['<{referralprogram}prestashop>hook_customers_16_53d0d7aba39ee971f7f179e6e1092708'] = 'Sponsored customers:';
+$_MODULE['<{referralprogram}prestashop>hook_customers_16_58dc82d3e2e17ced0225064a9b496ee9'] = 'Sponsored customer:';
+$_MODULE['<{referralprogram}prestashop>hook_customers_16_b718adec73e04ce3ec720dd11a06a308'] = 'ID';
+$_MODULE['<{referralprogram}prestashop>hook_customers_16_49ee3087348e8d44e1feda1917443987'] = 'Name';
+$_MODULE['<{referralprogram}prestashop>hook_customers_16_ce8ae9da5b7cd6c3df2929543a9af92d'] = 'Email';
+$_MODULE['<{referralprogram}prestashop>hook_customers_16_22ffd0379431f3b615eb8292f6c31d12'] = 'Registration date';
+$_MODULE['<{referralprogram}prestashop>hook_customers_16_325c8bbd07033a39d25b5c4457f79861'] = 'Customers sponsored by this friend';
+$_MODULE['<{referralprogram}prestashop>hook_customers_16_fc6e0920b914b164802d44220e6163f3'] = 'Placed orders';
+$_MODULE['<{referralprogram}prestashop>hook_customers_16_970ad4e4787cc75cd63dbf8d5c757513'] = 'Customer account created';
+$_MODULE['<{referralprogram}prestashop>hook_customers_6b31baf25848e7a6563ecc3946626c80'] = 'Referral program';
+$_MODULE['<{referralprogram}prestashop>hook_customers_7790d51a3d62c85aae65464dee12ee8b'] = 'Customer\'s sponsor:';
+$_MODULE['<{referralprogram}prestashop>hook_customers_f964f762284ede747ed9f6428a5469b8'] = 'No one has sponsored this customer.';
+$_MODULE['<{referralprogram}prestashop>hook_customers_53d0d7aba39ee971f7f179e6e1092708'] = 'Sponsored customers:';
+$_MODULE['<{referralprogram}prestashop>hook_customers_58dc82d3e2e17ced0225064a9b496ee9'] = 'Sponsored customer:';
+$_MODULE['<{referralprogram}prestashop>hook_customers_b718adec73e04ce3ec720dd11a06a308'] = 'ID';
+$_MODULE['<{referralprogram}prestashop>hook_customers_49ee3087348e8d44e1feda1917443987'] = 'Name';
+$_MODULE['<{referralprogram}prestashop>hook_customers_ce8ae9da5b7cd6c3df2929543a9af92d'] = 'Email';
+$_MODULE['<{referralprogram}prestashop>hook_customers_22ffd0379431f3b615eb8292f6c31d12'] = 'Registration date';
+$_MODULE['<{referralprogram}prestashop>hook_customers_325c8bbd07033a39d25b5c4457f79861'] = 'Customers sponsored by this friend';
+$_MODULE['<{referralprogram}prestashop>hook_customers_fc6e0920b914b164802d44220e6163f3'] = 'Placed orders';
+$_MODULE['<{referralprogram}prestashop>hook_customers_970ad4e4787cc75cd63dbf8d5c757513'] = 'Customer account created';
 $_MODULE['<{referralprogram}prestashop>my-account_6b31baf25848e7a6563ecc3946626c80'] = 'Referral program';
 $_MODULE['<{referralprogram}prestashop>order-confirmation_f2ef523efa8d23f8afc29e195592fc58'] = 'Thanks to your order, your sponsor %1$s %2$s will earn a voucher worth %3$d off when this order is confirmed.';
 $_MODULE['<{referralprogram}prestashop>shopping-cart_6b31baf25848e7a6563ecc3946626c80'] = 'Referral program';
@@ -98,6 +126,7 @@ $_MODULE['<{referralprogram}prestashop>shopping-cart_9a5b602be8d9b2d4b8c3f22911f
 $_MODULE['<{referralprogram}prestashop>shopping-cart_106527986549f3ec8da1ae5a7abde467'] = 'View your referral program.';
 $_MODULE['<{referralprogram}prestashop>program_666149e67589bd65ed1e787932cd74f5'] = 'When one of them makes at least %d orders, ';
 $_MODULE['<{referralprogram}prestashop>program_def1ac1f353beef52f7e86a30cae01c4'] = 'When one of them makes at least %d order, ';
+$_MODULE['<{referralprogram}prestashop>program_8b9f390369560635a2ba5ba271d953df'] = 'You have not sponsored any friends.';
 
 
 return $_MODULE;

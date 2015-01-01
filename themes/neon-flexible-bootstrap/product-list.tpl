@@ -1,5 +1,5 @@
 {if isset($products)}
-	<ul id="product_list" class="clear">
+	<ul id="product_list" class="clear mode-{if isset($smarty.cookies['category-mode'])}{$smarty.cookies['category-mode']}{else}list{/if} {if isset($class) && $class} {$class}{/if}{if isset($active) && $active == 1} active{/if}">
 	{foreach from=$products item=product name=products}
 		<li class="ajax_block_product {if $smarty.foreach.products.first}first_item{elseif $smarty.foreach.products.last}last_item{/if} {if ($smarty.foreach.products.index %4) == 3}alternate_item{else}item{/if} clearfix {if isset($product.product_type) && $product.product_type.type == NowProductType::TYPE_CONTENT}is_content_type{/if}">
 
@@ -14,8 +14,8 @@
 
 					<div class="left_block_product_type2">
 						<p class="product_type_name">{$product.product_type.name|escape:'htmlall':'UTF-8'}</p>
-						<p class="product_type_product">{$product.name|escape:'htmlall':'UTF-8'}</p>
-						<p class="product_desc">{$product.description_short|strip_tags:'UTF-8'|truncate:360:'...'}</p>
+						<h2 class="product_type_product">{$product.name|escape:'htmlall':'UTF-8'}</h2>
+						<div class="product_desc">{$product.description_short}</div>
 					</div>
 
 					<div class="right_block_product_type">
@@ -32,8 +32,8 @@
 				</div>
 
 				<div class="center_block">
-					<p class="product_title">{$product.name|truncate:55:'...':true|escape:'htmlall':'UTF-8'}</p>
-					<p class="product_desc">{$product.description_short|strip_tags:'UTF-8'|truncate:360:'...'}</p>
+					<h2 class="product_title">{$product.name|truncate:55:'...':true|escape:'htmlall':'UTF-8'}</h2>
+					<div class="product_desc">{$product.description_short}</div>
 				</div>
 
 				<div class="right_block">

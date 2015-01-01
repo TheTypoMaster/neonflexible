@@ -17,6 +17,7 @@
 #module-now_block_customer_references-default ul.list-customer-reference li:first-child {border-top:none;}
 #module-now_block_customer_references-default ul.list-customer-reference li img {float:left;margin:0 20px 0 0;}
 #module-now_block_customer_references-default ul.list-customer-reference li div {margin:30px 0;}
+#module-now_block_customer_references-default ul.list-customer-reference li div h2 {font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;}
 
 
 #module-now_block_customer_references-default #center_column #bandeau-cms {width:100%;background:#86b62c url('../img/fond-categorie-big.png') no-repeat;}

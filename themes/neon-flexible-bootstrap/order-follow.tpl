@@ -14,7 +14,7 @@
 {include file="$tpl_dir./breadcrumb.tpl"}
 
 <div class="container">
-	<p class="titre-size-1">{l s='Return Merchandise Authorization (RMA)'}</p>
+	<h1 class="titre-size-1">{l s='Return Merchandise Authorization (RMA)'}</h1>
 	{if isset($errorQuantity) && $errorQuantity}
 		<p class="error">
 			{l s='You do not have enough products to request an additional merchandise return.'}

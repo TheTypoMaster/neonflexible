@@ -2,7 +2,7 @@
 {include file="$tpl_dir./breadcrumb.tpl"}
 
 <div class="container">
-	<p class="titre-size-1">{l s='Forgot your password?'}</p>
+	<h1 class="titre-size-1" itemprop="name">{l s='Forgot your password?'}</h1>
 
 	{include file="$tpl_dir./errors.tpl"}
 

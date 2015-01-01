@@ -36,6 +36,7 @@ $_MODULE['<{carriercompare}prestashop>configuration_9c7cc22fb61d22cf2560f172ea85
 $_MODULE['<{carriercompare}prestashop>configuration_a4d3b161ce1309df1c4e25df28694b7b'] = 'Submit';
 $_MODULE['<{carriercompare}prestashop>carriercompare_c6e2a9b2d1979c244d18c7e9fbf9a86f'] = 'Zip/postal code';
 $_MODULE['<{carriercompare}prestashop>carriercompare_653e78154f5596fc293bf9db65110bbd'] = 'Update carrier list';
+$_MODULE['<{carriercompare}prestashop>configuration_152c9745ad3e3720a15b058df5d16116'] = 'An error occurred during form validation.';
 
 
 return $_MODULE;

@@ -19,7 +19,7 @@ QUANTITY
 
 TOTAL PRICE
 
-{products} 
+{products_txt} 
 
 {discounts} 
 
@@ -51,9 +51,9 @@ CARRIER: {carrier}
 
 PAYMENT: {payment} 		 
 
-{delivery_block_html} 
+{delivery_block_txt} 
 
-{invoice_block_html} 
+{invoice_block_txt} 
 
 You can review your order and download your invoice from the
 "Order history" [{history_url}] section of your
@@ -62,8 +62,8 @@ customer account by clicking "My account"
 
 If you have a guest account, you can follow your order via the
 "Guest Tracking"
-[{guest_tracking_url}?id_order={order_name}]
-section on our shop. 
+[{guest_tracking_url}?id_order={order_name}] section
+on our shop. 
 
 {shop_name} [{shop_url}] powered by
 PrestaShop(tm) [http://www.prestashop.com/] 

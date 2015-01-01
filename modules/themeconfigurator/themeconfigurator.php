@@ -37,7 +37,7 @@ class ThemeConfigurator extends Module
 	{
 		$this->name = 'themeconfigurator';
 		$this->tab = 'front_office_features';
-		$this->version = '1.1.4';
+		$this->version = '1.1.8';
 		$this->bootstrap = true;
 		$this->secure_key = Tools::encrypt($this->name);
 		$this->default_language = Language::getLanguage(Configuration::get('PS_LANG_DEFAULT'));
@@ -227,11 +227,17 @@ class ThemeConfigurator extends Module
 		$this->context->controller->addJS($this->_path.'js/admin.js');
 	}
 
+	protected function checkEnvironment()
+	{
+		$cookie = new Cookie('psAdmin', '', (int)Configuration::get('PS_COOKIE_LIFETIME_BO'));
+		return isset($cookie->id_employee) && isset($cookie->passwd) && Employee::checkPassword($cookie->id_employee, $cookie->passwd);
+	}
+
 	public function hookdisplayHeader()
 	{
 		$this->context->controller->addCss($this->_path.'css/hooks.css', 'all');
 
-		if ((int)Configuration::get('PS_TC_ACTIVE') == 1 && Tools::getValue('live_configurator_token') && Tools::getValue('live_configurator_token') == $this->getLiveConfiguratorToken())
+		if ((int)Configuration::get('PS_TC_ACTIVE') == 1 && Tools::getValue('live_configurator_token') && Tools::getValue('live_configurator_token') == $this->getLiveConfiguratorToken() && $this->checkEnvironment())
 		{
 			$this->context->controller->addCSS($this->_path.'css/live_configurator.css');
 			$this->context->controller->addJS($this->_path.'js/live_configurator.js');
@@ -317,7 +323,7 @@ class ThemeConfigurator extends Module
 	{
 		$html = '';
 
-		if ((int)Configuration::get('PS_TC_ACTIVE') == 1 && Tools::getValue('live_configurator_token') && Tools::getValue('live_configurator_token') == $this->getLiveConfiguratorToken() && Tools::getIsset('id_employee'))
+		if ((int)Configuration::get('PS_TC_ACTIVE') == 1 && Tools::getValue('live_configurator_token') && Tools::getValue('live_configurator_token') == $this->getLiveConfiguratorToken() && Tools::getIsset('id_employee') && $this->checkEnvironment())
 		{
 			if (Tools::isSubmit('submitLiveConfigurator'))
 			{
@@ -331,15 +337,18 @@ class ThemeConfigurator extends Module
 				$ad_image = $this->_path.'img/en/advertisement.png';
 
 			$this->smarty->assign(array(
-				'themes' => unserialize(Configuration::get('PS_TC_THEMES')),
-				'fonts' => unserialize(Configuration::get('PS_TC_FONTS')),
+				'themes' => Tools::unserialize(Configuration::get('PS_TC_THEMES')),
+				'fonts' => Tools::unserialize(Configuration::get('PS_TC_FONTS')),
 				'theme_font' => Tools::getValue('theme_font', Configuration::get('PS_TC_FONT')),
 				'live_configurator_token' => $this->getLiveConfiguratorToken(),
 				'id_shop' => (int)$this->context->shop->id,
 				'id_employee' => is_object($this->context->employee) ? (int)$this->context->employee->id :
 					Tools::getValue('id_employee'),
 				'advertisement_image' => $ad_image,
-				'advertisement_url' => 'http://addons.prestashop.com/en/205-premium-templates?utm_source=backoffice_configurator',
+				'advertisement_url' => 'http://addons.prestashop.com/en/205-premium-templates?utm_source=back-office'
+					.'&utm_medium=theme-configurator'
+					.'&utm_campaign=back-office-'.Tools::strtoupper($this->context->language->iso_code)
+					.'&utm_content='.(defined('_PS_HOST_MODE_') ? 'ondemand' : 'download'),
 				'advertisement_text' => $this->l('Over 800 PrestaShop premium templates! Browse now!')
 			));
 
@@ -442,7 +451,7 @@ class ThemeConfigurator extends Module
 					image_w = '.(int)$image_w.',
 					image_h = '.(int)$image_h.',
 					active = '.(int)Tools::getValue('item_active').',
-					html = \''.pSQL($content, true).'\'
+					html = \''.pSQL(Tools::purifyHTML($content), true).'\'
 			WHERE id_item = '.(int)Tools::getValue('item_id')
 		))
 		{
@@ -581,7 +590,7 @@ class ThemeConfigurator extends Module
 					\''.pSQL($image).'\',
 					\''.pSQL($image_w).'\',
 					\''.pSQL($image_h).'\',
-					\''.pSQL($content, true).'\',
+					\''.pSQL(Tools::purifyHTML($content), true).'\',
 					1)'
 		))
 		{
@@ -729,14 +738,13 @@ class ThemeConfigurator extends Module
 		// Construct the description for the 'Enable Live Configurator' switch
 		if ($this->context->shop->getBaseURL())
 		{
-			$url = $this->context->shop->getBaseURL()
-				.((Configuration::get('PS_REWRITING_SETTINGS') && count(Language::getLanguages(true)) > 1) ? Language::getIsoById($this->context->employee->id_lang).'/' : '')
-				.(Configuration::get('PS_REWRITING_SETTINGS') ? '' : 'index.php')
-				.'?live_configurator_token='.$this->getLiveConfiguratorToken()
-				.'&id_employee='.(int)$this->context->employee->id
-				.'&id_shop='.(int)$this->context->shop->id
-				.(Configuration::get('PS_TC_THEME') != '' ? '&theme='.Configuration::get('PS_TC_THEME') : '')
-				.(Configuration::get('PS_TC_FONT') != '' ? '&theme_font='.Configuration::get('PS_TC_FONT') : '');
+			$request =
+			'live_configurator_token='.$this->getLiveConfiguratorToken()
+			.'&id_employee='.(int)$this->context->employee->id
+			.'&id_shop='.(int)$this->context->shop->id
+			.(Configuration::get('PS_TC_THEME') != '' ? '&theme='.Configuration::get('PS_TC_THEME') : '')
+			.(Configuration::get('PS_TC_FONT') != '' ? '&theme_font='.Configuration::get('PS_TC_FONT') : '');
+			$url = $this->context->link->getPageLink('index', null, $id_lang = null, $request);
 
 			$desc = '<a class="btn btn-default" href="'.$url.'" onclick="return !window.open($(this).attr(\'href\'));" id="live_conf_button">'
 				.$this->l('View').' <i class="icon-external-link"></i></a><br />'

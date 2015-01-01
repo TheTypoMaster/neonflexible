@@ -45,7 +45,7 @@
 	{capture name=path}{l s='Your addresses'}{/capture}
 	{include file="$tpl_dir./breadcrumb.tpl"}
 
-	<p class="titre-size-1">{if isset($id_address)}{l s='Your address'}{else}{l s='New address'}{/if}</p>
+	<h1 class="titre-size-1">{if isset($id_address)}{l s='Your address'}{else}{l s='New address'}{/if}</h1>
 
 	<p>
 		{if isset($id_address) && (isset($smarty.post.alias) || isset($address->alias))}
@@ -216,13 +216,17 @@
 				<input type="text" id="alias" name="alias" value="{if isset($smarty.post.alias)}{$smarty.post.alias}{else if isset($address->alias)}{$address->alias|escape:'html'}{elseif !$select_address}{l s='My address'}{/if}" />
 			</p>
 		</fieldset>
-		<p class="submit">
+
+		<p class="submit cart_navigation clearfix">
 			{if isset($id_address)}<input type="hidden" name="id_address" value="{$id_address|intval}" />{/if}
 			{if isset($back)}<input type="hidden" name="back" value="{$back}" />{/if}
 			{if isset($mod)}<input type="hidden" name="mod" value="{$mod}" />{/if}
 			{if isset($select_address)}<input type="hidden" name="select_address" value="{$select_address|intval}" />{/if}
 			<input type="hidden" name="token" value="{$token}" />
-			<input type="submit" name="submitAddress" id="submitAddress" value="{l s='Save'}" class="button-rose" />
+
+			<button type="submit" class="button btn btn-default standard-checkout button-medium" name="submitAddress" id="submitAddress">
+				<span>{l s='Save'}</span>
+			</button>
 		</p>
 
 		<p class="required"><sup>*</sup> {l s='Required field'}</p>

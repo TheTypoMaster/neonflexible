@@ -16,7 +16,7 @@
 
 <div class="container">
 
-	<p class="titre-size-1">{l s='Please choose your payment method'}</p>
+	<h1 class="titre-size-1 invisible">{l s='Please choose your payment method'}</h1>
 
 
 	{if !$opc}
@@ -263,19 +263,32 @@
 			{if count($discounts)}
 				<tbody>
 				{foreach from=$discounts item=discount name=discountLoop}
-					<tr class="cart_discount {if $smarty.foreach.discountLoop.last}last_item{elseif $smarty.foreach.discountLoop.first}first_item{else}item{/if}" id="cart_discount_{$discount.id_discount}">
+					{*<tr class="cart_discount {if $smarty.foreach.discountLoop.last}last_item{elseif $smarty.foreach.discountLoop.first}first_item{else}item{/if}" id="cart_discount_{$discount.id_discount}">
 						<td class="cart_discount_description" colspan="2">{$discount.description}</td>
 						<td class="cart_discount_name">{$discount.name}</td>
 						<td class="cart_discount_price" colspan="2">
-													<span class="price-discount">
-														{if $discount.value_real > 0}
-															{if !$priceDisplay}
-																{displayPrice price=$discount.value_real*-1}
-															{else}
-																{displayPrice price=$discount.value_tax_exc*-1}
-															{/if}
-														{/if}
-													</span>
+							<span class="price-discount">
+								{if $discount.value_real > 0}
+									{if !$priceDisplay}
+										{displayPrice price=$discount.value_real*-1}
+									{else}
+										{displayPrice price=$discount.value_tax_exc*-1}
+									{/if}
+								{/if}
+							</span>
+						</td>
+					</tr>*}
+
+					<tr class="cart_discount {if $discount@last}last_item{elseif $discount@first}first_item{else}item{/if}" id="cart_discount_{$discount.id_discount}">
+						<td class="cart_discount_name" colspan="3">{$discount.name}</td>
+						<td class="cart_discount_price">
+									<span class="price-discount">
+									{if !$priceDisplay}{displayPrice price=$discount.value_real*-1}{else}{displayPrice price=$discount.value_tax_exc*-1}{/if}
+									</span>
+						</td>
+						<td class="cart_discount_delete">1</td>
+						<td class="cart_discount_price">
+							<span class="price-discount price">{if !$priceDisplay}{displayPrice price=$discount.value_real*-1}{else}{displayPrice price=$discount.value_tax_exc*-1}{/if}</span>
 						</td>
 					</tr>
 				{/foreach}

@@ -9,9 +9,14 @@
 
 <div class="container">
 	<div id="breadcrumb" {if in_array(Context::getContext()->controller->php_self, array('category', 'cms')) || $noBorder}class="no-border"{/if}>
-		<a href="{$base_dir}" title="{l s='Return to Home'}">
-			<img src="{$img_dir}theme/home-fil-ariane.png" height="26" width="27" alt="{l s='Home'}" />
-		</a>
+		<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+			<a href="{$base_dir}" title="{l s='Return to Home'}" itemprop="url">
+				<span itemprop="title" class="home">
+					{l s='Néon flexible'}
+					{*<img src="{$img_dir}theme/home-fil-ariane.png" height="26" width="27" alt="{l s='Home'}" />*}
+				</span>
+			</a>
+		</div>
 
 		{if isset($path) AND $path}
 			<span class="navigation-pipe" {if isset($category) && isset($category->id_category) && $category->id_category == 1}style="display:none;"{/if}>
