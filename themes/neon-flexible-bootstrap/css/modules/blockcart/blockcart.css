@@ -249,12 +249,11 @@
 
 #layer_cart {
 	background-color:white;
-	position:absolute;
+	position:relative;
 	display:none;
 	z-index:99;
-	width:84%;
-	margin-right:8%;
-	margin-left:8%;
+	width:1200px;
+	margin:0 auto;
 	-webkit-border-radius:4px;
 	-moz-border-radius:4px;
 	-ms-border-radius:4px;
