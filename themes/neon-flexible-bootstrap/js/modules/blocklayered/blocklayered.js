@@ -598,7 +598,7 @@ function reloadContent(params_plus)
 			});
 
 			if (display instanceof Function) {
-				var view = $.totalStorage('display');
+				var view = $.totalStorage('category-mode');
 
 				if (view && view != 'grid')
 					display(view);

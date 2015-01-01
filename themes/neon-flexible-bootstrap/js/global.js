@@ -171,10 +171,9 @@ function bindGrid()
 
 function display(view)
 {
-
-	if (view == 'mode-list')
+	if (view == 'mode-list' || view == 'list')
 	{
-		$('ul#product_list').removeClass('mode-block').addClass('mode-list row');
+		$('ul#product_list').removeClass('mode-block mode-list row');
 		//$('#product_list > li').removeClass('col-xs-12 col-sm-6 col-md-4').addClass('col-xs-12');
 		$('#product_list').addClass('row mode-' + $.totalStorage('category-mode'));
 
@@ -214,8 +213,9 @@ function display(view)
 		$('.display').find('li.mode-list').addClass('selected');
 		$('.display').find('li.mode-block').removeAttr('class');
 		$.totalStorage('display', 'mode-list');
+
 	} else {
-		$('ul#product_list').removeClass('mode-list').addClass('mode-block row');
+		$('ul#product_list').removeClass('mode-list mode-block row');
 		//$('#product_list > li').removeClass('col-xs-12').addClass('col-xs-12 col-sm-6 col-md-4');
 		$('#product_list').addClass('row mode-' + $.totalStorage('category-mode'));
 
@@ -253,7 +253,10 @@ function display(view)
 		$('.display').find('li.mode-block').addClass('selected');
 		$('.display').find('li.mode-list').removeAttr('class');
 		$.totalStorage('display', 'mode-block');
-	}	
+	}
+
+	$('img[data-mode-affichage]').css('display', 'none');
+	$('img[data-mode-affichage=' + $.totalStorage('category-mode') + ']').css('display', 'block');
 }
 
 function dropDown() 
