@@ -341,7 +341,7 @@
 	width:100%;
 	padding:0px 30px 20px 30px;}
 #layer_cart .layer_cart_cart .button-container .btn {
-	margin-bottom:10px;}
+	margin-bottom:10px;border-radius:4px;}
 #layer_cart .layer_cart_cart .button-container span.exclusive-medium {
 	margin-right:5px;}
 #layer_cart .layer_cart_cart .button-container span.exclusive-medium i {

@@ -1,11 +1,17 @@
 
 {if isset($order)}
-<form action="{if isset($opc) && $opc}{$link->getPageLink('order-opc', true)}{else}{$link->getPageLink('order', true)}{/if}" method="post" class="submit">
+<form action="{if isset($opc) && $opc}{$link->getPageLink('order-opc', true)}{else}{$link->getPageLink('order', true)}{/if}" method="post" class="submit std">
 	<div>
 		<input type="hidden" value="{$order->id}" name="id_order"/>
+
 		<p class="submit">
-			<input type="submit" value="{l s='Reorder'}" name="submitReorder" class="button-rose" />
 			{l s='Order Reference %s - placed on' sprintf=$order->getUniqReference()} {dateFormat date=$order->date_add full=0}
+		</p>
+
+		<p class="submit cart_navigation clearfix">
+			<button type="submit" class="button btn btn-default standard-checkout button-medium" name="submitReorder">
+				<span>{l s='Reorder'}</span>
+			</button>
 		</p>
 	</div>
 </form>
@@ -393,10 +399,15 @@
 		<p class="textarea">
 			<textarea cols="67" rows="3" name="msgText"></textarea>
 		</p>
-		<p class="submit">
+
+
+		<p class="submit cart_navigation clearfix">
 			<input type="hidden" name="id_order" value="{$order->id|intval}" />
-			<input type="submit" class="button-rose" name="submitMessage" value="{l s='Send'}"/>
+			<button type="submit" class="button btn btn-default standard-checkout button-medium" name="submitMessage">
+				<span>{l s='Send'}</span>
+			</button>
 		</p>
+
 	</form>
 {else}
 <p><img src="{$img_dir}icon/infos.gif" alt="" class="icon" />&nbsp;{l s='You cannot return merchandise with a guest account'}</p>

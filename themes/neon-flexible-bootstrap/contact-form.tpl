@@ -118,7 +118,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="submit">
+				<div class="submit cart_navigation clearfix">
 					<button type="submit" name="submitMessage" id="submitMessage" class="button btn btn-default button-medium"><span>{l s='Send'}<i class="icon-chevron-right"></i></span></button>
 				</div>
 			</fieldset>

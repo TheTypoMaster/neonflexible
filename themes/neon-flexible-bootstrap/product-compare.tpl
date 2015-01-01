@@ -1,7 +1,7 @@
 {if $comparator_max_item}
 	<form method="post" action="{$link->getPageLink('products-comparison')|escape:'html':'UTF-8'}" class="compare-form">
-		<p>
-			<button type="submit" class="button bt_compare bt_compare{if isset($paginationId)}_{$paginationId}{/if}" disabled="disabled">
+		<p class="cart_navigation clearfix">
+			<button type="submit" class="button btn btn-default standard-checkout button-medium bt_compare bt_compare{if isset($paginationId)}_{$paginationId}{/if}" disabled="disabled">
 				<span>{l s='Compare'} (<span class="total-compare-val">{count($compared_products)}</span>)</span>
 			</button>
 			<input type="hidden" name="compare_product_count" class="compare_product_count" value="{count($compared_products)}" />

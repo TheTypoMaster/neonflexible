@@ -54,7 +54,7 @@ form.std p.password input,
 form.std p.select input {padding:0 5px;height:22px;width:360px;border:1px solid #ccc;/*font-size:12px;*/color:#777;}
 form.std p.select select {margin-right:10px;border:1px solid #ccc;/*font-size:12px;*/color:#777;}
 form.std p.textarea textarea {height:80px;width:370px;border:1px solid #ccc;/*font-size:12px;*/color:#777;}
-form.std p.submit {margin:10px;}
+form.std p.submit {margin:10px;text-align:center;}
 form.std div.radio {line-height:27px;float:left;}
 form.std div.uploader {width:300px;float:left;}
 .form-group.form-error input, .form-group.form-error textarea {border:1px solid #f13340;color:#f13340;background:url(../img/icon/form-error.png) 98% 5px no-repeat #fff1f2;}
@@ -98,6 +98,7 @@ ul.block li {padding:0 15px;line-height:18px;list-style-type:none;}
 ul.block li.title, ul.block li.address_title {border-bottom:1px solid #ccc;text-transform:uppercase;font-weight:bold;padding:0 0 15px 15px;}
 ul.block >li:first-child + li {margin-top:8px}
 #block-order-detail {display:none;background:#f4f4f4;border:1px solid #d4d4d4;padding:15px;margin-bottom:20px;}
+#block-order-detail #center_column {padding:10px;}
 
 /* Titre*/
 .titre-size-1 {font-size:32px;color:#333;text-align:center;font-family:Raleway,Verdana,Arial,sans-serif;margin:30px 0;letter-spacing: 2px;}
@@ -304,18 +305,20 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 .filter-top .nbrItemPage p select {margin:0 20px;}
 
 .filter {padding:20px 0;height:70px;}
-.filter.bottom {border-top:1px solid #d4d4d4;}
+.filter.bottom {padding:0;}
 .filter .nb-products-results {float:left;}
 .filter .nb-products-results p {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;margin:0;padding:0;line-height:35px;}
-.filter .pagination {margin:-40px 0 0 220px;display:block;}
+.filter .pagination {margin:-60px 0 0 220px;display:block;}
 .filter .pagination ul {margin:0;padding:0;}
 .filter .pagination ul li {list-style-type:none;float:left;display:block;padding:5px;text-align:center;color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;}
 .filter .pagination ul li a {text-decoration:underline;color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;}
 .filter .pagination ul li a:hover {text-decoration:none;}
 .filter .pagination ul li.pagination_next, .filter .pagination ul li.pagination_previous {}
-.filter .compare-form {float:right;border-radius:15px;padding:8px 20px 6px 25px;background:#f13e70;}
-.filter .compare-form p {padding:0;margin:0;color:#fff;/*font-size:13px;*/text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}
-.filter .compare-form p .bt_compare {border:none;background:none;padding:0;margin:0;color:#fff;/*font-size:13px;*/text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}
+.filter .compare-form {float:right;}
+.filter .compare-form p .bt_compare {font-size:14px;text-transform:uppercase;line-height:10px}
+.filter .compare-form p .bt_compare .total-compare-val {margin:0;padding:0;display:inline;border:none;}
+/*.filter .compare-form p {padding:0;margin:0;color:#fff;text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}
+.filter .compare-form p .bt_compare {border:none;background:none;padding:0;margin:0;color:#fff;text-transform:uppercase;font-family:Raleway,Verdana,Arial,sans-serif;}*/
 .filter .jqDisplayedAllProductsButton {background:none;border:none;text-decoration:underline;color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;font-weight:300;display:block;float:right;margin:5px 5% 0 0;}
 .filter .jqDisplayedAllProductsButton:hover {text-decoration:none;}
 
@@ -1108,6 +1111,7 @@ width:auto;}
 	.cart_navigation .button-medium span {	font-size:16px;}
 }
 .cart_navigation .button-medium i.right {font-size:25px;line-height:25px;vertical-align:-4px;margin-left:6px;}
+.submit.cart_navigation .button-medium {float:none;}
 .cart_navigation .button-exclusive {border:none;background:none;padding:0;font-size:17px;font-weight:bold;color:#333333;margin:9px 0 0 0;}
 .cart_navigation .button-exclusive i {color:#777777;margin-right:8px;}
 .cart_navigation .button-exclusive:hover, .cart_navigation .button-exclusive:focus, .cart_navigation .button-exclusive:active {color:#515151;-webkit-box-shadow:none;box-shadow:none;}
