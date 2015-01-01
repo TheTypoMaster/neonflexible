@@ -1,4 +1,4 @@
-{if $comparator_max_item}
+{if $comparator_max_item && !is_array($nowCategorySlide)}
 	<form method="post" action="{$link->getPageLink('products-comparison')|escape:'html':'UTF-8'}" class="compare-form">
 		<p class="cart_navigation clearfix">
 			<button type="submit" class="button btn btn-default standard-checkout button-medium bt_compare bt_compare{if isset($paginationId)}_{$paginationId}{/if}" disabled="disabled">

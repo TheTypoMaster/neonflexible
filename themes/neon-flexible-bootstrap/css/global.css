@@ -140,8 +140,8 @@ footer #social_block ul li.twitter {background:url('../img/theme/twitter.png') n
 footer #social_block ul li.google_plus {background:url('../img/theme/google-plus.png') no-repeat;}
 footer #social_block ul li a {width:41px;height:38px;text-indent:-9999px;position:absolute;}
 
-ul.footer_link {padding:0}
-ul.footer_link li {list-style-type:none;}
+ul.footer_link, ul.footer_links {padding:0}
+ul.footer_link li, ul.footer_links li {list-style-type:none;}
 
 /* Bouton */
 .button-none {border:none;right:15px;background:none;line-height:50px;text-align:right;display:block;color:#fff;font-family:Raleway,Verdana,Arial,sans-serif;font-size:15px;font-weight:bold;text-transform:uppercase;position:absolute;width:220px;top:0;}
