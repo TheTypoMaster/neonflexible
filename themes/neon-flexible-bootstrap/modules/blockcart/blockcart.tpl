@@ -206,11 +206,11 @@
 										</p>
 									{/if}
 								</div>
-								<p class="cart-buttons">
-									<a id="button_order_cart" class="btn btn-default button button-small" href="{$link->getPageLink("$order_process", true)|escape:"html":"UTF-8"}" title="{l s='Check out' mod='blockcart'}" rel="nofollow">
-								<span>
-									{l s='Check out' mod='blockcart'}<i class="icon-chevron-right"></i>
-								</span>
+								<p class="cart-buttons cart_navigation clearfix">
+									<a id="button_order_cart" class="button btn btn-default button-medium" href="{$link->getPageLink("$order_process", true)|escape:"html":"UTF-8"}" title="{l s='Check out' mod='blockcart'}" rel="nofollow">
+										<span>
+											{l s='Check out' mod='blockcart'}<i class="icon-chevron-right"></i>
+										</span>
 									</a>
 								</p>
 							</div>

@@ -24,7 +24,7 @@ ul#product_list li .functional-buttons .compare a:before {content:url('../img/th
 ul#product_list li .button-add-to-cart {width:180px;height:37px;font-size:13px;line-height:37px;text-align:left;position:absolute;z-index:2}
 ul#product_list li .button-add-to-cart span {margin:6px;}
 ul#product_list li .button-add-to-cart.on-order {text-align:center;padding:0 5px 0 0;}
-ul#product_list li .button-add-to-cart.on-order span {background:url('../img/theme/commande-white.png') no-repeat;width:31px;margin:5px 0 6px 6px;}
+ul#product_list li .button-add-to-cart.on-order span {background:url('../img/theme/commande-white.png') no-repeat;width:31px;margin:5px 5px 6px 6px;}
 
 ul#product_list li.is_content_type {width:421px;padding:0;border:3px solid #fff;margin-right:8px;}
 ul#product_list li.is_content_type:before {border:1px solid #dbdbdb;width:416px;height:365px;background:transparent;position:absolute;margin:0;}
