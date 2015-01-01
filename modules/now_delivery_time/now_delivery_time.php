@@ -11,8 +11,7 @@ require_once (_PS_MODULE_DIR_.'now_delivery_time/classes/NowDeliveryTime.php');
 
 class now_delivery_time extends NowModule {
 
-	public function __construct()
-	{
+	public function __construct() {
 		$this->name				= 'now_delivery_time';
 		$this->tab				= 'front_office_features';
 		$this->version			= 1.0;
@@ -25,8 +24,8 @@ class now_delivery_time extends NowModule {
 		$this->description = $this->l('Manage all delivery time by carrier on your front office');
 
 		if ($this->active) {
-			$this->module_dir = _PS_MODULE_DIR_.$this->name.DIRECTORY_SEPARATOR;
-			$this->module_uri = DIRECTORY_SEPARATOR.'modules'.DIRECTORY_SEPARATOR.$this->name.DIRECTORY_SEPARATOR;
+			$this->module_dir = _PS_MODULE_DIR_ . $this->name . DIRECTORY_SEPARATOR;
+			$this->module_uri = DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR . $this->name . DIRECTORY_SEPARATOR;
 		}
 	}
 
@@ -36,8 +35,8 @@ class now_delivery_time extends NowModule {
 	public function setAdminControllers() {
 		$this->aAdminControllers = array(
 			'AdminNowDeliveryTime' => array(
-				'parent' => 'AdminParentNinjaOfWeb',
-				'name' => $this->l('Manage delivery time')
+				'parent'	=> 'AdminParentNinjaOfWeb',
+				'name'		=> $this->l('Manage delivery time')
 			)
 		);
 	}
@@ -67,7 +66,6 @@ class now_delivery_time extends NowModule {
 	public function hookActionCarrierUpdate($aParams) {
 		p('Module now_delivery time');
 		d($aParams);
-
 	}
 
 	/**
@@ -75,15 +73,13 @@ class now_delivery_time extends NowModule {
 	 * @param $aParams
 	 */
 	public function hookDisplayCarrierDeliveryTimeList($aParams) {
-
 		$aDeliveryTimeList = array();
 
 		$this->context->smarty->assign(array(
 			'aDeliveryTimeList' => $aDeliveryTimeList
 		));
 
-
-		return $this->context->smarty->fetch($this->module_dir.'views/templates/hook/product-delivery.tpl');
+		return $this->context->smarty->fetch($this->module_dir . 'views/templates/hook/product-delivery.tpl');
 	}
 
 

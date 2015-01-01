@@ -12,11 +12,35 @@ class NowDeliveryTime extends ObjectModel {
 	/** @var integer ID */
 	public $id_now_delivery_time;
 
-	/** @var enum/string type : button, content */
-	public $type;
+	/** @var  integer ID */
+	public $id_carrier;
 
-	/** @var boolean Status for display */
-	public $active = 1;
+	/** @var boolean */
+	public $saturday_shipping	= 0;
+
+	/** @var boolean */
+	public $sunday_shipping		= 0;
+
+	/** @var boolean */
+	public $shipping_holidays	= 0;
+
+	/** @var boolean */
+	public $saturday_delivery	= 0;
+
+	/** @var boolean */
+	public $sunday_delivery		= 0;
+
+	/** @var boolean */
+	public $delivery_holidays	= 0;
+
+	/** @var boolean */
+	public $day_min				= 0;
+
+	/** @var boolean */
+	public $day_max				= 0;
+
+	/** @var boolean */
+	public $deleted				= 0;
 
 	/** @var string Object creation date */
 	public $date_add;
@@ -39,15 +63,15 @@ class NowDeliveryTime extends ObjectModel {
 		'multilang' => true,
 		'fields' => array(
 			'id_shop'			=> array('type' => self::TYPE_INT),
-			'id_type'			=> array('type' => self::TYPE_INT,	'validate' => 'isUnsignedInt', 'required' => true),
+			'id_carrier'		=> array('type' => self::TYPE_INT,	'validate' => 'isUnsignedInt', 'required' => true),
 			'saturday_shipping'	=> array('type' => self::TYPE_BOOL,	'validate' => 'isBool', 'required' => true),
 			'sunday_shipping'	=> array('type' => self::TYPE_BOOL,	'validate' => 'isBool', 'required' => true),
 			'shipping_holidays'	=> array('type' => self::TYPE_BOOL,	'validate' => 'isBool', 'required' => true),
 			'saturday_delivery'	=> array('type' => self::TYPE_BOOL,	'validate' => 'isBool', 'required' => true),
 			'sunday_delivery'	=> array('type' => self::TYPE_BOOL,	'validate' => 'isBool', 'required' => true),
 			'delivery_holidays'	=> array('type' => self::TYPE_BOOL,	'validate' => 'isBool', 'required' => true),
-			'day_min'			=> array('type' => self::TYPE_BOOL,	'validate' => 'isBool', 'required' => true),
-			'day_max'			=> array('type' => self::TYPE_BOOL,	'validate' => 'isBool', 'required' => true),
+			'day_min'			=> array('type' => self::TYPE_INT,	'validate' => 'isUnsignedInt', 'required' => true),
+			'day_max'			=> array('type' => self::TYPE_INT,	'validate' => 'isUnsignedInt', 'required' => true),
 			'deleted'			=> array('type' => self::TYPE_BOOL,	'validate' => 'isBool', 'required' => true),
 			'date_add'			=> array('type' => self::TYPE_DATE,	'validate' => 'isDate'),
 			'date_upd'			=> array('type' => self::TYPE_DATE,	'validate' => 'isDate'),

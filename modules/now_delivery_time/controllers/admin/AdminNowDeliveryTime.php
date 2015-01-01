@@ -11,13 +11,16 @@ require_once(_PS_MODULE_DIR_ . 'now_delivery_time/classes/NowDeliveryTime.php');
 
 class AdminNowDeliveryTimeController extends ModuleAdminControllerCore {
 
-	public function __construct()
-	{
-		$this->bootstrap = true;
-		$this->table = 'now_delivery_time';
-		$this->className = 'NowDeliveryTime';
-		$this->module = new now_delivery_time();
-		$this->lang = true;
+	/**
+	 * @throws PrestaShopException
+	 */
+	public function __construct() {
+		$this->bootstrap	= true;
+		$this->table		= 'now_delivery_time';
+		$this->className	= 'NowDeliveryTime';
+		$this->module		= new now_delivery_time();
+		$this->lang			= true;
+
 		$this->addRowAction('edit');
 		$this->addRowAction('delete');
 
@@ -35,6 +38,167 @@ class AdminNowDeliveryTimeController extends ModuleAdminControllerCore {
 			'date_upd'				=> array('title' => $this->module->l('Updated Date', 'AdminNowDeliveryTime'), 'width' => 'auto', 'type' => 'datetime'),
 		);
 
+		$this->_select	.= ' c.`name` as carrier ';
+		$this->_join	.= ' LEFT JOIN `' . _DB_PREFIX_ . 'carrier` c ON (c.`id_carrier` = a.`id_carrier`)';
+
 		parent::__construct();
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function renderform() {
+		$this->fields_form = array(
+			'legend' => array(
+				'title'	=> $this->module->l('Add or Update a delivery time rule', 'AdminNowDeliveryTime'),
+				'icon'	=> 'icon-settings'
+			),
+			'input' => array(
+				array(
+					'type'		=> 'select',
+					'label'		=> $this->module->l('Carrier', 'AdminNowDeliveryTime'),
+					'name'		=> 'id_carrier',
+					'required'	=> true,
+					'options'	=> array(
+						'query'		=> Carrier::getCarriers(Context::getContext()->language->id, true),
+						'id'		=> 'id_carrier',
+						'name'		=> 'name'
+					)
+				),
+				array(
+					'type'		=> 'switch',
+					'label'		=> $this->module->l('Saturday shipping', 'AdminNowDeliveryTime'),
+					'name'		=> 'saturday_shipping',
+					'required'	=> false,
+					'is_bool'	=> true,
+					'values'	=> array(
+						array(
+							'id'	=> 'active_on',
+							'value'	=> 1,
+							'label'	=> $this->module->l('Enabled', 'AdminNowDeliveryTime')
+						),
+						array(
+							'id'	=> 'active_off',
+							'value'	=> 0,
+							'label'	=> $this->module->l('Disabled', 'AdminNowDeliveryTime')
+						)
+					)
+				),
+				array(
+					'type'		=> 'switch',
+					'label'		=> $this->module->l('Sunday shipping', 'AdminNowDeliveryTime'),
+					'name'		=> 'sunday_shipping',
+					'required'	=> false,
+					'is_bool'	=> true,
+					'values'	=> array(
+						array(
+							'id'	=> 'active_on',
+							'value'	=> 1,
+							'label'	=> $this->module->l('Enabled', 'AdminNowDeliveryTime')
+						),
+						array(
+							'id'	=> 'active_off',
+							'value'	=> 0,
+							'label'	=> $this->module->l('Disabled', 'AdminNowDeliveryTime')
+						)
+					)
+				),
+				array(
+					'type'		=> 'switch',
+					'label'		=> $this->module->l('Shipping holidays', 'AdminNowDeliveryTime'),
+					'name'		=> 'shipping_holidays',
+					'required'	=> false,
+					'is_bool'	=> true,
+					'values'	=> array(
+						array(
+							'id'	=> 'active_on',
+							'value'	=> 1,
+							'label'	=> $this->module->l('Enabled', 'AdminNowDeliveryTime')
+						),
+						array(
+							'id'	=> 'active_off',
+							'value'	=> 0,
+							'label'	=> $this->module->l('Disabled', 'AdminNowDeliveryTime')
+						)
+					)
+				),
+				array(
+					'type'		=> 'switch',
+					'label'		=> $this->module->l('Saturday delivery', 'AdminNowDeliveryTime'),
+					'name'		=> 'saturday_delivery',
+					'required'	=> false,
+					'is_bool'	=> true,
+					'values'	=> array(
+						array(
+							'id'	=> 'active_on',
+							'value'	=> 1,
+							'label'	=> $this->module->l('Enabled', 'AdminNowDeliveryTime')
+						),
+						array(
+							'id'	=> 'active_off',
+							'value'	=> 0,
+							'label'	=> $this->module->l('Disabled', 'AdminNowDeliveryTime')
+						)
+					)
+				),
+				array(
+					'type'		=> 'switch',
+					'label'		=> $this->module->l('Sunday delivery', 'AdminNowDeliveryTime'),
+					'name'		=> 'sunday_delivery',
+					'required'	=> false,
+					'is_bool'	=> true,
+					'values'	=> array(
+						array(
+							'id'	=> 'active_on',
+							'value'	=> 1,
+							'label'	=> $this->module->l('Enabled', 'AdminNowDeliveryTime')
+						),
+						array(
+							'id'	=> 'active_off',
+							'value'	=> 0,
+							'label'	=> $this->module->l('Disabled', 'AdminNowDeliveryTime')
+						)
+					)
+				),
+				array(
+					'type'		=> 'switch',
+					'label'		=> $this->module->l('Delivery holidays', 'AdminNowDeliveryTime'),
+					'name'		=> 'delivery_holidays',
+					'required'	=> false,
+					'is_bool'	=> true,
+					'values'	=> array(
+						array(
+							'id'	=> 'active_on',
+							'value'	=> 1,
+							'label'	=> $this->module->l('Enabled', 'AdminNowDeliveryTime')
+						),
+						array(
+							'id'	=> 'active_off',
+							'value'	=> 0,
+							'label'	=> $this->module->l('Disabled', 'AdminNowDeliveryTime')
+						)
+					)
+				),
+				array(
+					'type'		=> 'text',
+					'label'		=> $this->module->l('Minimum day', 'AdminNowDeliveryTime'),
+					'name'		=> 'day_min',
+					'required'	=> true,
+					'suffix'	=> $this->module->l('day', 'AdminNowDeliveryTime'),
+				),
+				array(
+					'type'		=> 'text',
+					'label'		=> $this->module->l('Maximum day', 'AdminNowDeliveryTime'),
+					'name'		=> 'day_max',
+					'required'	=> true,
+					'suffix'	=> $this->module->l('day', 'AdminNowDeliveryTime'),
+				)
+			),
+			'submit' => array(
+				'title' => $this->module->l('Save', 'AdminNowDeliveryTime')
+			)
+		);
+
+		return parent::renderForm();
 	}
 }
