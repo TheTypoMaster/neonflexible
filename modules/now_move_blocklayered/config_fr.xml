@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>now_move_blocklayered</name>
-	<displayName><![CDATA[Move featured values]]></displayName>
+	<displayName><![CDATA[Positionner les valeurs des caract&egrave;ristiques]]></displayName>
 	<version><![CDATA[1]]></version>
-	<description><![CDATA[Ordered featured values on the filter list of blocklayered module.]]></description>
+	<description><![CDATA[Permet d&#039;ordonner les valeurs des caract&eacute;ristiques notamment pour l&#039;affichage des filtres du module de navigation &agrave; facette.]]></description>
 	<author><![CDATA[NinjaOfWeb]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>0</is_configurable>
