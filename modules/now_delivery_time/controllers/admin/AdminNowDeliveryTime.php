@@ -29,12 +29,12 @@ class AdminNowDeliveryTimeController extends ModuleAdminControllerCore {
 			'carrier'				=> array('title' => $this->module->l('Carrier', 'AdminNowDeliveryTime'), 'width' => 'auto'),
 			'day_min'				=> array('title' => $this->module->l('Minimum day', 'AdminNowDeliveryTime'), 'width' => 'auto'),
 			'day_max'				=> array('title' => $this->module->l('Maximum day', 'AdminNowDeliveryTime'), 'width' => 'auto'),
-			'saturday_shipping'		=> array('title' => $this->module->l('Saturday shipping', 'AdminNowDeliveryTime'), 'width' => 'auto'),
-			'sunday_shipping'		=> array('title' => $this->module->l('Sunday shipping', 'AdminNowDeliveryTime'), 'width' => 'auto'),
-			'shipping_holidays'		=> array('title' => $this->module->l('Shipping holidays', 'AdminNowDeliveryTime'), 'width' => 'auto'),
-			'saturday_delivery'		=> array('title' => $this->module->l('Saturday delivery', 'AdminNowDeliveryTime'), 'width' => 'auto'),
-			'sunday_delivery'		=> array('title' => $this->module->l('Sunday delivery', 'AdminNowDeliveryTime'), 'width' => 'auto'),
-			'delivery_holidays'		=> array('title' => $this->module->l('Delivery holidays', 'AdminNowDeliveryTime'), 'width' => 'auto'),
+			'saturday_shipping'		=> array('title' => $this->module->l('Saturday shipping', 'AdminNowDeliveryTime'), 'width' => 25, 'align' => 'center', 'active' => 'status', 'type' => 'bool', 'orderby' => false, 'class' => 'fixed-width-sm'),
+			'sunday_shipping'		=> array('title' => $this->module->l('Sunday shipping', 'AdminNowDeliveryTime'), 'width' => 25, 'align' => 'center', 'active' => 'status', 'type' => 'bool', 'orderby' => false, 'class' => 'fixed-width-sm'),
+			'shipping_holidays'		=> array('title' => $this->module->l('Shipping holidays', 'AdminNowDeliveryTime'), 'width' => 25, 'align' => 'center', 'active' => 'status', 'type' => 'bool', 'orderby' => false, 'class' => 'fixed-width-sm'),
+			'saturday_delivery'		=> array('title' => $this->module->l('Saturday delivery', 'AdminNowDeliveryTime'), 'width' => 25, 'align' => 'center', 'active' => 'status', 'type' => 'bool', 'orderby' => false, 'class' => 'fixed-width-sm'),
+			'sunday_delivery'		=> array('title' => $this->module->l('Sunday delivery', 'AdminNowDeliveryTime'), 'width' => 25, 'align' => 'center', 'active' => 'status', 'type' => 'bool', 'orderby' => false, 'class' => 'fixed-width-sm'),
+			'delivery_holidays'		=> array('title' => $this->module->l('Delivery holidays', 'AdminNowDeliveryTime'), 'width' => 25, 'align' => 'center', 'active' => 'status', 'type' => 'bool', 'orderby' => false, 'class' => 'fixed-width-sm'),
 			'date_upd'				=> array('title' => $this->module->l('Updated Date', 'AdminNowDeliveryTime'), 'width' => 'auto', 'type' => 'datetime'),
 		);
 
@@ -184,15 +184,27 @@ class AdminNowDeliveryTimeController extends ModuleAdminControllerCore {
 					'label'		=> $this->module->l('Minimum day', 'AdminNowDeliveryTime'),
 					'name'		=> 'day_min',
 					'required'	=> true,
-					'suffix'	=> $this->module->l('day', 'AdminNowDeliveryTime'),
+					'suffix'	=> $this->module->l('days', 'AdminNowDeliveryTime'),
 				),
 				array(
 					'type'		=> 'text',
 					'label'		=> $this->module->l('Maximum day', 'AdminNowDeliveryTime'),
 					'name'		=> 'day_max',
 					'required'	=> true,
-					'suffix'	=> $this->module->l('day', 'AdminNowDeliveryTime'),
-				)
+					'suffix'	=> $this->module->l('days', 'AdminNowDeliveryTime'),
+				),
+				array(
+					'type'			=> 'textarea',
+					'label'			=> $this->module->l('Description', 'AdminNowDeliveryTime'),
+					'name'			=> 'description',
+					'lang'			=> true
+				),
+				array(
+					'type'			=> 'textarea',
+					'label'			=> $this->module->l('Timeslot', 'AdminNowDeliveryTime'),
+					'name'			=> 'timeslot',
+					'lang'			=> true
+				),
 			),
 			'submit' => array(
 				'title' => $this->module->l('Save', 'AdminNowDeliveryTime')

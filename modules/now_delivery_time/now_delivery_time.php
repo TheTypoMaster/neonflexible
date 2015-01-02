@@ -56,6 +56,7 @@ class now_delivery_time extends NowModule {
 	public function install() {
 		return parent::install() &&
 				$this->registerHook('actionCarrierUpdate') &&
+				$this->registerHook('header') &&
 				$this->registerHook('displayCarrierDeliveryTimeList');
 	}
 
@@ -73,13 +74,22 @@ class now_delivery_time extends NowModule {
 	 * @param $aParams
 	 */
 	public function hookDisplayCarrierDeliveryTimeList($aParams) {
-		$aDeliveryTimeList = array();
-
 		$this->context->smarty->assign(array(
-			'aDeliveryTimeList' => $aDeliveryTimeList
+			'aDeliveryTimeList' => NowDeliveryTime::getDeliveryTime()
 		));
 
 		return $this->context->smarty->fetch($this->module_dir . 'views/templates/hook/product-delivery.tpl');
+	}
+
+	/**
+	 * hook: Header
+	 * @param $params
+	 * @return mixed
+	 */
+	public function hookHeader($params) {
+		if ($this->context->controller->php_self == 'product' && $this->active) {
+			$this->context->controller->addCSS(($this->_path).'css/now_delivery_time.css', 'all');
+		}
 	}
 
 

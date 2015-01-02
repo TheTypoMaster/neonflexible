@@ -19,5 +19,8 @@ $_MODULE['<{now_delivery_time}neon-flexible-bootstrap>adminnowdeliverytime_6759b
 $_MODULE['<{now_delivery_time}neon-flexible-bootstrap>adminnowdeliverytime_cd4b17ed4fdf6f73ae4bbf415ed45447'] = 'Ajouter ou modifier une règle de délai de livraison';
 $_MODULE['<{now_delivery_time}neon-flexible-bootstrap>adminnowdeliverytime_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'Activé';
 $_MODULE['<{now_delivery_time}neon-flexible-bootstrap>adminnowdeliverytime_b9f5c797ebbf55adccdd8539a65a0241'] = 'Désactivé';
-$_MODULE['<{now_delivery_time}neon-flexible-bootstrap>adminnowdeliverytime_628b7db04235f228d40adc671413a8c8'] = 'Jours';
+$_MODULE['<{now_delivery_time}neon-flexible-bootstrap>adminnowdeliverytime_44fdec47036f482b68b748f9d786801b'] = 'Jours';
+$_MODULE['<{now_delivery_time}neon-flexible-bootstrap>adminnowdeliverytime_b5a7adde1af5c87d7fd797b6245c2a39'] = 'Description';
+$_MODULE['<{now_delivery_time}neon-flexible-bootstrap>adminnowdeliverytime_90cbc704a0c1d4a617b8ea8910602980'] = 'Tranches horaires';
 $_MODULE['<{now_delivery_time}neon-flexible-bootstrap>adminnowdeliverytime_c9cc8cce247e49bae79f15173ce97354'] = 'Sauvegarder';
+$_MODULE['<{now_delivery_time}neon-flexible-bootstrap>product-delivery_37a4532e5950a9ea8160d28a4f44ccbe'] = 'Tranches horaires de livraison : %s';

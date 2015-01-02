@@ -54,6 +54,9 @@ class NowDeliveryTime extends ObjectModel {
 	/** @var string Timeslot */
 	public $timeslots;
 
+	const SATURDAY	= 'Sat';
+	const SUNDAY	= 'Sun';
+
 	/**
 	 * @see ObjectModel::$definition
 	 */
@@ -81,4 +84,111 @@ class NowDeliveryTime extends ObjectModel {
 			'timeslot'			=> array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCatalogName', 'size' => 255),
 		),
 	);
+
+	/**
+	 * Lists of delivery time
+	 * @param bool $active
+	 * @return array
+	 */
+	public static function getDeliveryTime($iIdLang = null) {
+
+		if (is_null($iIdLang)) {
+			$iIdLang = (int)Context::getContext()->language->id;
+		}
+
+		$sSQL = '
+			SELECT dt.*, dtl.*, c.*
+			FROM `' . _DB_PREFIX_ . 'now_delivery_time` dt
+			' . Shop::addSqlAssociation('now_delivery_time', 'r') . '
+			INNER JOIN `' . _DB_PREFIX_ . 'now_delivery_time_lang` dtl ON (dt.`id_now_delivery_time` = dtl.`id_now_delivery_time` AND dtl.`id_lang` = ' . (int)$iIdLang . ')
+			LEFT JOIN `' . _DB_PREFIX_ . 'carrier` c ON (c.`id_carrier` = dt.`id_carrier`)
+			WHERE dt.`deleted` = 0';
+
+		$result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sSQL);
+
+		foreach ($result as &$row) {
+			if (file_exists(_PS_SHIP_IMG_DIR_ . $row['id_carrier'] . '.jpg')) {
+				$row['logo'] = _THEME_SHIP_DIR_ . $row['id_carrier'] . '.jpg';
+			} else {
+				$row['logo'] = false;
+			}
+
+			// Définition de la date de livraison minimum
+			$row['shipping_date_min'] = NowDeliveryTime::getDateMinDeliveryTime(
+				new DateTime(),
+				(int)$row['day_min'],
+				(bool)$row['saturday_shipping'],
+				(bool)$row['sunday_shipping'],
+				(bool)$row['shipping_holidays'],
+				(bool)$row['saturday_delivery'],
+				(bool)$row['sunday_delivery'],
+				(bool)$row['delivery_holidays']
+			);
+		}
+
+		return $result;
+	}
+
+	/**
+	 * Get the day minimum for the delivery
+	 * @param DateTime $today
+	 * @param int $iDayMin
+	 * @param bool $bSaturdayShipping
+	 * @param bool $bSundayShipping
+	 * @param bool $bShippingHolidays
+	 * @param bool $bSaturdayDelivery
+	 * @param bool $bSundayDelivery
+	 * @param bool $bDeliveryHolidays
+	 * @return bool|string
+	 */
+	public static function getDateMinDeliveryTime(DateTime $today, $iDayMin = 0, $bSaturdayShipping = false, $bSundayShipping = false, $bShippingHolidays = false, $bSaturdayDelivery = false, $bSundayDelivery = false, $bDeliveryHolidays = false) {
+
+		if ($iDayMin === 0) {
+			return $today->format('Y-m-d');
+		}
+
+		/**
+		 * Define the shipping minimum date
+		 */
+		if ($today->format('D') == NowDeliveryTime::SATURDAY) {
+			// The day of today is Saturday ?
+			if (!$bSaturdayShipping) {
+				$today->add(new DateInterval('P2D'));
+			}
+		} elseif ($today->format('D') == NowDeliveryTime::SUNDAY) {
+			// The day of today is Sunday ?
+			if (!$bSundayShipping) {
+				$today->add(new DateInterval('P1D'));
+			}
+		} elseif ($bShippingHolidays) {
+
+		}
+
+		// It's holydays ?
+
+		/**
+		 * Define the delivery minimum date
+		 */
+		$today->add(new DateInterval('P' . (int)$iDayMin . 'D'));
+
+		if ($today->format('D') == NowDeliveryTime::SATURDAY) {
+			// The day of today is Saturday ?
+			if (!$bSaturdayDelivery) {
+				$today->add(new DateInterval('P2D'));
+			}
+		} elseif ($today->format('D') == NowDeliveryTime::SUNDAY) {
+			// The day of today is Sunday ?
+			if (!$bSundayDelivery) {
+				$today->add(new DateInterval('P1D'));
+			}
+		} elseif ($bDeliveryHolidays) {
+			// It's holydays ?
+
+		}
+
+
+
+		return $today->format('Y-m-d');
+
+	}
 }
