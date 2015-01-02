@@ -8,6 +8,7 @@
 #product #product-top-right #nowDeliveryTime {border-bottom: 1px solid #dbdbdb;margin:0;padding:20px 0;}
 #product #product-top-right #nowDeliveryTime ul {margin:0 0 10px 0;padding:0 20px;}
 #product #product-top-right #nowDeliveryTime ul li {list-style-type:none;padding:0;margin:0;margin:0 0 20px 0;}
+#product #product-top-right #nowDeliveryTime ul li:last-child {margin:0;}
 #product #product-top-right #nowDeliveryTime ul li p {text-align:left;font-size:13px;}
 #product #product-top-right #nowDeliveryTime ul li img {float:left;margin:0 10px 0 0;width:40px;}
 
