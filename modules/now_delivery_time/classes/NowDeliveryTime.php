@@ -161,10 +161,9 @@ class NowDeliveryTime extends ObjectModel {
 				$today->add(new DateInterval('P1D'));
 			}
 		} elseif ($bShippingHolidays) {
+			// It's holydays ?
 
 		}
-
-		// It's holydays ?
 
 		/**
 		 * Define the delivery minimum date
