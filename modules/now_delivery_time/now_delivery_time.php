@@ -1,6 +1,6 @@
 <?php
 /*
- * 2014
+ * 2015
  * Author: LEFEVRE LOIC
  * Site: www.ninja-of-web.fr
  * Mail: contact@ninja-of-web.fr
@@ -37,6 +37,10 @@ class now_delivery_time extends NowModule {
 			'AdminNowDeliveryTime' => array(
 				'parent'	=> 'AdminParentNinjaOfWeb',
 				'name'		=> $this->l('Manage delivery time')
+			),
+			'AdminNowHolidays' => array(
+				'parent'	=> 'AdminParentNinjaOfWeb',
+				'name'		=> $this->l('Manage holidays dates')
 			)
 		);
 	}
@@ -59,6 +63,7 @@ class now_delivery_time extends NowModule {
 			'NOW_DT_DATE_FORMAT'			=> 'd/m/Y',
 			'NOW_DT_HOUR_START_PREP'		=> 8,
 			'NOW_DT_HOUR_END_PREP'			=> 12,
+			'NOW_DT_HOUR_BEFORE_END_PREP'	=> 2,
 		);
 
 		return parent::install() &&

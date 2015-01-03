@@ -1,10 +1,12 @@
 <?php
 /*
- * 2014
+ * 2015
  * Author: LEFEVRE LOIC
  * Site: www.ninja-of-web.fr
  * Mail: contact@ninja-of-web.fr
  */
+
+require_once(_PS_MODULE_DIR_ . 'now_delivery_time/classes/NowHolidays.php');
 
 class NowDeliveryTime extends ObjectModel {
 	public $id;
@@ -99,7 +101,7 @@ class NowDeliveryTime extends ObjectModel {
 		$sSQL = '
 			SELECT dt.*, dtl.*, c.*
 			FROM `' . _DB_PREFIX_ . 'now_delivery_time` dt
-			' . Shop::addSqlAssociation('now_delivery_time', 'r') . '
+			' . Shop::addSqlAssociation('now_delivery_time', 'dt') . '
 			INNER JOIN `' . _DB_PREFIX_ . 'now_delivery_time_lang` dtl ON (dt.`id_now_delivery_time` = dtl.`id_now_delivery_time` AND dtl.`id_lang` = ' . (int)$iIdLang . ')
 			LEFT JOIN `' . _DB_PREFIX_ . 'carrier` c ON (c.`id_carrier` = dt.`id_carrier`)
 			WHERE dt.`deleted` = 0';
@@ -146,8 +148,14 @@ class NowDeliveryTime extends ObjectModel {
 		/**
 		 * Defined the finish date of the order preparation
 		 */
-		if ($today->format('H') >= (int)ConfigurationCore::get('NOW_DT_HOUR_START_PREP')) {
+		if ($today->format('H') >= ((int)ConfigurationCore::get('NOW_DT_HOUR_END_PREP') - (int)ConfigurationCore::get('NOW_DT_HOUR_BEFORE_END_PREP'))) {
 			$today->add(new DateInterval('P1D'));
+		}
+
+		// It's holidays ?
+		$aHolidays = NowHolidays::getHolidaysOnToday($today, true);
+		if (!empty($aHolidays)) {
+			$today->add(new DateInterval('P' . ( (int)$aHolidays['dayDiff'] +1 ) . 'D'));
 		}
 
 		if ($iDayMin === 0) {
@@ -171,7 +179,10 @@ class NowDeliveryTime extends ObjectModel {
 
 		if ($bShippingHolidays) {
 			// It's holydays ?
-
+			$aHolidays = NowHolidays::getHolidaysOnToday($today, false, true);
+			if (!empty($aHolidays)) {
+				$today->add(new DateInterval('P' . ( (int)$aHolidays['dayDiff'] +1 ) . 'D'));
+			}
 		}
 
 		/**
@@ -193,7 +204,10 @@ class NowDeliveryTime extends ObjectModel {
 
 		if ($bDeliveryHolidays) {
 			// It's holydays ?
-
+			$aHolidays = NowHolidays::getHolidaysOnToday($today, false, false, true);
+			if (!empty($aHolidays)) {
+				$today->add(new DateInterval('P' . ( (int)$aHolidays['dayDiff'] +1 ) . 'D'));
+			}
 		}
 
 		return $today->format('Y-m-d');
