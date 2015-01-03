@@ -964,3 +964,14 @@ function checkUrl()
 	}
 	return false;
 }
+
+/**
+ * Product Sidebar
+ * @ninjaofweb
+ */
+$(function() {
+
+	$("#product-right").stick_in_parent();
+	$("#more_info_tabs").stick_in_parent();
+
+});
