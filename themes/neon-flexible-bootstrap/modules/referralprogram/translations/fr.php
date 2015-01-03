@@ -83,7 +83,8 @@ $_MODULE['<{referralprogram}neon-flexible-bootstrap>program_70a17ffa722a3985b86d
 $_MODULE['<{referralprogram}neon-flexible-bootstrap>program_ec7342814444c667ab93181b30b28e38'] = 'Ces amis parrainés n\'ont pas encore effectué d\'achat, mais vous pouvez les relancer ! Pour ce faire, vous devez cocher les cases des amis que vous voulez relancer, puis cliquer sur le bouton \"Relancer mes amis\"';
 $_MODULE['<{referralprogram}neon-flexible-bootstrap>program_3e717a04ff77cd5fa068d8ad9d3facc8'] = 'Dernière invitation';
 $_MODULE['<{referralprogram}neon-flexible-bootstrap>program_9c9d4ed270f02c72124702edb192ff19'] = 'Relancer mes amis';
-$_MODULE['<{referralprogram}neon-flexible-bootstrap>program_8b9f390369560635a2ba5ba271d953df'] = 'Vous n\'avez pas encore parrainé d\'ami.';
+$_MODULE['<{referralprogram}neon-flexible-bootstrap>program_161133b6c2d0f520d9221ec8180c16e2'] = 'Vous n\'avez pas d\'invitation en attente.';
+$_MODULE['<{referralprogram}neon-flexible-bootstrap>program_26ef5cd4989dd9b7a6e81a22312b06fd'] = 'Vous n\'avez pas encore parrainé d\'ami.';
 $_MODULE['<{referralprogram}neon-flexible-bootstrap>program_193f3d8bbaceba40499cab1a3545e9e8'] = 'Ici sont affichés les amis qui ont accepté votre invitation :';
 $_MODULE['<{referralprogram}neon-flexible-bootstrap>program_3c648ba41cfb45f13b083a9cbbacdfdf'] = 'Date d\'inscription';
 $_MODULE['<{referralprogram}neon-flexible-bootstrap>program_8d4e5c2bc4c3cf67d2b59b263a707cb6'] = 'Aucun ami n\'a encore accepté votre invitation.';
@@ -98,3 +99,6 @@ $_MODULE['<{referralprogram}neon-flexible-bootstrap>shopping-cart_6b31baf25848e7
 $_MODULE['<{referralprogram}neon-flexible-bootstrap>shopping-cart_b76b807810393d9fce7f154d82aef1d1'] = 'Vous avez gagné un bon de réduction d\'une valeur de %s grâce à votre parrain !';
 $_MODULE['<{referralprogram}neon-flexible-bootstrap>shopping-cart_9a5b602be8d9b2d4b8c3f22911fba01d'] = 'Saisissez le nom du bon %s pour profiter de la réduction sur cette commande.';
 $_MODULE['<{referralprogram}neon-flexible-bootstrap>shopping-cart_106527986549f3ec8da1ae5a7abde467'] = 'Voir votre programme de parrainage.';
+$_MODULE['<{referralprogram}neon-flexible-bootstrap>program_666149e67589bd65ed1e787932cd74f5'] = 'Quand l\'un d\'entre eux passera au moins %d commandes, ';
+$_MODULE['<{referralprogram}neon-flexible-bootstrap>program_def1ac1f353beef52f7e86a30cae01c4'] = 'Quand l\'un d\'entre eux aura passé au moins %d commande.';
+$_MODULE['<{referralprogram}neon-flexible-bootstrap>program_8b9f390369560635a2ba5ba271d953df'] = 'Vous n\'avez pas encore parrainé d\'ami.';

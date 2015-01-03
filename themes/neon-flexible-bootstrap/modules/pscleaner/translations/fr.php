@@ -8,6 +8,7 @@ $_MODULE['<{pscleaner}neon-flexible-bootstrap>pscleaner_752369f18aebeed9ae8384d8
 $_MODULE['<{pscleaner}neon-flexible-bootstrap>pscleaner_550b877b1a255ba717cfad4b82057731'] = 'Les requêtes suivantes ont permis de réparer certaines données:';
 $_MODULE['<{pscleaner}neon-flexible-bootstrap>pscleaner_14a7ab23d566b4505d0c711338c19a08'] = '%d ligne(s)';
 $_MODULE['<{pscleaner}neon-flexible-bootstrap>pscleaner_d1ff3c9d57acd4283d2793a36737479e'] = 'Il n\'y a rien qui nécessite d\'être réparé.';
+$_MODULE['<{pscleaner}neon-flexible-bootstrap>pscleaner_53d097f11855337bb74f1444d6c47c99'] = 'Les requêtes suivantes ont permis de nettoyer votre base de données avec succès :';
 $_MODULE['<{pscleaner}neon-flexible-bootstrap>pscleaner_098c3581a731f08d24311bbf515adbbb'] = 'Félicitations, tout est déjà en ordre!';
 $_MODULE['<{pscleaner}neon-flexible-bootstrap>pscleaner_1bb7c5eb8682aeada82c407b40ec09c8'] = 'Catalogue supprimé';
 $_MODULE['<{pscleaner}neon-flexible-bootstrap>pscleaner_ed6ecb7169d5476ef5251524bb17552a'] = 'Commandes et clients supprimés';

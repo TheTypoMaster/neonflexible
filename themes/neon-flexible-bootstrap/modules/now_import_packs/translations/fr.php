@@ -28,6 +28,7 @@ $_MODULE['<{now_import_packs}neon-flexible-bootstrap>adminnowimportpacks_e7e80df
 $_MODULE['<{now_import_packs}neon-flexible-bootstrap>adminnowimportpacks_823657bcfd5df6e5cf3d64745377db3d'] = 'Impossible d\'ajouter les nouveaux produits  à ce pack : %s';
 $_MODULE['<{now_import_packs}neon-flexible-bootstrap>adminnowimportpacks_b8495b50f5c172ebad1cc5c615548afa'] = 'Ignorer cette colonne';
 $_MODULE['<{now_import_packs}neon-flexible-bootstrap>adminnowimportpacks_b2928cf97c3a6d8be9833a575a951649'] = 'Pack de produits (Séparer par les caractères \"::\" et les quantités entre parenthèses)';
+$_MODULE['<{now_import_packs}neon-flexible-bootstrap>adminnowimportpacks_63264e32bdd7447cda85527b16d39cb4'] = 'Exemple';
 $_MODULE['<{now_import_packs}neon-flexible-bootstrap>adminnowimportpacks_f4f70727dc34561dfde1a3c529b6205c'] = 'Paramètres';
 $_MODULE['<{now_import_packs}neon-flexible-bootstrap>adminnowimportpacks_4dc7e5c4435f2900428b15d1c544edfa'] = 'Importer le fichier';
 $_MODULE['<{now_import_packs}neon-flexible-bootstrap>adminnowimportpacks_e33b362990961702f6d20e8dedd4914f'] = 'Analyser les données';

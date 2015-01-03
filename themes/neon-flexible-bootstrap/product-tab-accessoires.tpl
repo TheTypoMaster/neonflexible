@@ -1,6 +1,6 @@
 {if isset($accessories) AND $accessories}
-	<div class="product-tab">
-		<h2 id="accessories">{l s='Produits complémentaires'}</h2>
+	<div class="product-tab" id="accessories">
+		<h2>{l s='Produits complémentaires'}</h2>
 		<ul class="product-accessories">
 
 			{foreach from=$accessories item=accessory name=accessories_list key=k}

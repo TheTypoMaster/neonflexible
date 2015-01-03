@@ -1,16 +1,15 @@
-#product-left {float:left;width:880px;}
-#product-right {float:left;}
+#product-left {float:left;width:860px;margin:0 20px 0 0;position:relative;}
+#product-right {float:left;padding:20px 0;position:relative;}
 
 #product #product-top-left,
-#product #product-top-center,
-#product #product-top-right {float:left;margin:20px 0;}
+#product #product-top-center {float:left;margin:20px 0;}
 
 /* Colonne de gauche en haut */
 #product #product-top-left {margin:20px 30px 20px 0;}
 #product #product-top-left #image-block #view_full_size img {border:3px solid #dbdbdb;}
 
 /* Colonne centrale en haut */
-#product #product-top-center {margin:20px 20px 20px 0;width:380px;position:relative;min-height:450px;}
+#product #product-top-center {margin:20px 0 20px 0;width:380px;position:relative;min-height:450px;}
 #product #product-top-center h1 {color:#333;font-size:32px;font-weight:normal;font-family:Raleway,Verdana,Arial,sans-serif;}
 #product #product-top-center #short_description_block p {line-height:21px;color:#777;font-size:14px;font-weight:normal;font-family:Lato,Verdana,Arial,sans-serif;}
 #product #product-top-center .reference-stock {padding:15px 0;height:55px;border-top:1px solid #dedede;border-bottom:1px solid #dedede;}
@@ -41,7 +40,7 @@
 #view_scroll_right {background-position:0 -80px;right:0;}
 
 /* Colonne à droite en haut */
-#product #product-top-right {margin:20px 0;background:#f4f4f4;border:1px solid #dedede;width:260px;}
+#product #product-top-right {background:#f4f4f4;border:1px solid #dedede;width:260px;overflow:hidden;}
 #product #product-top-right .content_prices {}
 #product #product-top-right .content_prices .online_only {}
 #product #product-top-right .content_prices .price .our_price_display {}
@@ -59,13 +58,13 @@
 #product #product-top-right .content_prices .unit-price {}
 #product #product-top-right .content_prices .unit-price #unit_price_display {}
 #product #product-top-right .sur-commande {padding:10px 20px 30px 20px;border-top:1px solid #dbdbdb;margin:10px 0;}
-#product #product-top-right .product-quantity {padding:10px 20px 30px 20px;border-top:1px solid #dbdbdb;margin:10px 0;}
+#product #product-top-right .product-quantity {padding:10px 20px 10px 20px;border-top:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;margin:10px 0 0 0;}
 #product #product-top-right .product-quantity #quantity_wanted_p .product_quantity_down {float:left;}
 #product #product-top-right .product-quantity #quantity_wanted_p .product_quantity_up {float:left;}
 #product #product-top-right .product-quantity #quantity_wanted_p label {color:#777;font-size:14px;font-weight:normal;font-family:Lato,Verdana,Arial,sans-serif;display:block;}
 #product #product-top-right .product-quantity #quantity_wanted_p .button-qty {color:#777;font-size:18px;font-weight:bold;font-family:Lato,Verdana,Arial,sans-serif;padding:0;margin:0;width:30px;height:30px;float:left;}
 #product #product-top-right .product-quantity #quantity_wanted_p .text {margin:0 3px;color:#777;font-size:14px;font-weight:normal;font-family:Lato,Verdana,Arial,sans-serif;width:140px;height:32px;text-align:center;padding:0;float:left;}
-#product #product-top-right #add_to_cart {border-top:1px solid #dbdbdb;padding:30px 0;}
+#product #product-top-right #add_to_cart {padding:30px 0;}
 #product #product-top-right #loyalty {padding:10px 20px;border-top:1px solid #dbdbdb;margin:10px 0;}
 #product ul#more_info_tabs {background:#f4f4f4;display:block;height:40px;width:100%;position:relative;padding:0 0 0 10px;}
 #product ul#more_info_tabs li {list-style-type:none;float:left;position:relative;height:45px;padding:0 10px;}
@@ -76,7 +75,8 @@
 #product ul#more_info_tabs li.active span {border-bottom:4px solid #55a323;}
 #product ul#more_info_tabs li.active a {color:#55a323;}
 #product ul#more_info_tabs li.active a:before {content:"";display:block;position:absolute;left:40%;bottom:0;width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:7px solid #55a323;}
-#product .product-tab {}
+#product .product-tab {background:#fff;}
+#product #accessories, #product #ideasOrTips {z-index:1;position:relative;}
 #product h2 {color:#55a323;font-size:28px;font-weight:normal;font-family:Raleway,Verdana,Arial,sans-serif;border-top:1px solid #dfdfdf;padding:15px 0 0 0;margin:40px 0 10px 0;}
 #product h2.no-border {border:none;margin:10px 0;}
 

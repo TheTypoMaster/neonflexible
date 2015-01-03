@@ -1,7 +1,7 @@
 
 {if isset($aNowIdeasOrTips) && count($aNowIdeasOrTips) > 0 && $aNowIdeasOrTips}
-	<div class="product-tab">
-		<h2 id="ideasOrTips">{l s='Idées & conseils'}</h2>
+	<div class="product-tab" id="ideasOrTips">
+		<h2>{l s='Idées & conseils'}</h2>
 		<ul class="product-accessories">
 
 			{foreach from=$aNowIdeasOrTips item=aNowIdeaOrTip name=nowIdeasOrTips_list key=k}
