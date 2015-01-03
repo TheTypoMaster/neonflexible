@@ -1,6 +1,6 @@
 {if isset($features) && $features}
-	<div class="product-tab">
-		<h2 id="features">{l s='Caractéristiques'}</h2>
+	<div class="product-tab" id="features">
+		<h2>{l s='Caractéristiques'}</h2>
 		<table class="std">
 			{foreach $features as $key => $feature}
 				{if isset($feature.value)}
