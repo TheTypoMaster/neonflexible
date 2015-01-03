@@ -41,6 +41,39 @@ class AdminNowDeliveryTimeController extends ModuleAdminControllerCore {
 		$this->_select	.= ' c.`name` as carrier ';
 		$this->_join	.= ' LEFT JOIN `' . _DB_PREFIX_ . 'carrier` c ON (c.`id_carrier` = a.`id_carrier`)';
 
+		$this->fields_options = array(
+			'general' => array(
+				'title' =>	$this->module->l('Settings', 'AdminNowDeliveryTime'),
+				'fields' =>	array(
+					'NOW_DT_DATE_FORMAT' => array(
+						'title' => $this->module->l('Date format', 'AdminNowDeliveryTime'),
+						'hint' => $this->module->l('It\s the date format on your product page.', 'AdminNowDeliveryTime'),
+						'validation' => 'isGenericName',
+						'type' => 'text'
+					),
+					'NOW_DT_HOUR_START_PREP' => array(
+						'title'			=> $this->module->l('Hour of start of the orders preparations', 'AdminNowDeliveryTime'),
+						'hint'			=> $this->module->l('Between 0 and 24 Hours', 'AdminNowDeliveryTime'),
+						'validation' => 'isInt',
+						'cast' => 'intval',
+						'type' => 'text',
+						'suffix'		=> $this->module->l('Hours', 'AdminNowDeliveryTime')
+					),
+					'NOW_DT_HOUR_END_PREP' => array(
+						'title'			=> $this->module->l('Hour of end of the orders preparations', 'AdminNowDeliveryTime'),
+						'hint'			=> $this->module->l('Between 0 and 24 Hours', 'AdminNowDeliveryTime'),
+						'validation' => 'isInt',
+						'cast' => 'intval',
+						'type' => 'text',
+						'suffix'		=> $this->module->l('Hours', 'AdminNowDeliveryTime')
+					),
+				),
+				'submit' => array(
+					'title' => $this->module->l('Save', 'AdminNowDeliveryTime')
+				)
+			),
+		);
+
 		parent::__construct();
 	}
 

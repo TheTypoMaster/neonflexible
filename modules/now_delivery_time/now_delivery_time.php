@@ -54,6 +54,13 @@ class now_delivery_time extends NowModule {
 	 * @return bool
 	 */
 	public function install() {
+
+		$this->aConfigurationDefaultSettings = array(
+			'NOW_DT_DATE_FORMAT'			=> 'd/m/Y',
+			'NOW_DT_HOUR_START_PREP'		=> 8,
+			'NOW_DT_HOUR_END_PREP'			=> 12,
+		);
+
 		return parent::install() &&
 				$this->registerHook('actionCarrierUpdate') &&
 				$this->registerHook('header') &&
@@ -75,7 +82,8 @@ class now_delivery_time extends NowModule {
 	 */
 	public function hookDisplayCarrierDeliveryTimeList($aParams) {
 		$this->context->smarty->assign(array(
-			'aDeliveryTimeList' => NowDeliveryTime::getDeliveryTime()
+			'aDeliveryTimeList'	=> NowDeliveryTime::getDeliveryTime(),
+			'sDateFormat'		=> Configuration::get('NOW_DT_DATE_FORMAT')
 		));
 
 		return $this->context->smarty->fetch($this->module_dir . 'views/templates/hook/product-delivery.tpl');

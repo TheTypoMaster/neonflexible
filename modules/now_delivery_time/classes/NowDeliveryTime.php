@@ -143,12 +143,19 @@ class NowDeliveryTime extends ObjectModel {
 	 */
 	public static function getDateMinDeliveryTime(DateTime $today, $iDayMin = 0, $bSaturdayShipping = false, $bSundayShipping = false, $bShippingHolidays = false, $bSaturdayDelivery = false, $bSundayDelivery = false, $bDeliveryHolidays = false) {
 
+		/**
+		 * Defined the finish date of the order preparation
+		 */
+		if ($today->format('H') >= (int)ConfigurationCore::get('NOW_DT_HOUR_START_PREP')) {
+			$today->add(new DateInterval('P1D'));
+		}
+
 		if ($iDayMin === 0) {
 			return $today->format('Y-m-d');
 		}
 
 		/**
-		 * Define the shipping minimum date
+		 * Defined the finish date of the order shipping
 		 */
 		if ($today->format('D') == NowDeliveryTime::SATURDAY) {
 			// The day of today is Saturday ?
@@ -160,13 +167,15 @@ class NowDeliveryTime extends ObjectModel {
 			if (!$bSundayShipping) {
 				$today->add(new DateInterval('P1D'));
 			}
-		} elseif ($bShippingHolidays) {
+		}
+
+		if ($bShippingHolidays) {
 			// It's holydays ?
 
 		}
 
 		/**
-		 * Define the delivery minimum date
+		 * Defined the finish date of the order delivery
 		 */
 		$today->add(new DateInterval('P' . (int)$iDayMin . 'D'));
 
@@ -180,14 +189,13 @@ class NowDeliveryTime extends ObjectModel {
 			if (!$bSundayDelivery) {
 				$today->add(new DateInterval('P1D'));
 			}
-		} elseif ($bDeliveryHolidays) {
+		}
+
+		if ($bDeliveryHolidays) {
 			// It's holydays ?
 
 		}
 
-
-
 		return $today->format('Y-m-d');
-
 	}
 }

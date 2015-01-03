@@ -21,7 +21,7 @@
 							<img src="{$aDeliveryTime['logo']}" alt="{$aDeliveryTime['name']}" />
 						{/if}
 						<p>
-							{$aDeliveryTime['description']}&nbsp;<strong>{$aDeliveryTime['shipping_date_min']|date_format:'d/m/Y'}</strong>
+							{$aDeliveryTime['description']}&nbsp;<strong>{$aDeliveryTime['shipping_date_min']|date_format:$sDateFormat}</strong>
 						</p>
 
 					</div>
