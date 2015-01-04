@@ -154,7 +154,7 @@
 	{/if}
 	<ul class="footer_link">
 		<li>
-			<a class="button lnk_view btn btn-default" href="{$base_dir}">
+			<a class="button lnk_view btn btn-default button-medium" href="{if isset($smarty.server) && isset($smarty.server.HTTP_REFERER)}{$smarty.server.HTTP_REFERER}{else}{$base_dir}{/if}">
 				<span><i class="icon-chevron-left"></i>{l s='Continue Shopping'}</span>
 			</a>
 		</li>
