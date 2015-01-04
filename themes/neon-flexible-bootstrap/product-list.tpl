@@ -32,7 +32,7 @@
 				</div>
 
 				<div class="center_block">
-					<h2 class="product_title">{$product.name|truncate:55:'...':true|escape:'htmlall':'UTF-8'}</h2>
+					<h2 class="product_title">{$product.name|truncate:70:'...':true|escape:'htmlall':'UTF-8'}</h2>
 					<div class="product_desc">{$product.description_short}</div>
 				</div>
 

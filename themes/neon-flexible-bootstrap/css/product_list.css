@@ -8,7 +8,7 @@ ul#product_list li p {}
 ul#product_list li .image {position:absolute;top:0;left:0;width:200px;height:175px;}
 ul#product_list li .left_block {height:170px;}
 ul#product_list li .center_block {}
-ul#product_list li .right_block {}
+ul#product_list li .right_block {background:#fff;z-index:1;position:relative;}
 ul#product_list li .product_title {margin:0;height:60px;color:#333;font-size:16px;line-height:20px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;text-align:left;}
 ul#product_list li .product_desc {display:none;}
 ul#product_list li .on_sale {}
@@ -53,7 +53,7 @@ ul#product_list.mode-list li .image {width:200px;height:175px;margin:20px 0;}
 ul#product_list.mode-list li .left_block {float:left;width:190px;}
 ul#product_list.mode-list li .center_block {float:left;width:380px;padding:10px 20px 0 0;}
 ul#product_list.mode-list li .right_block {float:left;width:260px;text-align:center;border-left:1px solid #dbdbdb;padding:0 0 0 20px;height:130px;margin:20px 0;}
-ul#product_list.mode-list li .product_title {height:40px;}
+ul#product_list.mode-list li .product_title {height:45px;}
 ul#product_list.mode-list li .product_desc {display:block;line-height:18px;}
 ul#product_list.mode-list li .button-add-to-cart {margin:0 0 0 30px;}
 ul#product_list.mode-list li .functional-buttons {margin:45px 0 0 30px;}
