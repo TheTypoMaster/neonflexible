@@ -41,7 +41,7 @@ $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_5e1695822fc5af98f6b749ea3cb
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_4e1fb9f4b46556d64db55d50629ee301'] = '(le traitement de la commande sera plus long)';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_88526efe38fd18179a127024aba8c1d7'] = 'Votre commande sur %s a bien été enregistrée.';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_1f8cdc30326f1f930b0c87b25fdac965'] = 'Veuillez nous envoyer un virement bancaire avec :';
-$_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_b2f40690858b404ed10e62bdf422c704'] = 'Montant';
+$_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_b2f40690858b404ed10e62bdf422c704'] = 'Montant du règlement :';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_5ca0b1b910f393ed1f9f6fa99e414255'] = 'à l\'ordre de';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_d717aa33e18263b8405ba00e94353cdc'] = 'suivant ces détails';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_984482eb9ff11e6310fef641d2268a2a'] = 'à cette banque';
@@ -54,5 +54,10 @@ $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_66fcf4c223bbf4c7c886
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_d15feee53d81ea16269e54d4784fa123'] = 'Nous avons rencontré un problème avec votre commande. Merci de prendre contact avec notre support client';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_execution_99227bacb2b4dfa29ce1701ac265a923'] = 'Paiement par virement bancaire.';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_execution_b939c4940deb5588f47ee8f12c61f11f'] = 'S\'il vous plaît, veuillez valider votre commande en cliquant sur \"Je confirme ma commande\".';
+$_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_bddd470742bc2329733e489ed05a8ba1'] = 'Votre commande a bien été enregistrée.';
+$_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_6702a6e3bc2dce95c3e3b61fe578f29c'] = 'Montant :';
+$_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_104e7ffb80d5b74d6245d298ca8fb9b8'] = 'à l\'ordre de : ';
+$_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_4839291ce45893829883c2db95ea300c'] = 'suivant ces détails :';
+$_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_7d9f5c911624ddb179d07592f48d126d'] = 'à cette banque :';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_63fb3f7c94ee5d8027bf599885de279d'] = 'N\'oubliez pas d\'indiquer votre numéro de commande n°%d dans le sujet de votre virement.';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>payment_return_dfe239de8c0b2453a8e8f7657a191d5d'] = 'support client';

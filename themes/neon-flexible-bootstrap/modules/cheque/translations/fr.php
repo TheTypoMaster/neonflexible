@@ -40,7 +40,7 @@ $_MODULE['<{cheque}neon-flexible-bootstrap>payment_4b80fae2153218ed763bdadc418e8
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_4e1fb9f4b46556d64db55d50629ee301'] = '(le traitement de la commande sera plus long)';
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_return_88526efe38fd18179a127024aba8c1d7'] = 'Votre commande sur %s a bien été enregistrée.';
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_return_61da27a5dd1f8ced46c77b0feaa9e159'] = 'Veuillez nous envoyer un chèque avec :';
-$_MODULE['<{cheque}neon-flexible-bootstrap>payment_return_621455d95c5de701e05900a98aaa9c66'] = 'Montant du règlement.';
+$_MODULE['<{cheque}neon-flexible-bootstrap>payment_return_621455d95c5de701e05900a98aaa9c66'] = 'Montant du règlement :';
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_return_9b8f932b1412d130ece5045ecafd1b42'] = 'payable à l\'ordre de';
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_return_9a94f1d749a3de5d299674d6c685e416'] = 'à envoyer à';
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_return_e1c54fdba2544646684f41ace03b5fda'] = 'N\'oubliez pas d\'indiquer votre numéro de commande n°%d.';
@@ -52,3 +52,7 @@ $_MODULE['<{cheque}neon-flexible-bootstrap>payment_return_decce112a9e64363c997b0
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_return_9bdf695c5a30784327137011da6ef568'] = 'Nous avons rencontré un problème avec votre commande, veuillez contacter notre support client';
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_execution_0881a11f7af33bc1b43e437391129d66'] = 'S\'il vous plaît, veuillez valider votre commande en cliquant sur \"Je confirme ma commande\".';
 $_MODULE['<{cheque}neon-flexible-bootstrap>payment_f05fd8637f8a6281466a507fcb56baec'] = 'Payer par chèque.';
+$_MODULE['<{cheque}neon-flexible-bootstrap>payment_return_bddd470742bc2329733e489ed05a8ba1'] = 'Votre commande a bien été enregistrée.';
+$_MODULE['<{cheque}neon-flexible-bootstrap>payment_return_fbd5abb4f24e294f985ec33747bd96c6'] = 'Montant du règlement :';
+$_MODULE['<{cheque}neon-flexible-bootstrap>payment_return_a35ffc51db1b062654bff934b63ae449'] = 'à l\'ordre de :';
+$_MODULE['<{cheque}neon-flexible-bootstrap>payment_return_c537b550944aff5a6ea938d57a7128c4'] = 'à envoyer à :';
