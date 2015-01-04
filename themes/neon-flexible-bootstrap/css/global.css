@@ -329,7 +329,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 #center_column {padding:0 0 10px 0;background:#fff;}
 
 /* Etapes de la commande */
-#order_step {background:#f4f4f4;width:100%;height:150px;}
+#order_step {background:#f4f4f4;width:100%;height:150px;margin:0 0 35px 0;}
 #order_step ul {position:relative;}
 #order_step ul:before {border-top:2px solid #fff;width:70%;display:block;position:absolute;content:" ";top:60px;margin:0 0 0 80px;}
 #order_step ul li {float:left;list-style-type:none;text-align:center;width:160px;margin:0 20px;position:relative;}
