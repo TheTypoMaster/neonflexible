@@ -9,8 +9,6 @@
 
 <div class="container">
 
-	<h1 class="titre-size-1">{l s='Order summary' mod='bankwire'}</h1>
-
 	{if $nbProducts <= 0}
 		<p class="alert alert-warning">
 			{l s='Your shopping cart is empty.' mod='bankwire'}
