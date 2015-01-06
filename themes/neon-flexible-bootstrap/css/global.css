@@ -324,8 +324,8 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 .filter .jqDisplayedAllProductsButton:hover {text-decoration:none;}
 
 /* Colonnes */
-#left-column {width:270px;margin-right:10px;min-height:200px;}
-#center-column {width:860px;}
+#left-column {width:275px;margin-right:10px;min-height:200px;}
+#center-column {width:855px;}
 #left_column {}
 #center_column {padding:0 0 10px 0;background:#fff;}
 
