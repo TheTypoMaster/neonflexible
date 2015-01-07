@@ -165,3 +165,5 @@
 	</form>
 
 </div>
+
+<span class="clearBoth"></span>
