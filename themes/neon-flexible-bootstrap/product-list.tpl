@@ -73,9 +73,13 @@
 
 					<img src="{$img_dir}theme/etoiles.png" alt="" class="note" />
 
-					{if isset($product.product_type) && $product.product_type.type == NowProductType::TYPE_BUTTON}
+					{if isset($product.product_type) && $product.product_type.type == NowProductType::TYPE_BUTTON }
 						<a href="{$product.link|escape:'htmlall':'UTF-8'}" title="{$product.name|escape:'htmlall':'UTF-8'}">
 							<span class="button-add-to-cart gradient on-order"><span></span>{$product.product_type.button_name}</span>
+						</a>
+					{elseif $product.quantity <= 0}
+						<a href="{$product.link|escape:'htmlall':'UTF-8'}" title="{$product.name|escape:'htmlall':'UTF-8'}">
+							<span class="button-add-to-cart gradient on-order"><span></span>{if isset($product.product_type.button_name)}$product.product_type.button_name{else}{l s='Sur commande'}{/if}</span>
 						</a>
 					{elseif ($product.id_product_attribute == 0 || (isset($add_prod_display) && ($add_prod_display == 1))) && $product.available_for_order && !isset($restricted_country_mode) && $product.minimal_quantity <= 1 && $product.customizable != 2 && !$PS_CATALOG_MODE}
 						{if ($product.allow_oosp || $product.quantity > 0)}

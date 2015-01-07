@@ -43,10 +43,15 @@
 
 		{* Quantité en stock *}
 		{if ($display_qties == 1 && !$PS_CATALOG_MODE && $product->available_for_order)}
-			<p id="pQuantityAvailable"{if $product->quantity <= 0} style="display: none;"{/if}>
-				<span {if $product->quantity > 1} style="display: none;"{/if} id="quantityAvailableTxt">{l s='Item in stock'} <span id="quantityAvailable">({$product->quantity|intval})</span></span>
-				<span {if $product->quantity == 1} style="display: none;"{/if} id="quantityAvailableTxtMultiple">{l s='Items in stock'} <span id="quantityAvailable">({$product->quantity|intval})</span></span>
-			</p>
+			{if $product->quantity <= 0}
+				<p id="pQuantityAvailable" class="noAvailable">
+					<span id="quantityAvailableTxt">{l s='No available'}</span></p>
+			{else}
+				<p id="pQuantityAvailable">
+					<span {if $product->quantity > 1} style="display: none;"{/if} id="quantityAvailableTxt">{l s='Item in stock'} <span id="quantityAvailable">({$product->quantity|intval})</span></span>
+					<span {if $product->quantity == 1} style="display: none;"{/if} id="quantityAvailableTxtMultiple">{l s='Items in stock'} <span id="quantityAvailable">({$product->quantity|intval})</span></span>
+				</p>
+			{/if}
 		{/if}
 
 	</div>
