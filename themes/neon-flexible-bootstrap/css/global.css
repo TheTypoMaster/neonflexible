@@ -289,7 +289,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 #breadcrumb {margin:10px 0;font-family:Lato,Verdana,Arial,sans-serif;font-size:14px;color:#777;line-height:27px;border-bottom:1px solid #d4d4d4;padding:0 0 15px 0;}
 #breadcrumb.no-border {padding:0;border:none;}
 #breadcrumb div span.home {display:block;text-indent:-9999999px;background:url('../img/theme/home-fil-ariane.png') no-repeat;width:30px;position:relative;}
-#breadcrumb .navigation-pipe {margin:10px;text-indent:9999999px;background:url('../img/theme/navigation-pipe.png') no-repeat;width:5px;height:10px;display:block;float:left;}
+#breadcrumb .navigation-pipe {margin:10px;background:url('../img/theme/navigation-pipe.png') no-repeat;width:5px;height:10px;display:block;float:left;}
 #breadcrumb a {font-family:Lato,Verdana,Arial,sans-serif;font-size:14px;color:#348ecd;text-decoration:underline;display:block;float:left;}
 #breadcrumb a:hover {text-decoration:none;}
 

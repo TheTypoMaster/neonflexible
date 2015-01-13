@@ -20,7 +20,7 @@
 
 		{if isset($path) AND $path}
 			<span class="navigation-pipe" {if isset($category) && isset($category->id_category) && $category->id_category == 1}style="display:none;"{/if}>
-				{$navigationPipe|escape:'html':'UTF-8'}
+				&nbsp;
 			</span>
 			{if !$path|strpos:'span'}
 				<span class="navigation-page">{$path}</span>
