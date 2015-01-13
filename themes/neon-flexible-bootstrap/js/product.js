@@ -973,7 +973,7 @@ $(function() {
 	// product sidebar
 	$('#product-right').css('height', $('#product-left').css('height'));
 	$("#product-top-right").stick_in_parent();
-	$("#more_info_tabs").stick_in_parent();
+	$("#more_info_tabs").stick_in_parent( { parent: '#center_column' } );
 
 	// Scroll on page
 	$('#more_info_tabs a').on('click', function() {
