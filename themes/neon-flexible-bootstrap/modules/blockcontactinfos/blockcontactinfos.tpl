@@ -8,7 +8,7 @@
 			<img class="logo" src="{$img_dir}theme/logo-footer.png" alt="{$shop_name|escape:'htmlall':'UTF-8'}" itemprop="image" />
 		</a>
 
-		<div class="adresse"itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+		<div class="adresse" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 			<span itemprop="streetAddress">95 avenue Denis Papin</span><br>
 			<span itemprop="postalCode">45800</span> -
 			<span itemprop="addressLocality">Saint-Jean-de-Braye</span>,
