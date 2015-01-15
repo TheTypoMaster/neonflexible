@@ -1,5 +1,5 @@
 #product-left {float:left;width:860px;margin:0 20px 0 0;/*position:relative;*/}
-#product-right {float:left;padding:20px 0;position:relative;}
+#product-right {float:left;padding:20px 0 11px 0;position:relative;}
 
 #product #product-top-left,
 #product #product-top-center {float:left;margin:20px 0;}
