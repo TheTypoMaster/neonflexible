@@ -2,7 +2,6 @@
 
 global $_MODULE;
 $_MODULE = array();
-
 $_MODULE['<{referralprogram}prestashop>referralprogram_40604a195d001353d697b0fd26f5d8fe'] = 'Tous les informations relatives aux parrains et filleuls';
 $_MODULE['<{referralprogram}prestashop>referralprogram_83090230d3c11aa76851030eba008a71'] = 'Programme de parrainage';
 $_MODULE['<{referralprogram}prestashop>referralprogram_46a3a666d8823b972af8018a5242a3ac'] = 'Intègre un programme de parrainage à votre boutique';
@@ -81,7 +80,7 @@ $_MODULE['<{referralprogram}prestashop>program_ad3d06d03d94223fa652babc913de686'
 $_MODULE['<{referralprogram}prestashop>program_59352cd5314a67c0fb10c964831920f3'] = 'Pour parrainer vos amis, vous devez finaliser au moins';
 $_MODULE['<{referralprogram}prestashop>program_12c500ed0b7879105fb46af0f246be87'] = 'Commandes';
 $_MODULE['<{referralprogram}prestashop>program_70a17ffa722a3985b86d30b034ad06d7'] = 'commande';
-$_MODULE['<{referralprogram}prestashop>program_ec7342814444c667ab93181b30b28e38'] = 'Ces amis parrainés n\'ont pas encore effectué d\'achat, mais vous pouvez les relancer ! Pour ce faire, vous devez cocher les cases des amis que vous voulez relancer, puis cliquer sur le bouton \\"Relancer mes amis\\"';
+$_MODULE['<{referralprogram}prestashop>program_ec7342814444c667ab93181b30b28e38'] = 'Ces amis parrainés n\'ont pas encore effectué d\'achat, mais vous pouvez les relancer ! Pour ce faire, vous devez cocher les cases des amis que vous voulez relancer, puis cliquer sur le bouton \"Relancer mes amis\"';
 $_MODULE['<{referralprogram}prestashop>program_3e717a04ff77cd5fa068d8ad9d3facc8'] = 'Dernière invitation';
 $_MODULE['<{referralprogram}prestashop>program_9c9d4ed270f02c72124702edb192ff19'] = 'Relancer mes amis';
 $_MODULE['<{referralprogram}prestashop>program_161133b6c2d0f520d9221ec8180c16e2'] = 'Vous n\'avez pas d\'invitation en attente.';
@@ -94,39 +93,9 @@ $_MODULE['<{referralprogram}prestashop>program_8cf04a9734132302f96da8e113e80ce5'
 $_MODULE['<{referralprogram}prestashop>rules_01705c0177ebf5fbcbf4e882bc454405'] = 'Conditions du programme de parrainage';
 $_MODULE['<{referralprogram}prestashop>authentication_6b31baf25848e7a6563ecc3946626c80'] = 'Programme de parrainage';
 $_MODULE['<{referralprogram}prestashop>authentication_8fdb2298a0db461ac64e71192a562ca1'] = 'Adresse mail de votre parrain';
-$_MODULE['<{referralprogram}prestashop>hook_customers_16_6b31baf25848e7a6563ecc3946626c80'] = 'Programme de parrainage';
-$_MODULE['<{referralprogram}prestashop>hook_customers_16_7790d51a3d62c85aae65464dee12ee8b'] = 'Parrain du client :';
-$_MODULE['<{referralprogram}prestashop>hook_customers_16_f964f762284ede747ed9f6428a5469b8'] = 'Ce client n\'a aucun parrain.';
-$_MODULE['<{referralprogram}prestashop>hook_customers_16_53d0d7aba39ee971f7f179e6e1092708'] = 'Filleuls :';
-$_MODULE['<{referralprogram}prestashop>hook_customers_16_58dc82d3e2e17ced0225064a9b496ee9'] = 'Filleuls :';
-$_MODULE['<{referralprogram}prestashop>hook_customers_16_b718adec73e04ce3ec720dd11a06a308'] = 'ID';
-$_MODULE['<{referralprogram}prestashop>hook_customers_16_49ee3087348e8d44e1feda1917443987'] = 'Nom';
-$_MODULE['<{referralprogram}prestashop>hook_customers_16_ce8ae9da5b7cd6c3df2929543a9af92d'] = 'E-mail';
-$_MODULE['<{referralprogram}prestashop>hook_customers_16_22ffd0379431f3b615eb8292f6c31d12'] = 'Date d\'enregistrement';
-$_MODULE['<{referralprogram}prestashop>hook_customers_16_325c8bbd07033a39d25b5c4457f79861'] = 'Clients parrainés par ce filleul';
-$_MODULE['<{referralprogram}prestashop>hook_customers_16_fc6e0920b914b164802d44220e6163f3'] = 'Commandes effectuées';
-$_MODULE['<{referralprogram}prestashop>hook_customers_16_970ad4e4787cc75cd63dbf8d5c757513'] = 'Compte client créé le';
-$_MODULE['<{referralprogram}prestashop>hook_customers_6b31baf25848e7a6563ecc3946626c80'] = 'Programme de parrainage';
-$_MODULE['<{referralprogram}prestashop>hook_customers_7790d51a3d62c85aae65464dee12ee8b'] = 'Parrain du client :';
-$_MODULE['<{referralprogram}prestashop>hook_customers_f964f762284ede747ed9f6428a5469b8'] = 'Ce client n\'a aucun parrain.';
-$_MODULE['<{referralprogram}prestashop>hook_customers_53d0d7aba39ee971f7f179e6e1092708'] = 'Filleuls :';
-$_MODULE['<{referralprogram}prestashop>hook_customers_58dc82d3e2e17ced0225064a9b496ee9'] = 'Filleuls :';
-$_MODULE['<{referralprogram}prestashop>hook_customers_b718adec73e04ce3ec720dd11a06a308'] = 'ID';
-$_MODULE['<{referralprogram}prestashop>hook_customers_49ee3087348e8d44e1feda1917443987'] = 'Nom';
-$_MODULE['<{referralprogram}prestashop>hook_customers_ce8ae9da5b7cd6c3df2929543a9af92d'] = 'E-mail';
-$_MODULE['<{referralprogram}prestashop>hook_customers_22ffd0379431f3b615eb8292f6c31d12'] = 'Date d\'enregistrement';
-$_MODULE['<{referralprogram}prestashop>hook_customers_325c8bbd07033a39d25b5c4457f79861'] = 'Clients parrainés par ce filleul';
-$_MODULE['<{referralprogram}prestashop>hook_customers_fc6e0920b914b164802d44220e6163f3'] = 'Commandes effectuées';
-$_MODULE['<{referralprogram}prestashop>hook_customers_970ad4e4787cc75cd63dbf8d5c757513'] = 'Compte client créé le';
 $_MODULE['<{referralprogram}prestashop>my-account_6b31baf25848e7a6563ecc3946626c80'] = 'Programme de parrainage';
 $_MODULE['<{referralprogram}prestashop>order-confirmation_f2ef523efa8d23f8afc29e195592fc58'] = 'Grâce à votre commande, votre parrain %1$s %2$s gagnera un bon de réduction d\'une valeur de %3$d quand cette commande sera confirmée.';
 $_MODULE['<{referralprogram}prestashop>shopping-cart_6b31baf25848e7a6563ecc3946626c80'] = 'Programme de parrainage';
 $_MODULE['<{referralprogram}prestashop>shopping-cart_b76b807810393d9fce7f154d82aef1d1'] = 'Vous avez gagné un bon de réduction d\'une valeur de %s grâce à votre parrain !';
 $_MODULE['<{referralprogram}prestashop>shopping-cart_9a5b602be8d9b2d4b8c3f22911fba01d'] = 'Saisissez le nom du bon %s pour profiter de la réduction sur cette commande.';
 $_MODULE['<{referralprogram}prestashop>shopping-cart_106527986549f3ec8da1ae5a7abde467'] = 'Voir votre programme de parrainage.';
-$_MODULE['<{referralprogram}prestashop>program_666149e67589bd65ed1e787932cd74f5'] = 'Quand l\'un d\'entre eux passera au moins %d commandes, ';
-$_MODULE['<{referralprogram}prestashop>program_def1ac1f353beef52f7e86a30cae01c4'] = 'Quand l\'un d\'entre eux aura passé au moins %d commande.';
-$_MODULE['<{referralprogram}prestashop>program_8b9f390369560635a2ba5ba271d953df'] = 'Vous n\'avez pas encore parrainé d\'ami.';
-
-
-return $_MODULE;
