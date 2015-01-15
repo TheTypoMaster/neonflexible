@@ -11,6 +11,10 @@ $(function() {
 	// ------------ Mode d'affichage des catégories :
 
 	if ($.totalStorage('category-mode')) {
+
+		$('#product_list').removeClass('mode-block');
+		$('#product_list').removeClass('mode-list');
+
 		$('#product_list').addClass('mode-' + $.totalStorage('category-mode'));
 
 		$('img[data-mode-affichage]').css('display', 'none');
