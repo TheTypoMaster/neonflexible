@@ -1,0 +1,4 @@
+Bonjour,
+{lastname} {firstname} vient d'enregistrer le retour n°{id_order_return} concernant la commande {id_order}.
+Voici les produits concernés :
+{products_txt}
