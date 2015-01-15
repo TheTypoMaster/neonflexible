@@ -71,13 +71,16 @@
 									{l s='Details'}<i class="icon-chevron-right"></i>
 								</span>
 							</a><br />
-							{if isset($opc) && $opc}
-								<a class="link-button" href="{$link->getPageLink('order-opc', true, NULL, "submitReorder&id_order={$order.id_order}")|escape:'html':'UTF-8'}" title="{l s='Reorder'}">
-							{else}
-								<a class="link-button" href="{$link->getPageLink('order', true, NULL, "submitReorder&id_order={$order.id_order}")|escape:'html':'UTF-8'}" title="{l s='Reorder'}">
+
+							{if $reorderingAllowed}
+								{if isset($opc) && $opc}
+									<a class="link-button" href="{$link->getPageLink('order-opc', true, NULL, "submitReorder&id_order={$order.id_order}")|escape:'html':'UTF-8'}" title="{l s='Reorder'}">
+								{else}
+									<a class="link-button" href="{$link->getPageLink('order', true, NULL, "submitReorder&id_order={$order.id_order}")|escape:'html':'UTF-8'}" title="{l s='Reorder'}">
+								{/if}
+										<i class="icon-refresh"></i>{l s='Reorder'}
+									</a>
 							{/if}
-									<i class="icon-refresh"></i>{l s='Reorder'}
-								</a>
 						</td>
 					</tr>
 				{/foreach}

@@ -1,34 +1,13 @@
-{*
-* 2007-2014 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Academic Free License (AFL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/afl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2014 PrestaShop SA
-*  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*}
+
 <div class="box box-small clearfix">
 	{if isset($order)}
 	<form id="submitReorder" action="{if isset($opc) && $opc}{$link->getPageLink('order-opc', true)}{else}{$link->getPageLink('order', true)}{/if}" method="post" class="submit">
 		<input type="hidden" value="{$order->id}" name="id_order"/>
 		<input type="hidden" value="" name="submitReorder"/>
 
-		<a href="#" onclick="$(this).closest('form').submit(); return false;" class="button btn btn-default standard-checkout button-medium pull-right"><span>{l s='Reorder'}<i class="icon-chevron-right right"></i></span></a>
+		{if $reorderingAllowed}
+			<a href="#" onclick="$(this).closest('form').submit(); return false;" class="button btn btn-default standard-checkout button-medium pull-right"><span>{l s='Reorder'}<i class="icon-chevron-right right"></i></span></a>
+		{/if}
 		<p class="dark">
 			<strong>{l s='Order Reference %s - placed on' sprintf=$order->getUniqReference()} {dateFormat date=$order->date_add full=0}</strong>
 		</p>
