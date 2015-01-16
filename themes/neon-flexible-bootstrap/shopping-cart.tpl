@@ -11,9 +11,9 @@
 	<h1 class="titre-size-1 invisible" itemprop="name">{l s='Shopping-cart summary'}</h1>
 
 	{if isset($empty)}
-		<p class="alert alert-warning">{l s='Your shopping cart is empty.'}</p>
+		<p class="alert alert-success">	{l s='Your shopping cart is empty.'}</p>
 	{elseif $PS_CATALOG_MODE}
-		<p class="alert alert-warning">{l s='This store has not accepted your new order.'}</p>
+		<p class="alert alert-success">{l s='This store has not accepted your new order.'}</p>
 	{else}
 		<p style="display:none" id="emptyCartWarning" class="alert alert-warning">{l s='Your shopping cart is empty.'}</p>
 		{*if isset($lastProductAdded) AND $lastProductAdded}
