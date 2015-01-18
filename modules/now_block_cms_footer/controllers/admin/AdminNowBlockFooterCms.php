@@ -273,6 +273,7 @@ class AdminNowBlockFooterCmsController extends ModuleAdminController {
 			'back_url_override' => self::$currentIndex . '&id_now_block_cms_footer_column=' . Tools::getValue('id_now_block_cms_footer_column', $this->object->id_now_block_cms_footer_column) . '&detailsnow_block_cms_footer_column&token=' . $this->token
 		));
 
+		$obj = $this->loadObject(true);
 		$this->fields_form = array(
 			'legend' => array(
 				'title' => $this->module->l('Link', 'AdminNowBlockFooterCms'),
@@ -314,10 +315,11 @@ class AdminNowBlockFooterCmsController extends ModuleAdminController {
 				),
 				array(
 					'type'  => 'categories',
-					'label' => $this->l('Category'),
+					'label' => $this->l('Category', 'AdminNowBlockFooterCms'),
 					'name'  => 'category',
 					'tree'  => array(
-						'id' => 'categories-tree'
+						'id' => 'categories-tree',
+						'selected_categories'	=> array($obj->type == 'category' ? $obj->id_type : ''),
 					),
 					'form_group_class' => 'categoryDiv'
 				),

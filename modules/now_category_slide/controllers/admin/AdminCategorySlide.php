@@ -53,6 +53,7 @@ class AdminCategorySlideController extends ModuleAdminController {
 
 	public function renderForm()
 	{
+		$obj = $this->loadObject(true);
 		$this->fields_form = array(
 			'legend' => array(
 				'title' => $this->module->l('Job Category', 'AdminCategorySlide'),
@@ -60,10 +61,14 @@ class AdminCategorySlideController extends ModuleAdminController {
 			),
 			'input' => array(
 				array(
-					'type' => 'text',
-					'label' => $this->module->l('Category ID', 'AdminCategorySlide'),
-					'name' => 'id_category',
-					'required' => true
+					'type'  => 'categories',
+					'label' => $this->l('Category', 'AdminCategorySlide'),
+					'name'  => 'id_category',
+					'tree'  => array(
+						'id'					=> 'categories-tree',
+						'selected_categories'	=> array($obj->id_category),
+					),
+					'form_group_class' => 'categoryDiv'
 				),
 				array(
 					'type' => 'switch',
