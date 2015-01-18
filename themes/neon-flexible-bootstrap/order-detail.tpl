@@ -6,8 +6,11 @@
 		<input type="hidden" value="" name="submitReorder"/>
 
 		{if $reorderingAllowed}
-			<a href="#" onclick="$(this).closest('form').submit(); return false;" class="button btn btn-default standard-checkout button-medium pull-right"><span>{l s='Reorder'}<i class="icon-chevron-right right"></i></span></a>
+			<div class="submit cart_navigation clearfix pull-right">
+				<a href="#" onclick="$(this).closest('form').submit(); return false;" class="button btn btn-default standard-checkout button-medium"><span>{l s='Reorder'}<i class="icon-chevron-right"></i></span></a>
+			</div>
 		{/if}
+
 		<p class="dark">
 			<strong>{l s='Order Reference %s - placed on' sprintf=$order->getUniqReference()} {dateFormat date=$order->date_add full=0}</strong>
 		</p>
@@ -434,11 +437,13 @@
 			<p class="form-group">
 				<textarea class="form-control" cols="67" rows="3" name="msgText"></textarea>
 			</p>
-			<div class="submit">
+
+			<div class="submit cart_navigation clearfix">
 				<input type="hidden" name="id_order" value="{$order->id|intval}" />
 				<input type="submit" class="unvisible" name="submitMessage" value="{l s='Send'}"/>
-				<button type="submit" name="submitMessage" class="button btn btn-default standard-checkout button-medium"><span>{l s='Send'}<i class="icon-chevron-right right"></i></span></button>
+				<button type="submit" name="submitMessage" class="button btn btn-default standard-checkout button-medium"><span>{l s='Send'}<i class="icon-chevron-right"></i></span></button>
 			</div>
+
 		</form>
 	{else}
 		<p class="alert alert-info"><i class="icon-info-sign"></i>{l s='You cannot return merchandise with a guest account'}</p>
