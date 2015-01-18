@@ -18,7 +18,7 @@
 											</a>
 										{elseif $oNowBlockFooterCms->type == NowBlockFooterCms::TYPE_CATEGORY}
 											<a href="{Context::getContext()->link->getCategoryLink($oNowBlockFooterCms->object)}">
-												{if !is_null($oNowBlockFooterCms->name)}
+												{if !is_null($oNowBlockFooterCms->name) && $oNowBlockFooterCms->name != ''}
 													{$oNowBlockFooterCms->name}
 												{else}
 													{$oNowBlockFooterCms->object->name}
@@ -26,7 +26,7 @@
 											</a>
 										{elseif $oNowBlockFooterCms->type == NowBlockFooterCms::TYPE_MANUFACTURER}
 											<a href="{Context::getContext()->link->getManufacturerLink($oNowBlockFooterCms->object)}">
-												{if !is_null($oNowBlockFooterCms->name)}
+												{if !is_null($oNowBlockFooterCms->name) && $oNowBlockFooterCms->name != ''}
 													{$oNowBlockFooterCms->name}
 												{else}
 													{$oNowBlockFooterCms->object->name}
@@ -34,7 +34,7 @@
 											</a>
 										{elseif $oNowBlockFooterCms->type == NowBlockFooterCms::TYPE_CMS}
 											<a href="{Context::getContext()->link->getCMSLink($oNowBlockFooterCms->object)}">
-												{if !is_null($oNowBlockFooterCms->name)}
+												{if !is_null($oNowBlockFooterCms->name) && $oNowBlockFooterCms->name != ''}
 													{$oNowBlockFooterCms->name}
 												{else}
 													{$oNowBlockFooterCms->object->meta_title}
