@@ -1,5 +1,5 @@
 #header #adtm_menu {background:#f4f4f4;height:40px;bottom:0;position:absolute;width:100%}
-#header #adtm_menu .caret {border-top:7px solid #acacac;border-bottom:none;border-right:5px solid transparent;border-left:5px solid transparent;}
+#header #adtm_menu .caret {border-top:7px solid #acacac;border-bottom:none;border-right:5px solid transparent;border-left:5px solid transparent;margin:0 10px 0 0;}
 #header #adtm_menu #adtm_menu_inner {background:none;padding:0;margin:0;}
 #header #adtm_menu #adtm_menu_inner ul#menu {margin:0;padding:0;}
 #header #adtm_menu #adtm_menu_inner ul#menu > li.li-niveau1 { float:left; }
@@ -28,8 +28,8 @@
 #header #adtm_menu #adtm_menu_inner ul#menu  :hover div.adtm_sub {left:0;}
 #header #adtm_menu #adtm_menu_inner ul#menu a:hover div.adtm_sub {left:-1px; top:29px;}
 
-#header #adtm_menu #adtm_menu_inner ul#menu > li.advtm_menu_8 {float:right;}
-#header #adtm_menu #adtm_menu_inner ul#menu > li.advtm_menu_8 a span {margin:0;padding:0;}
+#header #adtm_menu #adtm_menu_inner ul#menu > li.sub a.a-niveau1:first-child {padding:0 5px 0 0;}
+#header #adtm_menu #adtm_menu_inner ul#menu > li.sub a.a-niveau1:first-child span {margin:0 5px 0 0;padding:0;}
 
 #header #adtm_menu #adtm_menu_inner .li-niveau1 a:hover .advtm_menu_span,
 #header #adtm_menu #adtm_menu_inner .li-niveau1 a.advtm_menu_actif .advtm_menu_span,
