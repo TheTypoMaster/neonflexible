@@ -69,7 +69,16 @@ class now_block_reinsurance extends NowModule {
 	 * @return mixed
 	 */
 	public function hookRightColumn($params) {
-		if (Configuration::get('NOW_FOOTER_ENABLE')) {
+		if (Configuration::get('NOW_REINSURANCE_ENABLE')) {
+
+			if (Context::getContext()->controller->php_self == 'product') {
+				require_once (_PS_MODULE_DIR_ . 'now_product_type/classes/NowProductTypeProduct.php');
+				$nowProductTypeProduct = NowProductTypeProduct::getObjectByProductId(Tools::getValue('id_product'));
+				if ($nowProductTypeProduct && Validate::isLoadedObject($nowProductTypeProduct)) {
+					// Si il s'agit d'un type de produit, on n'affiche pas le module
+					return false;
+				}
+			}
 
 			// Lists of items
 			$aItems = NowBlockReinsurance::getItems();
