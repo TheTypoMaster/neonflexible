@@ -1,42 +1,21 @@
-/*
- * 2007-2014 PrestaShop
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Academic Free License (AFL 3.0)
- * that is bundled with this package in the file LICENSE.txt.
- * It is also available through the world-wide-web at this URL:
- * http://opensource.org/licenses/afl-3.0.php
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to http://www.prestashop.com for more information.
- *
- *  @author PrestaShop SA <contact@prestashop.com>
- *  @copyright  2007-2014 PrestaShop SA
- *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
- *  International Registered Trademark & Property of PrestaShop SA
- */
+
 //show the order-details with ajax
-function showOrder(mode, var_content, file)
-{
+function showOrder(mode, var_content, file) {
+
 	$.get(
 		file,
 		((mode === 1) ? {'id_order': var_content, 'ajax': true} : {'id_order_return': var_content, 'ajax': true}),
-		function(data)
-		{
-			$('#block-order-detail').fadeOut('slow', function()
-			{
+		function(data) {
+
+			$('#block-order-detail').fadeOut('slow', function() {
+
 				$(this).html(data);
 				$('.footab').footable();
 				/* if return is allowed*/
+
 				if ($('#order-detail-content .order_cb').length > 0)
 				{
+					$('.return_quantity_up, .return_quantity_down').hide();
 					//return slip : check or uncheck every checkboxes
 					$('#order-detail-content th input[type=checkbox]').click(function()
 					{
@@ -99,11 +78,10 @@ function showOrder(mode, var_content, file)
 		});
 }
 
-function updateOrderLineDisplay(domCheckbox)
-{
-	var lineQuantitySpan = $(domCheckbox).parent().parent().find('.order_qte_span');
-	var lineQuantityInput = $(domCheckbox).parent().parent().find('.order_qte_input');
-	var lineQuantityButtons = $(domCheckbox).parent().parent().find('.return_quantity_up, .return_quantity_down');
+function updateOrderLineDisplay(domCheckbox) {
+	var lineQuantitySpan = $(domCheckbox).parents('tr').find('.order_qte_span');
+	var lineQuantityInput = $(domCheckbox).parents('tr').find('.order_qte_input');
+	var lineQuantityButtons = $(domCheckbox).parents('tr').find('.return_quantity_up, .return_quantity_down');
 	if($(domCheckbox).is(':checked'))
 	{
 		lineQuantitySpan.hide();

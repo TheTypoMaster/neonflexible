@@ -6,7 +6,8 @@
 .detail_step_by_step {width:100%}
 .detail_step_by_step tr.last_item td {border-bottom:1px solid #999}
 #order-detail-content table {width:100%}
-#order-detail-content table .order_qte_input {display:none}
+#order-detail-content table .order_qte_input {display:none;height:27px;line-height:27px;padding:0;text-align:center;width:67px;}
+#order-detail-content table .return_quantity_buttons {width:70px;margin:3px 0 0 0;}
 #order-detail-content table tr.totalprice td {border-bottom:1px solid #999}
 #order-detail-content table tr:nth-child(even) {background:#f3f3f3;}
 #sendOrderMessage {margin-bottom:20px}
