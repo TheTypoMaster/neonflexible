@@ -773,7 +773,7 @@ function updateDiscountTable(newPrice)
 function serialScrollFixLock(event, targeted, scrolled, items, position)
 {
 	serialScrollNbImages = $('#thumbs_list li:visible').length;
-	serialScrollNbImagesDisplayed = 3;
+	serialScrollNbImagesDisplayed = $('#thumbs_list').data('nb-image');
 
 	var leftArrow = position == 0 ? true : false;
 	var rightArrow = position + serialScrollNbImagesDisplayed >= serialScrollNbImages ? true : false;

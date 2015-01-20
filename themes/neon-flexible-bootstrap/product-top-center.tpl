@@ -69,7 +69,7 @@
 				{*</span>*}
 			{/if}
 
-			<div id="thumbs_list">
+			<div id="thumbs_list" data-nb-image="3">
 
 				<ul id="thumbs_list_frame">
 

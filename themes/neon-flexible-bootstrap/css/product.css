@@ -15,7 +15,7 @@
 #product #product-top-center .reference-stock {padding:15px 0;height:55px;border-top:1px solid #dedede;border-bottom:1px solid #dedede;}
 #product #product-top-center .reference-stock #product_reference {font-size:15px;text-transform:uppercase;float:left;margin:0;font-weight:bold;}
 #product #product-top-center .reference-stock #product_reference label {}
-#product #product-top-center #views_block {position:absolute;bottom:0;width:100%;}
+#product #views_block {position:absolute;bottom:0;width:100%;}
 #product #product-top-center #thumbs_list {width:360px;overflow:hidden;}
 #product #product-top-center #thumbs_list ul#thumbs_list_frame {list-style-type:none;padding-left:0;overflow:hidden;}
 #product #product-top-center #thumbs_list li {float:left;cursor:pointer;margin:0 15px 0 0;line-height:0;}
@@ -137,5 +137,10 @@
 #product #product-type-tuto ul li {list-style-image:url('../img/theme/puce.png')}
 #product #product-type-tuto ul li a {font-family:Lato,Verdana,Arial,sans-serif;color:#777;font-size:14px;}
 #product #product-type-tuto .rte div {background:#f4f4f4;border:1px solid #dedede;padding:20px;margin:20px 0;}
+#product #product-type-tuto #views_block {position:relative;width:565px;margin:0 auto;top:5px;}
+#product #product-type-tuto #thumbs_list {width:540px;overflow:hidden;}
+#product #product-type-tuto #thumbs_list ul#thumbs_list_frame {list-style-type:none;padding-left:0;overflow:hidden;}
+#product #product-type-tuto #thumbs_list li {float:left;cursor:pointer;margin:0 20px 0 0;line-height:0;list-style-image:none;}
+#product #product-type-tuto #thumbs_list li img {border:7px solid #fff;width:120px;}
 
 
