@@ -62,11 +62,11 @@
 		<div id="views_block" class="clearfix {if isset($images) && count($images) < 2}hidden{/if}">
 
 			{if isset($images) && count($images) > 3}
-				<span class="view_scroll_spacer">
-					<a id="view_scroll_left" class="hidden" title="{l s='Other views'}" href="javascript:{ldelim}{rdelim}">
+				{*<span class="view_scroll_spacer">*}
+					<a id="view_scroll_left" title="{l s='Other views'}" href="javascript:{ldelim}{rdelim}">
 						{l s='Previous'}
 					</a>
-				</span>
+				{*</span>*}
 			{/if}
 
 			<div id="thumbs_list">
@@ -83,8 +83,17 @@
 							{/if}
 
 							<li id="thumbnail_{$image.id_image}">
-								<a href="{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox_default')|escape:'html'}" rel="other-views" class="thickbox{if $smarty.foreach.thumbnails.first} shown{/if}" title="{$imageTitlte}">
-									<img id="thumb_{$image.id_image}" src="{$link->getImageLink($product->link_rewrite, $imageIds, 'medium_default')|escape:'html'}" alt="{$imageTitlte}" title="{$imageTitlte}" height="{$mediumSize.height}" width="{$mediumSize.width}" />
+								<a
+										{if $jqZoomEnabled && $have_image && !$content_only}
+											href="javascript:void(0);"
+											rel="{literal}{{/literal}gallery: 'gal1', smallimage: '{$link->getImageLink($product->link_rewrite, $imageIds, 'large_default')|escape:'html':'UTF-8'}',largeimage: '{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox_default')|escape:'html':'UTF-8'}'{literal}}{/literal}"
+										{else}
+											href="{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox_default')|escape:'html':'UTF-8'}"
+											data-fancybox-group="other-views"
+											class="fancybox{if $image.id_image == $cover.id_image} shown{/if}"
+										{/if}
+										title="{$imageTitle}">
+									<img class="img-responsive" id="thumb_{$image.id_image}" src="{$link->getImageLink($product->link_rewrite, $imageIds, 'cart_default')|escape:'html':'UTF-8'}" alt="{$imageTitle}" title="{$imageTitle}" height="{$mediumSize.height}" width="{$mediumSize.width}" itemprop="image" />
 								</a>
 							</li>
 
@@ -97,7 +106,7 @@
 
 			{if isset($images) && count($images) > 3}
 				<a id="view_scroll_right" title="{l s='Other views'}" href="javascript:{ldelim}{rdelim}">
-					<img src="{$img_dir}theme/arrow.png" alt="{l s='Next'}" />
+					{l s='Next'}
 				</a>
 			{/if}
 
