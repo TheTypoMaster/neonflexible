@@ -142,5 +142,6 @@
 #product #product-type-tuto #thumbs_list ul#thumbs_list_frame {list-style-type:none;padding-left:0;overflow:hidden;}
 #product #product-type-tuto #thumbs_list li {float:left;cursor:pointer;margin:0 20px 0 0;line-height:0;list-style-image:none;}
 #product #product-type-tuto #thumbs_list li img {border:7px solid #fff;width:120px;}
+#product #product-type-tuto #view_scroll_left, #product #product-type-tuto #view_scroll_right {top:50px;}
 
 
