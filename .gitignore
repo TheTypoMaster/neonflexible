@@ -6,7 +6,8 @@ cache/smarty/compile/*
 !cache/smarty/compile/index.php
 cache/tcpdf/*
 !cache/tcpdf/index.php
-cache/purifier/*
+cache/purifier/URI/*
+cache/purifier/HTML/*
 !cache/purifier/index.php
 
 config/xml/*.xml
