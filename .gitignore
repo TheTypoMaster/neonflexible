@@ -8,6 +8,7 @@ cache/tcpdf/*
 !cache/tcpdf/index.php
 cache/purifier/URI/*
 cache/purifier/HTML/*
+cache/purifier/CSS/*
 !cache/purifier/index.php
 
 config/xml/*.xml
