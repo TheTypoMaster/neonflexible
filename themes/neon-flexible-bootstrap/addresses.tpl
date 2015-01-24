@@ -83,8 +83,20 @@
 								{/foreach}
 							</li>
 						{/foreach}
-						<li class="address_update"><a href="{$link->getPageLink('address', true, null, "id_address={$address.object.id|intval}")|escape:'html'}" title="{l s='Update'}">&raquo; {l s='Update'}</a></li>
-						<li class="address_delete"><a href="{$link->getPageLink('address', true, null, "id_address={$address.object.id|intval}&delete")|escape:'html'}" onclick="return confirm('{l s='Are you sure?' js=1}');" title="{l s='Delete'}">&raquo; {l s='Delete'}</a></li>
+						<li class="address_update">
+
+							<a href="{$link->getPageLink('address', true, null, "id_address={$address.object.id|intval}")|escape:'html'}" title="{l s='Update'}" class="button-exclusive btn btn-default">
+								{l s='Update'}<i class="icon-chevron-right"></i>
+							</a>
+
+						</li>
+						<li class="address_delete">
+
+							<a href="{$link->getPageLink('address', true, null, "id_address={$address.object.id|intval}&delete")|escape:'html'}" onclick="return confirm('{l s='Are you sure?' js=1}');" title="{l s='Delete'}" class="button-exclusive btn btn-default">
+								{l s='Delete'}<i class="icon-chevron-right"></i>
+							</a>
+
+						</li>
 					</ul>
 				{/foreach}
 			</div>
@@ -94,5 +106,14 @@
 		<p class="warning">{l s='No addresses are available.'}&nbsp;<a href="{$link->getPageLink('address', true)|escape:'html'}">{l s='Add a new address'}</a></p>
 	{/if}
 
-	<div class="clear address_add"><a href="{$link->getPageLink('address', true)|escape:'html'}" title="{l s='Add an address'}" class="button_large">{l s='Add an address'}</a></div>
+	<div class="clear address_add">
+
+		<a href="{$link->getPageLink('address', true)|escape:'html'}" title="{l s='Add an address'}" class="button btn btn-default standard-checkout button-medium">
+			<span>
+				{l s='Add an address'}
+				<i class="icon-chevron-right"></i>
+			</span>
+		</a>
+
+	</div>
 </div>
