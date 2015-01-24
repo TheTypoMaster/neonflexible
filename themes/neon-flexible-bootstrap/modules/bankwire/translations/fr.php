@@ -10,6 +10,7 @@ $_MODULE['<{bankwire}neon-flexible-bootstrap>bankwire_a02758d758e8bec77a33d7f392
 $_MODULE['<{bankwire}neon-flexible-bootstrap>bankwire_bfa43217dfe8261ee7cb040339085677'] = 'Les détails du compte sont requis';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>bankwire_ccab155f173ac76f79eb192703f86b18'] = 'Le titulaire du compte est requis.';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>bankwire_c888438d14855d7d96a2724ee9c306bd'] = 'Paramètres sauvegardés';
+$_MODULE['<{bankwire}neon-flexible-bootstrap>bankwire_4ffaad55a1d22c453e7c9bad67b0598f'] = 'Payer par virement bancaire';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>bankwire_5dd532f0a63d89c5af0243b74732f63c'] = 'Coordonnées';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>bankwire_857216dd1b374de9bf54068fcd78a8f3'] = 'Titulaire';
 $_MODULE['<{bankwire}neon-flexible-bootstrap>bankwire_3ec365dd533ddb7ef3d1c111186ce872'] = 'Détails';

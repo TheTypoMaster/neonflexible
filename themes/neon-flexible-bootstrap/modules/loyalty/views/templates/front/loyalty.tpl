@@ -6,6 +6,7 @@
 {include file="$tpl_dir./breadcrumb.tpl"}
 
 <div class="container">
+
 	<h1 class="titre-size-1">{l s='My loyalty points' mod='loyalty'}</h1>
 
 	{if $orders}
@@ -16,15 +17,14 @@
 					<tr>
 						<th class="first_item">{l s='Order' mod='loyalty'}</th>
 						<th class="item">{l s='Date' mod='loyalty'}</th>
-						<th class="item">{l s='Points' mod='loyalty'}</th>
 						<th class="last_item">{l s='Points Status' mod='loyalty'}</th>
+						<th class="item">{l s='Points' mod='loyalty'}</th>
 					</tr>
 					</thead>
 					<tfoot>
 					<tr class="alternate_item">
-						<td colspan="2" class="history_method bold" style="text-align:center;">{l s='Total points available:' mod='loyalty'}</td>
+						<td colspan="3" class="history_method bold" style="text-align:right;">{l s='Total points available:' mod='loyalty'}</td>
 						<td class="history_method" style="text-align:left;">{$totalPoints|intval}</td>
-						<td class="history_method">&nbsp;</td>
 					</tr>
 					</tfoot>
 					<tbody>
@@ -32,8 +32,8 @@
 						<tr class="alternate_item">
 							<td class="history_link bold">{l s='#' mod='loyalty'}{$order.id|string_format:"%06d"}</td>
 							<td class="history_date">{dateFormat date=$order.date full=1}</td>
-							<td class="history_method">{$order.points|intval}</td>
 							<td class="history_method">{$order.state|escape:'html':'UTF-8'}</td>
+							<td class="history_method">{$order.points|intval}</td>
 						</tr>
 					{/foreach}
 					</tbody>
@@ -43,8 +43,8 @@
 				<p class="warning">{l s='You have not placed any orders.' mod='loyalty'}</p>
 			{/if}
 		</div>
-		<div id="pagination" class="pagination">
-			{if $nbpagination < $orders|@count}
+		{if $nbpagination < $orders|@count}
+			<div id="pagination" class="pagination">
 				<ul class="pagination">
 					{if $page != 1}
 						{assign var='p_previous' value=$page-1}
@@ -80,37 +80,37 @@
 						<li id="pagination_next" class="disabled"><span>{l s='Next' mod='loyalty'}&nbsp;&raquo;</span></li>
 					{/if}
 				</ul>
-			{/if}
-			{if $orders|@count > 10}
-				<form action="{$pagination_link}" method="get" class="pagination">
-					<p>
-						<input type="submit" class="button_mini" value="{l s='OK' mod='loyalty'}" />
-						<label for="nb_item">{l s='items:' mod='loyalty'}</label>
-						<select name="n" id="nb_item">
-							{foreach from=$nArray item=nValue}
-								{if $nValue <= $orders|@count}
-									<option value="{$nValue|escape:'html':'UTF-8'}" {if $nbpagination == $nValue}selected="selected"{/if}>{$nValue|escape:'html':'UTF-8'}</option>
-								{/if}
-							{/foreach}
-						</select>
-						<input type="hidden" name="p" value="1" />
-					</p>
-				</form>
-			{/if}
-		</div>
-
-		<br />{l s='Vouchers generated here are usable in the following categories : ' mod='loyalty'}
-		{if $categories}{$categories}{else}{l s='All' mod='loyalty'}{/if}
-
-		{if $transformation_allowed}
-			<p style="text-align:center; margin-top:20px">
-				<a href="{$link->getModuleLink('loyalty', 'default', ['process' => 'transformpoints'])|escape:'html'}" onclick="return confirm('{l s='Are you sure you want to transform your points into vouchers?' mod='loyalty' js=1}');">{l s='Transform my points into a voucher of' mod='loyalty'} <span class="price">{convertPrice price=$voucher}</span>.</a>
-			</p>
+				{if $orders|@count > 10}
+					<form action="{$pagination_link}" method="get" class="pagination">
+						<p>
+							<input type="submit" class="button_mini" value="{l s='OK' mod='loyalty'}" />
+							<label for="nb_item">{l s='items:' mod='loyalty'}</label>
+							<select name="n" id="nb_item">
+								{foreach from=$nArray item=nValue}
+									{if $nValue <= $orders|@count}
+										<option value="{$nValue|escape:'html':'UTF-8'}" {if $nbpagination == $nValue}selected="selected"{/if}>{$nValue|escape:'html':'UTF-8'}</option>
+									{/if}
+								{/foreach}
+							</select>
+							<input type="hidden" name="p" value="1" />
+						</p>
+					</form>
+				{/if}
+			</div>
 		{/if}
 
-		<br />
-		<br />
-		<br />
+		{if $transformation_allowed}
+			<p style="text-align:center;margin-top:30px">
+
+				<a href="{$link->getModuleLink('loyalty', 'default', ['process' => 'transformpoints'])|escape:'html'}" title="{l s='Transform my points into a voucher of %s' mod='loyalty' sprintf={convertPrice price=$voucher}}" onclick="return confirm('{l s='Are you sure you want to transform your points into vouchers?' mod='loyalty' js=1}');" class="button btn btn-default standard-checkout button-medium">
+					<span>
+						{l s='Transform my points into a voucher of %s' mod='loyalty' sprintf={convertPrice price=$voucher}}
+						<i class="icon-chevron-right"></i>
+					</span>
+				</a>
+
+			</p>
+		{/if}
 
 		<h2 class="titre-size-1">{l s='My vouchers from loyalty points' mod='loyalty'}</h2>
 

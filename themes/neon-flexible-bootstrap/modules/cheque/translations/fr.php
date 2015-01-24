@@ -10,6 +10,7 @@ $_MODULE['<{cheque}neon-flexible-bootstrap>cheque_a02758d758e8bec77a33d7f392eb3f
 $_MODULE['<{cheque}neon-flexible-bootstrap>cheque_81c6c3ba23ca2657a8eedc561f865ddb'] = 'Le champ \"Payer à l\'ordre de\" est requis.';
 $_MODULE['<{cheque}neon-flexible-bootstrap>cheque_00a369029140cfd18857425d49b472f8'] = 'Le champ \"Adresse\" est requis.';
 $_MODULE['<{cheque}neon-flexible-bootstrap>cheque_c888438d14855d7d96a2724ee9c306bd'] = 'Paramètres sauvegardés';
+$_MODULE['<{cheque}neon-flexible-bootstrap>cheque_354cafb81a13d2793685e46314bb6932'] = 'Payer par chèque';
 $_MODULE['<{cheque}neon-flexible-bootstrap>cheque_5dd532f0a63d89c5af0243b74732f63c'] = 'Coordonnées';
 $_MODULE['<{cheque}neon-flexible-bootstrap>cheque_4b2f62e281e9a6829c6df0e87d34233a'] = 'Payer à l\'ordre de (nom)';
 $_MODULE['<{cheque}neon-flexible-bootstrap>cheque_dd7bf230fde8d4836917806aff6a6b27'] = 'Adresse';

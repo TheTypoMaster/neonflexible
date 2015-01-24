@@ -19,8 +19,8 @@ $_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_aa7f22f84f7be784055a3e7e7d22
 $_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_75dd5f1160a3f02b6fae89c54361a1b3'] = 'Points';
 $_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_1026e44f047fb9da36a62c0a8846baac'] = 'État des points';
 $_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_98ab04462a3ea83fe76f4163efe755da'] = '#%d';
-$_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_66c2c90ea9f6f4a12854195085781d7f'] = 'Total de points disponibles';
-$_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_928666bdf20510dfa5c58393b77f1798'] = 'Montant du bon de réduction';
+$_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_66c2c90ea9f6f4a12854195085781d7f'] = 'Total de points disponibles :';
+$_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_928666bdf20510dfa5c58393b77f1798'] = 'Montant du bon de réduction :';
 $_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_a9be824aae4f2381a27b7c699b1e041e'] = 'En attente de validation';
 $_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_78945de8de090e90045d299651a68a9b'] = 'Disponible';
 $_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_a149e85a44aeec9140e92733d9ed694e'] = 'Annulé';
@@ -105,3 +105,4 @@ $_MODULE['<{loyalty}neon-flexible-bootstrap>shopping-cart_e7e421ccebbe3fafffe0f6
 $_MODULE['<{loyalty}neon-flexible-bootstrap>shopping-cart_443c3e03e194c2a4cdb107808b051615'] = 'pouvant être transformé(s) en un bon de réduction de';
 $_MODULE['<{loyalty}neon-flexible-bootstrap>shopping-cart_2d354f4df80bbebf309f184c3953dc1d'] = 'Offre non applicable pour les commandes passées en tant qu\'invité';
 $_MODULE['<{loyalty}neon-flexible-bootstrap>shopping-cart_8cec799df06a3f5a026b31fcd95e0172'] = 'Ajoutez des produits à votre panier pour gagner plus de points de fidélité.';
+$_MODULE['<{loyalty}neon-flexible-bootstrap>loyalty_39dff5570a45242d08b77538131b4f7e'] = 'Transformer mes points en un bon de réduction de %s';

@@ -13,6 +13,7 @@ $_MODULE['<{now_category_slide}neon-flexible-bootstrap>admincategoryslide_00d23a
 $_MODULE['<{now_category_slide}neon-flexible-bootstrap>admincategoryslide_52f5e0bc3859bc5f5e25130b6c7e8881'] = 'Position';
 $_MODULE['<{now_category_slide}neon-flexible-bootstrap>admincategoryslide_6759b907f024adc9050b29ec21be12ea'] = 'Date de modification';
 $_MODULE['<{now_category_slide}neon-flexible-bootstrap>admincategoryslide_a01eebea758ade4181061cf29de1fbd7'] = 'Catégorie métier';
+$_MODULE['<{now_category_slide}neon-flexible-bootstrap>admincategoryslide_3adbdb3ac060038aa0e6e6c138ef9873'] = 'Catégorie';
 $_MODULE['<{now_category_slide}neon-flexible-bootstrap>admincategoryslide_2faec1f9f8cc7f8f40d521c4dd574f49'] = 'Activé';
 $_MODULE['<{now_category_slide}neon-flexible-bootstrap>admincategoryslide_b9f5c797ebbf55adccdd8539a65a0241'] = 'Désactivé';
 $_MODULE['<{now_category_slide}neon-flexible-bootstrap>admincategoryslide_c9cc8cce247e49bae79f15173ce97354'] = 'Sauvegarder';
