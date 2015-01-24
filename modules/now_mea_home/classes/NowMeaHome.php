@@ -58,7 +58,9 @@ class NowMeaHome extends ObjectModel {
 			SELECT r.`id_product`
 			FROM `'._DB_PREFIX_.'now_mea_home` r
 			' . Shop::addSqlAssociation('now_mea_home', 'r') . '
+			LEFT JOIN `'._DB_PREFIX_.'now_product_type_product` pt ON (pt.`id_product` = r.`id_product`)
 			WHERE 1 ' . ($bActive ? ' AND r.`active` = 1 ' : '') . '
+			AND pt.`id_now_product_type_product` IS NULL
 			ORDER BY RAND() LIMIT 0 , ' . Configuration::get('NOW_MEA_HOME_NB_PRODUCT');
 
 		$result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sSQL);
