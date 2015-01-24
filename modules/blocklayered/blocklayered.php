@@ -3139,22 +3139,6 @@ class BlockLayered extends Module
 			if ($product['id_product_attribute'] && isset($product['product_attribute_minimal_quantity']))
 				$product['minimal_quantity'] = $product['product_attribute_minimal_quantity'];
 		}
-
-		/** @author: NinjaOfWeb | Permet d'ajouter les types des produits : START */
-		require_once (_PS_MODULE_DIR_.'now_product_type/classes/NowProductType.php');
-		require_once (_PS_MODULE_DIR_.'now_product_type/classes/NowProductTypeProduct.php');
-
-		if ((int)count($products) > 0) {
-			$aProductsTypesProducts	= NowProductTypeProduct::getProductsById();
-			$aProductsTypes			= NowProductType::getByIdProductTypes($aProductsTypesProducts);
-
-			foreach ($products as &$aProduct) {
-				if (array_key_exists($aProduct['id_product'], $aProductsTypesProducts) && array_key_exists($aProductsTypesProducts[$aProduct['id_product']], $aProductsTypes)) {
-					$aProduct['product_type'] = $aProductsTypes[$aProductsTypesProducts[$aProduct['id_product']]];
-				}
-			}
-		}
-		/** END */
 	}
 
 	public function rebuildLayeredStructure()

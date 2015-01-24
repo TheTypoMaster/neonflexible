@@ -19,7 +19,7 @@ class now_product_type extends NowModule {
 	{
 		$this->name				= 'now_product_type';
 		$this->tab				= 'front_office_features';
-		$this->version			= 2.2;
+		$this->version			= 2.3;
 		$this->author			= 'NinjaOfWeb';
 		$this->need_instance	= 0;
 
