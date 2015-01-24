@@ -115,7 +115,7 @@
 		{if $priceDisplay && $use_tax}
 			<tr class="item">
 				<td colspan="{if $return_allowed}2{else}1{/if}">
-					<strong>{l s='Items (tax excl.)'}</strong>
+					<strong>{l s='Items (tax excl.):'}</strong>
 				</td>
 				<td colspan="{if $order->hasProductReturned()}5{else}4{/if}">
 					<span class="price">{displayWtPriceWithCurrency price=$order->getTotalProductsWithoutTaxes() currency=$currency}</span>
@@ -124,7 +124,7 @@
 		{/if}
 		<tr class="item">
 			<td colspan="{if $return_allowed}2{else}1{/if}">
-				<strong>{l s='Items'} {if $use_tax}{l s='(tax incl.)'}{/if} </strong>
+				<strong>{if $use_tax}{l s='Items (tax incl.):'}{else}{l s='Items:'}{/if}</strong>
 			</td>
 			<td colspan="{if $order->hasProductReturned()}5{else}4{/if}">
 				<span class="price">{displayWtPriceWithCurrency price=$order->getTotalProductsWithTaxes() currency=$currency}</span>
@@ -133,7 +133,7 @@
 		{if $order->total_discounts > 0}
 			<tr class="item">
 				<td colspan="{if $return_allowed}2{else}1{/if}">
-					<strong>{l s='Total vouchers'}</strong>
+					<strong>{l s='Total vouchers:'}</strong>
 				</td>
 				<td colspan="{if $order->hasProductReturned()}5{else}4{/if}">
 					<span class="price-discount">{displayWtPriceWithCurrency price=$order->total_discounts currency=$currency convert=1}</span>
@@ -143,7 +143,7 @@
 		{if $order->total_wrapping > 0}
 			<tr class="item">
 				<td colspan="{if $return_allowed}2{else}1{/if}">
-					<strong>{l s='Total gift wrapping cost'}</strong>
+					<strong>{l s='Total gift wrapping cost:'}</strong>
 				</td>
 				<td colspan="{if $order->hasProductReturned()}5{else}4{/if}">
 					<span class="price-wrapping">{displayWtPriceWithCurrency price=$order->total_wrapping currency=$currency}</span>
@@ -152,7 +152,7 @@
 		{/if}
 		<tr class="item">
 			<td colspan="{if $return_allowed}2{else}1{/if}">
-				<strong>{l s='Shipping & handling'} {if $use_tax}{l s='(tax incl.)'}{/if} </strong>
+				<strong>{if $use_tax}{l s='Shipping & handling (tax incl.):'}{else}{l s='Shipping & handling:'}{/if} </strong>
 			</td>
 			<td colspan="{if $order->hasProductReturned()}5{else}4{/if}">
 				<span class="price-shipping">{displayWtPriceWithCurrency price=$order->total_shipping currency=$currency}</span>
@@ -160,7 +160,7 @@
 		</tr>
 		<tr class="totalprice item">
 			<td colspan="{if $return_allowed}2{else}1{/if}">
-				<strong>{l s='Total'}</strong>
+				<strong>{if $use_tax}{l s='Total (tax incl.):'}{else}{l s='Total:'}{/if}</strong>
 			</td>
 			<td colspan="{if $order->hasProductReturned()}5{else}4{/if}">
 				<span class="price">{displayWtPriceWithCurrency price=$order->total_paid currency=$currency}</span>

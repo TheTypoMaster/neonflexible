@@ -8,9 +8,11 @@
 #authentication #create-account_form .submit , #authentication #login_form .submit {position:absolute;bottom:10px;left:130px;}
 #authentication .cart_navigation .button-rose {margin:0 auto;}
 #authentication #account-creation_form p {margin:0;padding:0;clear:both;}
+#authentication #account-creation_form p.radio span {float:left;margin:0 30px 5px 180px;font-weight:bold;}
 #authentication #account-creation_form p.titre-size-1 {margin:30px 0;}
-#authentication #account-creation_form p.checkbox input {margin-left:0 10px 0 250px !important;}
+#authentication #account-creation_form p.checkbox input {margin:0 10px 0 250px !important;}
 #authentication #account-creation_form span.inline-infos {}
 #authentication #account-creation_form span.form_info, #authentication #account-creation_form p.inline-infos {display:block;margin:0 0 10px 0;color:#777;}
 #authentication #account-creation_form .id_state, #authentication #account-creation_form .dni, #authentication #account-creation_form .postcode {display:none;}
 #authentication #center_column #account-creation_form p.cart_navigation {margin:20px 0;}
+#authentication #create-account_form p.title_block {margin:0 0 10px 0;}
