@@ -42,7 +42,7 @@
 		//]]>
 	</script>
 
-	{capture name=path}{l s='Your addresses'}{/capture}
+	{capture name=path}<a href="{$link->getPageLink('my-account', true)|escape:'html'}">{l s='My account'}</a><span class="navigation-pipe">{$navigationPipe}</span><a href="{$link->getPageLink('addresses', true)|escape:'html'}">{l s='Your addresses'}</a><span class="navigation-pipe">{$navigationPipe}</span>{if isset($id_address)}{l s='Your address'}{else}{l s='New address'}{/if}{/capture}
 	{include file="$tpl_dir./breadcrumb.tpl"}
 
 	<h1 class="titre-size-1">{if isset($id_address)}{l s='Your address'}{else}{l s='New address'}{/if}</h1>
