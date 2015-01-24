@@ -13,3 +13,5 @@
 #sendOrderMessage {margin-bottom:20px}
 #sendOrderMessage p {padding-bottom:10px}
 #returnOrderMessage .textarea textarea, #sendOrderMessage .textarea textarea {width:100%;border:1px solid #999}
+form#submitReorder p {text-align:center;margin:0 0 10px 0;}
+form#submitReorder .cart_navigation {text-align:center;}

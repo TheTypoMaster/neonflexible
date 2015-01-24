@@ -5,15 +5,15 @@
 		<input type="hidden" value="{$order->id}" name="id_order"/>
 		<input type="hidden" value="" name="submitReorder"/>
 
+		<p class="dark">
+			<strong>{l s='Order Reference %s - placed on %s' sprintf=[$order->getUniqReference(),{dateFormat date=$order->date_add full=0}]} </strong>
+		</p>
+
 		{if $reorderingAllowed}
-			<div class="submit cart_navigation clearfix pull-right">
+			<div class="submit cart_navigation clearfix">
 				<a href="#" onclick="$(this).closest('form').submit(); return false;" class="button btn btn-default standard-checkout button-medium"><span>{l s='Reorder'}<i class="icon-chevron-right"></i></span></a>
 			</div>
 		{/if}
-
-		<p class="dark">
-			<strong>{l s='Order Reference %s - placed on' sprintf=$order->getUniqReference()} {dateFormat date=$order->date_add full=0}</strong>
-		</p>
 
 	</form>
 </div>
