@@ -1301,4 +1301,36 @@ table#cart_summary .gift-icon {color:white;background:#0088cc;line-height:20px;p
 .page-subheading {font-family:"Open Sans", sans-serif;font-weight:600;text-transform:uppercase;color:#555454;font-size:18px;padding:0 0 15px;line-height:normal;margin-bottom:12px;border-bottom:1px solid #d6d4d4;}
 h3.page-product-heading {color:#555454;text-transform:uppercase;font-family:"Open Sans", sans-serif;font-weight:600;font-size:18px;line-height:20px;padding:14px 20px 17px;margin:0 0 20px;position:relative;border:1px solid #d6d4d4;border-bottom:none;background:#fbfbfb;}
 
- ul.address li {list-style:none;line-height:23px;color:#777;}
+ul.address li {list-style:none;line-height:23px;color:#777;}
+
+@media all and (max-width:1200px) {
+	body .container {max-width:1100px;}
+	body #header #accroche {margin:0;right:20px;top:70px;}
+	body #header #search_block_top {margin:0 0 0 270px;}
+	body #header #adtm_menu #adtm_menu_inner ul#menu > li > a.a-niveau1:first-child,
+	body #header #adtm_menu #adtm_menu_inner ul#menu > li > a.a-niveau1:last-child,
+	body #header #adtm_menu #adtm_menu_inner ul#menu > li > a.a-niveau1:first-child span,
+	body #header #adtm_menu #adtm_menu_inner ul#menu > li > a.a-niveau1:last-child span {padding:0 6px 0 0;}
+}
+
+@media all and (max-width:1100px) {
+	body #header #accroche .accroche-texte {display:none;}
+}
+
+@media all and (max-width:1024px) {
+	body #header #accroche {display:none;}
+	body #header #search_block_top {margin:0;right:20px;}
+}
+
+@media all and (max-width:768px) {
+	body #header #accroche {display:none;}
+}
+
+@media all and (max-width:480px) {
+	body #header #search_block_top,
+	body #header .header_right,
+	body #header #accroche {display:none;}
+	body #header a img.logo {position:relative;margin:0 auto;display:block;}
+	body #header .navbar-inverse {position:absolute;top:0;width:100%;}
+
+}

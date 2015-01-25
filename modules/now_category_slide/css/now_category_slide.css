@@ -21,3 +21,7 @@
 #now_category_slide .slick-prev:before, #now_category_slide .slick-next:before {content:" ";position:absolute;width:74px;height:75px;display:block;top:20px;background:url("../../now_slideshow/img/button-slider.png");}
 #now_category_slide .slick-prev {left:0;}
 #now_category_slide .slick-next {right:0;}
+
+@media all and (max-width:1024px) {
+	body #now_category_slide {display:none;}
+}

@@ -7,6 +7,10 @@
 			{foreach $aSlides as $oSlide key=k name=foo}
 				<div class="item{if $smarty.foreach.foo.first} active{/if}">
 
+					<div class="right">
+						<img src="{$oSlide->getImageLink()}" alt="{$oSlide->name}"  class="img-responsive" />
+					</div>
+
 					<div class="left">
 
 						{if $oSlide->type == NowSlideshow::TYPE_LINK}
@@ -27,10 +31,6 @@
 
 						<a href="{$link}" class="button-white">{$oSlide->button_name|escape:'htmlall':'UTF-8'}</a>
 
-					</div>
-
-					<div class="right">
-						<img src="{$oSlide->getImageLink()}" alt="{$oSlide->name}" />
 					</div>
 
 				</div>

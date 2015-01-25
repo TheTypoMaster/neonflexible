@@ -6,7 +6,7 @@
 			<ul id="menu">
 				{if isset($advtmResponsiveMode) && $advtmResponsiveMode}
 					<li class="li-niveau1 advtm_menu_toggle">
-						<a class="a-niveau1 adtm_toggle_menu_button"><span class="advtm_menu_span adtm_toggle_menu_button_text">{if isset($advtmResponsiveToggleText) && !empty($advtmResponsiveToggleText)}{$advtmResponsiveToggleText}{else}{l s='Nos produits'}{/if}<b class="caret"></b></span></a>
+						<a class="a-niveau1 adtm_toggle_menu_button"><span class="advtm_menu_span adtm_toggle_menu_button_text">{if isset($advtmResponsiveToggleText) && !empty($advtmResponsiveToggleText)}{$advtmResponsiveToggleText}{else}{l s='Nos produits'}{/if}</span></a><b class="caret"></b>
 					</li>
 				{/if}
 				{foreach from=$advtm_menus item=menu name=loop}

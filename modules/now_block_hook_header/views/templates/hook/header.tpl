@@ -1,4 +1,4 @@
-<div class="container hidden-xs hidden-sm hidden-md">
+<div class="container">
 
 	<div id="accroche" itemscope itemtype="http://schema.org/ContactPoint">
 		<span class="accroche-texte">{l s='Un stock et un SAV garantis 100% français pour plus de réactivité' mod='now_block_accroche_header'}</span>
