@@ -1323,6 +1323,7 @@ ul.address li {list-style:none;line-height:23px;color:#777;}
 }
 
 @media all and (max-width:768px) {
+	body #header {height:180px;}
 	body #header #accroche {display:none;}
 }
 
