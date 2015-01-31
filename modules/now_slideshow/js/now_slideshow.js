@@ -14,5 +14,14 @@ $('.carousel-customer-references').slick({
 	slidesToShow: 2,
 	autoplay: true,
 	autoplaySpeed:5000,
-	arrows:false
+	arrows:false,
+	responsive: [
+		{
+			breakpoint: 900,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}
+	]
 });

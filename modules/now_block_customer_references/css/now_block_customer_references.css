@@ -26,3 +26,16 @@
 #module-now_block_customer_references-default #center_column #bandeau-cms .left h1 {color:#fff;font-size:37px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;margin:0;}
 #module-now_block_customer_references-default #center_column #bandeau-cms .left .desc p {font-family:Lato,Verdana,Arial,sans-serif;font-size:16px;color:#fff;text-shadow:0px 0px 3px rgba(0, 0, 0, 0.6);text-align:justify;}
 
+
+@media all and (max-width:1130px) {
+	body #references-clients .carousel-customer-references .item img {margin:0 10px 0 30px;}
+}
+
+@media all and (max-width:1024px) {
+}
+
+@media all and (max-width:768px) {
+}
+
+@media all and (max-width:480px) {
+}
