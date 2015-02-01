@@ -4,7 +4,7 @@
 
 		{foreach $aNowBlockFooterCmsColumns as $oNowBlockFooterCmsColumn}
 			{if $oNowBlockFooterCmsColumn->active && array_key_exists($oNowBlockFooterCmsColumn->id_now_block_cms_footer_column, $aNowBlockFooterCmsByColumnIds) && count($aNowBlockFooterCmsByColumnIds[$oNowBlockFooterCmsColumn->id_now_block_cms_footer_column]) > 0}
-				<li class="hidden-xs">
+				<li>
 					<span>{$oNowBlockFooterCmsColumn->name}</span>
 
 					{foreach $aNowBlockFooterCmsByColumnIds[$oNowBlockFooterCmsColumn->id_now_block_cms_footer_column] as $aNowBlockFooterCmsList}

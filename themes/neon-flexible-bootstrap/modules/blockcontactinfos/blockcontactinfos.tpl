@@ -1,4 +1,4 @@
-<span class="barre hidden-xs hidden-sm hidden-md"></span>
+<span class="barre"></span>
 
 <div id="contact">
 

@@ -1320,11 +1320,20 @@ ul.address li {list-style:none;line-height:23px;color:#777;}
 @media all and (max-width:1024px) {
 	body #header #accroche {display:none;}
 	body #header #search_block_top {margin:0;right:20px;}
+	body footer .barre {display:none;}
+	body footer #contact {float:none;}
+	body footer #social_block {float:none;margin:0 35%;}
+	body footer #social_block hr {margin:0px 0 10px 0;}
 }
 
 @media all and (max-width:768px) {
 	body #header {height:180px;}
 	body #header #accroche {display:none;}
+	body footer #social_block {float:none;margin:0 30%;}
+}
+
+@media all and (max-width:620px) {
+	body footer #social_block {float:none;margin:0 25%;}
 }
 
 @media all and (max-width:480px) {
@@ -1333,5 +1342,10 @@ ul.address li {list-style:none;line-height:23px;color:#777;}
 	body #header #accroche {display:none;}
 	body #header a img.logo {position:relative;margin:0 auto;display:block;}
 	body #header .navbar-inverse {position:absolute;top:0;width:100%;}
+	body footer #social_block {float:none;margin:0 20%;}
+}
+
+@media all and (max-width:400px) {
+	body footer #social_block {float:none;margin:0 15%;}
 
 }

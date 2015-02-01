@@ -7,3 +7,43 @@ footer #page-listing ul li span {display:block;	margin:0 0 10px 0;}
 footer #page-listing ul li span:first-letter {text-transform:capitalize;}
 footer #page-listing ul li > ul {margin:0 70px 0 0;padding:0;float:left;}
 footer #page-listing ul li > ul li, footer #page-listing ul li > ul li a {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;float:none;font-weight:normal;line-height:22px;margin:0;}
+
+@media all and (max-width:1200px) {
+	body footer #page-listing ul li, body footer #page-listing ul li a {margin:0 30px 0 0;}
+}
+
+@media all and (max-width:1100px) {
+	body footer #page-listing ul li, body footer #page-listing ul li a {margin:0 20px 0 0;}
+	body footer #page-listing ul li:last-child, body footer #page-listing ul li:last-child a {margin:0;}
+}
+
+@media all and (max-width:1024px) {
+	body footer #page-listing img {display:none;}
+	body footer #page-listing {float:none;width:100%;}
+	body footer #page-listing ul {margin:4% 15%;}
+	body footer #page-listing hr {clear:both;margin:0 5%;}
+	body footer #page-listing ul li > ul {margin:0 40px 0 0;}
+}
+
+@media all and (max-width:900px) {
+	body footer #page-listing ul {margin:4% 10%;}
+}
+
+@media all and (max-width:768px) {
+	body footer #page-listing ul {margin:4% 11%;}
+	body footer #page-listing ul li, body footer #page-listing ul li a {margin:0 10px 0 0;}
+	body footer #page-listing ul li > ul {margin:0 20px 0 0;}
+}
+
+@media all and (max-width:660px) {
+	body footer #page-listing ul {margin:4% 5%;}
+	body footer #page-listing ul li, body footer #page-listing ul li a {margin:0 10px 0 0;}
+	body footer #page-listing ul li > ul {margin:0 10px 0 0;}
+}
+
+@media all and (max-width:520px) {
+	body footer #page-listing ul {margin:4% 34%;}
+	body footer #page-listing ul li {display:none;}
+	body footer #page-listing ul li:last-child {display:block;}
+	body footer #page-listing ul li:last-child > ul > li {display:block;}
+}
