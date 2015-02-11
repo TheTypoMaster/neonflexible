@@ -333,23 +333,35 @@ class Dispatcher extends DispatcherCore
 		if (isset(Context::getContext()->shop) && is_object(Context::getContext()->shop))
 			$this->request_uri = preg_replace('#^'.preg_quote(Context::getContext()->shop->getBaseURI(), '#').'#i', '/', $this->request_uri);
 
-
 		// If there are several languages, get language from uri
 		if ($this->use_routes && Language::isMultiLanguageActivated()) {
-			// Default Language
-			$_GET['isolang'] = 'fr';
-
 			if (preg_match('#^/([a-z-]{2,20})(?:/.*)?$#', $this->request_uri, $m))
 			{
-				$sIsoCode = NowLanguageLink::getIsoCodeByFolderName($m[1]);
+				if ($m[1] != 'modules') {
 
-				if ($sIsoCode) {
-					$_GET['isolang'] = $sIsoCode;
+					// Default Language
+					$_GET['isolang'] = 'fr';
 
-					$this->request_uri = substr($this->request_uri, (strlen($m[1]) + 1));
+					$sIsoCode = NowLanguageLink::getIsoCodeByFolderName($m[1]);
+
+					if ($sIsoCode) {
+						$_GET['isolang'] = $sIsoCode;
+
+						$this->request_uri = substr($this->request_uri, (strlen($m[1]) + 1));
+					}
+				} else {
+					$_GET['isolang'] = Context::getContext()->language->iso_code;
 				}
 
+			} elseif ($this->request_uri == '/') {
+				// Default Language
+				$_GET['isolang'] = 'fr';
 			}
+		}
+
+		if (!isset($_GET['isolang']) || $_GET['isolang'] === null) {
+			// Default Language
+			$_GET['isolang'] = 'fr';
 		}
 	}
 
