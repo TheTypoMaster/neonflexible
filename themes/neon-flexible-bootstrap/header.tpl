@@ -17,7 +17,16 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	{*<meta http-equiv="content-language" content="{$meta_language}" />*}
 	<meta name="generator" content="PrestaShop" />
+
+	{* Les pages suivantes ne serotn pas accessible pas les moteurs *}
+	{if in_array(Context::getContext()->controller->php_self, array('my-account', 'identity', 'addresses', 'address', 'history', 'discount', 'order-slip', 'order'))}
+		{assign var="nobots"	value=true}
+		{assign var="nofollow"	value=true}
+	{/if}
+
 	<meta name="robots" content="{if isset($nobots)}no{/if}index,{if isset($nofollow) && $nofollow}no{/if}follow" />
+
+
 	<link rel="icon" type="image/vnd.microsoft.icon" href="{$favicon_url}?{$img_update_time}" />
 	<link rel="shortcut icon" type="image/x-icon" href="{$favicon_url}?{$img_update_time}" />
 
