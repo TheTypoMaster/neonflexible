@@ -37,7 +37,7 @@
 																	{$column.value_over}
 																{/if}
 																<div class="adtm_column adtm_column_{$column.id_column|intval}">
-																	{if $menuColumnWrapValue}<span class="column_wrap_title">{$menuColumnWrapValue}</span>{/if}
+																	{if $menuColumnWrapValue && preg_match('#href=\"\" title=\"\"#', $menuColumnWrapValue) != 1}<span class="column_wrap_title">{$menuColumnWrapValue}</span>{/if}
 																	{assign var='columnHaveElement' value=$advtm_elements[$column.id_column]|count}
 																	{if $columnHaveElement}
 																		<ul class="adtm_elements adtm_elements_{$column.id_column|intval}">
