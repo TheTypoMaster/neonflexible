@@ -22,7 +22,7 @@
 	body #mea-home h2 {margin-top:50px;}
 	body #mea-home ul {margin-left:5px;}
 	body #mea-home ul li {margin:0 5% 5% 0;}
-	body #mea-home ul li.first {width:100%;height:inherit;margin: 0 0 30px 0}
+	body #mea-home ul li.first {width:100%;height:inherit;margin:0 0 30px 0}
 	body #mea-home ul li.first div {margin:30px 0 30px 30px;float:left;width:45%;}
 	body #mea-home ul li img {margin-left:10px;}
 	body #mea-home ul li.first img {float:left;width:45%;}
@@ -36,9 +36,9 @@
 @media all and (max-width:480px) {
 	body #mea-home ul {width:90%;margin:0 auto;}
 	body #mea-home ul li.first, body #mea-home ul li {width:90%;margin:0 auto 20px auto;height:inherit;float:none;}
-	body #mea-home ul li.first div, body #mea-home ul li div {float:none;margin:0 5%;width:90%;text-align: center;}
-	body #mea-home ul li.first img, body #mea-home ul li img {float:none;margin:0 5%;width:90%;text-align: center;}
-	body #mea-home ul li.first div .desc, body #mea-home ul li div .desc {height:inherit;text-align: center;}
+	body #mea-home ul li.first div, body #mea-home ul li div {float:none;margin:5% 5% 0 5%;width:90%;text-align:center;}
+	body #mea-home ul li.first img, body #mea-home ul li img {float:none;margin:0 5%;width:90%;text-align:center;}
+	body #mea-home ul li.first div .desc, body #mea-home ul li div .desc {height:inherit;text-align:center;}
 	body #mea-home ul li .price {height:inherit;text-align:center;}
 	body #mea-home ul li .button-add-to-cart {position:relative;}
 }

@@ -48,10 +48,17 @@
 	body ul#product_list li .functional-buttons, body ul#product_list.mode-list li .functional-buttons {text-align:center;display:block;margin:0;position:relative;}
 	body .filter-top #displayed-list {display:none;}
 	body ul#product_list li .product_desc, body ul#product_list.mode-list li .product_desc {display:none;}
-
 }
 
 @media all and (max-width:500px) {
-	body .filter .nb-products-results {display:none;}
-	body ul#product_list li, body ul#product_list.mode-list li {width:100%;float:none;}
+	body #center-column .filter.top {height:100px;margin:0 0 10px 0;padding:0;}
+	body #center-column .filter.bottom {margin:10px 0 0 0;}
+	body .filter .pagination {margin:0;}
+	body .filter .pagination ul {margin:0 2%;}
+	body ul#product_list li, body ul#product_list.mode-list li {width:100%;float:none;margin:10px 0;padding:10px 0;}
+	body ul#product_list.mode-list li.is_content_type {height:220px;}
+	body ul#product_list.mode-list li.is_content_type .center_block_product_type {width:40%;}
+	body ul#product_list.mode-list li.is_content_type .left_block_product_type2 {padding:0 3%;width:100%;}
+	body ul#product_list.mode-list li.is_content_type .right_block_product_type {padding:0 3%;border:0;height:initial;width:100%;}
+	body ul#product_list.mode-list li.is_content_type .center_block_product_type .product_type_product {margin:0;padding:0;width:100%;}
 }

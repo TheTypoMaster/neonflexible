@@ -46,4 +46,5 @@ footer #page-listing ul li > ul li, footer #page-listing ul li > ul li a {color:
 	body footer #page-listing ul li {display:none;}
 	body footer #page-listing ul li:last-child {display:block;}
 	body footer #page-listing ul li:last-child > ul > li {display:block;}
+	body footer #page-listing ul li > ul {height:initial;}
 }
