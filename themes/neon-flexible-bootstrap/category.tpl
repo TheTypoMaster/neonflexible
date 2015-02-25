@@ -8,6 +8,12 @@
 
 			<div class="container">
 
+				{if $category->id_image}
+					<div class="right">
+						<img class="img-responsive" src="{$link->getCatImageLink($category->link_rewrite, $category->id_image, 'bandeau_category')|escape:'html'}" alt="{$category->name|escape:'htmlall':'UTF-8'}" title="{$category->name|escape:'htmlall':'UTF-8'}" id="categoryImage" />
+					</div>
+				{/if}
+
 				<div class="left">
 
 					{assign var=nowCategorySlide value=NowCategorySlide::getCategorySlideByIdCategory($category->id)}
@@ -26,12 +32,6 @@
 					<div class="desc" itemprop="description">{$category->description|truncate:550:'...'}</div>
 
 				</div>
-
-				{if $category->id_image}
-					<div class="right">
-						<img class="img-responsive" src="{$link->getCatImageLink($category->link_rewrite, $category->id_image, 'bandeau_category')|escape:'html'}" alt="{$category->name|escape:'htmlall':'UTF-8'}" title="{$category->name|escape:'htmlall':'UTF-8'}" id="categoryImage" />
-					</div>
-				{/if}
 
 			</div>
 
