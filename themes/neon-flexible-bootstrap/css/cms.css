@@ -1,6 +1,7 @@
 
 #cms #center_column #bandeau-cms {width:100%;background:#86b62c url('../img/theme/fond-categorie-big.png') no-repeat;}
-#cms #center_column #bandeau-cms .left {width:520px;margin-right:20px;}
+#cms #center_column #bandeau-cms .left {width:50%;padding:0 20px 0 0;}
+#cms #center_column #bandeau-cms .right {width:50%;}
 #cms #center_column #bandeau-cms .left .titre-vert {letter-spacing:1.2px;color:#bddf60;font-size:33px;font-family:Raleway,Verdana,Arial,sans-serif;margin:50px 0 0 0;font-weight:300;text-transform:uppercase;}
 #cms #center_column #bandeau-cms .left h1 {color:#fff;font-size:37px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;margin:0;}
 #cms #center_column #bandeau-cms .left .desc p {font-family:Lato,Verdana,Arial,sans-serif;font-size:16px;color:#fff;text-shadow:0px 0px 3px rgba(0, 0, 0, 0.6);text-align:justify;}
@@ -15,3 +16,14 @@
 #cms #center_column ul li {list-style-image:url('../img/theme/puce.png')}
 #cms #center_column ul li a {font-family:Lato,Verdana,Arial,sans-serif;color:#777;font-size:20px;}
 #cms #center_column .rte div {background:#f4f4f4;border:1px solid #dedede;padding:20px;margin:20px 0;}
+
+@media all and (max-width:1024px) {
+	#cms #center_column #bandeau-cms .left .titre-vert {margin:10px 0 0 0;}
+}
+
+@media all and (max-width:768px) {
+	#cms #center_column #bandeau-cms .left, #cms #center_column #bandeau-cms .right {float:none;width:100%}
+	#cms #center_column #bandeau-cms .container {padding:0;}
+	#cms #center_column #bandeau-cms .left {padding:2%;}
+	#cms #center_column #bandeau-cms .right img {width:100%;}
+}

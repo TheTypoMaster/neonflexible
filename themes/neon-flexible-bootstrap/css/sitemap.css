@@ -6,3 +6,8 @@
 #listpage_content {margin:50px 0 20px 20px;}
 #listpage_content div.categTree {float:left;width:33%}
 #listpage_content div.tree_top a {font-family:Lato,Verdana,Arial,sans-serif;color:#777;font-size:14px;}
+
+@media all and (max-width:768px) {
+	#sitemap_content div.sitemap_block, #listpage_content div.categTree {float:none; width:100%;}
+	#listpage_content {margin: 0 0 0 20px;}
+}

@@ -14,6 +14,16 @@
 		<div id="bandeau-cms">
 			<div class="container">
 
+				{if file_exists('_PS_ROOT_DIR_'|constant|cat:'/images/cms/'|cat:$cms->id|cat:'.jpg')}
+					<div class="right">
+						<img class="img-responsive" src="/images/cms/{$cms->id|intval}.jpg" alt="{$cms->meta_title|escape:'htmlall':'UTF-8'}" title="{$cms->meta_title|escape:'htmlall':'UTF-8'}" id="cmsImage" />
+					</div>
+				{elseif file_exists('_PS_ROOT_DIR_'|constant|cat:'/images/cms/default.jpg')}
+					<div class="right">
+						<img class="img-responsive" src="/images/cms/default.jpg" alt="{$cms->meta_title|escape:'htmlall':'UTF-8'}" title="{$cms->meta_title|escape:'htmlall':'UTF-8'}" id="cmsImage" />
+					</div>
+				{/if}
+
 				<div class="left">
 
 					{if isset($cms->id_cms_category) && $cms->id_cms_category != 0}
@@ -28,16 +38,6 @@
 					<div class="desc" itemprop="description"><p>{$cms->meta_description|truncate:550:'...'}</p></div>
 
 				</div>
-
-				{if file_exists('_PS_ROOT_DIR_'|constant|cat:'/images/cms/'|cat:$cms->id|cat:'.jpg')}
-					<div class="right">
-						<img src="/images/cms/{$cms->id|intval}.jpg" alt="{$cms->meta_title|escape:'htmlall':'UTF-8'}" title="{$cms->meta_title|escape:'htmlall':'UTF-8'}" id="cmsImage" />
-					</div>
-				{elseif file_exists('_PS_ROOT_DIR_'|constant|cat:'/images/cms/default.jpg')}
-					<div class="right">
-						<img src="/images/cms/default.jpg" alt="{$cms->meta_title|escape:'htmlall':'UTF-8'}" title="{$cms->meta_title|escape:'htmlall':'UTF-8'}" id="cmsImage" />
-					</div>
-				{/if}
 
 			</div>
 		</div>
