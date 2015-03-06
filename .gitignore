@@ -30,6 +30,8 @@ tools/smarty*/compile/*.php
 
 themes/default/cache/*.js
 themes/default/cache/*.css
+theme/neon-flexible-bootstrap/*.js
+theme/neon-flexible-bootstrap/*.css
 
 # Ignore files on root directory
 robots.txt
