@@ -2,8 +2,8 @@
 <module>
 	<name>dashproducts</name>
 	<displayName><![CDATA[Tableau de bord Produits]]></displayName>
-	<version><![CDATA[0.3.2]]></version>
-	<description><![CDATA[]]></description>
+	<version><![CDATA[0.3.4]]></version>
+	<description><![CDATA[Adds a block with a table of your latest orders and a ranking of your products]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[dashboard]]></tab>
 	<is_configurable>0</is_configurable>

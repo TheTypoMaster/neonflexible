@@ -1,6 +1,6 @@
-<div class="container hidden-xs hidden-sm hidden-md">
+<div class="col-md-6 visible-lg">
 
-	<div id="accroche" itemscope itemtype="http://schema.org/ContactPoint">
+	<div id="accroche" itemscope itemtype="http://schema.org/ContactPoint" class="pull-right">
 		<span class="accroche-texte">{l s='Un stock et un SAV garantis 100% français pour plus de réactivité' mod='now_block_accroche_header'}</span>
 		<span itemprop="contactType" class="hidden">Service client</span>
 		<span itemprop="availableLanguage" class="hidden">FR, EN</span>

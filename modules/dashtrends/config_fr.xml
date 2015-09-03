@@ -2,8 +2,8 @@
 <module>
 	<name>dashtrends</name>
 	<displayName><![CDATA[Tableau de bord des tendances]]></displayName>
-	<version><![CDATA[0.7.2]]></version>
-	<description><![CDATA[]]></description>
+	<version><![CDATA[0.8.0]]></version>
+	<description><![CDATA[Adds a block with a graphical representation of the development of your store(s) based on selected key data.]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[dashboard]]></tab>
 	<is_configurable>0</is_configurable>

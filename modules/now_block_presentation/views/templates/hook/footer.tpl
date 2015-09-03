@@ -8,10 +8,14 @@
 			<ul>
 				{foreach $aItems as $position => $oNowBlockPresentation}
 					{if $oNowBlockPresentation->active}
-						<li class="float-{$oNowBlockPresentation->float|default:'left'}">
+						<li class="float-{$oNowBlockPresentation->float|default:'left'} row">
+                        <div class="col-md-2 pull-{$oNowBlockPresentation->float|default:'left'}">
 							<img src="{$oNowBlockPresentation->getImageLink()}" alt="{$oNowBlockPresentation->name}" />
+                            </div>
+                            <div class="col-md-10">
 							<h3 class="titre">{$oNowBlockPresentation->name}</h3>
 							<p class="desc">{$oNowBlockPresentation->description}</p>
+                            </div>
 						</li>
 					{/if}
 				{/foreach}

@@ -1,20 +1,48 @@
+@media screen and (max-width:767px) {
+	#mea-home {margin-bottom:60px;}
+}
 #mea-home h2 {margin-top:70px;}
-#mea-home ul {width:100%;margin:0 0 0 30px;padding:0;}
+#mea-home ul {margin:0;padding:0;}
 
 /* Block petit */
-#mea-home ul li {width:350px;height:255px;list-style-type:none;float:left;margin:0 0 10px 50px;position:relative;}
+#mea-home ul li {list-style-type:none; height:255px;margin-bottom:10px;}
 #mea-home ul li img {float:left;margin:5px 0 0 0;}
-#mea-home ul li div {margin-left:180px;}
 #mea-home ul li .titre {font-family:Raleway,Verdana,Arial,sans-serif;font-size:16px;color:#333;font-weight:bold;margin-top: 0;}
-#mea-home ul li .desc {font-family:Lato,Verdana,Arial,sans-serif;font-size:14px;color:#777;text-overflow:ellipsis;word-wrap:break-word;overflow:hidden;height:80px;}
+#mea-home ul li .desc {font-family:Lato,Verdana,Arial,sans-serif;font-size:14px;color:#777;text-overflow:ellipsis;word-wrap:break-word;overflow:hidden}
 #mea-home ul li .price {font-family:Lato,Verdana,Arial,sans-serif;font-size:21px;color:#333;font-weight:bold;}
-#mea-home ul li .button-add-to-cart {position:absolute;z-index:2;width:180px;font-size:13px;height:40px;line-height:40px;}
+#mea-home ul li .button-add-to-cart {z-index:2;width:175px;font-size:13px;height:40px;line-height:40px;text-align:left;cursor:pointer;}
 #mea-home ul li .button-add-to-cart span {margin:6px 0 6px 6px;}
 #mea-home ul li .link {width:100%;height:100%;display:block;top:0;position:absolute;z-index:1}
 
 /* Bloc moyen */
-#mea-home ul li.first {width:306px;height:500px;margin:0;}
+#mea-home ul li.first {height:570px;}
 #mea-home ul li.first img {border:3px solid #dbdbdb;float:none;}
 #mea-home ul li.first div {margin:10px 0 0 0;}
 #mea-home ul li.first div .desc {height:46px;}
+@media screen and (max-width:767px) {
+	#mea-home ul{margin-left:0;}
+	#mea-home ul li{height:330px;}
+	#mea-home ul li.first{height:495px;}
+	#mea-home ul li .product_image{display: inline-block;height: auto;width: 100%;}
+		#mea-home ul li .product_image{display: inline-block;height: auto;width: 100%;}
+	#mea-home ul li .button-add-to-cart {margin:0;}
+}
+@media screen and (min-width:768px) {
+	#mea-home ul li {height:280px;}
+	#mea-home ul li.first {height:355px;}
+	#mea-home ul li .desc {height:80px;}
+	#mea-home ul li .button-add-to-cart {height: 45px;line-height: 14px;padding-top: 8px;width: 125px; margin:0;}
+	#mea-home ul li .button-add-to-cart span {margin: 0 4px 6px 6px;}
+}
+@media screen and (min-width:992px) {
+	#mea-home ul li {height:300px;}
+	#mea-home ul li.first {height:600px;}
+
+}
+@media screen and (min-width:1200px) {
+	#mea-home ul li {height:255px;}
+	#mea-home ul li.first {height:500px;}
+	#mea-home ul li .button-add-to-cart {height: 40px;line-height: 40px;padding-top: 0px;width: 175px;}
+	#mea-home ul li .button-add-to-cart span {margin: 6px 0 6px 6px;}
+}
 

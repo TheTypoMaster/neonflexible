@@ -1,6 +1,6 @@
 <?php
-/*
-* 2007-2014 PrestaShop
+/**
+* 2007-2015 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -18,9 +18,9 @@
 * versions in the future. If you wish to customize PrestaShop for your
 * needs please refer to http://www.prestashop.com for more information.
 *
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2014 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*  @author    PrestaShop SA <contact@prestashop.com>
+*  @copyright 2007-2015 PrestaShop SA
+*  @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 */
 
@@ -31,7 +31,7 @@ class Autoupgrade extends Module
 		$this->name = 'autoupgrade';
 		$this->tab = 'administration';
 		$this->author = 'PrestaShop';
-		$this->version = '1.4.8';
+		$this->version = '1.6.4';
 		if (version_compare(_PS_VERSION_, '1.5.0.0 ', '>='))
 			$this->multishop_context = Shop::CONTEXT_ALL;
 

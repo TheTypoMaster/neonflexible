@@ -2,7 +2,7 @@
 <module>
 	<name>blocksocial</name>
 	<displayName><![CDATA[Bloc social]]></displayName>
-	<version><![CDATA[1.1.5]]></version>
+	<version><![CDATA[1.2.1]]></version>
 	<description><![CDATA[Permet d&#039;ajouter des informations suppl&eacute;mentaires concernant les r&eacute;seaux sociaux de votre marque.]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>

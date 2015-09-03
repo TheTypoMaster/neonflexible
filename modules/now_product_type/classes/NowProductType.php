@@ -96,6 +96,10 @@ class NowProductType extends ObjectModel {
 		if (!Validate::isBool($bActive)) {
 			die(Tools::displayError());
 		}
+		
+		if (empty($aIdProductType)) {
+			return array();
+		}
 
 		if (is_null($iIdLang)) {
 			$iIdLang = (int)Context::getContext()->language->id;

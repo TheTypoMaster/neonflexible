@@ -30,6 +30,7 @@ $_MODULE['<{mailalerts}prestashop>mailalerts_c0146c441cd6d5dc9d6e0ea1464b345f'] 
 $_MODULE['<{mailalerts}prestashop>mailalerts_2a63f555989152ba866b43a1faacd680'] = 'Threshold';
 $_MODULE['<{mailalerts}prestashop>mailalerts_5b38721cd2e6ea2e12a664fb6dca1990'] = 'Quantity for which a product is considered out of stock.';
 $_MODULE['<{mailalerts}prestashop>mailalerts_135d106e835a4fa3b6fb5c4638a5d76b'] = 'Coverage warning';
+$_MODULE['<{mailalerts}prestashop>mailalerts_218786c9273b95bc637e7adb710b4195'] = 'Receive a notification when a product has insufficient coverage.';
 $_MODULE['<{mailalerts}prestashop>mailalerts_9841bdc50c4226cb6ec5db76494249e6'] = 'Coverage';
 $_MODULE['<{mailalerts}prestashop>mailalerts_2a4ae220a78d0c4a4d4c2b7285753321'] = 'Stock coverage, in days. Also, the stock coverage of a given product will be calculated based on this number.';
 $_MODULE['<{mailalerts}prestashop>mailalerts_4c3c81fd56b02829a5a1cf953396cd55'] = 'E-mail addresses';

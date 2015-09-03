@@ -1,6 +1,6 @@
 <?php
 /*
-* 2007-2014 PrestaShop
+* 2007-2015 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -19,7 +19,7 @@
 * needs please refer to http://www.prestashop.com for more information.
 *
 *  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2014 PrestaShop SA
+*  @copyright  2007-2015 PrestaShop SA
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 */
@@ -42,7 +42,7 @@ class Loyalty extends Module
 	{
 		$this->name = 'loyalty';
 		$this->tab = 'pricing_promotion';
-		$this->version = '1.2.6';
+		$this->version = '1.2.8';
 		$this->author = 'PrestaShop';
 		$this->need_instance = 0;
 
@@ -438,11 +438,11 @@ class Loyalty extends Module
 		$details = LoyaltyModule::getAllByIdCustomer((int)$params['id_customer'], (int)$params['cookie']->id_lang);
 		$points = (int)LoyaltyModule::getPointsByCustomer((int)$params['id_customer']);
 
-		$html = '<div class="panel">
+		$html = '<div class="col-lg-12"><div class="panel">
 			<div class="panel-heading">'.sprintf($this->l('Loyalty points (%d points)'), $points).'</div>';
 
 		if (!isset($points) || count($details) == 0)
-			return $html.' '.$this->l('This customer has no points');
+			return $html.' '.$this->l('This customer has no points').'</div></div>';
 
 		$html .= '
 		<div class="panel-body">
@@ -478,7 +478,7 @@ class Loyalty extends Module
 			</tr>
 		</table>
 		</div>
-		</div>';
+		</div></div>';
 
 		return $html;
 	}

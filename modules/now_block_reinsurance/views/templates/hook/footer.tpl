@@ -3,7 +3,7 @@
 	<div class="container">
 		<ul>
 			{foreach $aItems as $oNowBlockReinsurance}
-				<li>
+				<li class="col-sm-6 col-md-3">
 					<img src="{$oNowBlockReinsurance->getImageLink()}" alt="{$oNowBlockReinsurance->name}" />
 
 					{if !is_null($oNowBlockReinsurance->id_cms) && $oNowBlockReinsurance->id_cms}

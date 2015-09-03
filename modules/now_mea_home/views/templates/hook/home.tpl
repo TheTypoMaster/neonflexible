@@ -13,20 +13,20 @@
 						{assign var=imageType value="home_small"}
 					{/if}
 
-					<li {if $smarty.foreach.mea.first}class="first"{/if}>
+					<li {if $smarty.foreach.mea.first}class="first clearfix col-xs-12 col-md-4"{else}class="clearfix col-sm-6 col-md-4"{/if}>
 
 						{* Images *}
-						<span class="product_image">
+						<span {if $smarty.foreach.mea.first}class="product_image col-sm-6 col-md-12"{else}class="product_image col-sm-6"{/if}>
 							{assign var=image value=Product::getCover($oProduct->id)}
 							{if isset($image.id_image)}
 								{assign var=imageIds value=$oProduct->id|cat:'-'|cat:$image.id_image}
-								<img src="{Context::getContext()->link->getImageLink($oProduct->link_rewrite, $imageIds, $imageType)|escape:'html':'UTF-8'}" alt="{$oProduct->name|escape:'html':'UTF-8'}" />
+								<img class="img-responsive" src="{Context::getContext()->link->getImageLink($oProduct->link_rewrite, $imageIds, $imageType)|escape:'html':'UTF-8'}" alt="{$oProduct->name|escape:'html':'UTF-8'}" />
 							{else}
-								<img src="{$img_prod_dir}{$lang_iso}-default-{$imageType}.jpg" alt="{$oProduct->name|escape:'html':'UTF-8'}" />
+								<img  class="img-responsive" src="{$img_prod_dir}{$lang_iso}-default-{$imageType}.jpg" alt="{$oProduct->name|escape:'html':'UTF-8'}" />
 							{/if}
 						</span>
 
-						<div>
+						<div {if $smarty.foreach.mea.first}class="col-sm-6 col-md-12"{else}class="col-sm-6"{/if}>
 
 							{* Nom du produit *}
 							<h3 class="titre">{$oProduct->name|escape:'html':'UTF-8'}</h3>
@@ -36,11 +36,11 @@
 
 							{* Prix *}
 							{if isset($oProduct->show_price) && $oProduct->show_price && !isset($restricted_country_mode)}
-								<p class="price">
+								<p class="price">						
 									{if !$priceDisplay}
-										{convertPrice price=$oProduct->price}
+										{convertPrice price=$oProduct->price*1.2}
 									{else}
-										{convertPrice price=$oProduct->price_tax_exc}
+										{convertPrice price=$oProduct->price}
 									{/if}
 								</p>
 							{/if}

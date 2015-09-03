@@ -1,6 +1,6 @@
 <?php
-/*
-* 2007-2014 PrestaShop
+/**
+* 2007-2015 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -18,9 +18,9 @@
 * versions in the future. If you wish to customize PrestaShop for your
 * needs please refer to http://www.prestashop.com for more information.
 *
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2014 PrestaShop SA
-*  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+*  @author    PrestaShop SA <contact@prestashop.com>
+*  @copyright 2007-2015 PrestaShop SA
+*  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 */
 
@@ -40,12 +40,13 @@ class DashGoals extends Module
 	{
 		$this->name = 'dashgoals';
 		$this->tab = 'dashboard';
-		$this->version = '0.6.4';
+		$this->version = '0.6.6';
 		$this->author = 'PrestaShop';
 
 		parent::__construct();
 
 		$this->displayName = $this->l('Dashboard Goals');
+		$this->description = $this->l('Adds a block with your store\'s forecast.');
 		$this->ps_versions_compliancy = array('min' => '1.6', 'max' => _PS_VERSION_);
 
 		Dashgoals::$month_labels = array(
@@ -450,7 +451,7 @@ class DashGoals extends Module
 					$streams['avg_cart_value'][$stream_zone['zone']]['values'][] = $stream_values[$stream_zone['zone']];
 
 				$month_goal = ConfigurationKPI::get('DASHGOALS_TRAFFIC_'.$i.'_'.$year) * ConfigurationKPI::get('DASHGOALS_CONVERSION_'.$i.'_'.$year) / 100 * ConfigurationKPI::get('DASHGOALS_AVG_CART_VALUE_'.$i.'_'.$year);
-				$value = (isset($sales[$timestamp]) && $sales[$timestamp]) ? $sales[$timestamp] : 0;			
+				$value = (isset($sales[$timestamp]) && $sales[$timestamp]) ? $sales[$timestamp] : 0;
 				$stream_values = $this->getValuesFromGoals($average_goals['sales'], $month_goal, isset($sales[$timestamp]) ? $sales[$timestamp] : 0, Dashgoals::$month_labels[$i]);
 				$goal_diff = $value - $month_goal;
 				$stream_values['real']['sales'] = $value;

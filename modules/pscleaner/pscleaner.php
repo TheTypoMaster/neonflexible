@@ -1,6 +1,6 @@
 <?php
 /*
- * 2007-2014 PrestaShop
+ * 2007-2015 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -19,7 +19,7 @@
  * needs please refer to http://www.prestashop.com for more information.
  *
  *  @author PrestaShop SA <contact@prestashop.com>
- *  @copyright  2007-2014 PrestaShop SA
+ *  @copyright  2007-2015 PrestaShop SA
  *  @version  Release: $Revision: 7060 $
  *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  *  International Registered Trademark & Property of PrestaShop SA
@@ -34,7 +34,7 @@ class PSCleaner extends Module
 	{
 		$this->name = 'pscleaner';
 		$this->tab = 'administration';
-		$this->version = '1.8.3';
+		$this->version = '1.8.5';
 		$this->author = 'PrestaShop';
 		$this->need_instance = 0;
 		if (version_compare(_PS_VERSION_, '1.5.0.0 ', '>='))
@@ -529,6 +529,8 @@ class PSCleaner extends Module
 					'order_invoice',
 					'order_invoice_payment',
 					'order_invoice_tax',
+					'order_message',
+					'order_message_lang',
 					'order_payment',
 					'order_return',
 					'order_return_detail',
@@ -543,7 +545,8 @@ class PSCleaner extends Module
 
 				$modules_tables = array(
 					'sekeywords' => array('sekeyword'),
-					'pagesnotfound' => array('pagenotfound')
+					'pagesnotfound' => array('pagenotfound'),
+					'paypal' => array('paypal_customer', 'paypal_order')
 				);
 
 				foreach ($modules_tables as $name => $module_tables)

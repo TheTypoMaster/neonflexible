@@ -93,6 +93,8 @@ class now_product_type extends NowModule {
 	 * Hook actionProductUpdate
 	 * @param $aParams
 	 */
+	 
+	
 	public function hookActionProductUpdate($aParams) {
 
 		if (isset($_POST['type_product']) && preg_match('#id_now_product_type_([0-9]*)#', $_POST['type_product'], $matches)) {

@@ -1,6 +1,6 @@
 <?php
 /*
-* 2007-2014 PrestaShop
+* 2007-2015 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -19,7 +19,7 @@
 * needs please refer to http://www.prestashop.com for more information.
 *
 *  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2014 PrestaShop SA
+*  @copyright  2007-2015 PrestaShop SA
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 */
@@ -204,6 +204,7 @@ class LoyaltyModule extends ObjectModel
 		SELECT f.id_cart_rule AS id_cart_rule, f.date_upd AS date_add
 		FROM `'._DB_PREFIX_.'loyalty` f
 		LEFT JOIN `'._DB_PREFIX_.'orders` o ON (f.`id_order` = o.`id_order`)
+		INNER JOIN `'._DB_PREFIX_.'cart_rule` cr ON (cr.`id_cart_rule` = f.`id_cart_rule`)
 		WHERE f.`id_customer` = '.(int)($id_customer).'
 		AND f.`id_cart_rule` > 0
 		AND o.`valid` = 1

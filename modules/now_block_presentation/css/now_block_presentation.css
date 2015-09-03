@@ -1,8 +1,8 @@
 /* Bloc presentation */
 
-#presentation-company {border-top:1px solid #ccc;padding:40px 0;background:#f4f4f4 url('../img/fond-presentation.jpg') no-repeat right top;width:100%;max-height:616px;}
+#presentation-company {border-top:1px solid #ccc;padding:40px 0;background:#f4f4f4 url('../img/fond-presentation.jpg') no-repeat right top;width:100%; background-size:cover;}
 #presentation-company h2 {display:none;}
-#presentation-company ul {list-style-type:none;margin:0;}
+#presentation-company ul {list-style-type:none;margin:0;padding:0;}
 #presentation-company ul li {padding-top: 50px;}
 #presentation-company ul li + li {margin:50px 0;border-top:1px solid #ccc;}
 #presentation-company ul li img {float:left;margin:0;}
@@ -10,7 +10,19 @@
 #presentation-company ul li.float-right img {float:right;margin-left:50px;}
 #presentation-company ul li p.desc {color:#777;font-weight:normal;font-size:16px;text-align:justify;font-family:Lato,Verdana,Arial,sans-serif;}
 #presentation-company ul li h3.titre {color:#333;font-weight:normal;font-size:32px;font-family:Raleway,Verdana,Arial,sans-serif;}
-#presentation-company ul li.float-left p {margin-left:170px;}
-#presentation-company ul li.float-right p {margin-right:170px;}
 #presentation-company ul li.float-left h3.titre {text-align:left;}
 #presentation-company ul li.float-right h3.titre {text-align:right;}
+@media screen and (max-width:767px) {
+#presentation-company ul li.float-left .pull-left, #presentation-company ul li.float-right .pull-right{
+	float:none !important;
+}
+#presentation-company ul li.float-left img, #presentation-company ul li.float-right img{
+    display: block;
+    float: none;
+    margin: auto;
+}
+#presentation-company ul li.float-right h3.titre,#presentation-company ul li.float-left h3.titre{
+	text-align:center;
+}
+
+}

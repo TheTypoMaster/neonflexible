@@ -1,10 +1,10 @@
-<div id="page-listing">
+<div id="page-listing" class="col-md-8 col-lg-9">
 
 	<ul>
 
 		{foreach $aNowBlockFooterCmsColumns as $oNowBlockFooterCmsColumn}
 			{if $oNowBlockFooterCmsColumn->active && array_key_exists($oNowBlockFooterCmsColumn->id_now_block_cms_footer_column, $aNowBlockFooterCmsByColumnIds) && count($aNowBlockFooterCmsByColumnIds[$oNowBlockFooterCmsColumn->id_now_block_cms_footer_column]) > 0}
-				<li class="hidden-xs">
+				<li class="col-sm-3 hidden-xs">
 					<span>{$oNowBlockFooterCmsColumn->name}</span>
 
 					{foreach $aNowBlockFooterCmsByColumnIds[$oNowBlockFooterCmsColumn->id_now_block_cms_footer_column] as $aNowBlockFooterCmsList}
@@ -52,9 +52,9 @@
 		{/foreach}
 
 	</ul>
-
+<div class="clearfix"></div>
 	<hr>
 
-	<img src="{$img_dir}/theme/cb-visa-mastercard-paypal.png" alt="{l s='CB / Visa / MasterCard / Paypal' mod='now_block_cms_footer'}" class="footer-payement" />
+	<img src="{$img_dir}/theme/cb-visa-mastercard-paypal.png" alt="{l s='CB / Visa / MasterCard / Paypal' mod='now_block_cms_footer'}" class="footer-payement hidden-xs hidden-sm" />
 
 </div>

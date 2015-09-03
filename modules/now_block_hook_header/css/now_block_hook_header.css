@@ -1,4 +1,4 @@
-#header #accroche {display:block;position:absolute;margin:0 0 0 640px;top:60px;z-index:1;}
+#header #accroche {margin-top:28px;}
 #header #accroche .accroche-texte {display:block;color:#777;width:140px;float:left;font-family:Lato,Verdana,Arial,sans-serif;font-size:13px;text-align:right;}
 #header #accroche .accroche-telephone {background:url('../img/header-telephone-international.png') no-repeat;display:block;width:360px;height:54px;line-height:54px;padding-left:60px;font-size:13px;color:#777;margin-left:150px;font-weight:normal;font-family:Raleway,Verdana,Arial,sans-serif;cursor:default;text-decoration:none;}
 #header #accroche .accroche-telephone span.telephone {font-size:16px;color:#55a323;font-weight:bold;}

@@ -1,28 +1,28 @@
 <?php
-/*
-* 2007-2014 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Academic Free License (AFL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/afl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2014 PrestaShop SA
-*  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
+/**
+ * 2007-2015 PrestaShop
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@prestashop.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+ * versions in the future. If you wish to customize PrestaShop for your
+ * needs please refer to http://www.prestashop.com for more information.
+ *
+ * @author    PrestaShop SA <contact@prestashop.com>
+ * @copyright 2007-2015 PrestaShop SA
+ * @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * International Registered Trademark & Property of PrestaShop SA
+ */
 
 if (!defined('_PS_VERSION_'))
 	exit;
@@ -35,7 +35,7 @@ class Dashactivity extends Module
 	{
 		$this->name = 'dashactivity';
 		$this->tab = 'dashboard';
-		$this->version = '0.4.6';
+		$this->version = '0.5.0';
 		$this->author = 'PrestaShop';
 		$this->push_filename = _PS_CACHE_DIR_.'push/activity';
 		$this->allow_push = true;
@@ -160,7 +160,7 @@ class Dashactivity extends Module
 		if (Validate::isLoadedObject($gapi) && $gapi->isConfigured())
 		{
 			$visits = $unique_visitors = $online_visitor = 0;
-			if ($result = $gapi->requestReportData('', 'ga:visits,ga:visitors', substr($params['date_from'], 0, 10), substr($params['date_to'], 0, 10), null, null, 1, 1))
+			if ($result = $gapi->requestReportData('', 'ga:visits,ga:visitors', Tools::substr($params['date_from'], 0, 10), Tools::substr($params['date_to'], 0, 10), null, null, 1, 1))
 			{
 				$visits = $result[0]['metrics']['visits'];
 				$unique_visitors = $result[0]['metrics']['visitors'];
@@ -209,10 +209,9 @@ class Dashactivity extends Module
 					'.($maintenance_ips ? 'AND c.ip_address NOT IN ('.preg_replace('/[^,0-9]/', '', $maintenance_ips).')' : '').'
 					ORDER BY c.date_add DESC';
 		}
-
-		$results = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sql);
-
+		Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sql);
 		$online_visitor = Db::getInstance()->NumRows();
+
 		$pending_orders = Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue('
 			SELECT COUNT(*)
 			FROM `'._DB_PREFIX_.'orders` o
@@ -242,7 +241,8 @@ class Dashactivity extends Module
 			FROM `'._DB_PREFIX_.'product` p
 			'.Shop::addSqlAssociation('product', 'p').'
 			LEFT JOIN `'._DB_PREFIX_.'product_attribute` pa ON p.id_product = pa.id_product
-			'.Product::sqlStock('p', 'pa')
+			'.Product::sqlStock('p', 'pa').'
+			WHERE p.active = 1'
 		);
 
 		$new_messages = AdminStatsController::getPendingMessages();
@@ -362,7 +362,16 @@ class Dashactivity extends Module
 		if (Validate::isLoadedObject($gapi) && $gapi->isConfigured())
 		{
 			$websites = array();
-			if ($result = $gapi->requestReportData('ga:source', 'ga:visitors', substr($date_from, 0, 10), substr($date_to, 0, 10), '-ga:visitors', null, 1, $limit))
+			if ($result = $gapi->requestReportData(
+				'ga:source',
+				'ga:visitors',
+				Tools::substr($date_from, 0, 10),
+				Tools::substr($date_to, 0, 10),
+				'-ga:visitors',
+				null,
+				1,
+				$limit
+			))
 				foreach ($result as $row)
 					$websites[$row['dimensions']['source']] = $row['metrics']['visitors'];
 		}

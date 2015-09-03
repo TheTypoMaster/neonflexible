@@ -3207,6 +3207,71 @@ private function initTinyMce()
 			return $return;
 		}
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+		function hookDisplayMenu($params) {
+		if($this->_isInMaintenance())
+			return;
+		$return = '';
+		$cache = Configuration::get('ATM_CACHE');
+		
+		if (version_compare(_PS_VERSION_, '1.4.0.0', '>=') && ! Configuration::get('PS_SMARTY_CACHE'))
+			$cache = false;
+		if ($cache) {
+			if (Configuration::get('ATM_MENU_GLOBAL_ACTIF')) {
+				$curUrl = explode('?', $_SERVER ['REQUEST_URI']);
+				$curUrl = $curUrl [0] . $this->getKeepVar();
+				$strCacheUrl = sha1(preg_replace('#https?://' . preg_quote(htmlspecialchars($_SERVER ['HTTP_HOST'], ENT_COMPAT, 'UTF-8') . __PS_BASE_URI__,'#') . '#i', '', $curUrl));
+			}
+			else
+				$strCacheUrl = 'global';
+			$adtmCacheId = sprintf('ADTM|%s|%d|%s|%d|%s', $strCacheUrl, $this->_cookie->id_lang, $this->_isLogged(), (version_compare(_PS_VERSION_, '1.5.0.0', '>=') && Shop::isFeatureActive() ? $this->_context->shop->id : 0), implode('-', self::getCustomerGroups()));
+			$this->_enableCachePM(2);
+		}
+		if ((! $cache || (version_compare(_PS_VERSION_, '1.4.0.0', '<') && ! $this->_smarty->is_cached(dirname(__FILE__) . '/pm_advancedtopmenu.tpl', $adtmCacheId)) || (version_compare(_PS_VERSION_, '1.4.0.0', '>=') && ! $this->isCached('pm_advancedtopmenu.tpl', $adtmCacheId)))) {
+			$menus = AdvancedTopMenuClass::getMenus($this->_cookie->id_lang, true, false, true);
+
+			if (! sizeof($menus)) {
+				$this->_restoreCacheSettingsPM();
+				return;
+			}
+
+			$columnsWrap = AdvancedTopMenuColumnWrapClass::getMenusColumnsWrap($menus, $this->_cookie->id_lang);
+			$columns = AdvancedTopMenuColumnClass::getMenusColums($columnsWrap, $this->_cookie->id_lang, true);
+			$elements = AdvancedTopMenuElementsClass::getMenuColumnsElements($columns, $this->_cookie->id_lang, true, true);
+			$advtmThemeCompatibility = (bool)Configuration::get('ATM_THEME_COMPATIBILITY_MODE');
+			$advtmResponsiveMode = ((bool)Configuration::get('ATM_RESPONSIVE_MODE') && (int)Configuration::get('ATM_RESPONSIVE_THRESHOLD') > 0);
+			$advtmResponsiveToggleText = (Configuration::get('ATM_RESP_TOGGLE_TEXT', $this->_cookie->id_lang) !== false && Configuration::get('ATM_RESP_TOGGLE_TEXT', $this->_cookie->id_lang) != '' ? Configuration::get('ATM_RESP_TOGGLE_TEXT', $this->_cookie->id_lang) : $this->l('Menu'));
+			$advtmResponsiveContainerClasses = trim(Configuration::get('ATM_RESP_CONT_CLASSES'));
+			$this->_smarty->assign(array ('advtmResponsiveContainerClasses' => $advtmResponsiveContainerClasses, 'advtmResponsiveToggleText' => $advtmResponsiveToggleText, 'advtmResponsiveMode' => $advtmResponsiveMode, 'advtmThemeCompatibility' => $advtmThemeCompatibility, 'advtm_menus' => $menus, 'advtm_columns_wrap' => $columnsWrap, 'advtm_columns' => $columns, 'advtm_elements' => $elements, 'advtm_obj' => $this, 'isLogged' => $this->_isLogged() ));
+		}
+
+		if ($cache) {
+			if (version_compare(_PS_VERSION_, '1.4.0.0', '<'))
+				$return = $this->fetchWithCache(__FILE__, 'pm_advancedtopmenu.tpl', $adtmCacheId, 3600);
+			else {
+				$this->_smarty->cache_lifetime = 3600;
+				$return = $this->display(__FILE__, 'pm_advancedtopmenu.tpl', $adtmCacheId);
+			}
+			$this->_restoreCacheSettingsPM();
+			return $return;
+		}
+		else {
+			$return = $this->display(__FILE__, 'pm_advancedtopmenu.tpl');
+			$this->_smarty->caching = 0;
+			return $return;
+		}
+	}
+	
+	
+	
+	
 
 	public function hookCategoryUpdate($params) {
 		$this->clearCache();

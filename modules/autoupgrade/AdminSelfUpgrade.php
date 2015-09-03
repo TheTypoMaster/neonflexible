@@ -1,6 +1,6 @@
 <?php
 /*
-* 2007-2014 PrestaShop
+* 2007-2015 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -19,7 +19,7 @@
 * needs please refer to http://www.prestashop.com for more information.
 *
 *	@author PrestaShop SA <contact@prestashop.com>
-*	@copyright	2007-2014 PrestaShop SA
+*	@copyright	2007-2015 PrestaShop SA
 *	@version	Release: $Revision: 11834 $
 *	@license		http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
 *	International Registered Trademark & Property of PrestaShop SA
@@ -242,6 +242,7 @@ class AdminSelfUpgrade extends AdminSelfTab
 	public $install_version;
 	public $keepImages = null;
 	public $updateDefaultTheme = null;
+	public $changeToDefaultTheme = null;
 	public $keepMails = null;
 	public $manualMode = null;
 	public $deactivateCustomModule = null;
@@ -432,6 +433,9 @@ class AdminSelfUpgrade extends AdminSelfTab
 				@copy(_PS_ROOT_DIR_.DIRECTORY_SEPARATOR.'modules'.DIRECTORY_SEPARATOR.$this->autoupgradeDir.DIRECTORY_SEPARATOR.'ajax-upgradetab.php',
 					$this->autoupgradePath.DIRECTORY_SEPARATOR.'ajax-upgradetab.php');
 		}
+
+		if (version_compare(_PS_VERSION_,'1.6.1.0','>=') && !$this->ajax)
+			Context::getContext()->smarty->assign('display_header_javascript', true);
 	}
 
 	protected function l($string, $class = 'AdminTab', $addslashes = FALSE, $htmlentities = TRUE)
@@ -537,10 +541,14 @@ class AdminSelfUpgrade extends AdminSelfTab
 		);
 
 		$this->_fieldsUpgradeOptions['PS_AUTOUP_UPDATE_DEFAULT_THEME'] = array(
-			'title' => $this->l('Upgrade and switch to the default theme of the new version'), 'cast' => 'intval', 'validation' => 'isBool', 'defaultValue' => '1',
-			'type' => 'bool', 'desc' => $this->l('This will change your theme: your shop will then use the default theme of the version of PrestaShop you are upgrading to.').'<br />'
-			.$this->l('If you customized the default PrestaShop theme in its folder (folder name "prestashop" in 1.4, "default" in 1.5, "bootstrap-default" in 1.6), enabling this option will lose your modifications.').'<br />'
+			'title' => $this->l('Upgrade the default theme of the new version'), 'cast' => 'intval', 'validation' => 'isBool', 'defaultValue' => '1',
+			'type' => 'bool', 'desc' => $this->l('If you customized the default PrestaShop theme in its folder (folder name "prestashop" in 1.4, "default" in 1.5, "bootstrap-default" in 1.6), enabling this option will lose your modifications.').'<br />'
 			.$this->l('If you are using your own theme, enabling this option will switch your shop to the updated default theme, and your own theme will be safe.'),
+		);
+
+		$this->_fieldsUpgradeOptions['PS_AUTOUP_CHANGE_DEFAULT_THEME'] = array(
+			'title' => $this->l('Switch to the default theme of the new version'), 'cast' => 'intval', 'validation' => 'isBool', 'defaultValue' => '0',
+			'type' => 'bool', 'desc' => $this->l('This will change your theme: your shop will then use the default theme of the version of PrestaShop you are upgrading to.'),
 		);
 
 		$this->_fieldsUpgradeOptions['PS_AUTOUP_KEEP_MAILS'] = array(
@@ -728,6 +736,7 @@ class AdminSelfUpgrade extends AdminSelfTab
 
 		$this->keepImages = $this->getConfig('PS_AUTOUP_KEEP_IMAGES');
 		$this->updateDefaultTheme = $this->getConfig('PS_AUTOUP_UPDATE_DEFAULT_THEME');
+		$this->changeToDefaultTheme = $this->getConfig('PS_AUTOUP_CHANGE_DEFAULT_THEME');
 		$this->keepMails = $this->getConfig('PS_AUTOUP_KEEP_MAILS');
 		$this->manualMode = (defined('_PS_MODE_DEV_') && _PS_MODE_DEV_)? (bool)$this->getConfig('PS_AUTOUP_MANUAL_MODE') : false;
 		$this->deactivateCustomModule = $this->getConfig('PS_AUTOUP_CUSTOM_MOD_DESACT');
@@ -884,13 +893,20 @@ class AdminSelfUpgrade extends AdminSelfTab
 				'PS_AUTOUP_PERFORMANCE' => '1',
 				'PS_AUTOUP_CUSTOM_MOD_DESACT' => '1',
 				'PS_AUTOUP_UPDATE_DEFAULT_THEME' => '1',
+				'PS_AUTOUP_CHANGE_DEFAULT_THEME' => '0',
 				'PS_AUTOUP_KEEP_MAILS' => '1',
 				'PS_AUTOUP_BACKUP' => '1',
 				'PS_AUTOUP_KEEP_IMAGES' => '0'
 				));
 		}
 
-		if (Tools14::isSubmit('putUnderMaintenance'))
+		if (Tools14::isSubmit('putUnderMaintenance') && version_compare(_PS_VERSION_, '1.5.0.0', '>='))
+		{
+			foreach (Shop::getCompleteListOfShopsID() as $id_shop)
+				Configuration::updateValue('PS_SHOP_ENABLE', 0, false, null, (int)$id_shop);
+			Configuration::updateGlobalValue('PS_SHOP_ENABLE', 0);
+		}
+		elseif (Tools14::isSubmit('putUnderMaintenance'))
 			Configuration::updateValue('PS_SHOP_ENABLE', 0);
 
 		if (Tools14::isSubmit('customSubmitAutoUpgrade'))
@@ -953,14 +969,14 @@ class AdminSelfUpgrade extends AdminSelfTab
 		$this->next = '';
 
 		if ($this->getConfig('channel') != 'archive' && file_exists($this->getFilePath()) && unlink($this->getFilePath()))
-			$this->nextQuickInfo[] = sprintf('%s removed', $this->getFilePath());
+			$this->nextQuickInfo[] = sprintf($this->l('%s removed'), $this->getFilePath());
 		elseif (is_file($this->getFilePath()))
-			$this->nextQuickInfo[] = '<strong>'.sprintf('Please remove %s by ftp', $this->getFilePath()).'</strong>';
+			$this->nextQuickInfo[] = '<strong>'.sprintf($this->l('Please remove %s by FTP'), $this->getFilePath()).'</strong>';
 
 		if ($this->getConfig('channel') != 'directory' && file_exists($this->latestRootDir) && self::deleteDirectory($this->latestRootDir))
-			$this->nextQuickInfo[] = sprintf('%s removed', $this->latestRootDir);
+			$this->nextQuickInfo[] = sprintf($this->l('%s removed'), $this->latestRootDir);
 		elseif(is_dir($this->latestRootDir))
-			$this->nextQuickInfo[] = '<strong>'.sprintf('Please remove %s by ftp', $this->latestRootDir).'</strong>';
+			$this->nextQuickInfo[] = '<strong>'.sprintf($this->l('Please remove %s by FTP'), $this->latestRootDir).'</strong>';
 	}
 
 	// Simplification of _displayForm original function
@@ -2467,6 +2483,11 @@ class AdminSelfUpgrade extends AdminSelfTab
 
 			if (version_compare(INSTALL_VERSION, '1.6.0.0', '>'))
 			{
+				if (version_compare(INSTALL_VERSION, '1.6.1.0', '>=') && defined('_PS_CORE_DIR_'))
+					require_once(_PS_CORE_DIR_.'/Core/Foundation/Database/Core_Foundation_Database_EntityInterface.php');
+				elseif (version_compare(INSTALL_VERSION, '1.6.1.0', '>=') && defined('_PS_ROOT_DIR_'))
+					require_once(_PS_ROOT_DIR_.'/Core/Foundation/Database/Core_Foundation_Database_EntityInterface.php');
+
 				if (file_exists(_PS_ROOT_DIR_.'/classes/Tools.php'))
 					require_once(_PS_ROOT_DIR_.'/classes/Tools.php');
 				if (!class_exists('Tools2', false) AND class_exists('ToolsCore'))
@@ -2613,7 +2634,7 @@ class AdminSelfUpgrade extends AdminSelfTab
 			}
 		}
 
-		if ($this->updateDefaultTheme)
+		if ($this->changeToDefaultTheme)
 		{
 			if (version_compare(INSTALL_VERSION, '1.6.0.0', '>'))
 			{
@@ -3533,6 +3554,7 @@ class AdminSelfUpgrade extends AdminSelfTab
 					}
 					$views .= preg_replace('#DEFINER=[^\s]+\s#', 'DEFINER=CURRENT_USER ', $schema[0]['Create View']).";\n\n";
 					$written += fwrite($fp, "\n".$views);
+					$ignore_stats_table[] = $schema[0]['View'];
 				}
 				// case table
 				elseif (isset($schema[0]['Table']))
@@ -4507,7 +4529,9 @@ txtError[37] = "'.$this->l('The config/defines.inc.php file was not found. Where
 	private function _displayBlockUpgradeButton()
 	{
 		global $cookie;
-		$admin_dir = trim(str_replace($this->prodRootDir, '', $this->adminDir), DIRECTORY_SEPARATOR);
+
+		if (!version_compare(substr(phpversion(), 0, 5), '5.4.0', '>='))
+			$this->_html .= '<fieldset style="background-color: #f8eba8;"><legend style="background-color: #f8eba8;">'.$this->l('Warning!').'</legend><span style="font-weight:bold">' .sprintf($this->l('You are using PHP %s version. Soon, the latest PHP version supported by PrestaShop will be PHP 5.4. To make sure you’re ready for the future, we recommend you to upgrade to PHP 5.4 now!'), phpversion()).'</span></fieldset>';
 
 		$this->_html .= '
 		<fieldset id="upgradeButtonBlock">
@@ -4704,7 +4728,7 @@ txtError[37] = "'.$this->l('The config/defines.inc.php file was not found. Where
 		</fieldset>';
 
 		/* Make sure the user has configured the upgrade options, or set default values */
-		$configuration_keys = array('PS_AUTOUP_UPDATE_DEFAULT_THEME' => 1, 'PS_AUTOUP_KEEP_MAILS' => 1, 'PS_AUTOUP_CUSTOM_MOD_DESACT' => 1,
+		$configuration_keys = array('PS_AUTOUP_UPDATE_DEFAULT_THEME' => 1, 'PS_AUTOUP_CHANGE_DEFAULT_THEME' => 0, 'PS_AUTOUP_KEEP_MAILS' => 1, 'PS_AUTOUP_CUSTOM_MOD_DESACT' => 1,
 		'PS_AUTOUP_MANUAL_MODE' => 0, 'PS_AUTOUP_PERFORMANCE' => 1, 'PS_DISPLAY_ERRORS' => 0);
 		foreach ($configuration_keys as $k => $default_value)
 			if (Configuration::get($k) == '')
@@ -4891,8 +4915,8 @@ $(document).ready(function(){
 		// $.scrollTo("#options")
 	});
 
-	// set timeout to 60 minutes (before aborting an ajax request)
-	$.ajaxSetup({timeout:3600000});
+	// set timeout to 120 minutes (before aborting an ajax request)
+	$.ajaxSetup({timeout:7200000});
 
 	// prepare available button here, without params ?
 	prepareNextButton("#upgradeNow",firstTimeParams);

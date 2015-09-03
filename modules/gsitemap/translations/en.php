@@ -30,6 +30,7 @@ $_MODULE['<{gsitemap}prestashop>configuration_1bf712896e6077fa0b708e911d8ee0b3']
 $_MODULE['<{gsitemap}prestashop>configuration_c7561db7a418dd39b2201dfe110ab4a4'] = 'never';
 $_MODULE['<{gsitemap}prestashop>configuration_e51d91c7bfa9fc658b11afca4d84653c'] = 'Check this box if you wish to check the presence of the image files on the server';
 $_MODULE['<{gsitemap}prestashop>configuration_05ff8159ccaef6f0f8391c61a6d0e631'] = 'check all';
+$_MODULE['<{gsitemap}prestashop>configuration_0dfcf5f2f5b9ab7c909f9bdca2b53b56'] = 'Indicate the pages that you do not want to include in your Sitemaps file:';
 $_MODULE['<{gsitemap}prestashop>configuration_2ec111ec9826a83509c02bf5e6b797f1'] = 'Generate Sitemap';
 $_MODULE['<{gsitemap}prestashop>configuration_ca99f8a0d484faef3a057fe7a5da3141'] = 'This can take several minutes';
 $_MODULE['<{gsitemap}prestashop>configuration_162b34489ed8df561be1720f04fe6d42'] = 'You have two ways to generate Sitemap:';

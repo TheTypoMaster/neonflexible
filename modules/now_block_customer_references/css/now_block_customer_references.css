@@ -3,7 +3,7 @@
 #references-clients .carousel-customer-references {list-style-type:none;margin:70px 0 0 0;}
 #references-clients .carousel-customer-references .item {position:relative;}
 #references-clients .carousel-customer-references .item + .item {margin:0}
-#references-clients .carousel-customer-references .item img {float:left;margin:0 0 0 70px;}
+#references-clients .carousel-customer-references .item img {float:left;margin:0 15px 0 35px;}
 #references-clients .carousel-customer-references .item p {margin:35px 0 0 0;font-style:italic;font-family:Lato,Verdana,Arial,sans-serif;text-decoration:none;color:#fff;font-weight:normal;font-size:16px;text-align:justify;}
 #references-clients .carousel-customer-references .item p:before {content:url('../img/paragraphe-before.png') no-repeat;float:left;display:block;height:80px;margin:0 5px 0 5px;}
 #references-clients .carousel-customer-references .item p:after {content:url('../img/paragraphe-after.png') no-repeat;float:right;display:block;margin-left:5px;}

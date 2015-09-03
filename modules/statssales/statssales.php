@@ -1,6 +1,6 @@
 <?php
 /*
-* 2007-2014 PrestaShop
+* 2007-2015 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -19,7 +19,7 @@
 * needs please refer to http://www.prestashop.com for more information.
 *
 *  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2014 PrestaShop SA
+*  @copyright  2007-2015 PrestaShop SA
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 */
@@ -39,7 +39,7 @@ class StatsSales extends ModuleGraph
 	{
 		$this->name = 'statssales';
 		$this->tab = 'analytics_stats';
-		$this->version = '1.2.3';
+		$this->version = '1.3.0';
 		$this->author = 'PrestaShop';
 		$this->need_instance = 0;
 
@@ -85,8 +85,8 @@ class StatsSales extends ModuleGraph
 			<div class="alert alert-warning">
 				<h4>'.$this->l('About order statuses').'</h4>
 				<p>
-					'.$this->l('In your Back-office, you can modify the following order statuses: Awaiting Check Payment, Payment Accepted, Preparation in Progress, Shipping, Delivered, Canceled, Refund, Payment Error, Out of Stock, and Awaiting Bank Wire Payment.').'<br />
-					'.$this->l('These order statuses cannot be removed from the Back-office; however you have the option to add more.').'
+					'.$this->l('In your Back Office, you can modify the following order statuses: Awaiting Check Payment, Payment Accepted, Preparation in Progress, Shipping, Delivered, Canceled, Refund, Payment Error, Out of Stock, and Awaiting Bank Wire Payment.').'<br />
+					'.$this->l('These order statuses cannot be removed from the Back Office; however you have the option to add more.').'
 				</p>
 			</div>
 			<div class="alert alert-info">

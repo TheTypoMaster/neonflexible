@@ -62,7 +62,7 @@ class NowMeaHome extends ObjectModel {
 			WHERE 1 ' . ($bActive ? ' AND r.`active` = 1 ' : '') . '
 			AND pt.`id_now_product_type_product` IS NULL
 			ORDER BY RAND() LIMIT 0 , ' . Configuration::get('NOW_MEA_HOME_NB_PRODUCT');
-
+			
 		$result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sSQL);
 
 		$aProducts = array();
@@ -72,7 +72,9 @@ class NowMeaHome extends ObjectModel {
 			$oProduct->loadStockData();
 			$aProducts[] = $oProduct;
 		}
-
+		echo '<pre>';
+		//var_dump($aProducts);
+		echo'</pre>';
 		return $aProducts;
 	}
 }
