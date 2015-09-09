@@ -93,14 +93,12 @@ class now_product_type extends NowModule {
 	 * Hook actionProductUpdate
 	 * @param $aParams
 	 */
-	 
-	
 	public function hookActionProductUpdate($aParams) {
 
 		if (isset($_POST['type_product']) && preg_match('#id_now_product_type_([0-9]*)#', $_POST['type_product'], $matches)) {
 
 			$iIdNowProductType	= (int)$matches[1];
-			$oProduct			= $aParams['product'];
+			$oProduct			= new Product($aParams['id_product']);
 
 			if (Validate::isLoadedObject($oProduct)) {
 				$oProductTypeProduct = NowProductTypeProduct::getObjectByProductId($oProduct->id);
@@ -127,7 +125,7 @@ class now_product_type extends NowModule {
 		if (isset($_POST['type_product']) && preg_match('#id_now_product_type_([0-9]*)#', $_POST['type_product'], $matches)) {
 
 			$iIdNowProductType	= (int)$matches[1];
-			$oProduct			= $aParams['product'];
+			$oProduct			= new Product($aParams['id_product']);
 
 			if (Validate::isLoadedObject($oProduct)) {
 				$oProductTypeProduct = new NowProductTypeProduct();
@@ -149,7 +147,7 @@ class now_product_type extends NowModule {
 	 */
 	public function hookActionProductDelete($aParams) {
 
-		$oProduct = $aParams['product'];
+		$oProduct			= new Product($aParams['id_product']);
 		if (Validate::isLoadedObject($oProduct)) {
 			$oProductTypeProduct = NowProductTypeProduct::getObjectByProductId($oProduct->id);
 			if (Validate::isLoadedObject($oProductTypeProduct)) {
