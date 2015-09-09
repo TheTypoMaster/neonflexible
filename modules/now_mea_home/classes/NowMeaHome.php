@@ -72,9 +72,7 @@ class NowMeaHome extends ObjectModel {
 			$oProduct->loadStockData();
 			$aProducts[] = $oProduct;
 		}
-		echo '<pre>';
-		//var_dump($aProducts);
-		echo'</pre>';
+		
 		return $aProducts;
 	}
 }
