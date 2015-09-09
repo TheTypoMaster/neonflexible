@@ -6,9 +6,10 @@
 			{if $oNowBlockFooterCmsColumn->active && array_key_exists($oNowBlockFooterCmsColumn->id_now_block_cms_footer_column, $aNowBlockFooterCmsByColumnIds) && count($aNowBlockFooterCmsByColumnIds[$oNowBlockFooterCmsColumn->id_now_block_cms_footer_column]) > 0}
 				<li class="col-sm-3 hidden-xs">
 					<span>{$oNowBlockFooterCmsColumn->name}</span>
+                    
 
 					{foreach $aNowBlockFooterCmsByColumnIds[$oNowBlockFooterCmsColumn->id_now_block_cms_footer_column] as $aNowBlockFooterCmsList}
-						<ul>
+						<ul {if $oNowBlockFooterCmsColumn->name == 'Métiers'}class="twoColumns"{/if}>
 							{foreach $aNowBlockFooterCmsList as $oNowBlockFooterCms}
 								{if $oNowBlockFooterCms->active}
 									<li>
@@ -19,6 +20,7 @@
 										{elseif $oNowBlockFooterCms->type == NowBlockFooterCms::TYPE_CATEGORY}
 											<a href="{Context::getContext()->link->getCategoryLink($oNowBlockFooterCms->object)}">
 												{if !is_null($oNowBlockFooterCms->name) && $oNowBlockFooterCms->name != ''}
+                                                }
 													{$oNowBlockFooterCms->name}
 												{else}
 													{$oNowBlockFooterCms->object->name}

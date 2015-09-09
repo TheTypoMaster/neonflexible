@@ -1,6 +1,4 @@
-<div class="container">
-
-	<div class="header_right">
+	<div class="pull-right">
 
 		{if in_array(Context::getContext()->controller->php_self, array('authentication', 'order', 'order-confirmation'))}
 			<div class="shop-return">
@@ -49,7 +47,7 @@
 
 			<div class="shopping_cart">
 				<a href="{$link->getPageLink($order_process, true)|escape:'html':'UTF-8'}" title="{l s='View my shopping cart' mod='blockcart'}" rel="nofollow">
-					{l s='Cart' mod='blockcart'}
+					<span class="cacher">{l s='Cart' mod='blockcart'}</span>
 					<span class="ajax_cart_quantity{if $cart_qties == 0} unvisible{/if}">{$cart_qties}</span>
 					<span class="ajax_cart_product_txt{if $cart_qties != 1} unvisible{/if}">{l s='Product' mod='blockcart'}</span>
 					<span class="ajax_cart_product_txt_s{if $cart_qties < 2} unvisible{/if}">{l s='Products' mod='blockcart'}</span>
@@ -221,8 +219,6 @@
 		{/if}
 
 	</div>
-
-</div>
 
 {counter name=active_overlay assign=active_overlay}
 {if !$PS_CATALOG_MODE && $active_overlay == 1}

@@ -14,7 +14,7 @@
                             </div>
                             <div class="col-md-10">
 							<h3 class="titre">{$oNowBlockPresentation->name}</h3>
-							<p class="desc">{$oNowBlockPresentation->description}</p>
+							<p class="desc hidden-xs">{$oNowBlockPresentation->description}</p>
                             </div>
 						</li>
 					{/if}

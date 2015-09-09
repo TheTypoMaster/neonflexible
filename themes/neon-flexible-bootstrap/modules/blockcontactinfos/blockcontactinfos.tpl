@@ -1,6 +1,5 @@
-<span class="barre hidden-xs hidden-sm hidden-md"></span>
 
-<div id="contact">
+<div id="contact" class="col-md-4 col-md-push-0 col-lg-3">
 
 	<div itemscope itemtype="http://schema.org/LocalBusiness">
 		<span itemprop="name" class="hidden">{$shop_name|escape:'htmlall':'UTF-8'}</span>

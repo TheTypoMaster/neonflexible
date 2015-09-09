@@ -21,11 +21,14 @@
 #mea-home ul li.first div .desc {height:46px;}
 @media screen and (max-width:767px) {
 	#mea-home ul{margin-left:0;}
-	#mea-home ul li{height:330px;}
-	#mea-home ul li.first{height:495px;}
+	#mea-home ul li, #mea-home ul li.first{border-bottom: 1px solid #ccc;height: 505px;margin-bottom: 30px;padding-bottom: 22px;}
+	#mea-home ul li:last-child{border-bottom:none;margin-bottom: 0px;padding-bottom: 0px;}
 	#mea-home ul li .product_image{display: inline-block;height: auto;width: 100%;}
-		#mea-home ul li .product_image{display: inline-block;height: auto;width: 100%;}
-	#mea-home ul li .button-add-to-cart {margin:0;}
+	#mea-home ul li .product_image{display: inline-block;height: auto;width: 100%;}
+	#mea-home ul li .product_image img{margin:auto; float:none; border:none;}
+	#mea-home ul li .titre {margin-top: 7px;}
+	#mea-home ul li h3.titre, #mea-home ul li p, #mea-home ul li p.price {text-align:center;}
+	#mea-home ul li .button-add-to-cart {margin:auto;}
 }
 @media screen and (min-width:768px) {
 	#mea-home ul li {height:280px;}

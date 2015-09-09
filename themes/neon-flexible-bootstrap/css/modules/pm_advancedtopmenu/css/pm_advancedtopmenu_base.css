@@ -1,42 +1,62 @@
 #header #adtm_menu {background:#f4f4f4;height:40px;bottom:0;position:absolute;width:100%}
-#header #adtm_menu .caret {border-top:7px solid #acacac;border-bottom:none;border-right:5px solid transparent;border-left:5px solid transparent;margin:0 10px 0 0;}
+#header #adtm_menu .caret {border-top:7px solid #acacac;border-bottom:none;border-right:5px solid transparent;border-left:5px solid transparent;margin:0px 5px 0 0;}
 #header #adtm_menu #adtm_menu_inner {background:none;padding:0;margin:0;}
 #header #adtm_menu #adtm_menu_inner ul#menu {margin:0;padding:0;}
-#header #adtm_menu #adtm_menu_inner ul#menu > li.li-niveau1 { float:left; }
+#header #adtm_menu #adtm_menu_inner ul#menu > li.li-niveau1 { float:left; border-right:1px solid #ccc; }
+#header #adtm_menu #adtm_menu_inner ul#menu > li.li-niveau1:hover { background-color:#348ecd; }
+#header #adtm_menu #adtm_menu_inner ul#menu > li.li-niveau1:hover .caret {border-top:7px solid #fff;}
 #header #adtm_menu #adtm_menu_inner ul#menu > li {list-style-type:none;}
 #header #adtm_menu #adtm_menu_inner ul#menu > li.active > a {background:none;}
-#header #adtm_menu #adtm_menu_inner ul#menu > li > a.a-niveau1 {height:40px;line-height:40px;background:none;margin:0;color:#348ecd;font-weight:bold;font-size:13px;text-transform:uppercase;}
+#header #adtm_menu #adtm_menu_inner ul#menu > li > a.a-niveau1 {color: #348ecd;font-size: 13px;font-weight: bold;height: 38px;line-height: 38px;margin: 0;padding: 11px 10px 12px;text-transform: uppercase;}
 #header #adtm_menu #adtm_menu_inner ul#menu > li:hover,
 #header #adtm_menu #adtm_menu_inner ul#menu > li > a.a-niveau1:hover,
 #header #adtm_menu #adtm_menu_inner ul#menu > li > a.a-niveau1:hover span,
 #header #adtm_menu #adtm_menu_inner ul#menu > li:hover > a.a-niveau1 span,
-#header #adtm_menu #adtm_menu_inner ul#menu > li > a.a-niveau1 span:hover {background:none;text-decoration:none;color:#348ecd;border:none;}
-#header #adtm_menu #adtm_menu_inner ul#menu > li > a.a-niveau1:first-child,
-#header #adtm_menu #adtm_menu_inner ul#menu > li > a.a-niveau1:last-child,
-#header #adtm_menu #adtm_menu_inner ul#menu > li > a.a-niveau1:first-child span,
-#header #adtm_menu #adtm_menu_inner ul#menu > li > a.a-niveau1:last-child span {padding:0 10px 0 0 ;}
+#header #adtm_menu #adtm_menu_inner ul#menu > li > a.a-niveau1 span:hover {background:#348ecd;text-decoration:none;color:#fff;border:none;}
+#header #adtm_menu #adtm_menu_inner ul#menu > li > a.adtm_toggle_menu_button span:hover {color:#fff;}
 #header #adtm_menu #adtm_menu_inner ul#menu > li div.adtm_sub {position:absolute;left:-9999px;padding:0;border:none;top:40px;width:180px;}
 #header #adtm_menu #adtm_menu_inner ul#menu > li div.adtm_sub table {width:100%;}
+@media (max-width: 991px) {
+#header #adtm_menu .container{padding-left:0;padding-right:0; max-width:inherit;}
+#header #adtm_menu #adtm_menu_inner ul#menu > li div.adtm_sub.adtm_submenu_toggle_open{width:100%}
+#header #adtm_menu #adtm_menu_inner ul#menu > li div.adtm_sub.adtm_submenu_toggle_open table tbody {width:100%;display:inline-table;}
+#header #adtm_menu #adtm_menu_inner ul#menu > li div.adtm_sub table td{text-align:center;}
+#header #adtm_menu #adtm_menu_inner ul#menu > li div.adtm_sub table ul li{padding-left:0 !important;}
+}
+
 #header #adtm_menu #adtm_menu_inner ul#menu > li div.adtm_sub table .adtm_column_wrap {margin:0;padding:0;}
 #header #adtm_menu #adtm_menu_inner ul#menu > li div.adtm_sub table ul {margin:0;padding:0;}
 #header #adtm_menu #adtm_menu_inner ul#menu > li div.adtm_sub table ul li {list-style-type:none;border-top:1px solid #dedede;padding:0 0 0 30px;}
 #header #adtm_menu #adtm_menu_inner ul#menu > li div.adtm_sub table ul li:hover {padding:0 0 0 30px;}
 #header #adtm_menu #adtm_menu_inner ul#menu > li div.adtm_sub table ul li a {height:40px;line-height:40px;background:none;margin:0;color:#348ecd;font-weight:bold;font-size:13px;text-transform:uppercase;}
 #header #adtm_menu #adtm_menu_inner ul#menu > li div.adtm_sub table ul li a:hover {text-decoration:none;}
-#header #adtm_menu #adtm_menu_inner ul#menu > li div.adtm_sub table ul li:hover a:before {content:url(../../../../img/theme/fleche-hover-metier.png);width:8px;height:12px;margin:2px 5px 0 0;display:block;float:left;}
+#header #adtm_menu #adtm_menu_inner ul#menu > li div.adtm_sub table ul li:hover a:before {content:url(../../../../img/theme/fleche-hover-metier.png);width:8px;height:12px;margin:4px 5px 0 0; top:1px; position:relative}
 #header #adtm_menu #adtm_menu_inner ul#menu > li div.adtm_sub table ul li:hover a {color:#fff;}
-#header #adtm_menu #adtm_menu_inner ul#menu  :hover div.adtm_sub {left:0;}
-#header #adtm_menu #adtm_menu_inner ul#menu a:hover div.adtm_sub {left:-1px; top:29px;}
+#header #adtm_menu #adtm_menu_inner ul#menu > li:hover div.adtm_sub {left:0; }
 
-#header #adtm_menu #adtm_menu_inner ul#menu > li.sub a.a-niveau1:first-child {padding:0 5px 0 0;}
-#header #adtm_menu #adtm_menu_inner ul#menu > li.sub a.a-niveau1:first-child span {margin:0 5px 0 0;padding:0;}
+#header #adtm_menu #adtm_menu_inner ul#menu > li.sub a.a-niveau1:first-child {padding:11px 4px 12px 10px;}
+#header #adtm_menu #adtm_menu_inner ul#menu > li.sub a.a-niveau1:first-child span {margin:0 -1px 0 0;padding:0;}
 
 #header #adtm_menu #adtm_menu_inner .li-niveau1 a:hover .advtm_menu_span,
 #header #adtm_menu #adtm_menu_inner .li-niveau1 a.advtm_menu_actif .advtm_menu_span,
 #header #adtm_menu #adtm_menu_inner .li-niveau1 .advtm_menu_span:hover,
 #header #adtm_menu #adtm_menu_inner .li-niveau1:hover > a.a-niveau1 .advtm_menu_span {background:none;}
 
-#header #adtm_menu #adtm_menu_inner .li-niveau1 a:hover .advtm_menu_span,
-#header #adtm_menu #adtm_menu_inner .li-niveau1 a.advtm_menu_actif .advtm_menu_span,
-#header #adtm_menu #adtm_menu_inner .li-niveau1:hover > a.a-niveau1 .advtm_menu_span {color:#348ecd;}
 #header #adtm_menu #adtm_menu_inner .li-niveau1 table.columnWrapTable  td {padding:0;}
+@media  (min-width: 992px) and (max-width: 1199px) {
+#header #adtm_menu #adtm_menu_inner ul#menu > li > a.a-niveau1{padding:11px 4px 12px;}
+#header #adtm_menu #adtm_menu_inner ul#menu > li.sub a.a-niveau1:first-child{padding:11px 4px 12px 5px;}
+}
+@media (max-width: 991px) {
+	#header #adtm_menu #adtm_menu_inner ul#menu > li > a.a-niveau1 {display:block;padding:0;}
+	#header #adtm_menu #adtm_menu_inner ul#menu > li.sub {height:47px;}
+	#header #adtm_menu #adtm_menu_inner ul#menu > li.sub a.a-niveau1:first-child {padding:0 5px 0 0; display:block;}
+		#header #adtm_menu #adtm_menu_inner ul#menu > li.sub .caret {top:-13px; position:relative;}
+	#header #adtm_menu #adtm_menu_inner ul#menu > li div.adtm_sub table ul li a{display:block;}
+	#header #adtm_menu #adtm_menu_inner ul#menu > li div.adtm_sub {top:47px;}
+	#header #adtm_menu #adtm_menu_inner ul#menu > li.sub:hover .caret {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+}

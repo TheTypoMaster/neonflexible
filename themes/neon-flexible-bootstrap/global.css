@@ -112,11 +112,6 @@ ul.block >li:first-child + li {margin-top:8px}
 #header .navbar-inverse .container {display:block;height:36px;}
 #header h1 {margin:0;}
 #header a img.logo {margin-top:-20px;}
-@media screen and (max-width:767px) {
-#header a img.logo {margin-top:10px;}
-#header {height:210px;}
-#header_logo{text-align:center;}
-}
 #header .caret {margin-left:10px;border-top:7px solid #acacac;border-bottom:none;border-right:5px solid transparent;border-left:5px solid transparent;}
 #authentication #header, #order #header, #module-bankwire-payment #header, #module-cheque-payment #header, #order-confirmation #header {height:150px;}
 
@@ -129,18 +124,14 @@ footer hr {margin:18px 0 10px 0;padding:0;border-top:1px solid #ccc;}
 footer .barre {float:left;width:1px;height:260px;background:#ccc;display:block;margin:30px 0;}
 
 /* MODULE :blockcontactinfos */
-footer #contact {color:#777;/*width:317px;*/height:220px;float:left;padding:35px 0 0 0;margin:0;}
+footer #contact {color:#777;/*width:317px;*/height:220px;float:right;padding:10px 0 0 0;margin:20px 0 0 0;}
 footer #contact .logo {margin:0 auto;display:block;}
 footer #contact .adresse {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;text-align:center;margin:10px 0;}
-footer #contact .telephone {background:url('../img/theme/footer-telephone-international.png') no-repeat;display:block;width:266px;height:34px;line-height:32px;padding-left:28px;/*font-size:13px;*/margin:0 auto;font-weight:300;font-family:Lato,Verdana,Arial,sans-serif;cursor:default;color:#777;text-decoration:none;letter-spacing:-0.5px;}
+footer #contact .telephone {background:url('../img/theme/footer-telephone-international.png') no-repeat;display:block;width:290px;height:34px;line-height:32px;padding-left:28px;/*font-size:13px;*/margin:0 auto;font-weight:300;font-family:Lato,Verdana,Arial,sans-serif;cursor:default;color:#777;text-decoration:none;}
 footer #contact .telephone span.tel-fr {color:#55a323;font-weight:bold;font-size:16px;}
-@media screen and (max-width:991px) {
-footer #contact {margin:auto;width:100%;}
-}
 
 /* MODULE :blocksocial */
-footer #social_block {color:#777;width:275px;height:60px;float:left;margin-left:12px; margin-top:-5px;}
-
+footer #social_block {color:#777;width:275px;height:60px;float:left;margin-left:12px;}
 footer #social_block hr {margin:13px 0 10px 0;}
 footer #social_block .follow-us {color:#333;font-family:Raleway,Verdana,Arial,sans-serif;font-size:17px;font-weight:bold;width:150px;float:left;line-height:38px;padding:0 0 0 5px;}
 footer #social_block ul {list-style-type:none;}
@@ -357,10 +348,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 #pagenotfound .pagenotfound p {color:#777;font-size:40px;font-weight:bold;font-family:Lato,Verdana,Arial,sans-serif;text-align:center;}
 
 /* Couleurs */
-.adtm_elements li:hover{
-	background:#348ecd;
-}
-.advtm_menu_8 .couleur_metier_0, .advtm_menu_8 .couleur_metier_0_on:hover, #now_category_slide .couleur_metier_0 {
+.couleur_metier_0, .couleur_metier_0_on:hover {
 	background:#fb5484; /* Old browsers */
 	background:-moz-linear-gradient(top, #fb5484 0%, #f93766 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#fb5484), color-stop(100%,#f93766)); /* Chrome,Safari4+ */
@@ -370,7 +358,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	background:linear-gradient(to bottom, #fb5484 0%,#f93766 100%); /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb5484', endColorstr='#f93766',GradientType=0 ); /* IE6-9 */
 }
-.advtm_menu_8 .couleur_metier_1, .advtm_menu_8 .couleur_metier_1_on:hover, #now_category_slide .couleur_metier_1 {
+.couleur_metier_1, .couleur_metier_1_on:hover {
 	background:#ff6841; /* Old browsers */
 	background:-moz-linear-gradient(top,  #ff6841 0%, #ff4927 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff6841), color-stop(100%,#ff4927)); /* Chrome,Safari4+ */
@@ -381,7 +369,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6841', endColorstr='#ff4927',GradientType=0 ); /* IE6-9 */
 
 }
-.advtm_menu_8 .couleur_metier_2, .advtm_menu_8 .couleur_metier_2_on:hover, #now_category_slide .couleur_metier_2 {
+.couleur_metier_2, .couleur_metier_2_on:hover {
 	background:#f98936; /* Old browsers */
 	background:-moz-linear-gradient(top,  #f98936 0%, #f66b1f 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f98936), color-stop(100%,#f66b1f)); /* Chrome,Safari4+ */
@@ -391,7 +379,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	background:linear-gradient(to bottom,  #f98936 0%,#f66b1f 100%); /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f98936', endColorstr='#f66b1f',GradientType=0 ); /* IE6-9 */
 }
-.advtm_menu_8 .couleur_metier_3, .advtm_menu_8 .couleur_metier_3_on:hover, #now_category_slide .couleur_metier_3 {
+.couleur_metier_3, .couleur_metier_3_on:hover {
 	background:#ffc02e; /* Old browsers */
 	background:-moz-linear-gradient(top,  #ffc02e 0%, #ffab19 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffc02e), color-stop(100%,#ffab19)); /* Chrome,Safari4+ */
@@ -401,7 +389,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	background:linear-gradient(to bottom,  #ffc02e 0%,#ffab19 100%); /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc02e', endColorstr='#ffab19',GradientType=0 ); /* IE6-9 */
 }
-.advtm_menu_8 .couleur_metier_4, .advtm_menu_8 .couleur_metier_4_on:hover, #now_category_slide .couleur_metier_4 {
+.couleur_metier_4, .couleur_metier_4_on:hover {
 	background:#66a933; /* Old browsers */
 	background:-moz-linear-gradient(top,  #66a933 0%, #488f1c 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#66a933), color-stop(100%,#488f1c)); /* Chrome,Safari4+ */
@@ -411,7 +399,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	background:linear-gradient(to bottom,  #66a933 0%,#488f1c 100%); /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#66a933', endColorstr='#488f1c',GradientType=0 ); /* IE6-9 */
 }
-.advtm_menu_8 .couleur_metier_5, .advtm_menu_8 .couleur_metier_5_on:hover, #now_category_slide .couleur_metier_5 {
+.couleur_metier_5, .couleur_metier_5_on:hover {
 	background:#558530; /* Old browsers */
 	background:-moz-linear-gradient(top,  #558530 0%, #38671b 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#558530), color-stop(100%,#38671b)); /* Chrome,Safari4+ */
@@ -421,7 +409,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	background:linear-gradient(to bottom,  #558530 0%,#38671b 100%); /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#558530', endColorstr='#38671b',GradientType=0 ); /* IE6-9 */
 }
-.advtm_menu_8 .couleur_metier_6, .advtm_menu_8 .couleur_metier_6_on:hover, #now_category_slide .couleur_metier_6 {
+.couleur_metier_6, .couleur_metier_6_on:hover {
 	background:#46b8ac; /* Old browsers */
 	background:-moz-linear-gradient(top,  #46b8ac 0%, #2ba193 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#46b8ac), color-stop(100%,#2ba193)); /* Chrome,Safari4+ */
@@ -431,7 +419,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	background:linear-gradient(to bottom,  #46b8ac 0%,#2ba193 100%); /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#46b8ac', endColorstr='#2ba193',GradientType=0 ); /* IE6-9 */
 }
-.advtm_menu_8 .couleur_metier_7, .advtm_menu_8 .couleur_metier_7_on:hover, #now_category_slide .couleur_metier_7 {
+.couleur_metier_7, .couleur_metier_7_on:hover {
 	background:#467097; /* Old browsers */
 	background:-moz-linear-gradient(top,  #467097 0%, #2b527a 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#467097), color-stop(100%,#2b527a)); /* Chrome,Safari4+ */
@@ -441,7 +429,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	background:linear-gradient(to bottom,  #467097 0%,#2b527a 100%); /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#467097', endColorstr='#2b527a',GradientType=0 ); /* IE6-9 */
 }
-.advtm_menu_8 .couleur_metier_8, .advtm_menu_8 .couleur_metier_8_on:hover, #now_category_slide .couleur_metier_8 {
+.couleur_metier_8, .couleur_metier_8_on:hover {
 	background:#766092; /* Old browsers */
 	background:-moz-linear-gradient(top,  #766092 0%, #584275 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#766092), color-stop(100%,#584275)); /* Chrome,Safari4+ */
@@ -451,7 +439,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	background:linear-gradient(to bottom,  #766092 0%,#584275 100%); /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#766092', endColorstr='#584275',GradientType=0 ); /* IE6-9 */
 }
-.advtm_menu_8 .couleur_metier_9, .advtm_menu_8 .couleur_metier_9_on:hover, #now_category_slide .couleur_metier_9 {
+.couleur_metier_9, .couleur_metier_9_on:hover {
 	background:#ff3019; /* Old browsers */
 	background:-moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
@@ -464,7 +452,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 
 
 
-.advtm_menu_8 .couleur_metier_10, .advtm_menu_8 .couleur_metier_10_on:hover, #now_category_slide .couleur_metier_10 {
+.couleur_metier_10, .couleur_metier_10_on:hover {
 	background:#fb5484; /* Old browsers */
 	background:-moz-linear-gradient(top, #fb5484 0%, #f93766 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#fb5484), color-stop(100%,#f93766)); /* Chrome,Safari4+ */
@@ -474,7 +462,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	background:linear-gradient(to bottom, #fb5484 0%,#f93766 100%); /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb5484', endColorstr='#f93766',GradientType=0 ); /* IE6-9 */
 }
-.advtm_menu_8 .couleur_metier_11, .advtm_menu_8 .couleur_metier_11_on:hover, #now_category_slide .couleur_metier_11 {
+.couleur_metier_11, .couleur_metier_11_on:hover {
 	background:#ff6841; /* Old browsers */
 	background:-moz-linear-gradient(top,  #ff6841 0%, #ff4927 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff6841), color-stop(100%,#ff4927)); /* Chrome,Safari4+ */
@@ -485,7 +473,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6841', endColorstr='#ff4927',GradientType=0 ); /* IE6-9 */
 
 }
-.advtm_menu_8 .couleur_metier_12, .advtm_menu_8 .couleur_metier_12_on:hover, #now_category_slide .couleur_metier_12 {
+.couleur_metier_12, .couleur_metier_12_on:hover {
 	background:#f98936; /* Old browsers */
 	background:-moz-linear-gradient(top,  #f98936 0%, #f66b1f 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f98936), color-stop(100%,#f66b1f)); /* Chrome,Safari4+ */
@@ -495,7 +483,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	background:linear-gradient(to bottom,  #f98936 0%,#f66b1f 100%); /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f98936', endColorstr='#f66b1f',GradientType=0 ); /* IE6-9 */
 }
-.advtm_menu_8 .couleur_metier_13, .advtm_menu_8 .couleur_metier_13_on:hover, #now_category_slide .couleur_metier_13 {
+.couleur_metier_13, .couleur_metier_13_on:hover {
 	background:#ffc02e; /* Old browsers */
 	background:-moz-linear-gradient(top,  #ffc02e 0%, #ffab19 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffc02e), color-stop(100%,#ffab19)); /* Chrome,Safari4+ */
@@ -505,7 +493,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	background:linear-gradient(to bottom,  #ffc02e 0%,#ffab19 100%); /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc02e', endColorstr='#ffab19',GradientType=0 ); /* IE6-9 */
 }
-.advtm_menu_8 .couleur_metier_14, .advtm_menu_8 .couleur_metier_14_on:hover, #now_category_slide .couleur_metier_14 {
+.couleur_metier_14, .couleur_metier_14_on:hover {
 	background:#66a933; /* Old browsers */
 	background:-moz-linear-gradient(top,  #66a933 0%, #488f1c 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#66a933), color-stop(100%,#488f1c)); /* Chrome,Safari4+ */
@@ -515,7 +503,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	background:linear-gradient(to bottom,  #66a933 0%,#488f1c 100%); /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#66a933', endColorstr='#488f1c',GradientType=0 ); /* IE6-9 */
 }
-.advtm_menu_8 .couleur_metier_15, .advtm_menu_8 .couleur_metier_15_on:hover, #now_category_slide .couleur_metier_15 {
+.couleur_metier_15, .couleur_metier_15_on:hover {
 	background:#558530; /* Old browsers */
 	background:-moz-linear-gradient(top,  #558530 0%, #38671b 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#558530), color-stop(100%,#38671b)); /* Chrome,Safari4+ */
@@ -525,7 +513,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	background:linear-gradient(to bottom,  #558530 0%,#38671b 100%); /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#558530', endColorstr='#38671b',GradientType=0 ); /* IE6-9 */
 }
-.advtm_menu_8 .couleur_metier_16, .advtm_menu_8 .couleur_metier_16_on:hover, #now_category_slide .couleur_metier_16 {
+.couleur_metier_16, .couleur_metier_16_on:hover {
 	background:#46b8ac; /* Old browsers */
 	background:-moz-linear-gradient(top,  #46b8ac 0%, #2ba193 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#46b8ac), color-stop(100%,#2ba193)); /* Chrome,Safari4+ */
@@ -535,7 +523,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	background:linear-gradient(to bottom,  #46b8ac 0%,#2ba193 100%); /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#46b8ac', endColorstr='#2ba193',GradientType=0 ); /* IE6-9 */
 }
-.advtm_menu_8 .couleur_metier_17, .advtm_menu_8 .couleur_metier_17_on:hover, #now_category_slide .couleur_metier_17 {
+.couleur_metier_17, .couleur_metier_17_on:hover {
 	background:#467097; /* Old browsers */
 	background:-moz-linear-gradient(top,  #467097 0%, #2b527a 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#467097), color-stop(100%,#2b527a)); /* Chrome,Safari4+ */
@@ -545,7 +533,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	background:linear-gradient(to bottom,  #467097 0%,#2b527a 100%); /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#467097', endColorstr='#2b527a',GradientType=0 ); /* IE6-9 */
 }
-.advtm_menu_8 .couleur_metier_18, .advtm_menu_8 .couleur_metier_18_on:hover, #now_category_slide .couleur_metier_18 {
+.couleur_metier_18, .couleur_metier_18_on:hover {
 	background:#766092; /* Old browsers */
 	background:-moz-linear-gradient(top,  #766092 0%, #584275 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#766092), color-stop(100%,#584275)); /* Chrome,Safari4+ */
@@ -555,7 +543,7 @@ p.submit .button-rose {margin:0 auto 20px auto;}
 	background:linear-gradient(to bottom,  #766092 0%,#584275 100%); /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#766092', endColorstr='#584275',GradientType=0 ); /* IE6-9 */
 }
-.advtm_menu_8 .couleur_metier_19, .advtm_menu_8 .couleur_metier_19_on:hover, #now_category_slide .couleur_metier_19 {
+.couleur_metier_19, .couleur_metier_19_on:hover {
 	background:#ff3019; /* Old browsers */
 	background:-moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
@@ -1314,49 +1302,3 @@ table#cart_summary .gift-icon {color:white;background:#0088cc;line-height:20px;p
 h3.page-product-heading {color:#555454;text-transform:uppercase;font-family:"Open Sans", sans-serif;font-weight:600;font-size:18px;line-height:20px;padding:14px 20px 17px;margin:0 0 20px;position:relative;border:1px solid #d6d4d4;border-bottom:none;background:#fbfbfb;}
 
  ul.address li {list-style:none;line-height:23px;color:#777;}
-  #social_block ul{
-    float: right;
-	padding-left:0;
- }
-  #social_block p.follow-us{
-   color: #fff;
-    float: right;
-    font-family: Raleway,Verdana,Arial,sans-serif;
-    font-size: 17px;
-    font-weight: 600;
-    margin-bottom: 0;
-    margin-right: 18px;
-    margin-top: 7px;
- }
- #social_block ul li a {
-     display: block;
-    height: 38px;
-    overflow: hidden;
-    text-indent: -1000px;
-    width: 41px;
-}
-#social_block ul li {
-    float: left;
-    height: 38px;
-    margin-left: 5px;
-    width: 41px;
-	list-style:none;
-}
-#social_block ul li.facebook {
-    background: rgba(0, 0, 0, 0) url("../../../modules/blocksocial/img/facebook.gif") no-repeat scroll 0 0;
-}
-#social_block ul li.twitter {
-    background: rgba(0, 0, 0, 0) url("../../../modules/blocksocial/img/twitter.gif") no-repeat scroll 0 0;
-}
- #social_block ul li.google_plus {
-    background: rgba(0, 0, 0, 0) url("../../../modules/blocksocial/img/google-plus.gif") no-repeat scroll 0 0;
-}
-@media screen and (max-width:991px) {
-#social_block {
-    border-top: 1px solid #666;
-    margin: 50px auto 0;
-    padding: 50px 0;
-    width: 301px;
-}
-}
- 

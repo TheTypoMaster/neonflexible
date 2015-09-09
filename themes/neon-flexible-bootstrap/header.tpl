@@ -6,7 +6,8 @@
 <html lang="{$lang_iso}">
 <head>
 	<title>{$meta_title|escape:'htmlall':'UTF-8'}</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.0, initial-scale=1.0">
+
 
 	{if isset($meta_description) AND $meta_description}
 		<meta name="description" content="{$meta_description|escape:html:'UTF-8'}" />
@@ -67,21 +68,6 @@
 				{hook h="displayBanner"}
 			</div>
 		</div>
-
-		<div class="container">
-			{*{if Context::getContext()->controller->php_self == 'index'}
-				<h1>
-					<a href="{Context::getContext()->link->getPageLink('index')}" title="{l s='%s, just imagine' sprintf=$shop_name|escape:'htmlall':'UTF-8'}">
-						<img class="logo" src="{$logo_url}" alt="{l s='%s, just imagine' sprintf=$shop_name|escape:'htmlall':'UTF-8'}" />
-					</a>
-				</h1>
-			{else}*}
-				<a href="{Context::getContext()->link->getPageLink('index')}" title="{l s='%s, just imagine' sprintf=$shop_name|escape:'htmlall':'UTF-8'}">
-					<img class="logo" src="{$logo_url}" alt="{l s='%s, just imagine' sprintf=$shop_name|escape:'htmlall':'UTF-8'}" />
-				</a>
-			{*{/if}*}
-		</div>
-
 		<div class="navbar-inverse">
 			<div class="container">
 				{if isset($restricted_country_mode) && $restricted_country_mode}
@@ -93,8 +79,26 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
-
+        
+        <div class="container">
+        	<div class="col-sm-6 col-lg-3" id="header_logo">
+			{*{if Context::getContext()->controller->php_self == 'index'}
+            
+				<h1>
+					<a href="{Context::getContext()->link->getPageLink('index')}" title="{l s='%s, just imagine' sprintf=$shop_name|escape:'htmlall':'UTF-8'}">
+						<img class="logo" src="{$logo_url}" alt="{l s='%s, just imagine' sprintf=$shop_name|escape:'htmlall':'UTF-8'}" />
+					</a>
+				</h1>
+			{else}*}
+				<a href="{Context::getContext()->link->getPageLink('index')}" title="{l s='%s, just imagine' sprintf=$shop_name|escape:'htmlall':'UTF-8'}">
+					<img class="logo" src="{$logo_url}" alt="{l s='%s, just imagine' sprintf=$shop_name|escape:'htmlall':'UTF-8'}" />
+				</a>
+			{*{/if}*}
+            </div>
+            
 		{if isset($HOOK_TOP)}{$HOOK_TOP}{/if}
+        </div>		
+        {hook h="DisplayMenu"}
 	</div>
 
 	{/if}

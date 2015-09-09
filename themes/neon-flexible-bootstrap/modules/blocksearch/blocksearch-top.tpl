@@ -1,4 +1,4 @@
-<div class="container hidden-xs hidden-sm hidden-md">
+<div class="col-sm-6 col-md-5 col-md-push-1 col-lg-3 col-lg-push-0 hidden-xs clearfix">
 	<div id="search_block_top">
 		<form method="get" action="{$link->getPageLink('search')|escape:'html'}" id="searchbox">
 

@@ -1,5 +1,5 @@
 {if $aItems && count($aItems) > 0}
-	<div id="references-clients" class="hidden-xs hidden-sm">
+	<div id="references-clients"">
 
 		<div class="container">
 

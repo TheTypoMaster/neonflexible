@@ -8,6 +8,8 @@
 				<div class="item{if $smarty.foreach.foo.first} active{/if}">
 					<div class="right">
 						<img src="{$oSlide->getImageLink()}" alt="{$oSlide->name}" class="img-responsive" />
+                      
+                        
 					</div>
 					<div class="left">
 

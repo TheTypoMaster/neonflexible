@@ -1,7 +1,7 @@
-#header #search_block_top {background:url('../../../img/theme/barre-de-recherche.png') no-repeat;display:block;position:absolute;top:80px;margin:0 0 0 300px;z-index:1;width:299px;height:31px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
-#header #search_block_top #search_query_top {border:none;background:none;width:260px;height:34px;text-transform:uppercase;padding-left:20px;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
+#header #search_block_top {border:2px solid #dadada;z-index:1;height:32px;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;-webkit-border-radius: 25px;-moz-border-radius: 25px;border-radius: 25px; margin-top:43px;padding:4px 10px;}
+#header #search_block_top #search_query_top {border:none;background:none;text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
 #header #search_block_top #search_query_top::-webkit-input-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
 #header #search_block_top #search_query_top:-moz-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
 #header #search_block_top #search_query_top::-moz-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
 #header #search_block_top #search_query_top:-ms-input-placeholder {text-transform:uppercase;color:#348ecd;font-family:Raleway,Verdana,Arial,sans-serif;font-weight:bold;}
-#header #search_block_top #search_query_submit {border:none;position:absolute;background:none;color:#373a39;font-size:13px;font-weight:bold;height:33px;}
+#header #search_block_top #search_query_submit {border:none;background:none;color:#373a39;font-size:13px;font-weight:bold;float:right;}

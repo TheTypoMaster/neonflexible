@@ -1,4 +1,3 @@
-{strip}
 <div class="nb-products-results">
 	{if ($n*$p) < $nb_products }
 		{assign var='productShowing' value=$n*$p}
@@ -13,10 +12,9 @@
 
 	<p>
 		{if $nb_products > 1}
-			{l s='Showingofitems' sprintf=[$productShowingStart, $productShowing, $nb_products]}
+			{l s='Showing %1$d - %2$d of %3$d items' sprintf=[$productShowingStart, $productShowing, $nb_products]}
 		{else}
 			{l s='Showing %1$d - %2$d of 1 item' sprintf=[$productShowingStart, $productShowing]}
 		{/if}
 	</p>
 </div>
-{/strip}

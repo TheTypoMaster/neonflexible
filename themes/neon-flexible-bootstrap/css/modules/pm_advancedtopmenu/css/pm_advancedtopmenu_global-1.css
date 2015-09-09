@@ -5,9 +5,12 @@
 #adtm_menu_inner {width:960px;}
 #adtm_menu .li-niveau1 {line-height:16px;}
 #adtm_menu .li-niveau1 a.a-niveau1 .advtm_menu_span {/*height:30px;line-height:29px;*/}
-#adtm_menu .li-niveau1 a.a-niveau1.a-multiline .advtm_menu_span {line-height:14px;}
+#adtm_menu .li-niveau1 a.a-niveau1.a-multiline .advtm_menu_span {line-height:13px;}
 #adtm_menu ul#menu li div.adtm_sub {top:30px;}
-.li-niveau1 {padding:0 0 0 0;margin:0 2px 0 0;}
+.li-niveau1 {padding:0;margin:0;height:40px;}
+@media (max-width: 1199px) {
+	.li-niveau1 {padding:0;margin:0;}
+}
 .li-niveau1 .advtm_menu_span, .li-niveau1 a .advtm_menu_span {/*color:#666666;*/}
 .li-niveau1 a:hover .advtm_menu_span, .li-niveau1 a.advtm_menu_actif .advtm_menu_span, .li-niveau1:hover > a.a-niveau1 .advtm_menu_span {color:#333333;}
 .li-niveau1 a .advtm_menu_span, .li-niveau1 .advtm_menu_span {/*background-color:#ffffff;*/}
@@ -30,7 +33,7 @@
 .li-niveau1 .adtm_sub {z-index:1000;}
 div#adtm_menu_inner {width: inherit !important;}
 #adtm_menu ul .advtm_menu_toggle {display: none;}
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 #adtm_menu ul li.li-niveau1 {display: none;}
 #adtm_menu ul li.advtm_menu_toggle {display: block; width: 100%;}
 #adtm_menu ul li.advtm_menu_toggle a.adtm_toggle_menu_button {width: 100%; cursor: pointer;}
@@ -38,18 +41,17 @@ div#adtm_menu_inner {width: inherit !important;}
 #adtm_menu .searchboxATM {display: none;}
 #adtm_menu ul .li-niveau1 .adtm_sub {width: auto; height: auto; min-height: inherit;}
 #adtm_menu ul div.adtm_column_wrap {min-height: inherit;}
-#adtm_menu ul li.advtm_menu_toggle a.adtm_toggle_menu_button span.adtm_toggle_menu_button_text {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYAgMAAACdGdVrAAAACVBMVEUAAAAAAAAAAACDY+nAAAAAAnRSTlMA3Pn2U8cAAAAaSURBVAjXY4CCrFVAsJJhFRigUjA5FEBvfQDmRTo/uCG3BQAAAABJRU5ErkJggg==); background-position: right 15px center; background-repeat: no-repeat;}
-#adtm_menu ul li.advtm_menu_toggle a.adtm_toggle_menu_button span.adtm_toggle_menu_button_text {font-size:11px;}
+#adtm_menu ul li.advtm_menu_toggle a.adtm_toggle_menu_button span.adtm_toggle_menu_button_text {font-size:13px;}
+#header #adtm_menu ul li.advtm_menu_toggle a.adtm_toggle_menu_button span.adtm_toggle_menu_button_text .caret {margin-left:5px;}
+
 #adtm_menu.adtm_menu_toggle_open ul li.advtm_menu_toggle a.adtm_toggle_menu_button span.adtm_toggle_menu_button_text {color:#333333;}
-#adtm_menu ul li.advtm_menu_toggle a.adtm_toggle_menu_button span.adtm_toggle_menu_button_text {color:#666666;}
-#adtm_menu.adtm_menu_toggle_open li.advtm_menu_toggle a.adtm_toggle_menu_button span.adtm_toggle_menu_button_text {background-color:#ffffff;}
-#adtm_menu ul li.advtm_menu_toggle a.adtm_toggle_menu_button span.adtm_toggle_menu_button_text {background-color:#e5e5e5;}
-#adtm_menu.adtm_menu_toggle_open ul#menu li.li-niveau1.sub a.a-niveau1 span {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAFVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAASAQCkAAAABnRSTlMAHiXy6t8iJwLjAAAANUlEQVQY02MgFwgisZmMFZA4Zo5IUiLJSFKMbkZESqUoYKjDNFw5RYAYCSckW0IEULxAPgAAZQ0HP01tIysAAAAASUVORK5CYII=); background-position: right 15px center; background-repeat: no-repeat;}
-#adtm_menu.adtm_menu_toggle_open ul#menu li.li-niveau1.sub.adtm_sub_open a.a-niveau1 span {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAFVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAASAQCkAAAABnRSTlMAHiXy6t8iJwLjAAAARUlEQVQY02OgKWBUAJFMYJJB1AhEChuCOSLJCkBpNxAHRBsBRVIUIJpUkhVgEmAlIKVgAFIDUgmXgkmAzXWCMqA20hgAAI+xB05evnCbAAAAAElFTkSuQmCC);  background-position: right 15px center; background-repeat: no-repeat;}
 #adtm_menu.adtm_menu_toggle_open ul#menu li.li-niveau1 {display: block;float: none;}
 #adtm_menu.adtm_menu_toggle_open ul#menu li.li-niveau1 a.a-niveau1 {float: none;}
 #adtm_menu.adtm_menu_toggle_open ul#menu li div.adtm_sub  {display: none; position: static; height: auto;}
 #adtm_menu.adtm_menu_toggle_open ul#menu li div.adtm_sub.adtm_submenu_toggle_open  {display: block;}
 #adtm_menu.adtm_menu_toggle_open table.columnWrapTable {display: block;}
 #adtm_menu.adtm_menu_toggle_open table.columnWrapTable tr td {display: block;}
+
+#header #adtm_menu #adtm_menu_inner ul#menu > li.li-niveau1{background-color: #f4f4f4;border-bottom: 1px solid #ddd;text-align: center;width: 100%;}
+#header #adtm_menu #adtm_menu_inner ul#menu > li.li-niveau1.advtm_menu_toggle{background-color: transparent;}
 }

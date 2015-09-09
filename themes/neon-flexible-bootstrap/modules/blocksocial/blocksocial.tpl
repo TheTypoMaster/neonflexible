@@ -1,8 +1,6 @@
-<div id="social_block">
+<div id="social_block" class="col-md-6">
 
-	<hr>
-
-	<p class="follow-us">{l s='Suivez-nous sur :' mod='blocksocial'}</p>
+	
 	<ul>
 		{if $facebook_url != ''}
 			<li class="facebook">
@@ -54,4 +52,8 @@
 			</li>
 		{/if}
 	</ul>
+    <p class="follow-us">{l s='Suivez-nous sur :' mod='blocksocial'}</p>
+</div>
+</div>
+</div>
 </div>

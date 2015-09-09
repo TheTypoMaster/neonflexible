@@ -1,7 +1,4 @@
-footer #page-listing {float:left;margin:15px 0;}
-@media screen and (max-width:767px) {
-	footer #page-listing {display:none;}
-}
+footer #page-listing {margin:15px 0;}
 @media screen and (min-width:992px) {
 	footer #page-listing {border-right:1px solid #ccc;}
 }
@@ -11,13 +8,12 @@ footer #page-listing ul {list-style-type:none;padding:27px 0;}
 footer #page-listing ul li, footer #page-listing ul li a {color:#333;font-family:Raleway,Verdana,Arial,sans-serif;font-size:17px;font-weight:bold;padding:0;float:left;}
 footer #page-listing ul li span {display:block;	margin:0 0 10px 0;}
 footer #page-listing ul li span:first-letter {text-transform:capitalize;}
-footer #page-listing ul > li:nth-child(2){width:50%;}
-footer #page-listing ul > li:nth-child(2) ul{-moz-column-gap: 10px; -moz-columns: 2 157px;}
-@media screen and (min-width:992px) {
-footer #page-listing ul > li:nth-child(2) ul{-moz-column-gap: 10px; -moz-columns: 2 108px;}
-}
-@media screen and (min-width:1200px) {
-footer #page-listing ul > li:nth-child(2) ul{-moz-column-gap: 10px; -moz-columns: 2 157px;}
-}
-footer #page-listing ul li > ul {margin:0 10px 0 0;padding:0;float:left;}
+footer #page-listing > ul > li:nth-child(2){width:50%;}
+footer #page-listing ul li > ul {padding:0;float:left;}
+footer #page-listing ul li > ul.twoColumns {width:50%}
+
 footer #page-listing ul li > ul li, footer #page-listing ul li > ul li a {color:#777;font-size:14px;font-family:Lato,Verdana,Arial,sans-serif;float:none;font-weight:normal;line-height:22px;margin:0;}
+@media screen and (max-width:767px) {
+	footer #page-listing ul > li:nth-child(3){display: block !important;margin: auto;text-align: center;width: 100%;}
+	footer #page-listing ul li > ul {float: none;}
+}

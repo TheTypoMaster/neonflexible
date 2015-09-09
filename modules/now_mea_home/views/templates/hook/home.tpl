@@ -7,12 +7,12 @@
 			<ul>
 				{foreach from=$aProducts item=oProduct name=mea}
 
-					{if $smarty.foreach.mea.first}
+					<!--{if $smarty.foreach.mea.first}
 						{assign var=imageType value="home_medium"}
 					{else}
 						{assign var=imageType value="home_small"}
-					{/if}
-
+					{/if}-->
+					{assign var=imageType value="home_medium"}
 					<li {if $smarty.foreach.mea.first}class="first clearfix col-xs-12 col-md-4"{else}class="clearfix col-sm-6 col-md-4"{/if}>
 
 						{* Images *}
