@@ -143,7 +143,8 @@ class Link extends LinkCore
 		$dispatcher = Dispatcher::getInstance();
 		if (!is_object($cms))
 		{
-			if ($alias !== null && !$dispatcher->hasKeyword('cms_rule', $id_lang, 'meta_keywords', $id_shop) && !$dispatcher->hasKeyword('cms_rule', $id_lang, 'meta_title', $id_shop))
+			$cms = new CMS($cms, $id_lang);
+			if (!Validate::isLoadedObject($cms) && !$dispatcher->hasKeyword('cms_rule', $id_lang, 'meta_keywords', $id_shop) && !$dispatcher->hasKeyword('cms_rule', $id_lang, 'meta_title', $id_shop))
 				return $url.$dispatcher->createUrl('cms_rule', $id_lang, array('id' => (int)$cms, 'rewrite' => (string)$alias), $this->allow, '', $id_shop);
 			$cms = new CMS($cms, $id_lang);
 		}
